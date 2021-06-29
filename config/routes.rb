@@ -1,8 +1,9 @@
-Rails.application.routes.draw do
+# frozen_string_literal: true
 
+Rails.application.routes.draw do
   mount Blacklight::Engine => '/'
   concern :marc_viewable, Blacklight::Marc::Routes::MarcViewable.new
-  root to: "catalog#index"
+  root to: 'catalog#index'
   concern :searchable, Blacklight::Routes::Searchable.new
 
   resource :catalog, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
   concern :exportable, Blacklight::Routes::Exportable.new
 
   resources :solr_documents, only: [:show], path: '/catalog', controller: 'catalog' do
-    concerns [:exportable, :marc_viewable]
+    concerns %i[exportable marc_viewable]
   end
 
   resources :bookmarks do
