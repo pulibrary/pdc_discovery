@@ -1,1 +1,16 @@
+require: rubocop-rspec
+inherit_gem:
+  bixby: bixby_default.yml
 inherit_from: .rubocop_todo.yml
+
+AllCops:
+  DisplayCopNames: true
+  TargetRubyVersion: 2.6
+  Exclude:
+    - 'bin/*'
+    - 'config/deploy.rb'
+    - 'vendor/**/*'
+    - 'db/schema.rb'
+    - 'node_modules/**/*'
+    - 'spec/support/**/*'
+    - 'tmp/**/*'
