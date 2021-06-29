@@ -1,0 +1,159 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/pdc_discovery
+    # Primary command image where all commands run
+    docker:
+      - image: circleci/ruby:2.6.6-node-browsers
+        environment:
+          RAILS_ENV: test
+    steps:
+      - checkout
+      - run:
+          name: Install node@lts/erbium (need right version for `yarn`)
+          command: |
+            set +e
+            touch $BASH_ENV
+            curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
+            echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
+            echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
+            echo 'nvm install lts/erbium' >> $BASH_ENV
+            echo 'nvm alias default lts/erbium' >> $BASH_ENV
+      - run:
+          name: Check current version of node
+          command: node -v
+      - run:
+          name: Set Timezone to EST/EDT
+          command: echo 'America/New_York' = /etc/timezone
+      # Restore bundle cache
+      - restore_cache:
+          keys:
+            - pdc_discovery-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
+      - run: sudo apt update && sudo apt install postgresql-client
+      - run:
+          name: Update bundler
+          command: |
+            echo 'export BUNDLER_VERSION=2.1.4' >> $BASH_ENV
+            gem install bundler -v 2.1.4
+      - run:
+          name: Install dependencies
+          command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs 4 --retry 3
+      - save_cache:
+          key: pdc_discovery-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
+          paths:
+            - ./vendor/bundle
+      - run:
+          name: Install NPM Dependencies via Yarn
+          command: yarn install
+      # Store yarn / webpacker cache
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: pdc_discovery-yarn-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+      - run: NODE_ENV=test bundle exec rails webpacker:compile
+      - persist_to_workspace:
+          root: '~/pdc_discovery'
+          paths: '*'
+
+  rubocop:
+    working_directory: ~/pdc_discovery
+    # Primary command image where all commands run
+    docker:
+      - image: circleci/ruby:2.6.6-node-browsers
+        environment:
+          RAILS_ENV: test
+    steps:
+      - attach_workspace:
+          at: '~/pdc_discovery'
+
+      - run:
+          name: Update bundler
+          command: |
+            echo 'export BUNDLER_VERSION=2.1.4' >> $BASH_ENV
+            gem install bundler -v 2.1.4
+      - run:
+          name: Install dependencies
+          command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs 4 --retry 3
+      - save_cache:
+          key: pdc_discovery-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
+          paths:
+            - ./vendor/bundle
+
+      # Lint
+      - run:
+          name: Run rubocop
+          command: bundle exec rake rubocop
+
+  test:
+    working_directory: ~/pdc_discovery
+    # Primary command image where all commands run
+    docker:
+      - image: circleci/ruby:2.6.6-node-browsers
+        environment:
+          RAILS_ENV: test
+          DB_HOST: localhost
+          DB_USERNAME: pdc_discovery
+          DB_PASSWORD: ""
+          SOLR_URL: http://solr:SolrRocks@localhost:8983/solr/pdc_discovery-core-test
+      - image: zookeeper:3.4
+      - image: postgres:10.6-alpine
+        environment:
+          POSTGRES_USER: pdc_discovery
+          POSTGRES_DB: pdc_discovery_test
+          # POSTGRES_PASSWORD: ""
+          POSTGRES_HOST_AUTH_METHOD: trust
+      - image: solr:8.4
+        command:
+          - "sh"
+          - "-c"
+          - wget -O /tmp/security.json "https://gist.githubusercontent.com/eliotjordan/a27be341dc2e7a532bad99203e0f55b7/raw/5866efab9242f953764c1b03d17763309e22948f/security.json" && server/scripts/cloud-scripts/zkcli.sh -zkhost localhost:2181 -cmd putfile /security.json /tmp/security.json && bin/solr -cloud -noprompt -f -p 8983 -z localhost:2181
+    steps:
+      - attach_workspace:
+          at: '~/pdc_discovery'
+      # project database settings
+      - run:
+          name: Wait for PostgreSQL
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+      - run:
+          name: Wait for Solr
+          command: dockerize -wait tcp://localhost:8983 -timeout 1m
+      - run:
+          name: Load config into solr
+          command: |
+            cd solr/conf
+            zip -1 -r solr_config.zip ./*
+            curl -H "Content-type:application/octet-stream" --data-binary @solr_config.zip "http://solr:SolrRocks@127.0.0.1:8983/solr/admin/configs?action=UPLOAD&name=pdc_discovery"
+            curl -H 'Content-type: application/json' http://solr:SolrRocks@127.0.0.1:8983/api/collections/ -d '{create: {name: pdc_discovery-core-test, config: pdc_discovery, numShards: 1}}'
+      - run:
+          name: Update bundler
+          command: |
+            echo 'export BUNDLER_VERSION=2.1.4' >> $BASH_ENV
+            gem install bundler -v 2.1.4
+      - run:
+          name: Install dependencies
+          command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs 4 --retry 3
+      - save_cache:
+          key: pdc_discovery-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
+          paths:
+            - ./vendor/bundle
+
+      - run: bundle exec rake db:create
+      - run: bundle exec rake db:migrate
+      - run: bundle exec rake db:migrate RAILS_ENV=test
+      # Test
+      - run:
+          name: Run Rspec
+          command: bundle exec rspec
+
+workflows:
+  version: 2
+  build_accept_deploy:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+      - rubocop:
+          requires:
+            - build
