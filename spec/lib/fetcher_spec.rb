@@ -14,7 +14,7 @@ RSpec.describe Fetcher do
     let(:oai_feed) { File.read(File.join(fixture_path, 'astrophysical_sciences.json')) }
 
     before do
-      stub_request(:get, "https://dataspace-dev.princeton.edu/rest//collections/85/items?expand=metadata&limit=100&offset=0")
+      stub_request(:get, "#{server}/collections/#{collection_id}/items?expand=metadata&limit=100&offset=0")
         .with(
           headers: {
             'Accept' => '*/*',
