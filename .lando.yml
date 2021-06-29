@@ -1,0 +1,22 @@
+name: pdc_discovery
+services:
+  pdc_test_solr:
+    type: solr:8.4
+    portforward: true
+    core: pdc-core-test
+    config:
+      dir: "solr/conf"
+  pdc_development_solr:
+    type: solr:8.4
+    portforward: true
+    core: pdc-core-dev
+    config:
+      dir: "solr/conf"
+  pdc_database:
+    type: postgres:10
+    portforward: true
+proxy:
+  pdc_test_solr:
+    - pdc.test.solr.lndo.site:8983
+  pdc_development_solr:
+    - pdc.dev.solr.lndo.site:8983
