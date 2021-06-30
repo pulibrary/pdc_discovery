@@ -11,18 +11,11 @@ RSpec.describe Fetcher do
   end
 
   context 'fetching data' do
-    let(:oai_feed) { File.read(File.join(fixture_path, 'astrophysical_sciences.json')) }
+    let(:dspace_rest_response) { File.read(File.join(fixture_path, 'astrophysical_sciences.json')) }
 
     before do
       stub_request(:get, "#{server}/collections/#{collection_id}/items?expand=metadata&limit=100&offset=0")
-        .with(
-          headers: {
-            'Accept' => '*/*',
-            'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-            'User-Agent' => 'Faraday v1.4.3'
-          }
-        )
-        .to_return(status: 200, body: oai_feed, headers: {})
+        .to_return(status: 200, body: dspace_rest_response, headers: {})
     end
 
     it 'fetches metadata for a given community' do
