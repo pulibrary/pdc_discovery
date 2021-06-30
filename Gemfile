@@ -14,6 +14,7 @@ gem 'devise'
 gem 'devise-guests', '~> 0.6'
 gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
+gem 'oai'
 gem 'pg'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 6.1.4'
@@ -41,4 +42,5 @@ group :test do
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'webmock'
 end
