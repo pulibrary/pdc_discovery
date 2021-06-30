@@ -1,10 +1,13 @@
 load_defaults: 7.19.2
 development:
   adapter: solr
-  url: <%= ENV['SOLR_URL'] || "http://127.0.0.1:8983/solr/blacklight-core" %>
+  url: <%= ENV['SOLR_URL'] || "http://#{ENV['lando_pdc_development_solr_conn_host']}:#{ENV['lando_pdc_development_solr_conn_port']}/solr/pdc-core-dev" %>
 test: &test
   adapter: solr
-  url: <%= ENV['SOLR_URL'] || "http://127.0.0.1:8983/solr/blacklight-core" %>
+  url: <%= ENV['SOLR_URL'] ||  "http://#{ENV['lando_pdc_test_solr_conn_host']}:#{ENV['lando_pdc_test_solr_conn_port']}/solr/pdc-core-test" %>
 production:
   adapter: solr
-  url: <%= ENV['SOLR_URL'] || "http://127.0.0.1:8983/solr/blacklight-core" %>
+  url: <%= ENV['SOLR_URL'] %>
+staging:
+  adapter: solr
+  url: <%= ENV['SOLR_URL'] %>
