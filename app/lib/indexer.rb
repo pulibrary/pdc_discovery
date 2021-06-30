@@ -20,10 +20,6 @@ class Indexer
     traject_indexer.complete
   end
 
-  def output_hash
-    traject_indexer.map_record(foo.to_a.first)
-  end
-
   ##
   # Load the traject indexing config for DataSpace research data objects
   def traject_indexer
