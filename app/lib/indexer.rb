@@ -12,11 +12,7 @@ class Indexer
   ##
   # Split the DataSpace response into items and index each one
   def index
-    doc = Nokogiri::XML(@dspace_xml)
-    doc.xpath('/items/item').each do |item|
-      record = Traject::NokogiriReader.new(item.to_xml, traject_indexer.settings).to_a.first
-      traject_indexer.process_record(record)
-    end
+    traject_indexer.process(@dspace_xml)
     traject_indexer.complete
   end
 

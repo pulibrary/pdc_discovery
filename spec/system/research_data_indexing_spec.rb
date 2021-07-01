@@ -12,12 +12,8 @@ describe 'DataSpace research data indexing', type: :system do
   let(:dspace_xml) do
     File.join(fixture_path, 'astrophysical_sciences.xml')
   end
-  let(:first_item) do
-    doc = File.open(dspace_xml) { |f| Nokogiri::XML(f) }
-    doc.xpath("/items/item").first.to_xml
-  end
   let(:nokogiri_reader) do
-    Traject::NokogiriReader.new(first_item, indexer.settings)
+    Traject::NokogiriReader.new(File.read(dspace_xml), indexer.settings)
   end
   let(:records) do
     nokogiri_reader.to_a
