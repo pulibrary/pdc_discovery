@@ -10,6 +10,7 @@ settings do
   provide 'solr_writer.commit_on_close', 'true'
   provide 'repository', ENV['REPOSITORY_ID']
   provide 'logger', Logger.new($stderr)
+  provide "nokogiri.each_record_xpath", "//items/item"
 end
 
 # ==================
