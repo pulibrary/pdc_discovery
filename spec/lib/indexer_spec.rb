@@ -33,6 +33,17 @@ RSpec.describe Indexer do
           collection_handle: astrophysical_sciences_handle
         }
       end
+
+      before do
+        stub_request(:get, "https://dataspace-dev.princeton.edu/rest/collections/261/items?expand=all&limit=100&offset=0")
+          .with(
+            headers: {
+              'Accept' => 'application/xml'
+            }
+          )
+          .to_return(status: 200, body: community_fetch_with_expanded_metadata, headers: {})
+      end
+
       it 'is easy to invoke from thor' do
         expect(described_class.index(options)).to be_instance_of(described_class)
       end
