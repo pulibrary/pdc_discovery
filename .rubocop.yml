@@ -14,3 +14,7 @@ AllCops:
     - 'node_modules/**/*'
     - 'spec/support/**/*'
     - 'tmp/**/*'
+
+Rails/Output:
+  Exclude:
+    - app/lib/pdc_discovery/cli.rb
