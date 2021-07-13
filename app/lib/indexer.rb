@@ -10,7 +10,7 @@ class Indexer
   end
 
   ##
-  # Split the DataSpace response into items and index each one
+  # Index XML as received from DSpace
   def index
     traject_indexer.process(@dspace_xml)
     traject_indexer.complete
