@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'faraday_middleware'
-require 'pry'
 require 'traject'
 
 ##
@@ -35,15 +34,16 @@ class Indexer
     end
   end
 
-  def self.index(options)
+  ##
+  # TODO: Pass in indexing options from the command line
+  # Convenience method for kicking off indexing
+  # @example Indexer.index(collection_handle: '88435/dsp015m60qr913')
+  def self.index(_options)
     server = 'https://dataspace-dev.princeton.edu/rest'
     collection_id = '261'
-    url = "#{server}collections/#{collection_id}/items?limit=#{REST_LIMIT}&offset=0&expand=all"
+    url = "#{server}/collections/#{collection_id}/items?limit=#{REST_LIMIT}&offset=0&expand=all"
 
     resp = Faraday.get(url, {}, { 'Accept': 'application/xml' })
-
-    # content_to_index = TODO
-    puts "Indexing with options #{options}"
     i = Indexer.new(resp.body)
     i.index
     i

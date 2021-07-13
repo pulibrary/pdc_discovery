@@ -23,7 +23,6 @@ gem 'rails', '~> 6.1.4'
 gem 'rsolr', '>= 1.0', '< 3'
 gem 'sass-rails', '>= 6'
 gem 'thor'
-gem 'thor-rails'
 gem 'traject'
 gem 'turbolinks', '~> 5'
 gem 'twitter-typeahead-rails', '0.11.1.pre.corejavascript'
@@ -33,8 +32,6 @@ gem 'webpacker', '~> 5.0'
 group :development, :test do
   gem 'bixby'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem "pry-byebug"
-  gem 'pry-rails'
   gem 'rspec-rails', '~> 5.0.0'
 end
 
