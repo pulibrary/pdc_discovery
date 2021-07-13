@@ -202,6 +202,7 @@ GEM
     mini_mime (1.1.0)
     minitest (5.14.4)
     msgpack (1.4.2)
+    multi_xml (0.6.0)
     multipart-post (2.1.1)
     nio4r (2.5.7)
     nokogiri (1.11.7-x86_64-darwin)
@@ -339,6 +340,9 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     thor (1.1.0)
+    thor-rails (0.0.1)
+      rails
+      thor
     tilt (2.0.10)
     traject (3.6.0)
       concurrent-ruby (>= 0.8.0)
@@ -409,9 +413,11 @@ DEPENDENCIES
   capybara (>= 3.26)
   devise
   devise-guests (~> 0.6)
+  faraday_middleware
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.3)
+  multi_xml
   oai
   pg
   pry-byebug
@@ -425,6 +431,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   thor
+  thor-rails
   traject
   turbolinks (~> 5)
   twitter-typeahead-rails (= 0.11.1.pre.corejavascript)

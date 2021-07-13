@@ -1,11 +1,14 @@
 # frozen_string_literal: true
 
 require 'thor'
+require 'thor/rails'
 require 'indexer'
 
 ##
 # Command line interface for processing theses
 class Cli < Thor
+  include Thor::Rails
+
   method_option :collection_handle, aliases: '-c', type: :string, desc: 'The handle identifier of the DataSpace collection to be indexed'
 
   desc 'index', 'Index a DataSpace collection for discovery in the Princeton Data Commons'

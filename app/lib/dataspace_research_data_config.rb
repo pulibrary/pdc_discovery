@@ -3,6 +3,7 @@
 require 'logger'
 require 'traject'
 require 'traject/nokogiri_reader'
+require 'blacklight'
 
 settings do
   provide 'solr.url', Blacklight.default_index.connection.uri.to_s
