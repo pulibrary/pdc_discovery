@@ -25,5 +25,17 @@ RSpec.describe Indexer do
         expect(response["response"]["numFound"]).to eq 39
       end
     end
+
+    context 'invoking from CLI' do
+      let(:astrophysical_sciences_handle) { "88435/dsp015m60qr913" }
+      let(:options) do
+        {
+          collection_handle: astrophysical_sciences_handle
+        }
+      end
+      it 'is easy to invoke from thor' do
+        expect(described_class.index(options)).to be_instance_of(described_class)
+      end
+    end
   end
 end

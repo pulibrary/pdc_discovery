@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'thor'
+require 'indexer'
 
 ##
 # Command line interface for processing theses
@@ -12,7 +13,7 @@ class Cli < Thor
     if all_required_options_present?
       puts "Indexing for Princeton Data Commons"
       output_options
-      # Indexer.index(options)
+      Indexer.index(options)
     else
       output_help_message
     end

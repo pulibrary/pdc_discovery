@@ -23,4 +23,12 @@ class Indexer
       i.load_config_file(Rails.root.join('app', 'lib', 'dataspace_research_data_config.rb'))
     end
   end
+
+  def self.index(options)
+    # content_to_index = TODO
+    puts "Indexing with options #{options}"
+    i = Indexer.new(options)
+    # i.index
+    i
+  end
 end
