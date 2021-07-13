@@ -12,8 +12,10 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bootstrap', '~> 4.0'
 gem 'devise'
 gem 'devise-guests', '~> 0.6'
+gem 'faraday_middleware'
 gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
+gem 'multi_xml'
 gem 'oai'
 gem 'pg'
 gem 'puma', '~> 5.0'
@@ -30,8 +32,6 @@ gem 'webpacker', '~> 5.0'
 group :development, :test do
   gem 'bixby'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem "pry-byebug"
-  gem 'pry-rails'
   gem 'rspec-rails', '~> 5.0.0'
 end
 
