@@ -17,4 +17,4 @@ AllCops:
 
 Rails/Output:
   Exclude:
-    - app/lib/pdc_discovery/cli.rb
+    - app/lib/cli.rb
