@@ -15,6 +15,7 @@ gem 'devise-guests', '~> 0.6'
 gem 'faraday_middleware'
 gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
+gem 'listen', '~> 3.3'
 gem 'multi_xml'
 gem 'oai'
 gem 'pg'
@@ -36,7 +37,11 @@ group :development, :test do
 end
 
 group :development do
-  gem 'listen', '~> 3.3'
+  gem "bcrypt_pbkdf"
+  gem "capistrano", "~> 3.10", require: false
+  gem "capistrano-passenger", require: false
+  gem "capistrano-rails", "~> 1.4", require: false
+  gem "ed25519"
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'spring'
   gem 'web-console', '>= 4.1.0'
