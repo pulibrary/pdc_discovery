@@ -5,19 +5,19 @@ default: &default
   pool: <%= Integer(ENV.fetch("DB_POOL", 40)) %>
   reaping_frequency: <%= Integer(ENV.fetch("DB_REAPING_FREQUENCY", 10)) %>
   timeout: 5000
-  host: <%= ENV["lando_pdc_database_conn_host"] || ENV["DB_HOST"] || "localhost" %>
+  host: <%= ENV["lando_pdc_database_conn_host"] || ENV["APP_DB_HOST"] || "localhost" %>
   port: <%= ENV["lando_pdc_database_conn_port"] || 5432 %>
-  username: <%= ENV["lando_pdc_database_creds_user"] || ENV["DB_USERNAME"] %>
-  password: <%= ENV["lando_pdc_database_creds_password"] || ENV["DB_PASSWORD"] %>
-  database: <%= ENV['DATABASE'] %>
+  username: <%= ENV["lando_pdc_database_creds_user"] || ENV["APP_DB_USERNAME"] %>
+  password: <%= ENV["lando_pdc_database_creds_password"] || ENV["APP_DB_PASSWORD"] %>
+  database: <%= ENV['APP_DB'] %>
 
 development:
   <<: *default
-  database: pdc_development
+  database: 'pdc_discovery_dev'
 
 test:
   <<: *default
-  database: pdc_test
+  database: pdc_discovery_test
 
 production:
   <<: *default
