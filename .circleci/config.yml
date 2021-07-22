@@ -96,7 +96,7 @@ jobs:
           APP_DB_USERNAME: pdc_discovery
           APP_DB: pdc_discovery_test
           DB_PASSWORD: ""
-          SOLR_URL: http://solr:SolrRocks@localhost:8983/solr/pdc-discovery-test
+          SOLR_URL: http://solr:SolrRocks@localhost:8983/solr/pdc_discovery-core-test
       - image: zookeeper:3.4
       - image: postgres:10.6-alpine
         environment:
