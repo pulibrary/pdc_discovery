@@ -444,6 +444,7 @@ DEPENDENCIES
   rails (~> 6.1.4)
   rsolr (>= 1.0, < 3)
   rspec-rails (~> 5.0.0)
+  rubocop-rspec
   sass-rails (>= 6)
   selenium-webdriver
   spring
