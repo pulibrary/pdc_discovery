@@ -22,7 +22,7 @@ class Indexer
   end
 
   def research_data_config_path
-    pathname = ::Rails.root.join('app', 'lib', "dataspace_research_data_config.rb")
+    pathname = ::Rails.root.join('lib', 'traject', "dataspace_research_data_config.rb")
     pathname.to_s
   end
 
