@@ -18,6 +18,10 @@ AllCops:
 Rails/Output:
   Exclude:
     - app/lib/cli.rb
+    
+RSpec/AnyInstance:
+  Exclude: 
+    - spec/lib/research_data_harvester_spec.rb
 
 RSpec/ExampleLength:
   Exclude:
