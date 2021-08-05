@@ -18,3 +18,7 @@ AllCops:
 Rails/Output:
   Exclude:
     - app/lib/cli.rb
+
+RSpec/ExampleLength:
+  Exclude:
+    - spec/lib/research_data_collection_spec.rb
