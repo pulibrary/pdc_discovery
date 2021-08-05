@@ -50,6 +50,7 @@ end
 
 group :test do
   gem 'capybara', '>= 3.26'
+  gem 'coveralls', require: false
   gem 'selenium-webdriver'
   gem 'webdrivers'
   gem 'webmock'
