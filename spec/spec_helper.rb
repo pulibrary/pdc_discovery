@@ -99,7 +99,7 @@ RSpec.configure do |config|
   #   Kernel.srand config.seed
 end
 
+# Toggle the WebMock settings below to test data retrieval against a live DSpace instance
 # WebMock.enable_net_connect!
-
 WebMock.disable_net_connect!(allow_localhost: true,
                              allow: "chromedriver.storage.googleapis.com")

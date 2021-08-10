@@ -17,12 +17,15 @@ class ResearchDataHarvester
     collections
   end
 
+  def server
+    'https://dataspace-dev.princeton.edu/rest'
+  end
+
   ##
   # For a given ResearchDataCollection, retrieve its metadata from DataSpace
-  # @param [ResearchDataCollection] research_data_collection
-  def harvest(research_data_collection)
-    server = 'https://dataspace-dev.princeton.edu/rest'
-    collection_id = research_data_collection.collection_id
+  # @param [ResearchDataCollection] collection
+  def harvest(collection)
+    collection_id = collection.collection_id
     url = "#{server}/collections/#{collection_id}/items?limit=#{REST_LIMIT}&offset=0&expand=all"
 
     resp = Faraday.get(url, {}, { 'Accept': 'application/xml' })
