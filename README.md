@@ -10,12 +10,26 @@ A discovery portal for Princeton research data. Initially it will provide a bett
 * Ruby: 2.6.6
 * nodejs: 12.18.3
 * yarn: 1.22.10
+* Docker
+
+## Local development
+
+### Setup
+1. Check out code
+2. `bundle install`
+3. `yarn install`
+4. `rake servers:start`
+
+### Running tests
+1. Fast: `bundle exec rspec spec`
+2. Run in browser: `RUN_IN_BROWSER=true bundle exec rspec spec`
+
 
 ## Deploying
 pulbot: `pulbot deploy pdc_discovery to [staging|production]`
 
-## Indexing sample data
+## Indexing research data from DataSpace
 
 ```ruby
-rake index:sample_data
+rake index:research_data
 ```
