@@ -13,11 +13,11 @@ default: &default
 
 development:
   <<: *default
-  database: 'pdc_discovery_dev'
+  database: <%= ENV["lando_pdc_database_creds_database"] || ENV["APP_DB"] || 'pdc_discovery_dev' %>
 
 test:
   <<: *default
-  database: pdc_discovery_test
+  database: <%= ENV["lando_pdc_database_creds_database"] || ENV["APP_DB"] || 'pdc_discovery_test' %>
 
 production:
   <<: *default

@@ -1,0 +1,7 @@
+/*
+ * One may leverage Webpack CSS modules for more efficiently serving stylesheet assets
+ * Please reference:
+ *   https://edgeguides.rubyonrails.org/webpacker.html#using-webpacker-for-css
+ *   https://webpack.js.org/loaders/css-loader/
+ *   https://webpack.js.org/loaders/style-loader/
+ */

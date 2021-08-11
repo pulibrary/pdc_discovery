@@ -34,6 +34,7 @@ gem 'whenever'
 group :development, :test do
   gem 'bixby'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'pry-byebug'
   gem 'rspec-rails', '~> 5.0.0'
   gem 'rubocop-rspec'
 end
@@ -44,6 +45,7 @@ group :development do
   gem "capistrano-passenger", require: false
   gem "capistrano-rails", "~> 1.4", require: false
   gem "ed25519"
+  gem "foreman"
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'spring'
   gem 'web-console', '>= 4.1.0'

@@ -16,7 +16,7 @@ default: &default
   cache_manifest: false
 
   # Extract and emit a css file
-  extract_css: false
+  extract_css: true # This avoids flashes of unstyled content (FOUC) for LUX
 
   static_assets_extensions:
     - .jpg
@@ -33,6 +33,7 @@ default: &default
     - .woff2
 
   extensions:
+    - .vue
     - .mjs
     - .js
     - .sass
