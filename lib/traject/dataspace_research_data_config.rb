@@ -20,3 +20,5 @@ end
 
 to_field 'id', extract_xpath('/item/id')
 to_field 'title_ssm', extract_xpath('/item/name')
+to_field 'title_tsim', extract_xpath('/item/name')
+to_field 'handle_ssm', extract_xpath('/item/handle')
