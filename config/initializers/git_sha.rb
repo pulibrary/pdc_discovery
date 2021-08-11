@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-revisions_logfile = "/opt/pdc_discovery/revisions.log"
+
+revisions_logfile = Rails.root.join("..", "..", "revisions.log")
 
 GIT_SHA =
   if (Rails.env.production? || Rails.env.staging?) && File.exist?(revisions_logfile)
