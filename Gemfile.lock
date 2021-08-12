@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/TylerRick/xray-rails.git
+  revision: 63c02104f9eedfa81cb2f5189885b3ae36bd1cfb
+  branch: add_nonce
+  specs:
+    xray-rails (0.3.2)
+      rails (>= 3.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -480,6 +488,7 @@ DEPENDENCIES
   webmock
   webpacker (~> 5.0)
   whenever
+  xray-rails!
 
 RUBY VERSION
    ruby 2.6.6p146
