@@ -1,13 +1,47 @@
-version: 2
-jobs:
-  build:
+---
+version: 2.1
+
+executors:
+  pdc_discovery_executor_build:
+    docker:
+      - image: circleci/ruby:2.6.6-node-browsers
+        environment: &docker_env_default
+          BUNDLER_VERSION: 2.1.4
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
+          RAILS_ENV: test
     working_directory: ~/pdc_discovery
-    # Primary command image where all commands run
+  pdc_discovery_executor:
     docker:
       - image: circleci/ruby:2.6.6-node-browsers
         environment:
-          RAILS_ENV: test
+          <<: *docker_env_default
+          DB_HOST: localhost
+          APP_DB_USERNAME: pdc_discovery
+          DB_PASSWORD: ""
+          APP_DB: pdc_discovery_test
+          SOLR_URL: http://solr:SolrRocks@localhost:8983/solr/pdc_discovery-core-test
+      - image: zookeeper:3.4
+      - image: postgres:10.6-alpine
+        environment:
+          POSTGRES_USER: pdc_discovery
+          POSTGRES_DB: pdc_discovery_test
+          # POSTGRES_PASSWORD: ""
+          POSTGRES_HOST_AUTH_METHOD: trust
+      - image: solr:8.4
+        command:
+          - "sh"
+          - "-c"
+          - wget -O /tmp/security.json "https://gist.githubusercontent.com/eliotjordan/a27be341dc2e7a532bad99203e0f55b7/raw/5866efab9242f953764c1b03d17763309e22948f/security.json" && server/scripts/cloud-scripts/zkcli.sh -zkhost localhost:2181 -cmd putfile /security.json /tmp/security.json && bin/solr -cloud -noprompt -f -p 8983 -z localhost:2181
+    working_directory: ~/pdc_discovery
+
+jobs:
+  build:
+    executor: pdc_discovery_executor_build
     steps:
+      - attach_workspace:
+          at: '~/pdc_discovery'
       - checkout
       - run:
           name: Install node@lts/erbium (need right version for `yarn`)
@@ -57,16 +91,10 @@ jobs:
           paths: '*'
 
   rubocop:
-    working_directory: ~/pdc_discovery
-    # Primary command image where all commands run
-    docker:
-      - image: circleci/ruby:2.6.6-node-browsers
-        environment:
-          RAILS_ENV: test
+    executor: pdc_discovery_executor_build
     steps:
       - attach_workspace:
           at: '~/pdc_discovery'
-
       - run:
           name: Update bundler
           command: |
@@ -79,7 +107,6 @@ jobs:
           key: pdc_discovery-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
           paths:
             - ./vendor/bundle
-
       # Lint
       - run:
           name: Run rubocop
@@ -87,12 +114,7 @@ jobs:
 
   # Lint the JavaScript, CSS, Sass, and Vue source code files
   eslint:
-    working_directory: ~/pdc_discovery
-    # Primary command image where all commands run
-    docker:
-      - image: circleci/ruby:2.6.6-node-browsers
-        environment:
-          RAILS_ENV: test
+    executor: pdc_discovery_executor_build
     steps:
       - attach_workspace:
           at: '~/pdc_discovery'
@@ -114,29 +136,7 @@ jobs:
             - ~/.cache/yarn
 
   test:
-    working_directory: ~/pdc_discovery
-    # Primary command image where all commands run
-    docker:
-      - image: circleci/ruby:2.6.6-node-browsers
-        environment:
-          RAILS_ENV: test
-          DB_HOST: localhost
-          APP_DB_USERNAME: pdc_discovery
-          APP_DB: pdc_discovery_test
-          DB_PASSWORD: ""
-          SOLR_URL: http://solr:SolrRocks@localhost:8983/solr/pdc_discovery-core-test
-      - image: zookeeper:3.4
-      - image: postgres:10.6-alpine
-        environment:
-          POSTGRES_USER: pdc_discovery
-          POSTGRES_DB: pdc_discovery_test
-          # POSTGRES_PASSWORD: ""
-          POSTGRES_HOST_AUTH_METHOD: trust
-      - image: solr:8.4
-        command:
-          - "sh"
-          - "-c"
-          - wget -O /tmp/security.json "https://gist.githubusercontent.com/eliotjordan/a27be341dc2e7a532bad99203e0f55b7/raw/5866efab9242f953764c1b03d17763309e22948f/security.json" && server/scripts/cloud-scripts/zkcli.sh -zkhost localhost:2181 -cmd putfile /security.json /tmp/security.json && bin/solr -cloud -noprompt -f -p 8983 -z localhost:2181
+    executor: pdc_discovery_executor
     steps:
       - attach_workspace:
           at: '~/pdc_discovery'
