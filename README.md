@@ -10,7 +10,7 @@ A discovery portal for Princeton research data. Initially it will provide a bett
 * Ruby: 2.6.6
 * nodejs: 12.18.3
 * yarn: 1.22.10
-* Docker
+* [Lando](https://github.com/lando/lando/releases): 3.0.0
 
 ## Local development
 
@@ -18,12 +18,27 @@ A discovery portal for Princeton research data. Initially it will provide a bett
 1. Check out code
 2. `bundle install`
 3. `yarn install`
-4. `rake servers:start`
+
+### Starting / stopping services
+We use lando to run services required for both test and development environments.
+
+Start and initialize solr and database services with:
+
+`bundle exec rake servers:start`
+
+To stop solr and database services:
+
+`bundle exec rake servers:stop` or `lando stop`
 
 ### Running tests
 1. Fast: `bundle exec rspec spec`
 2. Run in browser: `RUN_IN_BROWSER=true bundle exec rspec spec`
 
+### Starting the development server
+*`foreman` is used to enable [Hot Module Replacement for Webpack](https://webpack.js.org/concepts/hot-module-replacement/).*
+
+1. `bundle exec foreman start`
+2. Access pdc_discovery at [http://localhost:3000/](http://localhost:3000/)
 
 ## Deploying
 pulbot: `pulbot deploy pdc_discovery to [staging|production]`
