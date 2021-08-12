@@ -47,6 +47,7 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'spring'
   gem 'web-console', '>= 4.1.0'
+  gem 'xray-rails', git: 'https://github.com/TylerRick/xray-rails.git', branch: 'add_nonce'
 end
 
 group :test do
