@@ -124,7 +124,6 @@ jobs:
       - run:
           name: Run ESLint with Prettier for linting
           command: yarn run lint
-
   test:
     executor: pdc_discovery_executor
     steps:
