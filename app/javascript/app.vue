@@ -8,10 +8,10 @@
 export default {
   data: function () {
     return {
-      message: "Hello world from Vue!"
-    }
-  }
-}
+      message: "Hello world from Vue!",
+    };
+  },
+};
 </script>
 
 <style scoped>

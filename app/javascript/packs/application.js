@@ -5,14 +5,14 @@
 
 //import Rails from "@rails/ujs" // This needs to be disabled for Blacklight integration
 //import Turbolinks from "turbolinks" // This must remain disabled for optimal integration with LUX
-import * as ActiveStorage from "@rails/activestorage"
-import "channels"
+import * as ActiveStorage from "@rails/activestorage";
+import "channels";
 
 // Import all CSS assets into Webpack
-import "styles/application"
+import "styles/application";
 
 //Rails.start() // This needs to be disabled for Blacklight integration
 //Turbolinks.start() // This must remain disabled for optimal integration with LUX
-ActiveStorage.start()
+ActiveStorage.start();
 
-console.log('Hello World from Webpack!')
+console.log("Hello World from Webpack!");
