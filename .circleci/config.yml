@@ -85,6 +85,34 @@ jobs:
           name: Run rubocop
           command: bundle exec rake rubocop
 
+  # Lint the JavaScript, CSS, Sass, and Vue source code files
+  eslint:
+    working_directory: ~/pdc_discovery
+    # Primary command image where all commands run
+    docker:
+      - image: circleci/ruby:2.6.6-node-browsers
+        environment:
+          RAILS_ENV: test
+    steps:
+      - attach_workspace:
+          at: '~/pdc_discovery'
+      # Restore yarn / webpacker cache
+      - restore_cache:
+          keys:
+            - pdc_discovery-yarn-{{ checksum "yarn.lock" }}
+      - run:
+          name: Run ESLint with Prettier for linting
+          command: yarn run lint
+      - run:
+          name: Install NPM Dependencies via Yarn
+          command: yarn install
+      # Store yarn / webpacker cache
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: pdc_discovery-yarn-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+
   test:
     working_directory: ~/pdc_discovery
     # Primary command image where all commands run
@@ -156,5 +184,8 @@ workflows:
           requires:
             - build
       - rubocop:
+          requires:
+            - build
+      - eslint:
           requires:
             - build
