@@ -15,7 +15,7 @@ class CatalogController < ApplicationController
     # config.response_model = Blacklight::Solr::Response
     #
     ## Should the raw solr document endpoint (e.g. /catalog/:id/raw) be enabled
-    # config.raw_endpoint.enabled = false
+    config.raw_endpoint.enabled = true
 
     ## Default parameters to send to solr for all search-like requests. See also SearchBuilder#processed_parameters
     config.default_solr_params = {
@@ -115,8 +115,6 @@ class CatalogController < ApplicationController
     config.add_show_field 'title_vern_ssim', label: 'Title'
     config.add_show_field 'subtitle_tsim', label: 'Subtitle'
     config.add_show_field 'subtitle_vern_ssim', label: 'Subtitle'
-    config.add_show_field 'author_tsim', label: 'Author'
-    config.add_show_field 'author_vern_ssim', label: 'Author'
     config.add_show_field 'format', label: 'Format'
     config.add_show_field 'url_fulltext_ssim', label: 'URL'
     config.add_show_field 'url_suppl_ssim', label: 'More Information'

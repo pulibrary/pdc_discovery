@@ -30,4 +30,52 @@ class SolrDocument
   # and Blacklight::Document::SemanticFields#to_semantic_values
   # Recommendation: Use field names from Dublin Core
   use_extension(Blacklight::Document::DublinCore)
+
+  def titles
+    fetch('title_tsim', [])
+  end
+
+  def title
+    titles.first
+  end
+
+  def authors
+    fetch('author_tsim', [])
+
+    ['Smith, Alice', 'Johnson, Bob']
+  end
+
+  def issued_dates
+    fetch('issued_date_tsim', [])
+  end
+
+  def issued_date
+    issued_dates.first
+  end
+
+  def abstracts
+    fetch('abstract_tsim', [])
+  end
+
+  def abstract
+    abstracts.first
+
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  end
+
+  def descriptions
+    fetch('description_tsim', [])
+  end
+
+  def description
+    descriptions.first
+
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  end
+
+  def methods
+    fetch('methods_tsim', [])
+
+    ['DP-GEN methodology', 'DNN training']
+  end
 end
