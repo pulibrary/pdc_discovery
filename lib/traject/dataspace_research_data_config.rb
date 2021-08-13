@@ -22,6 +22,7 @@ to_field 'abstract_tsim', extract_xpath("/item/metadata/key[text()='dc.descripti
 to_field 'author_tsim', extract_xpath("/item/metadata/key[text()='dc.contributor.author']/../value")
 to_field 'contributor_tsim', extract_xpath("/item/metadata/key[text()='dc.contributor']/../value")
 to_field 'description_tsim', extract_xpath("/item/metadata/key[text()='dc.description']/../value")
+to_field 'editor_tsim', extract_xpath("/item/metadata/key[text()='dc.contributor.editor']/../value")
 to_field 'handle_ssm', extract_xpath('/item/handle')
 to_field 'id', extract_xpath('/item/id')
 to_field 'title_ssm', extract_xpath('/item/name')

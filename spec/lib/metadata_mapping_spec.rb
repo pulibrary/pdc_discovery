@@ -31,6 +31,10 @@ RSpec.describe Indexer do
       expect(indexed_record["description_tsim"]).to contain_exactly "This is a fake description."
     end
 
+    it "editor" do
+      expect(indexed_record["editor_tsim"]).to contain_exactly "Fake Editor"
+    end
+
     it "title" do
       expect(indexed_record["title_ssm"]).to contain_exactly "Midplane neutral density profiles in the National Spherical Torus Experiment"
       expect(indexed_record["title_tsim"]).to contain_exactly "Midplane neutral density profiles in the National Spherical Torus Experiment"
