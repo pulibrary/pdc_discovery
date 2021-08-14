@@ -1,6 +1,5 @@
 <%= render(
   PdcDiscovery::DocumentMetadataComponent.new(
-    document: @document,
     fields: document_presenter(document).field_presenters,
     show: true
   )

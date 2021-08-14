@@ -1,6 +1,12 @@
-.document-authors {
-  margin-top: 2rem;
+.document-description {
   margin-bottom: 2rem;
-  .document-author {
+
+  header {
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+
+  &--collapse {
+    margin-top: 1.1rem;
   }
 }

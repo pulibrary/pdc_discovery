@@ -1,8 +1,9 @@
-<div>
-  <issued-date value="July 2020"></issued-date>
-  <abstract value="<%= document.abstract %>"></abstract>
-  <description value="<%= document.description %>"></description>
-  <methods :values="<%= document.methods %>"></methods>
+<div class="lux">
+  <%= render(authors) %>
+  <%= render(issued_dates) %>
+  <%= render(abstracts) %>
+  <%= render(descriptions) %>
+  <%= render(methods) %>
 </div>
 
 <dl class="document-metadata dl-invert row">

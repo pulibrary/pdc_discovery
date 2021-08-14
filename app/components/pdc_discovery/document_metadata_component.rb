@@ -2,39 +2,49 @@
 
 module PdcDiscovery
   class DocumentMetadataComponent < Blacklight::DocumentMetadataComponent
-    attr_reader :document
-
-    # @param fields [Enumerable<Blacklight::FieldPresenter>] Document field presenters
-    def initialize(document:, fields: [], show: false)
-      @document = document
-      @fields = fields
-      @show = show
+    # Abstracts
+    def abstract_fields
+      @fields.select { |field| field.key == SolrDocument::ABSTRACT_FIELD }
     end
 
-    def before_render
-      return unless fields
+    def abstracts
+      AbstractFieldComponent.with_collection(abstract_fields, show: @show)
+    end
 
-      @fields.each do |field|
-        field(component: field_component(field), field: field, show: @show)
-      end
+    # Authors
+    def author_fields
+      @fields.select { |field| field.key == SolrDocument::AUTHOR_FIELD }
     end
 
     def authors
-      # @fields.select { |field| field.is_author? }
-      @fields.select { |field| field.field == '' }
+      AuthorFieldComponent.with_collection(author_fields, show: @show)
     end
 
-    def authors_component
-      @authors_component ||= AuthorsComponent.new(authors: authors)
+    # Descriptions
+    def description_fields
+      @fields.select { |field| field.key == SolrDocument::DESCRIPTION_FIELD }
     end
 
-    def render?
-      fields.present?
+    def descriptions
+      DescriptionFieldComponent.with_collection(description_fields, show: @show)
     end
 
-    def field_component(field)
-      field&.component || Blacklight::MetadataFieldComponent
-      # field&.component || MetadataFieldComponent
+    # Issued Dates
+    def issued_date_fields
+      @fields.select { |field| field.key == SolrDocument::ISSUED_DATE_FIELD }
+    end
+
+    def issued_dates
+      IssuedDateFieldComponent.with_collection(issued_date_fields, show: @show)
+    end
+
+    # Methods
+    def method_fields
+      @fields.select { |field| field.key == SolrDocument::METHODS_FIELD }
+    end
+
+    def methods
+      MethodFieldComponent.with_collection(method_fields, show: @show)
     end
   end
 end
