@@ -31,6 +31,12 @@ class SolrDocument
   # Recommendation: Use field names from Dublin Core
   use_extension(Blacklight::Document::DublinCore)
 
+  ABSTRACT_FIELD = 'abstract_tsim'
+  AUTHOR_FIELD = 'author_tsim'
+  DESCRIPTION_FIELD = 'description_tsim'
+  ISSUED_DATE_FIELD = 'issued_date_tsim'
+  METHODS_FIELD = 'methods_tsim'
+
   def titles
     fetch('title_tsim', [])
   end
@@ -40,13 +46,11 @@ class SolrDocument
   end
 
   def authors
-    fetch('author_tsim', [])
-
-    ['Smith, Alice', 'Johnson, Bob']
+    fetch(AUTHOR_FIELD, [])
   end
 
   def issued_dates
-    fetch('issued_date_tsim', [])
+    fetch(ISSUED_DATE_FIELD, [])
   end
 
   def issued_date
@@ -54,28 +58,22 @@ class SolrDocument
   end
 
   def abstracts
-    fetch('abstract_tsim', [])
+    fetch(ABSTRACT_FIELD, [])
   end
 
   def abstract
     abstracts.first
-
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   end
 
   def descriptions
-    fetch('description_tsim', [])
+    fetch(DESCRIPTION_FIELD, [])
   end
 
   def description
     descriptions.first
-
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   end
 
   def methods
-    fetch('methods_tsim', [])
-
-    ['DP-GEN methodology', 'DNN training']
+    fetch(METHODS_FIELD, [])
   end
 end

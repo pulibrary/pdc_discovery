@@ -13,10 +13,10 @@ import "styles/application";
 
 Vue.use(system);
 
-import Authors from "components/authors";
-import IssuedDate from "components/issued_date";
 import Abstract from "components/abstract";
+import Author from "components/author";
 import Description from "components/description";
+import IssuedDate from "components/issued_date";
 import Methods from "components/methods";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -25,10 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
     new Vue({
       el: elements[i],
       components: {
-        authors: Authors,
-        "issued-date": IssuedDate,
         abstract: Abstract,
+        author: Author,
         description: Description,
+        "issued-date": IssuedDate,
         methods: Methods,
       },
     });
