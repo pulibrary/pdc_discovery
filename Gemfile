@@ -34,6 +34,7 @@ gem 'whenever'
 group :development, :test do
   gem 'bixby'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'github_changelog_generator'
   gem 'pry-byebug'
   gem 'rspec-rails', '~> 5.0.0'
   gem 'rubocop-rspec'
