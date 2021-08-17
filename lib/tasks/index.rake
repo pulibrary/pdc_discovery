@@ -12,4 +12,12 @@ namespace :index do
     ResearchDataHarvester.harvest
     puts "Done."
   end
+
+  desc 'Remove all indexed Documents from Solr'
+  task delete: :environment do
+    raise("Deleting indices in Solr is unsupported for the environment #{Rails.env}") if Rails.env.production?
+
+    Blacklight.default_index.connection.delete_by_query('*:*')
+    Blacklight.default_index.connection.commit
+  end
 end

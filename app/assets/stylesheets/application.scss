@@ -14,9 +14,15 @@
  *= require_self
  */
 
-@import "../../../node_modules/lux-design-system/dist/system/system.utils.scss";
+// Show Page
+// Metadata
 @import "./modules/abstract.scss";
 @import "./modules/author.scss";
 @import "./modules/description.scss";
 @import "./modules/issed_date.scss";
 @import "./modules/methods.scss";
+
+// Footer
+@import "./modules/deployment_version.scss";
+
+@import "../../../node_modules/lux-design-system/dist/system/system.utils.scss";

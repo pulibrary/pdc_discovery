@@ -14,7 +14,7 @@ import "styles/application";
 Vue.use(system);
 
 import Abstract from "components/abstract";
-import Author from "components/author";
+import Authors from "components/author";
 import Description from "components/description";
 import IssuedDate from "components/issued_date";
 import Methods from "components/methods";
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       el: elements[i],
       components: {
         abstract: Abstract,
-        author: Author,
+        authors: Authors,
         description: Description,
         "issued-date": IssuedDate,
         methods: Methods,

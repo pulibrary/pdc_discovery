@@ -1,7 +1,7 @@
 <template>
   <div class="document-authors">
     <template v-for="author in authors">
-      <a href="#" class="document-author">{{ authors }}</a>
+      <a class="document-author">{{ author }}</a>
     </template>
   </div>
 </template>

@@ -52,6 +52,7 @@ class CatalogController < ApplicationController
     # config.show.title_field = 'title_tesim'
     # config.show.display_type_field = 'format'
     # config.show.thumbnail_field = 'thumbnail_path_ss'
+    # config.show.document_component = PdcDiscovery::DocumentComponent
 
     # solr fields that will be treated as facets by the blacklight application
     #   The ordering of the field names is the order of the display
@@ -126,6 +127,12 @@ class CatalogController < ApplicationController
     config.add_show_field 'lc_callnum_ssim', label: 'Call number'
     config.add_show_field 'isbn_ssim', label: 'ISBN'
     config.add_show_field 'handle_ssim', label: 'Handle'
+
+    config.add_show_field 'abstract_tsim', label: 'Abstract'
+    config.add_show_field 'contributor_tsim', label: 'Author'
+    config.add_show_field 'description_tsim', label: 'Description'
+    config.add_show_field 'issued_date_tsim', label: 'Issued Date'
+    config.add_show_field 'methods_tsim', label: 'Methods'
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
