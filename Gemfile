@@ -37,7 +37,6 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'rspec-rails', '~> 5.0.0'
   gem 'rubocop-rspec'
-  gem 'xray-rails', git: 'https://github.com/TylerRick/xray-rails.git', branch: 'add_nonce'
 end
 
 group :development do
