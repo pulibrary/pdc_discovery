@@ -1,15 +1,17 @@
 <template>
   <div class="document-issued-date">
-    <div>Issued Date: {{ value }}</div>
+    <template v-for="value in values">
+      <div>Issued Date: {{ value }}</div>
+    </template>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    value: {
-      type: String,
-      default: null,
+    values: {
+      type: Array,
+      default: [],
     },
   },
 };
