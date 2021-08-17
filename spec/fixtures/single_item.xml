@@ -75,6 +75,10 @@
       <value>Stotler, Daren</value>
     </metadata>
     <metadata>
+      <key>dc.contributor.editor</key>
+      <value>Fake Editor</value>
+    </metadata>
+    <metadata>
       <key>dc.contributor.author</key>
       <value>Stotler, D.</value>
     </metadata>
@@ -121,6 +125,11 @@
     <metadata>
       <key>dc.identifier.uri</key>
       <value>http://arks.princeton.edu/ark:/88435/dsp01zg64tp300</value>
+    </metadata>
+    <metadata>
+      <key>dc.description</key>
+      <language>en_US</language>
+      <value>This is a fake description.</value>
     </metadata>
     <metadata>
       <key>dc.description.abstract</key>

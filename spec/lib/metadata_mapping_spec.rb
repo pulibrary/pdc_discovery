@@ -27,9 +27,21 @@ RSpec.describe Indexer do
       expect(indexed_record["contributor_tsim"]).to contain_exactly "Stotler, Daren"
     end
 
+    it "description" do
+      expect(indexed_record["description_tsim"]).to contain_exactly "This is a fake description."
+    end
+
+    it "editor" do
+      expect(indexed_record["editor_tsim"]).to contain_exactly "Fake Editor"
+    end
+
     it "title" do
       expect(indexed_record["title_ssm"]).to contain_exactly "Midplane neutral density profiles in the National Spherical Torus Experiment"
       expect(indexed_record["title_tsim"]).to contain_exactly "Midplane neutral density profiles in the National Spherical Torus Experiment"
+    end
+
+    it "uri" do
+      expect(indexed_record["uri_tsim"]).to contain_exactly "http://arks.princeton.edu/ark:/88435/dsp01zg64tp300"
     end
   end
 end
