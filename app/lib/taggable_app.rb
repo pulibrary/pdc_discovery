@@ -42,7 +42,7 @@ class TaggableApp
     options[:since_tag] = last_version_number
     options[:future_release] = RELEASE_PLACEHOLDER
     options[:token] = ENV['CHANGELOG_GITHUB_TOKEN']
-    options[:enhancement_labels] = ["Feature", "Features", "feature", "features"]
+    options[:enhancement_labels] = ["Feature", "Features", "feature", "features", "enhancement", "Enhancement"]
     options[:bug_labels] = ["Bug", "Bugs", "bug", "bugs"]
     options[:breaking_prefix] = "**#{BREAKING_PREFIX}**"
     options[:enhancement_prefix] = "**#{ENHANCEMENT_PREFIX}**"
