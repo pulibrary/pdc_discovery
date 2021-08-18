@@ -11,7 +11,9 @@ class DateNormalizer
   end
 
   def self.format_string_for_display(date_string)
-    if date_string.match?(/\d\d\d\d-\d\d/)
+    if date_string.match?(/\d{4}-\d{2}-\d{2}/)
+      Date.strptime(date_string).strftime('%e %B %Y').strip
+    elsif date_string.match?(/\d{4}-\d{2}/)
       Date.strptime(date_string, '%Y-%m').strftime('%B %Y')
     else
       date_string
