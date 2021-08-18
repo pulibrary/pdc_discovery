@@ -9,7 +9,7 @@ module PdcDiscovery
     end
 
     def field_values
-      # @field.values
+      # This is for the demo.
       [
         {
           fileName: {
@@ -30,6 +30,14 @@ module PdcDiscovery
 
     def values_json
       JSON.generate(field_values)
+    end
+
+    def component_name
+      'downloads'
+    end
+
+    def component_tag
+      content_tag(component_name.to_sym, nil, ':values' => values_json)
     end
   end
 end
