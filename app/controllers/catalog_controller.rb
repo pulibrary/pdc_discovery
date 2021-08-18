@@ -52,7 +52,7 @@ class CatalogController < ApplicationController
     # config.show.title_field = 'title_tsim'
     # config.show.display_type_field = 'format'
     # config.show.thumbnail_field = 'thumbnail_path_ss'
-    # config.show.document_component = PdcDiscovery::DocumentComponent
+    config.show.document_component = PdcDiscovery::DocumentComponent
 
     # solr fields that will be treated as facets by the blacklight application
     #   The ordering of the field names is the order of the display

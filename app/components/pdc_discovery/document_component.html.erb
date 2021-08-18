@@ -15,6 +15,17 @@
       <%= title %>
       <%= embed %>
       <%= content %>
+      <%= metadata %>
+      <% metadata_sections.each do |section| %>
+        <%= section %>
+      <% end %>
+
+      <div>
+        <%= downloads %>
+      </div>
+      <div>
+        <%= metadata_table %>
+      </div>
     </div>
 
     <%= thumbnail %>

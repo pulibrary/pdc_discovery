@@ -18,6 +18,7 @@ import Authors from "components/author";
 import Description from "components/description";
 import IssuedDate from "components/issued_date";
 import Methods from "components/methods";
+import Downloads from "components/downloads";
 
 document.addEventListener("DOMContentLoaded", () => {
   var elements = document.getElementsByClassName("lux");
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         description: Description,
         "issued-date": IssuedDate,
         methods: Methods,
+        downloads: Downloads,
       },
     });
   }
