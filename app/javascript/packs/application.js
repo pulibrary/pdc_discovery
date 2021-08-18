@@ -19,6 +19,7 @@ import Description from "components/description";
 import IssuedDate from "components/issued_date";
 import Methods from "components/methods";
 import Downloads from "components/downloads";
+import MetadataTable from "components/metadata_table";
 
 document.addEventListener("DOMContentLoaded", () => {
   var elements = document.getElementsByClassName("lux");
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "issued-date": IssuedDate,
         methods: Methods,
         downloads: Downloads,
+        "metadata-table": MetadataTable,
       },
     });
   }

@@ -15,15 +15,15 @@
           width="16"
           height="16"
           fill="currentColor"
-          class="bi bi-arrow-up"
+          class="bi bi-caret-up"
           viewBox="0 0 16 16"
         >
           <path
-            fill-rule="evenodd"
-            d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"
+            d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z"
           />
         </svg>
-        <a class="document-abstract--collapse__button">Show Less</a>
+
+        <a class="document-abstract--collapse__button" href="/">Show Less</a>
       </div>
     </div>
   </div>
