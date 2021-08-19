@@ -32,10 +32,6 @@ RSpec.describe Indexer do
         expect(indexed_record["description_tsim"]).to contain_exactly "This is a fake description."
       end
 
-      it "editor" do
-        expect(indexed_record["editor_tsim"]).to contain_exactly "Fake Editor"
-      end
-
       it "issue_date" do
         expect(indexed_record["issue_date_ssm"]).to contain_exactly "August 2015"
       end
@@ -47,6 +43,37 @@ RSpec.describe Indexer do
 
       it "uri" do
         expect(indexed_record["uri_tsim"]).to contain_exactly "http://arks.princeton.edu/ark:/88435/dsp01zg64tp300"
+      end
+    end
+
+    context "contributor" do
+      it "advisor" do
+        expect(indexed_record["advisor_tsim"]).to contain_exactly "Fake Advisor"
+      end
+
+      it "editor" do
+        expect(indexed_record["editor_tsim"]).to contain_exactly "Fake Editor"
+      end
+
+      it "illustrator" do
+        expect(indexed_record["illustrator_tsim"]).to contain_exactly "Fake Illustrator"
+      end
+
+      it "other contributor" do
+        expect(indexed_record["other_contributor_tsim"]).to contain_exactly "Fake Other"
+      end
+
+      it "creator" do
+        expect(indexed_record["creator_tsim"]).to contain_exactly "Fake Creator"
+      end
+    end
+
+    context "coverage" do
+      it "spatial" do
+        expect(indexed_record["spatial_coverage_tsim"]).to contain_exactly "Narnia"
+      end
+      it "temporal" do
+        expect(indexed_record["temporal_coverage_tsim"]).to contain_exactly "A long time ago"
       end
     end
 

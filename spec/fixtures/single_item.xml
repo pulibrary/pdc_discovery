@@ -75,8 +75,24 @@
       <value>Stotler, Daren</value>
     </metadata>
     <metadata>
+      <key>dc.contributor.advisor</key>
+      <value>Fake Advisor</value>
+    </metadata>
+    <metadata>
       <key>dc.contributor.editor</key>
       <value>Fake Editor</value>
+    </metadata>
+    <metadata>
+      <key>dc.contributor.illustrator</key>
+      <value>Fake Illustrator</value>
+    </metadata>
+    <metadata>
+      <key>dc.contributor.other</key>
+      <value>Fake Other</value>
+    </metadata>
+    <metadata>
+      <key>dc.creator</key>
+      <value>Fake Creator</value>
     </metadata>
     <metadata>
       <key>dc.contributor.author</key>
@@ -109,6 +125,14 @@
     <metadata>
       <key>dc.contributor.author</key>
       <value>P.W. Ross</value>
+    </metadata>
+    <metadata>
+      <key>dc.coverage.spatial</key>
+      <value>Narnia</value>
+    </metadata>
+    <metadata>
+      <key>dc.coverage.temporal</key>
+      <value>A long time ago</value>
     </metadata>
     <metadata>
       <key>dc.date</key>
