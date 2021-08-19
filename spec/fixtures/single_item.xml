@@ -135,6 +135,38 @@
       <value>A long time ago</value>
     </metadata>
     <metadata>
+      <key>dc.identifier</key>
+      <value>mst3k</value>
+    </metadata>
+    <metadata>
+      <key>dc.identifier.citation</key>
+      <value>This is a fake citation.</value>
+    </metadata>
+    <metadata>
+      <key>dc.identifier.govdoc</key>
+      <value>fake.govdoc.id</value>
+    </metadata>
+    <metadata>
+      <key>dc.identifier.isbn</key>
+      <value>0-13-117705-2</value>
+    </metadata>
+    <metadata>
+      <key>dc.identifier.issn</key>
+      <value>0-123-456789</value>
+    </metadata>
+    <metadata>
+      <key>dc.identifier.sici</key>
+      <value>987654321</value>
+    </metadata>
+    <metadata>
+      <key>dc.identifier.ismn</key>
+      <value>0000-1111-0000</value>
+    </metadata>
+    <metadata>
+      <key>dc.identifier.other</key>
+      <value>12345-67890</value>
+    </metadata>
+    <metadata>
       <key>dc.date</key>
       <value>2015-09-19T18:14:22Z</value>
     </metadata>
