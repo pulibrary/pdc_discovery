@@ -98,6 +98,24 @@ RSpec.describe Indexer do
       end
     end
 
+    context "dc.description" do
+      it "provenance" do
+        expect(indexed_record["provenance_ssim"]).to contain_exactly "Fake Provenance"
+      end
+      it "sponsorship" do
+        expect(indexed_record["sponsorship_ssim"]).to contain_exactly "Fake Sponsorship"
+      end
+      it "statementofresponsibility" do
+        expect(indexed_record["statementofresponsibility_ssim"]).to contain_exactly "Fake Statement of Responsibility"
+      end
+      it "tableofcontents" do
+        expect(indexed_record["tableofcontents_tesim"]).to contain_exactly "readme.txt (table of contents), Stotler_PoP.zip"
+      end
+      it "description uri" do
+        expect(indexed_record["description_uri_ssim"]).to contain_exactly "http://fake.description.uri"
+      end
+    end
+
     context "identifiers" do
       it "dc.identifier" do
         expect(indexed_record["other_identifier_ssim"]).to contain_exactly "mst3k"

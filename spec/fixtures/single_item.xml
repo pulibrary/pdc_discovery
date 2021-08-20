@@ -167,6 +167,22 @@
       <value>12345-67890</value>
     </metadata>
     <metadata>
+      <key>dc.description.provenance</key>
+      <value>Fake Provenance</value>
+    </metadata>
+    <metadata>
+      <key>dc.description.sponsorship</key>
+      <value>Fake Sponsorship</value>
+    </metadata>
+    <metadata>
+      <key>dc.description.statementofresponsibility</key>
+      <value>Fake Statement of Responsibility</value>
+    </metadata>
+    <metadata>
+      <key>dc.description.uri</key>
+      <value>http://fake.description.uri</value>
+    </metadata>
+    <metadata>
       <key>dc.date</key>
       <value>2015-09-19T18:14:22Z</value>
     </metadata>
