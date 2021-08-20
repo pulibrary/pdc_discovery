@@ -34,7 +34,7 @@ class SolrDocument
   ABSTRACT_FIELD = 'abstract_tsim'
   AUTHOR_FIELD = 'contributor_tsim'
   DESCRIPTION_FIELD = 'description_tsim'
-  ISSUED_DATE_FIELD = 'issued_date_tsim'
+  ISSUED_DATE_FIELD = 'issue_date_ssim'
   METHODS_FIELD = 'methods_tsim'
   TITLE_FIELD = 'title_tsim'
 
