@@ -85,6 +85,15 @@ to_field "issue_date_ssim" do |record, accumulator, _context|
 end
 
 # ==================
+# description fields
+
+to_field 'provenance_ssim', extract_xpath("/item/metadata/key[text()='dc.description.provenance']/../value")
+to_field 'sponsorship_ssim', extract_xpath("/item/metadata/key[text()='dc.description.sponsorship']/../value")
+to_field 'statementofresponsibility_ssim', extract_xpath("/item/metadata/key[text()='dc.description.statementofresponsibility']/../value")
+to_field 'tableofcontents_tesim', extract_xpath("/item/metadata/key[text()='dc.description.tableofcontents']/../value")
+to_field 'description_uri_ssim', extract_xpath("/item/metadata/key[text()='dc.description.uri']/../value")
+
+# ==================
 # identifier fields
 
 to_field 'other_identifier_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier']/../value")
