@@ -15,6 +15,5 @@ describe 'Single item page', type: :system, js: true do
   it "has expected metadata" do
     visit '/catalog/78348'
     expect(page).to have_content "Midplane neutral density profiles in the National Spherical Torus Experiment"
-    expect(page).to have_content "88435/dsp01zg64tp300"
   end
 end

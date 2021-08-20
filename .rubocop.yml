@@ -18,6 +18,7 @@ AllCops:
 Metrics/BlockLength:
   Exclude:
     - spec/lib/metadata_mapping_spec.rb
+    - app/controllers/catalog_controller.rb
 
 Rails/Output:
   Exclude:
