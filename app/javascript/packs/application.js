@@ -3,16 +3,38 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-//import Rails from "@rails/ujs" // This needs to be disabled for Blacklight integration
-//import Turbolinks from "turbolinks" // This must remain disabled for optimal integration with LUX
-import * as ActiveStorage from "@rails/activestorage";
-import "channels";
+import Vue from "vue/dist/vue.esm";
+import system from "lux-design-system";
+import "lux-design-system/dist/system/system.css";
+import "lux-design-system/dist/system/tokens/tokens.scss";
 
 // Import all CSS assets into Webpack
 import "styles/application";
 
-//Rails.start() // This needs to be disabled for Blacklight integration
-//Turbolinks.start() // This must remain disabled for optimal integration with LUX
-ActiveStorage.start();
+Vue.use(system);
 
-console.log("Hello World from Webpack!");
+import Abstract from "components/abstract";
+import Authors from "components/author";
+import Description from "components/description";
+import IssuedDate from "components/issued_date";
+import Methods from "components/methods";
+import Downloads from "components/downloads";
+import MetadataTable from "components/metadata_table";
+
+document.addEventListener("DOMContentLoaded", () => {
+  var elements = document.getElementsByClassName("lux");
+  for (var i = 0; i < elements.length; i++) {
+    new Vue({
+      el: elements[i],
+      components: {
+        abstract: Abstract,
+        authors: Authors,
+        description: Description,
+        "issued-date": IssuedDate,
+        methods: Methods,
+        downloads: Downloads,
+        "metadata-table": MetadataTable,
+      },
+    });
+  }
+});

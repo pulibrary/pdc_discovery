@@ -30,4 +30,51 @@ class SolrDocument
   # and Blacklight::Document::SemanticFields#to_semantic_values
   # Recommendation: Use field names from Dublin Core
   use_extension(Blacklight::Document::DublinCore)
+
+  ABSTRACT_FIELD = 'abstract_tsim'
+  AUTHOR_FIELD = 'contributor_tsim'
+  DESCRIPTION_FIELD = 'description_tsim'
+  ISSUED_DATE_FIELD = 'issued_date_tsim'
+  METHODS_FIELD = 'methods_tsim'
+  TITLE_FIELD = 'title_tsim'
+
+  def titles
+    fetch(TITLE_FIELD, [])
+  end
+
+  def title
+    titles.first
+  end
+
+  def authors
+    fetch(AUTHOR_FIELD, [])
+  end
+
+  def issued_dates
+    fetch(ISSUED_DATE_FIELD, [])
+  end
+
+  def issued_date
+    issued_dates.first
+  end
+
+  def abstracts
+    fetch(ABSTRACT_FIELD, [])
+  end
+
+  def abstract
+    abstracts.first
+  end
+
+  def descriptions
+    fetch(DESCRIPTION_FIELD, [])
+  end
+
+  def description
+    descriptions.first
+  end
+
+  def methods
+    fetch(METHODS_FIELD, [])
+  end
 end

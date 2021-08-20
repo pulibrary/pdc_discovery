@@ -1,0 +1,43 @@
+@import "./variables/typography";
+
+.document-metadata-table {
+  &-section {
+    margin-top: 2rem;
+  }
+
+  padding-top: 0.2rem;
+  padding-bottom: 0rem;
+  padding-left: 0;
+  padding-right: 0;
+
+  background-color: #dee2e6;
+  header {
+    font-size: $font-size-xx-large-min;
+    font-weight: $font-weight-semi-bold;
+
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  .table {
+    background-color: #ffffff;
+
+    border-top: 0.2rem solid #dee2e6;
+    border-bottom: 0.075rem solid #dee2e6;
+    border-left: 0.075rem solid #dee2e6;
+    border-right: 0.075rem solid #dee2e6;
+
+    margin-bottom: inherit;
+
+    th {
+      padding-left: 1.2rem;
+      padding-right: 1.2rem;
+    }
+  }
+
+  &__expand {
+    font-weight: $font-weight-regular;
+  }
+}

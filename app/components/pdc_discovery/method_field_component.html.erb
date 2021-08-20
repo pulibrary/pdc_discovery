@@ -1,0 +1,5 @@
+<%= render(@layout.new(field: @field)) do |component| %>
+  <% component.value do %>
+    <methods :values="<%= value %>"></methods>
+  <% end %>
+<% end %>
