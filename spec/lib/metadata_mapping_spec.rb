@@ -29,7 +29,7 @@ RSpec.describe Indexer do
       end
 
       it "description" do
-        expect(indexed_record["description_tesim"]).to contain_exactly "This is a fake description."
+        expect(indexed_record["description_tsim"]).to contain_exactly "This is a fake description."
       end
 
       it "issue_date" do
