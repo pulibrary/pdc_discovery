@@ -30,7 +30,7 @@ class CatalogController < ApplicationController
     # config.per_page = [10,20,50,100]
 
     # solr field configuration for search results/index views
-    config.index.title_field = 'title_tesim'
+    config.index.title_field = 'title_tsim'
     # config.index.display_type_field = 'format'
     # config.index.thumbnail_field = 'thumbnail_path_ss'
 
@@ -49,7 +49,7 @@ class CatalogController < ApplicationController
     config.add_nav_action(:search_history, partial: 'blacklight/nav/search_history')
 
     # solr field configuration for document/show views
-    # config.show.title_field = 'title_tesim'
+    # config.show.title_field = 'title_tsim'
     # config.show.display_type_field = 'format'
     # config.show.thumbnail_field = 'thumbnail_path_ss'
     config.show.document_component = PdcDiscovery::DocumentComponent
@@ -101,7 +101,7 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
-    config.add_index_field 'title_tesim', label: 'Title'
+    config.add_index_field 'title_tsim', label: 'Title'
     config.add_index_field 'title_vern_ssim', label: 'Title'
     config.add_index_field 'author_tesim', label: 'Author'
     config.add_index_field 'author_vern_ssim', label: 'Author'

@@ -28,7 +28,7 @@ to_field 'description_tesim', extract_xpath("/item/metadata/key[text()='dc.descr
 to_field 'handle_ssim', extract_xpath('/item/handle')
 to_field 'id', extract_xpath('/item/id')
 to_field 'title_ssim', extract_xpath('/item/name')
-to_field 'title_tesim', extract_xpath('/item/name')
+to_field 'title_tsim', extract_xpath('/item/name')
 to_field 'uri_tesim', extract_xpath("/item/metadata/key[text()='dc.identifier.uri']/../value")
 
 # ==================
