@@ -16,7 +16,7 @@ RSpec.describe Indexer do
 
     context "fields for above the fold single page display" do
       it "abstract" do
-        expect(indexed_record["abstract_tesim"].first).to match(/discharge parameters/)
+        expect(indexed_record["abstract_tsim"].first).to match(/discharge parameters/)
       end
 
       it "author" do
@@ -25,11 +25,11 @@ RSpec.describe Indexer do
       end
 
       it "contributor" do
-        expect(indexed_record["contributor_tesim"]).to contain_exactly "Stotler, Daren"
+        expect(indexed_record["contributor_tsim"]).to contain_exactly "Stotler, Daren"
       end
 
       it "description" do
-        expect(indexed_record["description_tesim"]).to contain_exactly "This is a fake description."
+        expect(indexed_record["description_tsim"]).to contain_exactly "This is a fake description."
       end
 
       it "issue_date" do
@@ -38,7 +38,7 @@ RSpec.describe Indexer do
 
       it "title" do
         expect(indexed_record["title_ssim"]).to contain_exactly "Midplane neutral density profiles in the National Spherical Torus Experiment"
-        expect(indexed_record["title_tesim"]).to contain_exactly "Midplane neutral density profiles in the National Spherical Torus Experiment"
+        expect(indexed_record["title_tsim"]).to contain_exactly "Midplane neutral density profiles in the National Spherical Torus Experiment"
       end
 
       it "uri" do
@@ -60,7 +60,7 @@ RSpec.describe Indexer do
       end
 
       it "other contributor" do
-        expect(indexed_record["other_contributor_tesim"]).to contain_exactly "Fake Other"
+        expect(indexed_record["other_contributor_tsim"]).to contain_exactly "Fake Other"
       end
 
       it "creator" do

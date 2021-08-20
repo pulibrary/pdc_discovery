@@ -21,14 +21,14 @@ end
 # ==================
 # fields for above the fold single page display
 
-to_field 'abstract_tesim', extract_xpath("/item/metadata/key[text()='dc.description.abstract']/../value")
+to_field 'abstract_tsim', extract_xpath("/item/metadata/key[text()='dc.description.abstract']/../value")
 to_field 'author_tesim', extract_xpath("/item/metadata/key[text()='dc.contributor.author']/../value")
-to_field 'contributor_tesim', extract_xpath("/item/metadata/key[text()='dc.contributor']/../value")
-to_field 'description_tesim', extract_xpath("/item/metadata/key[text()='dc.description']/../value")
+to_field 'contributor_tsim', extract_xpath("/item/metadata/key[text()='dc.contributor']/../value")
+to_field 'description_tsim', extract_xpath("/item/metadata/key[text()='dc.description']/../value")
 to_field 'handle_ssim', extract_xpath('/item/handle')
 to_field 'id', extract_xpath('/item/id')
 to_field 'title_ssim', extract_xpath('/item/name')
-to_field 'title_tesim', extract_xpath('/item/name')
+to_field 'title_tsim', extract_xpath('/item/name')
 to_field 'uri_tesim', extract_xpath("/item/metadata/key[text()='dc.identifier.uri']/../value")
 
 # ==================
@@ -37,7 +37,7 @@ to_field 'uri_tesim', extract_xpath("/item/metadata/key[text()='dc.identifier.ur
 to_field 'advisor_tesim', extract_xpath("/item/metadata/key[text()='dc.contributor.advisor']/../value")
 to_field 'editor_tesim', extract_xpath("/item/metadata/key[text()='dc.contributor.editor']/../value")
 to_field 'illustrator_tesim', extract_xpath("/item/metadata/key[text()='dc.contributor.illustrator']/../value")
-to_field 'other_contributor_tesim', extract_xpath("/item/metadata/key[text()='dc.contributor.other']/../value")
+to_field 'other_contributor_tsim', extract_xpath("/item/metadata/key[text()='dc.contributor.other']/../value")
 to_field 'creator_tesim', extract_xpath("/item/metadata/key[text()='dc.creator']/../value")
 
 # ==================
