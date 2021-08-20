@@ -16,7 +16,7 @@ RSpec.describe Indexer do
 
     context "fields for above the fold single page display" do
       it "abstract" do
-        expect(indexed_record["abstract_tesim"].first).to match(/discharge parameters/)
+        expect(indexed_record["abstract_tsim"].first).to match(/discharge parameters/)
       end
 
       it "author" do

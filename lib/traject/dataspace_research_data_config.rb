@@ -21,7 +21,7 @@ end
 # ==================
 # fields for above the fold single page display
 
-to_field 'abstract_tesim', extract_xpath("/item/metadata/key[text()='dc.description.abstract']/../value")
+to_field 'abstract_tsim', extract_xpath("/item/metadata/key[text()='dc.description.abstract']/../value")
 to_field 'author_tesim', extract_xpath("/item/metadata/key[text()='dc.contributor.author']/../value")
 to_field 'contributor_tesim', extract_xpath("/item/metadata/key[text()='dc.contributor']/../value")
 to_field 'description_tesim', extract_xpath("/item/metadata/key[text()='dc.description']/../value")
