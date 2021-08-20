@@ -25,7 +25,7 @@ RSpec.describe Indexer do
       end
 
       it "contributor" do
-        expect(indexed_record["contributor_tesim"]).to contain_exactly "Stotler, Daren"
+        expect(indexed_record["contributor_tsim"]).to contain_exactly "Stotler, Daren"
       end
 
       it "description" do
@@ -60,7 +60,7 @@ RSpec.describe Indexer do
       end
 
       it "other contributor" do
-        expect(indexed_record["other_contributor_tesim"]).to contain_exactly "Fake Other"
+        expect(indexed_record["other_contributor_tsim"]).to contain_exactly "Fake Other"
       end
 
       it "creator" do
