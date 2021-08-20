@@ -75,8 +75,24 @@
       <value>Stotler, Daren</value>
     </metadata>
     <metadata>
+      <key>dc.contributor.advisor</key>
+      <value>Fake Advisor</value>
+    </metadata>
+    <metadata>
       <key>dc.contributor.editor</key>
       <value>Fake Editor</value>
+    </metadata>
+    <metadata>
+      <key>dc.contributor.illustrator</key>
+      <value>Fake Illustrator</value>
+    </metadata>
+    <metadata>
+      <key>dc.contributor.other</key>
+      <value>Fake Other</value>
+    </metadata>
+    <metadata>
+      <key>dc.creator</key>
+      <value>Fake Creator</value>
     </metadata>
     <metadata>
       <key>dc.contributor.author</key>
@@ -109,6 +125,46 @@
     <metadata>
       <key>dc.contributor.author</key>
       <value>P.W. Ross</value>
+    </metadata>
+    <metadata>
+      <key>dc.coverage.spatial</key>
+      <value>Narnia</value>
+    </metadata>
+    <metadata>
+      <key>dc.coverage.temporal</key>
+      <value>A long time ago</value>
+    </metadata>
+    <metadata>
+      <key>dc.identifier</key>
+      <value>mst3k</value>
+    </metadata>
+    <metadata>
+      <key>dc.identifier.citation</key>
+      <value>This is a fake citation.</value>
+    </metadata>
+    <metadata>
+      <key>dc.identifier.govdoc</key>
+      <value>fake.govdoc.id</value>
+    </metadata>
+    <metadata>
+      <key>dc.identifier.isbn</key>
+      <value>0-13-117705-2</value>
+    </metadata>
+    <metadata>
+      <key>dc.identifier.issn</key>
+      <value>0-123-456789</value>
+    </metadata>
+    <metadata>
+      <key>dc.identifier.sici</key>
+      <value>987654321</value>
+    </metadata>
+    <metadata>
+      <key>dc.identifier.ismn</key>
+      <value>0000-1111-0000</value>
+    </metadata>
+    <metadata>
+      <key>dc.identifier.other</key>
+      <value>12345-67890</value>
     </metadata>
     <metadata>
       <key>dc.date</key>

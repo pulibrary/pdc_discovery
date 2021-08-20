@@ -30,7 +30,7 @@ class CatalogController < ApplicationController
     # config.per_page = [10,20,50,100]
 
     # solr field configuration for search results/index views
-    config.index.title_field = 'title_tsim'
+    config.index.title_field = 'title_tesim'
     # config.index.display_type_field = 'format'
     # config.index.thumbnail_field = 'thumbnail_path_ss'
 
@@ -49,7 +49,7 @@ class CatalogController < ApplicationController
     config.add_nav_action(:search_history, partial: 'blacklight/nav/search_history')
 
     # solr field configuration for document/show views
-    # config.show.title_field = 'title_tsim'
+    # config.show.title_field = 'title_tesim'
     # config.show.display_type_field = 'format'
     # config.show.thumbnail_field = 'thumbnail_path_ss'
 
@@ -100,9 +100,9 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
-    config.add_index_field 'title_tsim', label: 'Title'
+    config.add_index_field 'title_tesim', label: 'Title'
     config.add_index_field 'title_vern_ssim', label: 'Title'
-    config.add_index_field 'author_tsim', label: 'Author'
+    config.add_index_field 'author_tesim', label: 'Author'
     config.add_index_field 'author_vern_ssim', label: 'Author'
     config.add_index_field 'format', label: 'Format'
     config.add_index_field 'language_ssim', label: 'Language'
@@ -115,7 +115,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'title_vern_ssim', label: 'Title'
     config.add_show_field 'subtitle_tsim', label: 'Subtitle'
     config.add_show_field 'subtitle_vern_ssim', label: 'Subtitle'
-    config.add_show_field 'author_tsim', label: 'Author'
+    config.add_show_field 'author_tesim', label: 'Author'
     config.add_show_field 'author_vern_ssim', label: 'Author'
     config.add_show_field 'format', label: 'Format'
     config.add_show_field 'url_fulltext_ssim', label: 'URL'
@@ -125,7 +125,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'published_vern_ssim', label: 'Published'
     config.add_show_field 'lc_callnum_ssim', label: 'Call number'
     config.add_show_field 'isbn_ssim', label: 'ISBN'
-    config.add_show_field 'handle_ssm', label: 'Handle'
+    config.add_show_field 'handle_ssim', label: 'Handle'
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields

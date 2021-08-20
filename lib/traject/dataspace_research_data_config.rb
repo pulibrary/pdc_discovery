@@ -21,51 +21,77 @@ end
 # ==================
 # fields for above the fold single page display
 
-to_field 'abstract_tsim', extract_xpath("/item/metadata/key[text()='dc.description.abstract']/../value")
-to_field 'author_tsim', extract_xpath("/item/metadata/key[text()='dc.contributor.author']/../value")
-to_field 'contributor_tsim', extract_xpath("/item/metadata/key[text()='dc.contributor']/../value")
-to_field 'description_tsim', extract_xpath("/item/metadata/key[text()='dc.description']/../value")
-to_field 'editor_tsim', extract_xpath("/item/metadata/key[text()='dc.contributor.editor']/../value")
-to_field 'handle_ssm', extract_xpath('/item/handle')
+to_field 'abstract_tesim', extract_xpath("/item/metadata/key[text()='dc.description.abstract']/../value")
+to_field 'author_tesim', extract_xpath("/item/metadata/key[text()='dc.contributor.author']/../value")
+to_field 'contributor_tesim', extract_xpath("/item/metadata/key[text()='dc.contributor']/../value")
+to_field 'description_tesim', extract_xpath("/item/metadata/key[text()='dc.description']/../value")
+to_field 'handle_ssim', extract_xpath('/item/handle')
 to_field 'id', extract_xpath('/item/id')
-to_field 'title_ssm', extract_xpath('/item/name')
-to_field 'title_tsim', extract_xpath('/item/name')
-to_field 'uri_tsim', extract_xpath("/item/metadata/key[text()='dc.identifier.uri']/../value")
+to_field 'title_ssim', extract_xpath('/item/name')
+to_field 'title_tesim', extract_xpath('/item/name')
+to_field 'uri_tesim', extract_xpath("/item/metadata/key[text()='dc.identifier.uri']/../value")
 
 # ==================
-# dates
+# contributor fields
 
-to_field "copyright_date_ssm" do |record, accumulator, _context|
+to_field 'advisor_tesim', extract_xpath("/item/metadata/key[text()='dc.contributor.advisor']/../value")
+to_field 'editor_tesim', extract_xpath("/item/metadata/key[text()='dc.contributor.editor']/../value")
+to_field 'illustrator_tesim', extract_xpath("/item/metadata/key[text()='dc.contributor.illustrator']/../value")
+to_field 'other_contributor_tesim', extract_xpath("/item/metadata/key[text()='dc.contributor.other']/../value")
+to_field 'creator_tesim', extract_xpath("/item/metadata/key[text()='dc.creator']/../value")
+
+# ==================
+# coverage fields
+
+to_field 'spatial_coverage_tesim', extract_xpath("/item/metadata/key[text()='dc.coverage.spatial']/../value")
+to_field 'temporal_coverage_tesim', extract_xpath("/item/metadata/key[text()='dc.coverage.temporal']/../value")
+
+# ==================
+# date fields
+
+to_field "copyright_date_ssim" do |record, accumulator, _context|
   dates = record.xpath("/item/metadata/key[text()='dc.date.copyright']/../value").map(&:text)
   accumulator.concat DateNormalizer.format_array_for_display(dates)
 end
 
-to_field "date_ssm" do |record, accumulator, _context|
+to_field "date_ssim" do |record, accumulator, _context|
   dates = record.xpath("/item/metadata/key[text()='dc.date']/../value").map(&:text)
   accumulator.concat DateNormalizer.format_array_for_display(dates)
 end
 
-to_field "date_accessioned_ssm" do |record, accumulator, _context|
+to_field "date_accessioned_ssim" do |record, accumulator, _context|
   dates = record.xpath("/item/metadata/key[text()='dc.date.accessioned']/../value").map(&:text)
   accumulator.concat DateNormalizer.format_array_for_display(dates)
 end
 
-to_field "date_available_ssm" do |record, accumulator, _context|
+to_field "date_available_ssim" do |record, accumulator, _context|
   dates = record.xpath("/item/metadata/key[text()='dc.date.available']/../value").map(&:text)
   accumulator.concat DateNormalizer.format_array_for_display(dates)
 end
 
-to_field "date_created_ssm" do |record, accumulator, _context|
+to_field "date_created_ssim" do |record, accumulator, _context|
   dates = record.xpath("/item/metadata/key[text()='dc.date.created']/../value").map(&:text)
   accumulator.concat DateNormalizer.format_array_for_display(dates)
 end
 
-to_field "date_submitted_ssm" do |record, accumulator, _context|
+to_field "date_submitted_ssim" do |record, accumulator, _context|
   dates = record.xpath("/item/metadata/key[text()='dc.date.submitted']/../value").map(&:text)
   accumulator.concat DateNormalizer.format_array_for_display(dates)
 end
 
-to_field "issue_date_ssm" do |record, accumulator, _context|
+to_field "issue_date_ssim" do |record, accumulator, _context|
   issue_dates = record.xpath("/item/metadata/key[text()='dc.date.issued']/../value").map(&:text)
   accumulator.concat DateNormalizer.format_array_for_display(issue_dates)
 end
+
+# ==================
+# identifier fields
+
+to_field 'other_identifier_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier']/../value")
+to_field 'citation_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.citation']/../value")
+to_field 'govdoc_id_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.govdoc']/../value")
+to_field 'isbn_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.isbn']/../value")
+to_field 'issn_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.issn']/../value")
+to_field 'sici_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.sici']/../value")
+to_field 'ismn_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.ismn']/../value")
+to_field 'local_id_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.other']/../value")

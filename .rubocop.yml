@@ -15,6 +15,10 @@ AllCops:
     - 'spec/support/**/*'
     - 'tmp/**/*'
 
+Metrics/BlockLength:
+  Exclude:
+    - spec/lib/metadata_mapping_spec.rb
+
 Rails/Output:
   Exclude:
     - app/lib/cli.rb
