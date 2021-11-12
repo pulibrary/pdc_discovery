@@ -37,7 +37,7 @@ module PdcDiscovery
     end
 
     def component_tag
-      content_tag(component_name.to_sym, nil, ':values' => values_json)
+      content_tag(component_name.to_sym, nil, ':values' => values_json, onClick: "log_plausible(#{values_json})")
     end
   end
 end
