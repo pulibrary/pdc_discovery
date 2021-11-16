@@ -1,3 +1,3 @@
-function log_plausible(values_json) {
-  plausible("Download", { file_values: "#{values_json}" });
+function log_plausible(component_name) {
+  plausible('Download', {props: {method: component_name});
 }

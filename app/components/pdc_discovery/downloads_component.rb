@@ -23,7 +23,7 @@ module PdcDiscovery
             href: '',
             content: 'File2.xml'
           },
-          fileSize: '15kb'
+          fileSize: '15kb',
         }
       ]
     end
@@ -37,7 +37,7 @@ module PdcDiscovery
     end
 
     def component_tag
-      content_tag(component_name.to_sym, nil, ':values' => values_json, onClick: "log_plausible(#{values_json})")
+      content_tag(component_name.to_sym, nil, ':values' => values_json, onClick: "log_plausible('#{component_name.to_sym}')")
     end
   end
 end
