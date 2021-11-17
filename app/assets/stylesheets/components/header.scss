@@ -1,0 +1,16 @@
+.navbar-logo {
+  background-image: url("logo.svg");
+}
+
+.navbar.bg-light {
+  background-color: #FFFFFF !important;
+  border-bottom: #3A3B3C 1px solid;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #000000;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  text-decoration: underline;
+}
