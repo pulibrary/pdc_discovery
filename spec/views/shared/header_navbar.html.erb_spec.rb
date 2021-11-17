@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 describe 'catalog/index', type: :system do
-
   context 'when on the hompage' do
     it 'does not show the navbar search' do
       visit '/'
