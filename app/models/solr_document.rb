@@ -32,7 +32,6 @@ class SolrDocument
   use_extension(Blacklight::Document::DublinCore)
 
   ABSTRACT_FIELD = 'abstract_tsim'
-  AUTHOR_FIELD = 'contributor_tsim'
   DESCRIPTION_FIELD = 'description_tsim'
   ISSUED_DATE_FIELD = 'issue_date_ssim'
   METHODS_FIELD = 'methods_tsim'
@@ -47,7 +46,11 @@ class SolrDocument
   end
 
   def authors
-    fetch(AUTHOR_FIELD, [])
+    fetch('author_tesim', [])
+  end
+
+  def contributors
+    fetch("contributor_tsim", [])
   end
 
   def issued_dates

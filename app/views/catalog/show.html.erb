@@ -1,4 +1,48 @@
-<%= render_document_main_content_partial %>
+<% #= render_document_main_content_partial %>
+
+<% @page_title = "#{@document.title} || 'untitled'" %>
+<% content_for(:head) { render_link_rel_alternates } %>
+
+<div id="document" data-document-id="@document.id" itemscope="itemscope" itemtype="http://schema.org/Thing" class="document">
+  <div class="document-main-section">
+  <header class="documentHeader row">
+    <h1 class="index_title document-title-heading col">
+      <span itemprop="name"><%= @document.title %></span>
+    </h1>
+    <div class="index-document-functions col-sm-3 col-lg-2">
+      <!-- TODO add bookmarks -->
+    </div>
+  </header>
+
+  <div class="lux">
+    <dt class="blacklight-issue_date_ssim col-md-3"></dt>
+    <dd class="col-md-9 blacklight-issue_date_ssim">
+      <div class="document-issued-date" value="January 2017"></div>
+    </dd>
+    <dt class="blacklight-abstract_tsim col-md-3"></dt>
+    <dd class="col-md-9 blacklight-abstract_tsim">
+      <div>
+        <div class="document-abstract">
+          <header>Abstract:</header>
+          <div class="document-abstract--value">
+            <%= @document.abstract %>
+          </div>
+          <!-- TODO restore this -->
+          <div class="document-abstract--collapse">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="bi bi-caret-up">
+              <path d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z"></path>
+            </svg>
+            <a href="/" class="document-abstract--collapse__button">Show Less</a>
+          </div>
+        </div>
+      </div>
+    </dd>
+  </div>
+
+  <%= render "show_documents" %>
+  <%= render "show_metadata" %>
+
+</div>
 
 <% content_for(:sidebar) do %>
   <%= render_document_sidebar_partial @document %>
