@@ -86,4 +86,8 @@ class SolrDocument
     file2 = { file_name: { href: '', content: 'File2.xml' }, file_size: '15kb' }
     [file1, file2]
   end
+
+  def referenced_by
+    fetch("referenced_by_ssim", [])
+  end
 end

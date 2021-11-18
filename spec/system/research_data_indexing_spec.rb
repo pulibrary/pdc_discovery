@@ -29,4 +29,8 @@ describe 'DataSpace research data indexing', type: :system do
   it 'title' do
     expect(result['title_ssim'].first).to eq 'Seeing the Lyman-Alpha Forest for the Trees: Constraints on the Thermal State of the IGM from SDSS-III/BOSS'
   end
+
+  it 'referenced_by' do
+    expect(result['referenced_by_ssim'].first).to eq 'https://arxiv.org/abs/1903.06605'
+  end
 end

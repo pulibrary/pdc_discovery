@@ -13,6 +13,9 @@
               <%= render_field_row "Contributor", contributor %>
             <% end %>
             <%= render_field_row "Issued Date", @document.issued_date %>
+            <% @document.referenced_by.each do |url| %>
+              <%= render_field_row_link "Referenced by", url %>
+            <% end %>
           </tbody>
           <tfoot>
             <tr>
