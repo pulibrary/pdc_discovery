@@ -80,4 +80,10 @@ class SolrDocument
   def methods
     fetch(METHODS_FIELD, [])
   end
+
+  def documents
+    file1 = { file_name: { href: '', content: 'file1.csv' }, file_size: '10KB' }
+    file2 = { file_name: { href: '', content: 'File2.xml' }, file_size: '15kb' }
+    [file1, file2]
+  end
 end
