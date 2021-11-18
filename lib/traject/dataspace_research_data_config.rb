@@ -104,3 +104,12 @@ to_field 'issn_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.is
 to_field 'sici_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.sici']/../value")
 to_field 'ismn_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.ismn']/../value")
 to_field 'local_id_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.other']/../value")
+
+# ==================
+# Indexing the URL for now. We might need to index to a more complex structure if we want to store
+# more than just the URL (e.g. a title or the language)
+#
+# TODO: What should we do with values that don't start with HTTP
+# (e.g. doi:10.1088/0029-5515/57/1/016034 in document id: 84912)?
+# Should we fix them before we index them?
+to_field 'referenced_by_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.isreferencedby']/../value")

@@ -18,4 +18,18 @@ module ApplicationHelper
     html.html_safe
   end
   # rubocop:enable Rails/OutputSafety
+
+  # Outputs the HTML to render a single value as an HTML table row with a link
+  # rubocop:disable Rails/OutputSafety
+  def render_field_row_link(title, url)
+    return if url.blank?
+    html = <<-HTML
+    <tr>
+      <th scope="row"><span>#{title}</span></th>
+      <td><span>#{link_to(url, url, target: '_blank', rel: 'noopener noreferrer')}</span></td>
+    </tr>
+    HTML
+    html.html_safe
+  end
+  # rubocop:enable Rails/OutputSafety
 end
