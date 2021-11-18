@@ -113,3 +113,18 @@ to_field 'local_id_ssim', extract_xpath("/item/metadata/key[text()='dc.identifie
 # (e.g. doi:10.1088/0029-5515/57/1/016034 in document id: 84912)?
 # Should we fix them before we index them?
 to_field 'referenced_by_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.isreferencedby']/../value")
+
+# ==================
+# Store all files metadata as a single JSON string so that we can display detailed information for each of them.
+to_field 'files_ss' do |record, accumulator, _context|
+  bitstreams = record.xpath("/item/bitstreams").map do |node|
+    {
+      name: node.xpath("name").text,
+      format: node.xpath("format").text,
+      size: node.xpath("sizeBytes").text,
+      mime_type: node.xpath("mimeType").text,
+      sequence: node.xpath("sequenceId").text
+    }
+  end
+  accumulator.concat [bitstreams.to_json.to_s]
+end

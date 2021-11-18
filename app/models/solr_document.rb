@@ -81,10 +81,11 @@ class SolrDocument
     fetch(METHODS_FIELD, [])
   end
 
-  def documents
-    file1 = { file_name: { href: '', content: 'file1.csv' }, file_size: '10KB' }
-    file2 = { file_name: { href: '', content: 'File2.xml' }, file_size: '15kb' }
-    [file1, file2]
+  def files
+    files ||= begin
+      data = JSON.parse(fetch("files_ss", "[]"))
+      data.sort_by { |file| (file["sequence"] || "").to_i }
+    end
   end
 
   def referenced_by
