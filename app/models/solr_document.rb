@@ -32,7 +32,6 @@ class SolrDocument
   use_extension(Blacklight::Document::DublinCore)
 
   ABSTRACT_FIELD = 'abstract_tsim'
-  AUTHOR_FIELD = 'contributor_tsim'
   DESCRIPTION_FIELD = 'description_tsim'
   ISSUED_DATE_FIELD = 'issue_date_ssim'
   METHODS_FIELD = 'methods_tsim'
@@ -47,7 +46,11 @@ class SolrDocument
   end
 
   def authors
-    fetch(AUTHOR_FIELD, [])
+    fetch('author_tesim', [])
+  end
+
+  def contributors
+    fetch("contributor_tsim", [])
   end
 
   def issued_dates
@@ -76,5 +79,11 @@ class SolrDocument
 
   def methods
     fetch(METHODS_FIELD, [])
+  end
+
+  def documents
+    file1 = { file_name: { href: '', content: 'file1.csv' }, file_size: '10KB' }
+    file2 = { file_name: { href: '', content: 'File2.xml' }, file_size: '15kb' }
+    [file1, file2]
   end
 end

@@ -1,5 +1,74 @@
-<%= render_document_main_content_partial %>
+<style>
+  /*
+   * TODO: Move this so a shared CSS file.
+   * Source: https://blog.kritikapattalam.com/2-simple-ways-you-can-truncate-text-using-css
+   */
+  .truncate-line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    /* width: 250px; */
+  }
+</style>
+
+<% @page_title = "#{@document.title} || 'untitled'" %>
+<% content_for(:head) { render_link_rel_alternates } %>
+
+<div id="document" data-document-id="<%= @document.id %>" itemscope="itemscope" itemtype="http://schema.org/Thing" class="document">
+  <div class="document-main-section">
+  <header class="documentHeader row">
+    <h1 class="index_title document-title-heading col">
+      <span itemprop="name"><%= @document.title %></span>
+    </h1>
+    <div class="index-document-functions col-sm-3 col-lg-2">
+      <!-- TODO add bookmarks -->
+    </div>
+  </header>
+
+  <div class="lux">
+    <dt class="blacklight-issue_date_ssim col-md-3"></dt>
+    <dd class="col-md-9 blacklight-issue_date_ssim">
+      <div class="document-issued-date" value="January 2017"></div>
+    </dd>
+    <dt class="blacklight-abstract_tsim col-md-3"></dt>
+    <dd class="col-md-9 blacklight-abstract_tsim">
+      <div>
+        <div class="document-abstract">
+          <header>Abstract:</header>
+          <p id="document-abstract-text" class="truncate-line-clamp"><%= @document.abstract %></p>
+          <div class="x">
+            <a id="document-abstract-text-toggle" href="#" class="document-abstract--collapse__button">Show More</a>
+          </div>
+        </div>
+      </div>
+    </dd>
+  </div>
+
+  <%= render "show_documents" %>
+  <%= render "show_metadata" %>
+
+</div>
 
 <% content_for(:sidebar) do %>
   <%= render_document_sidebar_partial @document %>
 <% end %>
+
+<script>
+$(function() {
+
+  // Toggle abstract display to display more or less text.
+  $("#document-abstract-text-toggle").click(function() {
+    if ($("#document-abstract-text-toggle").text() == "Show Less") {
+      $("#document-abstract-text").addClass("truncate-line-clamp");
+      $("#document-abstract-text-toggle").text("Show More");
+    } else {
+      $("#document-abstract-text").removeClass("truncate-line-clamp");
+      $("#document-abstract-text-toggle").text("Show Less");
+    }
+    return false;
+  });
+
+});
+
+</script>
