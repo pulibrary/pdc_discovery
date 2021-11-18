@@ -8,7 +8,6 @@ module ApplicationHelper
   def render_field_row(title, value, render_empty: false)
     return if value.nil?
     return if value.empty? && render_empty == false
-    value = "hello <b>world</b>"
     value_encoded = html_escape(value)
     html = <<-HTML
     <tr>
