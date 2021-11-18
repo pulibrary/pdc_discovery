@@ -81,12 +81,14 @@ class SolrDocument
     fetch(METHODS_FIELD, [])
   end
 
+  # rubocop:disable Lint/UselessAssignment
   def files
     files ||= begin
       data = JSON.parse(fetch("files_ss", "[]"))
       data.sort_by { |file| (file["sequence"] || "").to_i }
     end
   end
+  # rubocop:enable Lint/UselessAssignment
 
   def referenced_by
     fetch("referenced_by_ssim", [])
