@@ -3,7 +3,6 @@
 //= require rails-ujs
 //= require turbolinks
 //= require plausible
-//= require jquery.dataTables
 //
 // Required by Blacklight
 //= require popper
