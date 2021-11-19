@@ -2,7 +2,7 @@
   <div class="lux">
     <div class="card">
       <div class="document-downloads card-body">
-        <table class="table">
+        <table id="files-table" class="table">
           <thead>
             <tr>
               <th scope="col" nowrap="nowrap"><span>#</span></th>
@@ -44,10 +44,16 @@
 
 <script type="text/javascript">
 $(function() {
+
+  // Wire DataTable for the file list.
+  $('#files-table').DataTable();
+
+  // Track via Plausible file downloads.
   $(".documents-file-link").click(function() {
     var filename = $(this).text();
     log_plausible(filename);
     return true;
   });
+
 });
 </script>
