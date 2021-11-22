@@ -75,6 +75,11 @@
       <value>The Mudd Manuscript Library retains one bound copy of each dissertation. Search for these copies in the &lt;a href=http://catalog.princeton.edu&gt;  library's main catalog &lt;/a&gt;</value>
     </metadata>
     <metadata>
+      <key>dc.relation.isreferencedby</key>
+      <language>en_US</language>
+      <value>https://arxiv.org/abs/1903.06605</value>
+    </metadata>
+    <metadata>
       <key>dc.subject</key>
       <language>en_US</language>
       <value>Cosmology</value>
@@ -234,7 +239,7 @@
       <key>dc.description.abstract</key>
       <language>en_US</language>
       <value>The common observational feature of Pulsar Wind Nebulae (PWNe), gamma-ray bursts (GRBs), and AGN jets is a broad nonthermal spectrum of synchrotron and inverse Compton radiation. It is usually assumed that the emitting electrons are accelerated to a power-law distribution at relativistic shocks, via the so-called Fermi mechanism. Despite decades of research, the Fermi acceleration process is still not understood from first principles. An assessment of the micro-physics of particle acceleration in relativistic shocks is of paramount importance to unveil the properties of astrophysical nonthermal sources, and it is the subject of this dissertation.
-								
+
 In the first part of this thesis, I explore by means of fully-kinetic first-principle particle-in-cell (PIC) simulations the properties of relativistic shocks that propagate in electron-positron and electron-proton plasmas carrying uniform magnetic fields. I find that nonthermal particle acceleration only occurs if the upstream magnetization is weak (sigma&lt;0.001), or if the pre-shock field is nearly aligned with the shock direction of propagation (quasi-parallel shocks). Relativistic shocks in PWNe, GRBs and AGN jets are usually thought to be appreciably magnetized (sigma&gt;0.01) and quasi-perpendicular, yet they need to be efficient particle accelerators, in order to explain the prominent nonthermal signatures of these sources. Motivated by this discrepancy, I then relax the assumption of uniform pre-shock fields, and investigate the acceleration efficiency of perpendicular shocks that propagate in high-sigma flows with alternating magnetic fields. This is the geometry expected at the termination shock of pulsar winds, but it could also be relevant for Poynting-dominated jets in GRBs and AGNs. I show by means of PIC simulations that compression of the flow at the shock will force annihilation of nearby field lines, a process known as shock-driven reconnection. Magnetic reconnection can efficiently transfer the energy of alternating fields to the particles, generating flat power-law tails containing most of the particles. Finally, I directly relate the results of my PIC simulations to observations of nonthermal sources, by presenting a numerical technique that I have developed in order to extract ab initio photon spectra from PIC simulations of shocks. With this technique, I have modeled the emission from GRB jets, ruling out a class of models that relied on the so-called jitter radiation. This reinforces the idea that a detailed understanding of the micro-physics of particle acceleration in relativistic shocks is required in order to correctly interpret the emission signatures of astrophysical nonthermal sources.</value>
     </metadata>
     <metadata>
@@ -422,7 +427,7 @@ In the first part of this thesis, I explore by means of fully-kinetic first-prin
       <key>dc.description.abstract</key>
       <language>en_US</language>
       <value>Galaxy masses are difficult to determine because light traces stars and gas in a non-trivial way, and does not trace dark matter, which extends well beyond the luminous regions of galaxies. In this thesis, I use the most direct probes of dark matter available-- weak gravitational lensing and galaxy kinematics-- to trace the total mass in galaxies (and galaxy clusters) in large surveys. In particular, I use the large, homogeneous dataset from the Sloan Digital Sky Survey (SDSS), which provides spectroscopic redshifts for a large sample of galaxies at z &lt;~ 0.2 and imaging data to a depth of r&lt;22. By combining complementary probes, I am able to obtain robust observational constraints that cannot be obtained from any single technique alone.
-								
+
 First, I use weak lensing of galaxy clusters to derive an optimal optical tracer of cluster mass, which was found to be a combination of cluster richness and the luminosity of the brightest cluster galaxy. Next, I combine weak lensing of luminous red galaxies with redshift distortions and clustering measurements to derive a robust probe of gravity on cosmological scales. Finally, I combine weak lensing with the kinematics of disk galaxies to constrain the total mass profile over several orders of magnitude. I derive a minimal-scatter relation between disk velocity and stellar mass (also known as the Tully-Fisher relation) that can be used, by construction, on a similarly-selected lens sample. Then, I combine this relation with halo mass measurements from weak lensing to place constraints on the ratio of the optical to virial velocities, as well as the ratio of halo to stellar masses, both as a function of stellar mass. These results will serve as inputs to and constraints on disk galaxy formation models, which will be explored in future work.</value>
     </metadata>
     <metadata>
@@ -591,53 +596,53 @@ First, I use weak lensing of galaxy clusters to derive an optimal optical tracer
       <key>dc.description.abstract</key>
       <language>en_US</language>
       <value>We are in a very special moment for the study of the interstellar medium (ISM).
-								
-The Spitzer Space Telescope had provided, and currently Herschel Space Observatory is providing, invaluable infrared (IR) observations of a variety of astrophysical systems. 
-								
+
+The Spitzer Space Telescope had provided, and currently Herschel Space Observatory is providing, invaluable infrared (IR) observations of a variety of astrophysical systems.
+
 These observations allow us to model several ongoing processes in the ISM, and in particular to study the physical properties of the interstellar dust.
-								
+
 Determining the dust properties accurately is an extremely difficult task: even the overall amount of dust in other galaxies has often been very uncertain.
-								
+
 In the current work, we develop ``state of the art'' tools for image processing and dust modeling that allows study of the interstellar dust in other galaxies using the new infrared data.
-								
-We start by developing, the now ``industry-standard'', convolution kernels.  
-								
+
+We start by developing, the now ``industry-standard'', convolution kernels.
+
 They allow us to accurately combine data from several space- and ground-based telescopes, to perform multi-wavelength studies.
-								
+
 They are a key development for doing resolved studies of astrophysical systems.
-								
+
 We follow by analyzing the performance of ``modified blackbody'' (MBB) dust models when applied to realistic spectral energy distributions (SEDs), where we use a specific physical model, the Draine and Li (2007, DL07) dust model, to generate the synthetic SEDs.
-								
+
 We show that MBB models can have a large bias in the inferred dust parameters, and therefore it is important to use more realistic dust models.
-								
+
 We provide ``correction'' formulae to compensate for the MBB bias, useful when the more sophisticated dust modeling is not available.
-								
+
 Using the DL07 dust model, which contains amorphous silicate and carbonaceous grains, we perform careful modeling of the dust properties in a large sample of well-resolved galaxies observed by the KINGFISH survey.
-								
+
 With data from 3.6um to 500um, dust models are strongly constrained.
-								
+
 For each pixel in each galaxy we estimate
-								
+
 (1) dust mass surface density,
-								
-(2) dust mass fraction contributed by polycyclic aromatic hydrocarbons, 
-								
+
+(2) dust mass fraction contributed by polycyclic aromatic hydrocarbons,
+
 (3) distribution of starlight intensities heating the dust,
-								
+
 (4) total infrared (IR) luminosity emitted by the dust,
-								
-and 
-								
+
+and
+
 (5) IR luminosity originating in regions with high starlight intensity.
-								
+
 We obtain maps for the dust properties, which trace the structure of the galaxies.
-								
+
 The dust models successfully reproduce the observed global and resolved spectral energy distributions (SEDs).
-								
+
 We find no evidence for significant masses of cold dust (T&lt;12K).
-								
-For two galaxies studied in detail (NGC628 and NGC6946) the derived dust maps correlates extremely well with independent observations of emission in the HI 21cm line and CO1-0 line. 
-								
+
+For two galaxies studied in detail (NGC628 and NGC6946) the derived dust maps correlates extremely well with independent observations of emission in the HI 21cm line and CO1-0 line.
+
 The derived dust/gas mass ratio are in excellent agreement with dust/gas ratios infered from other lines of evidence.</value>
     </metadata>
     <metadata>
@@ -841,9 +846,9 @@ The derived dust/gas mass ratio are in excellent agreement with dust/gas ratios 
       <key>dc.description.abstract</key>
       <language>en_US</language>
       <value>The gas dynamics in protoplanetary disks (PPDs), particularly the level of turbulence as well as their global structure and evolution, are of crucial importance to many aspects of planet formation. Magnetic field is widely believed to play a crucial role in the gas dynamics, mainly via the magneto-rotational instability (MRI) or the magneto-centrifugal wind (MCW). In PPDs, however, these mechanisms are strongly affected by non-ideal magnetohydrodynamics (MHD) effects, including Ohmic resistivity, Hall effect and ambipolar diffusion (AD), due to the weak ionization level in PPDs. While Ohmic resistivity has been routinely included in the study of PPD gas dynamics, the Hall effects and AD have been largely ignored, even though they play an equally, if not more, important role.
-								
+
 In this thesis, the effect of AD is thoroughly explored via numerical simulations and the results are applied to estimate the effectiveness of the MRI in PPDs. The simulations show that MRI can always operate in the presence of AD for appropriate magnetic field strength and geometry. Stronger AD requires weaker magnetic field, and the most favorable field geometry involves the presence of both net vertical and net toroidal magnetic fluxes. Applying these results to PPDs, together with the results in the literature on the effect of Ohmic resistivity and the Hall term, a new theoretical framework is proposed to make optimistic estimates of the MRI-driven accretion rate. It is found that the MRI inevitably becomes inefficient in driving rapid accretion in the inner regions ($\sim1$ AU) of PPDs. It becomes more efficient in the outer disk ($\gtrsim15$ AU), especially assisted by the presence of tiny grains.
-								
+
 The fact that MRI becomes inefficient at the inner PPDs makes the MCW scenario a promising alternative. By performing vertically stratified shearing-box simulations of PPDs that simultaneously include the effects of both Ohmic resistivity and AD in a self-consistent manner, it is found that in the presence of a weak net vertical magnetic field (plasma $\beta\sim10^5$ at midplane), the MRI is completely suppressed in the inner region of PPDs, where the gas flow is purely laminar. A strong MCW is launched robustly that efficiently carries away the disk angular momentum, with the resulting wind-driven accretion rate consistent with observations. This thesis concludes by proposing a new scenario on the accretion process in PPDs where the MCW and MRI operate at the inner and outer disks respectively.</value>
     </metadata>
     <metadata>
@@ -1037,9 +1042,9 @@ The fact that MRI becomes inefficient at the inner PPDs makes the MCW scenario a
       <key>dc.description.abstract</key>
       <language>en_US</language>
       <value>Galaxies are complex multi-component systems, and understanding the origins of the separate galactic components is essential to the understanding of galaxy formation. In this work, I model galaxies using just two components, but even these simple models are informative. Using observations, I study the effects of local environment on bulges and disks, especially the effects of environment on disk formation and evolution around elliptical-like bulges. Using simulations, I investigate the observable consequences of a galaxy's merger history.
-								
+
 In the observational portion of this work, I divide galaxies into bulge and disk components based on galaxy surface brightness profiles. Chapter 2 presents a set of multi-color bulge+disk decompositions for more than 70, 000 nearby galaxies using images from the Sloan Digital Sky Survey. I use this sample in Chapter 3 to examine the effects of environment, at fixed bulge mass, on bulges and disks. I find that the color-density relation for galaxies with an elliptical-like bulge is due entirely to the correlation between disk color and local density. There is no statistically significant correlation between local density and disk mass. However, there is evidence for a decrease in disc mass within the richest galaxy groups. Therefore, star formation quenching, which is responsible for the change in disc color, must be distinct from the processes responsible for morphological transformation. Nonetheless, the changes in disks with increased density are not sufficient to fully explain why some bulges have disks while others remain disk-less ellipticals.
-								
+
 In Chapter 4, I examine galaxies from hydrodynamical cosmological simulations done by Dr. Renyue Cen. Since the formation history of simulated galaxies is precisely known, I use the simulations to predict the observable consequences of a galaxy's formation history. To this end, I divide the stars in simulated galaxies into stars added in mergers and stars formed in situ. I show that the metallicity, age and orbital differences between the accreted and in situ stars lead to radial gradients in a galaxy's stellar properties, which have been observed for nearby galaxies.</value>
     </metadata>
     <metadata>
@@ -1238,81 +1243,81 @@ In Chapter 4, I examine galaxies from hydrodynamical cosmological simulations do
       <key>dc.description.abstract</key>
       <language>en_US</language>
       <value>We study the modal structure and
-								
+
 angular momentum transport mechanisms of astrophysical boundary
-								
+
 layers. We focus
-								
+
 on the case where the accretion disk extends all the way to surface of
-								
+
 the star and the boundary layer is thin in comparison with
-								
+
 the stellar radius. Such a scenario is applicable, for example, to
-								
+
 weakly magnetized
-								
+
 neutron stars and white dwarfs, for which the strength of the magnetic
-								
+
 field outside the star is too small to disrupt the disk and funnel
-								
-matter to the poles. 
-								
+
+matter to the poles.
+
 Within the boundary layer, material rotating at the Keplerian velocity
-								
+
 within the disk slows down to the rotational
-								
+
 velocity inside the star. This generates intense velocity gradients and makes
-								
+
 the boundary layer susceptible to shear
-								
+
 instabilities. By performing a linear stability analysis for the
-								
+
 simplified case
-								
+
 of a plane-parallel, compressible shear layer, we argue that
-								
+
 astrophysical boundary layers are unstable to the sonic
-								
+
 instability. This instability is part of a more general class of
-								
+
 acoustic instabilities that includes the Papaloizou-Pringle instability.
-								
+
 We confirm the predictions of our linear stability analysis by running a suite
-								
+
 of simulations in 2D and 3D, with and without stratification, and
-								
+
 with and without magnetic field. In our numerical experiments, we find
-								
+
 that acoustic modes excited by the sonic instability persist even
-								
+
 in the nonlinear regime. We explain the morphological properties
-								
+
 and derive analytic formulas for the pattern speed of these acoustic modes.
-								
+
 Our work has significant implications for semianalytic models
-								
+
 describing the structure and spectral emission from boundary
-								
+
 layers. Typically, these models adopt a local, effective viscosity
-								
+
 prescription for the angular momentum transport. However, in our
-								
+
 simulations we find that angular momentum transport in the boundary
-								
+
 layer is facilitated by acoustic modes. In this scenario, accreting
-								
+
 material inside the
-								
+
 boundary layer loses angular momentum to sound waves that propagate
-								
+
 into both the star and the disk. Since transport of angular momentum by
-								
+
 waves is inherently
-								
+
 nonlocal, our work invites the construction of new phenomenological models of
-								
+
 the boundary layer in which angular momentum is transported by waves
-								
+
 rather than by an anomalous viscosity.</value>
     </metadata>
     <metadata>
@@ -1506,73 +1511,73 @@ rather than by an anomalous viscosity.</value>
       <key>dc.description.abstract</key>
       <language>en_US</language>
       <value>Magnetospheres of neutron stars are commonly modeled as either devoid
-								
+
 of plasma in "vacuum'' models or filled with perfectly conducting plasma
-								
+
 with negligible inertia in "force-free'' models.  While numerically
-								
+
 tractable, neither of these idealized limits can simultaneously
-								
+
 account for both the plasma currents and the accelerating electric
-								
+
 fields that are needed to explain the morphology and spectra of
-								
+
 high-energy emission from pulsars.  In this work we improve upon these
-								
+
 models by considering the structure of magnetospheres filled with
-								
+
 resistive plasma.  We formulate Ohm's Law in the minimal velocity
-								
+
 fluid frame and implement a time-dependent numerical code to construct a
-								
+
 family of resistive solutions that smoothly bridges the gap between
-								
+
 the vacuum and force-free magnetosphere solutions.  We further apply
-								
+
 our method to create a self-consistent model for the recently
-								
+
 discovered intermittent pulsars that switch between two distinct
-								
+
 states: an "on'', radio-loud state, and an "off'', radio-quiet state
-								
+
 with lower spin-down luminosity.  Essentially, we allow plasma to leak
-								
+
 off open field lines in the absence of pair production in the "off''
-								
+
 state, reproducing observed differences in spin-down rates.  Next, we
-								
+
 examine models in which the high-energy emission from gamma-ray
-								
+
 pulsars comes from reconnecting current sheets and layers near and
-								
+
 beyond the light cylinder.  The reconnected magnetic field provides a
-								
+
 reservoir of energy that heats particles and can power high-energy
-								
+
 synchrotron radiation.  Emitting particles confined to the sheet
-								
+
 naturally result in a strong caustic on the skymap and double peaked
-								
+
 light curves for a broad range of observer angles.  Interpulse bridge
-								
+
 emission likely arises from interior to the light cylinder, along last
-								
+
 open field lines that traverse the space between the polar caps and
-								
+
 the current sheet.  Finally, we apply our code to solve for the
-								
+
 magnetospheric structure of merging neutron star binaries.  We find
-								
+
 that the scaling of electromagnetic luminosity with orbital angular
-								
+
 velocity varies between the power 4 for nonspinning stars and the
-								
+
 power 1.5 for rapidly spinning millisecond pulsars near contact.
-								
+
 Our derived scalings and magnetospheres can be used to help understand
-								
+
 electromagnetic signatures from merging neutron stars to be observed
-								
+
 by Advanced LIGO.</value>
     </metadata>
     <metadata>
@@ -1776,21 +1781,21 @@ by Advanced LIGO.</value>
       <key>dc.description.abstract</key>
       <language>en_US</language>
       <value>Planets form in protoplanetary disks. In disks, planets excite structures such as spiral density waves, and may clear material around their orbits to form gaps, through gravitational disk-planet interactions. By identifying these structures and comparing them with disk-planet interaction theory, we can study where, when, and how planets form in disks. In this work, we present studies of disk-planet interactions using numerical hydrodynamic simulations and possible planet-induced signals in protoplanetary disks from direct imaging of disks.
-								
+
 With very high spatial resolution, an accurate numerical solver, and a precise planetary potential, we carry out 2D shearing sheet simulations to provide detailed quantitative comparisons of numerical results with both linear and nonlinear analytical theories of the density waves excited by planets. We achieve excellent agreement with theory for the primary physical variables. Also, we study issues which are ignored by the theories, such as the emerging nonlinear effects in the linear stage. The effects of various numerical parameters are extensively investigated, and we provide a framework for future code testing in this field.
-								
+
 Transitional disks are protoplanetary disks that have depleted inner regions.
-								
+
 We obtain high spatial resolution near-infrared scattered light Subaru images of a sample of transitional disks as part of the SEEDS project, and carry out radiative transfer simulations to study their structure. We find that in some cases cavities are not present in the scattered light, which requires decoupling between the sub-um-sized and mm-sized grains inside the
-								
+
 cavity. For another group of transitional disks in which Subaru does reveal the cavities at NIR, we
-								
+
 focus on whether grains at different sizes have the same spatial distribution or not
-								
+
 (i.e. the cavity size and the depletion factor inside the cavity for different dust
-								
+
 populations). With our modeling results, we
-								
+
 examine various transitional disk formation theories, and in particular, whether their cavities are opened by the forming planets in the systems.</value>
     </metadata>
     <metadata>
@@ -1983,18 +1988,18 @@ examine various transitional disk formation theories, and in particular, whether
     <metadata>
       <key>dc.description.abstract</key>
       <language>en_US</language>
-      <value>I study the structures and thermal properties of black hole accretion disks in the radiation pressure dominated regime. Angular momentum transfer in the disk is provided by the turbulence generated by the magneto-rotational instability (MRI), which is calculated self-consistently with a recently developed 3D radiation magneto-hydrodynamics (MHD) code based on Athena. 
-								
-This code, developed by my collaborators and myself, couples both the radiation momentum and energy source terms with the ideal MHD equations by modifying the standard Godunov method to handle the stiff radiation source terms. We solve the two momentum equations of the radiation transfer equations with a variable Eddington tensor (VET), which is calculated with a time independent short characteristic module. This code is well tested and accurate in both optically thin and optically thick regimes. It is also accurate for both radiation pressure and gas pressure dominated flows. With this code, I find that when photon viscosity becomes significant, the ratio between Maxwell stress and Reynolds stress from the MRI turbulence can increase significantly with radiation pressure. 
-								
-The thermal instability of the radiation pressure dominated disk is then studied with vertically stratified shearing box simulations. 
-								
-Unlike the previous results claiming that the radiation pressure dominated disk with MRI turbulence can reach a steady state without showing any unstable behavior, I find that the radiation 
-								
-pressure dominated disks always either collapse or expand until we have to stop the simulations. During the thermal runaway, the heating and cooling rates from the simulations are consistent with the general criterion of thermal instability. However, details of the thermal runaway are different from the predictions of the standard alpha disk model, as many assumptions in that model are not satisfied in the simulations. We also identify the key reasons why previous 
-								
-simulations do not find the instability. The thermal instability 
-								
+      <value>I study the structures and thermal properties of black hole accretion disks in the radiation pressure dominated regime. Angular momentum transfer in the disk is provided by the turbulence generated by the magneto-rotational instability (MRI), which is calculated self-consistently with a recently developed 3D radiation magneto-hydrodynamics (MHD) code based on Athena.
+
+This code, developed by my collaborators and myself, couples both the radiation momentum and energy source terms with the ideal MHD equations by modifying the standard Godunov method to handle the stiff radiation source terms. We solve the two momentum equations of the radiation transfer equations with a variable Eddington tensor (VET), which is calculated with a time independent short characteristic module. This code is well tested and accurate in both optically thin and optically thick regimes. It is also accurate for both radiation pressure and gas pressure dominated flows. With this code, I find that when photon viscosity becomes significant, the ratio between Maxwell stress and Reynolds stress from the MRI turbulence can increase significantly with radiation pressure.
+
+The thermal instability of the radiation pressure dominated disk is then studied with vertically stratified shearing box simulations.
+
+Unlike the previous results claiming that the radiation pressure dominated disk with MRI turbulence can reach a steady state without showing any unstable behavior, I find that the radiation
+
+pressure dominated disks always either collapse or expand until we have to stop the simulations. During the thermal runaway, the heating and cooling rates from the simulations are consistent with the general criterion of thermal instability. However, details of the thermal runaway are different from the predictions of the standard alpha disk model, as many assumptions in that model are not satisfied in the simulations. We also identify the key reasons why previous
+
+simulations do not find the instability. The thermal instability
+
 has many important implications for understanding the observations of both X-ray binaries and Active Galactic Nuclei (AGNs). However, direct comparisons between observations and the simulations require global radiation MHD simulations, which will be the main focus of my future work.</value>
     </metadata>
     <metadata>
@@ -2183,73 +2188,73 @@ has many important implications for understanding the observations of both X-ray
       <key>dc.description.abstract</key>
       <language>en_US</language>
       <value>Hundreds of planets have recently been discovered around other stars,
-								
+
 revealing a startling diversity of planetary systems.  However, these
-								
+
 exoplanets lie almost exclusively within a few astronomical units (AU)
-								
+
 of their host stars.  A full picture of planet formation also requires
-								
+
 a census and statistical analysis of planets at wide separations.
-								
+
 This thesis uses the SEEDS direct imaging survey, together with
-								
+
 archival data, to search for massive, &gt;~5 M_J
-								
+
 companions tens of AU from their host stars.  These objects are not
-								
+
 sufficiently massive to fuse hydrogen, and simply cool and fade as
-								
+
 they radiate away their heat of formation.  As a result, SEEDS targets
-								
+
 young, nearby stars using HiCIAO, a high-contrast infrared camera on
-								
+
 the Subaru telescope.  I first present an analysis of HiCIAO, deriving
-								
+
 the distortion correction needed to reduce high-contrast data, and
-								
+
 optimizing HiCIAO's entrance pupil to vastly improve its performance.
-								
+
 I then describe ACORNS-ADI, software I have written to reduce HiCIAO
-								
+
 data.  This software includes several new algorithms that both improve
-								
+
 its performance and efficiently compute each observation's
-								
+
 sensitivity.  I use ACORNS-ADI to uniformly reduce data from the SEEDS
-								
+
 survey, including images of members of young moving groups and of debris
-								
+
 disk hosts.  The ages of these stars, together with substellar cooling
-								
+
 models, are needed to convert our sensitivities from luminosities to
-								
+
 masses.  I therefore present a uniform Bayesian analysis of all
-								
+
 targets, deriving a posterior age distribution for each using both
-								
+
 proposed moving group membership and observed stellar activity.
-								
+
 Finally, I combine the published SEEDS results with additional
-								
+
 archival imaging to assemble a diverse sample of nearly 200 stars.  A
-								
+
 statistical analysis of five brown dwarfs and massive exoplanets
-								
+
 discovered by HiCIAO provides a limit of ~50--200 AU, depending
-								
+
 on the models used, beyond which the distribution of exoplanets at
-								
+
 small separations cannot extend.  By treating massive planets and
-								
+
 brown dwarfs together, I further suggest that currently known
-								
+
 long-period exoplanets are not an extension of the short-period
-								
+
 planetary distribution.  Instead, they may represent a low-mass
-								
+
 extension of the brown dwarf distribution function, formed by
-								
+
 gravitational fragmentation in a cloud or circumstellar disk.</value>
     </metadata>
     <metadata>
@@ -2619,14 +2624,14 @@ gravitational fragmentation in a cloud or circumstellar disk.</value>
     <metadata>
       <key>dc.description.abstract</key>
       <language>en_US</language>
-      <value>This thesis develops two main topics related to the study of the long-term orbital evolution of planetary systems.The first one is the long-term dynamical stability of 
-								
+      <value>This thesis develops two main topics related to the study of the long-term orbital evolution of planetary systems.The first one is the long-term dynamical stability of
+
 planetary systems. By running a large number of orbit integrations I find a new and easy-to-use criterion for the long-term stability of two-planet systems. I discuss the fates of the dynamically unstable systems and show that at small orbital separations these systems generally lead to planet-planet collisions with small eccentricity and inclination excitation---a mechanism that is unable to account for the population of short-period planets in eccentric and/or large-obliquity orbits. This result poses a challenge to the theory of disk migration, motivating alternative models of planet migration.
-								
-The second main topic is the migration of gas giant planets into short-period orbits by 
-								
+
+The second main topic is the migration of gas giant planets into short-period orbits by
+
 the gravitational interactions with a distant third body and tidal friction. First, I show that when the third body is a planet in an eccentric and low-inclination orbit, the migration occurs in nearly the same plane as the planets formed, producing low-obliquity hot Jupiters. Based on the observed periods, stellar obliquities, and occurrence rates, I show that this migration channel can account for most of the hot Jupiters.
-								
+
 Second, I show that if the third body is a wide stellar binary companion in a highly inclined orbit, the so-called Kozai-Lidov mechanism produces hot Jupiters with periods that are shorter than in the observations and it does not produce warm Jupiters. Based on the observed periods and occurrence rates, I show that the Kozai-Lidov mechanism can produce at most $\sim20\%$ of the hot Jupiters. Third,  I show that when the third body is a planet in an eccentric and/or inclined orbit, it produces a population of warm Jupiters with a flat eccentricity distribution, possibly accounting for the population of eccentric warm Jupiters with outer planetary companions, otherwise difficult to account for by either disk-migration or other high-eccentricity migration channels.</value>
     </metadata>
     <metadata>
@@ -2804,10 +2809,10 @@ Second, I show that if the third body is a wide stellar binary companion in a hi
     <metadata>
       <key>dc.description.abstract</key>
       <language>en_US</language>
-      <value>The unifying theme of this dissertation is using cosmological observations as a tool to discover new physics and astrophysics. 
-								
+      <value>The unifying theme of this dissertation is using cosmological observations as a tool to discover new physics and astrophysics.
+
 The first part focuses on the effects of primordial non-Gaussianity on the large-scale distribution of dark matter halos. The statistical properties of the primordial fluctuation contain a wealth of information about the Universe's early moments, and these properties are imprinted on the late-time distribution of matter. The first chapter serves as an introduction to the effects of non-Gaussianity on halo bias, summarizing previous work and extending it to the cubic local model (the g_nl model). Chapter 2 generalizes some of the techniques of Chapter 1, allowing for the calculation of halo bias with arbitrary initial conditions, while Chapter 3 shows the relationship between the seemingly different techniques existing in the literature.  Detailed forecasts for upcoming surveys are presented in Chapter 4, including the effect of marginalization over shot-noise and Gaussian part of the bias, photometric redshifts uncertainties and multi-tracer analysis to reduce the effect of cosmic variance.
-								
+
 The second part contains work on two secondary anisotropies of the Cosmic Microwave Background radiation (CMB), namely the Integrated Sachs-Wolfe (ISW) effect and the kinetic Sunyaev-Zel'dovich (kSZ) effect. The late-time ISW effect arises because of decay of the large-scale gravitational potential due to the accelerated expansion and is therefore a powerful probe of dark energy. Chapter 5 presents a new detection of the ISW effect, using WISE galaxies and AGN as tracers of the gravitational potential, whose bias is measured in cross-correlation with CMB lensing maps. An appendix discusses the contamination of this measurement due to the linear part of the kSZ effect, the Doppler shift of photon energy due to scattering off coherently moving electrons. The last chapter explores the prospects of detecting the kSZ signal from sources for which accurate redshift information is not available (such as the WISE catalog). Forecasts are presented, as well as comparison with simulations and a discussion of the main sources of contamination.</value>
     </metadata>
     <metadata>
@@ -2981,15 +2986,15 @@ The second part contains work on two secondary anisotropies of the Cosmic Microw
       <key>dc.description.abstract</key>
       <language>en_US</language>
       <value>Post-starburst galaxies are a rare class of galaxy that show the spectral signature of recent, but not ongoing, star-formation activity, and are thought to have their star formation suddenly quenched within the one billion years preceding the observations. In other words, these are galaxies in the transitional stage between blue, star-forming galaxies and red, quiescent galaxies, and therefore hold important information regarding our understanding of galaxy evolution. This class of objects can be used to study the mechanisms responsible for star-formation quenching, which is an important unsettled question in galaxy evolution.
-								
+
 In this thesis, we study this class of galaxies through a number of different approaches. First of all, we systematically selected a large, statistical sample of post-starburst galaxies from the spectroscopic dataset of the Sloan Digital Sky Survey (SDSS). This sample contains 13219 objects in total, with redshifts ranging from local universe to z ∼ 1.3 and median redshift zmedian = 0.59. This is currently the largest sample of post-starburst galaxies available in the literature.
-								
+
 Using this sample, we calculated the luminosity functions for a number of redshift bins. A rapid downsizing redshift evolution of the luminosity function is observed, whereby the number density of post-starburst galaxies at fixed luminosity is larger at higher redshift. From the luminosity functions, we calculated the amount of star-formation quenching accounted for in post-starburst galaxies, and compared to the amount required by the global decline of star-formation rate of the universe. We found that only a small fraction (∼ 0.2%) of all star-formation quenching in the universe goes through the post-starburst galaxy channel, at least for the luminous sources in our sample.
-								
+
 We also searched the SDSS spectroscopic database the post-starburst quasars, which are an even more special class of objects that show both a post-starburst stellar population and AGN activity in the same object. Given that AGN feedback is thought to be a likely mechanism responsible for quenching star-formation, post-starburst quasars provide ideal laboratory for
-								
+
 studying this link. We explored various ways to identify post-starburst quasars, and construct our sample with more than 600 objects at high-redshift. This is the largest sample of post-starburst quasars available in the literature, and will be useful for AGN feedback studies.
-								
+
 Finally, we studied the clustering properties of post-starburst galaxies through cross-correlation with CMASS galaxies. The real-space cross correlation function is a power-law with correlation length r0 ∼ 9.2 Mpc, and power-law index γ ∼ 1.8. We also measure the linear bias of post-starburst galaxies to be bPSG ∼ 1.74 at redshift z = 0.62, corresponding to a dark matter halo mass of Mhalo ∼ 1.5 × 1013 M⊙. We found no evidence for redshift evolution in clustering properties for post-starburst galaxies.</value>
     </metadata>
     <metadata>
@@ -3153,57 +3158,57 @@ Finally, we studied the clustering properties of post-starburst galaxies through
       <key>dc.description.abstract</key>
       <language>en_US</language>
       <value>This thesis presents a number of new statistical approaches to
-								
+
 constrain cosmology and the physics of the intracluster medium (ICM)
-								
+
 using measurements of secondary anisotropies in the cosmic microwave
-								
+
 background (CMB), the remnant thermal radiation left over from the Big
-								
+
 Bang that still permeates the universe today.  In particular, I
-								
+
 consider the thermal Sunyaev-Zel'dovich (tSZ) effect, in which the
-								
+
 hot, ionized gas in massive galaxy clusters casts a ``shadow'' against
-								
+
 the CMB, and gravitational lensing of the CMB, in which the gravity of
-								
+
 intervening structures bends the path of CMB photons as they travel to
-								
+
 us from the early universe.  I use data from the Planck satellite to
-								
+
 obtain the first detection of the tSZ -- CMB lensing cross-power
-								
+
 spectrum, a signal which is sensitive to a previously unstudied
-								
+
 population of high-redshift, low-mass groups and clusters. I combine
-								
+
 this measurement with Planck measurements of the tSZ power spectrum to
-								
+
 obtain cosmological and astrophysical constraints, and also
-								
+
 investigate the ability of future tSZ power spectrum measurements to
-								
+
 constrain primordial non-Gaussianity and the sum of the neutrino
-								
+
 masses.  In addition to these power spectrum measurements, I also
-								
+
 present new techniques to obtain cosmological and astrophysical
-								
+
 constraints from non-Gaussian statistics of the tSZ signal, starting
-								
+
 with the tSZ skewness and proceeding to consider the entire one-point
-								
+
 PDF of the tSZ field.  I apply these methods to data from the Atacama
-								
+
 Cosmology Telescope, yielding some of the tightest constraints yet
-								
+
 achieved on the amplitude of cosmic matter density fluctuations.
-								
+
 Moreover, these methods allow the long-standing degeneracy between
-								
+
 cosmology and ICM physics to be directly broken with tSZ data alone
-								
+
 for the first time.</value>
     </metadata>
     <metadata>
@@ -3392,9 +3397,9 @@ for the first time.</value>
       <key>dc.description.abstract</key>
       <language>en_US</language>
       <value>This thesis develops two main topics related to the study of the large-scale structure of the Universe. The first one is the intrinsic alignment of galaxies. These are correlations between the shapes and orientations of galaxies that arise mainly as a consequence of tidal forces across a large range of scales. I use the tidal alignment model to predict how the intrinsic alignment of Luminous Red Galaxies could in the future provide constraints on the Baryon Acoustic Oscillation scale, a standard ruler for measuring the expansion of the Universe. I also show that primordial signatures of inflation can translate into a non-Gaussian bias in the correlation of the intrinsic shapes of galaxies, which could be observed with future surveys.
-								
+
 The second main topic discussed in this thesis is clusters of galaxies. I use data from the Sloan Digital Sky Survey and a public catalog of galaxy clusters to estimate the alignment of galaxies around groups and clusters of galaxies. The novelty of this work is mainly in the method for estimating the alignment signal. In photometric surveys, the redshift uncertainty is large compared to the size of a cluster, making the distinction between galaxies in the cluster and in the background very challenging. In the method developed here, each galaxy is assigned a posterior probability distribution function of its redshift to separate the alignment component from the gravitational lensing of galaxies in the background.
-								
+
 Among the galaxies that make up a cluster, Brightest Cluster Galaxies stand out by their luminosity. I study the connection between these galaxies and other ellipticals to understand the physics of their formation. Finally, I re-develop the Adaptive Matched Filter method for finding clusters in spectroscopic and photometric surveys to include a new treatment of the distances to galaxies. Again, I model the distance to each galaxy using a redshift posterior and propose other modifications to the algorithm that will be of use to upcoming photometric surveys.</value>
     </metadata>
     <metadata>
@@ -3573,49 +3578,49 @@ Among the galaxies that make up a cluster, Brightest Cluster Galaxies stand out 
       <key>dc.description.abstract</key>
       <language>en_US</language>
       <value>This thesis explores techniques to discover and
-								
-characterize transiting extrasolar planets, i.e. planets orbiting 
-								
-other stars that periodically cross in front of their host star as 
-								
+
+characterize transiting extrasolar planets, i.e. planets orbiting
+
+other stars that periodically cross in front of their host star as
+
 viewed from the Earth. I concentrate on the synergy
-								
-between space and ground based wide field transit surveys. The 
-								
+
+between space and ground based wide field transit surveys. The
+
 Kepler Space Mission has discovered ~4000 planetary candidates
-								
+
 in the past four years. I first present an independent transit search
-								
-of the preliminary public Kepler data, 
-								
-using a custom modified version of the HATNet project's planet 
-								
-detection pipeline, resulting in the discovery of an additional 
-								
-150 new planetary candidates. The Kepler "K2" mission introduced 
-								
-more challenges in achieving ultra high precision photometry. I 
-								
-describe an independent K2 software pipeline, which provides 
-								
-high quality K2 light curve 
-								
+
+of the preliminary public Kepler data,
+
+using a custom modified version of the HATNet project's planet
+
+detection pipeline, resulting in the discovery of an additional
+
+150 new planetary candidates. The Kepler "K2" mission introduced
+
+more challenges in achieving ultra high precision photometry. I
+
+describe an independent K2 software pipeline, which provides
+
+high quality K2 light curve
+
 for public use. I then report the discovery of HAT-P-56b, a
-								
+
 hot-Jupiter discovered by the HATNet survey, with photometric
-								
+
 confirmation from K2, and ground-based radial velocity confirmation.
-								
+
 I also use simultaneous space based observations to train and
-								
+
 calibrate the candidate selection process from ground based transit
-								
+
 surveys, improving the yield of planet candidates. Finally, this thesis presents
-								
+
 detailed modeling of transit light curves to characterize the
-								
-properties of giant planets, including their oblateness, 
-								
+
+properties of giant planets, including their oblateness,
+
 and their orbital alignment with the stellar equator.</value>
     </metadata>
     <metadata>
@@ -3809,11 +3814,11 @@ and their orbital alignment with the stellar equator.</value>
       <key>dc.description.abstract</key>
       <language>en_US</language>
       <value>Whether through absorption, scattering, or emission, the effects of interstellar dust are manifest at nearly all wavelengths of astronomical interest. This dissertation synthesizes observations of the diverse optical phenomenology of interstellar dust to investigate the material composition of interstellar grains and to better understand their electromagnetic properties.
-								
+
 Chapter 1 of this dissertation serves as both a theoretical and observational introduction. First, the computation of absorption, scattering, and extinction cross sections for particles of a specified material and shape is discussed. Chapter 1 then details the translation of these cross sections into the consequent observable dust properties for a population of interstellar grains. Finally, the current state of observations that constrain the properties of interstellar dust, focusing on elemental abundances, extinction, polarized extinction, emission, and polarized emission, is reviewed. These observations establish benchmark behavior against which models of interstellar dust can be compared.
-								
+
 Chapters 2 and 3 focus on the Anomalous Microwave Emission (AME) and in particular whether this emission is produced by spinning polycyclic aromatic hydrocarbons (PAHs). Chapter 2 combines infrared and radio observations of NGC6946 to investigate the relationship between the AME, far-infrared dust emission, and PAH emission. No link between the AME and PAHs is found. Chapter 3 presents a similar analysis for the Galaxy employing a full-sky AME map derived from component separation of the microwave sky. The AME is found to be tightly correlated with the dust radiance but not with the presence of PAHs.
-								
+
 Drawing on the observations presented in Chapter 1, Chapter 4 presents new models of interstellar dust that reproduce simultaneously current observations of dust extinction and emission, both total and polarized. Particular attention is paid to the frequency dependence of the polarized infrared emission, which is found to be compatible with both the presence of ferromagnetic nanoparticles embedded in silicate grains or magnetic dipole emission in large, highly conducting graphitic grains. Chapter 4 concludes by discussing observational predictions of these models and their possible extensions beyond the diffuse interstellar medium.</value>
     </metadata>
     <metadata>
@@ -4163,10 +4168,10 @@ Drawing on the observations presented in Chapter 1, Chapter 4 presents new model
     </metadata>
     <metadata>
       <key>dc.description.abstract</key>
-      <value>The explosion mechanism of core-collapse supernovae (CCSNe) is a long-standing astrophysical problem buttressed with over half a century of computational research. Neutrino heating of the collapsing mantle, wherein a fraction of the profuse neutrino luminosity in a collapsing star deposits energy onto the stalled shock, remains the preferred explosion mechanism for garden-variety CCSNe. Recent improvements in neutrino physics and in supercomputer power jointly ushered in new capabilities for the study of CCSNe. F{\sc{ornax}} is an optimized state-of-the-art hydrodynamics/radiative transfer code with detailed microphysics and scalable design that effectively takes advantage of these developments. I implement F{\sc{ornax}} to provide a comprehensive, multi-dimensional study of CCSNe $-$ horizontally-integrated, across a a broad suite of progenitor stars, and vertically-integrated, from explosion mechanism to observational signatures. 
-								
+      <value>The explosion mechanism of core-collapse supernovae (CCSNe) is a long-standing astrophysical problem buttressed with over half a century of computational research. Neutrino heating of the collapsing mantle, wherein a fraction of the profuse neutrino luminosity in a collapsing star deposits energy onto the stalled shock, remains the preferred explosion mechanism for garden-variety CCSNe. Recent improvements in neutrino physics and in supercomputer power jointly ushered in new capabilities for the study of CCSNe. F{\sc{ornax}} is an optimized state-of-the-art hydrodynamics/radiative transfer code with detailed microphysics and scalable design that effectively takes advantage of these developments. I implement F{\sc{ornax}} to provide a comprehensive, multi-dimensional study of CCSNe $-$ horizontally-integrated, across a a broad suite of progenitor stars, and vertically-integrated, from explosion mechanism to observational signatures.
+
 I provide a broad introduction of the topic, the code F{\sc{ornax}}, and the rich history of research in CCSNe in Chapter\,\ref{ch:intro}. Chapter\,\ref{ch:micro} looks at the sensitive dependence of explosion outcome on neutrino microphysics, in particular the role of many-body interactions and inelastic neutrino scattering. Chapter\,\ref{ch:2D} builds on these results to identify drivers of explosion outcome in a series of 2D axisymmetric simulations. Chapter\,\ref{ch:3D} introduces the first 3D simulation by F{\sc{ornax}}. A 16-M$_{\odot}$ progenitor is carried out to roughly one second post-bounce, exploding promptly and robustly. The results highlight the need to carry simulations out longer, to several seconds, to identify asymptotic explosion energies. In Chapter\,\ref{ch:obs}, I look at neutrino and gravitational wave observational signatures, and their correlations with core physical dynamics, with a series of 11 progenitors evolved in 3D. This is the largest suite of 3D simulations to date, allowing a study of global characteristics of a diverse set of progenitor stars. The synergistic study of neutrinos and gravitational waves in forthcoming detectors can be used to profitably study physical phenomena in the supernova core.
-								
+
 CCSNe study has followed a Maslow hierarchy in ambition: first, producing successful explosions; second, producing robust explosion energies, and lastly, producing CCSNe consistent with observable diagnostics. My thesis establishes well the first point, embarks on the second, and courts the third.</value>
     </metadata>
     <metadata>
@@ -5018,7 +5023,7 @@ CCSNe study has followed a Maslow hierarchy in ambition: first, producing succes
     <metadata>
       <key>dc.description.abstract</key>
       <value>I present four papers exploring different topics in the area of characterizing the atmospheric and bulk properties of extrasolar planets. In these papers, I present two new codes, in various forms, for modeling these objects. A code to generate theoretical models of transit spectra of exoplanets is featured in the first paper and is refined and expanded into the APOLLO code for spectral modeling and parameter
-								
+
 retrieval in the fourth paper. Another code to model the internal structure and evolution of planets is featured in the second and third papers. The first paper presents transit spectra models of GJ 1214b and other super-Earth and mini-Neptune type planets−planets with a “solid”, terrestrial composition and relatively small planets with a thick hydrogen-helium atmosphere, respectively−and fit them to observational data to estimate the atmospheric compositions and cloud properties of these planets. The second paper presents structural models of super-Earth and mini-Neptune type planets and estimates their bulk compositions from mass and radius estimates. The third paper refines these models with evolutionary calculations of thermal contraction and ultraviolet-driven mass loss. Here, we estimate the boundaries of the parameter space in which planets lose their initial hydrogen-helium atmospheres completely, and we also present formation and evolution scenarios for the planets in the Kepler-11 system. The fourth paper uses more refined transit spectra models, this time for hot jupiter type planets, to explore the methods to design optimal observing programs for the James Webb Space Telescope to quantitatively measure the atmospheric compositions and other properties of these planets.</value>
     </metadata>
     <metadata>
@@ -5198,7 +5203,7 @@ retrieval in the fourth paper. Another code to model the internal structure and 
     <metadata>
       <key>dc.description.abstract</key>
       <value>We study the problem of separating stars and galaxies in the Hyper Suprime-Cam (HSC) multi-band imaging data at high galactic latitudes. We show that the current separation technique implemented in the HSC pipeline is unable to produce samples of stars with $i \gtrsim 24$ without a significant contamination from galaxies ($\gtrsim 50\%$). We study various methods for measuring extendedness in HSC with simulated and  real data and find that there are a number of available techniques that give nearly optimal results; the extendedness measure HSC is currently using is among these. We develop a star/galaxy separation method for HSC based on the Extreme Deconvolution (XD) algorithm that uses colors and extendedness simultaneously, and show that with it we can generate samples of faint stars keeping contamination from galaxies under control to $i \leq 25$. We apply our star/galaxy separation method to carry out a preliminary study of the structure of the Milky Way (MW) with main sequence (MS) stars using photometric parallax relations derived for the HSC photometric system. We show that
-								
+
 it will be possible to generate a tomography of the MW stellar halo to galactocentric radii $\sim 100 \textrm{ kpc}$ with $\sim 10^6$ MS stars in the HSC Wide layer once the survey has been completed. We report two potential detections of the Sagittarius tidal stream with MS stars in the XMM and GAMA15 fields at $\approx 20 \textrm{ kpc}$ and $\approx 40 \textrm{ kpc}$ respectively.</value>
     </metadata>
     <metadata>
@@ -5378,9 +5383,9 @@ it will be possible to generate a tomography of the MW stellar halo to galactoce
     <metadata>
       <key>dc.description.abstract</key>
       <value>Angular momentum transport in the accretion disks of cataclysmic variables (CVs) is a crucial ingredient of driving the evolution of CVs and is believed to account for the observed episodic outbursts in dwarf novae. However, the physical mechanisms of driving angular momentum transport in CV disks are not well understood yet. In this thesis, the angular momentum transport driven by the spiral shocks and the magnetorotational instability (MRI) is thoroughly studied using a series of global hydrodynamical and magnetohydrodynamical (MHD) simulations conducted with Athena++.
-								
+
 Spiral shocks are a possible accretion mechanism in cold quiescence state when the CV disk may be too cool and neutral for the MRI to operate. We perform global two-dimensional hydrodynamical simulations where we found mass accretion is driven by deposition of negative angular momentum carried by the waves through shock dissipation. The effective viscosity parameter alpha_eff is 0.02–0.05 when the disk Mach number is &lt; 10. Spiral shocks are found very sensitive to the size and Mach number of the disk: they are stronger with larger disk sizes or lower Mach numbers. We also apply the spiral shock analysis to circumplanetary disks (CPDs) and found spiral shocks can contribute significantly to the angular momentum transport and energy dissipation in CPDs yielding alpha_eff ∼0.001−0.02.
-								
+
 In hot outburst state the CV disk is ionized so MRI and spiral shocks both drive angular momentum transport. We perform global three-dimensional MHD simulations of CV disks to investigate the relative importance of spiral shocks and MRI. Our steady-state solutions indicate that the relative importance in driving angular momentum transport of spiral shocks and MRI is mostly determined by the gas Mach number and the seed magnetic field strength, and is independent of the seed field geometry. While the mass accretion rate in steady-state disks is always equal to the mass supply rate, the steady-state αeff is larger when the seed magnetic field has vertical components or the flow has stronger magnetization.</value>
     </metadata>
     <metadata>
@@ -5718,9 +5723,9 @@ In hot outburst state the CV disk is ionized so MRI and spiral shocks both drive
     <metadata>
       <key>dc.description.abstract</key>
       <value>Low surface brightness (LSB) galaxies are a common outcome of galaxy formation. Yet, our census of this population is severely incomplete because of the challenges of detecting and studying such diffuse systems. In this thesis, I explore the detection and characterization of these elusive galaxies in the era of deep, wide, and high-resolution optical surveys. I develop software and image-processing algorithms to carry out an automated search for LSB galaxies with the ongoing Hyper Suprime-Cam Subaru Strategic Program (HSC-SSP). Using the first ~15% of HSC-SSP's survey area, I uncover a diverse sample of ~800 LSB galaxies, ranging from dwarf ellipticals in nearby groups to isolated blue ultra-diffuse galaxies to giant LSB spirals.
-								
+
 I constrain the redshift distribution of these galaxies using a combination of follow-up spectroscopy and a statistical method that exploits the clustering of galaxies. Their typical distances range from ~30-100 Mpc, with an implied effective radius range of ~0.5-10 kpc. I identify very isolated ultra-diffuse dwarfs, with rotation curve measurements for one such object that suggest it occupies a typical dwarf-like dark matter halo. Using image simulations, I measure the completeness of our survey as a function of galaxy properties, which I combine with the statistical redshift distribution to make a tentative measurement of the mean space density of LSB galaxies with surface brightnesses ~1 mag/arcsec^2 fainter than all previous measurements.
-								
+
 The work presented in this thesis will lay the foundation for a more comprehensive search for LSB galaxies with the HSC-SSP, as well as with future wide-field surveys such as the Large Synoptic Survey Telescope. Pushing the surface-brightness limits of these surveys will be necessary to form a more complete census of the galaxy population, which will ultimately provide one of the strongest tests of our standard cosmological framework.</value>
     </metadata>
     <metadata>
@@ -6042,9 +6047,9 @@ The work presented in this thesis will lay the foundation for a more comprehensi
     <metadata>
       <key>dc.description.abstract</key>
       <value>In strong electromagnetic fields, new plasma phenomena and applications emerge, whose modeling requires analytical theories and numerical schemes that I will develop in this thesis. Based on my new results of the classical plasma model, the role of strong magnetic fields during laser-plasma interactions can now be understood.  Moreover, based my new quantum electrodynamics (QED) models for plasmas, it is now possible to understand strong-field QED effects in astrophysical environments and test them in laboratory settings.
-								
+
 In the classical regime, starting from megagauss magnetic fields, scattering of optical lasers becomes manifestly anisotropic. For the first time, a convenient formula for three-wave coupling coefficient in arbitrary geometry is obtained and evaluated. By solving the fluid model to the second order, I provide an alternative perspective of parametric instability and unveil how magnetic fields affect collective scattering of plasma waves. As an application, I predict that magnetic resonances can be utilized to mediate laser pulse compression. Using magnetized plasma mediation, it is not only possible to achieve higher output intensity for optical lasers with more engineering flexibility, but also possible to compress UV and soft X-ray pulses that cannot be compressed using existing techniques. Taking advantage of the emerging feasibility of strong magnetic fields, I have thus identified a pathway to next-generation powerful lasers, whose viability is supported by particle-in-cell simulations.
-								
+
 In even stronger magnetic fields or intense laser fields, relativistic quantum effects become important. At that point, plasma models based on QED are necessary. Allowing for nontrivial background fields, I develop a new formalism for QED plasmas by computing the effective action using path integrals. My new formalism enables simple wave dispersion relations in strongly magnetized plasmas to be obtained for the first time, based on which the modified Faraday rotation and the anharmonic cyclotron absorptions near X-ray pulsars can now be correctly interpreted. Beyond the perturbative regime, I extend real-time lattice QED to a unique tool for plasma physics, especially when collective scales overlap with relativistic-quantum scales. Applying this numerical tool to laser-plasma interactions, I demonstrate, for the first time, transition from wakefield acceleration to electron-positron pair production, when the laser fields exceed the Schwinger threshold.</value>
     </metadata>
     <metadata>
@@ -6228,15 +6233,15 @@ In even stronger magnetic fields or intense laser fields, relativistic quantum e
     <metadata>
       <key>dc.description.abstract</key>
       <value>This thesis focuses on combining (magneto-)hydrodynamic (HD/MHD) simulations with consistent radiation and thermochemistry. We implement a simulation code, an extensions of the Godunov HD/MHD solver Athena++, that co-evolves radiation and thermochemistry with HD/MHD (Chapter 2). A stoichiometry-compatible scheme for advection of chemical species is proposed that has lower computation costs than conventional schemes. Radiative transfer and thermochemistry solvers are optimized for graphics processing units (GPUs), showing considerable acceleration.
-								
+
 Chapter 3 simulates unmagnetized photoevaporation in protoplanetary disks (PPDs) with this code. Most models have a three-layer structure: a cold mid-plane, warm intermediate layer, and hot wind, the last having typical speeds ~40 km/s and mass-loss rates ~1e-9 SolarMass/yr when driven primarily by ionizing UV radiation. H2O molecules re-form in the intermediate layer and survive at relatively high wind temperatures due to reactions being out of equilibrium. Wind mass loss rates are sensitive to the treatment of both the hydrodynamics and the thermochemistry.
-								
+
 We use the code specifically on hydrostatic grids to study the puzzle of transitional disks, which have inner cavities in gas and dust but mostly signs of accretion (Chapter 4). Results indicate that gas near the mid-plane has a dimensionless ambipolar parameter in the right general range for wind solutions to drive transonic accretion in the predominantly neutral mid-plane.
-								
+
 Chapter 5 carries out global MHD simulations of magnetized PPD, thus combining magnetic acceleration with photoevaporation, and linking outflow (winds) to inflow (accretion). When magnetization is sufficient to drive accretion rate ~1e-8 SolarMass/yr as is typically observed, the mass loss rates in the winds are comparable. Models lacking EUV photons feature warm magnetized winds at typical poloidal speeds &gt; 4 km/s . Mass loss rate are subtly affected by ionization due to UV and X-ray radiation near wind bases. EUV photons yields the three-layer structure of photoevaporation, whereas the warm intermediate layer, which remains bound to the star
-								
+
 in the magnetized models of Chapter 3, becomes a magneto-thermal wind.
-								
+
 The code is also used to investigate the photoevaporation of primordial planetary atmospheres (Chapter 6). EUV photons are most important in launching the photoevaporative wind, while the EUV photospheres sensitively depend on the entropy and mass in the convective layer. We then find the photoevaporation model capable to reproduce the observed bimodal radius distribution of sub-Neptune Kepler planets semi-quantitatively.</value>
     </metadata>
     <metadata>
@@ -6411,15 +6416,15 @@ The code is also used to investigate the photoevaporation of primordial planetar
     <metadata>
       <key>dc.description.abstract</key>
       <value>The primary fluctuations in the cosmic microwave background (CMB), the leftover heat from the big bang, have revealed invaluable clues about our universe (age, history, geometry, composition), and are now measured almost to the cosmic variance limit.
-								
-While important fundamental physics questions remain to be answered from the primary CMB alone (e.g., detection of gravitational waves from inflation, number of relativistic species), many others require looking beyond the primary anisotropies: 
-								
-what is dark energy, this mysterious component responsible for the accelerated expansion of the universe? What is the nature of the dark matter, five times more abundant than ordinary matter? What are the masses of the neutrinos? 
-								
+
+While important fundamental physics questions remain to be answered from the primary CMB alone (e.g., detection of gravitational waves from inflation, number of relativistic species), many others require looking beyond the primary anisotropies:
+
+what is dark energy, this mysterious component responsible for the accelerated expansion of the universe? What is the nature of the dark matter, five times more abundant than ordinary matter? What are the masses of the neutrinos?
+
 The clustering pattern in the spatial distribution of galaxies across the universe, the so-called large-scale structure (LSS), contains the key to these fundamental physics questions, as well as many tightly related astrophysical questions: what are the key processes in galaxy formation? How did the universe transition from neutral to ionized, one billion years after the big bang?
-								
+
 However, several hurdles hinder extracting this information: non-linear evolution under gravity is complex to model and turns independent Gaussian initial conditions into coupled non-Gaussian modes; uncertain astrophysical effects obscure the connection between visible and dark matter, and alter the matter power spectrum on small-scales; LSS observables are often complex and systematics-limited.
-								
+
 In this thesis, I tackle these issues and explore various ways of using the CMB as a backlight for the LSS, to illuminate aspects of its uncertain physics and systematics. In the coming years, ever more sensitive CMB experiments (AdvACT, SPT-3G, Simons Observatory, CMB Stage 4) will overlap with imaging surveys (DES, HSC, LSST, Euclid, WFIRST) and spectroscopic surveys (DESI, PFS), thus greatly magnifying the power of the methods I developed, and helping to answer some of the most pressing astrophysics and fundamental physics questions.</value>
     </metadata>
     <metadata>
@@ -6605,8 +6610,8 @@ In this thesis, I tackle these issues and explore various ways of using the CMB 
     </metadata>
     <metadata>
       <key>dc.description.abstract</key>
-      <value>One of the most exciting astronomical developments of the past two decades has been the wealth and diversity of exoplanetary systems.  Among the more exotic discoveries is a collection of planets in tight binary star systems.  The first three chapters of this thesis focus on planet formation around binary stars.  We assume that cores of giant planets form via collisional agglomeration of small planetesimals.  A simple-minded estimate suggests that collision velocities between kilometer-sized planetesimals in some planet-hosting binary systems would be too large by a factor of $\sim 1000$ for them to grow in mutual collisions rather than being destroyed.  To study this issue in more detail, we developed a model for the dynamics of planetesimals in binary systems.  Chapter 1 discusses the gravitational effects of the disk on the planetesimals, and derives an expression for the disturbing function of an eccentric disk.  Chapter 2 applies the results of chapter 1, as well as some additional work done by Roman Rafikov and myself incorporating the effect of gas drag from the disk, to the particular case of circumbinary planets.  Chapter 3 describes our ongoing efforts to simulate the coagulation process, using the rates and collisional outcomes calculated in our other works. 
-								
+      <value>One of the most exciting astronomical developments of the past two decades has been the wealth and diversity of exoplanetary systems.  Among the more exotic discoveries is a collection of planets in tight binary star systems.  The first three chapters of this thesis focus on planet formation around binary stars.  We assume that cores of giant planets form via collisional agglomeration of small planetesimals.  A simple-minded estimate suggests that collision velocities between kilometer-sized planetesimals in some planet-hosting binary systems would be too large by a factor of $\sim 1000$ for them to grow in mutual collisions rather than being destroyed.  To study this issue in more detail, we developed a model for the dynamics of planetesimals in binary systems.  Chapter 1 discusses the gravitational effects of the disk on the planetesimals, and derives an expression for the disturbing function of an eccentric disk.  Chapter 2 applies the results of chapter 1, as well as some additional work done by Roman Rafikov and myself incorporating the effect of gas drag from the disk, to the particular case of circumbinary planets.  Chapter 3 describes our ongoing efforts to simulate the coagulation process, using the rates and collisional outcomes calculated in our other works.
+
     Chapters 4 and 5 address the topic of small bodies in our own solar system.  Recent wide-field surveys have discovered a few thousand minor solar-system bodies at tens of AU from the Sun.  Upcoming surveys such as LSST should find at least an order of magnitude more.  Chapter 4 describes simulations of long-period comet orbits, and predicts the orbital element distribution of the long-period comet population with perihelion between 5 and 45 AU.   Chapter 5 investigates what happens if there are several Mars--Earth mass bodies left over after the giant planets are assembled.  We find that their influence naturally creates a detached disk (a set of moderately inclined objects with perihelia well beyond the orbit of Neptune, but aphelia inside 1,000 AU), and also suggest the possibility that there could be an undetected Mars--Earth sized planet a few hundred AU from the Sun.</value>
     </metadata>
     <metadata>
@@ -6781,7 +6786,7 @@ In this thesis, I tackle these issues and explore various ways of using the CMB 
     <metadata>
       <key>dc.description.abstract</key>
       <value>The Fermi Gamma-ray Space Telescope greatly increased the number of known pulsars in the gamma-ray band. It was discovered that pulsars often emit a significant fraction of their spin-down energy in gamma-rays, offering a new powerful diagnostic tool of neutron star magnetic field structure. The modeling of gamma-ray data suggests that in order to interpret the observations one needs to understand the field geometry and the plasma state in the emission region. In recent years, significant progress has been achieved in understanding the magnetospheric structure in the limit of abundant plasma supply, the so-called force-free limit. I used force-free solutions to study the time evolution of the pulsar's obliquity angle. I showed that pulsar rotation and magnetic axes evolve toward alignment as a power-law in time, in broad agreement with observations.
-								
+
 Despite the success of the force-free approach for understanding the global field geometry, the location of the emission region and radiation mechanism remained a mystery. To address this from first principles, in this thesis I developed kinetic three dimensional simulations of pulsar magnetospheres which include the physics of plasma production and particle acceleration. I found that the state of the magnetosphere crucially depends on the way charges are introduced into the magnetosphere. In simulations with self-consistent pair production I found several solutions with qualitatively different plasma distribution in the open field line region depending on the inclination of the pulsar. In a surprising finding, I discovered that GR effects help to establish efficient particle acceleration and pair production near the surface of low obliquity pulsars. Finally, I performed GR kinetic simulations of oblique rotators and showed that pulsar high-energy emission is dominated by synchrotron radiation emitted by particles that are energized by magnetic reconnection in the equatorial current sheet. The computed lightcurves and spectra of high-energy emission reproduce the observed morphology of gamma-ray pulsars.</value>
     </metadata>
     <metadata>
@@ -6952,95 +6957,95 @@ Despite the success of the force-free approach for understanding the global fiel
     <metadata>
       <key>dc.description.abstract</key>
       <value>Chemistry plays an important role in the interstellar medium (ISM), regulating
-								
+
 the heating
-								
+
 and cooling of the gas and determining abundances of molecular species
-								
+
 that trace gas properties in observations. One of the most abundant and
-								
+
 important molecules in the ISM is $\CO$. $\CO$ is a main coolant for the
-								
-molecular ISM, and the $\CO(J=1-0)$ line emission is a 
-								
+
+molecular ISM, and the $\CO(J=1-0)$ line emission is a
+
 widely used observational tracer for molecular clouds.
-								
+
 In Chapter 2,
-								
+
 we propose a new simplified chemical network for hydrogen and carbon
-								
-chemistry in the atomic and molecular ISM. 
-								
-We compare results from our chemical network in detail with results from a full 
-								
-photodissociation region (PDR) code, and also with the 
-								
+
+chemistry in the atomic and molecular ISM.
+
+We compare results from our chemical network in detail with results from a full
+
+photodissociation region (PDR) code, and also with the
+
 \citet{NL1999} (NL99) network previously adopted in the simulation literature.
-								
+
 We show that our chemical network gives similar results to the PDR code in
-								
+
 the equilibrium abundances of all species over a
-								
+
 wide range of densities, temperature, and metallicities,
-								
+
 whereas the NL99 network shows significant disagreement.
-								
+
 We also compare with observations of diffuse and
-								
-translucent clouds. We find that the $\CO$, $\CHx$ and $\OHx$ abundances are 
-								
+
+translucent clouds. We find that the $\CO$, $\CHx$ and $\OHx$ abundances are
+
 consistent with equilibrium predictions for
-								
+
 densities $n=100-1000~\mr{cm^{-3}}$, but the predicted equilibrium $\CI$
-								
+
 abundance is higher than observations, signaling the potential importance of
-								
+
 non-equilibrium/dynamical effects.
-								
+
 In Chapter 3, we apply our new chemistry network to a study of
-								
+
 the $X_\CO$ conversion factor, which is used to convert the
-								
-$\CO$ luminosity to the total $\Ht$ mass. 
-								
-We use numerical simulations to 
-								
+
+$\CO$ luminosity to the total $\Ht$ mass.
+
+We use numerical simulations to
+
 investigate how $X_\CO$ depends on numerical resolution, non-equilibrium
-								
-chemistry, physical environment, and 
-								
+
+chemistry, physical environment, and
+
 observational beam size. Our study employs 3D magnetohydrodynamics (MHD)
-								
+
 simulations of galactic disks with solar neighborhood conditions,
-								
+
 where star formation
-								
+
 and the three-phase interstellar medium (ISM) is self-consistently
-								
+
 generated by the interaction between
-								
+
 gravity and stellar feedback. Synthetic $\CO$ maps are
-								
+
 obtained by post-processing the MHD simulations with
-								
-chemistry and radiation transfer. We find that 
-								
-$\CO$ is only an approximate tracer of $\Ht$. Nevertheless, 
-								
+
+chemistry and radiation transfer. We find that
+
+$\CO$ is only an approximate tracer of $\Ht$. Nevertheless,
+
 $\langle X_\CO \rangle=0.7-1.0\times 10^{20}~
-								
+
 \mr{cm^{-2}K^{-1}km^{-1}s}$ consistent with
-								
+
 observations, insensitive to the evolutionary ISM state
-								
+
 or the far-ultraviolet (FUV) radiation field strength.
-								
+
 Our numerical simulations successfully reproduce the
-								
-observed variations of $X_\CO$ 
-								
+
+observed variations of $X_\CO$
+
 on parsec scales, as well as the dependence of $X_\CO$ on extinction
-								
+
 and the $\CO$ excitation temperature.</value>
     </metadata>
     <metadata>
@@ -7196,63 +7201,63 @@ and the $\CO$ excitation temperature.</value>
     <metadata>
       <key>dc.description.abstract</key>
       <value>Wide-field variability surveys like HAT (Bakos et al., 2004, 2013), OGLE (Udalski
-								
+
 et al., 1994), Pan-STARRs (Chambers et al., 2016a), ASAS (Pojmanski, 1997; Jayas-
-								
+
 inghe et al., 2018c), and high-precision space-borne instruments such as Kepler (Koch
-								
+
 et al., 2010), Gaia (Gaia Collaboration et al., 2016), and CoRoT (CoRot Team, 2016)
-								
+
 have revolutionized the field of variable star astronomy. The future is still brighter —
-								
+
 LSST (LSST Science Collaboration et al., 2009) will increase the number of known
-								
+
 variable stars by over three orders of magnitude once the decadal survey completes
-								
+
 in 2029.
-								
+
 Analyzing variability in 10 billion objects requires a balance between statistical
-								
+
 rigor and computational speed. This thesis presents the development and exploration
-								
+
 of several techniques for detecting and characterizing variable stars in time-series
-								
+
 photometry applied to data from the HATSouth (Bakos et al., 2013) automated
-								
+
 survey.
-								
+
 The first chapter develops a scalable algorithm for fitting periodic templates to
-								
+
 noisy, irregularly-sampled timeseries. Template fitting is important for finding low-
-								
+
 amplitude signals, as well as for finding and characterizing signals in very sparse
-								
+
 timeseries. Recently (Sesar et al., 2016) used template fitting to successfully charac-
-								
+
 terize O(10 5 ) RR Lyrae in Pan-STARRs DR1 photometry, where O(10) observations
-								
+
 per ugrizy filter make traditional period finding techniques less sensitive.
-								
+
 The second chapter presents a study of RR Lyrae observed by HATSouth (Bakos
-								
+
 et al., 2013). We crossmatch with several external variable star catalogs to obtain
-								
+
 several thousand RR Lyrae, and then use a Random Forest classifier to find hundreds
-								
+
 of new RR Lyrae in HATSouth. We perform a careful Bayesian analysis of all RR
-								
+
 Lyrae lightcurves to characterize double mode pulsations and the Blazhko effect.
-								
+
 The third chapter develops a semi-supervised framework for performing automated
-								
+
 variable star classification in the presence of sparse, noisy labels. We demonstrate
-								
+
 that these techniques are capable of learning accurate classifications despite only
-								
+
 using three labeled examples per 7 classes during training. This approach is also ca-
-								
+
 pable of handling non-Euclidean features such as the phase-invariant shape of periodic
-								
+
 lightcurves.</value>
     </metadata>
     <metadata>
@@ -7424,11 +7429,11 @@ lightcurves.</value>
     <metadata>
       <key>dc.description.abstract</key>
       <value>The self-regulation of cosmic ray (CR) transport in the interstellar and intracluster media has long been viewed through the lenses of linear and quasilinear kinetic plasma physics. Such theories are believed to capture the essence of CR behavior in the pres- ence of self-generated turbulence, forming the basis for the so-called “self-confinement paradigm,” which has been proposed to explain the isotropic propagation of CRs in the interstellar medium. However, the coupled nonlinear equations that describe the time-dependent system of CRs and electromagnetic fields are analytically intractable in the general case. Thus, obtaining analytical solutions has always relied on simplify- ing assumptions that remove potentially critical details arising from the nonlinearities of the problem.
-								
+
 We utilize the Particle-in-Cell (PIC) numerical method to study the time- dependent nonlinear behavior of the gyroresonant streaming instabilities, self- consistently following the combined evolution of particle distributions and self- generated wave spectra in one-dimensional periodic and aperiodic simulations. In the periodic case, we demonstrate that the early growth of instability conforms to the predictions from linear physics, but that the behavior can vary depending on the properties of the initial CR distribution. We emphasize that the nonlinear stages of instability depend strongly on the initial anisotropy of CRs. We derive estimates for the wave amplitudes at saturation and the time scales for relaxation of the CR distribution. In the aperiodic case, we show that the expansion of CRs from small injection regions naturally induces highly anisotropic CR distributions. Pitch-angle diffusion of CRs is then limited by the predominantly right-handed circularly polarized self-generated turbulence, allowing bulk CR drift velocities of ∼0.5c. We compare against a set of analytical solutions to the CR expansion problem and find that they do not accurately predict the time-dependent properties of the
-								
+
 CR population. We briefly study the wave damping processes of nonlinear Landau iii
-								
+
 damping and ion-neutral friction in order to assess the viability of performing damped CR streaming simulations in the future with the PIC method.</value>
     </metadata>
     <metadata>

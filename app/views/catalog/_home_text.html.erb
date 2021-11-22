@@ -1,8 +1,15 @@
-<div class="jumbotron text-center">
-  <h1 class="jumbotron-heading">Princeton Data Commons Discovery Portal</h1>
+
+
+
+<div class="jumbotron jumbotron-fluid text-left">
+  <h1 class="jumbotron-heading h3">Search and access Princeton's research data</h1>
 
   <p class="lead">
-    A discovery portal for Princeton research data. Initially it will provide a better browsing experience for the research data contained in <a href="https://dataspace.princeton.edu">DataSpace</a>.
+    <%= content_tag :div, role: 'navigation', aria: { label: t('blacklight.search.header') } do %>
+      <div class="<%= container_classes %>">
+        <%= render_search_bar  %>
+      </div>
+    <% end %>
   </p>
 
 </div>

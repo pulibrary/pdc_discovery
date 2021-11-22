@@ -32,7 +32,6 @@ class SolrDocument
   use_extension(Blacklight::Document::DublinCore)
 
   ABSTRACT_FIELD = 'abstract_tsim'
-  AUTHOR_FIELD = 'contributor_tsim'
   DESCRIPTION_FIELD = 'description_tsim'
   ISSUED_DATE_FIELD = 'issue_date_ssim'
   METHODS_FIELD = 'methods_tsim'
@@ -47,7 +46,11 @@ class SolrDocument
   end
 
   def authors
-    fetch(AUTHOR_FIELD, [])
+    fetch('author_tesim', [])
+  end
+
+  def contributors
+    fetch("contributor_tsim", [])
   end
 
   def issued_dates
@@ -76,5 +79,18 @@ class SolrDocument
 
   def methods
     fetch(METHODS_FIELD, [])
+  end
+
+  # rubocop:disable Lint/UselessAssignment
+  def files
+    files ||= begin
+      data = JSON.parse(fetch("files_ss", "[]"))
+      data.sort_by { |file| (file["sequence"] || "").to_i }
+    end
+  end
+  # rubocop:enable Lint/UselessAssignment
+
+  def referenced_by
+    fetch("referenced_by_ssim", [])
   end
 end
