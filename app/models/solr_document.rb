@@ -93,4 +93,8 @@ class SolrDocument
   def referenced_by
     fetch("referenced_by_ssim", [])
   end
+
+  def uri
+    fetch("uri_tesim", [])
+  end
 end
