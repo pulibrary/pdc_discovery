@@ -1,3 +1,3 @@
 function log_plausible(component_name) {
-  plausible('Download', {props: {method: component_name});
+  plausible('Download', {props: {info: component_name}});
 }
