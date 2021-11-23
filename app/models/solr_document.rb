@@ -97,4 +97,8 @@ class SolrDocument
   def uri
     fetch("uri_tesim", [])
   end
+
+  def extent
+    fetch("extent_ssim", [])
+  end
 end

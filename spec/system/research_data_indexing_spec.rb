@@ -34,6 +34,10 @@ describe 'DataSpace research data indexing', type: :system do
     expect(result['referenced_by_ssim'].first).to eq 'https://arxiv.org/abs/1903.06605'
   end
 
+  it 'extent' do
+    expect(result['extent_ssim'].first).to eq '45 minutes'
+  end
+
   it 'files' do
     files = JSON.parse(result['files_ss'].first)
     expect(files.first["name"]).to eq 'Lee_princeton_0181D_10086.pdf'

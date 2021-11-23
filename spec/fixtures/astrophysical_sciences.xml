@@ -124,6 +124,13 @@
       <language>en_US</language>
       <value>Academic dissertations (Ph.D.)</value>
     </metadata>
+    <!--fake values -->
+    <metadata>
+      <key>dc.format.extent</key>
+      <language>en_US</language>
+      <value>45 minutes</value>
+    </metadata>
+    <!-- end fake values -->
     <metadata>
       <key>pu.projectgrantnumber</key>
       <language>en_US</language>

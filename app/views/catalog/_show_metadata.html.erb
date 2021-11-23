@@ -16,6 +16,9 @@
             <% @document.referenced_by.each do |url| %>
               <%= render_field_row_link "Referenced by", url %>
             <% end %>
+            <% @document.extent.each do |extent| %>
+              <%= render_field_row "Extent ", extent %>
+            <% end %>
           </tbody>
           <tfoot>
             <tr>
