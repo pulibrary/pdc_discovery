@@ -6,6 +6,9 @@
         <table class="table">
           <thead></thead>
           <tbody>
+            <% @document.alternative_title.each do |alternative_title| %>
+              <%= render_field_row "Alternative Title", alternative_title %>
+            <% end %>
             <% @document.authors.each do |author| %>
               <%= render_field_row "Author", author %>
             <% end %>
@@ -16,8 +19,110 @@
             <% @document.referenced_by.each do |url| %>
               <%= render_field_row_link "Referenced by", url %>
             <% end %>
+            <% @document.format.each do |format| %>
+              <%= render_field_row "Format", format %>
+            <% end %>
             <% @document.extent.each do |extent| %>
-              <%= render_field_row "Extent ", extent %>
+              <%= render_field_row "Extent", extent %>
+            <% end %>
+            <% @document.medium.each do |medium| %>
+              <%= render_field_row "Medium", medium %>
+            <% end %>
+            <% @document.mimetype.each do |mimetype| %>
+              <%= render_field_row "Mimetype", mimetype %>
+            <% end %>
+            <% @document.language.each do |language| %>
+              <%= render_field_row "Language", language %>
+            <% end %>
+            <% @document.publisher.each do |publisher| %>
+              <%= render_field_row "Publisher", publisher %>
+            <% end %>
+            <% @document.publisher_place.each do |publisher_place| %>
+              <%= render_field_row "Place of Publication", publisher_place %>
+            <% end %>
+            <% @document.publisher_corporate.each do |publisher_corporate| %>
+              <%= render_field_row "Corporate Publisher", publisher_corporate %>
+            <% end %>
+            <% @document.relation.each do |relation| %>
+              <%= render_field_row "Relation", relation %>
+            <% end %>
+            <% @document.relation_is_format_of.each do |relation_is_format_of| %>
+              <%= render_field_row "Relation", relation_is_format_of %>
+            <% end %>
+            <% @document.relation_is_part_of.each do |relation_is_part_of| %>
+              <%= render_field_row "Relation", relation_is_part_of %>
+            <% end %>
+            <% @document.relation_is_part_of_series.each do |relation_is_part_of_series| %>
+              <%= render_field_row "Relation", relation_is_part_of_series %>
+            <% end %>
+            <% @document.relation_has_part.each do |relation_has_part| %>
+              <%= render_field_row "Relation", relation_has_part %>
+            <% end %>
+            <% @document.relation_is_version_of.each do |relation_is_version_of| %>
+              <%= render_field_row "Relation", relation_is_version_of %>
+            <% end %>
+            <% @document.relation_has_version.each do |relation_has_version| %>
+              <%= render_field_row "Relation", relation_has_version %>
+            <% end %>
+            <% @document.relation_is_based_on.each do |relation_is_based_on| %>
+              <%= render_field_row "Relation", relation_is_based_on %>
+            <% end %>
+            <% @document.relation_is_referenced_by.each do |relation_is_referenced_by| %>
+              <%= render_field_row "Relation", relation_is_referenced_by %>
+            <% end %>
+            <% @document.relation_requires.each do |relation_requires| %>
+              <%= render_field_row "Relation", relation_requires %>
+            <% end %>
+            <% @document.relation_replaces.each do |relation_replaces| %>
+              <%= render_field_row "Relation", relation_replaces %>
+            <% end %>
+            <% @document.relation_is_replaced_by.each do |relation_is_replaced_by| %>
+              <%= render_field_row "Relation", relation_is_replaced_by %>
+            <% end %>
+            <% @document.relation_uri.each do |relation_uri| %>
+              <%= render_field_row "Relation", relation_uri %>
+            <% end %>
+            <% @document.rights.each do |rights| %>
+              <%= render_field_row "Rights", rights %>
+            <% end %>
+            <% @document.rights_uri.each do |rights_uri| %>
+              <%= render_field_row "Rights URI", rights_uri %>
+            <% end %>
+            <% @document.rights_holder.each do |rights_holder| %>
+              <%= render_field_row "Rights Holder", rights_holder %>
+            <% end %>
+            <% @document.subject.each do |subject| %>
+              <%= render_field_row_link "Subject", subject %>
+            <% end %>
+            <% @document.subject_classification.each do |subject_classification| %>
+              <%= render_field_row_link "Classification", subject_classification %>
+            <% end %>
+            <% @document.subject_ddc.each do |subject_ddc| %>
+              <%= render_field_row_link "Dewey Decimal Classification", subject_ddc %>
+            <% end %>
+            <% @document.subject_lcc.each do |subject_lcc| %>
+              <%= render_field_row_link "Library of Congress Classification", subject_lcc %>
+            <% end %>
+            <% @document.subject_lcsh.each do |subject_lcsh| %>
+              <%= render_field_row_link "Library of Congress Subject Headings", subject_lcsh %>
+            <% end %>
+            <% @document.subject_mesh.each do |subject_mesh| %>
+              <%= render_field_row_link "Medical Subject Headings", subject_mesh %>
+            <% end %>
+            <% @document.subject_other.each do |subject_other| %>
+              <%= render_field_row_link "Subject", subject_other %>
+            <% end %>
+            <% @document.genre.each do |genre| %>
+              <%= render_field_row_link "Genre", genre %>
+            <% end %>
+            <% @document.peer_review_status.each do |peer_review_status| %>
+              <%= render_field_row "Peer Review Status", peer_review_status %>
+            <% end %>
+            <% @document.translator.each do |translator| %>
+              <%= render_field_row "Translator", translator %>
+            <% end %>
+            <% @document.isan.each do |isan| %>
+              <%= render_field_row "ISAN Identifier", isan %>
             <% end %>
           </tbody>
           <tfoot>

@@ -99,11 +99,13 @@ to_field 'description_uri_ssim', extract_xpath("/item/metadata/key[text()='dc.de
 to_field 'other_identifier_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier']/../value")
 to_field 'citation_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.citation']/../value")
 to_field 'govdoc_id_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.govdoc']/../value")
+to_field 'isan_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.isan']/../value")
 to_field 'isbn_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.isbn']/../value")
 to_field 'issn_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.issn']/../value")
 to_field 'sici_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.sici']/../value")
 to_field 'ismn_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.ismn']/../value")
 to_field 'local_id_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.other']/../value")
+to_field 'isan_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.isan']/../value")
 
 # ==================
 # Indexing the URL for now. We might need to index to a more complex structure if we want to store
@@ -116,7 +118,67 @@ to_field 'referenced_by_ssim', extract_xpath("/item/metadata/key[text()='dc.rela
 
 # ==================
 # format fields
+to_field 'format_ssim', extract_xpath("/item/metadata/key[text()='dc.format']/../value")
 to_field 'extent_ssim', extract_xpath("/item/metadata/key[text()='dc.format.extent']/../value")
+to_field 'medium_ssim', extract_xpath("/item/metadata/key[text()='dc.format.medium']/../value")
+to_field 'mimetype_ssim', extract_xpath("/item/metadata/key[text()='dc.format.mimetype']/../value")
+
+# ==================
+# language fields
+to_field 'language_ssim', extract_xpath("/item/metadata/key[text()='dc.language']/../value")
+to_field 'language_ssim', extract_xpath("/item/metadata/key[text()='dc.language.iso']/../value")
+to_field 'language_ssim', extract_xpath("/item/metadata/key[text()='dc.language.rfc3066']/../value")
+
+
+# ==================
+# publisher fields
+to_field 'publisher_ssim', extract_xpath("/item/metadata/key[text()='dc.publisher']/../value")
+to_field 'publisher_place_ssim', extract_xpath("/item/metadata/key[text()='dc.publisher.place']/../value")
+to_field 'publisher_corporate_ssim', extract_xpath("/item/metadata/key[text()='dc.publisher.corporate']/../value")
+
+# ==================
+# relation fields
+to_field 'relation_ssim', extract_xpath("/item/metadata/key[text()='dc.relation']/../value")
+to_field 'relation_is_format_of_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.isformatof']/../value")
+to_field 'relation_is_part_of_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.ispartof']/../value")
+to_field 'relation_is_part_of_series_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.ispartofseries']/../value")
+to_field 'relation_has_part_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.haspart']/../value")
+to_field 'relation_is_version_of_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.isversionof']/../value")
+to_field 'relation_has_version_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.hasversion']/../value")
+to_field 'relation_is_based_on_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.isbasedon']/../value")
+to_field 'relation_is_referenced_by_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.isreferencedby']/../value")
+to_field 'relation_requires_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.requires']/../value")
+to_field 'relation_replaces_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.replaces']/../value")
+to_field 'relation_is_replaced_by_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.isreplacedby']/../value")
+to_field 'relation_uri_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.uri']/../value")
+
+# ==================
+# rights fields
+to_field 'rights_ssim', extract_xpath("/item/metadata/key[text()='dc.rights']/../value")
+to_field 'rights_uri_ssim', extract_xpath("/item/metadata/key[text()='dc.rights.uri']/../value")
+to_field 'rights_holder_ssim', extract_xpath("/item/metadata/key[text()='dc.rights.holder']/../value")
+
+# ==================
+# subject fields
+to_field 'subject_tesim', extract_xpath("/item/metadata/key[text()='dc.subject']/../value")
+to_field 'subject_classification_tesim', extract_xpath("/item/metadata/key[text()='dc.subject.classification']/../value")
+to_field 'subject_ddc_tesim', extract_xpath("/item/metadata/key[text()='dc.subject.ddc']/../value")
+to_field 'subject_lcc_tesim', extract_xpath("/item/metadata/key[text()='dc.subject.lcc']/../value")
+to_field 'subject_lcsh_tesim', extract_xpath("/item/metadata/key[text()='dc.subject.lcsh']/../value")
+to_field 'subject_mesh_tesim', extract_xpath("/item/metadata/key[text()='dc.subject.mesh']/../value")
+to_field 'subject_other_tesim', extract_xpath("/item/metadata/key[text()='dc.subject.other']/../value")
+
+# ==================
+# genre, peer review, alternative title fields
+to_field 'genre_ssim', extract_xpath("/item/metadata/key[text()='dc.type']/../value")
+to_field 'peer_review_status_ssim', extract_xpath("/item/metadata/key[text()='dc.description.version']/../value")
+to_field 'alternative_title_ssim', extract_xpath("/item/metadata/key[text()='dc.title.alternative']/../value")
+
+# ==================
+# contributor fields
+to_field 'translator_ssim', extract_xpath("/item/metadata/key[text()='dc.contributor.translator']/../value")
+
+
 
 # ==================
 # Store all files metadata as a single JSON string so that we can display detailed information for each of them.
