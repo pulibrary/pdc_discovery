@@ -51,7 +51,7 @@
       <sequenceId>3</sequenceId>
       <sizeBytes>3223</sizeBytes>
     </bitstreams>
-    <lastModified>2021-11-23 13:38:03.393</lastModified>
+    <lastModified>2021-11-29 09:03:53.428</lastModified>
     <metadata>
       <key>dc.contributor.author</key>
       <value>Abrams, Samantha</value>
@@ -107,8 +107,32 @@
       <value>In 2017, seven members of the Archive-It Mid-Atlantic Users Group (AITMA) conducted a study of 14 subjects representative of their stakeholder populations to assess the usability of Archive-It, a web archiving subscription service of the Internet Archive. While Archive-It is the most widely-used tool for web archiving, little is known about how users interact with the service. This study intended to teach us what users expect from web archives, which exist as another form of archival material. End-user subjects executed four search tasks using the public Archive-It interface and the Wayback Machine to access archived information on websites from the facilitators’ own harvested collections and provide feedback about their experiences. The tasks were designed to have straightforward pass or fail outcomes, and the facilitators took notes on the subjects’ behavior and commentary during the sessions. Overall, participants reported mildly positive impressions of Archive-It public user interface based on their session. The study identified several key areas of improvement for the Archive-It service pertaining to metadata options, terminology display, indexing of dates, and the site’s search box.</value>
     </metadata>
     <metadata>
+      <key>dc.format</key>
+      <value>Research paper</value>
+    </metadata>
+    <metadata>
       <key>dc.format.extent</key>
       <value>45 minutes</value>
+    </metadata>
+    <metadata>
+      <key>dc.format.medium</key>
+      <value>Paper</value>
+    </metadata>
+    <metadata>
+      <key>dc.format.mimetype</key>
+      <value>text/html</value>
+    </metadata>
+    <metadata>
+      <key>dc.language</key>
+      <value>English</value>
+    </metadata>
+    <metadata>
+      <key>dc.language.iso</key>
+      <value>en_US</value>
+    </metadata>
+    <metadata>
+      <key>dc.publisher</key>
+      <value>Research Data Publishing Press</value>
     </metadata>
     <metadata>
       <key>dc.relation</key>
@@ -116,14 +140,159 @@
       <value>Sowing the Seeds for More Usable Web Archives: A Usability Study of Archive-It, Fall/Winter 2019, Vol. 82, No. 2.</value>
     </metadata>
     <metadata>
+      <key>dc.relation</key>
+      <value>Related item</value>
+    </metadata>
+    <metadata>
+      <key>dc.relation.isformatof</key>
+      <value>Print version</value>
+    </metadata>
+    <metadata>
+      <key>dc.relation.ispartof</key>
+      <value>Part 1</value>
+    </metadata>
+    <metadata>
+      <key>dc.relation.ispartofseries</key>
+      <value>Published Series</value>
+    </metadata>
+    <metadata>
+      <key>dc.relation.haspart</key>
+      <value>Related part</value>
+    </metadata>
+    <metadata>
+      <key>dc.relation.isversionof</key>
+      <value>Original copy with multiple versions</value>
+    </metadata>
+    <metadata>
+      <key>dc.relation.hasversion</key>
+      <value>Version 2</value>
+    </metadata>
+    <metadata>
+      <key>dc.relation.isbasedon</key>
+      <value>Original content</value>
+    </metadata>
+    <metadata>
+      <key>dc.relation.isreferencedby</key>
+      <value>Other publication</value>
+    </metadata>
+    <metadata>
+      <key>dc.relation.requires</key>
+      <value>Required object</value>
+    </metadata>
+    <metadata>
+      <key>dc.relation.replaces</key>
+      <value>Older version</value>
+    </metadata>
+    <metadata>
+      <key>dc.relation.isreplacedby</key>
+      <value>Replacement copy</value>
+    </metadata>
+    <metadata>
+      <key>dc.relation.uri</key>
+      <value>https://ezid.cdlib.org/id/ark:/99999/fk4806k254</value>
+    </metadata>
+    <metadata>
+      <key>dc.rights</key>
+      <language>en_US</language>
+      <value>Example text - RightsStatements.org provides a set of standardized rights statements that can be used to communicate the copyright and re-use status of digital objects to the public. Our rights statements are supported by major aggregation platforms such as the Digital Public Library of America and Europeana. The rights statements have been designed with both human users and machine users (such as search engines) in mind and make use of semantic web technology.</value>
+    </metadata>
+    <metadata>
+      <key>dc.rights.uri</key>
+      <value>https://rightsstatements.org</value>
+    </metadata>
+    <metadata>
+      <key>dc.subject</key>
+      <value>Web archiving</value>
+    </metadata>
+    <metadata>
+      <key>dc.subject</key>
+      <value>Usability</value>
+    </metadata>
+    <metadata>
+      <key>dc.subject.classification</key>
+      <value>Classification system</value>
+    </metadata>
+    <metadata>
+      <key>dc.subject.ddc</key>
+      <value>006.7 Multimedia systems -- Information Architecture</value>
+    </metadata>
+    <metadata>
+      <key>dc.subject.lcc</key>
+      <value>T173.2-174.5</value>
+    </metadata>
+    <metadata>
+      <key>dc.subject.lcsh</key>
+      <value>World Wide Web pages</value>
+    </metadata>
+    <metadata>
+      <key>dc.subject.mesh</key>
+      <value>A18 Plant Structures</value>
+    </metadata>
+    <metadata>
+      <key>dc.subject.other</key>
+      <value>Web archiving portals</value>
+    </metadata>
+    <metadata>
       <key>dc.title</key>
       <language>en_US</language>
       <value>Sowing the Seeds for More Usable Web Archives: A Usability Study of Archive-It</value>
     </metadata>
     <metadata>
+      <key>dc.title.alternative</key>
+      <value>Usability Study of Archive-It for Libraries</value>
+    </metadata>
+    <metadata>
       <key>dc.type</key>
       <language>en_US</language>
       <value>Dataset</value>
+    </metadata>
+    <metadata>
+      <key>dc.type</key>
+      <value>Research</value>
+    </metadata>
+    <metadata>
+      <key>dc.description.version</key>
+      <value>Reviewed</value>
+    </metadata>
+    <metadata>
+      <key>dc.language.rfc3066</key>
+      <value>en-US (English)</value>
+    </metadata>
+    <metadata>
+      <key>dc.rights.holder</key>
+      <value>Samantha Abrams</value>
+    </metadata>
+    <metadata>
+      <key>dc.publisher.place</key>
+      <value>New York, NY, USA</value>
+    </metadata>
+    <metadata>
+      <key>dc.publisher.corporate</key>
+      <value>Corporate Publishers, Inc.</value>
+    </metadata>
+    <metadata>
+      <key>dc.contributor.translator</key>
+      <value>Jane Smith</value>
+    </metadata>
+    <metadata>
+      <key>dc.identifier.isan</key>
+      <value>ISAN 0000-0000-3A8D-0000-Z-0000-0000-6</value>
+    </metadata>
+    <metadata>
+      <key>dc.rights.accessRights</key>
+      <value>Terms of access rights</value>
+    </metadata>
+    <metadata>
+      <key>dc.contributor.funder</key>
+      <value>Funding Agency, Inc.</value>
+    </metadata>
+    <metadata>
+      <key>dc.provenance</key>
+      <value>Provenance information for this version</value>
+    </metadata>
+    <metadata>
+      <key>dc.rights.license</key>
+      <value>CC0 License</value>
     </metadata>
     <parentCollection>
       <expand>parentCommunityList</expand>

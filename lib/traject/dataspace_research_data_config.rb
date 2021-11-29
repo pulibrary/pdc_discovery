@@ -105,7 +105,6 @@ to_field 'issn_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.is
 to_field 'sici_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.sici']/../value")
 to_field 'ismn_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.ismn']/../value")
 to_field 'local_id_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.other']/../value")
-to_field 'isan_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.isan']/../value")
 
 # ==================
 # Indexing the URL for now. We might need to index to a more complex structure if we want to store

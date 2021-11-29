@@ -41,6 +41,12 @@
             <a id="document-abstract-text-toggle" href="#" class="document-abstract--collapse__button">Show More</a>
           </div>
         </div>
+        <% @document.descriptions.each do |description| %>
+          <div class="document-description">
+            <header>Description:</header>
+            <p id="document-description-text" class="truncate-line-clamp"><%= @document.description %></p>
+          </div>
+        <% end %>
       </div>
     </dd>
   </div>
