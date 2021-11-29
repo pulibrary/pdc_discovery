@@ -157,6 +157,8 @@ to_field 'relation_uri_ssim', extract_xpath("/item/metadata/key[text()='dc.relat
 to_field 'rights_ssim', extract_xpath("/item/metadata/key[text()='dc.rights']/../value")
 to_field 'rights_uri_ssim', extract_xpath("/item/metadata/key[text()='dc.rights.uri']/../value")
 to_field 'rights_holder_ssim', extract_xpath("/item/metadata/key[text()='dc.rights.holder']/../value")
+to_field 'access_rights_ssim', extract_xpath("/item/metadata/key[text()='dc.rights.accessRights']/../value")
+to_field 'license_ssim', extract_xpath("/item/metadata/key[text()='dc.rights.license']/../value")
 
 # ==================
 # subject fields
@@ -169,16 +171,16 @@ to_field 'subject_mesh_tesim', extract_xpath("/item/metadata/key[text()='dc.subj
 to_field 'subject_other_tesim', extract_xpath("/item/metadata/key[text()='dc.subject.other']/../value")
 
 # ==================
-# genre, peer review, alternative title fields
+# genre, provenance, peer review, alternative title fields
 to_field 'genre_ssim', extract_xpath("/item/metadata/key[text()='dc.type']/../value")
+to_field 'provenance_ssim', extract_xpath("/item/metadata/key[text()='dc.provenance']/../value")
 to_field 'peer_review_status_ssim', extract_xpath("/item/metadata/key[text()='dc.description.version']/../value")
 to_field 'alternative_title_ssim', extract_xpath("/item/metadata/key[text()='dc.title.alternative']/../value")
 
 # ==================
 # contributor fields
 to_field 'translator_ssim', extract_xpath("/item/metadata/key[text()='dc.contributor.translator']/../value")
-
-
+to_field 'funding_agency_ssim', extract_xpath("/item/metadata/key[text()='dc.contributor.funder']/../value")
 
 # ==================
 # Store all files metadata as a single JSON string so that we can display detailed information for each of them.

@@ -91,6 +91,12 @@
             <% @document.rights_holder.each do |rights_holder| %>
               <%= render_field_row "Rights Holder", rights_holder %>
             <% end %>
+            <% @document.access_rights.each do |access_rights| %>
+              <%= render_field_row "Access Rights", access_rights %>
+            <% end %>
+            <% @document.license.each do |license| %>
+              <%= render_field_row "License", license %>
+            <% end %>
             <% @document.subject.each do |subject| %>
               <%= render_field_row_link "Subject", subject %>
             <% end %>
@@ -123,6 +129,12 @@
             <% end %>
             <% @document.isan.each do |isan| %>
               <%= render_field_row "ISAN Identifier", isan %>
+            <% end %>
+            <% @document.provenance.each do |provenance| %>
+              <%= render_field_row "Provenance", provenance %>
+            <% end %>
+            <% @document.funding_agency.each do |funding_agency| %>
+              <%= render_field_row "Funding Agency", funding_agency %>
             <% end %>
           </tbody>
           <tfoot>

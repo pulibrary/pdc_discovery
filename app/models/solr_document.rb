@@ -246,7 +246,21 @@ class SolrDocument
     fetch("isan_ssim", [])
   end
 
+  def access_rights
+    fetch("access_rights_ssim", [])
+  end
 
+  def funding_agency
+    fetch("funding_agency_ssim", [])
+  end
+
+  def provenance
+    fetch("provenance_ssim", [])
+  end
+
+  def license
+    fetch("license_ssim", [])
+  end
 
 
 end
