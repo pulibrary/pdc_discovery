@@ -48,7 +48,7 @@ describe 'DataSpace research data all fields indexing', type: :system do
   end
 
   it 'medium' do
-    expect(result['medium_ssim'].first).to eq '45 minutes'
+    expect(result['medium_ssim'].first).to eq 'Paper'
   end
 
   it 'mimetype' do
