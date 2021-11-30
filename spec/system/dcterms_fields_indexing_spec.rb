@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/BlockLength
 describe 'DataSpace research data all fields indexing', type: :system do
   subject(:result) do
     indexer.map_record(record)
@@ -30,13 +31,11 @@ describe 'DataSpace research data all fields indexing', type: :system do
     expect(result['title_ssim'].first).to eq 'Subject Liaisons in Academic Libraries: An Open Access Data Set from 2015'
   end
 
-  it 'title' do
-    expect(result['title_ssim'].first).to eq 'Subject Liaisons in Academic Libraries: An Open Access Data Set from 2015'
-  end
-
+  # rubocop:disable Layout/LineLength
   it 'abstract' do
     expect(result['abstract_tsim'].first).to eq 'The work of subject liaison librarians in academic libraries has morphed to include a variety of roles that reach beyond the traditional. This study captures responses of 1,808 participants from land-grant, Oberlin Group, and Association of Research Libraries (ARL) institutions to a questionnaire about subject liaison librarians. The questionnaire contains eight demographic questions, five questions about liaison responsibilities, seven outreach and instruction questions, three traditional reference questions, two scholarly communications questions, three collection development questions, and an open-ended question. This is the largest data set compiled to date on academic subject liaison librarians. The data set has been made available on an open access basis in hopes that use of the data will facilitate cross-study comparisons.'
   end
+  # rubocop:enable Layout/LineLength
 
   it 'access_rights' do
     expect(result['access_rights_ssim'].first).to eq 'Sample access rights statement version 2'
@@ -107,7 +106,7 @@ describe 'DataSpace research data all fields indexing', type: :system do
   end
 
   it 'description' do
-    expect(result['description_tsim'].first).to eq 'Submitted by Neil Nero (nnero@princeton.edu) on 2016-09-28T19:46:34Z No. of bitstreams: 2 Subject Liaisons in Academic Libraries Questionnaire (SLALQ).pdf: 104387 bytes, checksum: 226faa75c66d36a907864ac2bdaa8410 (MD5) Subject Liaisons in Academic Libraries Data.csv: 750480 bytes, checksum: 57477cb7f41e1959ebe8d98b2985a7ac (MD5)'
+    expect(result['description_tsim'].first).to eq 'Submitted by Neil Nero on 2016-09-28T19:46:34Z No. of bitstreams: 2'
   end
 
   it 'education_level' do
@@ -218,9 +217,11 @@ describe 'DataSpace research data all fields indexing', type: :system do
     expect(result['rights_holder_ssim'].first).to eq 'Anne Langley and Neil Nero'
   end
 
+  # rubocop:disable Layout/LineLength
   it 'rights' do
     expect(result['rights_ssim'].first).to eq 'Sample rights statement - RightsStatements.org provides a set of standardized rights statements that can be used to communicate the copyright and re-use status of digital objects to the public. Our rights statements are supported by major aggregation platforms such as the Digital Public Library of America and Europeana. The rights statements have been designed with both human users and machine users (such as search engines) in mind and make use of semantic web technology. Learn more about how you can use our rights statements here.'
   end
+  # rubocop:enable Layout/LineLength
 
   it 'source' do
     expect(result['source_ssim'].first).to eq 'https://ezid.cdlib.org/id/ark:/99999/fk4qr69706'
@@ -249,5 +250,5 @@ describe 'DataSpace research data all fields indexing', type: :system do
   it 'date_valid' do
     expect(result['date_valid_ssim'].first).to eq '2015 - 2021'
   end
-
 end
+# rubocop:enable Metrics/BlockLength

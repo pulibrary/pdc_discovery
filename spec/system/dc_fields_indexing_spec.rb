@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/BlockLength
 describe 'DataSpace research data all fields indexing', type: :system do
   subject(:result) do
     indexer.map_record(record)
@@ -47,7 +48,7 @@ describe 'DataSpace research data all fields indexing', type: :system do
   end
 
   it 'medium' do
-    expect(result['extent_ssim'].first).to eq '45 minutes'
+    expect(result['medium_ssim'].first).to eq '45 minutes'
   end
 
   it 'mimetype' do
@@ -122,9 +123,11 @@ describe 'DataSpace research data all fields indexing', type: :system do
     expect(result['relation_uri_ssim'].first).to eq 'https://ezid.cdlib.org/id/ark:/99999/fk4806k254'
   end
 
+  # rubocop:disable Layout/LineLength
   it 'rights' do
     expect(result['rights_ssim'].first).to eq 'Example text - RightsStatements.org provides a set of standardized rights statements that can be used to communicate the copyright and re-use status of digital objects to the public. Our rights statements are supported by major aggregation platforms such as the Digital Public Library of America and Europeana. The rights statements have been designed with both human users and machine users (such as search engines) in mind and make use of semantic web technology.'
   end
+  # rubocop:enable Layout/LineLength
 
   it 'rights_uri' do
     expect(result['rights_uri_ssim'].first).to eq 'https://rightsstatements.org'
@@ -201,5 +204,5 @@ describe 'DataSpace research data all fields indexing', type: :system do
   it 'funding_agency' do
     expect(result['funding_agency_ssim'].first).to eq 'Funding Agency, Inc.'
   end
-
 end
+# rubocop:enable Metrics/BlockLength

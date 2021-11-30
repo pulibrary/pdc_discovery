@@ -185,7 +185,6 @@ to_field 'language_ssim', extract_xpath("/item/metadata/key[text()='dcterms.lang
 to_field 'language_ssim', extract_xpath("/item/metadata/key[text()='dc.language.iso']/../value")
 to_field 'language_ssim', extract_xpath("/item/metadata/key[text()='dc.language.rfc3066']/../value")
 
-
 # ==================
 # publisher fields
 to_field 'publisher_ssim', extract_xpath("/item/metadata/key[text()='dc.publisher']/../value")
@@ -263,7 +262,6 @@ to_field 'funding_agency_ssim', extract_xpath("/item/metadata/key[text()='dc.con
 to_field 'accrual_method_ssim', extract_xpath("/item/metadata/key[text()='dcterms.accrualMethod']/../value")
 to_field 'accrual_periodicity_ssim', extract_xpath("/item/metadata/key[text()='dcterms.accrualPeriodicity']/../value")
 to_field 'accrual_policy_ssim', extract_xpath("/item/metadata/key[text()='dcterms.accrualPolicy']/../value")
-
 
 # ==================
 # audience and citation fields

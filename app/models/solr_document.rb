@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/ClassLength
 class SolrDocument
   include Blacklight::Solr::Document
   # The following shows how to setup this blacklight document to display marc documents
@@ -250,10 +251,6 @@ class SolrDocument
     fetch("peer_review_status_ssim", [])
   end
 
-  def alternative_title
-    fetch("alternative_title_ssim", [])
-  end
-
   def translator
     fetch("translator_ssim", [])
   end
@@ -289,7 +286,6 @@ class SolrDocument
   def accrual_policy
     fetch("accrual_policy_ssim", [])
   end
-
 
   def audience
     fetch("audience_ssim", [])
@@ -382,7 +378,5 @@ class SolrDocument
   def source
     fetch("source_ssim", [])
   end
-
-
-
 end
+# rubocop:enable Metrics/ClassLength
