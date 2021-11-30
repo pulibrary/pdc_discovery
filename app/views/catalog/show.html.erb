@@ -1,6 +1,5 @@
 <style>
   /*
-   * TODO: Move this so a shared CSS file.
    * Source: https://blog.kritikapattalam.com/2-simple-ways-you-can-truncate-text-using-css
    */
   .truncate-line-clamp {
@@ -8,7 +7,6 @@
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    /* width: 250px; */
   }
 </style>
 
@@ -31,18 +29,28 @@
     <dd class="col-md-9 blacklight-issue_date_ssim">
       <div class="document-issued-date" value="January 2017"></div>
     </dd>
-    <dt class="blacklight-abstract_tsim col-md-3"></dt>
-    <dd class="col-md-9 blacklight-abstract_tsim">
-      <div>
+
+    <% if @document.abstract.present? %>
+      <dt class="blacklight-abstract_tsim col-md-3"></dt>
+      <dd class="col-md-9 blacklight-abstract_tsim">
         <div class="document-abstract">
           <header>Abstract:</header>
           <p id="document-abstract-text" class="truncate-line-clamp"><%= @document.abstract %></p>
-          <div class="x">
             <a id="document-abstract-text-toggle" href="#" class="document-abstract--collapse__button">Show More</a>
-          </div>
         </div>
-      </div>
-    </dd>
+      </dd>
+    <% end %>
+
+    <% if @document.description.present? %>
+      <dt class="blacklight-description_tsim col-md-3"></dt>
+      <dd class="col-md-9 blacklight-description_tsim">
+        <div class="document-description">
+          <header>Description:</header>
+          <p id="document-description-text" class="truncate-line-clamp"><%= @document.description %></p>
+            <a id="document-description-text-toggle" href="#" class="document-description--collapse__button">Show More</a>
+        </div>
+      </dd>
+    <% end %>
   </div>
 
   <%= render "show_documents" %>
@@ -56,19 +64,33 @@
 
 <script>
 $(function() {
+  var setupMoreLessToggle = function(linkId, textId) {
 
-  // Toggle abstract display to display more or less text.
-  $("#document-abstract-text-toggle").click(function() {
-    if ($("#document-abstract-text-toggle").text() == "Show Less") {
-      $("#document-abstract-text").addClass("truncate-line-clamp");
-      $("#document-abstract-text-toggle").text("Show More");
-    } else {
-      $("#document-abstract-text").removeClass("truncate-line-clamp");
-      $("#document-abstract-text-toggle").text("Show Less");
+    // Wire the link to toggle between show more/show less
+    $(linkId).click(function() {
+      if ($(linkId).text() == "Show Less") {
+        $(textId).addClass("truncate-line-clamp");
+        $(linkId).text("Show More");
+      } else {
+        $(textId).removeClass("truncate-line-clamp");
+        $(linkId).text("Show Less");
+      }
+      return false;
+    });
+
+    // Only show the link it text was indeed truncated
+    // https://rubyyagi.com/how-to-truncate-long-text-and-show-read-more-less-button/
+    var el = $(textId)[0];
+    if (el !== undefined) {
+      var textTruncated = (el.offsetHeight < el.scrollHeight || el.offsetWidth < el.scrollWidth)
+      if (!textTruncated) {
+        $(linkId).addClass("invisible");
+      }
     }
-    return false;
-  });
+  }
 
+  setupMoreLessToggle("#document-abstract-text-toggle", "#document-abstract-text");
+  setupMoreLessToggle("#document-description-text-toggle", "#document-description-text");
 });
 
 </script>
