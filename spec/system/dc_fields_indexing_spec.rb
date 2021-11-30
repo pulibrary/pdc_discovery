@@ -10,7 +10,7 @@ describe 'DataSpace research data all fields indexing', type: :system do
     end
   end
   let(:dspace_xml) do
-    File.join(fixture_path, 'single_item_all_fields.xml')
+    File.join(fixture_path, 'single_item_dc_fields_all.xml')
   end
   let(:nokogiri_reader) do
     Traject::NokogiriReader.new(File.read(dspace_xml), indexer.settings)
@@ -140,6 +140,14 @@ describe 'DataSpace research data all fields indexing', type: :system do
 
   it 'license' do
     expect(result['license_ssim'].first).to eq 'CC0 License'
+  end
+
+  it 'spatial' do
+    expect(result['spatial_coverage_tesim'].first).to eq 'North Decimal Degree 40.405833. South Decimal Degree 40.268333. East Decimal Degree -74.569167. West Decimal Degree -74.747222.'
+  end
+
+  it 'temporal' do
+    expect(result['temporal_coverage_tesim'].first).to eq 'Start date 2014-01-01'
   end
 
   it 'subject' do

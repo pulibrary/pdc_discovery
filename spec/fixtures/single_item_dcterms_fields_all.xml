@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<items>
+  <item>
+    <handle>88435/dsp01v405sc863</handle>
+    <id>84192</id>
+    <name>Subject Liaisons in Academic Libraries: An Open Access Data Set from 2015</name>
+    <type>item</type>
+    <archived>true</archived>
+    <bitstreams>
+      <expand>parent</expand>
+      <expand>policies</expand>
+      <expand>all</expand>
+      <id>107612</id>
+      <name>Subject Liaisons in Academic Libraries Questionnaire (SLALQ).pdf.txt</name>
+      <type>bitstream</type>
+      <bundleName>TEXT</bundleName>
+      <checkSum checkSumAlgorithm="MD5">4b7050701a632ef7a9f25bbf3de65c1a</checkSum>
+      <description>Extracted text</description>
+      <format>Text</format>
+      <mimeType>text/plain</mimeType>
+      <retrieveLink>/bitstreams/107612/retrieve</retrieveLink>
+      <sequenceId>4</sequenceId>
+      <sizeBytes>8834</sizeBytes>
+    </bitstreams>
+    <bitstreams>
+      <expand>parent</expand>
+      <expand>policies</expand>
+      <expand>all</expand>
+      <id>107401</id>
+      <name>Subject Liaisons in Academic Libraries Questionnaire (SLALQ).pdf</name>
+      <type>bitstream</type>
+      <bundleName>ORIGINAL</bundleName>
+      <checkSum checkSumAlgorithm="MD5">226faa75c66d36a907864ac2bdaa8410</checkSum>
+      <format>Adobe PDF</format>
+      <mimeType>application/pdf</mimeType>
+      <retrieveLink>/bitstreams/107401/retrieve</retrieveLink>
+      <sequenceId>1</sequenceId>
+      <sizeBytes>104387</sizeBytes>
+    </bitstreams>
+    <bitstreams>
+      <expand>parent</expand>
+      <expand>policies</expand>
+      <expand>all</expand>
+      <id>107402</id>
+      <name>Subject Liaisons in Academic Libraries Data.csv</name>
+      <type>bitstream</type>
+      <bundleName>ORIGINAL</bundleName>
+      <checkSum checkSumAlgorithm="MD5">57477cb7f41e1959ebe8d98b2985a7ac</checkSum>
+      <format>Unknown</format>
+      <mimeType>application/octet-stream</mimeType>
+      <retrieveLink>/bitstreams/107402/retrieve</retrieveLink>
+      <sequenceId>2</sequenceId>
+      <sizeBytes>750480</sizeBytes>
+    </bitstreams>
+    <bitstreams>
+      <expand>parent</expand>
+      <expand>policies</expand>
+      <expand>all</expand>
+      <id>107403</id>
+      <name>license.txt</name>
+      <type>bitstream</type>
+      <bundleName>LICENSE</bundleName>
+      <checkSum checkSumAlgorithm="MD5">1e204dad3e9e1e2e6660eef9c33467e9</checkSum>
+      <format>License</format>
+      <mimeType>text/plain</mimeType>
+      <retrieveLink>/bitstreams/107403/retrieve</retrieveLink>
+      <sequenceId>3</sequenceId>
+      <sizeBytes>3223</sizeBytes>
+    </bitstreams>
+    <lastModified>2021-11-30 15:25:27.359</lastModified>
+    <metadata>
+      <key>dcterms.abstract</key>
+      <value>The work of subject liaison librarians in academic libraries has morphed to include a variety of roles that reach beyond the traditional. This study captures responses of 1,808 participants from land-grant, Oberlin Group, and Association of Research Libraries (ARL) institutions to a questionnaire about subject liaison librarians. The questionnaire contains eight demographic questions, five questions about liaison responsibilities, seven outreach and instruction questions, three traditional reference questions, two scholarly communications questions, three collection development questions, and an open-ended question. This is the largest data set compiled to date on academic subject liaison librarians. The data set has been made available on an open access basis in hopes that use of the data will facilitate cross-study comparisons.</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.accessRights</key>
+      <value>Sample access rights statement version 2</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.accrualMethod</key>
+      <value>Item Creation</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.accrualPeriodicity</key>
+      <value>Triennial</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.accrualPolicy</key>
+      <value>Active</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.alternative</key>
+      <value>Subject Liaisons in Academic Libraries</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.audience</key>
+      <value>Researchers</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.available</key>
+      <value>2015 - present</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.bibliographicCitation</key>
+      <value>Nero, Neil. Subject Liaisons in Academic Libraries: An Open Access Data Set from 2015. [New York, NY, n.c.]</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.comformsTo</key>
+      <value>https://www.w3.org/2005/sparql-results</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.contributor</key>
+      <value>Smith, Jane</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.coverage</key>
+      <value>Princeton, NJ, USA</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.created</key>
+      <value>2015-10-01</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.creator</key>
+      <value>Nero, Neil</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.date</key>
+      <value>2021</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.dateAccepted</key>
+      <value>2015/11/15</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.dateCopyrighted</key>
+      <value>2021/01/01</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.dateSubmitted</key>
+      <value>10/2015</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.description</key>
+      <value>Submitted by Neil Nero (nnero@princeton.edu) on 2016-09-28T19:46:34Z No. of bitstreams: 2 Subject Liaisons in Academic Libraries Questionnaire (SLALQ).pdf: 104387 bytes, checksum: 226faa75c66d36a907864ac2bdaa8410 (MD5) Subject Liaisons in Academic Libraries Data.csv: 750480 bytes, checksum: 57477cb7f41e1959ebe8d98b2985a7ac (MD5)</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.educationLevel</key>
+      <value>Education level value</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.extent</key>
+      <value>21 minutes</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.format</key>
+      <value>text:pdf</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.hasFormat</key>
+      <value>text:html</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.hasPart</key>
+      <value>Subject librarians listing</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.hasVersion</key>
+      <value>Abridged directory listing</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.identifier</key>
+      <value>http://arks.princeton.edu/ark:/88435/dsp01v405sc863</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.instructionalMethod</key>
+      <value>Direct instruction</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.isFormatOf</key>
+      <value>HTML version of original</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.isPartOf</key>
+      <value>Librarian research compendium</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.isReferencedBy</key>
+      <value>Librarian Directory 2016</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.isReplacedBy</key>
+      <value>Sample replacement data</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.isRequiredBy</key>
+      <value>Sample requirement data</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.issued</key>
+      <value>2017-01</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.isVersionOf</key>
+      <value>Librarian Compendium, 2014</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.language</key>
+      <value>English</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.license</key>
+      <value>Example license info</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.mediator</key>
+      <value>Example Mediators, Inc.</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.medium</key>
+      <value>Digital</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.modified</key>
+      <value>2015/10/05</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.provenance</key>
+      <value>Example provenance information for PUL</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.publisher</key>
+      <value>Research Data Publishers</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.references</key>
+      <value>https://ezid.cdlib.org/id/ark:/99999/fk4vh7115f</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.relation</key>
+      <value>Librarians and Libraries, 2015</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.replaces</key>
+      <value>Librarian Directory, 2014</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.requires</key>
+      <value>Librarians and Libraries Glossary</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.rights</key>
+      <value>Sample rights statement - RightsStatements.org provides a set of standardized rights statements that can be used to communicate the copyright and re-use status of digital objects to the public. Our rights statements are supported by major aggregation platforms such as the Digital Public Library of America and Europeana. The rights statements have been designed with both human users and machine users (such as search engines) in mind and make use of semantic web technology. Learn more about how you can use our rights statements here.</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.rightsHolder</key>
+      <value>Anne Langley and Neil Nero</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.source</key>
+      <value>https://ezid.cdlib.org/id/ark:/99999/fk4qr69706</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.spatial</key>
+      <value>North Decimal Degree 40.405833. South Decimal Degree 40.268333. East Decimal Degree -74.569167. West Decimal Degree -74.747222.</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.subject</key>
+      <value>Open Access</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.tableOfContents</key>
+      <value>ToC Summary</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.temporal</key>
+      <value>Start date: 2015-02-01</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.title</key>
+      <value>Subject Liaisons in Academic Libraries: An Open Access Data Set from 2015</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.type</key>
+      <value>Dataset</value>
+    </metadata>
+    <metadata>
+      <key>dcterms.valid</key>
+      <value>2015 - 2021</value>
+    </metadata>
+    <parentCollection>
+      <expand>parentCommunityList</expand>
+      <expand>parentCommunity</expand>
+      <expand>items</expand>
+      <expand>license</expand>
+      <expand>logo</expand>
+      <expand>all</expand>
+      <handle>88435/dsp01zw12z7787</handle>
+      <id>1846</id>
+      <name>Research Data</name>
+      <type>collection</type>
+      <copyrightText/>
+      <introductoryText/>
+      <numberItems>2</numberItems>
+      <shortDescription/>
+      <sidebarText/>
+    </parentCollection>
+    <parentCollectionList>
+      <expand>parentCommunityList</expand>
+      <expand>parentCommunity</expand>
+      <expand>items</expand>
+      <expand>license</expand>
+      <expand>logo</expand>
+      <expand>all</expand>
+      <handle>88435/dsp01zw12z7787</handle>
+      <id>1846</id>
+      <name>Research Data</name>
+      <type>collection</type>
+      <copyrightText/>
+      <introductoryText/>
+      <numberItems>2</numberItems>
+      <shortDescription/>
+      <sidebarText/>
+    </parentCollectionList>
+    <parentCommunityList>
+      <expand>parentCommunity</expand>
+      <expand>collections</expand>
+      <expand>subCommunities</expand>
+      <expand>logo</expand>
+      <expand>all</expand>
+      <handle>88435/dsp01g732d9019</handle>
+      <id>146</id>
+      <name>Princeton University Library</name>
+      <type>community</type>
+      <copyrightText/>
+      <countItems>9383</countItems>
+      <introductoryText/>
+      <shortDescription/>
+      <sidebarText/>
+    </parentCommunityList>
+    <withdrawn>false</withdrawn>
+  </item>
+</items>

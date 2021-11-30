@@ -12,10 +12,24 @@
             <% @document.authors.each do |author| %>
               <%= render_field_row "Author", author %>
             <% end %>
+            <% @document.creators.each do |creator| %>
+              <%= render_field_row "Creator", creator %>
+            <% end %>
             <% @document.contributors.each do |contributor| %>
               <%= render_field_row "Contributor", contributor %>
             <% end %>
             <%= render_field_row "Issued Date", @document.issued_date %>
+            <%= render_field_row "Date Created", @document.date_created %>
+            <%= render_field_row "Date Modified", @document.date_modified %>
+            <%= render_field_row "Date Submitted", @document.date_submitted %>
+            <%= render_field_row "Date Accepted", @document.date_accepted %>
+            <%= render_field_row "Date Copyrighted", @document.date_copyrighted %>
+            <% @document.dates_valid.each do |date_valid| %>
+              <%= render_field_row "Date Valid", date_valid %>
+            <% end %>
+            <% @document.table_of_contents.each do |table_of_contents| %>
+              <%= render_field_row "Table of Contents", table_of_contents %>
+            <% end %>
             <% @document.referenced_by.each do |url| %>
               <%= render_field_row_link "Referenced by", url %>
             <% end %>
@@ -47,40 +61,46 @@
               <%= render_field_row "Relation", relation %>
             <% end %>
             <% @document.relation_is_format_of.each do |relation_is_format_of| %>
-              <%= render_field_row "Relation", relation_is_format_of %>
+              <%= render_field_row "Relation - Is Format Of", relation_is_format_of %>
+            <% end %>
+            <% @document.relation_has_format.each do |relation_has_format| %>
+              <%= render_field_row "Relation - Has Format", relation_has_format %>
             <% end %>
             <% @document.relation_is_part_of.each do |relation_is_part_of| %>
-              <%= render_field_row "Relation", relation_is_part_of %>
+              <%= render_field_row "Relation - Is Part Of", relation_is_part_of %>
             <% end %>
             <% @document.relation_is_part_of_series.each do |relation_is_part_of_series| %>
-              <%= render_field_row "Relation", relation_is_part_of_series %>
+              <%= render_field_row "Relation - Is Part of Series", relation_is_part_of_series %>
             <% end %>
             <% @document.relation_has_part.each do |relation_has_part| %>
-              <%= render_field_row "Relation", relation_has_part %>
+              <%= render_field_row "Relation - Has Part", relation_has_part %>
             <% end %>
             <% @document.relation_is_version_of.each do |relation_is_version_of| %>
-              <%= render_field_row "Relation", relation_is_version_of %>
+              <%= render_field_row "Relation - Is Version Of", relation_is_version_of %>
             <% end %>
             <% @document.relation_has_version.each do |relation_has_version| %>
-              <%= render_field_row "Relation", relation_has_version %>
+              <%= render_field_row "Relation - Has Version", relation_has_version %>
             <% end %>
             <% @document.relation_is_based_on.each do |relation_is_based_on| %>
-              <%= render_field_row "Relation", relation_is_based_on %>
+              <%= render_field_row "Relation - Is Based On", relation_is_based_on %>
             <% end %>
             <% @document.relation_is_referenced_by.each do |relation_is_referenced_by| %>
-              <%= render_field_row "Relation", relation_is_referenced_by %>
+              <%= render_field_row "Relation - Is Referenced By", relation_is_referenced_by %>
+            <% end %>
+            <% @document.relation_is_required_by.each do |relation_is_required_by| %>
+              <%= render_field_row "Relation - Is Required By", relation_is_required_by %>
             <% end %>
             <% @document.relation_requires.each do |relation_requires| %>
-              <%= render_field_row "Relation", relation_requires %>
+              <%= render_field_row "Relation - Requires", relation_requires %>
             <% end %>
             <% @document.relation_replaces.each do |relation_replaces| %>
-              <%= render_field_row "Relation", relation_replaces %>
+              <%= render_field_row "Relation - Replaces", relation_replaces %>
             <% end %>
             <% @document.relation_is_replaced_by.each do |relation_is_replaced_by| %>
-              <%= render_field_row "Relation", relation_is_replaced_by %>
+              <%= render_field_row "Relation - Is Replaced By", relation_is_replaced_by %>
             <% end %>
             <% @document.relation_uri.each do |relation_uri| %>
-              <%= render_field_row "Relation", relation_uri %>
+              <%= render_field_row "Relation URI", relation_uri %>
             <% end %>
             <% @document.rights.each do |rights| %>
               <%= render_field_row "Rights", rights %>
@@ -135,6 +155,51 @@
             <% end %>
             <% @document.funding_agency.each do |funding_agency| %>
               <%= render_field_row "Funding Agency", funding_agency %>
+            <% end %>
+            <% @document.accrual_method.each do |accrual_method| %>
+              <%= render_field_row "Accrual Method", accrual_method %>
+            <% end %>
+            <% @document.accrual_periodicity.each do |accrual_periodicity| %>
+              <%= render_field_row "Accrual Periodicity", accrual_periodicity %>
+            <% end %>
+            <% @document.accrual_policy.each do |accrual_policy| %>
+              <%= render_field_row "Accrual Policy", accrual_policy %>
+            <% end %>
+            <% @document.audience.each do |audience| %>
+              <%= render_field_row "Audience", audience %>
+            <% end %>
+            <% @document.available.each do |available| %>
+              <%= render_field_row "Available", available %>
+            <% end %>
+            <% @document.bibliographic_citation.each do |bibliographic_citation| %>
+              <%= render_field_row "Bibliographic Citation", bibliographic_citation %>
+            <% end %>
+            <% @document.conforms_to.each do |conforms_to| %>
+              <%= render_field_row "Conforms To", conforms_to %>
+            <% end %>
+            <% @document.coverage.each do |coverage| %>
+              <%= render_field_row "Coverage", coverage %>
+            <% end %>
+            <% @document.spatial_coverage.each do |spatial_coverage| %>
+              <%= render_field_row "Spatial Coverage", spatial_coverage %>
+            <% end %>
+            <% @document.temporal_coverage.each do |temporal_coverage| %>
+              <%= render_field_row "Temporal Coverage", temporal_coverage %>
+            <% end %>
+            <% @document.education_level.each do |education_level| %>
+              <%= render_field_row "Education Level", education_level %>
+            <% end %>
+            <% @document.instructional_method.each do |instructional_method| %>
+              <%= render_field_row "Instructional Method", instructional_method %>
+            <% end %>
+            <% @document.other_identifier.each do |other_identifier| %>
+              <%= render_field_row "Other Identifier", other_identifier %>
+            <% end %>
+            <% @document.mediator.each do |mediator| %>
+              <%= render_field_row "Mediator", mediator %>
+            <% end %>
+            <% @document.source.each do |source| %>
+              <%= render_field_row "Source", source %>
             <% end %>
           </tbody>
           <tfoot>

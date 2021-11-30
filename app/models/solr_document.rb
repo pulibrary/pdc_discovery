@@ -49,6 +49,10 @@ class SolrDocument
     fetch('author_tesim', [])
   end
 
+  def creators
+    fetch('creator_tesim', [])
+  end
+
   def contributors
     fetch("contributor_tsim", [])
   end
@@ -89,6 +93,10 @@ class SolrDocument
     end
   end
   # rubocop:enable Lint/UselessAssignment
+
+  def table_of_contents
+    fetch("tableofcontents_tesim", [])
+  end
 
   def referenced_by
     fetch("referenced_by_ssim", [])
@@ -138,6 +146,10 @@ class SolrDocument
     fetch("relation_is_format_of_ssim", [])
   end
 
+  def relation_has_format
+    fetch("relation_has_format_ssim", [])
+  end
+
   def relation_is_part_of
     fetch("relation_is_part_of_ssim", [])
   end
@@ -164,6 +176,10 @@ class SolrDocument
 
   def relation_is_referenced_by
     fetch("relation_is_referenced_by_ssim", [])
+  end
+
+  def relation_is_required_by
+    fetch("relation_is_required_by_ssim", [])
   end
 
   def relation_requires
@@ -261,6 +277,112 @@ class SolrDocument
   def license
     fetch("license_ssim", [])
   end
+
+  def accrual_method
+    fetch("accrual_method_ssim", [])
+  end
+
+  def accrual_periodicity
+    fetch("accrual_periodicity_ssim", [])
+  end
+
+  def accrual_policy
+    fetch("accrual_policy_ssim", [])
+  end
+
+
+  def audience
+    fetch("audience_ssim", [])
+  end
+
+  def available
+    fetch("available_ssim", [])
+  end
+
+  def bibliographic_citation
+    fetch("bibliographic_citation_ssim", [])
+  end
+
+  def conforms_to
+    fetch("conforms_to_ssim", [])
+  end
+
+  def coverage
+    fetch("coverage_tesim", [])
+  end
+
+  def spatial_coverage
+    fetch("spatial_coverage_tesim", [])
+  end
+
+  def temporal_coverage
+    fetch("temporal_coverage_tesim", [])
+  end
+
+  def dates_created
+    fetch("date_created_ssim", [])
+  end
+
+  def date_created
+    dates_created.first
+  end
+
+  def dates_submitted
+    fetch("date_submitted_ssim", [])
+  end
+
+  def date_submitted
+    dates_submitted.first
+  end
+
+  def dates_accepted
+    fetch("date_accepted_ssim", [])
+  end
+
+  def date_accepted
+    dates_accepted.first
+  end
+
+  def dates_copyrighted
+    fetch("copyright_date_ssim", [])
+  end
+
+  def date_copyrighted
+    dates_copyrighted.first
+  end
+
+  def dates_modified
+    fetch("date_modified_ssim", [])
+  end
+
+  def date_modified
+    dates_modified.first
+  end
+
+  def dates_valid
+    fetch("date_valid_ssim", [])
+  end
+
+  def education_level
+    fetch("education_level_ssim", [])
+  end
+
+  def other_identifier
+    fetch("other_identifier_ssim", [])
+  end
+
+  def instructional_method
+    fetch("instructional_method_ssim", [])
+  end
+
+  def mediator
+    fetch("mediator_ssim", [])
+  end
+
+  def source
+    fetch("source_ssim", [])
+  end
+
 
 
 end

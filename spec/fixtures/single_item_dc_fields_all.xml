@@ -255,6 +255,10 @@
       <value>Reviewed</value>
     </metadata>
     <metadata>
+      <key>dc.description.tableofcontents</key>
+      <value>ToC example</value>
+    </metadata>
+    <metadata>
       <key>dc.language.rfc3066</key>
       <value>en-US (English)</value>
     </metadata>
@@ -265,6 +269,14 @@
     <metadata>
       <key>dc.publisher.place</key>
       <value>New York, NY, USA</value>
+    </metadata>
+    <metadata>
+      <key>dc.coverage.spatial</key>
+      <value>North Decimal Degree 40.405833. South Decimal Degree 40.268333. East Decimal Degree -74.569167. West Decimal Degree -74.747222.</value>
+    </metadata>
+    <metadata>
+      <key>dc.coverage.temporal</key>
+      <value>Start date 2014-01-01</value>
     </metadata>
     <metadata>
       <key>dc.publisher.corporate</key>
