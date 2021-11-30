@@ -170,4 +170,28 @@ describe 'DataSpace research data all fields indexing', type: :system do
     expect(result['subject_other_tesim'].first).to eq 'Web archiving portals'
   end
 
+  it 'genre' do
+    expect(result['genre_ssim'].first).to eq 'Dataset'
+  end
+
+  it 'peer_review_status' do
+    expect(result['peer_review_status_ssim'].first).to eq 'Reviewed'
+  end
+
+  it 'translator' do
+    expect(result['translator_ssim'].first).to eq 'Jane Smith'
+  end
+
+  it 'isan' do
+    expect(result['isan_ssim'].first).to eq 'ISAN 0000-0000-3A8D-0000-Z-0000-0000-6'
+  end
+
+  it 'provenance' do
+    expect(result['provenance_ssim'].first).to eq 'Provenance information for this version'
+  end
+
+  it 'funding_agency' do
+    expect(result['funding_agency_ssim'].first).to eq 'Funding Agency, Inc.'
+  end
+
 end
