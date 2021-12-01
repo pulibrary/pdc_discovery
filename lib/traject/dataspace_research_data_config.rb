@@ -90,6 +90,12 @@ to_field "date_available_ssim" do |record, accumulator, _context|
   accumulator.concat DateNormalizer.format_array_for_display(dates)
 end
 
+to_field "date_available_dtsi" do |record, accumulator, _context|
+  # Lucky for us the dates in DataSpace are already in the Solr format (yyyy-mm-ddThh:mm:ssZ)
+  timestamps = record.xpath("/item/metadata/key[text()='dc.date.available']/../value").map(&:text)
+  accumulator.concat [timestamps.first]
+end
+
 to_field "date_created_ssim" do |record, accumulator, _context|
   dates = record.xpath("/item/metadata/key[text()='dc.date.created']/../value").map(&:text)
   accumulator.concat DateNormalizer.format_array_for_display(dates)
