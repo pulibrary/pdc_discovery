@@ -30,23 +30,23 @@
       <div class="document-issued-date" value="January 2017"></div>
     </dd>
 
-    <% if @document.abstract.present? %>
+    <% @document.abstracts.each do |abstract| %>
       <dt class="blacklight-abstract_tsim col-md-3"></dt>
       <dd class="col-md-9 blacklight-abstract_tsim">
         <div class="document-abstract">
           <header>Abstract:</header>
-          <p id="document-abstract-text" class="truncate-line-clamp"><%= @document.abstract %></p>
+          <p id="document-abstract-text" class="truncate-line-clamp"><%= abstract %></p>
             <a id="document-abstract-text-toggle" href="#" class="document-abstract--collapse__button">Show More</a>
         </div>
       </dd>
     <% end %>
 
-    <% if @document.description.present? %>
+    <% @document.descriptions.each do |description| %>
       <dt class="blacklight-description_tsim col-md-3"></dt>
       <dd class="col-md-9 blacklight-description_tsim">
         <div class="document-description">
           <header>Description:</header>
-          <p id="document-description-text" class="truncate-line-clamp"><%= @document.description %></p>
+          <p id="document-description-text" class="truncate-line-clamp"><%= description %></p>
             <a id="document-description-text-toggle" href="#" class="document-description--collapse__button">Show More</a>
         </div>
       </dd>

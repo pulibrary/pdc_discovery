@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/ClassLength
 class SolrDocument
   include Blacklight::Solr::Document
   # The following shows how to setup this blacklight document to display marc documents
@@ -49,6 +50,10 @@ class SolrDocument
     fetch('author_tesim', [])
   end
 
+  def creators
+    fetch('creator_tesim', [])
+  end
+
   def contributors
     fetch("contributor_tsim", [])
   end
@@ -90,6 +95,10 @@ class SolrDocument
   end
   # rubocop:enable Lint/UselessAssignment
 
+  def table_of_contents
+    fetch("tableofcontents_tesim", [])
+  end
+
   def referenced_by
     fetch("referenced_by_ssim", [])
   end
@@ -97,4 +106,277 @@ class SolrDocument
   def uri
     fetch("uri_tesim", [])
   end
+
+  def format
+    fetch("format_ssim", [])
+  end
+
+  def extent
+    fetch("extent_ssim", [])
+  end
+
+  def medium
+    fetch("medium_ssim", [])
+  end
+
+  def mimetype
+    fetch("mimetype_ssim", [])
+  end
+
+  def language
+    fetch("language_ssim", [])
+  end
+
+  def publisher
+    fetch("publisher_ssim", [])
+  end
+
+  def publisher_place
+    fetch("publisher_place_ssim", [])
+  end
+
+  def publisher_corporate
+    fetch("publisher_corporate_ssim", [])
+  end
+
+  def relation
+    fetch("relation_ssim", [])
+  end
+
+  def relation_is_format_of
+    fetch("relation_is_format_of_ssim", [])
+  end
+
+  def relation_has_format
+    fetch("relation_has_format_ssim", [])
+  end
+
+  def relation_is_part_of
+    fetch("relation_is_part_of_ssim", [])
+  end
+
+  def relation_is_part_of_series
+    fetch("relation_is_part_of_series_ssim", [])
+  end
+
+  def relation_has_part
+    fetch("relation_has_part_ssim", [])
+  end
+
+  def relation_is_version_of
+    fetch("relation_is_version_of_ssim", [])
+  end
+
+  def relation_has_version
+    fetch("relation_has_version_ssim", [])
+  end
+
+  def relation_is_based_on
+    fetch("relation_is_based_on_ssim", [])
+  end
+
+  def relation_is_referenced_by
+    fetch("relation_is_referenced_by_ssim", [])
+  end
+
+  def relation_is_required_by
+    fetch("relation_is_required_by_ssim", [])
+  end
+
+  def relation_requires
+    fetch("relation_requires_ssim", [])
+  end
+
+  def relation_replaces
+    fetch("relation_replaces_ssim", [])
+  end
+
+  def relation_is_replaced_by
+    fetch("relation_is_replaced_by_ssim", [])
+  end
+
+  def relation_uri
+    fetch("relation_uri_ssim", [])
+  end
+
+  def rights
+    fetch("rights_ssim", [])
+  end
+
+  def rights_uri
+    fetch("rights_uri_ssim", [])
+  end
+
+  def rights_holder
+    fetch("rights_holder_ssim", [])
+  end
+
+  def subject
+    fetch("subject_tesim", [])
+  end
+
+  def subject_classification
+    fetch("subject_classification_tesim", [])
+  end
+
+  def subject_ddc
+    fetch("subject_ddc_tesim", [])
+  end
+
+  def subject_lcc
+    fetch("subject_lcc_tesim", [])
+  end
+
+  def subject_lcsh
+    fetch("subject_lcsh_tesim", [])
+  end
+
+  def subject_mesh
+    fetch("subject_mesh_tesim", [])
+  end
+
+  def subject_other
+    fetch("subject_other_tesim", [])
+  end
+
+  def alternative_title
+    fetch("alternative_title_ssim", [])
+  end
+
+  def genre
+    fetch("genre_ssim", [])
+  end
+
+  def peer_review_status
+    fetch("peer_review_status_ssim", [])
+  end
+
+  def translator
+    fetch("translator_ssim", [])
+  end
+
+  def isan
+    fetch("isan_ssim", [])
+  end
+
+  def access_rights
+    fetch("access_rights_ssim", [])
+  end
+
+  def funding_agency
+    fetch("funding_agency_ssim", [])
+  end
+
+  def provenance
+    fetch("provenance_ssim", [])
+  end
+
+  def license
+    fetch("license_ssim", [])
+  end
+
+  def accrual_method
+    fetch("accrual_method_ssim", [])
+  end
+
+  def accrual_periodicity
+    fetch("accrual_periodicity_ssim", [])
+  end
+
+  def accrual_policy
+    fetch("accrual_policy_ssim", [])
+  end
+
+  def audience
+    fetch("audience_ssim", [])
+  end
+
+  def available
+    fetch("available_ssim", [])
+  end
+
+  def bibliographic_citation
+    fetch("bibliographic_citation_ssim", [])
+  end
+
+  def conforms_to
+    fetch("conforms_to_ssim", [])
+  end
+
+  def coverage
+    fetch("coverage_tesim", [])
+  end
+
+  def spatial_coverage
+    fetch("spatial_coverage_tesim", [])
+  end
+
+  def temporal_coverage
+    fetch("temporal_coverage_tesim", [])
+  end
+
+  def dates_created
+    fetch("date_created_ssim", [])
+  end
+
+  def date_created
+    dates_created.first
+  end
+
+  def dates_submitted
+    fetch("date_submitted_ssim", [])
+  end
+
+  def date_submitted
+    dates_submitted.first
+  end
+
+  def dates_accepted
+    fetch("date_accepted_ssim", [])
+  end
+
+  def date_accepted
+    dates_accepted.first
+  end
+
+  def dates_copyrighted
+    fetch("copyright_date_ssim", [])
+  end
+
+  def date_copyrighted
+    dates_copyrighted.first
+  end
+
+  def dates_modified
+    fetch("date_modified_ssim", [])
+  end
+
+  def date_modified
+    dates_modified.first
+  end
+
+  def dates_valid
+    fetch("date_valid_ssim", [])
+  end
+
+  def education_level
+    fetch("education_level_ssim", [])
+  end
+
+  def other_identifier
+    fetch("other_identifier_ssim", [])
+  end
+
+  def instructional_method
+    fetch("instructional_method_ssim", [])
+  end
+
+  def mediator
+    fetch("mediator_ssim", [])
+  end
+
+  def source
+    fetch("source_ssim", [])
+  end
 end
+# rubocop:enable Metrics/ClassLength
