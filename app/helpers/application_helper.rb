@@ -33,6 +33,20 @@ module ApplicationHelper
   end
   # rubocop:enable Rails/OutputSafety
 
+  # Outputs the HTML to render a single value as an HTML table row with a search link
+  # rubocop:disable Rails/OutputSafety
+  def render_field_row_search_link(title, value, field)
+    return if value.blank?
+    html = <<-HTML
+    <tr>
+      <th scope="row"><span>#{title}</span></th>
+      <td><span>#{link_to(value, "/?f[#{field}][]=#{CGI.escape(value)}&q=&search_field=all_fields")}</span></td>
+    </tr>
+    HTML
+    html.html_safe
+  end
+  # rubocop:enable Rails/OutputSafety
+
   # rubocop:disable Rails/OutputSafety
   def render_globus_download(uri)
     return if uri.blank?
