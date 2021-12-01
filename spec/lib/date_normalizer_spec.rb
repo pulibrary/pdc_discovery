@@ -21,4 +21,16 @@ RSpec.describe DateNormalizer do
       expect(formatted_dates.first).to eq "18 August 2015"
     end
   end
+
+  describe "#years_from_dates" do
+    it "gets years correctly" do
+      expect(described_class.years_from_dates(timestamps)).to eq [2015]
+      expect(described_class.years_from_dates(months_and_years)).to eq [2015]
+      expect(described_class.years_from_dates(years)).to eq [2015]
+    end
+
+    it "handles bad dates" do
+      expect(described_class.years_from_dates(["2015-99-18T18:14:22Z"])).to eq []
+    end
+  end
 end
