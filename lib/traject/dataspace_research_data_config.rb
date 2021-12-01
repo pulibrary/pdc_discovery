@@ -90,6 +90,11 @@ to_field "date_available_ssim" do |record, accumulator, _context|
   accumulator.concat DateNormalizer.format_array_for_display(dates)
 end
 
+to_field "year_available_itsi" do |record, accumulator, _context|
+  dates = record.xpath("/item/metadata/key[text()='dc.date.available']/../value").map(&:text)
+  accumulator.concat [DateNormalizer.years_from_dates(dates).first]
+end
+
 to_field "date_created_ssim" do |record, accumulator, _context|
   dates = record.xpath("/item/metadata/key[text()='dc.date.created']/../value").map(&:text)
   accumulator.concat DateNormalizer.format_array_for_display(dates)

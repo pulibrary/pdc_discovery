@@ -27,7 +27,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
-    "lint": "yarn run prettier --check app/javascript/**/*{js,css,scss,vue} app/assets/javascripts/**/*js app/assets/stylesheets/**/*{css,scss}",
-    "lint:fix": "yarn run prettier --write app/javascript/**/*{js,css,scss,vue} app/assets/javascripts/**/*js app/assets/stylesheets/**/*{css,scss}"
+    "lint": "yarn run prettier --check app/javascript/**/*{js,css,scss} app/assets/javascripts/**/*js app/assets/stylesheets/**/*{css,scss}",
+    "lint:fix": "yarn run prettier --write app/javascript/**/*{js,css,scss} app/assets/javascripts/**/*js app/assets/stylesheets/**/*{css,scss}"
   }
 }
