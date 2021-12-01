@@ -2,6 +2,8 @@
 
 class CatalogController < ApplicationController
   include Blacklight::Catalog
+  include BlacklightRangeLimit::ControllerOverride
+
   include Blacklight::Marc::Catalog
 
   configure_blacklight do |config|

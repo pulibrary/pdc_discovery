@@ -2,6 +2,8 @@
 
 class SearchBuilder < Blacklight::SearchBuilder
   include Blacklight::Solr::SearchBuilderBehavior
+  include BlacklightRangeLimit::RangeLimitBuilder
+
 
   ##
   # @example Adding a new step to the processor chain
