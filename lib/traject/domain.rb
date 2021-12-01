@@ -34,7 +34,7 @@ class Domain
       mappings << { community: "Liechtenstein Institute for Self-Determination", domain: "Social Sciences" }
       mappings << { community: "Mechanical and Aerospace Engineering", domain:	"Engineering" }
       mappings << { community: "Molecular Biology", domain: "Natural Sciences" }
-      mappings << { community: "Mustic and Arts", domain: "Humanities" }
+      mappings << { community: "Music and Arts", domain: "Humanities" }
       mappings << { community: "Office of Information Technology", domain: nil }
       mappings << { community: "Physics", domain: "Natural Sciences" }
       mappings << { community: "Princeton Neuroscience Institute", domain:	"Natural Sciences" }
