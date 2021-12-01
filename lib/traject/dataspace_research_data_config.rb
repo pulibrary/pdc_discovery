@@ -4,6 +4,7 @@ require 'logger'
 require 'traject'
 require 'traject/nokogiri_reader'
 require 'blacklight'
+require_relative './domain'
 
 settings do
   provide 'solr.url', Blacklight.default_index.connection.uri.to_s
@@ -36,6 +37,17 @@ to_field 'title_tsim', extract_xpath('/item/name')
 to_field 'title_ssim', extract_xpath("/item/metadata/key[text()='dcterms.title']/../value")
 to_field 'title_tsim', extract_xpath("/item/metadata/key[text()='dcterms.title']/../value")
 to_field 'uri_tesim', extract_xpath("/item/metadata/key[text()='dc.identifier.uri']/../value")
+
+# Calculate domain from the communities
+to_field 'domain_ssi' do |record, accumulator, _context|
+  communities = record.xpath("/item/parentCommunityList/type[text()='community']/../name").map(&:text)
+  domains = Domain.from_communities(communities)
+  if domains.count > 1
+    id = record.xpath('/item/id/text()')
+    logger.warn "Multiple domains detected for record: #{id}, using only the first one."
+  end
+  accumulator.concat [domains.first]
+end
 
 # ==================
 # contributor fields

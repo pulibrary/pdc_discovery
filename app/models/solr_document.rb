@@ -378,5 +378,9 @@ class SolrDocument
   def source
     fetch("source_ssim", [])
   end
+
+  def domain
+    fetch("domain_ssi", "")
+  end
 end
 # rubocop:enable Metrics/ClassLength

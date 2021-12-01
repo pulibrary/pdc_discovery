@@ -18,6 +18,7 @@
             <% @document.contributors.each do |contributor| %>
               <%= render_field_row "Contributor", contributor %>
             <% end %>
+            <%= render_field_row_search_link "Domain", @document.domain, "domain_ssi" %>
             <%= render_field_row "Issued Date", @document.issued_date %>
             <%= render_field_row "Date Created", @document.date_created %>
             <%= render_field_row "Date Modified", @document.date_modified %>
