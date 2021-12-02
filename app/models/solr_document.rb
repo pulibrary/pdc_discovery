@@ -90,7 +90,7 @@ class SolrDocument
   def files
     files ||= begin
       data = JSON.parse(fetch("files_ss", "[]"))
-      data.sort_by { |file| (file["sequence"] || "").to_i }
+      data.map { |x| DatasetFile.from_hash(x) }.sort_by(&:sequence)
     end
   end
   # rubocop:enable Lint/UselessAssignment
