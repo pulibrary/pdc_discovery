@@ -7,7 +7,6 @@ class CatalogController < ApplicationController
   include Blacklight::Marc::Catalog
 
   configure_blacklight do |config|
-
     ## Class for sending and receiving requests from a search index
     # config.repository_class = Blacklight::Solr::Repository
     #
@@ -112,7 +111,6 @@ class CatalogController < ApplicationController
     config.add_index_field 'lc_callnum_ssim', label: 'Call number'
     config.add_index_field 'genre_ssim', label: 'Type'
     config.add_index_field 'issue_date_ssim', label: 'Issue Date'
-
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
