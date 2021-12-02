@@ -3,6 +3,17 @@ module RecentlyAddedHelper
   require 'net/http'
   require 'json'
 
+  ICONS = {
+    "dataset" => "bi-stack",
+    "moving image" => "bi-film",
+    "software" => "bi-code-slash",
+    "image" => "bi-image",
+    "text" => "bi-card-text",
+    "collection" => "bi-collection-fill",
+    "article" => "bi-journal-text",
+    "interactive resource" => "bi-pc-display-horizontal",
+  }
+
   def fetch_feed(url)
     resp = Net::HTTP.get_response(URI.parse(url))
     data = resp.body
@@ -26,8 +37,8 @@ module RecentlyAddedHelper
     return if entry_values.empty?
     html = <<-HTML
     <li id="recently-added-#{entry_key}">
-    <span class="genre bi bi-chevron-double-up icon-#{entry_values[:genre].downcase}"><i class="bi bi-alarm"></i>#{html_escape(entry_values[:genre])}</span>
-    <span class="title">#{html_escape(entry_values[:title])}</span>
+    <span class="genre"><i class="bi #{ICONS[entry_values[:genre].downcase].presence || "bi-file-earmark-fill"}"></i>#{html_escape(entry_values[:genre])}</span>
+    <span class="title">#{link_to(html_escape(entry_values[:title]), html_escape(entry_values[:link]))}</span>
     <span class="credit">Posted on #{html_escape(entry_values[:issue_date])}, #{html_escape(entry_values[:author])}</span>
     </li>
     HTML

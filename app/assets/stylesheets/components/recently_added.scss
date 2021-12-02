@@ -2,16 +2,20 @@
   li {
     list-style: none;
     margin-bottom: 1em;
-    font-size: 1.5em;
+    font-size: 1.2em;
     span {
       display: block;
-
+      i {
+        margin-right: 0.5em;
+        font-size: 1.7em;
+      }
     }
     .genre, .credit {
       color: #656565;
     }
-    .title {
+    .title a {
       color: #000000;
+      font-size: 1.2em;
     }
   }
 }
