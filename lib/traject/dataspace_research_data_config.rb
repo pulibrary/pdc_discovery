@@ -38,6 +38,9 @@ to_field 'title_ssim', extract_xpath("/item/metadata/key[text()='dcterms.title']
 to_field 'title_tsim', extract_xpath("/item/metadata/key[text()='dcterms.title']/../value")
 to_field 'uri_tesim', extract_xpath("/item/metadata/key[text()='dc.identifier.uri']/../value")
 
+to_field 'collection_id_ssi', extract_xpath('/item/parentCollection/id')
+to_field 'handle_ssi', extract_xpath('/item/handle')
+
 # Calculate domain from the communities
 to_field 'domain_ssi' do |record, accumulator, _context|
   communities = record.xpath("/item/parentCommunityList/type[text()='community']/../name").map(&:text)
@@ -297,6 +300,7 @@ to_field 'source_ssim', extract_xpath("/item/metadata/key[text()='dcterms.source
 # ==================
 # Store all files metadata as a single JSON string so that we can display detailed information for each of them.
 to_field 'files_ss' do |record, accumulator, _context|
+  dataspace_handle = record.xpath('/item/handle/text()').text
   bitstreams = record.xpath("/item/bitstreams").map do |node|
     {
       name: node.xpath("name").text,
@@ -304,7 +308,8 @@ to_field 'files_ss' do |record, accumulator, _context|
       format: node.xpath("format").text,
       size: node.xpath("sizeBytes").text,
       mime_type: node.xpath("mimeType").text,
-      sequence: node.xpath("sequenceId").text
+      sequence: node.xpath("sequenceId").text,
+      handle: dataspace_handle
     }
   end
   accumulator.concat [bitstreams.to_json.to_s]
