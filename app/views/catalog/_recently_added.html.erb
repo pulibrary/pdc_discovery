@@ -1,7 +1,14 @@
-<h2>Recently published</h2>
-<% @feed = fetch_feed("http://localhost:3000/catalog.json") %>
-<ul>
-  <% @feed.each do |key, values| %>
-    <%= render_recent_entry(key, values) %>
-  <% end %>
-</ul>
+
+
+
+
+<div class="jumbotron jumbotron-fluid text-center">
+  <h2 class="jumbotron-heading h2">Recently published</h2>
+  <% @feed = fetch_feed("http://localhost:3000/catalog.json") %>
+  <ul class="text-left" id="recently-added">
+    <% @feed.each do |key, values| %>
+      <%= render_recent_entry(key, values) %>
+    <% end %>
+  </ul>
+
+</div>

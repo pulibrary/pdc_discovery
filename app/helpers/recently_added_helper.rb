@@ -25,11 +25,10 @@ module RecentlyAddedHelper
   def render_recent_entry(entry_key, entry_values, render_empty: false)
     return if entry_values.empty?
     html = <<-HTML
-    <li class="recently-added" id="recently-added-#{entry_key}">
-    <span class="genre icon-#{entry_values[:genre].downcase}">#{html_escape(entry_values[:genre])}</span>
+    <li id="recently-added-#{entry_key}">
+    <span class="genre bi bi-chevron-double-up icon-#{entry_values[:genre].downcase}"><i class="bi bi-alarm"></i>#{html_escape(entry_values[:genre])}</span>
     <span class="title">#{html_escape(entry_values[:title])}</span>
-    <span class="author">#{html_escape(entry_values[:author])}</span>
-    <span class="issue_date">#{html_escape(entry_values[:issue_date])}</span>
+    <span class="credit">Posted on #{html_escape(entry_values[:issue_date])}, #{html_escape(entry_values[:author])}</span>
     </li>
     HTML
     html.html_safe

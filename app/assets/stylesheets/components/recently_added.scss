@@ -1,0 +1,17 @@
+#recently-added {
+  li {
+    list-style: none;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    span {
+      display: block;
+
+    }
+    .genre, .credit {
+      color: #656565;
+    }
+    .title {
+      color: #000000;
+    }
+  }
+}
