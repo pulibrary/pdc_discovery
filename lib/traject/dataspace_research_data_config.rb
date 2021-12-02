@@ -300,6 +300,7 @@ to_field 'files_ss' do |record, accumulator, _context|
   bitstreams = record.xpath("/item/bitstreams").map do |node|
     {
       name: node.xpath("name").text,
+      description: node.xpath("description").text,
       format: node.xpath("format").text,
       size: node.xpath("sizeBytes").text,
       mime_type: node.xpath("mimeType").text,
