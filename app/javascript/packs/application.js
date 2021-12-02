@@ -3,7 +3,6 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import Vue from "vue/dist/vue.esm";
 import system from "lux-design-system";
 import "lux-design-system/dist/system/system.css";
 import "lux-design-system/dist/system/tokens/tokens.scss";

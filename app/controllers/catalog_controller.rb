@@ -2,6 +2,8 @@
 
 class CatalogController < ApplicationController
   include Blacklight::Catalog
+  include BlacklightRangeLimit::ControllerOverride
+
   include Blacklight::Marc::Catalog
 
   configure_blacklight do |config|
@@ -87,6 +89,10 @@ class CatalogController < ApplicationController
     # }
 
     config.add_facet_field 'domain_ssi', label: 'Domain'
+    config.add_facet_field 'author_ssim', label: 'Author'
+    config.add_facet_field 'genre_ssim', label: 'Genre'
+    config.add_facet_field 'publisher_ssim', label: 'Publisher'
+    config.add_facet_field 'year_available_itsi', label: 'Year Available', range: true
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
