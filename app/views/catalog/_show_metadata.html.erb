@@ -119,28 +119,28 @@
               <%= render_field_row "License", license %>
             <% end %>
             <% @document.subject.each do |subject| %>
-              <%= render_field_row_link "Subject", subject %>
+              <%= render_field_row_search_link "Subject", subject, "subject_all_ssim" %>
             <% end %>
             <% @document.subject_classification.each do |subject_classification| %>
-              <%= render_field_row_link "Classification", subject_classification %>
+              <%= render_field_row_search_link "Classification", subject_classification, "subject_all_ssim" %>
             <% end %>
             <% @document.subject_ddc.each do |subject_ddc| %>
-              <%= render_field_row_link "Dewey Decimal Classification", subject_ddc %>
+              <%= render_field_row_search_link "Dewey Decimal Classification", subject_ddc, "subject_all_ssim" %>
             <% end %>
             <% @document.subject_lcc.each do |subject_lcc| %>
-              <%= render_field_row_link "Library of Congress Classification", subject_lcc %>
+              <%= render_field_row_search_link "Library of Congress Classification", subject_lcc, "subject_all_ssim" %>
             <% end %>
             <% @document.subject_lcsh.each do |subject_lcsh| %>
-              <%= render_field_row_link "Library of Congress Subject Headings", subject_lcsh %>
+              <%= render_field_row_search_link "Library of Congress Subject Headings", subject_lcsh, "subject_all_ssim" %>
             <% end %>
             <% @document.subject_mesh.each do |subject_mesh| %>
-              <%= render_field_row_link "Medical Subject Headings", subject_mesh %>
+              <%= render_field_row_search_link "Medical Subject Headings", subject_mesh, "subject_all_ssim" %>
             <% end %>
             <% @document.subject_other.each do |subject_other| %>
-              <%= render_field_row_link "Subject", subject_other %>
+              <%= render_field_row_search_link "Subject", subject_other, "subject_all_ssim" %>
             <% end %>
             <% @document.genre.each do |genre| %>
-              <%= render_field_row_link "Genre", genre %>
+              <%= render_field_row_search_link "Genre", genre, "genre_ssim" %>
             <% end %>
             <% @document.peer_review_status.each do |peer_review_status| %>
               <%= render_field_row "Peer Review Status", peer_review_status %>

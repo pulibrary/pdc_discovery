@@ -90,6 +90,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'domain_ssi', label: 'Domain'
     config.add_facet_field 'author_ssim', label: 'Author'
     config.add_facet_field 'genre_ssim', label: 'Genre'
+    config.add_facet_field 'subject_all_ssim', label: 'Subject'
     config.add_facet_field 'publisher_ssim', label: 'Publisher'
     config.add_facet_field 'year_available_itsi', label: 'Year Available', range: true
 

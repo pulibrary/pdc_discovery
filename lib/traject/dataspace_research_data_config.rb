@@ -263,6 +263,16 @@ to_field 'subject_lcsh_tesim', extract_xpath("/item/metadata/key[text()='dc.subj
 to_field 'subject_mesh_tesim', extract_xpath("/item/metadata/key[text()='dc.subject.mesh']/../value")
 to_field 'subject_other_tesim', extract_xpath("/item/metadata/key[text()='dc.subject.other']/../value")
 
+# subject_all_ssim is used for faceting (must be string)
+to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dc.subject']/../value")
+to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dcterms.subject']/../value")
+to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dc.subject.classification']/../value")
+to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dc.subject.ddc']/../value")
+to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dc.subject.lcc']/../value")
+to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dc.subject.lcsh']/../value")
+to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dc.subject.mesh']/../value")
+to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dc.subject.other']/../value")
+
 # ==================
 # genre, provenance, peer review, alternative title fields
 to_field 'genre_ssim', extract_xpath("/item/metadata/key[text()='dc.type']/../value")
