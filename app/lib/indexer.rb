@@ -39,7 +39,7 @@ class Indexer
   # Convenience method for kicking off indexing
   # @example Indexer.index(collection_handle: '88435/dsp015m60qr913')
   def self.index(_options)
-    server = 'https://dataspace-dev.princeton.edu/rest'
+    server = "#{Rails.configuration.pdc_discovery.dataspace_url}/rest"
     collection_id = '261'
     url = "#{server}/collections/#{collection_id}/items?limit=#{REST_LIMIT}&offset=0&expand=all"
 
