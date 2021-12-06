@@ -1,6 +1,14 @@
 <div class="lux">
   <div class="deployment-version" >
-    <text-style variation="strong">Version<span title="<%= GIT_SHA %>"><%= BRANCH %> last updated <%= LAST_DEPLOYED %></span>
+    <text-style variation="strong">
+      Version:
+      <% if VersionFooter.info[:stale] %>
+        (stale)
+      <% else %>
+        <span title="<%= VersionFooter.info[:sha] %>">
+        <%= VersionFooter.info[:branch] %>,
+        last updated: <%= VersionFooter.info[:version]  %></span>
+      <% end %>
     </text-style>
   </div>
   <library-footer></library-footer>
