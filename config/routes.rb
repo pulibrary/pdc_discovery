@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   root to: 'catalog#index'
   concern :searchable, Blacklight::Routes::Searchable.new
 
+  get 'catalog/recently_added' => 'catalog#recently_added', as: :catalog_recently_added
+
   resource :catalog, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
     concerns :searchable
     concerns :range_searchable
