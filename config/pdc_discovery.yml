@@ -1,0 +1,15 @@
+default: &default
+  dataspace_url: <%= ENV["DATASPACE_URL"] || "https://dataspace-dev.princeton.edu" %>
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
+  dataspace_url: <%= ENV["DATASPACE_URL"] %>
+
+staging:
+  <<: *default

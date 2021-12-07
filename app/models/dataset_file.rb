@@ -19,7 +19,7 @@ class DatasetFile
   end
 
   def self.download_root
-    "https://dataspace-dev.princeton.edu/bitstream"
+    "#{Rails.configuration.pdc_discovery.dataspace_url}/bitstream"
   end
 
   def download_url
