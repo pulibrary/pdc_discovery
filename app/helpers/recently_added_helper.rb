@@ -14,23 +14,6 @@ module RecentlyAddedHelper
     "interactive resource" => "bi-pc-display-horizontal"
   }.freeze
 
-  def fetch_feed(url)
-    resp = Net::HTTP.get_response(URI.parse(url))
-    data = resp.body
-    result = JSON.parse(data)
-    payload = {}
-    result['data'].each do |entry|
-      payload[entry['id']] = {
-        title: entry['attributes']['title_tsim']['attributes']['value'],
-        link: entry['links']['self'],
-        author: entry['attributes']['author_tesim']['attributes']['value'],
-        genre: entry['attributes']['genre_ssim']['attributes']['value'],
-        issue_date: entry['attributes']['issue_date_ssim']['attributes']['value']
-      }
-    end
-    payload
-  end
-
   # Outputs the HTML to render recent entries as list items
   # rubocop:disable Rails/OutputSafety
   def render_recent_entry(entry_key, entry_values)
