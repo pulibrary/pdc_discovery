@@ -1,6 +1,6 @@
 <div class="text-center">
   <h2 class="h3">Recently published</h2>
-  <% @feed = fetch_feed("#{root_url}/catalog.json") %>
+  <% @feed = RecentlyAdded.feed(root_url) %>
   <ul class="text-left" id="recently-added">
     <% @feed.each do |key, values| %>
       <%= render_recent_entry(key, values) %>
