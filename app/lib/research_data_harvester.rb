@@ -18,7 +18,7 @@ class ResearchDataHarvester
   end
 
   def server
-    'https://dataspace-dev.princeton.edu/rest'
+    "#{Rails.configuration.pdc_discovery.dataspace_url}/rest"
   end
 
   ##
