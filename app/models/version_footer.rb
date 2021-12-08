@@ -1,5 +1,16 @@
 # frozen_string_literal: true
 
+# Retrieves version information from Capistrano's files. The general approach is
+# to read the version information (branch name, git SHA, and date deployed) out
+# of Capistrano's revisions.log file.
+#
+# The code is a bit more complicated than it should because Capistrano does not
+# always update the revision.log file before the application reads this information.
+# Therefore there is logic in this class to detect if the version information is
+# stale and re-read it until it is up to date. Because re-reading this file is
+# an expensive operation we cache the information as soon as we are sure it's
+# current.
+#
 # rubocop:disable Style/ClassVars
 class VersionFooter
   @@stale = true
@@ -7,10 +18,7 @@ class VersionFooter
   @@branch = nil
   @@version = nil
 
-  # Returns a hash with version information coming from Capistrano's log files
-  # (../../revisions.log and REVISION). It caches the information so that these
-  # files are only read when the version information is stale. When the information
-  # is stale the version is not cached so that it is recalculated on the next call.
+  # Returns a hash with version information.
   def self.info
     reset! if stale?
     { sha: git_sha, branch: branch, version: version, stale: stale? }
@@ -25,7 +33,7 @@ class VersionFooter
 
   def self.stale?
     return false if @@stale == false
-    # Only check the file when version information is stale
+    # Only read the file when version information is stale
     if File.exist?(revision_file)
       local_sha = File.read(revision_file).chomp.gsub(/\)$/, '')
       @@stale = local_sha != git_sha
@@ -70,14 +78,25 @@ class VersionFooter
     end
   end
 
-  # This file is local to the application
+  # This file is local to the application.
+  # This file only has the git SHA of the version deployed (i.e. no date or branch)
   def self.revision_file
     @@revision_file ||= Rails.root.join("REVISION")
   end
 
-  # Capistrano keeps this file a couple of levels up outside the application
+  # Capistrano keeps this file a couple of levels up _outside_ the application.
+  # This file includes all the information that we need (git SHA, branch name, date)
   def self.revisions_logfile
     @@revisions_logfile ||= Rails.root.join("..", "..", "revisions.log")
+  end
+
+  # These assignment methods are needed to facilitate testing
+  def self.revision_file=(x)
+    @@revision_file = x
+  end
+
+  def self.revisions_logfile=(x)
+    @@revisions_logfile = x
   end
 end
 # rubocop:enable RuboCop::Cop::Style::ClassVars

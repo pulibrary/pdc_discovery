@@ -4,11 +4,8 @@
       Version:
       <% if VersionFooter.info[:stale] %>
         (stale)
-      <% else %>
-        <span title="<%= VersionFooter.info[:sha] %>">
-        <%= VersionFooter.info[:branch] %>,
-        last updated: <%= VersionFooter.info[:version]  %></span>
       <% end %>
+      <span title="<%= VersionFooter.info[:sha] %>"><%= VersionFooter.info[:branch] %>, last updated: <%= VersionFooter.info[:version] %></span>
     </text-style>
   </div>
   <library-footer></library-footer>
