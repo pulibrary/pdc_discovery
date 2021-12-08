@@ -1,8 +1,7 @@
 <div class="text-center">
   <h2 class="h3">Recently published</h2>
-  <% @feed = RecentlyAdded.feed(root_url) %>
   <ul class="text-left" id="recently-added">
-    <% @feed.each do |key, values| %>
+    <% RecentlyAdded.feed(root_url).each do |key, values| %>
       <%= render_recent_entry(key, values) %>
     <% end %>
   </ul>
