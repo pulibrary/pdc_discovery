@@ -20,7 +20,7 @@ module RecentlyAddedHelper
     return if entry_values.empty?
     html = <<-HTML
     <li id="recently-added-#{entry_key}">
-    <span class="genre"><i class="bi #{ICONS[entry_values[:genre].downcase].presence || 'bi-file-earmark-fill'}"></i>#{html_escape(entry_values[:genre])}</span>
+    <span class="genre"><i id="#{entry_key}" class="bi #{ICONS[entry_values[:genre].downcase].presence || 'bi-file-earmark-fill'}"></i>#{html_escape(entry_values[:genre])}</span>
     <span class="title">#{link_to(html_escape(entry_values[:title]), html_escape(entry_values[:link]))}</span>
     <span class="credit">Posted on #{html_escape(entry_values[:issue_date])}, #{html_escape(entry_values[:author])}</span>
     </li>
