@@ -327,6 +327,6 @@ end
 
 # Indexes the entire text in a catch-all field.
 to_field 'all_text_timv' do |record, accumulator, _context|
-  all_text = record.xpath("//text()").map { |x| x.to_s }.join(" ")
+  all_text = record.xpath("//text()").map(&:to_s).join(" ")
   accumulator.concat [all_text]
 end
