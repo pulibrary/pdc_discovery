@@ -38,7 +38,9 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-byebug'
   gem 'pry-rails'
+  gem 'rspec'
   gem 'rspec-rails', '~> 5.0.0'
+  gem 'rspec-solr'
   gem 'rubocop-rspec'
 end
 
@@ -58,7 +60,6 @@ end
 group :test do
   gem 'capybara', '>= 3.26'
   gem 'coveralls', require: false
-  gem 'rspec-solr'
   gem 'selenium-webdriver'
   gem 'webdrivers'
   gem 'webmock'
