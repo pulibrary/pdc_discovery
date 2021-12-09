@@ -5,7 +5,7 @@ class RecentlyAdded
   require 'json'
 
   def self.feed(root_path)
-    url = "#{root_path}/catalog.json"
+    url = URI.join(root_path, "catalog.json").to_s
     # ==
     # Or we could also so use our custom end point
     # url = "/catalog/recently_added.json"
