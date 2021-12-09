@@ -37,6 +37,7 @@ group :development, :test do
   gem 'bixby'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-byebug'
+  gem 'pry-rails'
   gem 'rspec-rails', '~> 5.0.0'
   gem 'rubocop-rspec'
 end

@@ -1,0 +1,9 @@
+<div class="text-center">
+  <h2 class="h3">Recently published</h2>
+  <ul class="text-left" id="recently-added">
+    <% RecentlyAdded.feed(root_url).each do |key, values| %>
+      <%= render_recent_entry(key, values) %>
+    <% end %>
+  </ul>
+
+</div>

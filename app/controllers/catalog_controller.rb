@@ -110,6 +110,8 @@ class CatalogController < ApplicationController
     config.add_index_field 'published_ssim', label: 'Published'
     config.add_index_field 'published_vern_ssim', label: 'Published'
     config.add_index_field 'lc_callnum_ssim', label: 'Call number'
+    config.add_index_field 'genre_ssim', label: 'Type'
+    config.add_index_field 'issue_date_ssim', label: 'Issue Date'
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
@@ -207,5 +209,12 @@ class CatalogController < ApplicationController
     # if the name of the solr.SuggestComponent provided in your solrconfig.xml is not the
     # default 'mySuggester', uncomment and provide it below
     # config.autocomplete_suggester = 'mySuggester'
+  end
+
+  def recently_added
+    # We could add logic here to make the call to Solr with specific parameters (e.g. to fetch
+    # order by date published, or only items added in the last 3 months, or only the last 10 items)
+    data = []
+    render json: data.to_json
   end
 end
