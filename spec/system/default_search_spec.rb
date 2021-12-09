@@ -10,7 +10,7 @@ describe "Default search", type: :system do
       indexer.index
     end
 
-    it "finds value only indexed in catch all field" do
+    it "finds value only indexed in catch all field." do
       num_docs = solr_num_documents({ q: 'Stotler_PoP.zip' })
       expect(num_docs).to be 1
 
