@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
+require 'rspec-solr'
 require 'coveralls'
 Coveralls.wear!
 
@@ -98,9 +99,38 @@ RSpec.configure do |config|
   #   # test failures related to randomization by passing the same `--seed` value
   #   # as the one that triggered the failure.
   #   Kernel.srand config.seed
+
+  # rubocop:disable Style/ClassVars
+  # Setup RSolr connection (more info https://github.com/sul-dlss/rspec-solr/)
+  solr_config = { url: PdcDiscovery::Application.config_for(:blacklight)[:url] }
+  @@solr = RSolr.connect(solr_config)
+  # rubocop:ensable Style/ClassVars
 end
 
 # Toggle the WebMock settings below to test data retrieval against a live DSpace instance
 # WebMock.enable_net_connect!
 WebMock.disable_net_connect!(allow_localhost: true,
                              allow: "chromedriver.storage.googleapis.com")
+
+# Source: https://github.com/sul-dlss/rspec-solr
+# send a GET request to the indicated Solr request handler with the indicated Solr parameters
+# @param solr_params [Hash] the key/value pairs to be sent to Solr as HTTP parameters
+# @param req_handler [String] the pathname of the desired Solr request handler (defaults to 'select')
+# @return [RSpecSolr::SolrResponseHash] object for rspec-solr testing the Solr response
+def solr_response(solr_params, req_handler = 'select')
+  options = { method: :get, params: solr_params }
+  data = @@solr.send_and_receive(req_handler, options)
+  RSpecSolr::SolrResponseHash.new(data)
+end
+
+# Returns the total number of documents in Solr query.
+def solr_num_documents(solr_params)
+  response = solr_response(solr_params)
+  response["response"]["numFound"]
+end
+
+# Deletes all documents in our test Solr core.
+def solr_delete_all!
+  Blacklight.default_index.connection.delete_by_query('*:*')
+  Blacklight.default_index.connection.commit
+end
