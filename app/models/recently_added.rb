@@ -6,13 +6,8 @@ class RecentlyAdded
 
   def self.feed(root_path)
     url = URI.join(root_path, "catalog.json").to_s
-    # ==
-    # Or we could also so use our custom end point
-    # url = "/catalog/recently_added.json"
-    # ==
-    resp = Net::HTTP.get_response(URI.parse(url))
-    data = resp.body
-    result = JSON.parse(data)
+    resp = http_get(url)
+    result = JSON.parse(resp.body)
     payload = {}
     result['data'].each do |entry|
       payload[entry['id']] = {
@@ -24,5 +19,21 @@ class RecentlyAdded
       }
     end
     payload
+  rescue StandardError => ex
+    Rails.logger.warn "Error fetching recently added feed: #{ex.message}."
+    {}
+  end
+
+  def self.http_get(url, read_timeout: 3)
+    uri = URI.parse(url)
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.read_timeout = read_timeout
+    if url.start_with?("https://")
+      http.use_ssl = true
+      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+    end
+    request = Net::HTTP::Get.new(uri.request_uri)
+    request["Content-Type"] = "application/json"
+    http.request(request)
   end
 end
