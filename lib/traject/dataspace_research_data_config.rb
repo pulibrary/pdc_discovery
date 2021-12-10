@@ -324,3 +324,9 @@ to_field 'files_ss' do |record, accumulator, _context|
   end
   accumulator.concat [bitstreams.to_json.to_s]
 end
+
+# Indexes the entire text in a catch-all field.
+to_field 'all_text_timv' do |record, accumulator, _context|
+  all_text = record.xpath("//text()").map(&:to_s).join(" ")
+  accumulator.concat [all_text]
+end

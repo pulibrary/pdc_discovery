@@ -318,6 +318,12 @@ GEM
     rsolr (2.3.0)
       builder (>= 2.1.2)
       faraday (>= 0.9.0)
+    rspec (3.10.0)
+      rspec-core (~> 3.10.0)
+      rspec-expectations (~> 3.10.0)
+      rspec-mocks (~> 3.10.0)
+    rspec-collection_matchers (1.2.0)
+      rspec-expectations (>= 2.99.0.beta1)
     rspec-core (3.10.1)
       rspec-support (~> 3.10.0)
     rspec-expectations (3.10.1)
@@ -334,6 +340,9 @@ GEM
       rspec-expectations (~> 3.10)
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
+    rspec-solr (3.0.0)
+      rspec (~> 3.5)
+      rspec-collection_matchers
     rspec-support (3.10.2)
     rubocop (0.85.1)
       parallel (~> 1.10)
@@ -491,7 +500,9 @@ DEPENDENCIES
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4)
   rsolr (>= 1.0, < 3)
+  rspec
   rspec-rails (~> 5.0.0)
+  rspec-solr
   rubocop-rspec
   sass-rails (>= 6)
   selenium-webdriver

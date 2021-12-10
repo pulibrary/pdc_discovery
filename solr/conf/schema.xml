@@ -193,9 +193,8 @@
     <dynamicField name="*spell" type="textSpell" indexed="true" stored="false" multiValued="true" />
     <dynamicField name="*suggest" type="textSuggest" indexed="true" stored="false" multiValued="true" />
 
-    <!-- you must define copyField source and dest fields explicity or schemaBrowser doesn't work -->
+    <!-- We populate this field manually via Traject (rather than via copyFields) -->
     <field name="all_text_timv" type="text" stored="false" indexed="true" multiValued="true" termVectors="true" termPositions="true" termOffsets="true"/>
-
 
   </fields>
 
@@ -204,11 +203,6 @@
       Another way to map multiple source fields to the same
       destination field is to use the dynamic field syntax.
       copyField also supports a maxChars to copy setting.  -->
-
-  <copyField source="*_tsim" dest="all_text_timv" maxChars="3000"/>
-  <copyField source="*_tesim" dest="all_text_timv" maxChars="3000"/>
-  <copyField source="*_ssim" dest="all_text_timv" maxChars="3000"/>
-  <copyField source="*_si" dest="all_text_timv" maxChars="3000"/>
 
   <copyField source="*_tsim" dest="suggest"/>
   <copyField source="*_tesim" dest="suggest"/>
