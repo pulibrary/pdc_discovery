@@ -21,7 +21,7 @@ class VersionFooter
   # Returns a hash with version information.
   def self.info
     reset! if stale?
-    { sha: git_sha, branch: branch, version: version, stale: stale? }
+    { sha: git_sha, branch: branch, version: version, stale: stale?, tagged_release: tagged_release? }
   end
 
   def self.reset!
@@ -53,6 +53,11 @@ class VersionFooter
         "Unknown SHA"
       end
     end
+  end
+
+  def self.tagged_release?
+    # e.g. v0.8.0
+    branch.match(/^v[\d+\.+]+/) != nil
   end
 
   def self.branch

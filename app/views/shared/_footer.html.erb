@@ -2,10 +2,18 @@
   <div class="deployment-version" >
     <text-style variation="strong">
       Version:
-      <% if VersionFooter.info[:stale] %>
+      <% @version = VersionFooter.info %>
+      <% if @version[:stale] %>
         (stale)
       <% end %>
-      <span title="<%= VersionFooter.info[:sha] %>"><%= VersionFooter.info[:branch] %>, last updated: <%= VersionFooter.info[:version] %></span>
+      <span title="<%= @version[:sha] %>">
+        <% if @version[:tagged_release] %>
+          <a href="https://github.com/pulibrary/pdc_discovery/releases/tag/<%= @version[:branch] %>" target="_blank"><%= @version[:branch] %></a>
+        <% else %>
+          <%= @version[:branch] %>,
+        <% end %>
+        last updated: <%= @version[:version] %>
+      </span>
     </text-style>
   </div>
   <library-footer></library-footer>
