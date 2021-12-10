@@ -2,6 +2,7 @@
 
 require 'rails_helper'
 
+# rubocop:disable RSpec/ExampleLength
 RSpec.describe VersionFooter do
   describe "info" do
     context "with stale information" do
@@ -17,6 +18,7 @@ RSpec.describe VersionFooter do
         expect(info[:sha]).to eq "2222ae5c4ad9aaa0faad5208f1bf8108bd5934bf"
         expect(info[:branch]).to eq "version-2"
         expect(info[:version]).to eq "02 December 2021"
+        expect(info[:tagged_release]).to be false
       end
     end
 
@@ -29,10 +31,12 @@ RSpec.describe VersionFooter do
       it "detects current information" do
         info = described_class.info
         expect(info[:stale]).to be false
-        expect(info[:sha]).to eq "4443ae5c4ad9aaa0faad5208f1bf8108bd5934bf"
-        expect(info[:branch]).to eq "version-3"
-        expect(info[:version]).to eq "03 December 2021"
+        expect(info[:sha]).to eq "7a3b1d7c0f77db526963568ece3e0bb5a6399ce4"
+        expect(info[:branch]).to eq "v0.8.0"
+        expect(info[:version]).to eq "10 December 2021"
+        expect(info[:tagged_release]).to be true
       end
     end
   end
 end
+# rubocop enable RSpec/ExampleLength
