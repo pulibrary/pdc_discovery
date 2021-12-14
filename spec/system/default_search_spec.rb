@@ -5,7 +5,7 @@ describe "Default search", type: :system do
   context "indexing all text" do
     before do
       solr_delete_all!
-      xml = file_fixture("../single_item.xml").read
+      xml = file_fixture("single_item.xml").read
       indexer = Indexer.new(xml)
       indexer.index
     end
