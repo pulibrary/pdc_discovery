@@ -20,11 +20,29 @@ class DateNormalizer
     end
   end
 
-  def self.years_from_dates(date_strings)
-    date_strings.map { |x| years_from_date(x) }.compact
+  def self.strict_dates(date_strings)
+    date_strings.map { |date| strict_date(date) }.compact.sort
   end
 
-  def self.years_from_date(date_string)
+  def self.strict_date(date_string)
+    return nil if date_string.nil?
+    if date_string.match?(/\d{4}-\d{1,2}-\d{1,2}/)
+      Date.strptime(date_string).strftime('%Y-%m-%d')
+    elsif date_string.match?(/\d{4}-\d{1,2}/)
+      Date.strptime(date_string, '%Y-%m').strftime('%Y-%m-%d')
+    elsif date_string.match?(/\d{4}/)
+      date_string + "-01-01"
+    end
+  rescue ArgumentError
+    # bad formatted date
+    nil
+  end
+
+  def self.years_from_dates(date_strings)
+    date_strings.map { |date| year_from_date(date) }.compact
+  end
+
+  def self.year_from_date(date_string)
     if date_string.match?(/\d{4}-\d{2}-\d{2}/)
       Date.strptime(date_string).strftime('%Y').to_i
     elsif date_string.match?(/\d{4}-\d{2}/)

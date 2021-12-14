@@ -139,7 +139,7 @@
             <% @document.subject_other.each do |subject_other| %>
               <%= render_field_row_search_link "Subject", subject_other, "subject_all_ssim" %>
             <% end %>
-            <% @document.genre.each do |genre| %>
+            <% @document.genres.each do |genre| %>
               <%= render_field_row_search_link "Genre", genre, "genre_ssim" %>
             <% end %>
             <% @document.peer_review_status.each do |peer_review_status| %>

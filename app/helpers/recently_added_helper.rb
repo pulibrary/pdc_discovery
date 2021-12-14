@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 module RecentlyAddedHelper
-  require 'net/http'
-  require 'json'
-
   ICONS = {
     "dataset" => "bi-stack",
     "moving image" => "bi-film",
@@ -16,13 +13,12 @@ module RecentlyAddedHelper
 
   # Outputs the HTML to render recent entries as list items
   # rubocop:disable Rails/OutputSafety
-  def render_recent_entry(entry_key, entry_values)
-    return if entry_values.empty?
+  def render_recent_entry(entry)
     html = <<-HTML
-    <li id="recently-added-#{entry_key}">
-    <span class="genre"><i id="#{entry_key}" class="bi #{ICONS[entry_values[:genre].downcase].presence || 'bi-file-earmark-fill'}"></i>#{html_escape(entry_values[:genre])}</span>
-    <span class="title">#{link_to(html_escape(entry_values[:title]), html_escape(entry_values[:link]))}</span>
-    <span class="credit">Posted on #{html_escape(entry_values[:issue_date])}, #{html_escape(entry_values[:author])}</span>
+    <li id="recently-added-#{entry.id}">
+    <span class="genre"><i id="#{entry.id}" class="bi #{ICONS[entry.genre&.downcase].presence || 'bi-file-earmark-fill'}"></i>#{html_escape(entry.genre)}</span>
+    <span class="title">#{link_to(html_escape(entry.title), html_escape(entry.id))}</span>
+    <span class="credit">Published on #{html_escape(entry.issued_date)}, #{html_escape(entry.authors.join(', '))}</span>
     </li>
     HTML
     html.html_safe

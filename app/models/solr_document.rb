@@ -38,6 +38,10 @@ class SolrDocument
   METHODS_FIELD = 'methods_tsim'
   TITLE_FIELD = 'title_tsim'
 
+  def id
+    fetch('id')
+  end
+
   def titles
     fetch(TITLE_FIELD, [])
   end
@@ -243,8 +247,14 @@ class SolrDocument
     fetch("alternative_title_ssim", [])
   end
 
+  def genres
+    fetch("genre_ssim", []).sort
+  end
+
+  # Sometimes we need a single genre for an item, even though an item may have more than one.
+  # This method makes sure we always get the same value (the first one from a sorted list).
   def genre
-    fetch("genre_ssim", [])
+    genres.first
   end
 
   def peer_review_status

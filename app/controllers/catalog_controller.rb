@@ -210,11 +210,4 @@ class CatalogController < ApplicationController
     # default 'mySuggester', uncomment and provide it below
     # config.autocomplete_suggester = 'mySuggester'
   end
-
-  def recently_added
-    # We could add logic here to make the call to Solr with specific parameters (e.g. to fetch
-    # order by date published, or only items added in the last 3 months, or only the last 10 items)
-    data = []
-    render json: data.to_json
-  end
 end
