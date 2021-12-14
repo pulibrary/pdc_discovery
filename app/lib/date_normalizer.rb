@@ -24,6 +24,8 @@ class DateNormalizer
     date_strings.map { |date| strict_date(date) }.compact.sort
   end
 
+  # Returns the date in yyyy-mm-dd format. If there is no day or month it defaults
+  # to day 01, month 01.
   def self.strict_date(date_string)
     return nil if date_string.nil?
     if date_string.match?(/\d{4}-\d{1,2}-\d{1,2}/)
