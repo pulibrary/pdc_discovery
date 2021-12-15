@@ -13,6 +13,6 @@ class RecentlyAdded
     entries
   rescue StandardError => ex
     Rails.logger.warn "Error fetching recently added feed: #{ex.message}."
-    {}
+    []
   end
 end
