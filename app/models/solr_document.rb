@@ -38,6 +38,18 @@ class SolrDocument
   METHODS_FIELD = 'methods_tsim'
   TITLE_FIELD = 'title_tsim'
 
+  # These icons map to CSS classes in Bootstrap
+  ICONS = {
+    "dataset" => "bi-stack",
+    "moving image" => "bi-film",
+    "software" => "bi-code-slash",
+    "image" => "bi-image",
+    "text" => "bi-card-text",
+    "collection" => "bi-collection-fill",
+    "article" => "bi-journal-text",
+    "interactive resource" => "bi-pc-display-horizontal"
+  }.freeze
+
   def id
     fetch('id')
   end
@@ -52,6 +64,17 @@ class SolrDocument
 
   def authors
     fetch('author_tesim', [])
+  end
+
+  # Returns a string with the authors and shortens it if there are more than 2 authors.
+  # https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/in_text_citations_author_authors.html
+  def authors_et_al
+    authors_all = authors
+    if authors_all.count <= 2
+      authors_all.join(" & ")
+    else
+      authors_all.first + " et al."
+    end
   end
 
   def creators
@@ -391,6 +414,10 @@ class SolrDocument
 
   def domain
     fetch("domain_ssi", "")
+  end
+
+  def icon_css
+    ICONS[genre&.downcase] || 'bi-file-earmark-fill'
   end
 end
 # rubocop:enable Metrics/ClassLength
