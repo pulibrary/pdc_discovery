@@ -2,7 +2,7 @@
 
 RSpec.describe Indexer do
   describe 'indexing a single record' do
-    let(:single_item) { File.read(File.join(fixture_path, 'single_item.xml')) }
+    let(:single_item) { file_fixture("single_item.xml").read }
     let(:indexer) do
       described_class.new(single_item)
     end

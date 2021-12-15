@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 describe 'Single item page', type: :system, js: true do
-  let(:community_fetch_with_expanded_metadata) { File.read(File.join(fixture_path, 'single_item.xml')) }
+  let(:community_fetch_with_expanded_metadata) { file_fixture("single_item.xml").read }
   let(:indexer) do
     Indexer.new(community_fetch_with_expanded_metadata)
   end

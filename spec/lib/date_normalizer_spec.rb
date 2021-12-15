@@ -33,4 +33,31 @@ RSpec.describe DateNormalizer do
       expect(described_class.years_from_dates(["2015-99-18T18:14:22Z"])).to eq []
     end
   end
+
+  describe "#strict_dates" do
+    it "sorts dates ascending" do
+      expect(described_class.strict_dates(["2021-12-14", nil, "1999-12-31"])).to eq ["1999-12-31", "2021-12-14"]
+    end
+  end
+
+  describe "#strict_date" do
+    it "handles full dates correctly" do
+      expect(described_class.strict_date("2021-12-14")).to eq "2021-12-14"
+      expect(described_class.strict_date("2021-12-14T18:14:22Z")).to eq "2021-12-14"
+      expect(described_class.strict_date("2021-2-8")).to eq "2021-02-08"
+    end
+
+    it "handles partial dates correctly" do
+      expect(described_class.strict_date("2021-12")).to eq "2021-12-01"
+      expect(described_class.strict_date("2021")).to eq "2021-01-01"
+    end
+
+    it "detects bad dates" do
+      expect(described_class.strict_date("2021-14-14")).to eq nil
+      expect(described_class.strict_date("202")).to eq nil
+      expect(described_class.strict_date("blah")).to eq nil
+      expect(described_class.strict_date("")).to eq nil
+      expect(described_class.strict_date(nil)).to eq nil
+    end
+  end
 end

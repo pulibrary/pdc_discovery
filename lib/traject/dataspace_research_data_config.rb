@@ -133,6 +133,13 @@ to_field "issue_date_ssim" do |record, accumulator, _context|
   accumulator.concat DateNormalizer.format_array_for_display(issue_dates)
 end
 
+# Date in yyyy-mm-dd format so we can sort by it
+to_field "issue_date_strict_ssi" do |record, accumulator, _context|
+  dates = record.xpath("/item/metadata/key[text()='dc.date.issued']/../value").map(&:text)
+  dates += record.xpath("/item/metadata/key[text()='dcterms.issued']/../value").map(&:text)
+  accumulator.concat [DateNormalizer.strict_dates(dates).first]
+end
+
 to_field "date_accepted_ssim" do |record, accumulator, _context|
   dates = record.xpath("/item/metadata/key[text()='dcterms.dateAccepted']/../value").map(&:text)
   accumulator.concat DateNormalizer.format_array_for_display(dates)
