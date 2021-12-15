@@ -2,7 +2,8 @@
 
 class RecentlyAdded
   def self.feed
-    solr = RSolr.connect(url: Blacklight.default_configuration.connection_config[:url])
+    solr_url = Blacklight.default_configuration.connection_config[:url]
+    solr = RSolr.connect(url: solr_url)
     solr_params = {
       q: '*:*',
       sort: 'issue_date_strict_ssi desc'
