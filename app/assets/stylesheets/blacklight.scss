@@ -2,10 +2,10 @@
 @import "blacklight/blacklight";
 @import "blacklight_marc";
 
-// Abtract display in search page
+// Abtract display in search page (display up to 4 lines of text)
 dd.blacklight-abstract_tsim {
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
