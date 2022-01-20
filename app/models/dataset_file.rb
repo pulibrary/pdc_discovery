@@ -28,4 +28,9 @@ class DatasetFile
     # that allows the browser to interpret the file correctly.
     "#{DatasetFile.download_root}/#{handle}/#{sequence}/#{name}"
   end
+
+  def downloads
+    2 #TODO pull from API
+  end
+
 end
