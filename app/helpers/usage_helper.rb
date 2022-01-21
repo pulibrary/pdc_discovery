@@ -12,4 +12,5 @@ module UsageHelper
     logger.error "PLAUSIBLE ERROR: #{e.message}"
     '0'
   end
+
 end
