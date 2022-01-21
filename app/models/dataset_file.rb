@@ -30,7 +30,6 @@ class DatasetFile
   end
 
   def downloads
-    2 #TODO pull from API
+    2 # TODO: pull from API
   end
-
 end
