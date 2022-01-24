@@ -29,7 +29,7 @@ class DatasetFile
     "#{DatasetFile.download_root}/#{handle}/#{sequence}/#{name}"
   end
 
-  def downloads
-    2 # TODO: pull from API
-  end
+  # def downloads
+  #   2 # TODO: pull from API
+  # end
 end
