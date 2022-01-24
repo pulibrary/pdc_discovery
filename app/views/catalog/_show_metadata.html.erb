@@ -118,9 +118,7 @@
             <% @document.license.each do |license| %>
               <%= render_field_row "License", license %>
             <% end %>
-            <% @document.subject.each do |subject| %>
-              <%= render_field_row_search_link "Subject", subject, "subject_all_ssim" %>
-            <% end %>
+            <%= render_subject_search_links "Keywords", @document.subject, "subject_all_ssim" %>
             <% @document.subject_classification.each do |subject_classification| %>
               <%= render_field_row_search_link "Classification", subject_classification, "subject_all_ssim" %>
             <% end %>
