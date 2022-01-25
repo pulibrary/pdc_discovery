@@ -259,6 +259,7 @@ GEM
     parser (3.0.1.1)
       ast (~> 2.4.1)
     pg (1.2.3)
+    plausible_api (0.1.9)
     popper_js (1.16.0)
     pry (0.13.1)
       coderay (~> 1.1)
@@ -494,6 +495,7 @@ DEPENDENCIES
   multi_xml
   oai
   pg
+  plausible_api
   pry-byebug
   pry-rails
   puma (~> 5.0)

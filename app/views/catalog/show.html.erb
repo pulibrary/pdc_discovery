@@ -9,7 +9,6 @@
     overflow: hidden;
   }
 </style>
-
 <% @page_title = "#{@document.title} || 'untitled'" %>
 <% content_for(:head) { render_link_rel_alternates } %>
 
@@ -26,13 +25,13 @@
 
   <div class="lux">
     <dt class="blacklight-issue_date_ssim col-md-3"></dt>
-    <dd class="col-md-9 blacklight-issue_date_ssim">
+    <dd class="col-md-12 blacklight-issue_date_ssim">
       <div class="document-issued-date" value="January 2017"></div>
     </dd>
 
     <% @document.abstracts.each do |abstract| %>
       <dt class="blacklight-abstract_tsim col-md-3"></dt>
-      <dd class="col-md-9">
+      <dd class="col-md-12">
         <div class="document-abstract">
           <header>Abstract:</header>
           <p id="document-abstract-text" class="truncate-line-clamp"><%= abstract %></p>
@@ -43,7 +42,7 @@
 
     <% @document.descriptions.each do |description| %>
       <dt class="blacklight-description_tsim col-md-3"></dt>
-      <dd class="col-md-9 blacklight-description_tsim">
+      <dd class="col-md-12 blacklight-description_tsim">
         <div class="document-description">
           <header>Description:</header>
           <p id="document-description-text" class="truncate-line-clamp"><%= description %></p>
@@ -55,12 +54,11 @@
 
   <%= render "show_documents" %>
   <%= render "show_metadata" %>
+</div>
 
 </div>
 
-<% content_for(:sidebar) do %>
-  <%= render_document_sidebar_partial @document %>
-<% end %>
+<%= render "show_sidebar" %>
 
 <script>
 $(function() {
