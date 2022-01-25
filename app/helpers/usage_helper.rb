@@ -9,7 +9,7 @@ module UsageHelper
     c = PlausibleApi::Client.new('pdc-discovery-staging.princeton.edu', (ENV['PLAUSIBLE_KEY'] || ''))
     c.aggregate({ date: "2021-01-01,#{Time.zone.today.strftime('%Y-%m-%d')}", metrics: 'visitors,pageviews', filters: "event:page==/catalog/#{@document.id}" })["pageviews"]["value"]
   rescue => e
-    logger.error "PLAUSIBLE ERROR: #{e.message}"
+    logger.error "PLAUSIBLE ERROR: #{e.message}" && Honeybadger.notify(exception)
     '0'
   end
 end

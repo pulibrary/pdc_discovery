@@ -1,11 +1,6 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
-  # Check the Rails Environment. Used to support Plausible for production.
-  def rails_env?
-    Rails.env.production?
-  end
-
   def render_document_heading; end
 
   # Outputs the HTML to render a single value as an HTML table row
