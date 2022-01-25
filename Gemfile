@@ -59,6 +59,7 @@ group :development do
 end
 
 group :test do
+  gem 'axe-core-rspec'
   gem 'capybara', '>= 3.26'
   gem 'coveralls', require: false
   gem 'selenium-webdriver'
