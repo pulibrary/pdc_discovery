@@ -2,7 +2,6 @@
 require "rails_helper"
 
 describe "accessibility", type: :system, js: true do
-
   let(:community_fetch_with_expanded_metadata) { file_fixture("single_item.xml").read }
   let(:indexer) do
     Indexer.new(community_fetch_with_expanded_metadata)
@@ -12,13 +11,12 @@ describe "accessibility", type: :system, js: true do
     Blacklight.default_index.connection.delete_by_query("*:*")
     Blacklight.default_index.connection.commit
     indexer.index
-    stub_request(:get, "https://github.com/mozilla/geckodriver/releases/latest")
-    .with(
+    stub_request(:get, "https://github.com/mozilla/geckodriver/releases/latest").with(
       headers: {
-        'Accept'=>'*/*',
-        'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'Host'=>'github.com',
-        'User-Agent'=>'Ruby'
+        'Accept' => '*/*',
+        'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+        'Host' => 'github.com',
+        'User-Agent' => 'Ruby'
       }
     )
   end
