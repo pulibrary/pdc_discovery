@@ -47,6 +47,24 @@ module ApplicationHelper
   end
   # rubocop:enable Rails/OutputSafety
 
+  # Outputs the HTML to render a list of subjects
+  # rubocop:disable Rails/OutputSafety
+  def render_subject_search_links(title, values, field)
+    return if values.count.zero?
+    links_html = values.map do |value|
+      "<span>#{link_to(value, "/?f[#{field}][]=#{CGI.escape(value)}&q=&search_field=all_fields", class: 'badge badge-dark')}</span>"
+    end
+
+    html = <<-HTML
+    <tr>
+      <th scope="row" style="vertical-align: top;"><span>#{title}: </span></th>
+      <td style="vertical-align: top;">#{links_html.join(' ')}</td>
+    </tr>
+    HTML
+    html.html_safe
+  end
+  # rubocop:enable Rails/OutputSafety
+
   # rubocop:disable Rails/OutputSafety
   def render_globus_download(uri)
     return if uri.blank?
