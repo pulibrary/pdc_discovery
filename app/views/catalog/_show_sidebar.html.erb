@@ -3,3 +3,12 @@
     <li><span class="number"><%= Rails.env.production? ? views : 'X' %> </span> <i class="bi bi-eye-fill"></i>views</li>
   </ul>
 </div>
+
+<div id="sidebar-keywords" class="sidebar">
+  <table>
+    <%= render_subject_search_links "Keywords", @document.subject, "subject_all_ssim" %>
+      <% @document.license.each do |license| %>
+      <%= render_field_row "License: ", license %>
+    <% end %>
+  </table>
+</div>
