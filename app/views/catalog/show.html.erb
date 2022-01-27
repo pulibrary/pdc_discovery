@@ -1,7 +1,7 @@
 <style>
   /*
-   * Source: https://blog.kritikapattalam.com/2-simple-ways-you-can-truncate-text-using-css
-   */
+  * Source: https://blog.kritikapattalam.com/2-simple-ways-you-can-truncate-text-using-css
+  */
   .truncate-line-clamp {
     display: -webkit-box;
     -webkit-line-clamp: 4;
@@ -14,83 +14,89 @@
 
 <div id="document" data-document-id="<%= @document.id %>" itemscope="itemscope" itemtype="http://schema.org/Thing" class="document">
   <div class="document-main-section">
-  <header class="documentHeader row">
-    <h1 class="index_title document-title-heading col">
-      <span itemprop="name"><%= @document.title %></span>
-    </h1>
-    <div class="index-document-functions col-sm-3 col-lg-2">
-      <!-- TODO add bookmarks -->
-    </div>
-  </header>
+    <header class="documentHeader row">
+      <h1 class="index_title document-title-heading col">
+        <span itemprop="name"><%= @document.title %></span>
+      </h1>
+      <div class="index-document-functions col-sm-3 col-lg-2">
+        <!-- TODO add bookmarks -->
+      </div>
+    </header>
 
-  <div class="lux">
-    <dt class="blacklight-issue_date_ssim col-md-3"></dt>
-    <dd class="col-md-12 blacklight-issue_date_ssim">
-      <div class="document-issued-date" value="January 2017"></div>
-    </dd>
+    <div class="lux">
+      <dl>
+        <dt class="blacklight-issue_date_ssim col-md-3"></dt>
+        <dd class="col-md-12 blacklight-issue_date_ssim">
+          <div class="document-issued-date" value="January 2017"></div>
+        </dd>
+      </dl>
 
-    <% @document.abstracts.each do |abstract| %>
-      <dt class="blacklight-abstract_tsim col-md-3"></dt>
-      <dd class="col-md-12">
-        <div class="document-abstract">
-          <header>Abstract:</header>
-          <p id="document-abstract-text" class="truncate-line-clamp"><%= abstract %></p>
+      <dl>
+        <% @document.abstracts.each do |abstract| %>
+        <dt class="blacklight-abstract_tsim col-md-3"></dt>
+        <dd class="col-md-12">
+          <div class="document-abstract">
+            <header>Abstract:</header>
+            <p id="document-abstract-text" class="truncate-line-clamp"><%= abstract %></p>
             <a id="document-abstract-text-toggle" href="#"><i class="bi bi-caret-down"></i><span>Show More</span></a>
-        </div>
-      </dd>
-    <% end %>
+          </div>
+        </dd>
+        <% end %>
+      </dl>
 
-    <% @document.descriptions.each do |description| %>
-      <dt class="blacklight-description_tsim col-md-3"></dt>
-      <dd class="col-md-12 blacklight-description_tsim">
-        <div class="document-description">
-          <header>Description:</header>
-          <p id="document-description-text" class="truncate-line-clamp"><%= description %></p>
+      <dl>
+        <% @document.descriptions.each do |description| %>
+        <dt class="blacklight-description_tsim col-md-3"></dt>
+        <dd class="col-md-12 blacklight-description_tsim">
+          <div class="document-description">
+            <header>Description:</header>
+            <p id="document-description-text" class="truncate-line-clamp"><%= description %></p>
             <a id="document-description-text-toggle" href="#"><i class="bi bi-caret-down"></i><span>Show More</span></a>
-        </div>
-      </dd>
-    <% end %>
-  </div>
+          </div>
+        </dd>
+        <% end %>
+      </dl>
+    </div>
 
-  <%= render "show_documents" %>
-  <%= render "show_metadata" %>
-</div>
+    <%= render "show_documents" %>
+    <%= render "show_metadata" %>
+  </div>
 
 </div>
 
 <%= render "show_sidebar" %>
 
 <script>
-$(function() {
-  var setupMoreLessToggle = function(linkId, textId) {
+  $(function() {
+    var setupMoreLessToggle = function(linkId, textId) {
 
-    // Wire the link to toggle between show more/show less
-    $(linkId).click(function() {
-      if ($(linkId).text() == "Show Less") {
-        $(textId).addClass("truncate-line-clamp");
-        $(linkId + " i").toggleClass("bi-caret-up bi-caret-down");
-        $(linkId + " span").text("Show More");
-      } else {
-        $(textId).removeClass("truncate-line-clamp");
-        $(linkId + " i").toggleClass("bi-caret-up bi-caret-down");
-        $(linkId + " span").text("Show Less");
-      }
-      return false;
-    });
+      // Wire the link to toggle between show more/show less
+      $(linkId).click(function() {
+        if ($(linkId).text() == "Show Less") {
+          $(textId).addClass("truncate-line-clamp");
+          $(linkId + " i").toggleClass("bi-caret-up bi-caret-down");
+          $(linkId + " span").text("Show More");
+        } else {
+          $(textId).removeClass("truncate-line-clamp");
+          $(linkId + " i").toggleClass("bi-caret-up bi-caret-down");
+          $(linkId + " span").text("Show Less");
+        }
+        return false;
+      });
 
-    // Only show the link it text was indeed truncated
-    // https://rubyyagi.com/how-to-truncate-long-text-and-show-read-more-less-button/
-    var el = $(textId)[0];
-    if (el !== undefined) {
-      var textTruncated = (el.offsetHeight < el.scrollHeight || el.offsetWidth < el.scrollWidth)
-      if (!textTruncated) {
-        $(linkId).addClass("invisible");
+      // Only show the link it text was indeed truncated
+      // https://rubyyagi.com/how-to-truncate-long-text-and-show-read-more-less-button/
+      var el = $(textId)[0];
+      if (el !== undefined) {
+        var textTruncated = (el.offsetHeight < el.scrollHeight || el.offsetWidth < el.scrollWidth)
+        if (!textTruncated) {
+          $(linkId).addClass("invisible");
+        }
       }
     }
-  }
 
-  setupMoreLessToggle("#document-abstract-text-toggle", "#document-abstract-text");
-  setupMoreLessToggle("#document-description-text-toggle", "#document-description-text");
-});
+    setupMoreLessToggle("#document-abstract-text-toggle", "#document-abstract-text");
+    setupMoreLessToggle("#document-description-text-toggle", "#document-description-text");
+  });
 
 </script>
