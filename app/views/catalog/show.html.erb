@@ -8,6 +8,11 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  .sidebar {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+  }
 </style>
 <% @page_title = "#{@document.title} || 'untitled'" %>
 <% content_for(:head) { render_link_rel_alternates } %>

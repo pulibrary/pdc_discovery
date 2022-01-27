@@ -52,13 +52,13 @@ module ApplicationHelper
   def render_subject_search_links(title, values, field)
     return if values.count.zero?
     links_html = values.map do |value|
-      "<span>#{link_to(value, "/?f[#{field}][]=#{CGI.escape(value)}&q=&search_field=all_fields", class: 'badge badge-dark', style: 'font-size: 12pt; font-weight: normal;')}</span>"
+      "<span>#{link_to(value, "/?f[#{field}][]=#{CGI.escape(value)}&q=&search_field=all_fields", class: 'badge badge-dark')}</span>"
     end
 
     html = <<-HTML
     <tr>
-      <th scope="row"><span>#{title}</span></th>
-      <td>#{links_html.join(' ')}</td>
+      <th scope="row" style="vertical-align: top;"><span>#{title}: </span></th>
+      <td style="vertical-align: top;">#{links_html.join(' ')}</td>
     </tr>
     HTML
     html.html_safe
