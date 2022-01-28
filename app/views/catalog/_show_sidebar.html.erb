@@ -7,8 +7,10 @@
 <div id="sidebar-keywords" class="sidebar">
   <table>
     <%= render_subject_search_links "Keywords", @document.subject, "subject_all_ssim" %>
-      <% @document.license.each do |license| %>
+    <% @document.license.each do |license| %>
       <%= render_field_row "License: ", license %>
     <% end %>
+    <% file_counts = @document.file_counts.map { |group| "#{group[:extension]} (#{group[:file_count]})" } %>
+    <%= render_field_row "File Type: ", file_counts.join(", ") %>
   </table>
 </div>

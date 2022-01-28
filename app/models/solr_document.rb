@@ -122,6 +122,11 @@ class SolrDocument
   end
   # rubocop:enable Lint/UselessAssignment
 
+  def file_counts
+    groups = files.group_by { |file| file.extension }
+    groups.map { |key,value| {extension: key, file_count: value.count} }.sort_by { |group| -group[:file_count] }
+  end
+
   def table_of_contents
     fetch("tableofcontents_tesim", [])
   end
