@@ -1,12 +1,14 @@
 # frozen_string_literal: true
 
 class DatasetFile
-  attr_accessor :name, :description, :format, :size, :mime_type, :sequence, :handle
+  attr_accessor :name, :description, :format, :size, :mime_type, :sequence, :handle, :extension
 
   def self.from_hash(data)
     hash = data.with_indifferent_access
     file = DatasetFile.new
     file.name = hash[:name]
+    file.extension = File.extname(file.name)
+    file.extension = file.extension[1..] if file.extension != "." # drop the leading period
     file.description = hash[:description]
     file.mime_type = hash[:mime_type]
     file.size = hash[:size]

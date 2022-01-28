@@ -34,5 +34,21 @@ RSpec.describe SolrDocument do
       expect(doc.icon_css).to eq "bi-file-earmark-fill"
     end
   end
+
+  describe "#file_counts" do
+    it "detects documents with no files attached" do
+      doc = described_class.new({ id: "1" })
+      expect(doc.file_counts.count).to eq 0
+    end
+
+    it "calculates file counts and sorts data descending by count" do
+      files = [{ name: "file1.zip" }, { name: "data.csv" }, { name: "file2.zip" }]
+      doc = described_class.new({ id: "1", files_ss: files.to_json })
+      zip_group = { extension: "zip", file_count: 2 }
+      csv_group = { extension: "csv", file_count: 1 }
+      expect(doc.file_counts[0]).to eq zip_group
+      expect(doc.file_counts[1]).to eq csv_group
+    end
+  end
 end
 # rubocop:enable RSpec/ExampleLength

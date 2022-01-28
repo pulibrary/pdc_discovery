@@ -40,6 +40,13 @@ To stop solr and database services:
 1. `bundle exec foreman start`
 2. Access pdc_discovery at [http://localhost:3000/](http://localhost:3000/)
 
+You can also use two terminal windows instead of `foreman` to start the Rails application and the Webpack server.
+This is convenient when you need to step through the code as `byebug` does not always show the prompt when using `foreman`.
+
+1. Terminal one: `bin/rails s -p 3000`
+2. Terminal two: `bin/webpack-dev-server`
+3. Access pdc_discovery at [http://localhost:3000/](http://localhost:3000/)
+
 ## Deploying
 pulbot: `pulbot deploy pdc_discovery to [staging|production]`
 
