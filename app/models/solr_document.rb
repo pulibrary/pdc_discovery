@@ -122,9 +122,11 @@ class SolrDocument
   end
   # rubocop:enable Lint/UselessAssignment
 
+  # Returns an array with the counts by file extension
+  # e.g. [{extension: "txt", file_count: 3}, {extension: "csv", file_count: 1}]
   def file_counts
-    groups = files.group_by { |file| file.extension }
-    groups.map { |key,value| {extension: key, file_count: value.count} }.sort_by { |group| -group[:file_count] }
+    groups = files.group_by(&:extension)
+    groups.map { |key, value| { extension: key, file_count: value.count } }.sort_by { |group| -group[:file_count] }
   end
 
   def table_of_contents

@@ -5,14 +5,16 @@ module ApplicationHelper
 
   # Outputs the HTML to render a single value as an HTML table row
   # rubocop:disable Rails/OutputSafety
-  def render_field_row(title, value, render_empty: false)
+  def render_field_row(title, value, sidebar = false)
     return if value.nil?
     return if value.empty? && render_empty == false
     value_encoded = html_escape(value)
+    css_label = sidebar ? "sidebar-label" : ""
+    css_value = sidebar ? "sidebar-value" : ""
     html = <<-HTML
     <tr>
-      <th scope="row"><span>#{title}</span></th>
-      <td><span>#{value_encoded}</span></td>
+      <th scope="row" class="#{css_label}"><span>#{title}</span></th>
+      <td class="#{css_value}"><span>#{value_encoded}</span></td>
     </tr>
     HTML
     html.html_safe
@@ -51,14 +53,15 @@ module ApplicationHelper
   # rubocop:disable Rails/OutputSafety
   def render_subject_search_links(title, values, field)
     return if values.count.zero?
+    # Must use <divs> instead of <spans> for them to wrap inside the sidebar
     links_html = values.map do |value|
-      "<span>#{link_to(value, "/?f[#{field}][]=#{CGI.escape(value)}&q=&search_field=all_fields", class: 'badge badge-dark')}</span>"
+      "<div>#{link_to(value, "/?f[#{field}][]=#{CGI.escape(value)}&q=&search_field=all_fields", class: 'badge badge-dark')}</div>"
     end
 
     html = <<-HTML
     <tr>
-      <th scope="row" style="vertical-align: top;"><span>#{title}: </span></th>
-      <td style="vertical-align: top;">#{links_html.join(' ')}</td>
+      <th scope="row" class="sidebar-label"><span>#{title}: </span></th>
+      <td class="sidebar-value">#{links_html.join(' ')}</td>
     </tr>
     HTML
     html.html_safe
