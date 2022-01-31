@@ -55,13 +55,13 @@ module ApplicationHelper
     return if values.count.zero?
     # Must use <divs> instead of <spans> for them to wrap inside the sidebar
     links_html = values.map do |value|
-      "<div>#{link_to(value, "/?f[#{field}][]=#{CGI.escape(value)}&q=&search_field=all_fields", class: 'badge badge-dark')}</div>"
+      "#{link_to(value, "/?f[#{field}][]=#{CGI.escape(value)}&q=&search_field=all_fields", class: 'badge badge-dark sidebar-value-badge', title: value)}<br/>"
     end
 
     html = <<-HTML
     <tr>
       <th scope="row" class="sidebar-label"><span>#{title}: </span></th>
-      <td class="sidebar-value">#{links_html.join(' ')}</td>
+      <td>#{links_html.join(' ')}</td>
     </tr>
     HTML
     html.html_safe
