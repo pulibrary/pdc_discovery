@@ -7,19 +7,19 @@
           <thead></thead>
           <tbody>
             <%= render_field_row_many "Alternative Title", @document.alternative_title %>
-            <%= render_field_row_many "Author", @document.authors, true %> <!-- here -->
+            <%= render_field_row_many "Author", @document.authors, true %> <!-- displayed by default -->
             <%= render_field_row_many "Creator", @document.creators %>
             <%= render_field_row_many "Contributor", @document.contributors %>
             <%= render_field_row_search_link "Domain", @document.domain, "domain_ssi" %>
-            <%= render_field_row "Date Accessioned", @document.accessioned_date, true %> <!-- here -->
-            <%= render_field_row "Date Issued", @document.issued_date, true %> <!-- here -->
+            <%= render_field_row "Date Accessioned", @document.accessioned_date, true %> <!-- displayed by default -->
+            <%= render_field_row "Date Issued", @document.issued_date, true %> <!-- displayed by default -->
             <%= render_field_row "Date Created", @document.date_created %>
             <%= render_field_row "Date Modified", @document.date_modified %>
             <%= render_field_row "Date Submitted", @document.date_submitted %>
             <%= render_field_row "Date Accepted", @document.date_accepted %>
             <%= render_field_row "Date Copyrighted", @document.date_copyrighted %>
             <% @document.uri.each do |uri| %>
-              <%= render_field_row_link "URI", uri, true %> <!-- here -->
+              <%= render_field_row_link "URI", uri, true %> <!-- displayed by default -->
             <% end %>
             <% @document.dates_valid.each do |date_valid| %>
               <%= render_field_row "Date Valid", date_valid %>
