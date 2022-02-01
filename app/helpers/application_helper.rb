@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 # rubocop:disable Rails/OutputSafety
+# rubocop:disable Metrics/ModuleLength
 module ApplicationHelper
   # Outputs the HTML to render a single value as an HTML table row
   # to be displayed on the metadata section of the show page.
@@ -85,6 +86,26 @@ module ApplicationHelper
     html.html_safe
   end
 
+  # Outputs the HTML to render the DOI as an HTML table row to be
+  # displayed on the sidebar with a copy to clipboard button next to it.
+  def render_sidebar_doi_row(url, value)
+    return if url.nil?
+    tooltip = "Copy DOI URL to the clipboard"
+    html = <<-HTML
+    <tr>
+      <th scope="row" class="sidebar-label"><span>DOI:</span></th>
+      <td class="sidebar-value">
+        <span>#{link_to(value, url, target: '_blank', rel: 'noopener noreferrer')}</span>
+        <button id="copy-doi" class="btn btn-sm" data-url="#{url}" title="#{tooltip}">
+          <i id="copy-doi-icon" class="bi bi-clipboard" title="#{tooltip}"></i>
+          <span id="copy-doi-label" class="copy-doi-label-normal">COPY</span>
+        </button>
+      </td>
+    </tr>
+    HTML
+    html.html_safe
+  end
+
   # Outputs the HTML to render a list of subjects
   # (this is used on the sidebar)
   def render_subject_search_links(title, values, field)
@@ -117,3 +138,4 @@ module ApplicationHelper
   end
 end
 # rubocop:enable Rails/OutputSafety
+# rubocop:enable Metrics/ModuleLength
