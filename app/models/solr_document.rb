@@ -149,6 +149,17 @@ class SolrDocument
     fetch("uri_tesim", [])
   end
 
+  def doi_url
+    uri.each do |link|
+      return link if link.downcase.start_with?('https://doi.org/')
+    end
+    nil
+  end
+
+  def doi_value
+    doi_url&.gsub('https://doi.org/', '')
+  end
+
   def format
     fetch("format_ssim", [])
   end
