@@ -106,6 +106,27 @@ module ApplicationHelper
     html.html_safe
   end
 
+  def render_sidebar_licenses(licenses)
+    return if licenses.count.zero?
+
+    licenses_html = licenses.map do |license|
+      url = License.url(license)
+      if url.nil?
+        "<span>#{html_escape(license)}</span>"
+      else
+        "<span>" + link_to(license, url, target: '_blank', rel: 'noopener noreferrer') + "</span>"
+      end
+    end
+
+    html = <<-HTML
+    <tr>
+      <th scope="row" class="sidebar-label"><span>#{'License'.pluralize(licenses.count)}:</span></th>
+      <td class="sidebar-value">#{licenses_html.join('<br/>')}</td>
+    </tr>
+    HTML
+    html.html_safe
+  end
+
   # Outputs the HTML to render a list of subjects
   # (this is used on the sidebar)
   def render_subject_search_links(title, values, field)
