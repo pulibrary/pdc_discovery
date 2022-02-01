@@ -1,6 +1,7 @@
 <div id="sidebar-usage" class="sidebar">
   <ul>
-    <li><span class="number"><%= Rails.env.production? ? views : 'X' %> </span> <i class="bi bi-eye-fill"></i>views</li>
+    <li><span class="number"><%= Rails.env.staging? || Rails.env.production? ? views : 'X' %> </span> <i class="bi bi-eye-fill"></i>views</li>
+    <li><span class="number"><%= Rails.env.staging? || Rails.env.production? ? downloads(@document.files) : 'X' %> </span> <i class="bi bi-file-earmark-arrow-down-fill"></i>downloads</li>
   </ul>
 </div>
 
