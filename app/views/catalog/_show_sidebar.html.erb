@@ -6,10 +6,8 @@
 
 <div id="sidebar-keywords" class="sidebar">
   <table>
+    <%= render_sidebar_licenses @document.license %>
     <%= render_subject_search_links "Keywords", @document.subject, "subject_all_ssim" %>
-    <% @document.license.each do |license| %>
-      <%= render_sidebar_row "License: ", license %>
-    <% end %>
     <% file_counts = @document.file_counts.map { |group| "#{group[:extension]}(#{group[:file_count]})" } %>
     <%= render_sidebar_row "File Types: ", file_counts.join(", ") %>
     <%= render_sidebar_doi_row @document.doi_url, @document.doi_value %>
