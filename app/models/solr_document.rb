@@ -85,6 +85,14 @@ class SolrDocument
     fetch("contributor_tsim", [])
   end
 
+  def accessioned_dates
+    fetch("date_accessioned_ssim", [])
+  end
+
+  def accessioned_date
+    accessioned_dates.first
+  end
+
   def issued_dates
     fetch(ISSUED_DATE_FIELD, [])
   end

@@ -6,25 +6,21 @@
         <table class="table">
           <thead></thead>
           <tbody>
-            <% @document.alternative_title.each do |alternative_title| %>
-              <%= render_field_row "Alternative Title", alternative_title %>
-            <% end %>
-            <% @document.authors.each do |author| %>
-              <%= render_field_row "Author", author %>
-            <% end %>
-            <% @document.creators.each do |creator| %>
-              <%= render_field_row "Creator", creator %>
-            <% end %>
-            <% @document.contributors.each do |contributor| %>
-              <%= render_field_row "Contributor", contributor %>
-            <% end %>
+            <%= render_field_row_many "Alternative Title", @document.alternative_title %>
+            <%= render_field_row_many "Author", @document.authors, true %> <!-- displayed by default -->
+            <%= render_field_row_many "Creator", @document.creators %>
+            <%= render_field_row_many "Contributor", @document.contributors %>
             <%= render_field_row_search_link "Domain", @document.domain, "domain_ssi" %>
-            <%= render_field_row "Issued Date", @document.issued_date %>
+            <%= render_field_row "Date Accessioned", @document.accessioned_date, true %> <!-- displayed by default -->
+            <%= render_field_row "Date Issued", @document.issued_date, true %> <!-- displayed by default -->
             <%= render_field_row "Date Created", @document.date_created %>
             <%= render_field_row "Date Modified", @document.date_modified %>
             <%= render_field_row "Date Submitted", @document.date_submitted %>
             <%= render_field_row "Date Accepted", @document.date_accepted %>
             <%= render_field_row "Date Copyrighted", @document.date_copyrighted %>
+            <% @document.uri.each do |uri| %>
+              <%= render_field_row_link "URI", uri, true %> <!-- displayed by default -->
+            <% end %>
             <% @document.dates_valid.each do |date_valid| %>
               <%= render_field_row "Date Valid", date_valid %>
             <% end %>
@@ -46,9 +42,7 @@
             <% @document.mimetype.each do |mimetype| %>
               <%= render_field_row "Mimetype", mimetype %>
             <% end %>
-            <% @document.language.each do |language| %>
-              <%= render_field_row "Language", language %>
-            <% end %>
+            <%= render_field_row_many "Language", @document.language %>
             <% @document.publisher.each do |publisher| %>
               <%= render_field_row "Publisher", publisher %>
             <% end %>
@@ -133,9 +127,7 @@
             <% @document.subject_other.each do |subject_other| %>
               <%= render_field_row_search_link "Subject", subject_other, "subject_all_ssim" %>
             <% end %>
-            <% @document.genres.each do |genre| %>
-              <%= render_field_row_search_link "Genre", genre, "genre_ssim" %>
-            <% end %>
+            <%= render_field_row_search_links "Genre", @document.genres, "genre_ssim" %>
             <% @document.peer_review_status.each do |peer_review_status| %>
               <%= render_field_row "Peer Review Status", peer_review_status %>
             <% end %>
@@ -198,14 +190,10 @@
             <% end %>
           </tbody>
           <tfoot>
-            <tr>
-              <th scope="row">
-                <!-- TODO: Move this to a helper -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="bi bi-caret-down">
-                  <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"></path>
-                </svg>
-                <a href="/" class="document-metadata-table__expand">Show More</a>
-              </th>
+            <tr id="show-more-metadata-row">
+              <td>
+                <a id="show-more-metadata-link" href="#"><i class="bi bi-caret-down"></i><span>Show More</span></a>
+              </td>
               <td></td>
             </tr>
           </tfoot>
@@ -214,3 +202,32 @@
     </div>
   </div>
 </section>
+
+<script>
+  $(function() {
+    var setupMoreMetadataToggle = function(linkId, rowId) {
+
+      // Wire the link to toggle between show more/show less
+      $(linkId).click(function() {
+        if ($(linkId).text() == "Show Less") {
+          $(".toggable-row").toggleClass("hidden-row");
+          $(linkId + " i").toggleClass("bi-caret-up bi-caret-down");
+          $(linkId + " span").text("Show More");
+        } else {
+          $(".toggable-row").toggleClass("hidden-row");
+          $(linkId + " i").toggleClass("bi-caret-up bi-caret-down");
+          $(linkId + " span").text("Show Less");
+        }
+        return false;
+      });
+
+      // Remove the toogle link if there is nothing to toggle.
+      var hideToogleLink = $(".toggable-row.hidden-row").length == 0;
+      if (hideToogleLink) {
+        $(rowId).addClass("hidden-row");
+      }
+    }
+
+    setupMoreMetadataToggle("#show-more-metadata-link", "#show-more-metadata-row");
+  });
+</script>

@@ -8,9 +8,9 @@
   <table>
     <%= render_subject_search_links "Keywords", @document.subject, "subject_all_ssim" %>
     <% @document.license.each do |license| %>
-      <%= render_field_row "License: ", license, true %>
+      <%= render_sidebar_row "License: ", license %>
     <% end %>
     <% file_counts = @document.file_counts.map { |group| "#{group[:extension]}(#{group[:file_count]})" } %>
-    <%= render_field_row "File Types: ", file_counts.join(", "), true %>
+    <%= render_sidebar_row "File Types: ", file_counts.join(", ") %>
   </table>
 </div>
