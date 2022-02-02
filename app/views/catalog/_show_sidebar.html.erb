@@ -5,12 +5,16 @@
 </div>
 
 <div id="sidebar-keywords" class="sidebar">
-  <table>
+  <table id="sidebar-table">
     <%= render_sidebar_licenses @document.license %>
     <%= render_subject_search_links "Keywords", @document.subject, "subject_all_ssim" %>
     <% file_counts = @document.file_counts.map { |group| "#{group[:extension]}(#{group[:file_count]})" } %>
     <%= render_sidebar_row "File Types: ", file_counts.join(", ") %>
     <%= render_sidebar_doi_row @document.doi_url, @document.doi_value %>
+    <%= render_sidebar_citation_options @document.prefered_citation %>
+    <% DatasetCitation.styles.each do |style| %>
+      <%= render_sidebar_citation @document.cite(style), style, @document.prefered_citation %>
+    <% end %>
   </table>
 </div>
 
@@ -18,7 +22,7 @@
   $(function() {
     var setupCopyDoiToClipboard = function(linkId, textId) {
 
-      $("#copy-doi").click(function(x) {
+      $("#copy-doi").click(function(_x) {
         var doi = this.dataset["url"];
         // Copy value to the clipboard...
         navigator.clipboard.writeText(doi).then(function() {
@@ -40,7 +44,72 @@
           // ...something went wrong
           $("#copy-doi-icon").removeClass("bi-clipboard");
           $("#copy-doi-icon").addClass("bi-clipboard-minus")
-          console.log("Copy to clipboard failed");
+          console.log("Copy DOI to the clipboard failed");
+        });
+        // Clear focus from the button.
+        document.activeElement.blur();
+        return false;
+      });
+
+    }
+
+    var setupCitationToggle = function() {
+      $(".cite-as-button").click(function(_x) {
+        var style_selected = this.dataset["style"];
+
+        // Make visible the selected style...
+        $(".citation-row").each(function(_i, value) {
+          if (value.dataset["style"] == style_selected) {
+            $(value).removeClass("hidden-row");
+          } else {
+            $(value).addClass("hidden-row");
+          }
+        });
+
+        // ...update the menu to reflect the active style
+        $(".cite-as-button").each(function(_i, value) {
+          if (value.dataset["style"] == style_selected) {
+            $(value).addClass("btn-outline-primary");
+            $(value).removeClass("btn-outline-secondary");
+          } else {
+            $(value).addClass("btn-outline-secondary");
+            $(value).removeClass("btn-outline-primary");
+          }
+        });
+
+        // Clear focus from the button.
+        document.activeElement.blur();
+        return false;
+      })
+    }
+
+    var setupCopyCitationToClipboard = function(linkId, textId) {
+
+      $(".copy-citation-button").click(function(_x) {
+        var icon = $(this).children("i");
+        var label = $(this).children("span");
+        var citation = this.dataset["text"];
+        // Copy value to the clipboard...
+        navigator.clipboard.writeText(citation).then(function() {
+          // ...and let the user know
+          $(icon).removeClass("bi-clipboard");
+          $(icon).addClass("bi-clipboard-check");
+          $(label).text("COPIED");
+          $(label).removeClass("copy-doi-label-normal");
+          $(label).addClass("copy-doi-label-copied");
+          setTimeout(function() {
+            // ...after 20 seconds reset display to normal
+            $(label).text("COPY");
+            $(label).removeClass("copy-doi-label-copied");
+            $(label).addClass("copy-doi-label-normal");
+            $(icon).addClass("bi-clipboard");
+            $(icon).removeClass("bi-clipboard-check");
+          }, 20000);
+        }, function() {
+          // ...something went wrong
+          $(icon).removeClass("bi-clipboard");
+          $(icon).addClass("bi-clipboard-minus")
+          console.log("Copy citation to the clipboard failed");
         });
         // Clear focus from the button.
         document.activeElement.blur();
@@ -50,6 +119,8 @@
     }
 
     setupCopyDoiToClipboard();
+    setupCitationToggle();
+    setupCopyCitationToClipboard();
   });
 
 </script>
