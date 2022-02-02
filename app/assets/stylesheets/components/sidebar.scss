@@ -40,3 +40,13 @@
   text-overflow: ellipsis;
   text-align: left;
 }
+
+.copy-doi-label-normal {
+  font-size: 8pt;
+  color: #212529;
+}
+
+.copy-doi-label-copied {
+  font-size: 8pt;
+  color: green;
+}

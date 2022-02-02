@@ -6,11 +6,50 @@
 
 <div id="sidebar-keywords" class="sidebar">
   <table>
+    <%= render_sidebar_licenses @document.license %>
     <%= render_subject_search_links "Keywords", @document.subject, "subject_all_ssim" %>
-    <% @document.license.each do |license| %>
-      <%= render_field_row "License: ", license, true %>
-    <% end %>
     <% file_counts = @document.file_counts.map { |group| "#{group[:extension]}(#{group[:file_count]})" } %>
-    <%= render_field_row "File Types: ", file_counts.join(", "), true %>
+    <%= render_sidebar_row "File Types: ", file_counts.join(", ") %>
+    <%= render_sidebar_doi_row @document.doi_url, @document.doi_value %>
   </table>
 </div>
+
+<script>
+  $(function() {
+    var setupCopyDoiToClipboard = function(linkId, textId) {
+
+      $("#copy-doi").click(function(x) {
+        var doi = this.dataset["url"];
+        // Copy value to the clipboard...
+        navigator.clipboard.writeText(doi).then(function() {
+          // ...and let the user know
+          $("#copy-doi-icon").removeClass("bi-clipboard");
+          $("#copy-doi-icon").addClass("bi-clipboard-check");
+          $("#copy-doi-label").text("COPIED");
+          $("#copy-doi-label").removeClass("copy-doi-label-normal");
+          $("#copy-doi-label").addClass("copy-doi-label-copied");
+          setTimeout(function() {
+            // ...after 20 seconds reset display to normal
+            $("#copy-doi-label").text("COPY");
+            $("#copy-doi-label").removeClass("copy-doi-label-copied");
+            $("#copy-doi-label").addClass("copy-doi-label-normal");
+            $("#copy-doi-icon").addClass("bi-clipboard");
+            $("#copy-doi-icon").removeClass("bi-clipboard-check");
+          }, 20000);
+        }, function() {
+          // ...something went wrong
+          $("#copy-doi-icon").removeClass("bi-clipboard");
+          $("#copy-doi-icon").addClass("bi-clipboard-minus")
+          console.log("Copy to clipboard failed");
+        });
+        // Clear focus from the button.
+        document.activeElement.blur();
+        return false;
+      });
+
+    }
+
+    setupCopyDoiToClipboard();
+  });
+
+</script>

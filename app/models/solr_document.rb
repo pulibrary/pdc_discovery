@@ -85,6 +85,14 @@ class SolrDocument
     fetch("contributor_tsim", [])
   end
 
+  def accessioned_dates
+    fetch("date_accessioned_ssim", [])
+  end
+
+  def accessioned_date
+    accessioned_dates.first
+  end
+
   def issued_dates
     fetch(ISSUED_DATE_FIELD, [])
   end
@@ -139,6 +147,17 @@ class SolrDocument
 
   def uri
     fetch("uri_tesim", [])
+  end
+
+  def doi_url
+    uri.each do |link|
+      return link if link.downcase.start_with?('https://doi.org/')
+    end
+    nil
+  end
+
+  def doi_value
+    doi_url&.gsub('https://doi.org/', '')
   end
 
   def format

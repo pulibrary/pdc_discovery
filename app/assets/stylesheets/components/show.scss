@@ -2,3 +2,12 @@
   float: left;
   width: 70%;
 }
+
+/*
+ * This class is different from Bootstrap's visible (https://getbootstrap.com/docs/4.1/utilities/visibility/)
+ * since `hidden-row` changes the page layout. This is what we want in the Show page as we render each of
+ * the metadata elements in an HTML table rows.
+ */
+.hidden-row {
+  display: none;
+}
