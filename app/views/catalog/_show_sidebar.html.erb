@@ -20,31 +20,43 @@
 
 <script>
   $(function() {
+
+    var setCopiedToClipboard = function(iconEl, labelEl, normalClass, copiedClass) {
+      $(iconEl).removeClass("bi-clipboard");
+      $(iconEl).addClass("bi-clipboard-check");
+      $(labelEl).text("COPIED");
+      $(labelEl).removeClass(normalClass);
+      $(labelEl).addClass(copiedClass);
+    }
+
+    var resetCopyToClipboard = function(iconEl, labelEl, normalClass, copiedClass) {
+      $(labelEl).text("COPY");
+      $(labelEl).removeClass(copiedClass);
+      $(labelEl).addClass(normalClass);
+      $(iconEl).addClass("bi-clipboard");
+      $(iconEl).removeClass("bi-clipboard-check");
+    }
+
+    var errorCopyToClipboard = function(iconEl, errorMsg) {
+      $(iconEl).removeClass("bi-clipboard");
+      $(iconEl).addClass("bi-clipboard-minus")
+      console.log(errorMsg);
+    }
+
     var setupCopyDoiToClipboard = function(linkId, textId) {
 
       $("#copy-doi").click(function(_x) {
         var doi = this.dataset["url"];
-        // Copy value to the clipboard...
+        // Copy value to the clipboard....
         navigator.clipboard.writeText(doi).then(function() {
-          // ...and let the user know
-          $("#copy-doi-icon").removeClass("bi-clipboard");
-          $("#copy-doi-icon").addClass("bi-clipboard-check");
-          $("#copy-doi-label").text("COPIED");
-          $("#copy-doi-label").removeClass("copy-doi-label-normal");
-          $("#copy-doi-label").addClass("copy-doi-label-copied");
+          // ...notify the user
+          setCopiedToClipboard("#copy-doi-icon", "#copy-doi-label", "copy-doi-label-normal", "copy-doi-label-copied");
           setTimeout(function() {
-            // ...after 20 seconds reset display to normal
-            $("#copy-doi-label").text("COPY");
-            $("#copy-doi-label").removeClass("copy-doi-label-copied");
-            $("#copy-doi-label").addClass("copy-doi-label-normal");
-            $("#copy-doi-icon").addClass("bi-clipboard");
-            $("#copy-doi-icon").removeClass("bi-clipboard-check");
+            // ...clear notification after 20 seconds
+            resetCopyToClipboard("#copy-doi-icon", "#copy-doi-label", "copy-doi-label-normal", "copy-doi-label-copied");
           }, 20000);
         }, function() {
-          // ...something went wrong
-          $("#copy-doi-icon").removeClass("bi-clipboard");
-          $("#copy-doi-icon").addClass("bi-clipboard-minus")
-          console.log("Copy DOI to the clipboard failed");
+          errorCopyToClipboard("#copy-doi-icon", "Copy DOI to the clipboard failed");
         });
         // Clear focus from the button.
         document.activeElement.blur();
