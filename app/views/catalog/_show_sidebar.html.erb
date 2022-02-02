@@ -21,6 +21,10 @@
 <script>
   $(function() {
 
+    // Sets the elements to the proper CSS classes once a value has been copied to the clipboard.
+    // iconEl - selector for the HTML element with the clipboard icon
+    // labelEl - selector for the HTML element with the COPY label next to the icon
+    // iconEl and labelEl could be any jQuery valid selector (e.g. ".some-id" or a reference to an element)
     var setCopiedToClipboard = function(iconEl, labelEl, normalClass, copiedClass) {
       $(iconEl).removeClass("bi-clipboard");
       $(iconEl).addClass("bi-clipboard-check");
@@ -29,6 +33,7 @@
       $(labelEl).addClass(copiedClass);
     }
 
+    // Resets the elements to the proper CSS classes (e.g. displays as if the copy has not happened)
     var resetCopyToClipboard = function(iconEl, labelEl, normalClass, copiedClass) {
       $(labelEl).text("COPY");
       $(labelEl).removeClass(copiedClass);
@@ -37,6 +42,7 @@
       $(iconEl).removeClass("bi-clipboard-check");
     }
 
+    // Sets icon and label to indicate that an error happened when copying a value to the clipboard
     var errorCopyToClipboard = function(iconEl, errorMsg) {
       $(iconEl).removeClass("bi-clipboard");
       $(iconEl).addClass("bi-clipboard-minus")
@@ -44,7 +50,6 @@
     }
 
     var setupCopyDoiToClipboard = function(linkId, textId) {
-
       $("#copy-doi").click(function(_x) {
         var doi = this.dataset["url"];
         // Copy value to the clipboard....
@@ -62,7 +67,6 @@
         document.activeElement.blur();
         return false;
       });
-
     }
 
     var setupCitationToggle = function() {
@@ -96,38 +100,26 @@
     }
 
     var setupCopyCitationToClipboard = function(linkId, textId) {
-
       $(".copy-citation-button").click(function(_x) {
         var icon = $(this).children("i");
         var label = $(this).children("span");
         var citation = this.dataset["text"];
         // Copy value to the clipboard...
         navigator.clipboard.writeText(citation).then(function() {
-          // ...and let the user know
-          $(icon).removeClass("bi-clipboard");
-          $(icon).addClass("bi-clipboard-check");
-          $(label).text("COPIED");
-          $(label).removeClass("copy-doi-label-normal");
-          $(label).addClass("copy-doi-label-copied");
+          // ...notify the user
+          setCopiedToClipboard(icon, label, "copy-doi-label-normal", "copy-doi-label-copied");
           setTimeout(function() {
-            // ...after 20 seconds reset display to normal
-            $(label).text("COPY");
-            $(label).removeClass("copy-doi-label-copied");
-            $(label).addClass("copy-doi-label-normal");
-            $(icon).addClass("bi-clipboard");
-            $(icon).removeClass("bi-clipboard-check");
+            // ...clear notification after 20 seconds
+            resetCopyToClipboard(icon, label, "copy-doi-label-normal", "copy-doi-label-copied");
           }, 20000);
         }, function() {
           // ...something went wrong
-          $(icon).removeClass("bi-clipboard");
-          $(icon).addClass("bi-clipboard-minus")
-          console.log("Copy citation to the clipboard failed");
+          errorCopyToClipboard(icon, "Copy citation to the clipboard failed");
         });
         // Clear focus from the button.
         document.activeElement.blur();
         return false;
       });
-
     }
 
     setupCopyDoiToClipboard();
