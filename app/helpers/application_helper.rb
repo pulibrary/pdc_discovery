@@ -127,6 +127,44 @@ module ApplicationHelper
     html.html_safe
   end
 
+  # Renders the menu with the different citation options that we support
+  def render_sidebar_citation_options(prefered_style)
+    html_buttons = DatasetCitation.styles.map do |style|
+      css_class = style == prefered_style ? "btn-outline-primary" : "btn-outline-secondary"
+      tooltip = "Show citation as #{style}"
+      "<button type='button' data-style='#{style}' class='cite-as-button btn #{css_class} btn-xsm' title='#{tooltip}'>#{style}</button>&nbsp;"
+    end
+
+    html = <<-HTML
+    <tr>
+      <th scope="row" class="sidebar-label"><span>Cite as:</span></th>
+      <td class="sidebar-value">#{html_buttons.join}</td>
+    </tr>
+    HTML
+    html.html_safe
+  end
+
+  # Renders a citation in the given style
+  # (notice that only the citation in the preferred style marked as visible)
+  def render_sidebar_citation(citation, style, preferred_style)
+    return if citation.nil?
+    css_class = style == preferred_style ? 'citation-row' : 'citation-row hidden-row'
+    tooltip = 'Copy citation to the clipboard'
+
+    html = <<-HTML
+    <tr class="#{css_class}" data-style="#{style}">
+      <th scope="row" class="sidebar-label"><span></span></th>
+      <td class="sidebar-value">#{html_escape(citation)}
+        <button class="copy-citation-button btn btn-sm" data-style="#{style}" data-text="#{html_escape(citation)}" title="#{tooltip}">
+          <i class="bi bi-clipboard" title="#{tooltip}"></i>
+          <span class="copy-citation-label-normal">COPY</span>
+        </button>
+      </td>
+    </tr>
+    HTML
+    html.html_safe
+  end
+
   # Outputs the HTML to render a list of subjects
   # (this is used on the sidebar)
   def render_subject_search_links(title, values, field)

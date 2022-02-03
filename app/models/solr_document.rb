@@ -445,5 +445,17 @@ class SolrDocument
   def icon_css
     ICONS[genre&.downcase] || 'bi-file-earmark-fill'
   end
+
+  def prefered_citation
+    # Hard-coded to APA until we allow researchers to store a prefered citation for their dataset
+    "APA"
+  end
+
+  def cite(style)
+    year_available = fetch('year_available_itsi', nil)
+    years = year_available ? [year_available.to_s] : []
+    citation = DatasetCitation.new(authors, years, title, 'Data set', publisher.first, doi_url)
+    citation.to_s(style)
+  end
 end
 # rubocop:enable Metrics/ClassLength

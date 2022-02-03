@@ -3,7 +3,7 @@
     <div class="card">
       <div class="document-metadata-table card-body">
         <header>More about this record</header>
-        <table class="table">
+        <table id="metadata-table" class="table">
           <thead></thead>
           <tbody>
             <%= render_field_row_many "Alternative Title", @document.alternative_title %>
@@ -210,11 +210,11 @@
       // Wire the link to toggle between show more/show less
       $(linkId).click(function() {
         if ($(linkId).text() == "Show Less") {
-          $(".toggable-row").toggleClass("hidden-row");
+          $("#metadata-table .toggable-row").toggleClass("hidden-row");
           $(linkId + " i").toggleClass("bi-caret-up bi-caret-down");
           $(linkId + " span").text("Show More");
         } else {
-          $(".toggable-row").toggleClass("hidden-row");
+          $("#metadata-table .toggable-row").toggleClass("hidden-row");
           $(linkId + " i").toggleClass("bi-caret-up bi-caret-down");
           $(linkId + " span").text("Show Less");
         }

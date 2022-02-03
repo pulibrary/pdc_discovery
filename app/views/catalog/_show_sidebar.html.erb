@@ -5,51 +5,120 @@
 </div>
 
 <div id="sidebar-keywords" class="sidebar">
-  <table>
+  <table id="sidebar-table">
     <%= render_sidebar_licenses @document.license %>
     <%= render_subject_search_links "Keywords", @document.subject, "subject_all_ssim" %>
     <% file_counts = @document.file_counts.map { |group| "#{group[:extension]}(#{group[:file_count]})" } %>
     <%= render_sidebar_row "File Types: ", file_counts.join(", ") %>
     <%= render_sidebar_doi_row @document.doi_url, @document.doi_value %>
+    <%= render_sidebar_citation_options @document.prefered_citation %>
+    <% DatasetCitation.styles.each do |style| %>
+      <%= render_sidebar_citation @document.cite(style), style, @document.prefered_citation %>
+    <% end %>
   </table>
 </div>
 
 <script>
   $(function() {
-    var setupCopyDoiToClipboard = function(linkId, textId) {
 
-      $("#copy-doi").click(function(x) {
-        var doi = this.dataset["url"];
-        // Copy value to the clipboard...
-        navigator.clipboard.writeText(doi).then(function() {
-          // ...and let the user know
-          $("#copy-doi-icon").removeClass("bi-clipboard");
-          $("#copy-doi-icon").addClass("bi-clipboard-check");
-          $("#copy-doi-label").text("COPIED");
-          $("#copy-doi-label").removeClass("copy-doi-label-normal");
-          $("#copy-doi-label").addClass("copy-doi-label-copied");
+    // Sets the elements to the proper CSS classes once a value has been copied to the clipboard.
+    var setCopiedToClipboard = function(iconEl, labelEl, normalClass, copiedClass) {
+      $(iconEl).removeClass("bi-clipboard");
+      $(iconEl).addClass("bi-clipboard-check");
+      $(labelEl).text("COPIED");
+      $(labelEl).removeClass(normalClass);
+      $(labelEl).addClass(copiedClass);
+    }
+
+    // Resets the elements to the proper CSS classes (e.g. displays as if the copy has not happened)
+    var resetCopyToClipboard = function(iconEl, labelEl, normalClass, copiedClass) {
+      $(labelEl).text("COPY");
+      $(labelEl).removeClass(copiedClass);
+      $(labelEl).addClass(normalClass);
+      $(iconEl).addClass("bi-clipboard");
+      $(iconEl).removeClass("bi-clipboard-check");
+    }
+
+    // Sets icon and label to indicate that an error happened when copying a value to the clipboard
+    var errorCopyToClipboard = function(iconEl, errorMsg) {
+      $(iconEl).removeClass("bi-clipboard");
+      $(iconEl).addClass("bi-clipboard-minus")
+      console.log(errorMsg);
+    }
+
+    // Copies a value to the clipboard and notifies the user
+    // value - value to copy to the clipboard
+    // iconEl - selector for the HTML element with the clipboard icon
+    // labelEl - selector for the HTML element with the COPY label next to the icon
+    // normalClass - CSS to style the label with initially
+    // copiedClass - CSS to style the label with after a value has been copied to the clipboard
+    // iconEl and labelEl could be any jQuery valid selector (e.g. ".some-id" or a reference to an element)
+    var copyToClipboard = function(value, iconEl, labelEl, normalClass, copiedClass) {
+        // Copy value to the clipboard....
+        navigator.clipboard.writeText(value).then(function() {
+          // ...and notify the user
+          setCopiedToClipboard(iconEl, labelEl, normalClass, copiedClass);
           setTimeout(function() {
-            // ...after 20 seconds reset display to normal
-            $("#copy-doi-label").text("COPY");
-            $("#copy-doi-label").removeClass("copy-doi-label-copied");
-            $("#copy-doi-label").addClass("copy-doi-label-normal");
-            $("#copy-doi-icon").addClass("bi-clipboard");
-            $("#copy-doi-icon").removeClass("bi-clipboard-check");
+            resetCopyToClipboard(iconEl, labelEl, normalClass, copiedClass);
           }, 20000);
         }, function() {
-          // ...something went wrong
-          $("#copy-doi-icon").removeClass("bi-clipboard");
-          $("#copy-doi-icon").addClass("bi-clipboard-minus")
-          console.log("Copy to clipboard failed");
+          errorCopyToClipboard(iconEl, "Copy to clipboard failed");
         });
         // Clear focus from the button.
         document.activeElement.blur();
+    }
+
+    var setupCopyDoiToClipboard = function() {
+      $("#copy-doi").click(function(_x) {
+        var doi = this.dataset["url"];
+        copyToClipboard(doi, "#copy-doi-icon", "#copy-doi-label", "copy-doi-label-normal", "copy-doi-label-copied");
         return false;
       });
+    }
 
+    var setupCitationToggle = function() {
+      $(".cite-as-button").click(function(_x) {
+        var style_selected = this.dataset["style"];
+
+        // Make visible the selected style...
+        $(".citation-row").each(function(_i, value) {
+          if (value.dataset["style"] == style_selected) {
+            $(value).removeClass("hidden-row");
+          } else {
+            $(value).addClass("hidden-row");
+          }
+        });
+
+        // ...update the menu to reflect the active style
+        $(".cite-as-button").each(function(_i, value) {
+          if (value.dataset["style"] == style_selected) {
+            $(value).addClass("btn-outline-primary");
+            $(value).removeClass("btn-outline-secondary");
+          } else {
+            $(value).addClass("btn-outline-secondary");
+            $(value).removeClass("btn-outline-primary");
+          }
+        });
+
+        // Clear focus from the button.
+        document.activeElement.blur();
+        return false;
+      })
+    }
+
+    var setupCopyCitationToClipboard = function(linkId, textId) {
+      $(".copy-citation-button").click(function(_x) {
+        var icon = $(this).children("i");
+        var label = $(this).children("span");
+        var citation = this.dataset["text"];
+        copyToClipboard(citation, icon, label, "copy-doi-label-normal", "copy-doi-label-copied");
+        return false;
+      });
     }
 
     setupCopyDoiToClipboard();
+    setupCitationToggle();
+    setupCopyCitationToClipboard();
   });
 
 </script>
