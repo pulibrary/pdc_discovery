@@ -22,9 +22,6 @@
   $(function() {
 
     // Sets the elements to the proper CSS classes once a value has been copied to the clipboard.
-    // iconEl - selector for the HTML element with the clipboard icon
-    // labelEl - selector for the HTML element with the COPY label next to the icon
-    // iconEl and labelEl could be any jQuery valid selector (e.g. ".some-id" or a reference to an element)
     var setCopiedToClipboard = function(iconEl, labelEl, normalClass, copiedClass) {
       $(iconEl).removeClass("bi-clipboard");
       $(iconEl).addClass("bi-clipboard-check");
@@ -49,22 +46,32 @@
       console.log(errorMsg);
     }
 
-    var setupCopyDoiToClipboard = function(linkId, textId) {
-      $("#copy-doi").click(function(_x) {
-        var doi = this.dataset["url"];
+    // Copies a value to the clipboard and notifies the user
+    // value - value to copy to the clipboard
+    // iconEl - selector for the HTML element with the clipboard icon
+    // labelEl - selector for the HTML element with the COPY label next to the icon
+    // normalClass - CSS to style the label with initially
+    // copiedClass - CSS to style the label with after a value has been copied to the clipboard
+    // iconEl and labelEl could be any jQuery valid selector (e.g. ".some-id" or a reference to an element)
+    var copyToClipboard = function(value, iconEl, labelEl, normalClass, copiedClass) {
         // Copy value to the clipboard....
-        navigator.clipboard.writeText(doi).then(function() {
-          // ...notify the user
-          setCopiedToClipboard("#copy-doi-icon", "#copy-doi-label", "copy-doi-label-normal", "copy-doi-label-copied");
+        navigator.clipboard.writeText(value).then(function() {
+          // ...and notify the user
+          setCopiedToClipboard(iconEl, labelEl, normalClass, copiedClass);
           setTimeout(function() {
-            // ...clear notification after 20 seconds
-            resetCopyToClipboard("#copy-doi-icon", "#copy-doi-label", "copy-doi-label-normal", "copy-doi-label-copied");
+            resetCopyToClipboard(iconEl, labelEl, normalClass, copiedClass);
           }, 20000);
         }, function() {
-          errorCopyToClipboard("#copy-doi-icon", "Copy DOI to the clipboard failed");
+          errorCopyToClipboard(iconEl, "Copy to clipboard failed");
         });
         // Clear focus from the button.
         document.activeElement.blur();
+    }
+
+    var setupCopyDoiToClipboard = function() {
+      $("#copy-doi").click(function(_x) {
+        var doi = this.dataset["url"];
+        copyToClipboard(doi, "#copy-doi-icon", "#copy-doi-label", "copy-doi-label-normal", "copy-doi-label-copied");
         return false;
       });
     }
@@ -104,20 +111,7 @@
         var icon = $(this).children("i");
         var label = $(this).children("span");
         var citation = this.dataset["text"];
-        // Copy value to the clipboard...
-        navigator.clipboard.writeText(citation).then(function() {
-          // ...notify the user
-          setCopiedToClipboard(icon, label, "copy-doi-label-normal", "copy-doi-label-copied");
-          setTimeout(function() {
-            // ...clear notification after 20 seconds
-            resetCopyToClipboard(icon, label, "copy-doi-label-normal", "copy-doi-label-copied");
-          }, 20000);
-        }, function() {
-          // ...something went wrong
-          errorCopyToClipboard(icon, "Copy citation to the clipboard failed");
-        });
-        // Clear focus from the button.
-        document.activeElement.blur();
+        copyToClipboard(citation, icon, label, "copy-doi-label-normal", "copy-doi-label-copied");
         return false;
       });
     }
