@@ -451,11 +451,21 @@ class SolrDocument
     "APA"
   end
 
-  def cite(style)
+  # Returns a DatasetCitation object for the current document
+  def citation
     year_available = fetch('year_available_itsi', nil)
     years = year_available ? [year_available.to_s] : []
     citation = DatasetCitation.new(authors, years, title, 'Data set', publisher.first, doi_url)
+  end
+
+  # Returns a string with the indicated citation style (e.g. APA or Chicago)
+  def cite(style)
     citation.to_s(style)
+  end
+
+  # Returns the ID for a BibTex citation for this document.
+  def bibtex_id
+    citation.bibtex_id
   end
 end
 # rubocop:enable Metrics/ClassLength

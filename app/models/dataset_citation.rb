@@ -4,7 +4,7 @@
 # rubocop:disable Metrics/ParameterLists
 class DatasetCitation
   def self.styles
-    ["APA", "Chicago"]
+    ["APA", "Chicago", "BibTeX"]
   end
 
   # @param authors [<String>] Array of authors.
@@ -25,6 +25,8 @@ class DatasetCitation
   def to_s(style)
     if style == "Chicago"
       chicago
+    elsif style == "BibTeX"
+      bibtex
     else
       apa
     end
@@ -95,6 +97,53 @@ class DatasetCitation
   rescue => ex
     Rails.logger.error "Error generating Chicago citation for (#{@title}): #{ex.message}"
     nil
+  end
+
+  # Returns a string with BibTex citation for the dataset
+  # References:
+  #   https://libguides.nps.edu/citation/ieee-bibtex
+  #   https://www.citethisforme.com/citation-generator/bibtex
+  def bibtex
+    tokens = []
+    if @authors.count > 0
+      # https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Authors
+      tokens << "author = \"#{@authors.join(' and ')}\""
+    end
+
+    if @title.present?
+      tokens << "title = \"#{@title}\""
+    end
+
+    if @publisher.present?
+      tokens << "publisher = \"#{@publisher}\""
+    end
+
+    if @years.count > 0
+      tokens << "year = \"#{@years.first}\""
+    end
+
+    if @doi.present?
+      tokens << "url = \"#{@doi}\""
+    end
+
+    text = ""
+    text += "@electronic{ #{bibtex_id},\r\n"
+    text += tokens.map { |token| "  #{token}" }.join(",\r\n") + "\r\n"
+    text += "}"
+    text
+  rescue => ex
+    Rails.logger.error "Error generating BibTex citation for (#{@title}): #{ex.message}"
+    nil
+  end
+
+  # Returns an ID value for a BibTex citation
+  def bibtex_id
+    author_id = 'unknown'
+    if @authors.count > 0
+      author_id = @authors.first.downcase.gsub(' ','_').gsub(/[^a-z0-9_]/,"")
+    end
+    year_id = @years.first&.to_s || 'unknown'
+    "#{author_id}_#{year_id}"
   end
 
   # Appends a dot to a string if it does not end with one.

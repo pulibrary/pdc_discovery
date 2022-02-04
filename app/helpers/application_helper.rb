@@ -146,10 +146,20 @@ module ApplicationHelper
 
   # Renders a citation in the given style
   # (notice that only the citation in the preferred style marked as visible)
-  def render_sidebar_citation(citation, style, preferred_style)
+  def render_sidebar_citation(citation, style, preferred_style, id)
     return if citation.nil?
     css_class = style == preferred_style ? 'citation-row' : 'citation-row hidden-row'
     tooltip = 'Copy citation to the clipboard'
+
+    download_button = ""
+    if style == "BibTeX"
+      download_button = <<-HTML
+        <button id="download-bibtex" class="btn btn-sm" data-url="#{catalog_bibtex_url(id:id)}">
+          <i class="bi bi-file-arrow-down" title="Download citation"></i>
+          <span class="copy-citation-label-normal">DOWNLOAD</span>
+        </button>
+      HTML
+    end
 
     html = <<-HTML
     <tr class="#{css_class}" data-style="#{style}">
@@ -159,6 +169,7 @@ module ApplicationHelper
           <i class="bi bi-clipboard" title="#{tooltip}"></i>
           <span class="copy-citation-label-normal">COPY</span>
         </button>
+        #{download_button}
       </td>
     </tr>
     HTML

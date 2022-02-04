@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   root to: 'catalog#index'
   concern :searchable, Blacklight::Routes::Searchable.new
 
+  get 'catalog/:id/bibtex' => 'catalog#bibtex', as: :catalog_bibtex
+
   resource :catalog, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
     concerns :searchable
     concerns :range_searchable

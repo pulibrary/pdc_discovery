@@ -207,4 +207,11 @@ class CatalogController < ApplicationController
     # default 'mySuggester', uncomment and provide it below
     # config.autocomplete_suggester = 'mySuggester'
   end
+
+  # Returns the raw BibTex citation information
+  def bibtex
+    _unused, @document = search_service.fetch(params[:id])
+    citation = @document.cite("BibTeX")
+    send_data citation, filename: "#{@document.bibtex_id}.bibtex", type: 'text/plain', disposition: 'attachment'
+  end
 end
