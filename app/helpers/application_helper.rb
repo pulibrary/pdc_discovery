@@ -154,7 +154,7 @@ module ApplicationHelper
     download_button = ""
     if style == "BibTeX"
       download_button = <<-HTML
-        <button id="download-bibtex" class="btn btn-sm" data-url="#{catalog_bibtex_url(id:id)}">
+        <button id="download-bibtex" class="btn btn-sm" data-url="#{catalog_bibtex_url(id: id)}">
           <i class="bi bi-file-arrow-down" title="Download citation"></i>
           <span class="copy-citation-label-normal">DOWNLOAD</span>
         </button>

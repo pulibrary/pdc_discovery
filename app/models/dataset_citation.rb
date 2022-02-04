@@ -2,6 +2,9 @@
 
 # Handles citations for datasets
 # rubocop:disable Metrics/ParameterLists
+# rubocop:disable Metrics/ClassLength
+# rubocop:disable Style/NumericPredicate
+# rubocop:disable Style/IfUnlessModifier
 class DatasetCitation
   def self.styles
     ["APA", "Chicago", "BibTeX"]
@@ -140,7 +143,7 @@ class DatasetCitation
   def bibtex_id
     author_id = 'unknown'
     if @authors.count > 0
-      author_id = @authors.first.downcase.gsub(' ','_').gsub(/[^a-z0-9_]/,"")
+      author_id = @authors.first.downcase.tr(' ', '_').gsub(/[^a-z0-9_]/, '')
     end
     year_id = @years.first&.to_s || 'unknown'
     "#{author_id}_#{year_id}"
@@ -166,3 +169,6 @@ class DatasetCitation
   end
 end
 # rubocop:enable Metrics/ParameterLists
+# rubocop:enable Metrics/ClassLength
+# rubocop:enable Style/NumericPredicate
+# rubocop:enable Style/IfUnlessModifier

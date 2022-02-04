@@ -27,12 +27,12 @@ RSpec.describe DatasetCitation do
 
   describe "#bibtex" do
     it "returns correct format" do
-      bibtex = "@electronic{ menard_je_2018,\r\n" +
-      "  author = \"Menard, J.E.\",\r\n" +
-      "  title = \"Compact steady-state tokamak\",\r\n" +
-      "  publisher = \"Princeton University\",\r\n" +
-      "  year = \"2018\",\r\n" +
-      "  url = \"http://doi.org/princeton/test123\"\r\n" +
+      bibtex = "@electronic{ menard_je_2018,\r\n" \
+      "  author = \"Menard, J.E.\",\r\n" \
+      "  title = \"Compact steady-state tokamak\",\r\n" \
+      "  publisher = \"Princeton University\",\r\n" \
+      "  year = \"2018\",\r\n" \
+      "  url = \"http://doi.org/princeton/test123\"\r\n" \
       "}"
       expect(single_author_dataset.bibtex).to eq bibtex
     end
