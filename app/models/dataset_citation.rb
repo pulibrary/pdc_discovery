@@ -2,9 +2,12 @@
 
 # Handles citations for datasets
 # rubocop:disable Metrics/ParameterLists
+# rubocop:disable Metrics/ClassLength
+# rubocop:disable Style/NumericPredicate
+# rubocop:disable Style/IfUnlessModifier
 class DatasetCitation
   def self.styles
-    ["APA", "Chicago"]
+    ["APA", "Chicago", "BibTeX"]
   end
 
   # @param authors [<String>] Array of authors.
@@ -25,6 +28,8 @@ class DatasetCitation
   def to_s(style)
     if style == "Chicago"
       chicago
+    elsif style == "BibTeX"
+      bibtex
     else
       apa
     end
@@ -97,6 +102,88 @@ class DatasetCitation
     nil
   end
 
+  # Returns a string with BibTex citation for the dataset
+  # References:
+  #   https://libguides.nps.edu/citation/ieee-bibtex
+  #   https://www.citethisforme.com/citation-generator/bibtex
+  def bibtex
+    tokens = []
+    if @authors.count > 0
+      # https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Authors
+      tokens << "author = \"#{@authors.join(' and ')}\""
+    end
+
+    if @title.present?
+      tokens << "title = \"#{@title}\""
+    end
+
+    if @publisher.present?
+      tokens << "publisher = \"#{@publisher}\""
+    end
+
+    if @years.count > 0
+      tokens << "year = \"#{@years.first}\""
+    end
+
+    if @doi.present?
+      tokens << "url = \"#{@doi}\""
+    end
+
+    text = ""
+    text += "@electronic{ #{bibtex_id},\r\n"
+    text += tokens.map { |token| "  #{token}" }.join(",\r\n") + "\r\n"
+    text += "}"
+    text
+  rescue => ex
+    Rails.logger.error "Error generating BibTex citation for (#{@title}): #{ex.message}"
+    nil
+  end
+
+  # Return a string with the ContextObjects in Spans (COinS) information
+  # https://en.wikipedia.org/wiki/COinS
+  def coins
+    tokens = []
+    tokens << "url_ver=Z39.88-2004"
+    tokens << "ctx_ver=Z39.88-2004"
+    tokens << "rft.type=webpage"
+    tokens << "rft_val_fmt=#{CGI.escape('info:ofi/fmt:kev:mtx:dc')}"
+
+    if @title.present?
+      tokens << "rft.title=#{CGI.escape(@title)}"
+    end
+
+    @authors.each do |author|
+      tokens << "rft.au=#{CGI.escape(author)}"
+    end
+
+    if @years.count > 0
+      tokens << "rft.date=#{CGI.escape(@years.first.to_s)}"
+    end
+
+    if @publisher.present?
+      tokens << "rft.publisher=#{CGI.escape(@publisher)}"
+    end
+
+    if @doi.present?
+      tokens << "rft.identifier=#{CGI.escape(@doi)}"
+    end
+
+    "<span class=\"Z3988\" title=\"#{tokens.join('&amp;')}\"></span>"
+  rescue => ex
+    Rails.logger.error "Error generating COinS citation for (#{@title}): #{ex.message}"
+    nil
+  end
+
+  # Returns an ID value for a BibTex citation
+  def bibtex_id
+    author_id = 'unknown'
+    if @authors.count > 0
+      author_id = @authors.first.downcase.tr(' ', '_').gsub(/[^a-z0-9_]/, '')
+    end
+    year_id = @years.first&.to_s || 'unknown'
+    "#{author_id}_#{year_id}"
+  end
+
   # Appends a dot to a string if it does not end with one.
   def append_dot(value)
     return nil if value.nil?
@@ -117,3 +204,6 @@ class DatasetCitation
   end
 end
 # rubocop:enable Metrics/ParameterLists
+# rubocop:enable Metrics/ClassLength
+# rubocop:enable Style/NumericPredicate
+# rubocop:enable Style/IfUnlessModifier

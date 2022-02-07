@@ -25,6 +25,28 @@ RSpec.describe DatasetCitation do
     end
   end
 
+  describe "#bibtex" do
+    it "returns correct format" do
+      bibtex = "@electronic{ menard_je_2018,\r\n" \
+      "  author = \"Menard, J.E.\",\r\n" \
+      "  title = \"Compact steady-state tokamak\",\r\n" \
+      "  publisher = \"Princeton University\",\r\n" \
+      "  year = \"2018\",\r\n" \
+      "  url = \"http://doi.org/princeton/test123\"\r\n" \
+      "}"
+      expect(single_author_dataset.bibtex).to eq bibtex
+    end
+  end
+
+  describe "#coins" do
+    it "returns correct format" do
+      coins = '<span class="Z3988" title="url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rft.type=webpage&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;' \
+      'rft.title=Compact+steady-state+tokamak&amp;rft.au=Menard%2C+J.E.&amp;rft.date=2018&amp;rft.publisher=Princeton+University&amp;' \
+      'rft.identifier=http%3A%2F%2Fdoi.org%2Fprinceton%2Ftest123"></span>'
+      expect(single_author_dataset.coins).to eq coins
+    end
+  end
+
   describe "title" do
     it "does not add extra periods to title and publisher if they come in the source data" do
       citation = described_class.new(["Menard, J.E."], [2018], "Compact steady-state tokamak.", "Data set", "Princeton University.", "http://doi.org/princeton/test123")

@@ -13,7 +13,7 @@
     <%= render_sidebar_doi_row @document.doi_url, @document.doi_value %>
     <%= render_sidebar_citation_options @document.prefered_citation %>
     <% DatasetCitation.styles.each do |style| %>
-      <%= render_sidebar_citation @document.cite(style), style, @document.prefered_citation %>
+      <%= render_sidebar_citation @document.cite(style), style, @document.prefered_citation, @document.id %>
     <% end %>
   </table>
 </div>
@@ -116,9 +116,17 @@
       });
     }
 
+    var setupDownloadCitation = function() {
+      $("#download-bibtex").click(function (e) {
+        e.preventDefault();
+        window.location.href= this.dataset["url"];
+      });
+    }
+
     setupCopyDoiToClipboard();
     setupCitationToggle();
     setupCopyCitationToClipboard();
+    setupDownloadCitation();
   });
 
 </script>
