@@ -453,9 +453,11 @@ class SolrDocument
 
   # Returns a DatasetCitation object for the current document
   def citation
-    year_available = fetch('year_available_itsi', nil)
-    years = year_available ? [year_available.to_s] : []
-    DatasetCitation.new(authors, years, title, 'Data set', publisher.first, doi_url)
+    @citation ||= begin
+      year_available = fetch('year_available_itsi', nil)
+      years = year_available ? [year_available.to_s] : []
+      DatasetCitation.new(authors, years, title, 'Data set', publisher.first, doi_url)
+    end
   end
 
   # Returns a string with the indicated citation style (e.g. APA or Chicago)

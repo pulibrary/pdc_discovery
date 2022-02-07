@@ -25,4 +25,9 @@ describe 'Single item page', type: :system, js: true do
     expect(page).to have_content apa_citation
   end
   # rubocop:enable Layout/LineLength
+
+  it "has expected HTML SPAN element with COinS information" do
+    visit '/catalog/78348'
+    expect(page.html.include?('<span class="Z3988"')).to be true
+  end
 end

@@ -139,6 +139,41 @@ class DatasetCitation
     nil
   end
 
+  # Return a string with the ContextObjects in Spans (COinS) information
+  # https://en.wikipedia.org/wiki/COinS
+  def coins
+    tokens = []
+    tokens << "url_ver=Z39.88-2004"
+    tokens << "ctx_ver=Z39.88-2004"
+    tokens << "rft.type=webpage"
+    tokens << "rft_val_fmt=#{CGI.escape('info:ofi/fmt:kev:mtx:dc')}"
+
+    if @title.present?
+      tokens << "rft.title=#{CGI.escape(@title)}"
+    end
+
+    @authors.each do |author|
+      tokens << "rft.au=#{CGI.escape(author)}"
+    end
+
+    if @years.count > 0
+      tokens << "rft.date=#{CGI.escape(@years.first.to_s)}"
+    end
+
+    if @publisher.present?
+      tokens << "rft.publisher=#{CGI.escape(@publisher)}"
+    end
+
+    if @doi.present?
+      tokens << "rft.identifier=#{CGI.escape(@doi)}"
+    end
+
+    "<span class=\"Z3988\" title=\"#{tokens.join('&amp;')}\"></span>"
+  rescue => ex
+    Rails.logger.error "Error generating COinS citation for (#{@title}): #{ex.message}"
+    nil
+  end
+
   # Returns an ID value for a BibTex citation
   def bibtex_id
     author_id = 'unknown'
