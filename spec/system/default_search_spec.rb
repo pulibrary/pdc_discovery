@@ -8,6 +8,7 @@ describe "Default search", type: :system do
       xml = file_fixture("single_item.xml").read
       indexer = Indexer.new(xml)
       indexer.index
+      Blacklight.default_index.connection.commit
     end
 
     it "finds value only indexed in catch all field." do
