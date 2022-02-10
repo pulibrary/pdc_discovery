@@ -47,10 +47,10 @@
           alternative_title_tesim
           author_tesim
           subject_all_tesim
-          all_text_timv
+          all_text_teimv
         </str>
         <str name="pf">
-          all_text_timv^10
+          all_text_teimv^10
         </str>
 
        <str name="author_qf">
