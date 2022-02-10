@@ -12,10 +12,10 @@ describe "Default search", type: :system do
 
     it "finds value only indexed in catch all field." do
       num_docs = solr_num_documents({ q: 'Stotler_PoP.zip' })
-      expect(num_docs).to be 1
+      expect(num_docs).to eq 1
 
       num_docs = solr_num_documents({ q: 'not-existing-file.txt' })
-      expect(num_docs).to be 0
+      expect(num_docs).to eq 0
     end
   end
 end
