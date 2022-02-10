@@ -271,14 +271,25 @@ to_field 'subject_mesh_tesim', extract_xpath("/item/metadata/key[text()='dc.subj
 to_field 'subject_other_tesim', extract_xpath("/item/metadata/key[text()='dc.subject.other']/../value")
 
 # subject_all_ssim is used for faceting (must be string)
-to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dc.subject']/../value")
-to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dcterms.subject']/../value")
-to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dc.subject.classification']/../value")
-to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dc.subject.ddc']/../value")
-to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dc.subject.lcc']/../value")
-to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dc.subject.lcsh']/../value")
-to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dc.subject.mesh']/../value")
-to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dc.subject.other']/../value")
+# subject_all_tesim is used for searching (use text english)
+to_field ['subject_all_ssim', 'subject_all_tesim'] do |record, accumulator, _context|
+  xpaths = []
+  xpaths << "/item/metadata/key[text()='dc.subject']/../value"
+  xpaths << "/item/metadata/key[text()='dcterms.subject']/../value"
+  xpaths << "/item/metadata/key[text()='dc.subject.classification']/../value"
+  xpaths << "/item/metadata/key[text()='dc.subject.ddc']/../value"
+  xpaths << "/item/metadata/key[text()='dc.subject.lcc']/../value"
+  xpaths << "/item/metadata/key[text()='dc.subject.lcsh']/../value"
+  xpaths << "/item/metadata/key[text()='dc.subject.mesh']/../value"
+  xpaths << "/item/metadata/key[text()='dc.subject.other']/../value"
+
+  values = []
+  xpaths.each do |xpath|
+    values += record.xpath(xpath).map(&:text)
+  end
+
+  accumulator.concat values.uniq
+end
 
 # ==================
 # genre, provenance, peer review, alternative title fields

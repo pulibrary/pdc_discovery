@@ -45,7 +45,7 @@
           id
           title_tsim
           author_tesim
-          subject_tesim
+          subject_all_tesim
           all_text_timv
         </str>
         <str name="pf">
@@ -63,7 +63,7 @@
        <str name="title_pf">
        </str>
        <str name="subject_qf">
-          subject_tesim
+          subject_all_tesim
        </str>
        <str name="subject_pf">
        </str>
