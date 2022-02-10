@@ -43,7 +43,8 @@
        -->
         <str name="qf">
           id
-          title_tsim
+          title_tesim
+          alternative_title_tesim
           author_tesim
           subject_all_tesim
           all_text_timv
@@ -58,7 +59,8 @@
        <str name="author_pf">
        </str>
        <str name="title_qf">
-          title_tsim
+          title_tesim
+          alternative_title_tesim
        </str>
        <str name="title_pf">
        </str>

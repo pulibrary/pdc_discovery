@@ -194,7 +194,7 @@
     <dynamicField name="*suggest" type="textSuggest" indexed="true" stored="false" multiValued="true" />
 
     <!-- We populate this field manually via Traject (rather than via copyFields) -->
-    <field name="all_text_timv" type="text" stored="false" indexed="true" multiValued="true" termVectors="true" termPositions="true" termOffsets="true"/>
+    <field name="all_text_teimv" type="text_en" stored="false" indexed="true" multiValued="true" termVectors="true" termPositions="true" termOffsets="true"/>
 
   </fields>
 
@@ -215,9 +215,9 @@
   <copyField source="*_ssim" dest="spell"/>
   <copyField source="*_si" dest="spell"/>
 
-  <copyField source="author_tsim" dest="author_spell"/>
-  <copyField source="subject_ssim" dest="subject_spell"/>
-  <copyField source="title_tsim" dest="title_spell"/>
+  <copyField source="author_tesim" dest="author_spell"/>
+  <copyField source="subject_all_tesim" dest="subject_spell"/>
+  <copyField source="title_tesim" dest="title_spell"/>
 
   <types>
     <fieldType name="string" class="solr.StrField" sortMissingLast="true" />

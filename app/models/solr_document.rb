@@ -11,7 +11,7 @@ class SolrDocument
   end
 
   field_semantics.merge!(
-    title: 'title_tsim',
+    title: 'title_tesim',
     contributor: 'author_tesim',
     format: 'genre_ssim',
     date: 'issue_date_ssim'
@@ -36,7 +36,7 @@ class SolrDocument
   DESCRIPTION_FIELD = 'description_tsim'
   ISSUED_DATE_FIELD = 'issue_date_ssim'
   METHODS_FIELD = 'methods_tsim'
-  TITLE_FIELD = 'title_tsim'
+  TITLE_FIELD = 'title_tesim'
 
   # These icons map to CSS classes in Bootstrap
   ICONS = {
@@ -293,7 +293,7 @@ class SolrDocument
   end
 
   def alternative_title
-    fetch("alternative_title_ssim", [])
+    fetch("alternative_title_tesim", [])
   end
 
   def genres
