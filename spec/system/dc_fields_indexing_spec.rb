@@ -28,11 +28,11 @@ describe 'DataSpace research data all fields indexing', type: :system do
   end
 
   it 'title' do
-    expect(result['title_ssim'].first).to eq 'Sowing the Seeds for More Usable Web Archives: A Usability Study of Archive-It'
+    expect(result['title_tesim'].first).to eq 'Sowing the Seeds for More Usable Web Archives: A Usability Study of Archive-It'
   end
 
   it 'alternative_title' do
-    expect(result['alternative_title_ssim'].first).to eq 'Usability Study of Archive-It for Libraries'
+    expect(result['alternative_title_tesim'].first).to eq 'Usability Study of Archive-It for Libraries'
   end
 
   it 'author' do

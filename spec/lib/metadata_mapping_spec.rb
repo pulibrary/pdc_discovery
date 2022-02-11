@@ -37,8 +37,7 @@ RSpec.describe Indexer do
       end
 
       it "title" do
-        expect(indexed_record["title_ssim"]).to contain_exactly "Midplane neutral density profiles in the National Spherical Torus Experiment"
-        expect(indexed_record["title_tsim"]).to contain_exactly "Midplane neutral density profiles in the National Spherical Torus Experiment"
+        expect(indexed_record["title_tesim"]).to contain_exactly "Midplane neutral density profiles in the National Spherical Torus Experiment"
       end
 
       it "uri" do

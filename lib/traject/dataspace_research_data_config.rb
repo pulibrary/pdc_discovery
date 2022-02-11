@@ -24,7 +24,6 @@ end
 
 to_field 'abstract_tsim', extract_xpath("/item/metadata/key[text()='dc.description.abstract']/../value")
 to_field 'abstract_tsim', extract_xpath("/item/metadata/key[text()='dcterms.abstract']/../value")
-to_field 'author_tesim', extract_xpath("/item/metadata/key[text()='dc.contributor.author']/../value")
 to_field 'creator_tesim', extract_xpath("/item/metadata/key[text()='dcterms.creator']/../value")
 to_field 'contributor_tsim', extract_xpath("/item/metadata/key[text()='dc.contributor']/../value")
 to_field 'contributor_tsim', extract_xpath("/item/metadata/key[text()='dcterms.contributor']/../value")
@@ -32,16 +31,39 @@ to_field 'description_tsim', extract_xpath("/item/metadata/key[text()='dc.descri
 to_field 'description_tsim', extract_xpath("/item/metadata/key[text()='dcterms.description']/../value")
 to_field 'handle_ssim', extract_xpath('/item/handle')
 to_field 'id', extract_xpath('/item/id')
-to_field 'title_ssim', extract_xpath('/item/name')
-to_field 'title_tsim', extract_xpath('/item/name')
-to_field 'title_ssim', extract_xpath("/item/metadata/key[text()='dcterms.title']/../value")
-to_field 'title_tsim', extract_xpath("/item/metadata/key[text()='dcterms.title']/../value")
 to_field 'uri_tesim', extract_xpath("/item/metadata/key[text()='dc.identifier.uri']/../value")
-
 to_field 'collection_id_ssi', extract_xpath('/item/parentCollection/id')
 to_field 'handle_ssi', extract_xpath('/item/handle')
 
+# ==================
+# author fields
+
+to_field 'author_tesim', extract_xpath("/item/metadata/key[text()='dc.contributor.author']/../value")
+
+to_field 'author_si' do |record, accumulator, _c|
+  values = record.xpath("/item/metadata/key[text()='dc.contributor.author']/../value").map(&:text)
+  accumulator.concat [values.uniq.sort.first]
+end
+
+# ==================
+# title fields
+
+to_field 'title_tesim', extract_xpath('/item/name')
+to_field 'title_tesim', extract_xpath("/item/metadata/key[text()='dcterms.title']/../value")
+
+to_field 'title_si' do |record, accumulator, _c|
+  values = []
+  values += record.xpath('/item/name').map(&:text)
+  values += record.xpath("/item/metadata/key[text()='dcterms.title']/../value").map(&:text)
+  accumulator.concat [values.uniq.first]
+end
+
+to_field 'alternative_title_tesim', extract_xpath("/item/metadata/key[text()='dc.title.alternative']/../value")
+to_field 'alternative_title_tesim', extract_xpath("/item/metadata/key[text()='dcterms.alternative']/../value")
+
+# ==================
 # Calculate domain from the communities
+
 to_field 'domain_ssi' do |record, accumulator, _context|
   communities = record.xpath("/item/parentCommunityList/type[text()='community']/../name").map(&:text)
   domains = Domain.from_communities(communities)
@@ -271,23 +293,32 @@ to_field 'subject_mesh_tesim', extract_xpath("/item/metadata/key[text()='dc.subj
 to_field 'subject_other_tesim', extract_xpath("/item/metadata/key[text()='dc.subject.other']/../value")
 
 # subject_all_ssim is used for faceting (must be string)
-to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dc.subject']/../value")
-to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dcterms.subject']/../value")
-to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dc.subject.classification']/../value")
-to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dc.subject.ddc']/../value")
-to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dc.subject.lcc']/../value")
-to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dc.subject.lcsh']/../value")
-to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dc.subject.mesh']/../value")
-to_field 'subject_all_ssim', extract_xpath("/item/metadata/key[text()='dc.subject.other']/../value")
+# subject_all_tesim is used for searching (use text english)
+to_field ['subject_all_ssim', 'subject_all_tesim'] do |record, accumulator, _context|
+  xpaths = []
+  xpaths << "/item/metadata/key[text()='dc.subject']/../value"
+  xpaths << "/item/metadata/key[text()='dcterms.subject']/../value"
+  xpaths << "/item/metadata/key[text()='dc.subject.classification']/../value"
+  xpaths << "/item/metadata/key[text()='dc.subject.ddc']/../value"
+  xpaths << "/item/metadata/key[text()='dc.subject.lcc']/../value"
+  xpaths << "/item/metadata/key[text()='dc.subject.lcsh']/../value"
+  xpaths << "/item/metadata/key[text()='dc.subject.mesh']/../value"
+  xpaths << "/item/metadata/key[text()='dc.subject.other']/../value"
+
+  values = []
+  xpaths.each do |xpath|
+    values += record.xpath(xpath).map(&:text)
+  end
+
+  accumulator.concat values.uniq
+end
 
 # ==================
-# genre, provenance, peer review, alternative title fields
+# genre, provenance, peer review fields
 to_field 'genre_ssim', extract_xpath("/item/metadata/key[text()='dc.type']/../value")
 to_field 'genre_ssim', extract_xpath("/item/metadata/key[text()='dcterms.type']/../value")
 to_field 'provenance_ssim', extract_xpath("/item/metadata/key[text()='dc.provenance']/../value")
 to_field 'peer_review_status_ssim', extract_xpath("/item/metadata/key[text()='dc.description.version']/../value")
-to_field 'alternative_title_ssim', extract_xpath("/item/metadata/key[text()='dc.title.alternative']/../value")
-to_field 'alternative_title_ssim', extract_xpath("/item/metadata/key[text()='dcterms.alternative']/../value")
 
 # ==================
 # contributor fields
@@ -333,7 +364,7 @@ to_field 'files_ss' do |record, accumulator, _context|
 end
 
 # Indexes the entire text in a catch-all field.
-to_field 'all_text_timv' do |record, accumulator, _context|
+to_field 'all_text_teimv' do |record, accumulator, _context|
   all_text = record.xpath("//text()").map(&:to_s).join(" ")
   accumulator.concat [all_text]
 end

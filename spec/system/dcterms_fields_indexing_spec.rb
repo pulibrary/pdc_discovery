@@ -28,7 +28,7 @@ describe 'DataSpace research data all fields indexing', type: :system do
   end
 
   it 'title' do
-    expect(result['title_ssim'].first).to eq 'Subject Liaisons in Academic Libraries: An Open Access Data Set from 2015'
+    expect(result['title_tesim'].first).to eq 'Subject Liaisons in Academic Libraries: An Open Access Data Set from 2015'
   end
 
   # rubocop:disable Layout/LineLength
@@ -54,7 +54,7 @@ describe 'DataSpace research data all fields indexing', type: :system do
   end
 
   it 'alternative_title' do
-    expect(result['alternative_title_ssim'].first).to eq 'Subject Liaisons in Academic Libraries'
+    expect(result['alternative_title_tesim'].first).to eq 'Subject Liaisons in Academic Libraries'
   end
 
   it 'audience' do
