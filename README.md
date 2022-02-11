@@ -55,3 +55,13 @@ pulbot: `pulbot deploy pdc_discovery to [staging|production]`
 ```ruby
 rake index:research_data
 ```
+
+### Updating Solr in production/staging
+To make changes to the Solr in production/staging you need to update the files in the [pul_solr](https://github.com/pulibrary/pul_solr) repository and deploy them. The basic steps are:
+
+1. Update the [configuration file for PDC Discovery](https://github.com/pulibrary/pul_solr/tree/main/solr_configs/pdc-discovery)
+2. Deploy the changes, e.g. `cap solr8-staging deploy`.
+
+You can see the list of Capistrano environments [here](https://github.com/pulibrary/pul_solr/tree/main/config/deploy)
+
+The deploy will update the configuration for all Solr collections in the given environment, but it does not cause downtime. If you need to manually reload a configuration for a given Solr collection you can do it via the Solr Admin UI.
