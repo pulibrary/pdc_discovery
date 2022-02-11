@@ -50,6 +50,8 @@ This is convenient when you need to step through the code as `byebug` does not a
 ## Deploying
 pulbot: `pulbot deploy pdc_discovery to [staging|production]`
 
+To create a tagged release use the [steps in the RDSS handbook](https://github.com/pulibrary/rdss-handbook/blob/main/release_process.md)
+
 ## Indexing research data from DataSpace
 
 ```ruby
