@@ -59,8 +59,11 @@ rake index:research_data
 ### Updating Solr in production/staging
 To make changes to the Solr in production/staging you need to update the files in the [pul_solr](https://github.com/pulibrary/pul_solr) repository and deploy them. The basic steps are:
 
-1. Update the [configuration file for PDC Discovery](https://github.com/pulibrary/pul_solr/tree/main/solr_configs/pdc-discovery)
-2. Deploy the changes, e.g. `cap solr8-staging deploy`.
+1. Connect to the VPN.
+2. Optional. You can tunnel to machine running Solr `ssh -L 8983:localhost:8983 pulsys@lib-solr-staging4` if you want to see your current configuration (e.g. `solrconfig.xml` or `schema.xml`).
+3. Update the [configuration file for PDC Discovery](https://github.com/pulibrary/pul_solr/tree/main/solr_configs/pdc-discovery)
+4. Make sure you are on the `pul-solr` repo.
+5. Deploy the changes, e.g. `bundle exec cap solr8-staging deploy`.
 
 You can see the list of Capistrano environments [here](https://github.com/pulibrary/pul_solr/tree/main/config/deploy)
 
