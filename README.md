@@ -7,7 +7,7 @@ A discovery portal for Princeton research data. Initially it will provide a bett
 
 
 ## Dependencies
-* Ruby: 2.6.6
+* Ruby: 2.7.5
 * nodejs: 12.18.3
 * yarn: 1.22.10
 * [Lando](https://github.com/lando/lando/releases): 3.0.0
