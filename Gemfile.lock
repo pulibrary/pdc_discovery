@@ -111,6 +111,9 @@ GEM
       marc-fastxmlwriter
       rails
       traject (~> 3.0)
+    blacklight_dynamic_sitemap (0.5.0)
+      blacklight (> 6.0)
+      rails (<= 6.2)
     blacklight_range_limit (7.9.1)
       blacklight (~> 7.0)
     bootsnap (1.7.5)
@@ -502,6 +505,7 @@ DEPENDENCIES
   bixby
   blacklight (>= 7.0)
   blacklight-marc (>= 7.0.0.rc1, < 8)
+  blacklight_dynamic_sitemap
   blacklight_range_limit (>= 7.0.0, < 8)
   bootsnap (>= 1.4.4)
   bootstrap (~> 4.0)
