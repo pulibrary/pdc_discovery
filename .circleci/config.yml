@@ -4,7 +4,7 @@ version: 2.1
 executors:
   pdc_discovery_executor_build:
     docker:
-      - image: circleci/ruby:2.6.6-node-browsers
+      - image: circleci/ruby:2.7.5-node-browsers
         environment: &docker_env_default
           BUNDLER_VERSION: 2.1.4
           BUNDLE_JOBS: 3
@@ -14,7 +14,7 @@ executors:
     working_directory: ~/pdc_discovery
   pdc_discovery_executor:
     docker:
-      - image: circleci/ruby:2.6.6-node-browsers
+      - image: circleci/ruby:2.7.5-node-browsers
         environment:
           <<: *docker_env_default
           DB_HOST: localhost
