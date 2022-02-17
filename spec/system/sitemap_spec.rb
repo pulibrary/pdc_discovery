@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe 'Dynamic Sitemap', type: :system do
+RSpec.describe 'Dynamic Sitemap', type: :system, js: false do
   let(:globus_fixtures) { File.read(File.join(fixture_path, 'globus_items.xml')) }
   let(:indexer) do
     Indexer.new(globus_fixtures)
@@ -30,7 +30,7 @@ RSpec.describe 'Dynamic Sitemap', type: :system do
     end
     it 'renders <url> elements' do
       visit blacklight_dynamic_sitemap.sitemap_path('1')
-      expect(page).to have_xpath('//url', count: 6)
+      expect(page).to have_xpath('//url', count: 1)
     end
   end
 end
