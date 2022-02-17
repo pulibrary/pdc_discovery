@@ -204,11 +204,6 @@
       destination field is to use the dynamic field syntax.
       copyField also supports a maxChars to copy setting.  -->
 
-  <copyField source="*_tsim" dest="suggest"/>
-  <copyField source="*_tesim" dest="suggest"/>
-  <copyField source="*_ssim" dest="suggest"/>
-  <copyField source="*_si" dest="suggest"/>
-
   <!-- TODO: Look into if these are actually being used. -->
   <copyField source="*_tsim" dest="spell"/>
   <copyField source="*_tesim" dest="spell"/>
