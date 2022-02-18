@@ -71,23 +71,8 @@ $(function() {
 
   // Returns the active facet value for a given field
   var activeFacet = function(fieldName) {
-    return queryStringParam("f%5B" + fieldName + "%5D%5B%5D"); // URL encoded for: f[fieldname][]
+    return queryStringParam(encodeURI("f[" + fieldName + "][]"));
   }
-
-  // // Hides a facet value if it matches a particular value.
-  // // We do this to remove a subcommunity that matches the current community selected in the facets.
-  // var hideFacetValue = function(fieldName, value) {
-  //   $(`#facet-${fieldName} .card-body .facet-values li`).each(function(i, li) {
-  //     var label = $(li).find(`.facet-label`).text();
-  //     if (label == value) {
-  //       $(li).remove();
-  //       var valuesCount = $(`#facet-${fieldName} .card-body .facet-values li`).length;
-  //       if (valuesCount == 0) {
-  //         hideFacetGroup(fieldName);
-  //       }
-  //     }
-  //   });
-  // }
 
   // Hides an entire facet group
   var hideFacetGroup = function(fieldName) {
