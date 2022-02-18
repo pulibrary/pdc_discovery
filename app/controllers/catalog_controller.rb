@@ -92,6 +92,9 @@ class CatalogController < ApplicationController
     config.add_facet_field 'subject_all_ssim', label: 'Subject'
     config.add_facet_field 'publisher_ssim', label: 'Publisher'
     config.add_facet_field 'year_available_itsi', label: 'Year Available', range: true
+    config.add_facet_field 'community_root_name_ssi', label: 'Community'
+    config.add_facet_field 'community_name_ssi', label: 'Subcommunity'
+    config.add_facet_field 'collection_name_ssi', label: 'Collection'
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request

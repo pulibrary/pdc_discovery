@@ -53,5 +53,57 @@
 
     <%= render partial: 'shared/footer' %>
     <%= render partial: 'shared/modal' %>
-  </body>
+
+<script>
+$(function() {
+  // Source: https://css-tricks.com/snippets/javascript/get-url-variables/
+  var queryStringParam = function(name) {
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i=0; i<vars.length; i++) {
+      var pair = vars[i].split("=");
+      if (pair[0] == name){
+        return pair[1];
+      }
+    }
+    return(false);
+  }
+
+  // Returns the active facet value for a given field
+  var activeFacet = function(fieldName) {
+    return queryStringParam("f%5B" + fieldName + "%5D%5B%5D"); // URL encoded for: f[fieldname][]
+  }
+
+  // Hides a facet value if it matches a particular value.
+  // We do this to remove a subcommunity that matches the current community selected in the facets.
+  var hideFacetValue = function(fieldName, value) {
+    $(`#facet-${fieldName} .card-body .facet-values li`).each(function(i, li) {
+      var label = $(li).find(`.facet-label`).text();
+      if (label == value) {
+        $(li).remove();
+        var valuesCount = $(`#facet-${fieldName} .card-body .facet-values li`).length;
+        if (valuesCount == 0) {
+          hideFacetGroup(fieldName);
+        }
+      }
+    });
+  }
+
+  // Hides an entire facet group
+  var hideFacetGroup = function(fieldName) {
+    $(`.blacklight-${fieldName}`).remove();
+  }
+
+  var communityFacet = activeFacet("community_root_name_ssi");
+  if (communityFacet) {
+    // If we have a community facet active, make sure it does not also show as a sub-community facet
+    communityFacet = decodeURIComponent(communityFacet.replace(/\+/g, ' '));
+    hideFacetValue("community_name_ssi", communityFacet);
+  } else if (!activeFacet("community_name_ssi")) {
+    hideFacetGroup("community_name_ssi");
+  }
+});
+</script>
+
+</body>
 <% end %>
