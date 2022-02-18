@@ -13,7 +13,9 @@ settings do
   provide 'repository', ENV['REPOSITORY_ID']
   provide 'logger', Logger.new($stderr, level: Logger::ERROR)
   provide "nokogiri.each_record_xpath", "//items/item"
-  provide "dataspace_communities", DataspaceCommunities.load_from_file('./spec/fixtures/files/dataspace_communities.json')
+  provide "dataspace_communities", DataspaceCommunities.new
+  # Use this to fetch communities information from a local cache if you don't want to connect to DataSpace
+  # provide "dataspace_communities", DataspaceCommunities.new('./spec/fixtures/files/dataspace_communities.json')
 end
 
 # ==================
