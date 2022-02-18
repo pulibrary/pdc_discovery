@@ -13,6 +13,7 @@ settings do
   provide 'repository', ENV['REPOSITORY_ID']
   provide 'logger', Logger.new($stderr, level: Logger::ERROR)
   provide "nokogiri.each_record_xpath", "//items/item"
+  provide "dataspace_communities", DataspaceCommunities.load_from_file('./spec/fixtures/files/dataspace_communities.json')
 end
 
 # ==================
@@ -34,6 +35,43 @@ to_field 'id', extract_xpath('/item/id')
 to_field 'uri_tesim', extract_xpath("/item/metadata/key[text()='dc.identifier.uri']/../value")
 to_field 'collection_id_ssi', extract_xpath('/item/parentCollection/id')
 to_field 'handle_ssi', extract_xpath('/item/handle')
+
+to_field 'community_name_ssi' do |record, accumulator, _c|
+  community_id = record.xpath("/item/parentCommunityList/id").map(&:text).map(&:to_i).sort.first
+  community = settings["dataspace_communities"].find_by_id(community_id)
+  if community == nil
+    accumulator.concat ["unknown"]
+  else
+    accumulator.concat [community.name]
+  end
+end
+
+to_field 'community_root_name_ssi' do |record, accumulator, _c|
+  community_id = record.xpath("/item/parentCommunityList/id").map(&:text).map(&:to_i).sort.first
+  community = settings["dataspace_communities"].find_root_name(community_id)
+  if community == nil
+    accumulator.concat ["unknown"]
+  else
+    accumulator.concat [community]
+  end
+end
+
+to_field 'community_path_name_ssi' do |record, accumulator, _c|
+  community_id = record.xpath("/item/parentCommunityList/id").map(&:text).map(&:to_i).sort.first
+  community = settings["dataspace_communities"].find_path_name(community_id).join("|")
+
+  if settings["dataspace_communities"].find_path_name(community_id).count > 1
+    puts "#{community_id}"
+    byebug
+  end
+
+  if community == nil
+    accumulator.concat ["unknown"]
+  else
+    accumulator.concat [community]
+  end
+end
+
 
 # ==================
 # author fields
