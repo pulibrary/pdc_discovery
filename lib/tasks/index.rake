@@ -21,19 +21,10 @@ namespace :index do
     Blacklight.default_index.connection.commit
   end
 
-  desc 'Fetches the most recent community information from DataSpace and outputs to the console. Use this to create a cache file.'
-  task dataspace_communities: :environment do
+  desc 'Fetches the most recent community information from DataSpace saves to a cache file.'
+  task cache_dataspace_communities: :environment do
+    cache_file = ENV['FILE'] || './spec/fixtures/files/dataspace_communities.json'
     communities = DataspaceCommunities.load_from_dataspace
-    puts communities.tree.to_json
-  end
-
-  task dataspace_communities_x: :environment do
-    communities = DataspaceCommunities.load_from_file('/Users/correah/src/pdc_discovery/spec/fixtures/files/dataspace_communities.json')
-    puts communities.find_path(347,[])
-
-    puts communities.find_path(346,[])
-
-    byebug
-    puts "1"
+    File.write(cache_file, JSON.pretty_generate(communities.tree))
   end
 end

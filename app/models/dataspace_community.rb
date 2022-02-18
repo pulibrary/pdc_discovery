@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
 require "httparty"
 require "json"
 
+# rubocop:disable Rails/Delegate
 class DataspaceCommunity
   attr_accessor :id, :name, :handle, :collections, :subcommunities, :parent_id
 
@@ -12,16 +15,16 @@ class DataspaceCommunity
     @parent_id = fetch_from_dataspace ? d_community.dig('parentCommunity', 'id') : d_community['parent_id']
 
     @collections = []
-    d_community["collections"].each do |d_collection|
-      @collections << {id: d_collection['id'], name: d_collection['name']}
+    d_community['collections'].each do |d_collection|
+      @collections << { id: d_collection['id'], name: d_collection['name'] }
     end
 
     @subcommunities = []
-    d_community["subcommunities"].each do |d_sub_community|
+    d_community['subcommunities'].each do |d_sub_community|
       if fetch_from_dataspace
         # Fetch data from dataspace since the subcommunity information does not come on the community response
         # by default.
-        sub_community_url = "https://dataspace.princeton.edu/rest/communities/#{d_sub_community['id']}?expand=all"
+        sub_community_url = "#{Rails.configuration.pdc_discovery.dataspace_url}/rest/communities/#{d_sub_community['id']}?expand=all"
         response = HTTParty.get(sub_community_url)
         d_sub_community = JSON.parse(response.body)
         @subcommunities << DataspaceCommunity.new(d_sub_community, true)
@@ -49,3 +52,4 @@ class DataspaceCommunity
     to_hash.to_json(opts)
   end
 end
+# rubocop:enable Rails/Delegate

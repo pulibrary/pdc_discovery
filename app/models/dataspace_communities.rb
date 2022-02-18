@@ -1,28 +1,29 @@
+# frozen_string_literal: true
+
 require "httparty"
 require "json"
-# DSpace API reference: https://dataspace.princeton.edu/rest/
-#
-# Notice that the top_communities_url returns collections for a top community but NOT the subcommunities
-# top_communities_url does not return plasma?????
-# top_communities_url = "https://dataspace.princeton.edu/rest/communities/top-communities?expand=all"
 
+# DSpace API reference: https://dataspace.princeton.edu/rest/
+# rubocop:disable Style/Next
 class DataspaceCommunities
   attr_reader :tree
 
-  def initialize()
+  def initialize
     @tree = []
     @flat_list = nil
   end
 
   def load_from_dataspace
     @tree = []
-    communities_url = "https://dataspace.princeton.edu/rest/communities?expand=all"
+    communities_url = "#{Rails.configuration.pdc_discovery.dataspace_url}/rest/communities?expand=all"
     response = HTTParty.get(communities_url)
     d_communities = JSON.parse(response.body)
     d_communities.each do |d_community|
-      next if d_community["parentCommunity"] != nil
-      node = DataspaceCommunity.new(d_community, true)
-      @tree << node
+      root_community = d_community['parentCommunity'].nil?
+      if root_community
+        node = DataspaceCommunity.new(d_community, true)
+        @tree << node
+      end
     end
     @tree
   end
@@ -32,9 +33,11 @@ class DataspaceCommunities
     content = File.read(filename)
     d_communities = JSON.parse(content)
     d_communities.each do |d_community|
-      next if d_community["parentCommunity"] != nil
-      node = DataspaceCommunity.new(d_community, false)
-      @tree << node
+      root_community = d_community['parentCommunity'].nil?
+      if root_community
+        node = DataspaceCommunity.new(d_community, false)
+        @tree << node
+      end
     end
     @tree
   end
@@ -66,7 +69,7 @@ class DataspaceCommunities
   # Returns the path (from root to sub-community) to the community as an array of names.
   def find_path_name(id)
     ids = find_path(id)
-    ids.map { |id| find_by_id(id).name }
+    ids.map { |path_id| find_by_id(path_id).name }
   end
 
   def find_root(id)
@@ -82,10 +85,10 @@ class DataspaceCommunities
     node = find_by_id(id)
     return nil if node.nil?
     path << id
-    if node.parent_id == nil
+    if node.parent_id.nil?
       path
     else
-      find_path(node.parent_id, path)
+      find_path_ids(node.parent_id, path)
     end
   end
 
@@ -109,3 +112,4 @@ class DataspaceCommunities
     communities
   end
 end
+# rubocop:enable Style/Next
