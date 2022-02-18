@@ -47,6 +47,15 @@ to_field 'community_name_ssi' do |record, accumulator, _c|
   accumulator.concat [community&.name]
 end
 
+to_field 'subcommunity_name_ssi' do |record, accumulator, _c|
+  community_id = record.xpath("/item/parentCommunityList/id").map(&:text).map(&:to_i).sort.last
+  community = settings["dataspace_communities"].find_by_id(community_id)
+  if community.parent_id
+    # We only populate this value for subcommunities
+    accumulator.concat [community.name]
+  end
+end
+
 to_field 'community_root_name_ssi' do |record, accumulator, _c|
   community_id = record.xpath("/item/parentCommunityList/id").map(&:text).map(&:to_i).sort.last
   root_name = settings["dataspace_communities"].find_root_name(community_id)
