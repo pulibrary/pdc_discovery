@@ -1,0 +1,23 @@
+#footer {
+  padding: 50px 0px;
+  border: 40px 0px #000000 solid;
+  .content {
+    display: inline-block;
+    background-color: #FFFFFF;
+    border-width: 10px 0px;
+    border-color: #000000;
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    li {
+      list-style: none;
+      float: left;
+      display: inline-block;
+      img {
+        width: 300px;
+        padding: 10px 50px;
+      }
+    }
+  }
+}
