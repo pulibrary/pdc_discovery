@@ -15,6 +15,9 @@ describe 'Single item page', type: :system, js: true do
   it "has expected metadata" do
     visit '/catalog/78348'
     expect(page).to have_content "Midplane neutral density profiles in the National Spherical Torus Experiment"
+
+    authors = "<span>Stotler, D.; F. Scotti; R.E. Bell; A. Diallo; B.P. LeBlanc; M. Podesta; A.L. Roquemore; P.W. Ross</span>"
+    expect(page.html.include?(authors)).to be true
   end
 
   # rubocop:disable Layout/LineLength
