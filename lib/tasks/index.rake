@@ -10,7 +10,7 @@ namespace :index do
   task research_data: :environment do
     puts "Harvesting and indexing research data collections"
     ResearchDataHarvester.harvest
-    puts "Done."
+    puts "Done harvesting research data."
   end
 
   desc 'Remove all indexed Documents from Solr'
@@ -23,7 +23,7 @@ namespace :index do
 
   desc 'Fetches the most recent community information from DataSpace and saves it to a file.'
   task cache_dataspace_communities: :environment do
-    cache_file = ENV['FILE'] || './spec/fixtures/files/dataspace_communities.json'
+    cache_file = ENV['COMMUNITIES_FILE'] || './spec/fixtures/files/dataspace_communities.json'
     communities = DataspaceCommunities.new
     File.write(cache_file, JSON.pretty_generate(communities.tree))
   end

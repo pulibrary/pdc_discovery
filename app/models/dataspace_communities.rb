@@ -4,7 +4,7 @@ require "httparty"
 require "json"
 
 # Fetches information about DataSpace Communities (and collections)
-# and handles the nest structure of Communities.
+# and handles the nested structure of Communities.
 #
 # rubocop:disable Style/Next
 class DataspaceCommunities
@@ -15,10 +15,10 @@ class DataspaceCommunities
   def initialize(filename = nil)
     @tree = []
     @flat_list = nil
-    if filename
-      load_from_file(filename)
-    else
+    if filename.blank?
       load_from_dataspace
+    else
+      load_from_file(filename)
     end
   end
 
@@ -59,14 +59,13 @@ class DataspaceCommunities
         @tree << node
       end
     end
-    Rails.logger.info "Done fetching communities information"
     @tree
   end
 
   # Loads community information from a pre-saved file with the information
   def load_from_file(filename)
     @tree = []
-    Rails.logger.info "Fetching communities information from #{filename}"
+    Rails.logger.info "Loading communities information from #{filename}"
     content = File.read(filename)
     d_communities = JSON.parse(content)
     d_communities.each do |d_community|
@@ -76,12 +75,12 @@ class DataspaceCommunities
         @tree << node
       end
     end
-    Rails.logger.info "Done communities information"
     @tree
   end
 
   # Returns an array with all the DataspaceCommunity as a flat array.
-  # This array is used to perform searches by ID (it's faster to search a flat array than the native nested structure.)
+  # This array is used inernally to perform searches by ID (it's faster to search a flat array
+  # than to search a nested structure.)
   def flat_list
     @flat_list ||= begin
       nodes = []

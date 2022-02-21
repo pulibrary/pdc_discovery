@@ -14,8 +14,6 @@ settings do
   provide 'logger', Logger.new($stderr, level: Logger::ERROR)
   provide "nokogiri.each_record_xpath", "//items/item"
   provide "dataspace_communities", DataspaceCommunities.new('./spec/fixtures/files/dataspace_communities.json')
-  # Use this to fetch community information from DataSpace directly (rather than using a local cache file)
-  # provide "dataspace_communities", DataspaceCommunities.new
 end
 
 # ==================
