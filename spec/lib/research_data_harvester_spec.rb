@@ -9,7 +9,7 @@ RSpec.describe ResearchDataHarvester do
 
   it "has a convenience method for indexing all collections" do
     expect_any_instance_of(described_class).to receive(:harvest).exactly(31).times
-    described_class.harvest
+    described_class.harvest(true)
   end
 
   context "harvesting a collection" do

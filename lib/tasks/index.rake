@@ -9,7 +9,7 @@ namespace :index do
   desc 'Index all research data collections'
   task research_data: :environment do
     puts "Harvesting and indexing research data collections"
-    ResearchDataHarvester.harvest
+    ResearchDataHarvester.harvest(false)
     puts "Done harvesting research data."
   end
 

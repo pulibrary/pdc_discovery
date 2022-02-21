@@ -37,12 +37,14 @@ class ResearchDataHarvester
   # Convenience method to harvest and index all collections in the config file
   # @example
   #   ResearchDataHarvester.harvest
-  def self.harvest
+  def self.harvest(use_cache = false)
     Rails.logger.info "Harvesting and indexing research data collections"
 
-    # Fetch latest community information from DataSpace
-    communities = DataspaceCommunities.new
-    File.write(CACHE_COMMUNITIES_FILE, JSON.pretty_generate(communities.tree))
+    unless use_cache
+      # Fetch latest community information from DataSpace
+      communities = DataspaceCommunities.new
+      File.write(CACHE_COMMUNITIES_FILE, JSON.pretty_generate(communities.tree))
+    end
 
     # Harvest research data for each collection
     r = ResearchDataHarvester.new
