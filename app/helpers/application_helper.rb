@@ -18,14 +18,14 @@ module ApplicationHelper
   end
 
   # Outputs the HTML to render multiple values as an HTML table row
-  def render_field_row_many(title, values, show_always = false)
+  def render_field_row_many(title, values, show_always = false, separator = ', ')
     return if values.blank?
     values_encoded = values.map { |v| html_escape(v) }
     css_class = show_always ? "" : "toggable-row hidden-row"
     html = <<-HTML
     <tr class="#{css_class}">
       <th scope="row"><span>#{title.pluralize(values.count)}</span></th>
-      <td><span>#{values_encoded.join(', ')}</span></td>
+      <td><span>#{values_encoded.join(separator)}</span></td>
     </tr>
     HTML
     html.html_safe
