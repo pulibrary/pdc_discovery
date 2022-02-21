@@ -13,14 +13,11 @@ settings do
   provide 'repository', ENV['REPOSITORY_ID']
   provide 'logger', Logger.new($stderr, level: Logger::ERROR)
   provide "nokogiri.each_record_xpath", "//items/item"
+  provide "dataspace_communities", DataspaceCommunities.new('./spec/fixtures/files/dataspace_communities.json')
 end
 
 # ==================
-# Top level document
-# ==================
-
-# ==================
-# fields for above the fold single page display
+# Main fields
 
 to_field 'abstract_tsim', extract_xpath("/item/metadata/key[text()='dc.description.abstract']/../value")
 to_field 'abstract_tsim', extract_xpath("/item/metadata/key[text()='dcterms.abstract']/../value")
@@ -34,6 +31,45 @@ to_field 'id', extract_xpath('/item/id')
 to_field 'uri_tesim', extract_xpath("/item/metadata/key[text()='dc.identifier.uri']/../value")
 to_field 'collection_id_ssi', extract_xpath('/item/parentCollection/id')
 to_field 'handle_ssi', extract_xpath('/item/handle')
+
+# ==================
+# Community and Collections fields
+# Communities can be nested. We gather the community name, the name of the "root" community for the community,
+# and the full path (including nested communities) to the community.
+
+to_field 'community_name_ssi' do |record, accumulator, _c|
+  # We are assuming the largest ID represents the parent community in the tree hierarchy
+  # (i.e. grandparent nodes were created first and have smaller IDs)
+  community_id = record.xpath("/item/parentCommunityList/id").map(&:text).map(&:to_i).sort.last
+  community = settings["dataspace_communities"].find_by_id(community_id)
+  accumulator.concat [community&.name]
+end
+
+to_field 'subcommunity_name_ssi' do |record, accumulator, _c|
+  community_id = record.xpath("/item/parentCommunityList/id").map(&:text).map(&:to_i).sort.last
+  community = settings["dataspace_communities"].find_by_id(community_id)
+  if community.parent_id
+    # We only populate this value for subcommunities
+    accumulator.concat [community.name]
+  end
+end
+
+to_field 'community_root_name_ssi' do |record, accumulator, _c|
+  community_id = record.xpath("/item/parentCommunityList/id").map(&:text).map(&:to_i).sort.last
+  root_name = settings["dataspace_communities"].find_root_name(community_id)
+  accumulator.concat [root_name]
+end
+
+to_field 'community_path_name_ssi' do |record, accumulator, _c|
+  community_id = record.xpath("/item/parentCommunityList/id").map(&:text).map(&:to_i).sort.last
+  path_name = settings["dataspace_communities"].find_path_name(community_id).join("|")
+  accumulator.concat [path_name]
+end
+
+to_field 'collection_name_ssi' do |record, accumulator, _c|
+  collection_name = record.xpath("/item/parentCollection/name").map(&:text).first
+  accumulator.concat [collection_name]
+end
 
 # ==================
 # author fields

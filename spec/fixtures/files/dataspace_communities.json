@@ -1,0 +1,1598 @@
+[
+  {
+    "id": 186,
+    "name": "Astrophysical Sciences",
+    "handle": "88435/dsp01k643b120w",
+    "collections": [
+      {
+        "id": 261,
+        "name": "Research Data Sets"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 516,
+    "name": "Chemical and Biological Engineering",
+    "handle": "88435/dsp01j38609873",
+    "collections": [
+      {
+        "id": 3346,
+        "name": "Research Data Sets"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 536,
+    "name": "Chemistry",
+    "handle": "88435/dsp01z890rx19b",
+    "collections": [
+      {
+        "id": 3366,
+        "name": "Research Data Sets"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 6,
+    "name": "Civil and Environmental Engineering",
+    "handle": "88435/dsp01bg257f052",
+    "collections": [
+      {
+        "id": 702,
+        "name": "CEE Research Data Sets"
+      },
+      {
+        "id": 1,
+        "name": "Princeton-Bergen Series on Carbon Storage"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 306,
+    "name": "Department of Geosciences",
+    "handle": "88435/dsp012b88qf40b",
+    "collections": [
+      {
+        "id": 981,
+        "name": "Research Data Sets"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 246,
+    "name": "Department of Slavic Languages and Literatures",
+    "handle": "88435/dsp011z40ks889",
+    "collections": [
+      {
+        "id": 341,
+        "name": "Pushkin-Prokofiev at Princeton"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 517,
+    "name": "Digital Humanities",
+    "handle": "88435/dsp018p58pg869",
+    "collections": [
+      {
+        "id": 3347,
+        "name": "Research Data Sets"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 166,
+    "name": "Education Research Section",
+    "handle": "88435/dsp01th83kz360",
+    "collections": [
+      {
+        "id": 241,
+        "name": "ERS Working Papers"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 456,
+    "name": "Electrical Engineering",
+    "handle": "88435/dsp01jh343w150",
+    "collections": [
+      {
+        "id": 3066,
+        "name": "EE Research Data Sets"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 86,
+    "name": "Faculty Publications",
+    "handle": "88435/dsp01st74cq47h",
+    "collections": [
+      {
+        "id": 141,
+        "name": "Journal Articles and Research Papers"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 476,
+    "name": "Geophysical Fluid Dynamics Laboratory",
+    "handle": "88435/dsp01c821gn69f",
+    "collections": [
+      {
+        "id": 3206,
+        "name": "Research Data Sets"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 46,
+    "name": "Industrial Relations Section",
+    "handle": "88435/dsp01c821gj770",
+    "collections": [
+      {
+        "id": 61,
+        "name": "Data Sets"
+      },
+      {
+        "id": 41,
+        "name": "IRS Working Papers"
+      },
+      {
+        "id": 161,
+        "name": "Selected References"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 396,
+    "name": "Lewis-Sigler Institute for Integrative Genomics",
+    "handle": "88435/dsp013t945t431",
+    "collections": [
+      {
+        "id": 2286,
+        "name": "Research Data Sets"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 126,
+    "name": "Liechtenstein Institute on Self-Determination",
+    "handle": "88435/dsp01m326m175b",
+    "collections": [
+      {
+        "id": 201,
+        "name": "Publications"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 376,
+    "name": "Mechanical and Aerospace Engineering",
+    "handle": "88435/dsp01gf06g506n",
+    "collections": [
+      {
+        "id": 1526,
+        "name": "MAE Research Data Sets"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 416,
+    "name": "Molecular Biology",
+    "handle": "88435/dsp01xs55mf93x",
+    "collections": [
+      {
+        "id": 3026,
+        "name": "Research DataSets"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 26,
+    "name": "Office of Information Technology",
+    "handle": "88435/dsp014q77fr339",
+    "collections": [
+      {
+        "id": 21,
+        "name": "Presentations, Reports, and Papers"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 496,
+    "name": "Physics",
+    "handle": "88435/dsp0102870z772",
+    "collections": [
+      {
+        "id": 3326,
+        "name": "Physics Research Data Sets"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 326,
+    "name": "Princeton Neuroscience Institute",
+    "handle": "88435/dsp0147429c369",
+    "collections": [
+      {
+        "id": 1061,
+        "name": "Research Data Sets"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 346,
+    "name": "Princeton Plasma Physics Laboratory",
+    "handle": "88435/dsp01pz50gz45g",
+    "collections": [
+      {
+        "id": 1422,
+        "name": "Plasma Science & Technology"
+      },
+      {
+        "id": 2266,
+        "name": "Theory and Computation"
+      }
+    ],
+    "subcommunities": [
+      {
+        "id": 347,
+        "name": "Advanced Projects",
+        "handle": "88435/dsp01k643b3527",
+        "collections": [
+          {
+            "id": 1308,
+            "name": "Stellarators"
+          },
+          {
+            "id": 1309,
+            "name": "System Studies"
+          }
+        ],
+        "subcommunities": [
+
+        ],
+        "parent_id": 346
+      },
+      {
+        "id": 350,
+        "name": "Engineering",
+        "handle": "88435/dsp015x21th769",
+        "collections": [
+
+        ],
+        "subcommunities": [
+
+        ],
+        "parent_id": 346
+      },
+      {
+        "id": 348,
+        "name": "ES&H",
+        "handle": "88435/dsp01ff365760p",
+        "collections": [
+
+        ],
+        "subcommunities": [
+
+        ],
+        "parent_id": 346
+      },
+      {
+        "id": 351,
+        "name": "IT",
+        "handle": "88435/dsp012514nn845",
+        "collections": [
+
+        ],
+        "subcommunities": [
+
+        ],
+        "parent_id": 346
+      },
+      {
+        "id": 352,
+        "name": "ITER and Tokamaks",
+        "handle": "88435/dsp01xg94hr897",
+        "collections": [
+
+        ],
+        "subcommunities": [
+
+        ],
+        "parent_id": 346
+      },
+      {
+        "id": 354,
+        "name": "Spherical Torus",
+        "handle": "88435/dsp01j6731612k",
+        "collections": [
+          {
+            "id": 1282,
+            "name": "NSTX"
+          },
+          {
+            "id": 1304,
+            "name": "NSTX-U"
+          }
+        ],
+        "subcommunities": [
+
+        ],
+        "parent_id": 346
+      }
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 5,
+    "name": "Princeton School of Public and International Affairs",
+    "handle": "88435/dsp01g445cd134",
+    "collections": [
+      {
+        "id": 3106,
+        "name": "Princeton School of Public and International Affairs Research Data Sets"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 67,
+    "name": "Princeton University Doctoral Dissertations, 2011-2020",
+    "handle": "88435/dsp01td96k251d",
+    "collections": [
+      {
+        "id": 81,
+        "name": "Anthropology"
+      },
+      {
+        "id": 82,
+        "name": "Applied and Computational Mathematics"
+      },
+      {
+        "id": 83,
+        "name": "Architecture"
+      },
+      {
+        "id": 84,
+        "name": "Art and Archaeology"
+      },
+      {
+        "id": 85,
+        "name": "Astrophysical Sciences"
+      },
+      {
+        "id": 86,
+        "name": "Atmospheric and Oceanic Sciences"
+      },
+      {
+        "id": 87,
+        "name": "Chemical and Biological Engineering"
+      },
+      {
+        "id": 88,
+        "name": "Chemistry"
+      },
+      {
+        "id": 89,
+        "name": "Civil and Environmental Engineering"
+      },
+      {
+        "id": 90,
+        "name": "Classics"
+      },
+      {
+        "id": 91,
+        "name": "Comparative Literature"
+      },
+      {
+        "id": 92,
+        "name": "Computer Science"
+      },
+      {
+        "id": 93,
+        "name": "East Asian Studies"
+      },
+      {
+        "id": 94,
+        "name": "Ecology and Evolutionary Biology"
+      },
+      {
+        "id": 95,
+        "name": "Economics"
+      },
+      {
+        "id": 96,
+        "name": "Electrical Engineering"
+      },
+      {
+        "id": 97,
+        "name": "English"
+      },
+      {
+        "id": 98,
+        "name": "French and Italian"
+      },
+      {
+        "id": 99,
+        "name": "Geosciences"
+      },
+      {
+        "id": 100,
+        "name": "German"
+      },
+      {
+        "id": 101,
+        "name": "History"
+      },
+      {
+        "id": 102,
+        "name": "History of Science"
+      },
+      {
+        "id": 103,
+        "name": "Mathematics"
+      },
+      {
+        "id": 104,
+        "name": "Mechanical and Aerospace Engineering"
+      },
+      {
+        "id": 105,
+        "name": "Molecular Biology"
+      },
+      {
+        "id": 106,
+        "name": "Music"
+      },
+      {
+        "id": 107,
+        "name": "Near Eastern Studies"
+      },
+      {
+        "id": 108,
+        "name": "Neuroscience"
+      },
+      {
+        "id": 109,
+        "name": "Operations Research and Financial Engineering"
+      },
+      {
+        "id": 110,
+        "name": "Philosophy"
+      },
+      {
+        "id": 111,
+        "name": "Physics"
+      },
+      {
+        "id": 112,
+        "name": "Plasma Physics"
+      },
+      {
+        "id": 113,
+        "name": "Politics"
+      },
+      {
+        "id": 114,
+        "name": "Population Studies"
+      },
+      {
+        "id": 115,
+        "name": "Psychology"
+      },
+      {
+        "id": 116,
+        "name": "Public and International Affairs"
+      },
+      {
+        "id": 117,
+        "name": "Quantitative Computational Biology"
+      },
+      {
+        "id": 118,
+        "name": "Religion"
+      },
+      {
+        "id": 119,
+        "name": "Slavic Languages and Literatures"
+      },
+      {
+        "id": 120,
+        "name": "Sociology"
+      },
+      {
+        "id": 121,
+        "name": "Spanish and Portuguese Languages and Cultures"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 146,
+    "name": "Princeton University Library",
+    "handle": "88435/dsp01g732d9019",
+    "collections": [
+      {
+        "id": 221,
+        "name": "Monographic reports and papers (Access Limited to Princeton)"
+      },
+      {
+        "id": 222,
+        "name": "Monographic reports and papers (Publicly Accessible)"
+      },
+      {
+        "id": 1846,
+        "name": "Research Data"
+      }
+    ],
+    "subcommunities": [
+      {
+        "id": 206,
+        "name": "Serials and series reports (Access Limited to Princeton)",
+        "handle": "88435/dsp01r781wg06f",
+        "collections": [
+          {
+            "id": 481,
+            "name": "Serials and series reports (Access Limited to Princeton) - Alcuin Society newsletter"
+          },
+          {
+            "id": 2226,
+            "name": "Serials and series reports (Access Limited to Princeton) - Annuaire statistique du Gabon"
+          },
+          {
+            "id": 1886,
+            "name": "Serials and series reports (Access Limited to Princeton) - APSA Departmental Survey"
+          },
+          {
+            "id": 1866,
+            "name": "Serials and series reports (Access Limited to Princeton) - Arche"
+          },
+          {
+            "id": 2466,
+            "name": "Serials and series reports (Access Limited to Princeton) - Arkansas state government guide"
+          },
+          {
+            "id": 2146,
+            "name": "Serials and series reports (Access Limited to Princeton) - Ayasofya Müzesi Yıllığı = Annual of Ayasofya Museum"
+          },
+          {
+            "id": 482,
+            "name": "Serials and series reports (Access Limited to Princeton) - Bibliografia nazionale italiana : monografie"
+          },
+          {
+            "id": 2867,
+            "name": "Serials and series reports (Access Limited to Princeton) - Broadsheet on Contemporary Politics"
+          },
+          {
+            "id": 1626,
+            "name": "Serials and series reports (Access Limited to Princeton) - CBAA Newsletter"
+          },
+          {
+            "id": 562,
+            "name": "Serials and series reports (Access Limited to Princeton) - Directory of State, County, and Federal officials (Hawaii)"
+          },
+          {
+            "id": 681,
+            "name": "Serials and series reports (Access Limited to Princeton) - DSCH journal"
+          },
+          {
+            "id": 1726,
+            "name": "Serials and series reports (Access Limited to Princeton) - EuroComment"
+          },
+          {
+            "id": 761,
+            "name": "Serials and series reports (Access Limited to Princeton) - GFOA Newsletter"
+          },
+          {
+            "id": 1401,
+            "name": "Serials and series reports (Access Limited to Princeton) - Guidebook series of the Society of Economic Geologists"
+          },
+          {
+            "id": 563,
+            "name": "Serials and series reports (Access Limited to Princeton) - Guide to Government in Hawaii"
+          },
+          {
+            "id": 561,
+            "name": "Serials and series reports (Access Limited to Princeton) - Handbook on Alaska State Government"
+          },
+          {
+            "id": 1141,
+            "name": "Serials and series reports (Access Limited to Princeton) - Hungary around the clock"
+          },
+          {
+            "id": 601,
+            "name": "Serials and series reports (Access Limited to Princeton) - Illinois blue book"
+          },
+          {
+            "id": 1506,
+            "name": "Serials and series reports (Access Limited to Princeton) – INDIA IDSA Monograph"
+          },
+          {
+            "id": 1947,
+            "name": "Serials and series reports (Access Limited to Princeton) - Indian national bibliography"
+          },
+          {
+            "id": 2966,
+            "name": "Serials and series reports (Access Limited to Princeton) - Interpretation"
+          },
+          {
+            "id": 541,
+            "name": "Serials and series reports (Access Limited to Princeton) - Iowa Official Register"
+          },
+          {
+            "id": 781,
+            "name": "Serials and series reports (Access Limited to Princeton) - Journal of Art Crime"
+          },
+          {
+            "id": 1121,
+            "name": "Serials and series reports (Access Limited to Princeton) - Latino Election Handbook"
+          },
+          {
+            "id": 603,
+            "name": "Serials and series reports (Access Limited to Princeton) - Legislative manual, State of Nevada"
+          },
+          {
+            "id": 2406,
+            "name": "Serials and series reports (Access Limited to Princeton) - Literaturnoe Nasledstvo"
+          },
+          {
+            "id": 2247,
+            "name": "Serials and series reports (Access Limited to Princeton) - Malawi Statistical Yearbook"
+          },
+          {
+            "id": 881,
+            "name": "Serials and series reports (Access Limited to Princeton) - Militant Leadership Monitor"
+          },
+          {
+            "id": 301,
+            "name": "Serials and series reports (Access Limited to Princeton) - Miscellaneous"
+          },
+          {
+            "id": 1470,
+            "name": "Serials and series reports (Access Limited to Princeton) - Monos"
+          },
+          {
+            "id": 602,
+            "name": "Serials and series reports (Access Limited to Princeton) - Montana. A legislator’s handbook"
+          },
+          {
+            "id": 1586,
+            "name": "Serials and series reports (Access Limited to Princeton) - New Jersey legislative journal. Session day report"
+          },
+          {
+            "id": 2467,
+            "name": "Serials and series reports (Access Limited to Princeton) - New Mexico Blue Book"
+          },
+          {
+            "id": 1566,
+            "name": "Serials and series reports (Access Limited to Princeton) - Newsletter of the Magic Lantern Society (US/Canada)"
+          },
+          {
+            "id": 604,
+            "name": "Serials and series reports (Access Limited to Princeton) - North Carolina manual"
+          },
+          {
+            "id": 921,
+            "name": "Serials and series reports (Access Limited to Princeton) - NWGS Field Trip Guidebook Series"
+          },
+          {
+            "id": 501,
+            "name": "Serials and series reports (Access Limited to Princeton) - Oriental Art"
+          },
+          {
+            "id": 2926,
+            "name": "Serials and series reports (Access Limited to Princeton) - Photo review newsletter"
+          },
+          {
+            "id": 523,
+            "name": "Serials and series reports (Access Limited to Princeton) - Proceedings and addresses, American Philosophical Association"
+          },
+          {
+            "id": 223,
+            "name": "Serials and series reports (Access Limited to Princeton) - ProtoSociology"
+          },
+          {
+            "id": 321,
+            "name": "Serials and series reports (Access Limited to Princeton) - Reformasi Weekly"
+          },
+          {
+            "id": 1301,
+            "name": "Serials and series reports (Access Limited to Princeton) - Salary survey"
+          },
+          {
+            "id": 2306,
+            "name": "Serials and series reports (Access Limited to Princeton) - San Rocco"
+          },
+          {
+            "id": 2506,
+            "name": "Serials and series reports (Access Limited to Princeton) - South Atlantic review"
+          },
+          {
+            "id": 421,
+            "name": "Serials and series reports (Access Limited to Princeton) - State Legislative Sourcebook"
+          },
+          {
+            "id": 2246,
+            "name": "Serials and series reports (Access Limited to Princeton) - Statistical Abstract of the Gambia"
+          },
+          {
+            "id": 2766,
+            "name": "Serials and series reports (Access Limited to Princeton) - Tequesta"
+          },
+          {
+            "id": 2106,
+            "name": "Serials and series reports (Access Limited to Princeton) - The Ancient history bulletin"
+          },
+          {
+            "id": 2566,
+            "name": "Serials and series reports (Access Limited to Princeton) - The Antigonish review"
+          },
+          {
+            "id": 1986,
+            "name": "Serials and series reports (Access Limited to Princeton) - Tijdschrift voor Nederlandsche taal- en letterkunde"
+          },
+          {
+            "id": 3186,
+            "name": "Serials and series reports (Access Limited to Princeton) - Tyni︠a︡novskiĭ sbornik / Ministerstvo prosveshchenii︠a︡ SSR, Muzeĭ I︠U︡. N. Tyni︠a︡nova"
+          },
+          {
+            "id": 1806,
+            "name": "Serials and series reports (Access Limited to Princeton) - Under the banner of Marxism"
+          },
+          {
+            "id": 2866,
+            "name": "Serials and series reports (Access Limited to Princeton) - United Nations Handbook"
+          },
+          {
+            "id": 564,
+            "name": "Serials and series reports (Access Limited to Princeton) - West Virginia Blue Book"
+          },
+          {
+            "id": 1946,
+            "name": "Serials and series reports (Access Limited to Princeton) - Working papers in African studies"
+          },
+          {
+            "id": 2206,
+            "name": "Serials and series reports (Access Limited to Princeton) - Wyoming state government directory"
+          },
+          {
+            "id": 3306,
+            "name": "Serials and series reports (Access Limited to Princeton) - Сибирские исторические исследования (Sibirskie istoricheskie issledovanii︠a︡)"
+          },
+          {
+            "id": 581,
+            "name": "Serials and series reports (Access Limited to Princeton) - Синтаксис (Sintaksis)"
+          },
+          {
+            "id": 582,
+            "name": "Serials and series reports (Access Limited to Princeton) - Смена (Smena)"
+          },
+          {
+            "id": 3286,
+            "name": "Serials and series reports (Access Limited to Princeton) - Юность. (I︠U︡nostʹ.)"
+          },
+          {
+            "id": 1041,
+            "name": "Serials and series reports (Access Limited to Princeton) - 国学与西学 国际学刊 (Guo xue yu xi xue guo ji xue kan)"
+          }
+        ],
+        "subcommunities": [
+
+        ],
+        "parent_id": 146
+      },
+      {
+        "id": 226,
+        "name": "Serials and series reports (Publicly Accessible)",
+        "handle": "88435/dsp01kh04dp74g",
+        "collections": [
+          {
+            "id": 2186,
+            "name": "Serials and series reports (Publicly Accessible) - 28 Too Many FGM Country Profiles"
+          },
+          {
+            "id": 2326,
+            "name": "Serials and series reports (Publicly Accessible) - African report on child wellbeing"
+          },
+          {
+            "id": 1906,
+            "name": "Serials and series reports (Publicly Accessible) - Anggaran Penduduk Semasa = Current Population Estimates"
+          },
+          {
+            "id": 1382,
+            "name": "Serials and series reports (Publicly Accessible) - Annuaire des statistiques de l'etat civil (Abidjan - Ivory Coast)"
+          },
+          {
+            "id": 1383,
+            "name": "Serials and series reports (Publicly Accessible) - Annuaire des statistiques de l'etat civil (Montagnes - Ivory Coast)"
+          },
+          {
+            "id": 1381,
+            "name": "Serials and series reports (Publicly Accessible) - Annuaire des statistiques démographiques et sociales (Ivory Coast)"
+          },
+          {
+            "id": 621,
+            "name": "Serials and series reports (Publicly Accessible) - Annual Report of the Istituto per le Opere di Religione (IOR)"
+          },
+          {
+            "id": 2706,
+            "name": "Serials and series reports (Publicly Accessible) - Annual Report on Registration of Births and Deaths – Singapore"
+          },
+          {
+            "id": 1445,
+            "name": "Serials and series reports (Publicly Accessible) - Asia Briefing"
+          },
+          {
+            "id": 281,
+            "name": "Serials and series reports (Publicly Accessible) - Atuei"
+          },
+          {
+            "id": 2488,
+            "name": "Serials and series reports (Publicly Accessible) – BRAC Institute of Governance and Development (BIGD)"
+          },
+          {
+            "id": 1469,
+            "name": "Serials and series reports (Publicly Accessible) - Brunei Darussalam vital statistics"
+          },
+          {
+            "id": 1442,
+            "name": "Serials and series reports (Publicly Accessible) - Budget Processes in the States"
+          },
+          {
+            "id": 1911,
+            "name": "Serials and series reports (Publicly Accessible) - Bulitin perangkaan sosial Malaysia = Social statistics bulletin, Malaysia"
+          },
+          {
+            "id": 1181,
+            "name": "Serials and series reports (Publicly Accessible) - Center for Women’s Development Studies [India]"
+          },
+          {
+            "id": 1607,
+            "name": "Serials and series reports (Publicly Accessible) - Characteristics of labour migrants report - Zimbabwe"
+          },
+          {
+            "id": 2166,
+            "name": "Serials and series reports (Publicly Accessible) - Child Welfare Watch"
+          },
+          {
+            "id": 2046,
+            "name": "Serials and series reports (Publicly Accessible) - Chislennostʹ naselenii︠a︡ Respubliki Tadzhikistan na ..."
+          },
+          {
+            "id": 1966,
+            "name": "Serials and series reports (Publicly Accessible) - Chronique archéologique en Syrie"
+          },
+          {
+            "id": 722,
+            "name": "Serials and series reports (Publicly Accessible) - City Fiscal Conditions"
+          },
+          {
+            "id": 2886,
+            "name": "Serials and series reports (Publicly Accessible) - CODESRIA"
+          },
+          {
+            "id": 1926,
+            "name": "Serials and series reports (Publicly Accessible) - Cultural Resources Digest (NJDOT)"
+          },
+          {
+            "id": 2407,
+            "name": "Serials and series reports (Publicly Accessible) - Death on the job : the toll of neglect"
+          },
+          {
+            "id": 2066,
+            "name": "Serials and series reports (Publicly Accessible) - Demograficheskiĭ ezhegodnik Respubliki Tadzhikistan"
+          },
+          {
+            "id": 2846,
+            "name": "Serials and series reports (Publicly Accessible) - Demografija=Demography - Bosnia and Herzegovina"
+          },
+          {
+            "id": 441,
+            "name": "Serials and series reports (Publicly Accessible) - Demographic Portrait of Hungary"
+          },
+          {
+            "id": 1747,
+            "name": "Serials and series reports (Publicly Accessible) - Demographic Review – Malta"
+          },
+          {
+            "id": 1361,
+            "name": "Serials and series reports (Publicly Accessible) - Demographie algerienne"
+          },
+          {
+            "id": 1162,
+            "name": "Serials and series reports (Publicly Accessible) - Diatriba : revista de pedogogía militante"
+          },
+          {
+            "id": 1766,
+            "name": "Serials and series reports (Publicly Accessible) - EIU Democracy Index"
+          },
+          {
+            "id": 642,
+            "name": "Serials and series reports (Publicly Accessible) - Estadisticas Demograficas Mexico"
+          },
+          {
+            "id": 1746,
+            "name": "Serials and series reports (Publicly Accessible) - Estado de la Poblacion Peruana"
+          },
+          {
+            "id": 961,
+            "name": "Serials and series reports (Publicly Accessible) - EstatiÌsticas do registro civil"
+          },
+          {
+            "id": 862,
+            "name": "Serials and series reports (Publicly Accessible) - Fachserie / Statistisches Bundesamt, Wiesbaden"
+          },
+          {
+            "id": 661,
+            "name": "Serials and series reports (Publicly Accessible) - Femmes et Hommes au Burkina Faso"
+          },
+          {
+            "id": 1441,
+            "name": "Serials and series reports (Publicly Accessible) - Fiscal Survey of the States"
+          },
+          {
+            "id": 2086,
+            "name": "Serials and series reports (Publicly Accessible) - Five Dials"
+          },
+          {
+            "id": 2386,
+            "name": "Serials and series reports (Publicly Accessible) - Garden State Legacy"
+          },
+          {
+            "id": 2387,
+            "name": "Serials and series reports (Publicly Accessible) - Global cooperation-- re:search annual report"
+          },
+          {
+            "id": 2907,
+            "name": "Serials and series reports (Publicly Accessible) - Health Statistics  - Kosovo"
+          },
+          {
+            "id": 2986,
+            "name": "Serials and series reports (Publicly Accessible) - Il Benessere Equo e Sostenibile in Italia"
+          },
+          {
+            "id": 1082,
+            "name": "Serials and series reports (Publicly Accessible) - Institute for Social and Economic Change [India] ISEC Working Paper"
+          },
+          {
+            "id": 2486,
+            "name": "Serials and series reports (Publicly Accessible) – Institute of Policy Studies of Sri Lanka (IPS)"
+          },
+          {
+            "id": 1081,
+            "name": "Serials and series reports (Publicly Accessible) - International Centre for Ethnic Studies [Sri Lanka] ICES Working Paper"
+          },
+          {
+            "id": 2487,
+            "name": "Serials and series reports (Publicly Accessible) – International Labor Office (ILO) , Nepal"
+          },
+          {
+            "id": 1321,
+            "name": "Serials and series reports (Publicly Accessible) - Ireland Report on Vital Statistics"
+          },
+          {
+            "id": 1909,
+            "name": "Serials and series reports (Publicly Accessible) - Jadual Hayat Ringkas =Abridged Life Tables"
+          },
+          {
+            "id": 1686,
+            "name": "Serials and series reports (Publicly Accessible) - Jinnah Institute"
+          },
+          {
+            "id": 1363,
+            "name": "Serials and series reports (Publicly Accessible) - Jinnah Institute Annual Report"
+          },
+          {
+            "id": 1362,
+            "name": "Serials and series reports (Publicly Accessible) - Jinnah Institute Policy Briefs"
+          },
+          {
+            "id": 1646,
+            "name": "Serials and series reports (Publicly Accessible) - Kuwait - Annual Bulletin for Vital Statistics (Births & Deaths)"
+          },
+          {
+            "id": 1647,
+            "name": "Serials and series reports (Publicly Accessible) - Kuwait - Annual Bulletin for Vital Statistics (Marriage and Divorce)"
+          },
+          {
+            "id": 1648,
+            "name": "Serials and series reports (Publicly Accessible) - Kuwait Migration Statistics Bulletin"
+          },
+          {
+            "id": 1910,
+            "name": "Serials and series reports (Publicly Accessible) - Laporan Penyiasatan Migrasi = Migration Survey Report"
+          },
+          {
+            "id": 283,
+            "name": "Serials and series reports (Publicly Accessible) - La voz de mi parroquia"
+          },
+          {
+            "id": 1261,
+            "name": "Serials and series reports (Publicly Accessible) - Le bilan démographique du Québec"
+          },
+          {
+            "id": 2547,
+            "name": "Serials and series reports (Publicly Accessible) - Maiti Nepal \"Annual Report\""
+          },
+          {
+            "id": 2546,
+            "name": "Serials and series reports (Publicly Accessible) - Maiti Nepal \"E-Newsletter\""
+          },
+          {
+            "id": 2726,
+            "name": "Serials and series reports (Publicly Accessible) - May 28 Menstrual Hygiene Briefs"
+          },
+          {
+            "id": 641,
+            "name": "Serials and series reports (Publicly Accessible) - Mediterranean Migration Report"
+          },
+          {
+            "id": 2448,
+            "name": "Serials and series reports (Publicly Accessible) - Migration & Integration"
+          },
+          {
+            "id": 1546,
+            "name": "Serials and series reports (Publicly Accessible) - Min zhu Zhongguo 民主中国"
+          },
+          {
+            "id": 224,
+            "name": "Serials and series reports (Publicly Accessible) - Miscellaneous"
+          },
+          {
+            "id": 1486,
+            "name": "Serials and series reports (Publicly Accessible) - National Security Strategy of the Republic of Poland"
+          },
+          {
+            "id": 2747,
+            "name": "Serials and series reports (Publicly Accessible) - Nat︠s︡ional'ni rakhunky okhorony zdorov'i︠a︡ v Ukraïni u …. rot︠s︡i = National Accounts of health care in Ukraine in …. Year"
+          },
+          {
+            "id": 2626,
+            "name": "Serials and series reports (Publicly Accessible) - NAVA News"
+          },
+          {
+            "id": 2447,
+            "name": "Serials and series reports (Publicly Accessible) - New England Journal of Vexillology"
+          },
+          {
+            "id": 2806,
+            "name": "Serials and series reports (Publicly Accessible) - Nordisk statistik."
+          },
+          {
+            "id": 1826,
+            "name": "Serials and series reports (Publicly Accessible) - Nova cartografia social da Amazônia"
+          },
+          {
+            "id": 2906,
+            "name": "Serials and series reports (Publicly Accessible) - Observatoire de la Demographie – Monaco"
+          },
+          {
+            "id": 1786,
+            "name": "Serials and series reports (Publicly Accessible) - Office of Population Research, Princeton University – Working paper series"
+          },
+          {
+            "id": 1666,
+            "name": "Serials and series reports (Publicly Accessible) - Openings: Studies in Book Arts"
+          },
+          {
+            "id": 2587,
+            "name": "Serials and series reports (Publicly Accessible) – Pakistan Business Council (PBC) Country Profiles"
+          },
+          {
+            "id": 2586,
+            "name": "Serials and series reports (Publicly Accessible) – Pakistan Business Council (PBC) Trade with the European Union"
+          },
+          {
+            "id": 1101,
+            "name": "Serials and series reports (Publicly Accessible) - Penduduk Indonesia"
+          },
+          {
+            "id": 1908,
+            "name": "Serials and series reports (Publicly Accessible) - Perangkaan Penting = Vital Statistics"
+          },
+          {
+            "id": 1907,
+            "name": "Serials and series reports (Publicly Accessible) - Perangkaan Sebab Kematian = Statistics on Causes of Death"
+          },
+          {
+            "id": 2006,
+            "name": "Serials and series reports (Publicly Accessible) - Perú: Natalidad, Mortalidad y Nupcialidad"
+          },
+          {
+            "id": 2026,
+            "name": "Serials and series reports (Publicly Accessible) - Philippines – Vital Statistics Report"
+          },
+          {
+            "id": 943,
+            "name": "Serials and series reports (Publicly Accessible) - PIDE working papers"
+          },
+          {
+            "id": 1241,
+            "name": "Serials and series reports (Publicly Accessible) - Populația Republicii Moldova"
+          },
+          {
+            "id": 1706,
+            "name": "Serials and series reports (Publicly Accessible) - Population & Housing in Lebanon"
+          },
+          {
+            "id": 942,
+            "name": "Serials and series reports (Publicly Accessible) - Poverty and social dynamics paper series PSDPS"
+          },
+          {
+            "id": 2946,
+            "name": "Serials and series reports (Publicly Accessible) - Prebivalstvo Slovenije = Population of Slovenia"
+          },
+          {
+            "id": 1001,
+            "name": "Serials and series reports (Publicly Accessible) - Prospectiva demográfica (Consejo Nacional de Población, Mexico)"
+          },
+          {
+            "id": 1687,
+            "name": "Serials and series reports (Publicly Accessible) – Punjab Education Foundation"
+          },
+          {
+            "id": 2749,
+            "name": "Serials and series reports (Publicly Accessible) - Reclaiming Futures National Fellowship Report"
+          },
+          {
+            "id": 1446,
+            "name": "Serials and series reports (Publicly Accessible) - Report (Statistics South Africa)"
+          },
+          {
+            "id": 2750,
+            "name": "Serials and series reports (Publicly Accessible) - RWSSP-WN Brief"
+          },
+          {
+            "id": 2826,
+            "name": "Serials and series reports (Publicly Accessible) - Samoa 2016 Census Brief"
+          },
+          {
+            "id": 1650,
+            "name": "Serials and series reports (Publicly Accessible) - Social trends of the Kyrgyz Republic"
+          },
+          {
+            "id": 1444,
+            "name": "Serials and series reports (Publicly Accessible) - South as a state of mind"
+          },
+          {
+            "id": 2366,
+            "name": "Serials and series reports (Publicly Accessible) - Southern African Institute for Policy and Research Occasional Papers Series"
+          },
+          {
+            "id": 2887,
+            "name": "Serials and series reports (Publicly Accessible) - South-South Collaborative Programme: Occasional Paper Series"
+          },
+          {
+            "id": 1443,
+            "name": "Serials and series reports (Publicly Accessible) - State Expenditure Report"
+          },
+          {
+            "id": 742,
+            "name": "Serials and series reports (Publicly Accessible) - Statistical Bulletin of China’s Outward Foreign Direct Investment"
+          },
+          {
+            "id": 461,
+            "name": "Serials and series reports (Publicly Accessible) - Statistikē tēs physikēs kinēseōs tou plēthysmoutes tēs Hellados"
+          },
+          {
+            "id": 2346,
+            "name": "Serials and series reports (Publicly Accessible) - Stonewall Global Workplace Briefings"
+          },
+          {
+            "id": 944,
+            "name": "Serials and series reports (Publicly Accessible) - Sustainable Development Policy Institute Monograph"
+          },
+          {
+            "id": 1341,
+            "name": "Serials and series reports (Publicly Accessible) - Sustainable Development Policy Institute Policy Briefs"
+          },
+          {
+            "id": 1342,
+            "name": "Serials and series reports (Publicly Accessible) - Sustainable Development Policy Institute Policy Papers"
+          },
+          {
+            "id": 1343,
+            "name": "Serials and series reports (Publicly Accessible) - Sustainable Development Policy Institute Research Reports"
+          },
+          {
+            "id": 1344,
+            "name": "Serials and series reports (Publicly Accessible) - Sustainable Development Policy Institute Working Papers"
+          },
+          {
+            "id": 841,
+            "name": "Serials and series reports (Publicly Accessible) - Technical publication series (Univ of Ghana. Inst of Stat, Soc, & Econ Res)"
+          },
+          {
+            "id": 3006,
+            "name": "Serials and series reports (Publicly Accessible) - The Angle"
+          },
+          {
+            "id": 2426,
+            "name": "Serials and series reports (Publicly Accessible) - The Statistical Yearbook of Abu Dhabi"
+          },
+          {
+            "id": 2746,
+            "name": "Serials and series reports (Publicly Accessible) - Travmatyzm na vyrobnyt︠s︡tvi v Ukraïny u ... rot︠s︡i : statystychnyĭ bi︠u︡lletenʹ. = Traumatism in production in Ukraine in        …. year: Statistical bulletin"
+          },
+          {
+            "id": 1202,
+            "name": "Serials and series reports (Publicly Accessible) - US Taekwondo journal"
+          },
+          {
+            "id": 2686,
+            "name": "Serials and series reports (Publicly Accessible) - Vienna Institute of Demography Working Papers"
+          },
+          {
+            "id": 1221,
+            "name": "Serials and series reports (Publicly Accessible) – Vital statistics of India ... based on civil registration system"
+          },
+          {
+            "id": 282,
+            "name": "Serials and series reports (Publicly Accessible) - Wang shi wei hen = 往事微痕"
+          },
+          {
+            "id": 1606,
+            "name": "Serials and series reports (Publicly Accessible) - Women and Men in Georgia (Republic of Georgia)"
+          },
+          {
+            "id": 2267,
+            "name": "Serials and series reports (Publicly Accessible) - World Fertility Survey Basic Documentation"
+          },
+          {
+            "id": 2748,
+            "name": "Serials and series reports (Publicly Accessible) - Zaklady okhorony zdorovʹi︠a︡ ta zakhvori︠u︡vanistʹ naselenni︠a︡ Ukraïny u ... rot︠s︡i =  Establishments of health protection and population morbidity of Ukraine in …. Year"
+          },
+          {
+            "id": 2606,
+            "name": "Series and series reports (Publicly Accessible) - “Naselenni︠a︡ Ukraїny. Demohrafichnyĭ shchorichnyk”  =  “Population of Ukraine. Demographic Yearbook”"
+          }
+        ],
+        "subcommunities": [
+
+        ],
+        "parent_id": 146
+      }
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 267,
+    "name": "Princeton University Undergraduate Senior Theses, 1924-2020",
+    "handle": "88435/dsp019c67wm88m",
+    "collections": [
+      {
+        "id": 361,
+        "name": "Aeronautical Engineering, 1945-1975"
+      },
+      {
+        "id": 2666,
+        "name": "African American Studies, 2020"
+      },
+      {
+        "id": 362,
+        "name": "Anthropology, 1961-2020"
+      },
+      {
+        "id": 363,
+        "name": "Architecture School, 1968-2020"
+      },
+      {
+        "id": 364,
+        "name": "Art and Archaeology, 1926-2020"
+      },
+      {
+        "id": 365,
+        "name": "Astrophysical Sciences, 1990-2020"
+      },
+      {
+        "id": 901,
+        "name": "Biochemical Sciences, 1968-1985"
+      },
+      {
+        "id": 366,
+        "name": "Biology, 1925-1990"
+      },
+      {
+        "id": 367,
+        "name": "Chemical and Biological Engineering, 1931-2019"
+      },
+      {
+        "id": 368,
+        "name": "Chemistry, 1926-2020"
+      },
+      {
+        "id": 369,
+        "name": "Civil and Environmental Engineering, 2000-2019"
+      },
+      {
+        "id": 370,
+        "name": "Civil Engineering and Operations Research, 1931-2000"
+      },
+      {
+        "id": 371,
+        "name": "Classics, 1934-2019"
+      },
+      {
+        "id": 372,
+        "name": "Comparative Literature, 1975-2019"
+      },
+      {
+        "id": 373,
+        "name": "Computer Science, 1988-2020"
+      },
+      {
+        "id": 374,
+        "name": "Creative Writing Program, 1995-2019"
+      },
+      {
+        "id": 375,
+        "name": "East Asian Studies, 1951-2019"
+      },
+      {
+        "id": 2169,
+        "name": "East Asian Studies Program, 2017"
+      },
+      {
+        "id": 376,
+        "name": "Ecology and Evolutionary Biology, 1992-2020"
+      },
+      {
+        "id": 377,
+        "name": "Economics, 1927-2020"
+      },
+      {
+        "id": 378,
+        "name": "Electrical Engineering, 1932-2020"
+      },
+      {
+        "id": 379,
+        "name": "Engineering and Applied Science, 1933-1987"
+      },
+      {
+        "id": 380,
+        "name": "English, 1925-2020"
+      },
+      {
+        "id": 381,
+        "name": "French and Italian, 2002-2020"
+      },
+      {
+        "id": 382,
+        "name": "Geosciences, 1929-2020"
+      },
+      {
+        "id": 383,
+        "name": "German, 1958-2020"
+      },
+      {
+        "id": 2167,
+        "name": "Global Health and Health Policy Program, 2017"
+      },
+      {
+        "id": 384,
+        "name": "History, 1926-2020"
+      },
+      {
+        "id": 385,
+        "name": "Independent Concentration, 1972-2020"
+      },
+      {
+        "id": 386,
+        "name": "Mathematics, 1934-2020"
+      },
+      {
+        "id": 387,
+        "name": "Mechanical and Aerospace Engineering, 1924-2019"
+      },
+      {
+        "id": 388,
+        "name": "Medieval Studies, 1976-1981"
+      },
+      {
+        "id": 389,
+        "name": "Modern Languages, 1926-1958"
+      },
+      {
+        "id": 390,
+        "name": "Molecular Biology, 1954-2020"
+      },
+      {
+        "id": 391,
+        "name": "Music, 1948-2020"
+      },
+      {
+        "id": 392,
+        "name": "Near Eastern Studies, 1969-2020"
+      },
+      {
+        "id": 2126,
+        "name": "Neuroscience, 2017-2020"
+      },
+      {
+        "id": 393,
+        "name": "Operations Research and Financial Engineering, 2000-2019"
+      },
+      {
+        "id": 394,
+        "name": "Oriental Studies, 1959-1969"
+      },
+      {
+        "id": 395,
+        "name": "Philosophy, 1924-2020"
+      },
+      {
+        "id": 396,
+        "name": "Physics, 1936-2020"
+      },
+      {
+        "id": 397,
+        "name": "Politics, 1927-2020"
+      },
+      {
+        "id": 407,
+        "name": "Princeton School of Public and International Affairs, 1929-2020"
+      },
+      {
+        "id": 2527,
+        "name": "Program in Dance"
+      },
+      {
+        "id": 2528,
+        "name": "Program in Visual Arts"
+      },
+      {
+        "id": 398,
+        "name": "Psychology, 1930-2020"
+      },
+      {
+        "id": 399,
+        "name": "Religion, 1946-2019"
+      },
+      {
+        "id": 400,
+        "name": "Romance Languages and Literatures, 1928-2002"
+      },
+      {
+        "id": 401,
+        "name": "Slavic Languages and Literature, 1962-2019"
+      },
+      {
+        "id": 402,
+        "name": "Sociology, 1954-2020"
+      },
+      {
+        "id": 403,
+        "name": "Spanish and Portuguese, 2002-2020"
+      },
+      {
+        "id": 404,
+        "name": "Special Program in Humanities, 1936-1972"
+      },
+      {
+        "id": 405,
+        "name": "Statistics, 1967-1985"
+      },
+      {
+        "id": 406,
+        "name": "Theater, 1940-2016"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 106,
+    "name": "Seeger Center for Hellenic Studies",
+    "handle": "88435/dsp01h989r3236",
+    "collections": [
+      {
+        "id": 181,
+        "name": "Working Papers"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  },
+  {
+    "id": 540,
+    "name": "test community1",
+    "handle": "99999/fk43b7hd20",
+    "collections": [
+      {
+        "id": 3373,
+        "name": "test collection1"
+      }
+    ],
+    "subcommunities": [
+
+    ],
+    "parent_id": null
+  }
+]

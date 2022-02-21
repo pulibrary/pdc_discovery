@@ -44,4 +44,15 @@ describe 'Search Results Page', type: :system, js: true do
       expect(page).to have_link('Midplane neutral density profiles in the National Spherical Torus Experiment', href: '/catalog/78348')
     end
   end
+
+  describe "facets" do
+    it "shows expected facets" do
+      visit '/?search_field=all_fields&q='
+      domain_facet_html = '<div class="card facet-limit blacklight-domain_ssi ">'
+      expect(page.html.include?(domain_facet_html)).to be true
+
+      community_facet_html = '<div class="card facet-limit blacklight-community_root_name_ssi ">'
+      expect(page.html.include?(community_facet_html)).to be true
+    end
+  end
 end
