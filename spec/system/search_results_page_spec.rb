@@ -45,6 +45,7 @@ describe 'Search Results Page', type: :system, js: true do
     end
   end
 
+  # rubocop:disable RSpec/ExampleLength
   describe "facets" do
     it "shows expected facets" do
       visit '/?search_field=all_fields&q='
@@ -53,6 +54,13 @@ describe 'Search Results Page', type: :system, js: true do
 
       community_facet_html = '<div class="card facet-limit blacklight-community_root_name_ssi ">'
       expect(page.html.include?(community_facet_html)).to be true
+
+      type_facet_html = '<div class="card facet-limit blacklight-genre_ssim ">'
+      expect(page.html.include?(type_facet_html)).to be true
+
+      year_facet_html = '<div class="card facet-limit blacklight-year_available_itsi ">'
+      expect(page.html.include?(year_facet_html)).to be true
     end
+    # rubocop:enable RSpec/ExampleLength
   end
 end
