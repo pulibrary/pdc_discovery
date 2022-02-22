@@ -81,6 +81,14 @@ class SolrDocument
     fetch('creator_tesim', [])
   end
 
+  def community_path
+    fetch("community_path_name_ssi", "")
+  end
+
+  def collection_name
+    fetch("collection_name_ssi", "")
+  end
+
   def contributors
     fetch("contributor_tsim", [])
   end

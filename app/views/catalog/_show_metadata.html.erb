@@ -11,6 +11,8 @@
             <%= render_field_row_many "Creator", @document.creators %>
             <%= render_field_row_many "Contributor", @document.contributors %>
             <%= render_field_row_search_link "Domain", @document.domain, "domain_ssi" %>
+            <%= render_field_row "Community", @document.community_path %>
+            <%= render_field_row "Collection", @document.collection_name %>
             <%= render_field_row "Date Accessioned", @document.accessioned_date, true %> <!-- displayed by default -->
             <%= render_field_row "Date Issued", @document.issued_date, true %> <!-- displayed by default -->
             <%= render_field_row "Date Created", @document.date_created %>
