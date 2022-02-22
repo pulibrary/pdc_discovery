@@ -55,6 +55,9 @@ describe 'Search Results Page', type: :system, js: true do
       community_facet_html = '<div class="card facet-limit blacklight-community_root_name_ssi ">'
       expect(page.html.include?(community_facet_html)).to be true
 
+      author_facet_html = '<div class="card facet-limit blacklight-author_ssim ">'
+      expect(page.html.include?(author_facet_html)).to be true
+
       type_facet_html = '<div class="card facet-limit blacklight-genre_ssim ">'
       expect(page.html.include?(type_facet_html)).to be true
 
