@@ -206,6 +206,10 @@ module ApplicationHelper
     HTML
     html.html_safe
   end
+
+  def authors_search_results_helper(field)
+    field[:value].join("; ")
+  end
 end
 # rubocop:enable Rails/OutputSafety
 # rubocop:enable Metrics/ModuleLength

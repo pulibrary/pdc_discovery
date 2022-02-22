@@ -103,7 +103,7 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
-    config.add_index_field 'author_tesim', label: 'Author(s)'
+    config.add_index_field 'author_tesim', label: 'Author(s)', helper_method: :authors_search_results_helper
     config.add_index_field 'format', label: 'Format'
     config.add_index_field 'abstract_tsim', label: 'Abstract'
     config.add_index_field 'published_ssim', label: 'Published'
