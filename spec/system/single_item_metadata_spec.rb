@@ -12,6 +12,14 @@ describe 'Single item page', type: :system, js: true do
     indexer.index
   end
 
+  it "has expected header fiedlds" do
+    visit '/catalog/78348'
+    expect(page).to have_css '.document-title-heading'
+    expect(page).to have_css '.authors-heading'
+    expect(page).to have_css 'div.authors-heading > span > i.bi-person-fill'
+    expect(page).to have_css '.issue-date-heading'
+  end
+
   # rubocop:disable Layout/ExampleLength
   it "has expected metadata" do
     visit '/catalog/78348'

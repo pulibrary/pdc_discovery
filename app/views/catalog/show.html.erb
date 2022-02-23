@@ -18,19 +18,22 @@
       <h1 class="index_title document-title-heading col">
         <span itemprop="name"><%= @document.title %></span>
       </h1>
+      <div class="col-sm-9 authors-heading">
+        <% @document.authors.each_with_index do |author, ix| %>
+          <%= render_author(author, ix < (@document.authors.count-1)) %>
+        <% end %>
+      </div>
       <div class="index-document-functions col-sm-3 col-lg-2">
         <!-- TODO add bookmarks -->
       </div>
     </header>
 
     <div class="lux">
-      <dl>
-        <dt class="blacklight-issue_date_ssim col-md-3"></dt>
-        <dd class="col-md-12 blacklight-issue_date_ssim">
-          <div class="document-issued-date" value="January 2017"></div>
-        </dd>
-      </dl>
-
+      <% if @document.issued_date.present? %>
+        <div class="issue-date-heading">
+          Issue date: <%= @document.issued_date %>
+        </div>
+      <% end %>
       <dl>
         <% @document.abstracts.each do |abstract| %>
         <dt class="blacklight-abstract_tsim col-md-3"></dt>
