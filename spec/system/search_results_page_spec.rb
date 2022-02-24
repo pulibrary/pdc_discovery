@@ -29,15 +29,6 @@ describe 'Search Results Page', type: :system, js: true do
     end
   end
 
-  describe "subject searches" do
-    it "finds record by subject" do
-      # Notice that the search is successful even with a slight variation in terms ("monte carlo" vs "Monte-Carlo simulation")
-      visit '/?search_field=subject&q=monte+carlo'
-      expect(page).to have_link('Midplane neutral density profiles in the National Spherical Torus Experiment', href: '/catalog/78348')
-      expect(page.html.include?('/?f%5Bsubject_all_ssim%5D%5B%5D=Monte-Carlo+simulation&amp;q=monte+carlo&amp;search_field=subject')).to be true
-    end
-  end
-
   describe "author searches" do
     it "finds record by subject" do
       visit '/?search_field=author&q=podesta'
@@ -54,9 +45,6 @@ describe 'Search Results Page', type: :system, js: true do
 
       community_facet_html = '<div class="card facet-limit blacklight-community_root_name_ssi ">'
       expect(page.html.include?(community_facet_html)).to be true
-
-      author_facet_html = '<div class="card facet-limit blacklight-author_ssim ">'
-      expect(page.html.include?(author_facet_html)).to be true
 
       type_facet_html = '<div class="card facet-limit blacklight-genre_ssim ">'
       expect(page.html.include?(type_facet_html)).to be true
