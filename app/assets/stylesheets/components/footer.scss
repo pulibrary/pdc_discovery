@@ -1,12 +1,15 @@
 #footer {
-  padding: 40px 0px 20px 0px;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #cecece;
+  color: #000000;
   font-size: 11px;
   text-align: right;
+  position: fixed;
+  padding: 30px 0px 10px 0px;
+  bottom: 0;
+  width: 100%;
   .content {
     display: inline-block;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     width: 100%;
     height: auto;
     margin: 0 auto;
