@@ -34,9 +34,7 @@
           </tbody>
           <tfoot></tfoot>
         </table>
-        <% @document.uri.each do |uri| %>
-          <%= render_globus_download(uri) if uri.include?("app.globus.org") %>
-        <% end %>
+        <%= render_globus_download(@document.globus_uri, @document.id) %>
       </div>
     </div>
   </div>
@@ -48,12 +46,18 @@ $(function() {
   // Wire DataTable for the file list.
   $('#files-table').DataTable();
 
-  // Track via Plausible file downloads.
+  // Track file downloads via Plausible.
   $(".documents-file-link").click(function() {
     var filename = $(this).text();
-    log_plausible(filename);
+    log_plausible_file_download(filename);
     return true;
   });
 
+  // Track Globus downloads via Plausible.
+  $(".globus-download-link").click(function() {
+    var id = $(this).data('item-id');
+    log_plausible_globus_download(id);
+    return true;
+  });
 });
 </script>

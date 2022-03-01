@@ -172,6 +172,13 @@ class SolrDocument
     fetch("format_ssim", [])
   end
 
+  def globus_uri
+    uri.each do |link|
+      return link if link.downcase.start_with?('https://app.globus.org/')
+    end
+    nil
+  end
+
   def extent
     fetch("extent_ssim", [])
   end

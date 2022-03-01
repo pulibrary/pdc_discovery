@@ -1,6 +1,6 @@
 <div id="sidebar-usage" class="sidebar">
   <ul>
-    <li><span class="number"><%= Rails.env.staging? || Rails.env.production? ? views : 'X' %> </span> <i class="bi bi-eye-fill"></i>views</li>
+    <li><span class="number"><%= Plausible.page_views(@document.id) %> </span> <i class="bi bi-eye-fill"></i>views</li>
   </ul>
 </div>
 
