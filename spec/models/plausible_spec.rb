@@ -5,7 +5,6 @@ require 'rails_helper'
 # rubocop:disable Layout/LineLength
 RSpec.describe Plausible do
   before do
-
     stub_request(:get, "https://plausible.io/api/v1/stats/breakdown?filters=event:page==/catalog/88163&metrics=visitors,pageviews&property=event:props:filename&site_id=pdc-discovery-staging.princeton.edu")
       .with(
         headers: {
