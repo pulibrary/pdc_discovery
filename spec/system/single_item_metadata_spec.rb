@@ -48,4 +48,10 @@ describe 'Single item page', type: :system, js: true do
     visit '/catalog/78348'
     expect(page.html.include?('<span class="Z3988"')).to be true
   end
+
+  it "renders pageviews and downloads stats" do
+    visit '/catalog/78348'
+    expect(page.html.include?('<span id="pageviews"')).to be true
+    expect(page.html.include?('<span id="downloads"')).to be true
+  end
 end
