@@ -199,7 +199,7 @@ module ApplicationHelper
     html = <<-HTML
     <div id="globus">
       <button data-v-b7851b04="" type="button" class="document-downloads__button lux-button solid medium">
-        #{link_to('Download from Globus', uri, target: '_blank', title: 'opens in a new tab', rel: 'noopener noreferrer', class: 'globus-download-link', data: {item_id: item_id})}
+        #{link_to('Download from Globus', uri, target: '_blank', title: 'opens in a new tab', rel: 'noopener noreferrer', class: 'globus-download-link', data: { item_id: item_id })}
         <i class="bi bi-cloud-arrow-down-fill"></i>
       </button>
     </div>
