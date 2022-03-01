@@ -1,7 +1,7 @@
 <div id="sidebar-usage" class="sidebar">
   <ul>
-    <li><span class="number"><%= Plausible.pageviews(@document.id) %> </span> <i class="bi bi-eye-fill"></i>views</li>
-    <li><span class="number"><%= Plausible.downloads(@document.id) %> </span> <i class="bi bi-file-arrow-down"></i>downloads</li>
+    <li><span id="pageviews" class="number"><%= Plausible.pageviews(@document.id) %> </span> <i class="bi bi-eye-fill"></i>views</li>
+    <li><span id="downloads" class="number"><%= Plausible.downloads(@document.id) %> </span> <i class="bi bi-file-arrow-down"></i>downloads</li>
   </ul>
 </div>
 
