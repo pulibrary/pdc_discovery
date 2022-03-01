@@ -5,7 +5,6 @@ require 'rails_helper'
 # rubocop:disable Layout/LineLength
 RSpec.describe Plausible do
   before do
-    ENV['PLAUSIBLE_KEY'] = 'no-key-for-testing'
 
     stub_request(:get, "https://plausible.io/api/v1/stats/breakdown?filters=event:page==/catalog/88163&metrics=visitors,pageviews&property=event:props:filename&site_id=pdc-discovery-staging.princeton.edu")
       .with(
@@ -25,7 +24,9 @@ RSpec.describe Plausible do
 
   describe "#downloads" do
     it "rolls up downloads" do
+      ENV['PLAUSIBLE_KEY'] = 'no-key-for-testing'
       expect(described_class.downloads('88163')).to eq 6
+      ENV['PLAUSIBLE_KEY'] = nil
     end
   end
 end
