@@ -5,16 +5,15 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse justify-content-md-start" id="user-util-collapse">
+    <div class="nav-links-search">
       <%= render 'shared/nav_links' %>
+      <% unless current_page?('/') && params[:search_field].blank? && params[:q].blank? %>
+        <%= content_tag :div, class: 'navbar-search', role: 'navigation', aria: { label: t('blacklight.search.header') } do %>
+          <div class="<%= container_classes %>">
+            <%= render_search_bar  %>
+          </div>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </nav>
-
-<% unless current_page?('/') && params[:search_field].blank? && params[:q].blank? %>
-  <%= content_tag :div, class: 'navbar-search navbar navbar-light bg-light', role: 'navigation', aria: { label: t('blacklight.search.header') } do %>
-    <div class="<%= container_classes %>">
-      <%= render_search_bar  %>
-    </div>
-  <% end %>
-<% end %>
