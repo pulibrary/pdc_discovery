@@ -22,4 +22,6 @@ namespace :pdc_discovery do
   end
 end
 
-after "deploy:published", "pdc_discovery:reindex"
+# Uncomment to re-index on every deploy. Only needed when we're actively 
+# updating how indexing happens.
+# after "deploy:published", "pdc_discovery:reindex"

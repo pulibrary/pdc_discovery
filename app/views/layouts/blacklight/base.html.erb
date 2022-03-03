@@ -23,14 +23,12 @@
 
     <%= stylesheet_link_tag "application", media: "all" %>
     <%= javascript_include_tag "application" %>
-    <%= stylesheet_pack_tag "application" %>
-    <%= javascript_pack_tag 'application'  %>
     <%= csrf_meta_tags %>
     <%= content_for(:head) %>
     <%= render 'shared/plausible' %>
-
-    <link rel="stylesheet" type="text/css" href="/DataTables-1.11.3/datatables.css"/>
-    <script type="text/javascript" src="/DataTables-1.11.3/datatables.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 
   </head>
   <body class="<%= render_body_class %>">
