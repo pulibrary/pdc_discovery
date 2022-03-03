@@ -31,3 +31,6 @@ RSpec/AnyInstance:
 RSpec/ExampleLength:
   Exclude:
     - spec/lib/research_data_collection_spec.rb
+
+Rails/UnknownEnv:
+  Enabled: false
