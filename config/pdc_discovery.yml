@@ -1,6 +1,6 @@
 default: &default
   dataspace_url: <%= ENV["DATASPACE_URL"] || "https://dataspace-dev.princeton.edu" %>
-  plausible_site_id: <%= "pdc-discovery-staging.princeton.edu" %>
+  plausible_site_id: <%= "datacommons.princeton.edu/discovery" %>
 
 development:
   <<: *default
@@ -12,8 +12,8 @@ test:
 production:
   <<: *default
   dataspace_url: <%= ENV["DATASPACE_URL"] %>
-  plausible_site_id: <%= "pdc-discovery-staging.princeton.edu" %>
+  plausible_site_id: <%= "datacommons.princeton.edu/discovery" %>
 
 staging:
   <<: *default
-  plausible_site_id: <%= "pdc-discovery-staging.princeton.edu" %>
+  plausible_site_id: <%= "datacommons.princeton.edu/discovery" %>
