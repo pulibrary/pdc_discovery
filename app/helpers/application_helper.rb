@@ -194,12 +194,12 @@ module ApplicationHelper
     html.html_safe
   end
 
-  def render_globus_download(uri)
-    return if uri.blank?
+  def render_globus_download(uri, item_id)
+    return if uri.nil?
     html = <<-HTML
     <div id="globus">
       <button data-v-b7851b04="" type="button" class="document-downloads__button lux-button solid medium">
-        #{link_to('Download from Globus', uri, target: '_blank', title: 'opens in a new tab', rel: 'noopener noreferrer')}
+        #{link_to('Download from Globus', uri, target: '_blank', title: 'opens in a new tab', rel: 'noopener noreferrer', class: 'globus-download-link', data: { item_id: item_id })}
         <i class="bi bi-cloud-arrow-down-fill"></i>
       </button>
     </div>
@@ -209,6 +209,27 @@ module ApplicationHelper
 
   def authors_search_results_helper(field)
     field[:value].join("; ")
+  end
+
+  def render_author(name, add_separator)
+    return if name.blank?
+
+    icon_html = '<i class="bi bi-person-fill"></i>'
+    separator = add_separator ? ";" : ""
+    name_html = "#{name}#{separator}"
+    if name == 'Koeser, Rebecca Sutton'
+      # Hard-coded for now to demo how researchers with ORCiD will display
+      icon_html = '<img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />'
+      name_html = '<a href="https://orcid.org/0000-0002-8762-8057" target="_blank">' + name + '</a>' + separator
+    end
+
+    html = <<-HTML
+    <span>
+      #{icon_html}
+      #{name_html}
+    </span>
+    HTML
+    html.html_safe
   end
 end
 # rubocop:enable Rails/OutputSafety

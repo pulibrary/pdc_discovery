@@ -12,13 +12,28 @@ describe 'Single item page', type: :system, js: true do
     indexer.index
   end
 
+  it "has expected header fiedlds" do
+    visit '/catalog/78348'
+    expect(page).to have_css '.document-title-heading'
+    expect(page).to have_css '.authors-heading'
+    expect(page).to have_css 'div.authors-heading > span > i.bi-person-fill'
+    expect(page).to have_css '.issue-date-heading'
+  end
+
+  # rubocop:disable Layout/ExampleLength
   it "has expected metadata" do
     visit '/catalog/78348'
     expect(page).to have_content "Midplane neutral density profiles in the National Spherical Torus Experiment"
 
     authors = "<span>Stotler, D.; F. Scotti; R.E. Bell; A. Diallo; B.P. LeBlanc; M. Podesta; A.L. Roquemore; P.W. Ross</span>"
-    expect(page.html.include?(authors)).to be true
+    community = "<span>Princeton Plasma Physics Laboratory|Spherical Torus</span>"
+    collection = "<span>NSTX</span>"
+    expected_values = [authors, community, collection]
+    expected_values.each do |value|
+      expect(page.html.include?(value)).to be true
+    end
   end
+  # rubocop:enable Layout/ExampleLength
 
   # rubocop:disable Layout/LineLength
   it "has expected citation information" do
@@ -32,5 +47,11 @@ describe 'Single item page', type: :system, js: true do
   it "has expected HTML SPAN element with COinS information" do
     visit '/catalog/78348'
     expect(page.html.include?('<span class="Z3988"')).to be true
+  end
+
+  it "renders pageviews and downloads stats" do
+    visit '/catalog/78348'
+    expect(page.html.include?('<span id="pageviews"')).to be true
+    expect(page.html.include?('<span id="downloads"')).to be true
   end
 end

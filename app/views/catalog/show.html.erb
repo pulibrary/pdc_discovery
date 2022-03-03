@@ -15,26 +15,26 @@
 <div id="document" data-document-id="<%= @document.id %>" itemscope="itemscope" itemtype="http://schema.org/Thing" class="document">
   <div class="document-main-section">
     <header class="documentHeader row">
-      <h1 class="index_title document-title-heading col">
-        <span itemprop="name"><%= @document.title %></span>
-      </h1>
-      <div class="index-document-functions col-sm-3 col-lg-2">
-        <!-- TODO add bookmarks -->
+      <div class="col-sm-12 authors-heading">
+        <h1 class="index_title document-title-heading col">
+          <span itemprop="name"><%= @document.title %></span>
+        </h1>
+        <% @document.authors.each_with_index do |author, ix| %>
+          <%= render_author(author, ix < (@document.authors.count-1)) %>
+        <% end %>
       </div>
     </header>
 
     <div class="lux">
-      <dl>
-        <dt class="blacklight-issue_date_ssim col-md-3"></dt>
-        <dd class="col-md-12 blacklight-issue_date_ssim">
-          <div class="document-issued-date" value="January 2017"></div>
-        </dd>
-      </dl>
-
+      <% if @document.issued_date.present? %>
+        <div class="issue-date-heading">
+          Issue date: <%= @document.issued_date %>
+        </div>
+      <% end %>
       <dl>
         <% @document.abstracts.each do |abstract| %>
         <dt class="blacklight-abstract_tsim col-md-3"></dt>
-        <dd class="col-md-12">
+        <dd class="col-md-12 abstract-container">
           <div class="document-abstract">
             <header>Abstract:</header>
             <p id="document-abstract-text" class="truncate-line-clamp"><%= abstract %></p>
@@ -47,7 +47,7 @@
       <dl>
         <% @document.descriptions.each do |description| %>
         <dt class="blacklight-description_tsim col-md-3"></dt>
-        <dd class="col-md-12 blacklight-description_tsim">
+        <dd class="col-md-12 description-container">
           <div class="document-description">
             <header>Description:</header>
             <p id="document-description-text" class="truncate-line-clamp"><%= description %></p>

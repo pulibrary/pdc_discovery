@@ -81,6 +81,14 @@ class SolrDocument
     fetch('creator_tesim', [])
   end
 
+  def community_path
+    fetch("community_path_name_ssi", "")
+  end
+
+  def collection_name
+    fetch("collection_name_ssi", "")
+  end
+
   def contributors
     fetch("contributor_tsim", [])
   end
@@ -162,6 +170,13 @@ class SolrDocument
 
   def format
     fetch("format_ssim", [])
+  end
+
+  def globus_uri
+    uri.each do |link|
+      return link if link.downcase.start_with?('https://app.globus.org/')
+    end
+    nil
   end
 
   def extent
