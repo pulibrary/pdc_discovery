@@ -1,5 +1,9 @@
 .navbar-logo {
   background-image: asset_url("logo.svg");
+  display: inline-block;
+  flex: 0 0 350px;
+  height: 100px;
+  width: 350px;
 }
 
 .navbar.bg-light {
@@ -18,4 +22,17 @@
 .submit-search-text {
   background-color: #005bbd;
   color: #ffffff;
+}
+
+.nav-links-search {
+  width: 100%;
+}
+
+.navbar-nav {
+  float: left;
+  padding: 5px 5px 5px 10px;
+}
+
+.navbar-nav .nav-item {
+  clear: both;
 }

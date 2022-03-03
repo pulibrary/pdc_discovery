@@ -20,7 +20,7 @@ describe 'Single item page', type: :system, js: true do
     expect(page).to have_css '.issue-date-heading'
   end
 
-  # rubocop:disable Layout/ExampleLength
+  # rubocop:disable RSpec/ExampleLength
   it "has expected metadata" do
     visit '/catalog/78348'
     expect(page).to have_content "Midplane neutral density profiles in the National Spherical Torus Experiment"
@@ -33,7 +33,7 @@ describe 'Single item page', type: :system, js: true do
       expect(page.html.include?(value)).to be true
     end
   end
-  # rubocop:enable Layout/ExampleLength
+  # rubocop:enable RSpec/ExampleLength
 
   # rubocop:disable Layout/LineLength
   it "has expected citation information" do
