@@ -8,11 +8,10 @@ development:
 test:
   <<: *default
 
-# TODO: switch plausible_site_id to production id once we create one in Plausible
 production:
   <<: *default
   dataspace_url: <%= ENV["DATASPACE_URL"] %>
-  plausible_site_id: <%= "pdc-discovery-staging.princeton.edu" %>
+  plausible_site_id: <%= "datacommons.princeton.edu/discovery" %>
 
 staging:
   <<: *default
