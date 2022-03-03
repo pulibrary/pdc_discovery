@@ -9,7 +9,8 @@ class Plausible
     return 'X' if ENV['PLAUSIBLE_KEY'].nil?
 
     c = PlausibleApi::Client.new(Rails.configuration.pdc_discovery.plausible_site_id, ENV['PLAUSIBLE_KEY'])
-    response = c.aggregate({ date: "2021-01-01,#{Time.zone.today.strftime('%Y-%m-%d')}", metrics: 'visitors,pageviews', filters: "event:page==/catalog/#{document_id}" })
+    page = "/discovery/catalog/#{document_id}"
+    response = c.aggregate({ date: "2021-01-01,#{Time.zone.today.strftime('%Y-%m-%d')}", metrics: 'visitors,pageviews', filters: "event:page==#{page}" })
     response["pageviews"]["value"]
   rescue => e
     Rails.logger.error "PLAUSIBLE ERROR: (Pageviews for document: #{document_id}) #{e.message}"
@@ -31,7 +32,7 @@ class Plausible
     return 'X' if ENV['PLAUSIBLE_KEY'].nil?
 
     site_id = Rails.configuration.pdc_discovery.plausible_site_id
-    page = "/catalog/#{document_id}"
+    page = "/discovery/catalog/#{document_id}"
     url = "#{PLAUSIBLE_API_URL}/stats/breakdown?site_id=#{site_id}&property=event:props:filename&filters=event:page==#{page}&metrics=visitors,pageviews"
     authorization = "Bearer #{ENV['PLAUSIBLE_KEY']}"
     response = HTTParty.get(url, headers: { 'Authorization' => authorization })
