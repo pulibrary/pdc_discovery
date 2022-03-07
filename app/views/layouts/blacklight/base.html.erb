@@ -26,7 +26,7 @@
     <%= csrf_meta_tags %>
     <%= content_for(:head) %>
     <%= render 'shared/plausible' %>
-    
+
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"/>
     <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 
@@ -80,6 +80,12 @@
     // Hide the subcommunity facet unless we are faceting by community or subcommunity.
     if (!activeFacet("community_root_name_ssi") && !activeFacet("subcommunity_name_ssi")) {
       hideFacetGroup("subcommunity_name_ssi");
+    }
+
+    // Hide the collection facet unless we are faceting by the PPPL community
+    // We do this because this is the only group that uses collections in DataSpace and has more than one.
+    if (activeFacet("community_root_name_ssi") != "Princeton+Plasma+Physics+Laboratory") {
+      hideFacetGroup("collection_name_ssi");
     }
   });
   </script>
