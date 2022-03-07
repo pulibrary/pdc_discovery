@@ -51,7 +51,17 @@ describe 'Search Results Page', type: :system, js: true do
 
       year_facet_html = '<div class="card facet-limit blacklight-year_available_itsi ">'
       expect(page.html.include?(year_facet_html)).to be true
+
+      # Collection facet is not rendered by defailt
+      collection_facet_html = '<div class="card facet-limit blacklight-collection_name_ssi ">'
+      expect(page.html.include?(collection_facet_html)).to be false
     end
     # rubocop:enable RSpec/ExampleLength
+
+    it "shows collection facet for PPPL" do
+      visit '/?f%5Bcommunity_root_name_ssi%5D%5B%5D=Princeton+Plasma+Physics+Laboratory'
+      collection_facet_html = '<div class="card facet-limit blacklight-collection_name_ssi ">'
+      expect(page.html.include?(collection_facet_html)).to be true
+    end
   end
 end
