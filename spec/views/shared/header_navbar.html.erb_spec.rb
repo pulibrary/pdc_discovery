@@ -20,4 +20,11 @@ describe 'catalog/index', type: :system do
       expect(page).to have_selector('div.navbar-search')
     end
   end
+
+  context 'when performing a faceted search without a search term' do
+    it 'shows the navbar search' do
+      visit '/?f%5Bgenre_ssim%5D%5B%5D=Dataset'
+      expect(page).to have_selector('div.navbar-search')
+    end
+  end
 end
