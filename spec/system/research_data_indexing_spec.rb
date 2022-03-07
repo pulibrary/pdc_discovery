@@ -35,7 +35,9 @@ describe 'DataSpace research data indexing', type: :system do
   end
 
   it 'files' do
+    # The fixture has two files but we expect the "license.txt" to be ignored
     files = JSON.parse(result['files_ss'].first)
+    expect(files.count).to eq 1
     expect(files.first["name"]).to eq 'Lee_princeton_0181D_10086.pdf'
   end
 end

@@ -403,6 +403,10 @@ to_field 'files_ss' do |record, accumulator, _context|
       handle: dataspace_handle
     }
   end
+
+  # Exclude DSpace license.txt file
+  bitstreams.reject! { |bitstream| bitstream[:name] == "license.txt" }
+
   accumulator.concat [bitstreams.to_json.to_s]
 end
 
