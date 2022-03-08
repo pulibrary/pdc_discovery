@@ -7,7 +7,7 @@
 # rubocop:disable Style/IfUnlessModifier
 class DatasetCitation
   def self.styles
-    ["APA", "Chicago", "BibTeX"]
+    ["APA", "BibTeX"]
   end
 
   # @param authors [<String>] Array of authors.
@@ -26,16 +26,16 @@ class DatasetCitation
   end
 
   def to_s(style)
-    if style == "Chicago"
-      chicago
-    elsif style == "BibTeX"
+    if style == "BibTeX"
       bibtex
+    elsif style == "BibTeX-html"
+      bibtex_html
     else
       apa
     end
   end
 
-  # Returns a string with APA citation for the dataset
+  # Returns a string with APA-ish citation for the dataset
   # Reference: https://libguides.usc.edu/APA7th/datasets#s-lg-box-22855503
   def apa
     apa_author = ''
@@ -74,34 +74,6 @@ class DatasetCitation
     nil
   end
 
-  # Returns a string with Chicago citation for the dataset
-  # Reference: https://libguides.webster.edu/data/chicago
-  def chicago
-    chi_author = ''
-    case @authors.count
-    when 0
-      # do nothing
-    when 1
-      chi_author += @authors.first
-    when 2
-      chi_author += @authors.join(' and ')
-    else
-      chi_author += @authors[0..-2].join(', ') + ' and ' + @authors[-1]
-    end
-
-    chi_year = @years.count.zero? ? '' : append_dot(@years.join('-'))
-
-    chi_title = append_dot(@title)
-    chi_publisher = append_dot(@publisher)
-    chi_doi = append_dot(@doi)
-
-    tokens = [append_dot(chi_author), chi_title, chi_year, chi_publisher, chi_doi].reject(&:blank?)
-    tokens.join(' ')
-  rescue => ex
-    Rails.logger.error "Error generating Chicago citation for (#{@title}): #{ex.message}"
-    nil
-  end
-
   # Returns a string with BibTex citation for the dataset
   # References:
   #   https://libguides.nps.edu/citation/ieee-bibtex
@@ -131,6 +103,39 @@ class DatasetCitation
 
     text = ""
     text += "@electronic{ #{bibtex_id},\r\n"
+    text += tokens.map { |token| "  #{token}" }.join(",\r\n") + "\r\n"
+    text += "}"
+    text
+  rescue => ex
+    Rails.logger.error "Error generating BibTex citation for (#{@title}): #{ex.message}"
+    nil
+  end
+
+  def bibtex_html
+    tokens = []
+    if @authors.count > 0
+      # https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Authors
+      tokens << bibtex_field_multi('author', @authors, '{', '}')
+    end
+
+    if @title.present?
+      tokens << bibtex_field('title', @title, '{{', '}}')
+    end
+
+    if @publisher.present?
+      tokens << bibtex_field('publisher', @publisher, '{{', '}}')
+    end
+
+    if @years.count > 0
+      tokens << bibtex_field('year', @years.first, '', '')
+    end
+
+    if @doi.present?
+      tokens << bibtex_field('url', @doi, '{', '}')
+    end
+
+    text = ""
+    text += "@dataset{#{bibtex_id},\r\n"
     text += tokens.map { |token| "  #{token}" }.join(",\r\n") + "\r\n"
     text += "}"
     text
@@ -182,6 +187,28 @@ class DatasetCitation
     end
     year_id = @years.first&.to_s || 'unknown'
     "#{author_id}_#{year_id}"
+  end
+
+  # Breaks a string into lines of at most max_length.
+  # Returns an array with the lines.
+  def bibtex_lines(string, max_length=40)
+    lines = []
+    while string != nil
+      # TODO: it would be nice it we break on spaces rather than at random
+      lines << string[0..max_length-1]
+      string = string[max_length..-1]
+    end
+    lines
+  end
+
+  def bibtex_field(name, value, open_tag = '', close_tag = '')
+    value_trim = bibtex_lines(value).join("\r\n\t\t\t\t\t\t\t\t")
+    name.ljust(12) + '= ' + open_tag + value_trim + close_tag
+  end
+
+  def bibtex_field_multi(name, values, open_tag = '', close_tag = '')
+    value_trim = values.join(" and \r\t\t\t\t\t\t\t\t")
+    name.ljust(12) + '= ' + open_tag + value_trim + close_tag
   end
 
   # Appends a dot to a string if it does not end with one.
