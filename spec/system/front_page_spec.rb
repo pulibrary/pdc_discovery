@@ -20,4 +20,11 @@ describe 'Application landing page', type: :system do
     visit '/'
     expect(page).to have_content "last updated"
   end
+
+  it "has a header with links to helpful info" do
+    visit '/'
+    expect(page).to have_link "Home", href: "/"
+    expect(page).to have_link "About", href: "/about"
+    expect(page).to have_link "How to Submit", href: "/submit"
+  end
 end

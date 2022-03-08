@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   end
 
   get 'about' => 'home#about', as: :home_about
+  get 'submit' => 'home#submit', as: :home_submit
 
   # Route all errors to the error controller
   get 'errors/not_found'
