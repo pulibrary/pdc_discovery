@@ -32,5 +32,14 @@ Rails.application.routes.draw do
 
   get 'about' => 'home#about', as: :home_about
 
+  # Route all errors to the error controller
+  get 'errors/not_found'
+  get 'errors/internal_server_error'
+  match "/404", to: "errors#not_found", via: :all
+  match "/500", to: "errors#internal_server_error", via: :all
+
+  # Anything still unmatched by the end of the routes file should go to the not_found page
+  match '*a', to: 'errors#not_found', via: :get
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
