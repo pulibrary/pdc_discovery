@@ -6,6 +6,10 @@ class CatalogController < ApplicationController
 
   include Blacklight::Marc::Catalog
 
+  rescue_from Blacklight::Exceptions::RecordNotFound do
+    redirect_to '/errors/not_found'
+  end
+
   configure_blacklight do |config|
     ## Class for sending and receiving requests from a search index
     # config.repository_class = Blacklight::Solr::Repository
