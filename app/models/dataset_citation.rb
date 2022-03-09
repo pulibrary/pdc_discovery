@@ -6,9 +6,7 @@
 # rubocop:disable Style/NumericPredicate
 # rubocop:disable Style/IfUnlessModifier
 class DatasetCitation
-  def self.styles
-    ["APA", "Chicago", "BibTeX"]
-  end
+  NEWLINE_INDENTED = "\r\n\t\t\t\t\t\t\t\t"
 
   # @param authors [<String>] Array of authors.
   # @param years [<String>] Array of years (expected 1 or 2 values).
@@ -26,16 +24,14 @@ class DatasetCitation
   end
 
   def to_s(style)
-    if style == "Chicago"
-      chicago
-    elsif style == "BibTeX"
+    if style == "BibTeX"
       bibtex
     else
       apa
     end
   end
 
-  # Returns a string with APA citation for the dataset
+  # Returns a string with APA-ish citation for the dataset
   # Reference: https://libguides.usc.edu/APA7th/datasets#s-lg-box-22855503
   def apa
     apa_author = ''
@@ -74,64 +70,38 @@ class DatasetCitation
     nil
   end
 
-  # Returns a string with Chicago citation for the dataset
-  # Reference: https://libguides.webster.edu/data/chicago
-  def chicago
-    chi_author = ''
-    case @authors.count
-    when 0
-      # do nothing
-    when 1
-      chi_author += @authors.first
-    when 2
-      chi_author += @authors.join(' and ')
-    else
-      chi_author += @authors[0..-2].join(', ') + ' and ' + @authors[-1]
-    end
-
-    chi_year = @years.count.zero? ? '' : append_dot(@years.join('-'))
-
-    chi_title = append_dot(@title)
-    chi_publisher = append_dot(@publisher)
-    chi_doi = append_dot(@doi)
-
-    tokens = [append_dot(chi_author), chi_title, chi_year, chi_publisher, chi_doi].reject(&:blank?)
-    tokens.join(' ')
-  rescue => ex
-    Rails.logger.error "Error generating Chicago citation for (#{@title}): #{ex.message}"
-    nil
-  end
-
-  # Returns a string with BibTex citation for the dataset
-  # References:
-  #   https://libguides.nps.edu/citation/ieee-bibtex
-  #   https://www.citethisforme.com/citation-generator/bibtex
+  # Returns a string with BibTeX citation for the dataset.
+  #
+  # There is no set standard for datasets and therefore the format we produce
+  # was put together from a variety of sources including mimicking what Zotero
+  # does and looking at examples from Zenodo (e.g. https://zenodo.org/record/6062882/export/hx#.Yiejad9OnUL)
+  #
+  # Notice that we use the @electronic{...} identifier instead of @dataset{...} since
+  # Zotero does not recognize the later.
   def bibtex
     tokens = []
     if @authors.count > 0
-      # https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Authors
-      tokens << "author = \"#{@authors.join(' and ')}\""
+      tokens << bibtex_field_author('author', @authors)
     end
 
     if @title.present?
-      tokens << "title = \"#{@title}\""
+      tokens << bibtex_field('title', @title, '{{', '}}')
     end
 
     if @publisher.present?
-      tokens << "publisher = \"#{@publisher}\""
+      tokens << bibtex_field('publisher', @publisher, '{{', '}}')
     end
 
     if @years.count > 0
-      tokens << "year = \"#{@years.first}\""
+      tokens << bibtex_field('year', @years.first)
     end
 
     if @doi.present?
-      tokens << "url = \"#{@doi}\""
+      tokens << bibtex_field('url', @doi, '{', '}')
     end
 
-    text = ""
-    text += "@electronic{ #{bibtex_id},\r\n"
-    text += tokens.map { |token| "  #{token}" }.join(",\r\n") + "\r\n"
+    text = "@electronic{#{bibtex_id},\r\n"
+    text += tokens.map { |token| "\t#{token}" }.join(",\r\n") + "\r\n"
     text += "}"
     text
   rescue => ex
@@ -182,6 +152,47 @@ class DatasetCitation
     end
     year_id = @years.first&.to_s || 'unknown'
     "#{author_id}_#{year_id}"
+  end
+
+  # Breaks a string into lines of at most max_length.
+  # Returns an array with the lines.
+  def bibtex_lines(string, max_length = 40)
+    string = string.to_s # handles non-string values gracefully
+    lines = []
+    until string.nil?
+      # TODO: it would be nice it we break on spaces rather than in the middle of a word.
+      lines << string[0..max_length - 1]
+      string = string[max_length..-1]
+    end
+    lines
+  end
+
+  # Creates a line to represent a BibTex field.
+  # Breaks long lines into smaller lines.
+  # Examples:
+  #
+  #     field_name = {{ short value }}
+  #     field_name = {{ very very very
+  #                 very very very very
+  #                 long value }}
+  #
+  def bibtex_field(name, value, open_tag = '', close_tag = '')
+    value_trim = bibtex_lines(value).join(NEWLINE_INDENTED)
+    name.ljust(12) + '= ' + open_tag + value_trim + close_tag
+  end
+
+  # Creates a line to represent multiple authors in a BibTex field
+  # https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Authors
+  #
+  # Example:
+  #
+  #     author = { author1 and
+  #              author2 and
+  #              author3 }
+  #
+  def bibtex_field_author(name, authors, open_tag = '{', close_tag = '}')
+    value_trim = authors.join(" and #{NEWLINE_INDENTED}")
+    name.ljust(12) + '= ' + open_tag + value_trim + close_tag
   end
 
   # Appends a dot to a string if it does not end with one.

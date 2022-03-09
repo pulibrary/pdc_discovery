@@ -127,51 +127,35 @@ module ApplicationHelper
     html.html_safe
   end
 
-  # Renders the menu with the different citation options that we support
-  def render_sidebar_citation_options(prefered_style)
-    html_buttons = DatasetCitation.styles.map do |style|
-      css_class = style == prefered_style ? "btn-outline-primary" : "btn-outline-secondary"
-      tooltip = "Show citation as #{style}"
-      "<button type='button' data-style='#{style}' class='cite-as-button btn #{css_class} btn-xsm' title='#{tooltip}'>#{style}</button>&nbsp;"
-    end
+  # Renders citation information APA-ish and BibTeX.
+  # Notice that the only the APA style is visible, the BibTeX citataion is enabled via JavaScript.
+  def render_cite_as(document)
+    return if document.cite("APA").nil?
+
+    apa = document.cite("APA")
+    bibtex = document.cite("BibTeX")
+    bibtex_html = html_escape(bibtex).gsub("\r\n", "<br/>").gsub("\t", "  ").gsub("  ", "&nbsp;&nbsp;")
+    bibtex_text = html_escape(bibtex).gsub("\t", "  ")
 
     html = <<-HTML
-    <tr>
-      <th scope="row" class="sidebar-label"><span>Cite as:</span></th>
-      <td class="sidebar-value">#{html_buttons.join}</td>
-    </tr>
-    HTML
-    html.html_safe
-  end
-
-  # Renders a citation in the given style
-  # (notice that only the citation in the preferred style marked as visible)
-  def render_sidebar_citation(citation, style, preferred_style, id)
-    return if citation.nil?
-    css_class = style == preferred_style ? 'citation-row' : 'citation-row hidden-row'
-    tooltip = 'Copy citation to the clipboard'
-
-    download_button = ""
-    if style == "BibTeX"
-      download_button = <<-HTML
-        <button id="download-bibtex" class="btn btn-sm" data-url="#{catalog_bibtex_url(id: id)}">
-          <i class="bi bi-file-arrow-down" title="Download citation"></i>
-          <span class="copy-citation-label-normal">DOWNLOAD</span>
-        </button>
-      HTML
-    end
-
-    html = <<-HTML
-    <tr class="#{css_class}" data-style="#{style}">
-      <th scope="row" class="sidebar-label"><span></span></th>
-      <td class="sidebar-value">#{html_escape(citation)}
-        <button class="copy-citation-button btn btn-sm" data-style="#{style}" data-text="#{html_escape(citation)}" title="#{tooltip}">
-          <i class="bi bi-clipboard" title="#{tooltip}"></i>
+      <div class="citation-apa-container">
+        <div class="apa-citation">#{html_escape(apa)}</div>
+        <button id="copy-apa-citation-button" class="copy-citation-button btn btn-sm" data-style="APA" data-text="#{html_escape(apa)}" title="Copy citation to the clipboard">
+          <i class="bi bi-clipboard" title="Copy citation to the clipboard"></i>
           <span class="copy-citation-label-normal">COPY</span>
         </button>
-        #{download_button}
-      </td>
-    </tr>
+      </div>
+      <div class="citation-bibtex-container hidden-element">
+        <div class="bibtex-citation">#{bibtex_html}</div>
+        <button id="copy-bibtext-citation-button" class="copy-citation-button btn btn-sm" data-style="BibTeX" data-text="#{bibtex_text}" title="Copy BibTeX citation to the clipboard">
+          <i class="bi bi-clipboard" title="Copy BibTeX citation to the clipboard"></i>
+          <span class="copy-citation-label-normal">COPY</span>
+        </button>
+        <button id="download-bibtex" class="btn btn-sm" data-url="#{catalog_bibtex_url(id: document.id)}" title="Download BibTeX citation to a file">
+          <i class="bi bi-file-arrow-down" title="Download BibTeX citation to a file"></i>
+          <span class="copy-citation-label-normal">DOWNLOAD</span>
+        </button>
+      </div>
     HTML
     html.html_safe
   end
@@ -224,7 +208,7 @@ module ApplicationHelper
     end
 
     html = <<-HTML
-    <span>
+    <span class="author-name">
       #{icon_html}
       #{name_html}
     </span>
