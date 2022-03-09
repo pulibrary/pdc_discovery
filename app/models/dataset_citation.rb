@@ -157,6 +157,7 @@ class DatasetCitation
   # Breaks a string into lines of at most max_length.
   # Returns an array with the lines.
   def bibtex_lines(string, max_length = 40)
+    string = string.to_s # handles non-string values gracefully
     lines = []
     until string.nil?
       # TODO: it would be nice it we break on spaces rather than in the middle of a word.

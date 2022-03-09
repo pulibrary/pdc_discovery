@@ -17,22 +17,14 @@ RSpec.describe DatasetCitation do
     end
   end
 
-  describe "#chicago" do
-    it "handles authors correctly" do
-      expect(single_author_dataset.chicago).to eq "Menard, J.E. Compact steady-state tokamak. 2018. Princeton University. http://doi.org/princeton/test123."
-      expect(two_authors_dataset.chicago).to eq "Menard, J.E. and Lopez, R. Compact steady-state tokamak. 2018. Princeton University. http://doi.org/princeton/test123."
-      expect(three_authors_dataset.chicago).to eq "Menard, J.E., Lopez, R. and Liu, D. Compact steady-state tokamak. 2018. Princeton University. http://doi.org/princeton/test123."
-    end
-  end
-
   describe "#bibtex" do
     it "returns correct format" do
-      bibtex = "@electronic{ menard_je_2018,\r\n" \
-      "  author = \"Menard, J.E.\",\r\n" \
-      "  title = \"Compact steady-state tokamak\",\r\n" \
-      "  publisher = \"Princeton University\",\r\n" \
-      "  year = \"2018\",\r\n" \
-      "  url = \"http://doi.org/princeton/test123\"\r\n" \
+      bibtex = "@electronic{menard_je_2018,\r\n" \
+      "\tauthor      = {Menard, J.E.},\r\n" \
+      "\ttitle       = {{Compact steady-state tokamak}},\r\n" \
+      "\tpublisher   = {{Princeton University}},\r\n" \
+      "\tyear        = 2018,\r\n" \
+      "\turl         = {http://doi.org/princeton/test123}\r\n" \
       "}"
       expect(single_author_dataset.bibtex).to eq bibtex
     end
@@ -51,7 +43,6 @@ RSpec.describe DatasetCitation do
     it "does not add extra periods to title and publisher if they come in the source data" do
       citation = described_class.new(["Menard, J.E."], [2018], "Compact steady-state tokamak.", "Data set", "Princeton University.", "http://doi.org/princeton/test123")
       expect(citation.apa).to eq "Menard, J.E. (2018). Compact steady-state tokamak [Data set]. Princeton University. http://doi.org/princeton/test123"
-      expect(citation.chicago).to eq "Menard, J.E. Compact steady-state tokamak. 2018. Princeton University. http://doi.org/princeton/test123."
     end
   end
 
@@ -59,7 +50,6 @@ RSpec.describe DatasetCitation do
     it "handles year ranges" do
       citation = described_class.new(["Menard, J.E."], [2018, 2020], "Compact steady-state tokamak.", "Data set", "Princeton University.", "http://doi.org/princeton/test123")
       expect(citation.apa).to eq "Menard, J.E. (2018-2020). Compact steady-state tokamak [Data set]. Princeton University. http://doi.org/princeton/test123"
-      expect(citation.chicago).to eq "Menard, J.E. Compact steady-state tokamak. 2018-2020. Princeton University. http://doi.org/princeton/test123."
     end
   end
 
@@ -73,6 +63,16 @@ RSpec.describe DatasetCitation do
       expect(described_class.custom_strip("")).to eq ""
       expect(described_class.custom_strip(nil)).to eq nil
       expect(described_class.custom_strip(" . , ")).to eq ""
+    end
+  end
+
+  describe "#bibtex_lines" do
+    it "breaks lines as expected" do
+      citation = described_class.new("", [], "", "", "", "")
+      expect(citation.bibtex_lines("hello world", 20)).to eq ["hello world"]
+      expect(citation.bibtex_lines("this is a very long text", 20)).to eq ["this is a very long ", "text"]
+      expect(citation.bibtex_lines(0)).to eq ["0"]
+      expect(citation.bibtex_lines(nil)).to eq [""]
     end
   end
 end
