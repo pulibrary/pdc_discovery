@@ -34,14 +34,8 @@
 
       <div class="document-citation">
         <header>Cite as:
-          <button id="show-apa-citation-button" class="btn btn-sm" data-style="APA" data-text="#{html_escape(apa)}" title="Show text citation">
-            <i class="bi bi-bookmark-check" title="Show text citation"></i>
-            <span class="copy-citation-label-normal">Text</span>
-          </button>
-          <button id="show-bibtex-citation-button" class="btn btn-sm" data-style="APA" data-text="#{html_escape(apa)}" title="Show BibTeX citation">
-            <i class="bi bi-bookmark" title="Show BibTeX citation"></i>
-            <span class="copy-citation-label-normal">BibTeX</span>
-          </button>
+          <button id="show-apa-citation-button" type='button' class='cite-as-button btn btn-primary btn-xsm' title='Show citation'>Text</button>
+          <button id="show-bibtex-citation-button" type='button' class='cite-as-button btn btn-secondary btn-xsm' title='Show BibTeX citation'>BibTeX</button>
         </header>
         <%= render_cite_as @document %>
       </div>
@@ -182,11 +176,11 @@
         // Show the BibTex citation
         $(".citation-bibtex-container").removeClass("hidden-element");
         $(".citation-apa-container").addClass("hidden-element");
-        // Toogle the checkbox
-        $("#show-bibtex-citation-button i").removeClass("bi-bookmark");
-        $("#show-bibtex-citation-button i").addClass("bi-bookmark-check");
-        $("#show-apa-citation-button i").removeClass("bi-bookmark-check");
-        $("#show-apa-citation-button i").addClass("bi-bookmark");
+        // Toogle the button
+        $("#show-bibtex-citation-button").addClass("btn-primary");
+        $("#show-bibtex-citation-button").removeClass("btn-secondary");
+        $("#show-apa-citation-button").addClass("btn-secondary");
+        $("#show-apa-citation-button").removeClass("btn-primary");
         // Clear focus from the button.
         document.activeElement.blur();
         return false;
@@ -197,10 +191,10 @@
         $(".citation-apa-container").removeClass("hidden-element");
         $(".citation-bibtex-container").addClass("hidden-element");
         // Toogle the checkbox
-        $("#show-apa-citation-button i").removeClass("bi-bookmark");
-        $("#show-apa-citation-button i").addClass("bi-bookmark-check");
-        $("#show-bibtex-citation-button i").removeClass("bi-bookmark-check");
-        $("#show-bibtex-citation-button i").addClass("bi-bookmark");
+        $("#show-apa-citation-button").addClass("btn-primary");
+        $("#show-apa-citation-button").removeClass("btn-secondary");
+        $("#show-bibtex-citation-button").addClass("btn-secondary");
+        $("#show-bibtex-citation-button").removeClass("btn-primary");
         // Clear focus from the button.
         document.activeElement.blur();
         return false;

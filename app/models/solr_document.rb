@@ -461,11 +461,6 @@ class SolrDocument
     ICONS[genre&.downcase] || 'bi-file-earmark-fill'
   end
 
-  def prefered_citation
-    # Hard-coded to APA until we allow researchers to store a prefered citation for their dataset
-    "APA"
-  end
-
   # Returns a DatasetCitation object for the current document
   def citation
     @citation ||= begin
@@ -475,12 +470,12 @@ class SolrDocument
     end
   end
 
-  # Returns a string with the indicated citation style (e.g. APA or Chicago)
+  # Returns a string with the indicated citation style (e.g. APA or BibTeX)
   def cite(style)
     citation.to_s(style)
   end
 
-  # Returns the ID for a BibTex citation for this document.
+  # Returns the ID for a BibTeX citation for this document.
   # rubocop:disable Rails/Delegate
   def bibtex_id
     citation.bibtex_id

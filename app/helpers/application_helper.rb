@@ -133,24 +133,26 @@ module ApplicationHelper
     return if document.cite("APA").nil?
 
     apa = document.cite("APA")
-    bibtex = document.cite("BibTeX-html")
+    bibtex = document.cite("BibTeX")
+    bibtex_html = html_escape(bibtex).gsub("\r\n", "<br/>").gsub("\t", "  ").gsub("  ", "&nbsp;&nbsp;")
+    bibtex_text = html_escape(bibtex).gsub("\t", "  ")
 
     html = <<-HTML
       <div class="citation-apa-container">
-        <span class="apa-citation">#{html_escape(apa)}</span><br/>
+        <div class="apa-citation">#{html_escape(apa)}</div>
         <button id="copy-apa-citation-button" class="copy-citation-button btn btn-sm" data-style="APA" data-text="#{html_escape(apa)}" title="Copy citation to the clipboard">
           <i class="bi bi-clipboard" title="Copy citation to the clipboard"></i>
           <span class="copy-citation-label-normal">COPY</span>
         </button>
       </div>
       <div class="citation-bibtex-container hidden-element">
-        <div class="bibtex-citation">#{html_escape(bibtex).gsub("\r", "<br/>").gsub("\t", "  ").gsub("  ", "&nbsp;&nbsp;")}</div>
-        <button id="copy-bibtext-citation-button" class="copy-citation-button btn btn-sm" data-style="BibTeX" data-text="#{html_escape(bibtex)}" title="Copy citation to the clipboard">
-          <i class="bi bi-clipboard" title="Copy citation to the clipboard"></i>
+        <div class="bibtex-citation">#{bibtex_html}</div>
+        <button id="copy-bibtext-citation-button" class="copy-citation-button btn btn-sm" data-style="BibTeX" data-text="#{bibtex_text}" title="Copy BibTeX citation to the clipboard">
+          <i class="bi bi-clipboard" title="Copy BibTeX citation to the clipboard"></i>
           <span class="copy-citation-label-normal">COPY</span>
         </button>
-        <button id="download-bibtex" class="btn btn-sm" data-url="#{catalog_bibtex_url(id: document.id)}">
-          <i class="bi bi-file-arrow-down" title="Download citation"></i>
+        <button id="download-bibtex" class="btn btn-sm" data-url="#{catalog_bibtex_url(id: document.id)}" title="Download BibTeX citation to a file">
+          <i class="bi bi-file-arrow-down" title="Download BibTeX citation to a file"></i>
           <span class="copy-citation-label-normal">DOWNLOAD</span>
         </button>
       </div>
