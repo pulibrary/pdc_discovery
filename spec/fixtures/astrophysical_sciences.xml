@@ -28,12 +28,28 @@
       <id>20123</id>
       <name>license.txt</name>
       <type>bitstream</type>
-      <bundleName>TEXT</bundleName>
+      <bundleName>ORIGINAL</bundleName>
       <checkSum checkSumAlgorithm="MD5">e1cccfa7825760e9cc707e039610d97d</checkSum>
       <description>DSpace defaultlicense file</description>
       <format>Text</format>
       <mimeType>text/plain</mimeType>
       <retrieveLink>/bitstreams/20123/retrieve</retrieveLink>
+      <sequenceId>2</sequenceId>
+      <sizeBytes>313121</sizeBytes>
+    </bitstreams>
+    <bitstreams>
+      <expand>parent</expand>
+      <expand>policies</expand>
+      <expand>all</expand>
+      <id>12345</id>
+      <name>somefile.txt.txt</name>
+      <type>bitstream</type>
+      <bundleName>TEXT</bundleName>
+      <checkSum checkSumAlgorithm="MD5">e1cccfa7825760e9cc707e039610d97d</checkSum>
+      <description>some file txt</description>
+      <format>Text</format>
+      <mimeType>text/plain</mimeType>
+      <retrieveLink>/bitstreams/12345/retrieve</retrieveLink>
       <sequenceId>2</sequenceId>
       <sizeBytes>313121</sizeBytes>
     </bitstreams>
