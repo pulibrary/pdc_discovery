@@ -1,9 +1,10 @@
 .navbar-logo {
   background-image: asset_url("logo.svg");
   display: inline-block;
-  flex: 0 0 350px;
+  flex: 0 0 420px;
   height: 100px;
-  width: 350px;
+  width: 420px;
+  margin-top: 10px;
 }
 
 .navbar.bg-light {
@@ -35,4 +36,9 @@
 
 .navbar-nav .nav-item {
   clear: both;
+}
+
+.navbar-search .search-query-form {
+  flex: 75%;
+  max-width: 75%;
 }
