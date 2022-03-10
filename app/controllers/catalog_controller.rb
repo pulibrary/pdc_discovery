@@ -7,7 +7,8 @@ class CatalogController < ApplicationController
   include Blacklight::Marc::Catalog
 
   rescue_from Blacklight::Exceptions::RecordNotFound do
-    redirect_to '/errors/not_found'
+    error_page = Rails.env.production? || Rails.env.staging? ? '/discovery/errors/not_found' : '/errors/not_found'
+    redirect_to error_page
   end
 
   configure_blacklight do |config|
