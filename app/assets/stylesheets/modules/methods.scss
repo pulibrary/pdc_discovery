@@ -31,10 +31,18 @@
 }
 
 .apa-citation {
-  font-family: "Courier New", Courier, monospace;
+  font-family: inherit;
 }
 
 .bibtex-citation {
   font-family: "Courier New", Courier, monospace;
   background-color: #f5f5f5; /* light gray */
+}
+
+.apa-citation-courier {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.apa-citation-zenodo {
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
 }

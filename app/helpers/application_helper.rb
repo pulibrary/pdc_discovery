@@ -137,9 +137,18 @@ module ApplicationHelper
     bibtex_html = html_escape(bibtex).gsub("\r\n", "<br/>").gsub("\t", "  ").gsub("  ", "&nbsp;&nbsp;")
     bibtex_text = html_escape(bibtex).gsub("\t", "  ")
 
+    css_suffix = case params["style"]
+    when "zenodo"
+      "-zenodo"
+    when "courier"
+      "-courier"
+    else
+      ""
+    end
+
     html = <<-HTML
       <div class="citation-apa-container">
-        <div class="apa-citation">#{html_escape(apa)}</div>
+        <div class="apa-citation#{css_suffix}">#{html_escape(apa)}</div>
         <button id="copy-apa-citation-button" class="copy-citation-button btn btn-sm" data-style="APA" data-text="#{html_escape(apa)}" title="Copy citation to the clipboard">
           <i class="bi bi-clipboard" title="Copy citation to the clipboard"></i>
           <span class="copy-citation-label-normal">COPY</span>
