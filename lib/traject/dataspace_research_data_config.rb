@@ -400,12 +400,20 @@ to_field 'files_ss' do |record, accumulator, _context|
       size: node.xpath("sizeBytes").text,
       mime_type: node.xpath("mimeType").text,
       sequence: node.xpath("sequenceId").text,
+      bundle_name: node.xpath("bundleName").text,
       handle: dataspace_handle
     }
   end
 
-  # Exclude DSpace license.txt file
-  bitstreams.reject! { |bitstream| bitstream[:name] == "license.txt" }
+  # Only files in the ORIGINAL bundle in DataSpace need to be indexed,
+  # the rest are files that have been deleted or have purposes outside
+  # of PDC Discovery (e.g. extracted text).
+  #
+  # We also explicitly exclude DSpace license.txt file since it's a DSpace
+  # generated file and we don't want it in PDC Discovery.
+  bitstreams.reject! do |bitstream|
+    bitstream[:bundle_name] != "ORIGINAL" || bitstream[:name] == "license.txt"
+  end
 
   accumulator.concat [bitstreams.to_json.to_s]
 end
