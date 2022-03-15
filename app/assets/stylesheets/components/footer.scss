@@ -1,21 +1,16 @@
 #footer {
   padding: 40px 0px 20px 0px;
-  background-color: #cecece;
-  color: #000000;
-  font-size: 11px;
-  text-align: right;
+  border-top: #cecece solid 30px;
+  border-bottom: #cecece solid 15px;
   .content {
-    display: inline-block;
     background-color: #ffffff;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
+    display: flex;
     padding: 30px 0px;
     #list {
-      margin-left: auto;
-      margin-right: auto;
-      width: 75%;
       li {
         list-style: none;
         float: left;
@@ -29,4 +24,12 @@
       }
     }
   }
+}
+
+#copyright {
+  background-color: #cecece;
+  width: 100%;
+  padding-right: 10px;
+  text-align: right;
+  font-size: 10px;
 }
