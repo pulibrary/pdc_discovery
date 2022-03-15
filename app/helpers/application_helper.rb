@@ -191,6 +191,14 @@ module ApplicationHelper
     html.html_safe
   end
 
+  def render_empty_files
+    html = <<-HTML
+    <div id="no_files">
+    </div>
+    HTML
+    html.html_safe
+  end
+
   def authors_search_results_helper(field)
     field[:value].join("; ")
   end

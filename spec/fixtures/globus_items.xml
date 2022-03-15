@@ -318,4 +318,126 @@
     </parentCommunityList>
     <withdrawn>false</withdrawn>
   </item>
+  
+  <!-- Fake Item to Test an Object with Files only in Globus -->
+  <item>
+    <handle>88435/000111000</handle>
+    <id>101010</id>
+    <name>Object With Huge Files Only Available Via Globus</name>
+    <type>item</type>
+    <archived>true</archived>
+    <lastModified>2020-12-09 21:39:02.118</lastModified>
+    <metadata>
+      <key>dc.contributor.author</key>
+      <value>Bejjanki, Vikranth R.</value>
+    </metadata>
+    <metadata>
+      <key>dc.contributor.author</key>
+      <value>da Silveira, Rava Azeredo</value>
+    </metadata>
+    <metadata>
+      <key>dc.contributor.author</key>
+      <value>Cohen, Jonathan D.</value>
+    </metadata>
+    <metadata>
+      <key>dc.contributor.author</key>
+      <value>Turk-Browne, Nicholas B.</value>
+    </metadata>
+    <metadata>
+      <key>dc.date.accessioned</key>
+      <value>2017-08-10T18:42:18Z</value>
+    </metadata>
+    <metadata>
+      <key>dc.date.available</key>
+      <value>2017-08-10T18:42:18Z</value>
+    </metadata>
+    <metadata>
+      <key>dc.date.issued</key>
+      <value>2017-08</value>
+    </metadata>
+    <metadata>
+      <key>dc.identifier.uri</key>
+      <value>http://arks.princeton.edu/ark:/88435/dsp01dn39x4181</value>
+    </metadata>
+    <metadata>
+      <key>dc.identifier.uri</key>
+      <value>https://app.globus.org/file-manager?origin_id=dc43f461-0ca7-4203-848c-33a9fc00a464&origin_path=%2F9a07-f696%2F</value>
+    </metadata>
+    <metadata>
+      <key>dc.description</key>
+      <language>en_US</language>
+      <value>fMRI data used to carry out the analyses described in: Vikranth R. Bejjanki, Rava Azeredo da Silveira, Jonathan D. Cohen, & Nicholas B. Turk-Browne, "Noise correlations in the human brain and their impact on pattern classification". Includes data from 17 human participants, acquired with a 3T scanner (Siemens Skyra) using a 16-channel head coil. For each participant, data from two face/scene "localizer" runs, where participants were presented with blocks of face or scene stimuli interleaved with blank periods, and two "rest" runs, where participants passively viewed a central fixation point, is included. Further information is available in the dataset README file. This dataset is too large to download directly from this item page. You can access and download the data via Globus at this link: https://app.globus.org/file-manager?origin_id=dc43f461-0ca7-4203-848c-33a9fc00a464&origin_path=%2F9a07-f696%2F (See https://docs.globus.org/how-to/get-started/ for instructions on how to use Globus, sign-in is required).</value>
+    </metadata>
+    <metadata>
+      <key>dc.description.abstract</key>
+      <language>en_US</language>
+      <value>Multivariate decoding methods, such as multivoxel pattern analysis (MVPA), are highly effective at extracting information from brain imaging data. Yet, the precise nature of the information that MVPA draws upon remains controversial. Most current theories emphasize the enhanced sensitivity imparted by aggregating across voxels that have mixed and weak selectivity. However, beyond the selectivity of individual voxels, neural variability is correlated across voxels, and such noise correlations may contribute importantly to accurate decoding. Indeed, a recent computational theory proposed that noise correlations enhance multivariate decoding from heterogeneous neural populations. Here we extend this theory from the scale of neurons to functional magnetic resonance imaging (fMRI) and show that noise correlations between heterogeneous populations of voxels (i.e., voxels selective for different stimulus variables) contribute to the success of MVPA. Specifically, decoding performance is enhanced when voxels with high vs. low noise correlations (measured during rest or in the background of the task) are selected during classifier training. Conversely, voxels that are strongly selective for one class in a GLM or that receive high classification weights in MVPA tend to exhibit high noise correlations with voxels selective for the other class being discriminated against. Furthermore, we use simulations to show that this is a general property of fMRI data and that selectivity and noise correlations can have distinguishable influences on decoding. Taken together, our findings demonstrate that if there is signal in the data, the resulting above-chance classification accuracy is modulated by the magnitude of noise correlations.</value>
+    </metadata>
+    <metadata>
+      <key>dc.title</key>
+      <language>en_US</language>
+      <value>Noise correlations in the human brain and their impact on pattern classification</value>
+    </metadata>
+    <metadata>
+      <key>dc.type</key>
+      <language>en_US</language>
+      <value>Dataset</value>
+    </metadata>
+    <metadata>
+      <key>pu.projectgrantnumber</key>
+      <value>PRINU-24400-G0002-10005089-101</value>
+    </metadata>
+    <parentCollection>
+      <expand>parentCommunityList</expand>
+      <expand>parentCommunity</expand>
+      <expand>items</expand>
+      <expand>license</expand>
+      <expand>logo</expand>
+      <expand>all</expand>
+      <handle>88435/dsp010g354h44r</handle>
+      <id>1061</id>
+      <name>Research Data Sets</name>
+      <type>collection</type>
+      <copyrightText/>
+      <introductoryText/>
+      <numberItems>28</numberItems>
+      <shortDescription/>
+      <sidebarText/>
+    </parentCollection>
+    <parentCollectionList>
+      <expand>parentCommunityList</expand>
+      <expand>parentCommunity</expand>
+      <expand>items</expand>
+      <expand>license</expand>
+      <expand>logo</expand>
+      <expand>all</expand>
+      <handle>88435/dsp010g354h44r</handle>
+      <id>1061</id>
+      <name>Research Data Sets</name>
+      <type>collection</type>
+      <copyrightText/>
+      <introductoryText/>
+      <numberItems>28</numberItems>
+      <shortDescription/>
+      <sidebarText/>
+    </parentCollectionList>
+    <parentCommunityList>
+      <expand>parentCommunity</expand>
+      <expand>collections</expand>
+      <expand>subCommunities</expand>
+      <expand>logo</expand>
+      <expand>all</expand>
+      <handle>88435/dsp0147429c369</handle>
+      <id>326</id>
+      <name>Princeton Neuroscience Institute</name>
+      <type>community</type>
+      <copyrightText/>
+      <countItems>28</countItems>
+      <introductoryText/>
+      <shortDescription/>
+      <sidebarText/>
+    </parentCommunityList>
+    <withdrawn>false</withdrawn>
+  </item>
+
 </items>
