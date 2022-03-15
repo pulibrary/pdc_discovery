@@ -1,4 +1,6 @@
-<div id="banner">
-  <h1>Message header</h1>
-  <p>This is a message for everyone!</p>
-</div>
+<% if banner_content %>
+  <div id="banner">
+    <%= @banner_title %>
+    <%= @banner_body %>
+  </div>
+<% end %>

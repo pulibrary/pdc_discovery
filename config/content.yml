@@ -1,0 +1,9 @@
+development:
+  title: Welcome to the development site
+  body: This is a message for development
+test:
+  title: Welcome to the test site
+  body: This is a message for test
+production:
+  title: Welcome to the production site
+  body: This is a message for production
