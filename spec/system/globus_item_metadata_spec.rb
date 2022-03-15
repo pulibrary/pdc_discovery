@@ -21,4 +21,12 @@ describe 'Item page with Globus download integration', type: :system, js: true d
     visit '/catalog/6517'
     expect(page).not_to have_content "Download from Globus"
   end
+
+  context "when there are no files in DataSpace" do
+    it "displays the Globus button but not the file listing" do
+      visit '/catalog/101010'
+      expect(page).to have_content "Download from Globus"
+      expect(page).not_to have_content "Showing 0 to 0 of 0 entries"
+    end
+  end
 end

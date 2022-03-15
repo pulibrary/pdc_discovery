@@ -2,38 +2,48 @@
   <div class="lux">
     <div class="card">
       <div class="document-downloads card-body">
-        <table id="files-table" class="table">
-          <thead>
-            <tr>
-              <th scope="col" nowrap="nowrap"><span>#</span></th>
-              <th scope="col" nowrap="nowrap"><span>Filename</span></th>
-              <th scope="col"><span>Description</span></th>
-              <th scope="col" nowrap="nowrap"><span>Filesize</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @document.files.each_with_index do |file, ix| %>
-              <tr class="document-download">
-                <th scope="row">
-                  <span><span><%= ix + 1 %></span></span>
-                </th>
-                <td>
-                  <span>
-                    <i class="bi bi-file-arrow-down"></i>
-                    <a href="<%= file.download_url %>" class="documents-file-link" target="_blank" title="<%= file.name %>"><%= truncate(file.name, length: 60) %></a>
-                  </span>
-                </td>
-                <td>
-                  <span><%= file.description %></span>
-                </td>
-                <td>
-                  <span><span><%= number_to_human_size(file.size) %></span></span>
-                </td>
+        
+        <!-- Only render file download table if there are files in DataSpace -->
+        
+        <% if @document.files.empty? %>
+          <%= render_empty_files %>
+        <% else %>
+          <table id="files-table" class="table">
+            <thead>
+              <tr>
+                <th scope="col" nowrap="nowrap"><span>#</span></th>
+                <th scope="col" nowrap="nowrap"><span>Filename</span></th>
+                <th scope="col"><span>Description</span></th>
+                <th scope="col" nowrap="nowrap"><span>Filesize</span></th>
               </tr>
-            <% end %>
-          </tbody>
-          <tfoot></tfoot>
-        </table>
+            </thead>
+            <tbody>
+              <% @document.files.each_with_index do |file, ix| %>
+                <tr class="document-download">
+                  <th scope="row">
+                    <span><span><%= ix + 1 %></span></span>
+                  </th>
+                  <td>
+                    <span>
+                      <i class="bi bi-file-arrow-down"></i>
+                      <a href="<%= file.download_url %>" class="documents-file-link" target="_blank" title="<%= file.name %>"><%= truncate(file.name, length: 60) %></a>
+                    </span>
+                  </td>
+                  <td>
+                    <span><%= file.description %></span>
+                  </td>
+                  <td>
+                    <span><span><%= number_to_human_size(file.size) %></span></span>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+            <tfoot></tfoot>
+          </table>
+        <% end %> 
+        
+        <!-- End of file download table -->
+        
         <%= render_globus_download(@document.globus_uri, @document.id) %>
       </div>
     </div>
