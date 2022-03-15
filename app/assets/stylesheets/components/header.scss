@@ -43,3 +43,8 @@
   flex: 75%;
   max-width: 75%;
 }
+
+/* Hide responsive hamburger menu -- not using it */
+.navbar .navbar-toggler {
+  display: none;
+}
