@@ -4,6 +4,9 @@ development:
 test:
   title: Welcome to the test site
   body: This is a message for test
+staging:
+  title: Welcome to the staging site
+  body: This is a message for staging
 production:
   title: Welcome to the production site
   body: This is a message for production
