@@ -12,7 +12,7 @@ describe 'Single item page', type: :system, js: true do
     indexer.index
   end
 
-  it "has expected header fiedlds" do
+  it "has expected header fields" do
     visit '/catalog/78348'
     expect(page).to have_css '.document-title-heading'
     expect(page).to have_css '.authors-heading'
