@@ -76,7 +76,7 @@ module ApplicationHelper
     return if values.blank?
     css_class = show_always ? "" : "toggable-row hidden-row"
     links = values.map do |value|
-      "<span>" + link_to(value, "/?f[#{field}][]=#{CGI.escape(value)}&q=&search_field=all_fields") + "</span>"
+      "<span>" + link_to(value, search_link(value, field)) + "</span>"
     end
     html = <<-HTML
     <tr class="#{css_class}">
@@ -180,7 +180,7 @@ module ApplicationHelper
     return if values.count.zero?
     # Must use <divs> instead of <spans> for them to wrap inside the sidebar
     links_html = values.map do |value|
-      "#{link_to(value, "/?f[#{field}][]=#{CGI.escape(value)}&q=&search_field=all_fields", class: 'badge badge-dark sidebar-value-badge', title: value)}<br/>"
+      "#{link_to(value, search_link(value, field), class: 'badge badge-dark sidebar-value-badge', title: value)}<br/>"
     end
 
     html = <<-HTML
