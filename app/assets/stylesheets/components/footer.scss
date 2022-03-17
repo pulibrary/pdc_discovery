@@ -4,7 +4,7 @@
   border-bottom: #cecece solid 15px;
   .content {
     background-color: #ffffff;
-    width: 50%;
+
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -32,4 +32,19 @@
   padding-right: 10px;
   text-align: right;
   font-size: 10px;
+}
+
+
+/* two columns */
+@media all and (min-width: 730px) {
+  #footer {
+    width: 50%;
+  }
+}
+
+/* four columns */
+@media all and (min-width: 731px) {
+  #footer {
+    width: 75%;
+  }
 }
