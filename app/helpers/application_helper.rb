@@ -3,6 +3,16 @@
 # rubocop:disable Rails/OutputSafety
 # rubocop:disable Metrics/ModuleLength
 module ApplicationHelper
+  # This application is deployed in a subdirectory ("/discovery")
+  # in staging and production. We control this by setting
+  # Rails.application.config.assets.prefix. This method reads
+  # that Rails setting and extracts the prefix needed in order for
+  # application links to work as expected.
+  # @return [String]
+  def subdirectory_for_links
+    (Rails.application.config.assets.prefix.split("/") - ["assets"]).join("/")
+  end
+
   # Outputs the HTML to render a single value as an HTML table row
   # to be displayed on the metadata section of the show page.
   def render_field_row(title, value, show_always = false)
@@ -44,6 +54,10 @@ module ApplicationHelper
     html.html_safe
   end
 
+  def search_link(value, field)
+    "#{subdirectory_for_links}/?f[#{field}][]=#{CGI.escape(value)}&q=&search_field=all_fields"
+  end
+
   # Outputs the HTML to render a single value as an HTML table row with a search link
   def render_field_row_search_link(title, value, field, show_always = false)
     return if value.blank?
@@ -51,7 +65,7 @@ module ApplicationHelper
     html = <<-HTML
     <tr class="#{css_class}">
       <th scope="row"><span>#{title}</span></th>
-      <td><span>#{link_to(value, "/?f[#{field}][]=#{CGI.escape(value)}&q=&search_field=all_fields")}</span></td>
+      <td><span>#{link_to(value, search_link(value, field))}</span></td>
     </tr>
     HTML
     html.html_safe
@@ -62,7 +76,7 @@ module ApplicationHelper
     return if values.blank?
     css_class = show_always ? "" : "toggable-row hidden-row"
     links = values.map do |value|
-      "<span>" + link_to(value, "/?f[#{field}][]=#{CGI.escape(value)}&q=&search_field=all_fields") + "</span>"
+      "<span>" + link_to(value, search_link(value, field)) + "</span>"
     end
     html = <<-HTML
     <tr class="#{css_class}">
@@ -166,7 +180,7 @@ module ApplicationHelper
     return if values.count.zero?
     # Must use <divs> instead of <spans> for them to wrap inside the sidebar
     links_html = values.map do |value|
-      "#{link_to(value, "/?f[#{field}][]=#{CGI.escape(value)}&q=&search_field=all_fields", class: 'badge badge-dark sidebar-value-badge', title: value)}<br/>"
+      "#{link_to(value, search_link(value, field), class: 'badge badge-dark sidebar-value-badge', title: value)}<br/>"
     end
 
     html = <<-HTML
