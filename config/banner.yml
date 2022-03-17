@@ -1,3 +1,4 @@
+---
 development:
   title: Welcome to the development site
   body: This is a message for development
@@ -5,8 +6,8 @@ test:
   title: Welcome to the test site
   body: This is a message for test
 staging:
-  title: Welcome to the staging site
-  body: This is a message for staging
+  title: Welcome to Princeton Data Commons Discovery (Staging)!
+  body: PRDS is proud to share our new website for the discovery and sharing of research data. Have a look around and <a href="mailto:prds@princeton.edu">let us know what you think.</a>
 production:
-  title: Welcome to the production site
-  body: This is a message for production
+  title: Welcome to Princeton Data Commons Discovery!
+  body: PRDS is proud to share our new website for the discovery and sharing of research data. Have a look around and <a href="mailto:prds@princeton.edu">let us know what you think.</a>
