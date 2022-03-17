@@ -1,6 +1,6 @@
 <% if banner_content %>
   <div id="banner">
-    <%= @banner_title %>
-    <%= @banner_body %>
+    <%= sanitize @banner_title %>
+    <%= sanitize @banner_body %>
   </div>
 <% end %>

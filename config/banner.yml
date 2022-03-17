@@ -3,8 +3,8 @@ development:
   title: Welcome to the development site
   body: This is a message for development
 test:
-  title: Welcome to the test site
-  body: This is a message for test
+  title: Welcome to the <i>test</i> site
+  body: This is a <b>test</b> <a href="mailto:fake@princeton.edu">message.</a>
 staging:
   title: Welcome to Princeton Data Commons Discovery (Staging)!
   body: PRDS is proud to share our new website for the discovery and sharing of research data. Have a look around and <a href="mailto:prds@princeton.edu">let us know what you think.</a>
