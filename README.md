@@ -12,6 +12,10 @@ A discovery portal for Princeton research data. Initially it will provide a bett
 * yarn: 1.22.10
 * [Lando](https://github.com/lando/lando/releases): 3.0.0
 
+## Updating the banner
+
+Update the file `config/banner.yml`. Note that each environment can have its own banner text.
+
 ## Local development
 
 ### Setup
