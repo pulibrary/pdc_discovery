@@ -36,6 +36,13 @@ describe 'Search Results Page', type: :system, js: true do
     end
   end
 
+  describe "bookmarks" do
+    it "does not render bookmark checkboxes" do
+      visit '/?search_field=author&q=podesta'
+      expect(page).not_to have_css "div.toggle-bookmark"
+    end
+  end
+
   # rubocop:disable RSpec/ExampleLength
   describe "facets" do
     it "shows expected facets" do
