@@ -23,7 +23,7 @@ Metrics/BlockLength:
 Rails/Output:
   Exclude:
     - app/lib/cli.rb
-    
+
 RSpec/AnyInstance:
   Exclude: 
     - spec/lib/research_data_harvester_spec.rb
@@ -31,6 +31,7 @@ RSpec/AnyInstance:
 RSpec/ExampleLength:
   Exclude:
     - spec/lib/research_data_collection_spec.rb
+    - spec/system/banner_spec.rb
 
 Rails/UnknownEnv:
   Enabled: false
