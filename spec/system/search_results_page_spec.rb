@@ -70,5 +70,11 @@ describe 'Search Results Page', type: :system, js: true do
       collection_facet_html = '<div class="card facet-limit blacklight-collection_name_ssi ">'
       expect(page.html.include?(collection_facet_html)).to be true
     end
+
+    it "searches by the keyword facet even thought it is a hidden facet" do
+      visit '/?f%5Bsubject_all_ssim%5D%5B%5D=Monte-Carlo+simulation'
+      expect(page.html.include?("Keywords")).to be true
+      expect(page.html.include?("Monte-Carlo simulation")).to be true
+    end
   end
 end
