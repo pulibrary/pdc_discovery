@@ -4,7 +4,7 @@ describe 'Search Results Page', type: :system, js: true do
   before do
     Blacklight.default_index.connection.delete_by_query('*:*')
     Blacklight.default_index.connection.commit
-    data = file_fixture('single_item.xml').read
+    data = file_fixture('search_results_items.xml').read
     indexer = Indexer.new(data)
     indexer.index
   end
@@ -67,6 +67,12 @@ describe 'Search Results Page', type: :system, js: true do
 
     it "shows collection facet for PPPL" do
       visit '/?f%5Bcommunity_root_name_ssi%5D%5B%5D=Princeton+Plasma+Physics+Laboratory'
+      collection_facet_html = '<div class="card facet-limit blacklight-collection_name_ssi ">'
+      expect(page.html.include?(collection_facet_html)).to be true
+    end
+
+    it "shows collection facet for Music and Arts" do
+      visit '/?f%5Bcommunity_root_name_ssi%5D%5B%5D=Music+and+Arts'
       collection_facet_html = '<div class="card facet-limit blacklight-collection_name_ssi ">'
       expect(page.html.include?(collection_facet_html)).to be true
     end

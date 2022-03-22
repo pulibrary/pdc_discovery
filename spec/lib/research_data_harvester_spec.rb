@@ -4,11 +4,11 @@ RSpec.describe ResearchDataHarvester do
   let(:rdh) { described_class.new }
 
   it "has a list of collections to index" do
-    expect(rdh.collections_to_index.count).to eq 31
+    expect(rdh.collections_to_index.count).to eq 32
   end
 
   it "has a convenience method for indexing all collections" do
-    expect_any_instance_of(described_class).to receive(:harvest).exactly(31).times
+    expect_any_instance_of(described_class).to receive(:harvest).exactly(32).times
     described_class.harvest(true)
   end
 
