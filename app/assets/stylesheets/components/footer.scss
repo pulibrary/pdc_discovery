@@ -1,5 +1,4 @@
 #footer {
-
   padding: 0px;
   border-top: #cecece solid 15px;
   border-bottom: #cecece solid 3px;
@@ -24,12 +23,11 @@
       @media all and (max-width: 764px) {
         flex-basis: calc(50% - 2rem);
       }
-      
+
       @media all and (min-width: 765px) {
         flex-basis: calc(25% - 2rem);
       }
     }
-
   }
 }
 
