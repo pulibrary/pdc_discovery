@@ -98,6 +98,10 @@ class CatalogController < ApplicationController
     config.add_facet_field 'genre_ssim', label: 'Type'
     config.add_facet_field 'year_available_itsi', label: 'Year Published', range: true
 
+    # Notice that is facet is not shown. Yet facet searches by this field do work
+    # and we use them when users click on the "Keywords" links in the Show page.
+    config.add_facet_field 'subject_all_ssim', label: 'Keywords', show: false
+
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
     # handler defaults, or have no facets.
