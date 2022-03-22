@@ -203,12 +203,12 @@ class CatalogController < ApplicationController
     # mean") suggestion is offered.
     config.spell_max = 5
 
-    # Configuration for autocomplete suggester
-    config.autocomplete_enabled = true
-    config.autocomplete_path = 'suggest'
-    # if the name of the solr.SuggestComponent provided in your solrconfig.xml is not the
-    # default 'mySuggester', uncomment and provide it below
-    # config.autocomplete_suggester = 'mySuggester'
+    # # Configuration for autocomplete suggester
+    # config.autocomplete_enabled = true
+    # config.autocomplete_path = 'suggest'
+    # # if the name of the solr.SuggestComponent provided in your solrconfig.xml is not the
+    # # default 'mySuggester', uncomment and provide it below
+    # # config.autocomplete_suggester = 'mySuggester'
   end
 
   # Returns the raw BibTex citation information
