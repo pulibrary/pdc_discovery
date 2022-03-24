@@ -24,4 +24,4 @@ end
 
 # Uncomment to re-index on every deploy. Only needed when we're actively 
 # updating how indexing happens.
-# after "deploy:published", "pdc_discovery:reindex"
+after "deploy:published", "pdc_discovery:reindex"
