@@ -196,9 +196,11 @@ module ApplicationHelper
     return if uri.nil?
     html = <<-HTML
     <div id="globus">
-      <button data-v-b7851b04="" type="button" class="document-downloads__button lux-button solid medium">
-        #{link_to('Download from Globus', uri, target: '_blank', title: 'opens in a new tab', rel: 'noopener noreferrer', class: 'globus-download-link', data: { item_id: item_id })}
-        <i class="bi bi-cloud-arrow-down-fill"></i>
+      <button type="button" class="globus_button lux-button solid medium">
+        <a href="#{uri}" title="Opens in a new tab" class="globus-download-link"
+          target="_blank" rel="noopener noreferrer" data-item-id="#{item_id}">
+          #{image_tag('globus_logo.png', width: '20')} Download from Globus
+        </a>
       </button>
     </div>
     HTML

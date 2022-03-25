@@ -14,10 +14,11 @@
       }
     }
   }
+}
 
-  &__button.lux-button.solid[data-v-b7851b04] {
-    width: max-content;
-    float: right;
-    font-weight: $font-weight-bold;
-  }
+.globus_button {
+  margin-top: 15px;
+  background-color: #335a95;  /* Globus blue */
+  width: max-content;
+  float: right;
 }
