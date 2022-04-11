@@ -60,3 +60,19 @@
   line-height: 1.5;
   border-radius: 0.2rem;
 }
+
+@media all and (max-width: 860px) {
+}
+
+@media all and (max-width: 736px) {
+}
+
+@media all and (max-width: 550px) {
+  .sidebar {
+    float: none;
+  }
+
+  #sidebar-usage {
+    padding: 10px 0px;
+  }
+}

@@ -12,3 +12,9 @@
     font-size: 18px;
   }
 }
+
+@media all and (max-width: 860px) {
+  #banner {
+    padding: 10px 3px 5px 3px;
+  }
+}
