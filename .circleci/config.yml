@@ -4,9 +4,9 @@ version: 2.1
 executors:
   pdc_discovery_executor_build:
     docker:
-      - image: circleci/ruby:2.7.5-node-browsers
+      - image: cimg/ruby:3.0.3-browsers
         environment: &docker_env_default
-          BUNDLER_VERSION: 2.1.4
+          BUNDLER_VERSION: 2.3.11
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/bundle
@@ -14,7 +14,7 @@ executors:
     working_directory: ~/pdc_discovery
   pdc_discovery_executor:
     docker:
-      - image: circleci/ruby:2.7.5-node-browsers
+      - image: cimg/ruby:3.0.3-browsers
         environment:
           <<: *docker_env_default
           DB_HOST: localhost
@@ -47,8 +47,8 @@ commands:
       - run:
           name: Update bundler
           command: |
-            echo 'export BUNDLER_VERSION=2.1.4' >> $BASH_ENV
-            gem install bundler -v 2.1.4
+            echo 'export BUNDLER_VERSION=2.3.11' >> $BASH_ENV
+            gem install bundler -v 2.3.11
       - run:
           name: Install dependencies
           command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs 4 --retry 3
