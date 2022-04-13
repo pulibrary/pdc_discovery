@@ -44,15 +44,13 @@ class VersionFooter
   end
 
   def self.git_sha
-    @@git_sha ||= begin
-      if File.exist?(revisions_logfile)
-        `tail -1 #{revisions_logfile}`.chomp.split(" ")[3].gsub(/\)$/, '')
-      elsif Rails.env.development? || Rails.env.test?
-        `git rev-parse HEAD`.chomp
-      else
-        "Unknown SHA"
-      end
-    end
+    @@git_sha ||= if File.exist?(revisions_logfile)
+                    `tail -1 #{revisions_logfile}`.chomp.split(" ")[3].gsub(/\)$/, '')
+                  elsif Rails.env.development? || Rails.env.test?
+                    `git rev-parse HEAD`.chomp
+                  else
+                    "Unknown SHA"
+                  end
   end
 
   def self.tagged_release?
@@ -61,26 +59,22 @@ class VersionFooter
   end
 
   def self.branch
-    @@branch ||= begin
-      if File.exist?(revisions_logfile)
-        `tail -1 #{revisions_logfile}`.chomp.split(" ")[1]
-      elsif Rails.env.development? || Rails.env.test?
-        `git rev-parse --abbrev-ref HEAD`.chomp
-      else
-        "Unknown branch"
-      end
-    end
+    @@branch ||= if File.exist?(revisions_logfile)
+                   `tail -1 #{revisions_logfile}`.chomp.split(" ")[1]
+                 elsif Rails.env.development? || Rails.env.test?
+                   `git rev-parse --abbrev-ref HEAD`.chomp
+                 else
+                   "Unknown branch"
+                 end
   end
 
   def self.version
-    @@version ||= begin
-      if File.exist?(revisions_logfile)
-        deployed = `tail -1 #{revisions_logfile}`.chomp.split(" ")[7]
-        Date.parse(deployed).strftime("%d %B %Y")
-      else
-        "Not in deployed environment"
-      end
-    end
+    @@version ||= if File.exist?(revisions_logfile)
+                    deployed = `tail -1 #{revisions_logfile}`.chomp.split(" ")[7]
+                    Date.parse(deployed).strftime("%d %B %Y")
+                  else
+                    "Not in deployed environment"
+                  end
   end
 
   # This file is local to the application.
