@@ -63,7 +63,7 @@ end
 group :test do
   gem 'axe-core-rspec'
   gem 'capybara', '>= 3.26'
-  gem 'coveralls', require: false
+  gem 'coveralls_reborn', '~> 0.24.0', require: false
   gem 'selenium-webdriver'
   gem 'webdrivers'
   gem 'webmock'
