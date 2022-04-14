@@ -102,8 +102,6 @@ RSpec.configure do |config|
 
   # rubocop:disable Style/ClassVars
   # Setup RSolr connection (more info https://github.com/sul-dlss/rspec-solr/)
-  solr_config = { url: PdcDiscovery::Application.config_for(:blacklight)[:url] }
-  @@solr = RSolr.connect(solr_config)
   # rubocop:ensable Style/ClassVars
 end
 
@@ -118,8 +116,10 @@ WebMock.disable_net_connect!(allow_localhost: true,
 # @param req_handler [String] the pathname of the desired Solr request handler (defaults to 'select')
 # @return [RSpecSolr::SolrResponseHash] object for rspec-solr testing the Solr response
 def solr_response(solr_params, req_handler = 'select')
+  solr_config = { url: PdcDiscovery::Application.config_for(:blacklight)[:url] }
+  solr = RSolr.connect(solr_config)
   options = { method: :get, params: solr_params }
-  data = @@solr.send_and_receive(req_handler, options)
+  data = solr.send_and_receive(req_handler, options)
   RSpecSolr::SolrResponseHash.new(data)
 end
 
