@@ -1,5 +1,7 @@
 ---
 version: 2.1
+orbs:
+  browser-tools: circleci/browser-tools@1.2.5
 
 executors:
   pdc_discovery_executor_build:
