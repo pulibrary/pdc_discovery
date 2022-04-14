@@ -13,6 +13,14 @@ executors:
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/bundle
           RAILS_ENV: test
+        steps:
+          - browser-tools/install-browser-tools
+          - checkout
+          - run: |
+              ruby --version
+              node --version
+              java --version
+              google-chrome --version
     working_directory: ~/pdc_discovery
   pdc_discovery_executor:
     docker:
