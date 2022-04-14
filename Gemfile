@@ -3,12 +3,12 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.5'
+ruby '3.0.3'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'blacklight', '>= 7.0'
-gem 'blacklight-marc', '>= 7.0.0.rc1', '< 8'
 gem 'blacklight_dynamic_sitemap'
+gem 'blacklight-marc', '>= 7.0.0.rc1', '< 8'
 gem "blacklight_range_limit", '>= 7.0.0', '< 8'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bootstrap', '~> 4.0'
@@ -63,7 +63,7 @@ end
 group :test do
   gem 'axe-core-rspec'
   gem 'capybara', '>= 3.26'
-  gem 'coveralls', require: false
+  gem 'coveralls_reborn', '~> 0.24.0', require: false
   gem 'selenium-webdriver'
   gem 'webdrivers'
   gem 'webmock'
