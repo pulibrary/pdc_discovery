@@ -540,6 +540,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.3)
   multi_xml
+  nokogiri (>= 1.13.4)
   oai
   pg
   plausible_api
@@ -571,4 +572,4 @@ RUBY VERSION
    ruby 3.0.3p157
 
 BUNDLED WITH
-   2.3.8
+   2.3.11

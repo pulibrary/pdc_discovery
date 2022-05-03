@@ -21,6 +21,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
 gem 'listen', '~> 3.3'
 gem 'multi_xml'
+gem "nokogiri", ">= 1.13.4"
 gem 'oai'
 gem 'pg'
 gem 'plausible_api'
