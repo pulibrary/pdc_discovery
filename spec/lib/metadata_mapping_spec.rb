@@ -29,7 +29,7 @@ RSpec.describe Indexer do
       end
 
       it "description" do
-        expect(indexed_record["description_tsim"]).to contain_exactly "This is a fake description."
+        expect(indexed_record["description_tsim"].first).to match(/This dataset is too large to download directly from this item page./)
       end
 
       it "issue_date" do

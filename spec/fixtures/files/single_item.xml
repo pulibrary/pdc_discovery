@@ -217,12 +217,20 @@
     <metadata>
       <key>dc.description</key>
       <language>en_US</language>
-      <value>This is a fake description.</value>
+      <value>
+        This dataset is too large to download directly from this item page. 
+        You can access and download the data via Globus at this link: 
+        https://app.globus.org/file-manager?origin_id=dc43f461-0ca7-4203-848c-33a9fc00a464&origin_path=%2Fvsj7-4j83%2F 
+        (See https://docs.globus.org/how-to/get-started/ for instructions on how 
+        to use Globus; sign-in is required).
+      </value>
     </metadata>
     <metadata>
       <key>dc.description.abstract</key>
       <language>en_US</language>
-      <value>Atomic and molecular density data in the outer midplane of NSTX [Ono et al., Nucl. Fusion 40, 557 (2000)] are inferred from tangential camera data via a forward modeling procedure using the DEGAS 2 Monte Carlo neutral transport code. The observed Balmer-b light emission data from 17 shots during the 2010 NSTX campaign display no obvious trends with discharge parameters such as the divertor Balmer-a emission level or edge deuterium ion density. Simulations of 12 time slices in 7 of these discharges produce molecular densities near the vacuum vessel wall of 2–8 􏰁 10^17 m􏰈3 and atomic densities ranging from 1 to 7 􏰁 10^16 m􏰈3; neither has a clear correlation with other parameters. Validation of the technique, begun in an earlier publication, is continued with an assessment of the sensitivity of the simulated camera image and neutral densities to uncertainties in the data input to the model. The simulated camera image is sensitive to the plasma profiles and virtually nothing else. The neutral densities at the vessel wall depend most strongly on the spatial distribution of the source; simulations with a localized neutral source yield densities within a factor of two of the baseline, uniform source, case. The uncertainties in the neutral densities associated with other model inputs and assumptions are􏰅 50%.</value>
+      <value>
+        This is a fake url for testing: http://torus.example.com.
+        Atomic and molecular density data in the outer midplane of NSTX [Ono et al., Nucl. Fusion 40, 557 (2000)] are inferred from tangential camera data via a forward modeling procedure using the DEGAS 2 Monte Carlo neutral transport code. The observed Balmer-b light emission data from 17 shots during the 2010 NSTX campaign display no obvious trends with discharge parameters such as the divertor Balmer-a emission level or edge deuterium ion density. Simulations of 12 time slices in 7 of these discharges produce molecular densities near the vacuum vessel wall of 2–8 􏰁 10^17 m􏰈3 and atomic densities ranging from 1 to 7 􏰁 10^16 m􏰈3; neither has a clear correlation with other parameters. Validation of the technique, begun in an earlier publication, is continued with an assessment of the sensitivity of the simulated camera image and neutral densities to uncertainties in the data input to the model. The simulated camera image is sensitive to the plasma profiles and virtually nothing else. The neutral densities at the vessel wall depend most strongly on the spatial distribution of the source; simulations with a localized neutral source yield densities within a factor of two of the baseline, uniform source, case. The uncertainties in the neutral densities associated with other model inputs and assumptions are􏰅 50%.</value>
     </metadata>
     <metadata>
       <key>dc.description.tableofcontents</key>
