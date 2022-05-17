@@ -1,3 +1,5 @@
+<% require 'rinku' %>
+
 <style>
   /*
   * Source: https://blog.kritikapattalam.com/2-simple-ways-you-can-truncate-text-using-css
@@ -46,7 +48,8 @@
         <dd class="col-md-12 abstract-container">
           <div class="document-abstract">
             <header>Abstract:</header>
-            <p id="document-abstract-text" class="truncate-line-clamp"><%= abstract %></p>
+            
+            <p id="document-abstract-text" class="truncate-line-clamp"><%== Rinku.auto_link(abstract, mode=:all, link_attr=nil, skip_tags=nil) %></p>
             <a id="document-abstract-text-toggle" href="#"><i class="bi bi-caret-down"></i><span>Show More</span></a>
           </div>
         </dd>
@@ -59,7 +62,7 @@
         <dd class="col-md-12 description-container">
           <div class="document-description">
             <header>Description:</header>
-            <p id="document-description-text" class="truncate-line-clamp"><%= description %></p>
+            <p id="document-description-text" class="truncate-line-clamp"><%== Rinku.auto_link(description, mode=:all, link_attr=nil, skip_tags=nil) %></p>
             <a id="document-description-text-toggle" href="#"><i class="bi bi-caret-down"></i><span>Show More</span></a>
           </div>
         </dd>
