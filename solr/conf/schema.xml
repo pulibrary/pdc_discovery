@@ -14,6 +14,9 @@
 
     <field name="lat" type="tdouble" stored="true" indexed="true" multiValued="false"/>
     <field name="lng" type="tdouble" stored="true" indexed="true" multiValued="false"/>
+
+    <field name="author_tesim" type="text_name_en" stored="true" indexed="true" multiValued="true"/>
+
     <!-- NOTE:  not all possible Solr field types are represented in the dynamic fields -->
 
     <!-- text (_t...) -->
@@ -325,6 +328,34 @@
         <filter class="solr.EnglishPossessiveFilterFactory"/>
         <!-- EnglishMinimalStemFilterFactory is less aggressive than PorterStemFilterFactory: -->
         <filter class="solr.EnglishMinimalStemFilterFactory"/>
+        <filter class="solr.TrimFilterFactory"/>
+      </analyzer>
+    </fieldType>
+
+    <!-- A text field appropriate for English Names -->
+    <fieldType name="text_name_en" class="solr.TextField" positionIncrementGap="100">
+      <analyzer type="index">
+        <tokenizer class="solr.ICUTokenizerFactory"/>
+        <filter class="solr.ICUFoldingFilterFactory"/>  <!-- NFKC, case folding, diacritics removed -->
+        <filter class="solr.EnglishPossessiveFilterFactory"/>
+        <!-- EnglishMinimalStemFilterFactory is less aggressive than PorterStemFilterFactory: -->
+        <filter class="solr.EnglishMinimalStemFilterFactory"/>
+        <!--
+        <filter class="solr.PorterStemFilterFactory"/>
+        -->
+        <filter class="solr.TrimFilterFactory"/>
+      </analyzer>
+
+      <analyzer type="query">
+        <tokenizer class="solr.ICUTokenizerFactory"/>
+        <filter class="solr.ICUFoldingFilterFactory"/>  <!-- NFKC, case folding, diacritics removed -->
+        <filter class="solr.EnglishPossessiveFilterFactory"/>
+        <!-- EnglishMinimalStemFilterFactory is less aggressive than PorterStemFilterFactory: -->
+        <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>
+        <filter class="solr.EnglishMinimalStemFilterFactory"/>
+        <!--
+        <filter class="solr.PorterStemFilterFactory"/>
+        -->
         <filter class="solr.TrimFilterFactory"/>
       </analyzer>
     </fieldType>
