@@ -65,11 +65,22 @@ rake index:research_data
 ### Updating Solr in production/staging
 To make changes to the Solr in production/staging you need to update the files in the [pul_solr](https://github.com/pulibrary/pul_solr) repository and deploy them. The basic steps are:
 
+#### getting your changes into pul_solr [configuration file for PDC Discovery](https://github.com/pulibrary/pul_solr/tree/main/solr_configs/pdc-discovery)
+1. Copy your configuration updates to pul_solr (This command assumes all your projects live in one folder on your machine)
+   ```
+   cp solr/conf/* ../pul_solr/solr_configs/pdc-discovery/conf/
+   ```
+1. create a **Draft** PR in pul_solr with your changes (<branch-name> is the name of your new branch for the PR)
+
+
+#### getting your changes onto the server
 1. Connect to the VPN.
-2. Optional. You can tunnel to machine running Solr `ssh -L 8983:localhost:8983 pulsys@lib-solr-staging4` if you want to see your current configuration (e.g. `solrconfig.xml` or `schema.xml`).
-3. Update the [configuration file for PDC Discovery](https://github.com/pulibrary/pul_solr/tree/main/solr_configs/pdc-discovery)
-4. Make sure you are on the `pul-solr` repo.
-5. Deploy the changes, e.g. `bundle exec cap solr8-staging deploy`.
+1. Optional. You can tunnel to machine running Solr `ssh -L 8983:localhost:8983 pulsys@lib-solr-staging4` if you want to see your current configuration (e.g. `solrconfig.xml` or `schema.xml`).
+1. Make sure you are on the `pul-solr` repo.
+1. Deploy the changes, e.g. `BRANCH=<branch-name> bundle exec cap solr8-staging deploy`.
+1. verify your changes have worked and mark your PR ready for review
+1. Once the PR has been merged cordiante a time to deploy the changes to production `bundle exec cap solr8-production deploy`
+  
 
 You can see the list of Capistrano environments [here](https://github.com/pulibrary/pul_solr/tree/main/config/deploy)
 
