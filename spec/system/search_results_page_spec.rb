@@ -30,9 +30,15 @@ describe 'Search Results Page', type: :system, js: true do
   end
 
   describe "author searches" do
-    it "finds record by subject" do
+    it "finds record by author" do
       visit '/?search_field=author&q=podesta'
       expect(page).to have_link('Midplane neutral density profiles in the National Spherical Torus Experiment', href: '/catalog/78348')
+    end
+
+    it "finds record by author synonym" do
+      visit '/?search_field=author&q=dan'
+      expect(page).to have_content("Author(s):\nTrueman, Daniel")
+      expect(page).to have_link('bitKlavier Grand Sample Library—Piano Bar Mic Image', href: '/catalog/123476')
     end
   end
 
