@@ -7,7 +7,7 @@ RSpec.describe NameSynonym do
   let(:file_name) { Rails.root.join('tmp', 'nametest') }
   let(:wiki_uri) { URI('https://en.wiktionary.org/w/api.php?action=parse&page=Appendix:English_given_names&prop=wikitext&format=json') }
   describe 'build_solr_synonym_file' do
-    it 'builds the synonum file' do
+    it 'builds the synonym file' do
       allow(Net::HTTP).to receive(:get).with(wiki_uri)
                                        .and_return(wiki_response_body)
       described_class.build_solr_synonym_file(file_name)
