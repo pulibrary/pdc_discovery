@@ -20,8 +20,19 @@ namespace :pdc_discovery do
       end
     end
   end
+
+  desc "Run a yarn install"
+  task :yarn_install do
+    on roles(:web) do
+      within release_path do
+        execute "cd #{release_path} && yarn install"
+        execute "cd #{release_path} && bundle exec rails webpacker:compile"
+      end
+    end
+  end
 end
 
 # Uncomment to re-index on every deploy. Only needed when we're actively 
 # updating how indexing happens.
 after "deploy:published", "pdc_discovery:reindex"
+before "deploy:assets:precompile", "pdc_discovery:yarn_install"

@@ -82,16 +82,6 @@ jobs:
           at: '~/pdc_discovery'
       - checkout
       - run:
-          name: Install node@lts/erbium (need right version for `yarn`)
-          command: |
-            set +e
-            touch $BASH_ENV
-            curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
-            echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
-            echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
-            echo 'nvm install lts/erbium' >> $BASH_ENV
-            echo 'nvm alias default lts/erbium' >> $BASH_ENV
-      - run:
           name: Check current version of node
           command: node -v
       - run:
