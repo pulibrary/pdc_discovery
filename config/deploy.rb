@@ -11,6 +11,12 @@ set :branch, ENV["BRANCH"] || "main"
 
 set :deploy_to, "/opt/pdc_discovery"
 
+# This fixes a "Rails manifest file not found" error when deploying to a new server
+# for the first time. 
+# See https://stackoverflow.com/questions/47914115/rails-manifest-file-not-found-deploying-with-capistrano
+Rake::Task["deploy:assets:backup_manifest"].clear_actions
+Rake::Task["deploy:assets:restore_manifest"].clear_actions
+
 namespace :pdc_discovery do
   desc "Reindex research data"
   task :reindex do
