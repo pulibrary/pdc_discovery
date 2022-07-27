@@ -11,6 +11,9 @@ set :branch, ENV["BRANCH"] || "main"
 
 set :deploy_to, "/opt/pdc_discovery"
 
+Rake::Task["deploy:assets:backup_manifest"].clear_actions
+Rake::Task["deploy:assets:restore_manifest"].clear_actions
+
 namespace :pdc_discovery do
   desc "Reindex research data"
   task :reindex do
