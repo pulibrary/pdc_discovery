@@ -10,6 +10,7 @@ A discovery portal for Princeton research data. Initially it will provide a bett
 * Ruby: 3.0.3
 * nodejs: 12.18.3
 * yarn: 1.22.10
+* postgres: `brew install postgres; brew services start postgresql`
 * [Lando](https://github.com/lando/lando/releases): 3.0.0
 
 ## Updating the banner
