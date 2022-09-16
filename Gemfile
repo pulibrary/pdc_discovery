@@ -35,7 +35,7 @@ gem 'traject'
 gem 'turbolinks', '~> 5'
 gem 'twitter-typeahead-rails', '0.11.1.pre.corejavascript'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-gem 'webpacker', '~> 5.0'
+gem 'vite_rails'
 gem 'whenever'
 
 group :development, :test do

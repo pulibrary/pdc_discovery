@@ -67,7 +67,7 @@ commands:
             - pdc_discovery-yarn-{{ checksum "yarn.lock" }}
       - run:
           name: Install NPM Dependencies via Yarn
-          command: yarn install
+          command: yarn install --frozen-lockfile
       - save_cache:
           name: Save Yarn Package Cache
           key: pdc_discovery-yarn-{{ checksum "yarn.lock" }}
@@ -82,16 +82,6 @@ jobs:
           at: '~/pdc_discovery'
       - checkout
       - run:
-          name: Install node@lts/erbium (need right version for `yarn`)
-          command: |
-            set +e
-            touch $BASH_ENV
-            curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
-            echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
-            echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
-            echo 'nvm install lts/erbium' >> $BASH_ENV
-            echo 'nvm alias default lts/erbium' >> $BASH_ENV
-      - run:
           name: Check current version of node
           command: node -v
       - run:
@@ -100,7 +90,6 @@ jobs:
       - run: sudo apt update && sudo apt install postgresql-client
       - bundle_install
       - yarn_install
-      - run: NODE_ENV=test bundle exec rails webpacker:compile
       - persist_to_workspace:
           root: '~/pdc_discovery'
           paths: '*'
@@ -114,7 +103,7 @@ jobs:
       # Lint
       - run:
           name: Run rubocop
-          command: bundle exec rake rubocop
+          command: bundle exec rubocop
 
   # Lint the JavaScript, CSS, Sass, and Vue source code files
   eslint:

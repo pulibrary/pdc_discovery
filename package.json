@@ -5,11 +5,13 @@
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "^5.4.3",
     "lux-design-system": "^2.0.4",
-    "turbolinks": "^5.2.0",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12"
+    "postcss": "^8.4.16",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^7.8.2",
+    "postcss-tools": "^2.0.3",
+    "sass": "^1.54.9",
+    "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
   "devDependencies": {
@@ -19,7 +21,8 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-prettier": "^1.2.0",
     "stylelint-scss": "^3.20.1",
-    "webpack-dev-server": "^4.9.0"
+    "vite": "^3.0.0",
+    "vite-plugin-ruby": "^3.1.0"
   },
   "scripts": {
     "lint": "yarn run prettier --check app/javascript/**/*{js,css,scss} app/assets/javascripts/**/*js app/assets/stylesheets/**/*{css,scss}",
