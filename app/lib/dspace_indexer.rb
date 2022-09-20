@@ -5,7 +5,7 @@ require 'traject'
 
 ##
 # Index DSpace objects to solr
-class Indexer
+class DspaceIndexer
   REST_LIMIT = 100
 
   ##
@@ -37,14 +37,14 @@ class Indexer
   ##
   # TODO: Pass in indexing options from the command line
   # Convenience method for kicking off indexing
-  # @example Indexer.index(collection_handle: '88435/dsp015m60qr913')
+  # @example DspaceIndexer.index(collection_handle: '88435/dsp015m60qr913')
   def self.index(_options)
     server = "#{Rails.configuration.pdc_discovery.dataspace_url}/rest"
     collection_id = '261'
     url = "#{server}/collections/#{collection_id}/items?limit=#{REST_LIMIT}&offset=0&expand=all"
 
     resp = Faraday.get(url, {}, { 'Accept': 'application/xml' })
-    i = Indexer.new(resp.body)
+    i = DspaceIndexer.new(resp.body)
     i.index
     i
   end

@@ -3,7 +3,7 @@
 describe 'Website banner', type: :system, js: true do
   let(:community_fetch_with_expanded_metadata) { file_fixture("single_item.xml").read }
   let(:indexer) do
-    Indexer.new(community_fetch_with_expanded_metadata)
+    DspaceIndexer.new(community_fetch_with_expanded_metadata)
   end
 
   before do

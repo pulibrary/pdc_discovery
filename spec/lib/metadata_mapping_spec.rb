@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Indexer do
+RSpec.describe DspaceIndexer do
   describe 'indexing a single record' do
     let(:single_item) { file_fixture("single_item.xml").read }
     let(:indexer) do

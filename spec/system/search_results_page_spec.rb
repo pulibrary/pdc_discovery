@@ -5,7 +5,7 @@ describe 'Search Results Page', type: :system, js: true do
     Blacklight.default_index.connection.delete_by_query('*:*')
     Blacklight.default_index.connection.commit
     data = file_fixture('search_results_items.xml').read
-    indexer = Indexer.new(data)
+    indexer = DspaceIndexer.new(data)
     indexer.index
   end
 
