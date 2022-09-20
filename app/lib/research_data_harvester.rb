@@ -30,7 +30,7 @@ class ResearchDataHarvester
     url = "#{server}/collections/#{collection_id}/items?limit=#{REST_LIMIT}&offset=0&expand=all"
 
     resp = Faraday.get(url, {}, { 'Accept': 'application/xml' })
-    Indexer.new(resp.body).index
+    DspaceIndexer.new(resp.body).index
   end
 
   ##

@@ -3,7 +3,7 @@
 RSpec.describe 'Dynamic Sitemap', type: :system, js: false do
   let(:globus_fixtures) { File.read(File.join(fixture_path, 'globus_items.xml')) }
   let(:indexer) do
-    Indexer.new(globus_fixtures)
+    DspaceIndexer.new(globus_fixtures)
   end
 
   before do

@@ -6,7 +6,7 @@ describe "Default search", type: :system do
     before do
       solr_delete_all!
       xml = file_fixture("single_item.xml").read
-      indexer = Indexer.new(xml)
+      indexer = DspaceIndexer.new(xml)
       indexer.index
       Blacklight.default_index.connection.commit
     end
