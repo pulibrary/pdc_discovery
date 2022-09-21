@@ -32,7 +32,10 @@ class DataspaceCommunities
   # @param id [<Int>] ID of the community.
   def find_root_name(id)
     root_id = find_path_ids(id, []).last
-    find_by_id(root_id).name
+    found = find_by_id(root_id)
+    return if found.nil?
+
+    found.name
   end
 
   # Returns an array with the names (from root to sub-community) to the given community ID.
@@ -118,7 +121,8 @@ class DataspaceCommunities
   # @param path [Array<Int>] Array of IDs.
   def find_path_ids(id, path)
     community = find_by_id(id)
-    return nil if community.nil?
+    return [] if community.nil?
+
     path << id
     if community.parent_id.nil?
       path
