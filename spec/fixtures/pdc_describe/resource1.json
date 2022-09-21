@@ -1,0 +1,44 @@
+{
+  "titles": [
+    {
+      "title": "Shakespeare and Company Project Dataset: Lending Library Members, Books, Events",
+      "title_type": null
+    }
+  ],
+  "description": "Shakespeare and Company Project Dataset: Lending Library Members, Books, Events",
+  "creators": [
+    {
+      "value": "Kotin, Joshua",
+      "name_type": "Personal",
+      "given_name": "Joshua",
+      "family_name": "Kotin",
+      "identifier": null,
+      "affiliations": [],
+      "sequence": 0
+    },
+    {
+      "value": "Koeser, Rebecca Sutton",
+      "name_type": "Personal",
+      "given_name": "Rebecca Sutton",
+      "family_name": "Koeser",
+      "identifier": null,
+      "affiliations": [],
+      "sequence": 0
+    },
+    {
+      "value": "Adair, Carl",
+      "name_type": "Personal",
+      "given_name": "Carl",
+      "family_name": "Adair",
+      "identifier": null,
+      "affiliations": [],
+      "sequence": 0
+    }
+  ],
+  "resource_type": "Dataset",
+  "publisher": "Princeton University",
+  "publication_year": "2022",
+  "ark": null,
+  "doi": "10.34770/pe9w-x904",
+  "rights": null
+}

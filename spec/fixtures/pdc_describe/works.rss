@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Princeton Data Commons RSS Feed</title>
+    <description>Princeton Data Commons RSS Feed of approved submissions</description>
+    <link>https://pdc-describe-prod.princeton.edu/describe/</link>
+    <item>
+      <title>A demo dataset</title>
+      <url>https://pdc-describe-prod.princeton.edu/describe/works/6.json</url>
+      <date_changed>2022-08-23 13:29:20 UTC</date_changed>
+    </item>
+    <item>
+      <title>Test 9/09/2022</title>
+      <url>https://pdc-describe-prod.princeton.edu/describe/works/20.json</url>
+      <date_changed>2022-09-09 15:49:47 UTC</date_changed>
+    </item>
+  </channel>
+</rss>
