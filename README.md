@@ -39,6 +39,14 @@ To stop solr and database services:
 1. Fast: `bundle exec rspec spec`
 2. Run in browser: `RUN_IN_BROWSER=true bundle exec rspec spec`
 
+### Linting Code
+We utilize Rubocop for our Ryby code and Prettier for our JavaScript
+1. To run rubocop run `bundle exec rubocop`
+   1. To allow for autocorrecting of errors run `bundle exec rubocop -a`
+1. To run prettier via yar lint run `yarn lint`
+   1. To run prettier by itself to see more details on errors run `yarn prettier app/javascript`
+   1. To run prettier to autocorrect errors run `yarn prettier --write app/javascript`  
+
 ### Starting the development server
 *`foreman` is used to enable [Hot Module Replacement for Webpack](https://webpack.js.org/concepts/hot-module-replacement/).*
 
