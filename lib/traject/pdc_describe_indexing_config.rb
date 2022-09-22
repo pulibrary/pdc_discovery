@@ -17,9 +17,11 @@ end
 # ==================
 # Main fields
 
-# to_field 'id' do |record, accumulator, _c|
-#   record.xpath("/hash/doi/text()").to_s
-# end
+to_field 'id' do |record, accumulator, _c|
+  raw_doi = record.xpath("/hash/doi/text()").to_s
+  suffix = raw_doi.split("/").last
+  accumulator.concat [suffix]
+end
 
 # to_field 'abstract_tsim', extract_xpath("/item/metadata/key[text()='dc.description.abstract']/../value")
 # to_field 'abstract_tsim', extract_xpath("/item/metadata/key[text()='dcterms.abstract']/../value")
@@ -29,7 +31,7 @@ end
 # to_field 'description_tsim', extract_xpath("/item/metadata/key[text()='dc.description']/../value")
 # to_field 'description_tsim', extract_xpath("/item/metadata/key[text()='dcterms.description']/../value")
 # to_field 'handle_ssim', extract_xpath('/item/handle')
-to_field 'id', extract_xpath('/hash/doi')
+# to_field 'id', extract_xpath('/hash/doi')
 # to_field 'uri_tesim', extract_xpath("/item/metadata/key[text()='dc.identifier.uri']/../value")
 # to_field 'collection_id_ssi', extract_xpath('/item/parentCollection/id')
 # to_field 'handle_ssi', extract_xpath('/item/handle')
