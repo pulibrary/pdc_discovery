@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hash>
+  <titles type="array">
+    <title>
+      <title>Shakespeare and Company Project Dataset: Lending Library Members, Books, Events</title>
+      <title-type nil="true"/>
+    </title>
+  </titles>
+  <description>Shakespeare and Company Project Dataset: Lending Library Members, Books, Events</description>
+  <creators type="array">
+    <creator>
+      <value>Kotin, Joshua</value>
+      <name-type>Personal</name-type>
+      <given-name>Joshua</given-name>
+      <family-name>Kotin</family-name>
+      <identifier nil="true"/>
+      <affiliations type="array"/>
+      <sequence type="integer">0</sequence>
+    </creator>
+    <creator>
+      <value>Koeser, Rebecca Sutton</value>
+      <name-type>Personal</name-type>
+      <given-name>Rebecca Sutton</given-name>
+      <family-name>Koeser</family-name>
+      <identifier nil="true"/>
+      <affiliations type="array"/>
+      <sequence type="integer">0</sequence>
+    </creator>
+    <creator>
+      <value>Adair, Carl</value>
+      <name-type>Personal</name-type>
+      <given-name>Carl</given-name>
+      <family-name>Adair</family-name>
+      <identifier nil="true"/>
+      <affiliations type="array"/>
+      <sequence type="integer">0</sequence>
+    </creator>
+  </creators>
+  <resource-type>Dataset</resource-type>
+  <publisher>Princeton University</publisher>
+  <publication-year>2022</publication-year>
+  <ark nil="true"/>
+  <doi>10.34770/pe9w-x904</doi>
+  <rights nil="true"/>
+</hash>
