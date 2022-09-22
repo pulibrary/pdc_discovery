@@ -22,8 +22,11 @@ describe 'PDC Describe research data indexing', type: :system do
     records.first
   end
 
-  xit 'id' do
-    expect(result['id'].first).to eq '1301'
+  ##
+  # The id is based on the DOI
+  # A doi of 10.34770/pe9w-x904 will become doi-10-34770-pe9w-x904
+  it 'id' do
+    expect(result['id'].first).to eq 'doi-10-34770-pe9w-x904'
   end
 
   xit 'title' do

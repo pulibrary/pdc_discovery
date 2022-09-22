@@ -19,8 +19,8 @@ end
 
 to_field 'id' do |record, accumulator, _c|
   raw_doi = record.xpath("/hash/doi/text()").to_s
-  suffix = raw_doi.split("/").last
-  accumulator.concat [suffix]
+  munged_doi = "doi-" + raw_doi.gsub('/','-').gsub('.','-')
+  accumulator.concat [munged_doi]
 end
 
 # to_field 'abstract_tsim', extract_xpath("/item/metadata/key[text()='dc.description.abstract']/../value")
