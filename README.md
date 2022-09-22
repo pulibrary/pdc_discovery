@@ -48,16 +48,8 @@ We utilize Rubocop for our Ryby code and Prettier for our JavaScript
    1. To run prettier to autocorrect errors run `yarn prettier --write app/javascript`  
 
 ### Starting the development server
-*`foreman` is used to enable [Hot Module Replacement for Webpack](https://webpack.js.org/concepts/hot-module-replacement/).*
-
-1. `bundle exec foreman start`
-2. Access pdc_discovery at [http://localhost:3000/](http://localhost:3000/)
-
-You can also use two terminal windows instead of `foreman` to start the Rails application and the Webpack server.
-This is convenient when you need to step through the code as `byebug` does not always show the prompt when using `foreman`.
 
 1. Terminal one: `bin/rails s -p 3000`
-2. Terminal two: `bin/webpack-dev-server`
 3. Access pdc_discovery at [http://localhost:3000/](http://localhost:3000/)
 
 ## Deploying
