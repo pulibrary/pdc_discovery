@@ -2,6 +2,14 @@
 require 'rails_helper'
 
 RSpec.describe "Catalog", type: :request do
+  let(:dspace_fixtures) { File.read(File.join(fixture_path, 'spherical_torus.xml')) }
+  let(:indexer) do
+    DspaceIndexer.new(dspace_fixtures)
+  end
+  before do
+    indexer.index
+  end
+
   describe "GET /doi/:doi" do
     let(:doi) { "doi:10.1088/0029-5515/57/1/016034" }
     let(:document_id) { "84912" }
