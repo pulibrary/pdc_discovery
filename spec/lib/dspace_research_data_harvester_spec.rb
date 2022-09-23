@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe ResearchDataHarvester do
+RSpec.describe DspaceResearchDataHarvester do
   let(:rdh) { described_class.new }
 
   it "has a list of collections to index" do

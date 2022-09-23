@@ -6,10 +6,10 @@ namespace :index do
     Indexer.index("foo")
   end
 
-  desc 'Index all research data collections'
+  desc 'Index all DSpace research data collections'
   task research_data: :environment do
     puts "Harvesting and indexing research data collections"
-    ResearchDataHarvester.harvest(false)
+    DspaceResearchDataHarvester.harvest(false)
     puts "Done harvesting research data."
   end
 

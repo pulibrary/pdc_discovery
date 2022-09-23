@@ -19,8 +19,8 @@ end
 
 to_field 'id' do |record, accumulator, _c|
   raw_doi = record.xpath("/hash/doi/text()").to_s
-  suffix = raw_doi.split("/").last
-  accumulator.concat [suffix]
+  munged_doi = "doi-" + raw_doi.tr('/', '-').tr('.', '-')
+  accumulator.concat [munged_doi]
 end
 
 # to_field 'abstract_tsim', extract_xpath("/item/metadata/key[text()='dc.description.abstract']/../value")
@@ -76,10 +76,13 @@ end
 #   accumulator.concat [collection_name]
 # end
 
-# # ==================
-# # author fields
+# ==================
+# author fields
 
-# to_field 'author_tesim', extract_xpath("/item/metadata/key[text()='dc.contributor.author']/../value")
+to_field 'author_tesim' do |record, accumulator, _c|
+  author_name = record.xpath("/hash/creators/creator/value").map(&:text)
+  accumulator.concat author_name
+end
 
 # # single value is used for sorting
 # to_field 'author_si' do |record, accumulator, _c|
@@ -93,9 +96,8 @@ end
 #   accumulator.concat values.uniq
 # end
 
-# # ==================
-# # title fields
-
+# ==================
+# title fields
 to_field 'title_tesim', extract_xpath('/hash/titles/title')
 
 # to_field 'title_si' do |record, accumulator, _c|
@@ -264,8 +266,8 @@ to_field 'title_tesim', extract_xpath('/hash/titles/title')
 # to_field 'referenced_by_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.isreferencedby']/../value")
 # to_field 'referenced_by_ssim', extract_xpath("/item/metadata/key[text()='dcterms.references']/../value")
 
-# # ==================
-# # format fields
+# ==================
+# format fields
 # to_field 'format_ssim', extract_xpath("/item/metadata/key[text()='dc.format']/../value")
 # to_field 'format_ssim', extract_xpath("/item/metadata/key[text()='dcterms.format']/../value")
 # to_field 'extent_ssim', extract_xpath("/item/metadata/key[text()='dc.format.extent']/../value")
@@ -281,10 +283,9 @@ to_field 'title_tesim', extract_xpath('/hash/titles/title')
 # to_field 'language_ssim', extract_xpath("/item/metadata/key[text()='dc.language.iso']/../value")
 # to_field 'language_ssim', extract_xpath("/item/metadata/key[text()='dc.language.rfc3066']/../value")
 
-# # ==================
-# # publisher fields
-# to_field 'publisher_ssim', extract_xpath("/item/metadata/key[text()='dc.publisher']/../value")
-# to_field 'publisher_ssim', extract_xpath("/item/metadata/key[text()='dcterms.publisher']/../value")
+# ==================
+# publisher fields
+to_field 'publisher_ssim', extract_xpath("/hash/publisher")
 # to_field 'publisher_place_ssim', extract_xpath("/item/metadata/key[text()='dc.publisher.place']/../value")
 # to_field 'publisher_corporate_ssim', extract_xpath("/item/metadata/key[text()='dc.publisher.corporate']/../value")
 
