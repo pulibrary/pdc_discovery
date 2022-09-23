@@ -48,7 +48,7 @@ end
 to_field 'subcommunity_name_ssi' do |record, accumulator, _c|
   community_id = record.xpath("/item/parentCommunityList/id").map(&:text).map(&:to_i).sort.last
   community = settings["dataspace_communities"].find_by_id(community_id)
-  if community.parent_id
+  if !community.nil? && community.parent_id
     # We only populate this value for subcommunities
     accumulator.concat [community.name]
   end
