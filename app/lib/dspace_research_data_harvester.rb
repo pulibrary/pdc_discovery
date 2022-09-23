@@ -4,7 +4,7 @@ require 'csv'
 
 ##
 # Harvest research data from DataSpace for indexing
-class ResearchDataHarvester
+class DspaceResearchDataHarvester
   COLLECTION_CONFIG = Rails.root.join('config', 'collections.csv')
   REST_LIMIT = 100
   CACHE_COMMUNITIES_FILE = Rails.root.join('spec', 'fixtures', 'files', 'dataspace_communities.json')
@@ -36,7 +36,7 @@ class ResearchDataHarvester
   ##
   # Convenience method to harvest and index all collections in the config file
   # @example
-  #   ResearchDataHarvester.harvest
+  #   DspaceResearchDataHarvester.harvest
   def self.harvest(use_cache = false)
     Rails.logger.info "Harvesting and indexing research data collections"
 
@@ -47,7 +47,7 @@ class ResearchDataHarvester
     end
 
     # Harvest research data for each collection
-    r = ResearchDataHarvester.new
+    r = DspaceResearchDataHarvester.new
     r.collections_to_index.each do |collection|
       Rails.logger.info "Harvesting collection id #{collection.collection_id}"
       r.harvest(collection)
