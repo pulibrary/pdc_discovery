@@ -29,8 +29,19 @@ class DescribeIndexer
   end
 
   ##
-  # Parse the rss_url, get a JSON resource url for each item, convert it to XML, and pass it to traject
+  # Only index if Rails.configuration.pdc_discovery.index_pdc_describe == true
+  # See config/pdc_discovery.yml to change this setting for a given environment.
   def index
+    if Rails.configuration.pdc_discovery.index_pdc_describe == true
+      perform_indexing
+    else
+      Rails.logger.warn "PDC Describe indexing is not turned on for this environment. See config/pdc_discovery.yml"
+    end
+  end
+
+  ##
+  # Parse the rss_url, get a JSON resource url for each item, convert it to XML, and pass it to traject
+  def perform_indexing
     doc = Nokogiri::XML(URI.open(@rss_url))
     url_list = doc.xpath("//item/url/text()").map(&:to_s)
     url_list.each do |url|
