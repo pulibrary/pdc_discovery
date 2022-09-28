@@ -36,7 +36,7 @@ RSpec.describe DescribeIndexer do
         response = Blacklight.default_index.connection.get 'select', params: { q: '*:*' }
         expect(response["response"]["numFound"]).to eq 0
 
-        # If index_pdc_describe == false, DO index PDC Describe.
+        # If index_pdc_describe == true, DO index PDC Describe.
         Rails.configuration.pdc_discovery.index_pdc_describe = true
         indexer.index
         response = Blacklight.default_index.connection.get 'select', params: { q: '*:*' }
