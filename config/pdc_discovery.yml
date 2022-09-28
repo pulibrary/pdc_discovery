@@ -1,5 +1,6 @@
 default: &default
   dataspace_url: <%= ENV["DATASPACE_URL"] || "https://dataspace-dev.princeton.edu" %>
+  pdc_describe_rss: <%= ENV["PDC_DESCRIBE_RSS"] || "https://pdc-describe-staging.princeton.edu/describe/works.rss" %>
   plausible_site_id: <%= "pdc-discovery-staging.princeton.edu" %>
 
 development:
@@ -12,6 +13,7 @@ production:
   <<: *default
   dataspace_url: <%= ENV["DATASPACE_URL"] %>
   plausible_site_id: <%= "datacommons.princeton.edu/discovery" %>
+  pdc_describe_rss: <%= ENV["PDC_DESCRIBE_RSS"] || "https://pdc-describe-prod.princeton.edu/describe/works.rss" %>
 
 staging:
   <<: *default

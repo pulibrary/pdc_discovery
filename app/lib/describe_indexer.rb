@@ -5,11 +5,13 @@ require 'traject'
 require 'open-uri'
 
 ##
-# Index JSON resource records from PDC Describe to solr
+# Fetch an RSS feed of approved works from PDC Describe. For each work, index a PDC Describe JSON resource to solr.
 class DescribeIndexer
   ##
-  #
-  def initialize(rss_url:)
+  # See config/pdc_discovery.yml for configuration of the RSS feed that
+  # this indexer uses to harvest data from PDC Describe.
+  # @param [String] rss_url
+  def initialize(rss_url: Rails.configuration.pdc_discovery.pdc_describe_rss)
     @rss_url = rss_url
   end
 

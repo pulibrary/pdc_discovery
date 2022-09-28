@@ -7,10 +7,17 @@ namespace :index do
   end
 
   desc 'Index all DSpace research data collections'
-  task research_data: :environment do
-    puts "Harvesting and indexing research data collections"
+  task dspace_research_data: :environment do
+    puts "Harvesting and indexing DataSpace research data collections"
     DspaceResearchDataHarvester.harvest(false)
-    puts "Done harvesting research data."
+    puts "Done harvesting DataSpace research data."
+  end
+
+  desc 'Index all PDC Describe data'
+  task pdc_describe_research_data: :environment do
+    puts "Harvesting and indexing PDC Describe data"
+    DescribeIndexer.new(rss_url: "https://pdc-describe-prod.princeton.edu/describe/works.rss").index
+    puts "Done harvesting PDC Describe data."
   end
 
   desc 'Remove all indexed Documents from Solr'
