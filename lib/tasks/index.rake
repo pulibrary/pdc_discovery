@@ -16,7 +16,7 @@ namespace :index do
   desc 'Index all PDC Describe data'
   task pdc_describe_research_data: :environment do
     puts "Harvesting and indexing PDC Describe data"
-    DescribeIndexer.new(rss_url: "https://pdc-describe-prod.princeton.edu/describe/works.rss").index
+    DescribeIndexer.new.index
     puts "Done harvesting PDC Describe data."
   end
 
