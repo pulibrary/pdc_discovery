@@ -217,4 +217,35 @@ class CatalogController < ApplicationController
     citation = @document.cite("BibTeX")
     send_data citation, filename: "#{@document.bibtex_id}.bibtex", type: 'text/plain', disposition: 'attachment'
   end
+
+  def resolve_doi
+    raise Blacklight::Exceptions::RecordNotFound unless params.key?(:doi)
+
+    doi_query = params[:doi]
+    query = { q: "referenced_by_ssim:*\"#{doi_query}\"" }
+
+    solr_response = search_service.repository.search(**query)
+    documents = solr_response.documents
+
+    raise Blacklight::Exceptions::RecordNotFound if documents.empty?
+    document = documents.first
+
+    redirect_to(solr_document_path(id: document.id))
+  end
+
+  def resolve_ark
+    raise Blacklight::Exceptions::RecordNotFound unless params.key?(:ark)
+
+    ark = params[:ark]
+    ark_query = "uri_tesim:*\"#{ark}\""
+    query = { q: ark_query }
+
+    solr_response = search_service.repository.search(**query)
+    documents = solr_response.documents
+
+    raise Blacklight::Exceptions::RecordNotFound if documents.empty?
+    document = documents.first
+
+    redirect_to(solr_document_path(id: document.id))
+  end
 end

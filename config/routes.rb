@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   resources :solr_documents, only: [:show], path: '/catalog', controller: 'catalog' do
     concerns %i[exportable marc_viewable]
   end
+  match "/doi/*doi", via: :get, to: "catalog#resolve_doi", as: :resolve_doi, format: false
+  match "/ark/*ark", via: :get, to: "catalog#resolve_ark", as: :resolve_ark, format: false
 
   resources :bookmarks do
     concerns :exportable
