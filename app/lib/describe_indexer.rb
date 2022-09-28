@@ -39,6 +39,8 @@ class DescribeIndexer
     end
   end
 
+private
+
   ##
   # Parse the rss_url, get a JSON resource url for each item, convert it to XML, and pass it to traject
   def perform_indexing
