@@ -1,6 +1,3 @@
-# config valid for current version and patch releases of Capistrano
-lock "~> 3.16.0"
-
 set :application, "pdc_discovery"
 set :repo_url, "https://github.com/pulibrary/pdc_discovery.git"
 
@@ -22,7 +19,7 @@ namespace :pdc_discovery do
   task :reindex do
     on roles(:web) do
       within release_path do
-        execute("cd #{release_path} && bundle exec rake index:research_data")
+        execute("cd #{release_path} && bundle exec rake index:dspace_research_data && bundle exec rake index:pdc_describe_research_data")
       end
     end
   end
