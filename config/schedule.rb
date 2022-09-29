@@ -24,5 +24,6 @@
 set :job_template, "bash -l -c 'export PATH=\"/usr/local/bin/:$PATH\" && :job'"
 
 every :day, at: '12:20am', roles: [:app] do
-  rake "index:research_data"
+  rake "index:dspace_research_data"
+  rake "index:pdc_describe_research_data"
 end

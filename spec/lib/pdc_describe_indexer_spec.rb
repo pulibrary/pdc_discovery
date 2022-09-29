@@ -27,6 +27,17 @@ RSpec.describe DescribeIndexer do
       it "sends items to solr" do
         response = Blacklight.default_index.connection.get 'select', params: { q: '*:*' }
         expect(response["response"]["numFound"]).to eq 0
+
+        # If index_pdc_describe == false, do not index PDC Describe.
+        # This is a safety measure so we don't index in production until we're ready
+        # See config/pdc_discovery.yml to change this setting for real
+        Rails.configuration.pdc_discovery.index_pdc_describe = false
+        indexer.index
+        response = Blacklight.default_index.connection.get 'select', params: { q: '*:*' }
+        expect(response["response"]["numFound"]).to eq 0
+
+        # If index_pdc_describe == true, DO index PDC Describe.
+        Rails.configuration.pdc_discovery.index_pdc_describe = true
         indexer.index
         response = Blacklight.default_index.connection.get 'select', params: { q: '*:*' }
         expect(response["response"]["numFound"]).to eq 2
