@@ -222,7 +222,7 @@ class CatalogController < ApplicationController
     raise Blacklight::Exceptions::RecordNotFound unless params.key?(:doi)
 
     doi_query = params[:doi]
-    query = { q: "referenced_by_ssim:*\"#{doi_query}\"" }
+    query = { q: "uri_tesim:*\"#{doi_query}\"" }
 
     solr_response = search_service.repository.search(**query)
     documents = solr_response.documents
