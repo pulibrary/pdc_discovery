@@ -57,7 +57,7 @@ pulbot: `pulbot deploy pdc_discovery to [staging|production]`
 
 To create a tagged release use the [steps in the RDSS handbook](https://github.com/pulibrary/rdss-handbook/blob/main/release_process.md)
 
-## Indexing research data from DataSpace
+## Indexing research data from DataSpace and PDC Describe
 
 ```ruby
 rake index:research_data

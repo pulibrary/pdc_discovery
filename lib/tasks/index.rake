@@ -1,9 +1,15 @@
 # frozen_string_literal: true
 
 namespace :index do
-  desc 'Index sample data'
-  task sample_data: :environment do
-    Indexer.index("foo")
+  desc 'Delete index and re-index all research data'
+  task research_data: :environment do
+    puts "Deleting index..."
+    Rake::Task['index:delete'].invoke
+    puts "Indexing PDC Describe data..."
+    Rake::Task['index:pdc_describe_research_data'].invoke
+    puts "Indexing Data Space research data collections..."
+    Rake::Task['index:dspace_research_data'].invoke
+    puts "Done."
   end
 
   desc 'Index all DSpace research data collections'
