@@ -19,7 +19,7 @@ namespace :pdc_discovery do
   task :reindex do
     on roles(:web) do
       within release_path do
-        execute("cd #{release_path} && bundle exec rake index:dspace_research_data && bundle exec rake index:pdc_describe_research_data")
+        execute("cd #{release_path} && bundle exec rake index:research_data")
       end
     end
   end
