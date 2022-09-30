@@ -41,7 +41,7 @@ RSpec.describe DspaceIndexer do
       end
 
       it "uri" do
-        expect(indexed_record["uri_tesim"]).to contain_exactly "http://arks.princeton.edu/ark:/88435/dsp01zg64tp300"
+        expect(indexed_record["uri_ssim"]).to contain_exactly "http://arks.princeton.edu/ark:/88435/dsp01zg64tp300"
       end
     end
 
