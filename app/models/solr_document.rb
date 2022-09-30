@@ -154,7 +154,7 @@ class SolrDocument
   end
 
   def uri
-    fetch("uri_tesim", [])
+    fetch("uri_ssim", [])
   end
 
   def doi_url
