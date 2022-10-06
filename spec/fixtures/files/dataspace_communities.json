@@ -64,21 +64,6 @@
     "parent_id": null
   },
   {
-    "id": 541,
-    "name": "Computational Social Science",
-    "handle": "88435/dsp015138jh95x",
-    "collections": [
-      {
-        "id": 3384,
-        "name": "Research Data Sets"
-      }
-    ],
-    "subcommunities": [
-
-    ],
-    "parent_id": null
-  },
-  {
     "id": 306,
     "name": "Department of Geosciences",
     "handle": "88435/dsp012b88qf40b",
@@ -115,21 +100,6 @@
     "collections": [
       {
         "id": 3347,
-        "name": "Research Data Sets"
-      }
-    ],
-    "subcommunities": [
-
-    ],
-    "parent_id": null
-  },
-  {
-    "id": 537,
-    "name": "Economics",
-    "handle": "88435/dsp01h989r626x",
-    "collections": [
-      {
-        "id": 3371,
         "name": "Research Data Sets"
       }
     ],
@@ -282,25 +252,6 @@
     "parent_id": null
   },
   {
-    "id": 542,
-    "name": "Music and Arts",
-    "handle": "88435/dsp01w95053563",
-    "collections": [
-      {
-        "id": 3387,
-        "name": "bitKlavier"
-      },
-      {
-        "id": 3492,
-        "name": "Research Data Sets"
-      }
-    ],
-    "subcommunities": [
-
-    ],
-    "parent_id": null
-  },
-  {
     "id": 26,
     "name": "Office of Information Technology",
     "handle": "88435/dsp014q77fr339",
@@ -366,10 +317,6 @@
         "handle": "88435/dsp01k643b3527",
         "collections": [
           {
-            "id": 3386,
-            "name": "Other Projects"
-          },
-          {
             "id": 1308,
             "name": "Stellarators"
           },
@@ -384,29 +331,11 @@
         "parent_id": 346
       },
       {
-        "id": 540,
-        "name": "Computational Science",
-        "handle": "88435/dsp01n009w536x",
-        "collections": [
-          {
-            "id": 3380,
-            "name": "PPPL Collaborations"
-          }
-        ],
-        "subcommunities": [
-
-        ],
-        "parent_id": 346
-      },
-      {
         "id": 350,
         "name": "Engineering",
         "handle": "88435/dsp015x21th769",
         "collections": [
-          {
-            "id": 3381,
-            "name": "Engineering Research"
-          }
+
         ],
         "subcommunities": [
 
@@ -418,10 +347,7 @@
         "name": "ES&H",
         "handle": "88435/dsp01ff365760p",
         "collections": [
-          {
-            "id": 3382,
-            "name": "Technical Reports"
-          }
+
         ],
         "subcommunities": [
 
@@ -433,10 +359,7 @@
         "name": "IT",
         "handle": "88435/dsp012514nn845",
         "collections": [
-          {
-            "id": 3383,
-            "name": "PPPL Collaborations"
-          }
+
         ],
         "subcommunities": [
 
@@ -448,10 +371,7 @@
         "name": "ITER and Tokamaks",
         "handle": "88435/dsp01xg94hr897",
         "collections": [
-          {
-            "id": 3378,
-            "name": "PPPL Collaborations"
-          }
+
         ],
         "subcommunities": [
 
@@ -476,21 +396,6 @@
 
         ],
         "parent_id": 346
-      },
-      {
-        "id": 539,
-        "name": "Theory",
-        "handle": "88435/dsp01wd3760379",
-        "collections": [
-          {
-            "id": 3379,
-            "name": "Theory"
-          }
-        ],
-        "subcommunities": [
-
-        ],
-        "parent_id": 346
       }
     ],
     "parent_id": null
@@ -502,7 +407,7 @@
     "collections": [
       {
         "id": 3106,
-        "name": "C-PREE Research Data Sets"
+        "name": "Princeton School of Public and International Affairs Research Data Sets"
       }
     ],
     "subcommunities": [
@@ -512,7 +417,7 @@
   },
   {
     "id": 67,
-    "name": "Princeton University Doctoral Dissertations, 2011-2022",
+    "name": "Princeton University Doctoral Dissertations, 2011-2020",
     "handle": "88435/dsp01td96k251d",
     "collections": [
       {
@@ -989,10 +894,6 @@
             "name": "Serials and series reports (Publicly Accessible) - Annuaire des statistiques démographiques et sociales (Ivory Coast)"
           },
           {
-            "id": 3487,
-            "name": "Serials and series reports (Publicly Accessible) - Annual epidemiology and surveillance report"
-          },
-          {
             "id": 621,
             "name": "Serials and series reports (Publicly Accessible) - Annual Report of the Istituto per le Opere di Religione (IOR)"
           },
@@ -1085,14 +986,6 @@
             "name": "Serials and series reports (Publicly Accessible) - Diatriba : revista de pedogogía militante"
           },
           {
-            "id": 3486,
-            "name": "Serials and series reports (Publicly Accessible) - District of Columbia HIV/AIDS, Hepatitis, STD and TB (HAHSTA) annual report"
-          },
-          {
-            "id": 3479,
-            "name": "Serials and series reports (Publicly Accessible) - Economic and Financial Modeling"
-          },
-          {
             "id": 1766,
             "name": "Serials and series reports (Publicly Accessible) - EIU Democracy Index"
           },
@@ -1131,10 +1024,6 @@
           {
             "id": 2387,
             "name": "Serials and series reports (Publicly Accessible) - Global cooperation-- re:search annual report"
-          },
-          {
-            "id": 3374,
-            "name": "Serials and series reports (Publicly Accessible) - Gu dian yan jiu 古典研究 = Chinese journal of classical studies"
           },
           {
             "id": 2907,
@@ -1333,10 +1222,6 @@
             "name": "Serials and series reports (Publicly Accessible) - Report (Statistics South Africa)"
           },
           {
-            "id": 3476,
-            "name": "Serials and series reports (Publicly Accessible) - Rhode Island History Journal"
-          },
-          {
             "id": 2750,
             "name": "Serials and series reports (Publicly Accessible) - RWSSP-WN Brief"
           },
@@ -1413,10 +1298,6 @@
             "name": "Serials and series reports (Publicly Accessible) - Travmatyzm na vyrobnyt︠s︡tvi v Ukraïny u ... rot︠s︡i : statystychnyĭ bi︠u︡lletenʹ. = Traumatism in production in Ukraine in        …. year: Statistical bulletin"
           },
           {
-            "id": 3489,
-            "name": "Serials and series reports (Publicly Accessible) - Ukraine-Demographic Yearbooks"
-          },
-          {
             "id": 1202,
             "name": "Serials and series reports (Publicly Accessible) - US Taekwondo journal"
           },
@@ -1441,382 +1322,16 @@
             "name": "Serials and series reports (Publicly Accessible) - World Fertility Survey Basic Documentation"
           },
           {
-            "id": 3368,
-            "name": "Serials and series reports (Publicly Accessible) - World Taekwondo Federation"
-          },
-          {
             "id": 2748,
             "name": "Serials and series reports (Publicly Accessible) - Zaklady okhorony zdorovʹi︠a︡ ta zakhvori︠u︡vanistʹ naselenni︠a︡ Ukraïny u ... rot︠s︡i =  Establishments of health protection and population morbidity of Ukraine in …. Year"
           },
           {
-            "id": 3394,
-            "name": "Series and series reports (Publicly Accessible) - European Journal of American Studies (EJAS)"
-          },
-          {
-            "id": 3393,
-            "name": "Series and series reports (Publicly Accessible) - Federal History"
-          },
-          {
-            "id": 3390,
-            "name": "Series and series reports (Publicly Accessible) - Intersections"
-          },
-          {
             "id": 2606,
             "name": "Series and series reports (Publicly Accessible) - “Naselenni︠a︡ Ukraїny. Demohrafichnyĭ shchorichnyk”  =  “Population of Ukraine. Demographic Yearbook”"
-          },
-          {
-            "id": 3395,
-            "name": "Series and series reports (Publicly Accessible) - New Jersey Studies: an Interdisciplinary Journal"
-          },
-          {
-            "id": 3477,
-            "name": "Series and series reports (Publicly Accessible) - Police Perspectives Guidebook Series: Building Trust in a Diverse Nation"
-          },
-          {
-            "id": 3392,
-            "name": "Series and series reports (Publicly Accessible) - Quarterly Horse"
-          },
-          {
-            "id": 3388,
-            "name": "Series and series reports (Publicly Accessible) - Radical Americas"
-          },
-          {
-            "id": 3396,
-            "name": "Series and series reports (Publicly Accessible) - Southern Spaces"
-          },
-          {
-            "id": 3389,
-            "name": "Series and series reports (Publicly Accessible) - Transatlantica : Revue d'Études Américaines"
-          },
-          {
-            "id": 3391,
-            "name": "Series and series reports (Publicly Accessible) - USAbroad"
-          },
-          {
-            "id": 3488,
-            "name": "Untitled"
-          },
-          {
-            "id": 3490,
-            "name": "Untitled"
           }
         ],
         "subcommunities": [
-          {
-            "id": 543,
-            "name": "Series and series reports (Publicly Accessible) - West Virginia Historical Society",
-            "handle": "88435/dsp01xg94hs66m",
-            "collections": [
-              {
-                "id": 3474,
-                "name": "Volume IX, Number 4 & Volume X, Number 1: March 1996"
-              },
-              {
-                "id": 3463,
-                "name": "Volume XIII, Number 1: January 1999"
-              },
-              {
-                "id": 3462,
-                "name": "Volume XIII, Number 2: April 1999"
-              },
-              {
-                "id": 3461,
-                "name": "Volume XIII, Number 3: July 1999"
-              },
-              {
-                "id": 3460,
-                "name": "Volume XIII, Number 4: October 1999"
-              },
-              {
-                "id": 3467,
-                "name": "Volume XII, Number 1: January 1998"
-              },
-              {
-                "id": 3466,
-                "name": "Volume XII, Number 2: April 1998"
-              },
-              {
-                "id": 3465,
-                "name": "Volume XII, Number 3: July 1998"
-              },
-              {
-                "id": 3464,
-                "name": "Volume XII, Number 4: October 1998"
-              },
-              {
-                "id": 3470,
-                "name": "Volume XI, Number 2: April 1997"
-              },
-              {
-                "id": 3469,
-                "name": "Volume XI, Number 3: August 1997"
-              },
-              {
-                "id": 3468,
-                "name": "Volume XI, Number 4: November 1997"
-              },
-              {
-                "id": 3459,
-                "name": "Volume XIV, Number 1: January 2000"
-              },
-              {
-                "id": 3458,
-                "name": "Volume XIV, Number 2: April 2000"
-              },
-              {
-                "id": 3457,
-                "name": "Volume XIV, Number 3: June 2000"
-              },
-              {
-                "id": 3456,
-                "name": "Volume XIV, Number 4: October 2000"
-              },
-              {
-                "id": 3439,
-                "name": "Volume XIX, Number 1: January 2005"
-              },
-              {
-                "id": 3438,
-                "name": "Volume XIX, Number 2: April 2005"
-              },
-              {
-                "id": 3437,
-                "name": "Volume XIX, Number 3: July 2005"
-              },
-              {
-                "id": 3436,
-                "name": "Volume XIX, Number 4: October 2005"
-              },
-              {
-                "id": 3473,
-                "name": "Volume X, Number 2: June 1996"
-              },
-              {
-                "id": 3472,
-                "name": "Volume X, Number 3: October 1996"
-              },
-              {
-                "id": 3471,
-                "name": "Volume X, Number 4 & Volume XI, Number 1: January 1997"
-              },
-              {
-                "id": 3442,
-                "name": "Volume XVIII, Number 2: April 2004"
-              },
-              {
-                "id": 3441,
-                "name": "Volume XVIII, Number 3: July 2004"
-              },
-              {
-                "id": 3440,
-                "name": "Volume XVIII, Number 4: October 2004"
-              },
-              {
-                "id": 3446,
-                "name": "Volume XVII, Number 1: January 2003"
-              },
-              {
-                "id": 3445,
-                "name": "Volume XVII, Number 2: April 2003"
-              },
-              {
-                "id": 3444,
-                "name": "Volume XVII, Number 3: July 2003"
-              },
-              {
-                "id": 3443,
-                "name": "Volume XVII, Number 4: October 2003"
-              },
-              {
-                "id": 3450,
-                "name": "Volume XVI, Number 1: January 2002"
-              },
-              {
-                "id": 3449,
-                "name": "Volume XVI, Number 2: April 2002"
-              },
-              {
-                "id": 3448,
-                "name": "Volume XVI, Number 3: July 2002"
-              },
-              {
-                "id": 3447,
-                "name": "Volume XVI, Number 4: October 2002"
-              },
-              {
-                "id": 3455,
-                "name": "Volume XV, Number 1: January 2001"
-              },
-              {
-                "id": 3454,
-                "name": "Volume XV, Number 2: April 2001"
-              },
-              {
-                "id": 3453,
-                "name": "Volume XV, Number 3: July 2001"
-              },
-              {
-                "id": 3452,
-                "name": "Volume XV, Number 4: October 2001"
-              },
-              {
-                "id": 3423,
-                "name": "Volume XXIII, Number 1: January 2009"
-              },
-              {
-                "id": 3422,
-                "name": "Volume XXIII, Number 2: April 2009"
-              },
-              {
-                "id": 3421,
-                "name": "Volume XXIII, Number 3: July 2009"
-              },
-              {
-                "id": 3420,
-                "name": "Volume XXIII, Number 4: October 2009"
-              },
-              {
-                "id": 3427,
-                "name": "Volume XXII, Number 1: January 2008"
-              },
-              {
-                "id": 3426,
-                "name": "Volume XXII, Number 2: April 2008"
-              },
-              {
-                "id": 3425,
-                "name": "Volume XXII, Number 3: July 2008"
-              },
-              {
-                "id": 3424,
-                "name": "Volume XXII, Number 4: October 2008"
-              },
-              {
-                "id": 3431,
-                "name": "Volume XXI, Number 1: January 2007"
-              },
-              {
-                "id": 3430,
-                "name": "Volume XXI, Number 2: April 2007"
-              },
-              {
-                "id": 3429,
-                "name": "Volume XXI, Number 3: July 2007"
-              },
-              {
-                "id": 3428,
-                "name": "Volume XXI, Number 4: October 2007"
-              },
-              {
-                "id": 3419,
-                "name": "Volume XXIV, Number 1: January 2010"
-              },
-              {
-                "id": 3418,
-                "name": "Volume XXIV, Number 2: Fall 2010"
-              },
-              {
-                "id": 3409,
-                "name": "Volume XXIX, Number 1: Spring 2015"
-              },
-              {
-                "id": 3408,
-                "name": "Volume XXIX, Number 2: Fall 2015"
-              },
-              {
-                "id": 3435,
-                "name": "Volume XX, Number 1: January 2006"
-              },
-              {
-                "id": 3434,
-                "name": "Volume XX, Number 2: April 2006"
-              },
-              {
-                "id": 3433,
-                "name": "Volume XX, Number 3: July 2006"
-              },
-              {
-                "id": 3432,
-                "name": "Volume XX, Number 4: October 2006"
-              },
-              {
-                "id": 3411,
-                "name": "Volume XXVIII, Number 1: Spring 2014"
-              },
-              {
-                "id": 3410,
-                "name": "Volume XXVIII, Number 2: Fall 2014"
-              },
-              {
-                "id": 3413,
-                "name": "Volume XXVII, Number 1: Spring 2013"
-              },
-              {
-                "id": 3412,
-                "name": "Volume XXVII, Number 2: Fall 2013"
-              },
-              {
-                "id": 3415,
-                "name": "Volume XXVI, Number 1: Spring 2012"
-              },
-              {
-                "id": 3414,
-                "name": "Volume XXVI, Number 2: Fall 2012"
-              },
-              {
-                "id": 3417,
-                "name": "Volume XXV, Number 1: Spring 2011"
-              },
-              {
-                "id": 3416,
-                "name": "Volume XXV, Number 2: Fall 2011"
-              },
-              {
-                "id": 3401,
-                "name": "Volume XXXIII, Number 1: Spring 2019"
-              },
-              {
-                "id": 3400,
-                "name": "Volume XXXIII, Number 2: Fall 2019"
-              },
-              {
-                "id": 3403,
-                "name": "Volume XXXII, Number 1: Spring 2018"
-              },
-              {
-                "id": 3402,
-                "name": "Volume XXXII, Number 2: Fall 2018"
-              },
-              {
-                "id": 3405,
-                "name": "Volume XXXI, Number 1: Spring 2017"
-              },
-              {
-                "id": 3404,
-                "name": "Volume XXXI, Number 2: Fall 2017"
-              },
-              {
-                "id": 3398,
-                "name": "Volume XXXIV, Number 1: Spring 2020"
-              },
-              {
-                "id": 3399,
-                "name": "Volume XXXIV, Number 2: Fall 2020"
-              },
-              {
-                "id": 3407,
-                "name": "Volume XXX, Number 1: Spring 2016"
-              },
-              {
-                "id": 3406,
-                "name": "Volume XXX, Number 2: Fall 2016"
-              }
-            ],
-            "subcommunities": [
 
-            ],
-            "parent_id": 226
-          }
         ],
         "parent_id": 146
       }
@@ -1825,7 +1340,7 @@
   },
   {
     "id": 267,
-    "name": "Princeton University Undergraduate Senior Theses, 1924-2022",
+    "name": "Princeton University Undergraduate Senior Theses, 1924-2020",
     "handle": "88435/dsp019c67wm88m",
     "collections": [
       {
@@ -1834,15 +1349,15 @@
       },
       {
         "id": 2666,
-        "name": "African American Studies, 2020-2022"
+        "name": "African American Studies, 2020"
       },
       {
         "id": 362,
-        "name": "Anthropology, 1961-2022"
+        "name": "Anthropology, 1961-2020"
       },
       {
         "id": 363,
-        "name": "Architecture School, 1968-2022"
+        "name": "Architecture School, 1968-2020"
       },
       {
         "id": 364,
@@ -1850,7 +1365,7 @@
       },
       {
         "id": 365,
-        "name": "Astrophysical Sciences, 1990-2022"
+        "name": "Astrophysical Sciences, 1990-2020"
       },
       {
         "id": 901,
@@ -1862,15 +1377,15 @@
       },
       {
         "id": 367,
-        "name": "Chemical and Biological Engineering, 1931-2022"
+        "name": "Chemical and Biological Engineering, 1931-2019"
       },
       {
         "id": 368,
-        "name": "Chemistry, 1926-2022"
+        "name": "Chemistry, 1926-2020"
       },
       {
         "id": 369,
-        "name": "Civil and Environmental Engineering, 2000-2022"
+        "name": "Civil and Environmental Engineering, 2000-2019"
       },
       {
         "id": 370,
@@ -1878,39 +1393,39 @@
       },
       {
         "id": 371,
-        "name": "Classics, 1934-2022"
+        "name": "Classics, 1934-2019"
       },
       {
         "id": 372,
-        "name": "Comparative Literature, 1975-2022"
+        "name": "Comparative Literature, 1975-2019"
       },
       {
         "id": 373,
-        "name": "Computer Science, 1988-2022"
+        "name": "Computer Science, 1988-2020"
       },
       {
         "id": 374,
-        "name": "Creative Writing Program, 1995-2022"
+        "name": "Creative Writing Program, 1995-2019"
       },
       {
         "id": 375,
-        "name": "East Asian Studies, 1951-2022"
+        "name": "East Asian Studies, 1951-2019"
       },
       {
         "id": 2169,
-        "name": "East Asian Studies Program, 2017-2020"
+        "name": "East Asian Studies Program, 2017"
       },
       {
         "id": 376,
-        "name": "Ecology and Evolutionary Biology, 1992-2022"
+        "name": "Ecology and Evolutionary Biology, 1992-2020"
       },
       {
         "id": 377,
-        "name": "Economics, 1927-2022"
+        "name": "Economics, 1927-2020"
       },
       {
         "id": 378,
-        "name": "Electrical and Computer Engineering, 1932-2022"
+        "name": "Electrical Engineering, 1932-2020"
       },
       {
         "id": 379,
@@ -1918,39 +1433,39 @@
       },
       {
         "id": 380,
-        "name": "English, 1925-2022"
+        "name": "English, 1925-2020"
       },
       {
         "id": 381,
-        "name": "French and Italian, 2002-2022"
+        "name": "French and Italian, 2002-2020"
       },
       {
         "id": 382,
-        "name": "Geosciences, 1929-2022"
+        "name": "Geosciences, 1929-2020"
       },
       {
         "id": 383,
-        "name": "German, 1958-2022"
+        "name": "German, 1958-2020"
       },
       {
         "id": 2167,
-        "name": "Global Health and Health Policy Program, 2017-2022"
+        "name": "Global Health and Health Policy Program, 2017"
       },
       {
         "id": 384,
-        "name": "History, 1926-2022"
+        "name": "History, 1926-2020"
       },
       {
         "id": 385,
-        "name": "Independent Concentration, 1972-2022"
+        "name": "Independent Concentration, 1972-2020"
       },
       {
         "id": 386,
-        "name": "Mathematics, 1934-2022"
+        "name": "Mathematics, 1934-2020"
       },
       {
         "id": 387,
-        "name": "Mechanical and Aerospace Engineering, 1924-2022"
+        "name": "Mechanical and Aerospace Engineering, 1924-2019"
       },
       {
         "id": 388,
@@ -1962,23 +1477,23 @@
       },
       {
         "id": 390,
-        "name": "Molecular Biology, 1954-2022"
+        "name": "Molecular Biology, 1954-2020"
       },
       {
         "id": 391,
-        "name": "Music, 1948-2022"
+        "name": "Music, 1948-2020"
       },
       {
         "id": 392,
-        "name": "Near Eastern Studies, 1969-2022"
+        "name": "Near Eastern Studies, 1969-2020"
       },
       {
         "id": 2126,
-        "name": "Neuroscience, 2017-2022"
+        "name": "Neuroscience, 2017-2020"
       },
       {
         "id": 393,
-        "name": "Operations Research and Financial Engineering, 2000-2022"
+        "name": "Operations Research and Financial Engineering, 2000-2019"
       },
       {
         "id": 394,
@@ -1986,19 +1501,19 @@
       },
       {
         "id": 395,
-        "name": "Philosophy, 1924-2022"
+        "name": "Philosophy, 1924-2020"
       },
       {
         "id": 396,
-        "name": "Physics, 1936-2022"
+        "name": "Physics, 1936-2020"
       },
       {
         "id": 397,
-        "name": "Politics, 1927-2022"
+        "name": "Politics, 1927-2020"
       },
       {
         "id": 407,
-        "name": "Princeton School of Public and International Affairs, 1929-2022"
+        "name": "Princeton School of Public and International Affairs, 1929-2020"
       },
       {
         "id": 2527,
@@ -2010,15 +1525,11 @@
       },
       {
         "id": 398,
-        "name": "Psychology, 1930-2022"
+        "name": "Psychology, 1930-2020"
       },
       {
         "id": 399,
-        "name": "Religion, 1946-2022"
-      },
-      {
-        "id": 3495,
-        "name": "Robotics and Intelligent Systems Program"
+        "name": "Religion, 1946-2019"
       },
       {
         "id": 400,
@@ -2026,19 +1537,15 @@
       },
       {
         "id": 401,
-        "name": "Slavic Languages and Literature, 1962-2022"
+        "name": "Slavic Languages and Literature, 1962-2019"
       },
       {
         "id": 402,
-        "name": "Sociology, 1954-2022"
-      },
-      {
-        "id": 3494,
-        "name": "South Asian Studies Program"
+        "name": "Sociology, 1954-2020"
       },
       {
         "id": 403,
-        "name": "Spanish and Portuguese, 2002-2022"
+        "name": "Spanish and Portuguese, 2002-2020"
       },
       {
         "id": 404,
@@ -2050,19 +1557,7 @@
       },
       {
         "id": 406,
-        "name": "Theater Program, 1940-2022"
-      },
-      {
-        "id": 3498,
-        "name": "Untitled"
-      },
-      {
-        "id": 3496,
-        "name": ""
-      },
-      {
-        "id": 3493,
-        "name": ""
+        "name": "Theater, 1940-2016"
       }
     ],
     "subcommunities": [
@@ -2078,21 +1573,6 @@
       {
         "id": 181,
         "name": "Working Papers"
-      }
-    ],
-    "subcommunities": [
-
-    ],
-    "parent_id": null
-  },
-  {
-    "id": 538,
-    "name": "Sociology",
-    "handle": "88435/dsp01765374417",
-    "collections": [
-      {
-        "id": 3372,
-        "name": "Research Data Sets"
       }
     ],
     "subcommunities": [

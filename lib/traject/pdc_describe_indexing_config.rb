@@ -25,12 +25,19 @@ to_field 'id' do |record, accumulator, _c|
   accumulator.concat [munged_doi]
 end
 
+# to_field 'description_tsim' do |record, accumulator, _c|
+#   byebug
+#   raw_doi = record.xpath("/hash/doi/text()").to_s
+#   munged_doi = "doi-" + raw_doi.tr('/', '-').tr('.', '-')
+#   accumulator.concat [munged_doi]
+# end
+
 # to_field 'abstract_tsim', extract_xpath("/item/metadata/key[text()='dc.description.abstract']/../value")
 # to_field 'abstract_tsim', extract_xpath("/item/metadata/key[text()='dcterms.abstract']/../value")
 # to_field 'creator_tesim', extract_xpath("/item/metadata/key[text()='dcterms.creator']/../value")
 # to_field 'contributor_tsim', extract_xpath("/item/metadata/key[text()='dc.contributor']/../value")
 # to_field 'contributor_tsim', extract_xpath("/item/metadata/key[text()='dcterms.contributor']/../value")
-# to_field 'description_tsim', extract_xpath("/item/metadata/key[text()='dc.description']/../value")
+to_field 'description_tsim', extract_xpath("/hash/description")
 # to_field 'description_tsim', extract_xpath("/item/metadata/key[text()='dcterms.description']/../value")
 # to_field 'handle_ssim', extract_xpath('/item/handle')
 # to_field 'id', extract_xpath('/hash/doi')
@@ -196,15 +203,7 @@ to_field 'title_tesim', extract_xpath('/hash/titles/title')
 #   accumulator.concat DateNormalizer.format_array_for_display(dates)
 # end
 
-# to_field "issue_date_ssim" do |record, accumulator, _context|
-#   issue_dates = record.xpath("/item/metadata/key[text()='dc.date.issued']/../value").map(&:text)
-#   accumulator.concat DateNormalizer.format_array_for_display(issue_dates)
-# end
-
-# to_field "issue_date_ssim" do |record, accumulator, _context|
-#   issue_dates = record.xpath("/item/metadata/key[text()='dcterms.issued']/../value").map(&:text)
-#   accumulator.concat DateNormalizer.format_array_for_display(issue_dates)
-# end
+to_field 'issue_date_ssim', extract_xpath("/hash/publication-year")
 
 # # Date in yyyy-mm-dd format so we can sort by it
 # to_field "issue_date_strict_ssi" do |record, accumulator, _context|
@@ -321,15 +320,8 @@ to_field 'publisher_ssim', extract_xpath("/hash/publisher")
 
 # # ==================
 # # rights fields
-# to_field 'rights_ssim', extract_xpath("/item/metadata/key[text()='dc.rights']/../value")
-# to_field 'rights_ssim', extract_xpath("/item/metadata/key[text()='dcterms.rights']/../value")
-# to_field 'rights_uri_ssim', extract_xpath("/item/metadata/key[text()='dc.rights.uri']/../value")
-# to_field 'rights_holder_ssim', extract_xpath("/item/metadata/key[text()='dc.rights.holder']/../value")
-# to_field 'rights_holder_ssim', extract_xpath("/item/metadata/key[text()='dcterms.rightsHolder']/../value")
-# to_field 'access_rights_ssim', extract_xpath("/item/metadata/key[text()='dc.rights.accessRights']/../value")
-# to_field 'access_rights_ssim', extract_xpath("/item/metadata/key[text()='dcterms.accessRights']/../value")
-# to_field 'license_ssim', extract_xpath("/item/metadata/key[text()='dc.rights.license']/../value")
-# to_field 'license_ssim', extract_xpath("/item/metadata/key[text()='dcterms.license']/../value")
+to_field 'rights_name_ssi', extract_xpath("/hash/rights/name")
+to_field 'rights_uri_ssi', extract_xpath("/hash/rights/uri")
 
 # # ==================
 # # subject fields
@@ -365,8 +357,7 @@ to_field 'publisher_ssim', extract_xpath("/hash/publisher")
 
 # # ==================
 # # genre, provenance, peer review fields
-# to_field 'genre_ssim', extract_xpath("/item/metadata/key[text()='dc.type']/../value")
-# to_field 'genre_ssim', extract_xpath("/item/metadata/key[text()='dcterms.type']/../value")
+to_field 'genre_ssim', extract_xpath("/hash/resource-type")
 # to_field 'provenance_ssim', extract_xpath("/item/metadata/key[text()='dc.provenance']/../value")
 # to_field 'peer_review_status_ssim', extract_xpath("/item/metadata/key[text()='dc.description.version']/../value")
 

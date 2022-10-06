@@ -32,8 +32,29 @@ describe 'PDC Describe research data indexing -- Bitklavier', type: :system do
     expect(result['title_tesim'].first).to eq 'bitKlavier Grand Sample Library—Binaural Mic Image'
   end
 
-  xit 'referenced_by' do
-    expect(result['referenced_by_ssim'].first).to eq 'https://arxiv.org/abs/1903.06605'
+  # ==================
+  # description
+  it 'description' do
+    expect(result['description_tsim'].first).to match(/The bitKlavier Grand consists of sample collections/)
+  end
+
+  # ==================
+  # genre / type 
+  it 'genre / type / resource type' do
+    expect(result['genre_ssim']).to contain_exactly('Dataset')
+  end
+
+  # ==================
+  # issue date - date in search results
+  it 'has an issue date' do
+    expect(result['issue_date_ssim']).to contain_exactly('2021')
+  end
+
+  # ==================
+  # rights / license
+  it 'has a license with a name and a uri' do
+    expect(result['rights_name_ssi']).to contain_exactly('Creative Commons Attribution 4.0 International')
+    expect(result['rights_uri_ssi']).to contain_exactly('https://creativecommons.org/licenses/by/4.0/')
   end
 
   # ==================
