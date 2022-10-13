@@ -25,25 +25,13 @@ to_field 'id' do |record, accumulator, _c|
   accumulator.concat [munged_doi]
 end
 
-# to_field 'description_tsim' do |record, accumulator, _c|
-#   byebug
-#   raw_doi = record.xpath("/hash/doi/text()").to_s
-#   munged_doi = "doi-" + raw_doi.tr('/', '-').tr('.', '-')
-#   accumulator.concat [munged_doi]
-# end
-
-# to_field 'abstract_tsim', extract_xpath("/item/metadata/key[text()='dc.description.abstract']/../value")
 # to_field 'abstract_tsim', extract_xpath("/item/metadata/key[text()='dcterms.abstract']/../value")
 # to_field 'creator_tesim', extract_xpath("/item/metadata/key[text()='dcterms.creator']/../value")
-# to_field 'contributor_tsim', extract_xpath("/item/metadata/key[text()='dc.contributor']/../value")
 # to_field 'contributor_tsim', extract_xpath("/item/metadata/key[text()='dcterms.contributor']/../value")
 to_field 'description_tsim', extract_xpath("/hash/description")
-# to_field 'description_tsim', extract_xpath("/item/metadata/key[text()='dcterms.description']/../value")
 # to_field 'handle_ssim', extract_xpath('/item/handle')
-# to_field 'id', extract_xpath('/hash/doi')
 # to_field 'uri_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.uri']/../value")
 # to_field 'collection_id_ssi', extract_xpath('/item/parentCollection/id')
-# to_field 'handle_ssi', extract_xpath('/item/handle')
 
 # ==================
 # Community and Collections fields
@@ -145,9 +133,7 @@ to_field 'title_tesim', extract_xpath('/hash/titles/title')
 # # coverage fields
 
 # to_field 'spatial_coverage_tesim', extract_xpath("/item/metadata/key[text()='dc.coverage.spatial']/../value")
-# to_field 'spatial_coverage_tesim', extract_xpath("/item/metadata/key[text()='dcterms.spatial']/../value")
 # to_field 'temporal_coverage_tesim', extract_xpath("/item/metadata/key[text()='dc.coverage.temporal']/../value")
-# to_field 'temporal_coverage_tesim', extract_xpath("/item/metadata/key[text()='dcterms.temporal']/../value")
 # to_field 'coverage_tesim', extract_xpath("/item/metadata/key[text()='dcterms.coverage']/../value")
 
 # # ==================
@@ -236,17 +222,14 @@ to_field 'issue_date_ssim', extract_xpath("/hash/publication-year")
 # # description fields
 
 # to_field 'provenance_ssim', extract_xpath("/item/metadata/key[text()='dc.description.provenance']/../value")
-# to_field 'provenance_ssim', extract_xpath("/item/metadata/key[text()='dcterms.provenance']/../value")
 # to_field 'sponsorship_ssim', extract_xpath("/item/metadata/key[text()='dc.description.sponsorship']/../value")
 # to_field 'statementofresponsibility_ssim', extract_xpath("/item/metadata/key[text()='dc.description.statementofresponsibility']/../value")
 # to_field 'tableofcontents_tesim', extract_xpath("/item/metadata/key[text()='dc.description.tableofcontents']/../value")
-# to_field 'tableofcontents_tesim', extract_xpath("/item/metadata/key[text()='dcterms.tableOfContents']/../value")
 # to_field 'description_uri_ssim', extract_xpath("/item/metadata/key[text()='dc.description.uri']/../value")
 
 # # ==================
 # # identifier fields
 
-# to_field 'other_identifier_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier']/../value")
 # to_field 'other_identifier_ssim', extract_xpath("/item/metadata/key[text()='dcterms.identifier']/../value")
 # to_field 'citation_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.citation']/../value")
 # to_field 'govdoc_id_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.govdoc']/../value")
