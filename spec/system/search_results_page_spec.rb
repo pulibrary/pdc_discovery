@@ -7,6 +7,7 @@ describe 'Search Results Page', type: :system, js: true do
     data = file_fixture('search_results_items.xml').read
     indexer = DspaceIndexer.new(data)
     indexer.index
+    page.driver.browser.manage.window.resize_to(2000, 2000)
   end
 
   it "renders expected fields" do
@@ -78,6 +79,7 @@ describe 'Search Results Page', type: :system, js: true do
     end
 
     it "shows collection facet for Music and Arts" do
+      byebug
       visit '/?f%5Bcommunity_root_name_ssi%5D%5B%5D=Music+and+Arts'
       collection_facet_html = '<div class="card facet-limit blacklight-collection_name_ssi ">'
       expect(page.html.include?(collection_facet_html)).to be true

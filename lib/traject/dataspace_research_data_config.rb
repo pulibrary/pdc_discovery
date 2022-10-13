@@ -55,6 +55,7 @@ to_field 'subcommunity_name_ssi' do |record, accumulator, _c|
 end
 
 to_field 'community_root_name_ssi' do |record, accumulator, _c|
+  byebug
   community_id = record.xpath("/item/parentCommunityList/id").map(&:text).map(&:to_i).sort.last
   root_name = settings["dataspace_communities"].find_root_name(community_id)
   accumulator.concat [root_name]
