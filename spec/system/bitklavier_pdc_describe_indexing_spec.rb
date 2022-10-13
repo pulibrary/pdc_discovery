@@ -39,7 +39,7 @@ describe 'PDC Describe research data indexing -- Bitklavier', type: :system do
   end
 
   # ==================
-  # genre / type 
+  # genre / type
   it 'genre / type / resource type' do
     expect(result['genre_ssim']).to contain_exactly('Dataset')
   end
