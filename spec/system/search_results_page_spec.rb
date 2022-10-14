@@ -7,6 +7,7 @@ describe 'Search Results Page', type: :system, js: true do
     data = file_fixture('search_results_items.xml').read
     indexer = DspaceIndexer.new(data)
     indexer.index
+    page.driver.browser.manage.window.resize_to(2000, 2000)
   end
 
   it "renders expected fields" do

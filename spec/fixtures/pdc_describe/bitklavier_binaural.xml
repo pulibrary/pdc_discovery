@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hash>
+  <titles type="array">
+    <title>
+      <title>bitKlavier Grand Sample Library—Binaural Mic Image</title>
+      <title-type nil="true"/>
+    </title>
+  </titles>
+  <description>The bitKlavier Grand consists of sample collections of a new Steinway D grand piano from nine different stereo mic images, with: 16 velocity layers, at every minor 3rd (starting at A0); Hammer release samples; Release resonance samples; Pedal samples. Release packages at 96k/24bit, 88.2k/24bit, 48k/24bit, 44.1k/16bit are available for various applications.
+  Piano Bar: Earthworks—omni-directionals. This microphone system suspends omnidirectional microphones within the piano. The bar is placed across the harp near the hammers and provides a low string / high string player’s perspective. It also produces a close sound without room or lid interactions. It can be panned across an artificial stereophonic perspective effectively in post-production. File Naming Convention: C4 = middle C. Main note names: [note name][octave]v[velocity].wav -- e.g., “D#5v13.wav”. Release resonance notes: harm[note name][octave]v[velocity].wav -- e.g., “harmC2v2.wav”. Hammer samples: rel[1-88].wav (one per key) -- e.g., “rel23.wav”. Pedal samples: pedal[D/U][velocity].wav -- e.g., “pedalU2.wav” =&gt; pedal release (U = up), velocity = 2 (quicker release than velocity = 1).
+  This dataset is too large to download directly from this item page. You can access and download the data via Globus (See https://www.youtube.com/watch?v=uf2c7Y1fiFs for instructions on how to use Globus).</description>
+  <collection-tags type="array">
+    <collection-tag>Music and Arts</collection-tag>
+  </collection-tags>
+  <creators type="array">
+    <creator>
+      <value>Trueman, Daniel</value>
+      <name-type>Personal</name-type>
+      <given-name>Daniel</given-name>
+      <family-name>Trueman</family-name>
+      <identifier nil="true"/>
+      <affiliations type="array"/>
+      <sequence type="integer">1</sequence>
+    </creator>
+    <creator>
+      <value>Wang, Matthew</value>
+      <name-type>Personal</name-type>
+      <given-name>Matthew</given-name>
+      <family-name>Wang</family-name>
+      <identifier nil="true"/>
+      <affiliations type="array"/>
+      <sequence type="integer">2</sequence>
+    </creator>
+    <creator>
+      <value>Villalta, Andrés</value>
+      <name-type>Personal</name-type>
+      <given-name>Andrés</given-name>
+      <family-name>Villalta</family-name>
+      <identifier nil="true"/>
+      <affiliations type="array"/>
+      <sequence type="integer">3</sequence>
+    </creator>
+    <creator>
+      <value>Chou, Katie</value>
+      <name-type>Personal</name-type>
+      <given-name>Katie</given-name>
+      <family-name>Chou</family-name>
+      <identifier nil="true"/>
+      <affiliations type="array"/>
+      <sequence type="integer">4</sequence>
+    </creator>
+    <creator>
+      <value>Ayres, Christien</value>
+      <name-type>Personal</name-type>
+      <given-name>Christien</given-name>
+      <family-name>Ayres</family-name>
+      <identifier nil="true"/>
+      <affiliations type="array"/>
+      <sequence type="integer">5</sequence>
+    </creator>
+  </creators>
+  <resource-type>Dataset</resource-type>
+  <resource-type-general>DATASET</resource-type-general>
+  <publisher>Princeton University</publisher>
+  <publication-year>2021</publication-year>
+  <ark>ark:/88435/dsp015999n653h</ark>
+  <doi>10.34770/r75s-9j74</doi>
+  <rights>
+    <identifier>CC BY</identifier>
+    <uri>https://creativecommons.org/licenses/by/4.0/</uri>
+    <name>Creative Commons Attribution 4.0 International</name>
+  </rights>
+  <version-number>1</version-number>
+  <keywords type="array">
+    <keyword>Music</keyword>
+    <keyword> Humanities</keyword>
+  </keywords>
+</hash>
