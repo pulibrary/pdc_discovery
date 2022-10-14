@@ -28,10 +28,12 @@ namespace :index do
 
   desc 'Remove all indexed Documents from Solr'
   task delete: :environment do
-    raise("Deleting indices in Solr is unsupported for the environment #{Rails.env}") if Rails.env.production?
-
-    Blacklight.default_index.connection.delete_by_query('*:*')
-    Blacklight.default_index.connection.commit
+    if Rails.env.production?
+      Rails.logger.warn("Deleting indices in Solr is unsupported for the environment #{Rails.env}")
+    else
+      Blacklight.default_index.connection.delete_by_query('*:*')
+      Blacklight.default_index.connection.commit
+    end
   end
 
   desc 'Fetches the most recent community information from DataSpace and saves it to a file.'
