@@ -17,7 +17,7 @@ Rake::Task["deploy:assets:restore_manifest"].clear_actions
 namespace :pdc_discovery do
   desc "Reindex research data"
   task :reindex do
-    on roles(:web) do
+    on roles(:reindex) do
       within release_path do
         execute("cd #{release_path} && bundle exec rake index:research_data")
       end
