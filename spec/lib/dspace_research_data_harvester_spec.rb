@@ -48,7 +48,7 @@ RSpec.describe DspaceResearchDataHarvester do
       rdh.harvest(rdc)
 
       response = Blacklight.default_index.connection.get 'select', params: { q: '*:*' }
-      expect(response["response"]["numFound"]).to eq 33
+      expect(response["response"]["numFound"]).to eq 32
     end
   end
 end
