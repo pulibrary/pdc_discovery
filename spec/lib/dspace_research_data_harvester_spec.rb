@@ -4,11 +4,11 @@ RSpec.describe DspaceResearchDataHarvester do
   let(:rdh) { described_class.new }
 
   it "has a list of collections to index" do
-    expect(rdh.collections_to_index.count).to eq 32
+    expect(rdh.collections_to_index.count).to eq 33
   end
 
   it "has a convenience method for indexing all collections" do
-    expect_any_instance_of(described_class).to receive(:harvest).exactly(32).times
+    expect_any_instance_of(described_class).to receive(:harvest).exactly(33).times
     described_class.harvest(true)
   end
 
@@ -48,7 +48,7 @@ RSpec.describe DspaceResearchDataHarvester do
       rdh.harvest(rdc)
 
       response = Blacklight.default_index.connection.get 'select', params: { q: '*:*' }
-      expect(response["response"]["numFound"]).to eq 32
+      expect(response["response"]["numFound"]).to eq 33
     end
   end
 end
