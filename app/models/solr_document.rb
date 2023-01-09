@@ -280,7 +280,7 @@ class SolrDocument
   def rights_name_and_uri
     name = fetch("rights_name_ssi", nil)
     uri = fetch("rights_uri_ssi", nil)
-    return nil if name.nil? or uri.nil?
+    return nil if name.nil? || uri.nil?
     { name: name, uri: uri }
   end
 
