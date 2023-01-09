@@ -37,7 +37,6 @@ to_field 'uri_ssim' do |record, accumulator, _c|
   accumulator.concat [doi, ark].compact
 end
 
-extract_xpath("/item/metadata/key[text()='dc.identifier.uri']/../value")
 # to_field 'collection_id_ssi', extract_xpath('/item/parentCollection/id')
 
 # ==================
