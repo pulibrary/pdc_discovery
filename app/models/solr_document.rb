@@ -275,6 +275,15 @@ class SolrDocument
     fetch("rights_uri_ssim", [])
   end
 
+  # For PDC Describe records we have a single value for the name and the uri
+  # and we can safely assume they are related.
+  def rights_name_and_uri
+    name = fetch("rights_name_ssi", nil)
+    uri = fetch("rights_uri_ssi", nil)
+    return nil if name.nil? || uri.nil?
+    { name: name, uri: uri }
+  end
+
   def rights_holder
     fetch("rights_holder_ssim", [])
   end

@@ -99,12 +99,21 @@
             <% @document.relation_uri.each do |relation_uri| %>
               <%= render_field_row "Relation URI", relation_uri %>
             <% end %>
-            <% @document.rights.each do |rights| %>
-              <%= render_field_row "Rights", rights %>
+
+            <% if @document.rights_name_and_uri.present? %>
+              <!-- PDC Describe records have a single rights (name + uri) -->
+              <%= render_field_row "Rights", @document.rights_name_and_uri[:name] %>
+              <%= render_field_row_link "Rights URI", @document.rights_name_and_uri[:uri] %>
+            <% else %>
+              <!-- DSpace records have two unrelated fields -->
+              <% @document.rights.each do |rights| %>
+                <%= render_field_row "Rights", rights %>
+              <% end %>
+              <% @document.rights_uri.each do |rights_uri| %>
+                <%= render_field_row "Rights URI", rights_uri %>
+              <% end %>
             <% end %>
-            <% @document.rights_uri.each do |rights_uri| %>
-              <%= render_field_row "Rights URI", rights_uri %>
-            <% end %>
+
             <% @document.rights_holder.each do |rights_holder| %>
               <%= render_field_row "Rights Holder", rights_holder %>
             <% end %>
