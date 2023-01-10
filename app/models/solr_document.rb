@@ -89,6 +89,10 @@ class SolrDocument
     fetch("collection_name_ssi", "")
   end
 
+  def collection_tags
+    fetch("collection_tag_ssim", [])
+  end
+
   def contributors
     fetch("contributor_tsim", [])
   end
