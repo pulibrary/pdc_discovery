@@ -44,19 +44,19 @@ end
 
 # ==================
 # Community and Collections fields
-to_field 'community_name_ssi' do |record, accumulator, _c|
+to_field 'community_name_ssi' do |_record, accumulator, _c|
   # TODO: pick the correct field from the PDC Describe source once it is available
   # see https://github.com/pulibrary/pdc_describe/issues/841
   accumulator.concat ["Research Data"]
 end
 
-to_field 'community_root_name_ssi' do |record, accumulator, _c|
+to_field 'community_root_name_ssi' do |_record, accumulator, _c|
   # TODO: pick the correct field from the PDC Describe source once it is available
   # see https://github.com/pulibrary/pdc_describe/issues/841
   accumulator.concat ["Research Data"]
 end
 
-to_field 'community_path_name_ssi' do |record, accumulator, _c|
+to_field 'community_path_name_ssi' do |_record, accumulator, _c|
   # TODO: pick the correct field from the PDC Describe source once it is available
   # see https://github.com/pulibrary/pdc_describe/issues/841
   accumulator.concat ["Research Data"]
@@ -91,18 +91,18 @@ end
 # ==================
 # title fields
 to_field 'title_tesim' do |record, accumulator, _c|
-  titles = record.xpath('/hash/titles/title').map { |title| title.xpath("./title").text() }
+  titles = record.xpath('/hash/titles/title').map { |title| title.xpath("./title").text }
   accumulator.concat titles
 end
 
 to_field 'title_si' do |record, accumulator, _c|
-  main_title = record.xpath('/hash/titles/title').find { |title| title.xpath("./title-type").text() == "" }
-  accumulator.concat [main_title.xpath("./title").text()] unless main_title.nil?
+  main_title = record.xpath('/hash/titles/title').find { |title| title.xpath("./title-type").text == "" }
+  accumulator.concat [main_title.xpath("./title").text] unless main_title.nil?
 end
 
 to_field 'alternative_title_tesim' do |record, accumulator, _c|
-  alternative_titles = record.xpath('/hash/titles/title').select { |title| title.xpath("./title-type").text() != "" }
-  accumulator.concat alternative_titles.map {|title| title.xpath("./title").text() }
+  alternative_titles = record.xpath('/hash/titles/title').select { |title| title.xpath("./title-type").text != "" }
+  accumulator.concat alternative_titles.map { |title| title.xpath("./title").text }
 end
 
 # # ==================
