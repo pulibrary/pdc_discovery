@@ -39,6 +39,12 @@ class DescribeIndexer
     end
   end
 
+  def index_one(json)
+    xml = JSON.parse(json).to_xml
+    traject_indexer.process(xml)
+    traject_indexer.complete
+  end
+
 private
 
   ##

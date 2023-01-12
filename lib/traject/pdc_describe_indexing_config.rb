@@ -28,7 +28,10 @@ end
 
 # to_field 'abstract_tsim', extract_xpath("/item/metadata/key[text()='dcterms.abstract']/../value")
 # to_field 'creator_tesim', extract_xpath("/item/metadata/key[text()='dcterms.creator']/../value")
-# to_field 'contributor_tsim', extract_xpath("/item/metadata/key[text()='dcterms.contributor']/../value")
+to_field 'contributor_tsim' do |record, accumulator, _c|
+  contributor_names = record.xpath("/hash/contributors/contributor/value").map(&:text)
+  accumulator.concat contributor_names
+end
 to_field 'description_tsim', extract_xpath("/hash/description")
 # to_field 'handle_ssim', extract_xpath('/item/handle')
 to_field 'uri_ssim' do |record, accumulator, _c|
@@ -41,77 +44,66 @@ end
 
 # ==================
 # Community and Collections fields
-# Communities can be nested. We gather the community name, the name of the "root" community for the community,
-# and the full path (including nested communities) to the community.
+to_field 'community_name_ssi' do |_record, accumulator, _c|
+  # TODO: pick the correct field from the PDC Describe source once it is available
+  # see https://github.com/pulibrary/pdc_describe/issues/841
+  accumulator.concat ["Research Data"]
+end
 
-# to_field 'community_name_ssi' do |record, accumulator, _c|
-#   # We are assuming the largest ID represents the parent community in the tree hierarchy
-#   # (i.e. grandparent nodes were created first and have smaller IDs)
-#   community_id = record.xpath("/item/parentCommunityList/id").map(&:text).map(&:to_i).sort.last
-#   community = settings["dataspace_communities"].find_by_id(community_id)
-#   accumulator.concat [community&.name]
-# end
+to_field 'community_root_name_ssi' do |_record, accumulator, _c|
+  # TODO: pick the correct field from the PDC Describe source once it is available
+  # see https://github.com/pulibrary/pdc_describe/issues/841
+  accumulator.concat ["Research Data"]
+end
 
-# to_field 'subcommunity_name_ssi' do |record, accumulator, _c|
-#   byebug
-#   community_id = record.xpath("/item/parentCommunityList/id").map(&:text).map(&:to_i).sort.last
-#   community = settings["dataspace_communities"].find_by_id(community_id)
-#   if community.parent_id
-#     # We only populate this value for subcommunities
-#     accumulator.concat [community.name]
-#   end
-# end
+to_field 'community_path_name_ssi' do |_record, accumulator, _c|
+  # TODO: pick the correct field from the PDC Describe source once it is available
+  # see https://github.com/pulibrary/pdc_describe/issues/841
+  accumulator.concat ["Research Data"]
+end
 
-# to_field 'community_root_name_ssi' do |record, accumulator, _c|
-#   community_id = record.xpath("/item/parentCommunityList/id").map(&:text).map(&:to_i).sort.last
-#   root_name = settings["dataspace_communities"].find_root_name(community_id)
-#   accumulator.concat [root_name]
-# end
-
-# to_field 'community_path_name_ssi' do |record, accumulator, _c|
-#   community_id = record.xpath("/item/parentCommunityList/id").map(&:text).map(&:to_i).sort.last
-#   path_name = settings["dataspace_communities"].find_path_name(community_id).join("|")
-#   accumulator.concat [path_name]
-# end
-
-# to_field 'collection_name_ssi' do |record, accumulator, _c|
-#   collection_name = record.xpath("/item/parentCollection/name").map(&:text).first
-#   accumulator.concat [collection_name]
-# end
+to_field 'collection_tag_ssim' do |record, accumulator, _c|
+  collection_tags = record.xpath("/hash/collection-tags/collection-tag").map(&:text)
+  accumulator.concat collection_tags
+end
 
 # ==================
 # author fields
 
 to_field 'author_tesim' do |record, accumulator, _c|
-  author_name = record.xpath("/hash/creators/creator/value").map(&:text)
-  accumulator.concat author_name
+  author_names = record.xpath("/hash/creators/creator/value").map(&:text)
+  accumulator.concat author_names
 end
 
-# # single value is used for sorting
-# to_field 'author_si' do |record, accumulator, _c|
-#   values = record.xpath("/item/metadata/key[text()='dc.contributor.author']/../value").map(&:text)
-#   accumulator.concat [values.uniq.sort.first]
-# end
+# single value is used for sorting
+to_field 'author_si' do |record, accumulator, _c|
+  author_names = record.xpath("/hash/creators/creator/value").map(&:text)
+  accumulator.concat [author_names.uniq.sort.first]
+end
 
-# # all values as strings for faceting
-# to_field 'author_ssim' do |record, accumulator, _c|
-#   values = record.xpath("/item/metadata/key[text()='dc.contributor.author']/../value").map(&:text)
-#   accumulator.concat values.uniq
-# end
+# all values as strings for faceting
+# TODO: Should we include contributors here since the value is for faceting?
+to_field 'author_ssim' do |record, accumulator, _c|
+  author_names = record.xpath("/hash/creators/creator/value").map(&:text)
+  accumulator.concat author_names
+end
 
 # ==================
 # title fields
-to_field 'title_tesim', extract_xpath('/hash/titles/title')
+to_field 'title_tesim' do |record, accumulator, _c|
+  titles = record.xpath('/hash/titles/title').map { |title| title.xpath("./title").text }
+  accumulator.concat titles
+end
 
-# to_field 'title_si' do |record, accumulator, _c|
-#   values = []
-#   values += record.xpath('/item/name').map(&:text)
-#   values += record.xpath("/item/metadata/key[text()='dcterms.title']/../value").map(&:text)
-#   accumulator.concat [values.uniq.first]
-# end
+to_field 'title_si' do |record, accumulator, _c|
+  main_title = record.xpath('/hash/titles/title').find { |title| title.xpath("./title-type").text == "" }
+  accumulator.concat [main_title.xpath("./title").text] unless main_title.nil?
+end
 
-# to_field 'alternative_title_tesim', extract_xpath("/item/metadata/key[text()='dc.title.alternative']/../value")
-# to_field 'alternative_title_tesim', extract_xpath("/item/metadata/key[text()='dcterms.alternative']/../value")
+to_field 'alternative_title_tesim' do |record, accumulator, _c|
+  alternative_titles = record.xpath('/hash/titles/title').select { |title| title.xpath("./title-type").text != "" }
+  accumulator.concat alternative_titles.map { |title| title.xpath("./title").text }
+end
 
 # # ==================
 # # Calculate domain from the communities
@@ -323,26 +315,12 @@ to_field 'rights_uri_ssi', extract_xpath("/hash/rights/uri")
 # to_field 'subject_mesh_tesim', extract_xpath("/item/metadata/key[text()='dc.subject.mesh']/../value")
 # to_field 'subject_other_tesim', extract_xpath("/item/metadata/key[text()='dc.subject.other']/../value")
 
-# # subject_all_ssim is used for faceting (must be string)
-# # subject_all_tesim is used for searching (use text english)
-# to_field ['subject_all_ssim', 'subject_all_tesim'] do |record, accumulator, _context|
-#   xpaths = []
-#   xpaths << "/item/metadata/key[text()='dc.subject']/../value"
-#   xpaths << "/item/metadata/key[text()='dcterms.subject']/../value"
-#   xpaths << "/item/metadata/key[text()='dc.subject.classification']/../value"
-#   xpaths << "/item/metadata/key[text()='dc.subject.ddc']/../value"
-#   xpaths << "/item/metadata/key[text()='dc.subject.lcc']/../value"
-#   xpaths << "/item/metadata/key[text()='dc.subject.lcsh']/../value"
-#   xpaths << "/item/metadata/key[text()='dc.subject.mesh']/../value"
-#   xpaths << "/item/metadata/key[text()='dc.subject.other']/../value"
-
-#   values = []
-#   xpaths.each do |xpath|
-#     values += record.xpath(xpath).map(&:text)
-#   end
-
-#   accumulator.concat values.uniq
-# end
+# subject_all_ssim is used for faceting (must be string)
+# subject_all_tesim is used for searching (use text english)
+to_field ['subject_all_ssim', 'subject_all_tesim'] do |record, accumulator, _context|
+  keywords = record.xpath("/hash/keywords/keyword").map(&:text)
+  accumulator.concat keywords
+end
 
 # # ==================
 # # genre, provenance, peer review fields
