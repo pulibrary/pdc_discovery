@@ -40,27 +40,11 @@ to_field 'uri_ssim' do |record, accumulator, _c|
   accumulator.concat [doi, ark].compact
 end
 
-# to_field 'collection_id_ssi', extract_xpath('/item/parentCollection/id')
-
 # ==================
 # Community and Collections fields
-to_field 'community_name_ssi' do |_record, accumulator, _c|
-  # TODO: pick the correct field from the PDC Describe source once it is available
-  # see https://github.com/pulibrary/pdc_describe/issues/841
-  accumulator.concat ["Research Data"]
-end
-
-to_field 'community_root_name_ssi' do |_record, accumulator, _c|
-  # TODO: pick the correct field from the PDC Describe source once it is available
-  # see https://github.com/pulibrary/pdc_describe/issues/841
-  accumulator.concat ["Research Data"]
-end
-
-to_field 'community_path_name_ssi' do |_record, accumulator, _c|
-  # TODO: pick the correct field from the PDC Describe source once it is available
-  # see https://github.com/pulibrary/pdc_describe/issues/841
-  accumulator.concat ["Research Data"]
-end
+to_field 'community_name_ssi', extract_xpath("/hash/collection/title")
+to_field 'community_root_name_ssi', extract_xpath("/hash/collection/title")
+to_field 'community_path_name_ssi', extract_xpath("/hash/collection/title")
 
 to_field 'collection_tag_ssim' do |record, accumulator, _c|
   collection_tags = record.xpath("/hash/resource/collection-tags/collection-tag").map(&:text)
