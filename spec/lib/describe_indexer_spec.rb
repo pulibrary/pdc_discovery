@@ -15,6 +15,13 @@ RSpec.describe DescribeIndexer do
     end
 
     context "basic fields" do
+      ##
+      # The id is based on the DOI
+      # A doi of 10.34770/r75s-9j74 will become doi-10-34770-r75s-9j74
+      it "id" do
+        expect(indexed_record["id"]).to eq "doi-10-34770-r75s-9j74"
+      end
+
       it "author" do
         expect(indexed_record["author_tesim"]).to eq ['Trueman, Daniel']
       end
@@ -73,12 +80,26 @@ RSpec.describe DescribeIndexer do
       it "publisher_ssim" do
         expect(indexed_record["publisher_ssim"].first).to eq "Princeton University"
       end
+
+      xit 'referenced_by' do
+        expect(result['referenced_by_ssim'].first).to eq 'https://arxiv.org/abs/1903.06605'
+      end
     end
 
     context "uris" do
       it "stores full URL for ARK and DOI" do
         expect(indexed_record["uri_ssim"].include?("http://arks.princeton.edu/ark:/88435/dsp015999n653h")).to eq true
         expect(indexed_record["uri_ssim"].include?("https://doi.org/10.34770/r75s-9j74")).to eq true
+      end
+    end
+
+    context "files" do
+      # TODO: Index filenames for PDC Describe objects
+      xit 'files' do
+        # The fixture has three files but we expect two of them to be ignored
+        files = JSON.parse(result['files_ss'].first)
+        expect(files.count).to eq 1
+        expect(files.first["name"]).to eq 'Lee_princeton_0181D_10086.pdf'
       end
     end
   end
