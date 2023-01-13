@@ -21,7 +21,7 @@ end
 # Main fields
 
 to_field 'id' do |record, accumulator, _c|
-  raw_doi = record.xpath("/hash/doi/text()").to_s
+  raw_doi = record.xpath("/hash/resource/doi/text()").to_s
   munged_doi = "doi-" + raw_doi.tr('/', '-').tr('.', '-')
   accumulator.concat [munged_doi]
 end
@@ -29,14 +29,14 @@ end
 # to_field 'abstract_tsim', extract_xpath("/item/metadata/key[text()='dcterms.abstract']/../value")
 # to_field 'creator_tesim', extract_xpath("/item/metadata/key[text()='dcterms.creator']/../value")
 to_field 'contributor_tsim' do |record, accumulator, _c|
-  contributor_names = record.xpath("/hash/contributors/contributor/value").map(&:text)
+  contributor_names = record.xpath("/hash/resource/contributors/contributor/value").map(&:text)
   accumulator.concat contributor_names
 end
-to_field 'description_tsim', extract_xpath("/hash/description")
+to_field 'description_tsim', extract_xpath("/hash/resource/description")
 # to_field 'handle_ssim', extract_xpath('/item/handle')
 to_field 'uri_ssim' do |record, accumulator, _c|
-  doi = ImportHelper.doi_uri(record.xpath("/hash/doi").text)
-  ark = ImportHelper.ark_uri(record.xpath("/hash/ark").text)
+  doi = ImportHelper.doi_uri(record.xpath("/hash/resource/doi").text)
+  ark = ImportHelper.ark_uri(record.xpath("/hash/resource/ark").text)
   accumulator.concat [doi, ark].compact
 end
 
@@ -63,7 +63,7 @@ to_field 'community_path_name_ssi' do |_record, accumulator, _c|
 end
 
 to_field 'collection_tag_ssim' do |record, accumulator, _c|
-  collection_tags = record.xpath("/hash/collection-tags/collection-tag").map(&:text)
+  collection_tags = record.xpath("/hash/resource/collection-tags/collection-tag").map(&:text)
   accumulator.concat collection_tags
 end
 
@@ -71,37 +71,37 @@ end
 # author fields
 
 to_field 'author_tesim' do |record, accumulator, _c|
-  author_names = record.xpath("/hash/creators/creator/value").map(&:text)
+  author_names = record.xpath("/hash/resource/creators/creator/value").map(&:text)
   accumulator.concat author_names
 end
 
 # single value is used for sorting
 to_field 'author_si' do |record, accumulator, _c|
-  author_names = record.xpath("/hash/creators/creator/value").map(&:text)
+  author_names = record.xpath("/hash/resource/creators/creator/value").map(&:text)
   accumulator.concat [author_names.uniq.sort.first]
 end
 
 # all values as strings for faceting
 # TODO: Should we include contributors here since the value is for faceting?
 to_field 'author_ssim' do |record, accumulator, _c|
-  author_names = record.xpath("/hash/creators/creator/value").map(&:text)
+  author_names = record.xpath("/hash/resource/creators/creator/value").map(&:text)
   accumulator.concat author_names
 end
 
 # ==================
 # title fields
 to_field 'title_tesim' do |record, accumulator, _c|
-  titles = record.xpath('/hash/titles/title').map { |title| title.xpath("./title").text }
+  titles = record.xpath('/hash/resource/titles/title').map { |title| title.xpath("./title").text }
   accumulator.concat titles
 end
 
 to_field 'title_si' do |record, accumulator, _c|
-  main_title = record.xpath('/hash/titles/title').find { |title| title.xpath("./title-type").text == "" }
+  main_title = record.xpath('/hash/resource/titles/title').find { |title| title.xpath("./title-type").text == "" }
   accumulator.concat [main_title.xpath("./title").text] unless main_title.nil?
 end
 
 to_field 'alternative_title_tesim' do |record, accumulator, _c|
-  alternative_titles = record.xpath('/hash/titles/title').select { |title| title.xpath("./title-type").text != "" }
+  alternative_titles = record.xpath('/hash/resource/titles/title').select { |title| title.xpath("./title-type").text != "" }
   accumulator.concat alternative_titles.map { |title| title.xpath("./title").text }
 end
 
@@ -187,7 +187,7 @@ end
 #   accumulator.concat DateNormalizer.format_array_for_display(dates)
 # end
 
-to_field 'issue_date_ssim', extract_xpath("/hash/publication-year")
+to_field 'issue_date_ssim', extract_xpath("/hash/resource/publication-year")
 
 # # Date in yyyy-mm-dd format so we can sort by it
 # to_field "issue_date_strict_ssi" do |record, accumulator, _context|
@@ -267,7 +267,7 @@ to_field 'issue_date_ssim', extract_xpath("/hash/publication-year")
 
 # ==================
 # publisher fields
-to_field 'publisher_ssim', extract_xpath("/hash/publisher")
+to_field 'publisher_ssim', extract_xpath("/hash/resource/publisher")
 # to_field 'publisher_place_ssim', extract_xpath("/item/metadata/key[text()='dc.publisher.place']/../value")
 # to_field 'publisher_corporate_ssim', extract_xpath("/item/metadata/key[text()='dc.publisher.corporate']/../value")
 
@@ -301,8 +301,8 @@ to_field 'publisher_ssim', extract_xpath("/hash/publisher")
 
 # # ==================
 # # rights fields
-to_field 'rights_name_ssi', extract_xpath("/hash/rights/name")
-to_field 'rights_uri_ssi', extract_xpath("/hash/rights/uri")
+to_field 'rights_name_ssi', extract_xpath("/hash/resource/rights/name")
+to_field 'rights_uri_ssi', extract_xpath("/hash/resource/rights/uri")
 
 # # ==================
 # # subject fields
@@ -318,13 +318,13 @@ to_field 'rights_uri_ssi', extract_xpath("/hash/rights/uri")
 # subject_all_ssim is used for faceting (must be string)
 # subject_all_tesim is used for searching (use text english)
 to_field ['subject_all_ssim', 'subject_all_tesim'] do |record, accumulator, _context|
-  keywords = record.xpath("/hash/keywords/keyword").map(&:text)
+  keywords = record.xpath("/hash/resource/keywords/keyword").map(&:text)
   accumulator.concat keywords
 end
 
 # # ==================
 # # genre, provenance, peer review fields
-to_field 'genre_ssim', extract_xpath("/hash/resource-type")
+to_field 'genre_ssim', extract_xpath("/hash/resource/resource-type")
 # to_field 'provenance_ssim', extract_xpath("/item/metadata/key[text()='dc.provenance']/../value")
 # to_field 'peer_review_status_ssim', extract_xpath("/item/metadata/key[text()='dc.description.version']/../value")
 
