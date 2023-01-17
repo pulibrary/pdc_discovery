@@ -10,7 +10,7 @@ A discovery portal for Princeton research data. Initially it will provide a bett
 * Ruby: 3.0.3
 * nodejs: 12.18.3
 * yarn: 1.22.10
-* postgres: `brew install postgres; brew services start postgresql`
+* postgres: `brew install postgresql@14; brew services start postgresql@14`
 * [Lando](https://github.com/lando/lando/releases): 3.0.0
 
 ## Updating the banner
@@ -45,7 +45,7 @@ We utilize Rubocop for our Ryby code and Prettier for our JavaScript
    1. To allow for autocorrecting of errors run `bundle exec rubocop -a`
 1. To run prettier via yar lint run `yarn lint`
    1. To run prettier by itself to see more details on errors run `yarn prettier app/javascript`
-   1. To run prettier to autocorrect errors run `yarn prettier --write app/javascript`  
+   1. To run prettier to autocorrect errors run `yarn prettier --write app/javascript`
 
 ### Starting the development server
 
@@ -81,7 +81,7 @@ To make changes to the Solr in production/staging you need to update the files i
 1. Deploy the changes, e.g. `BRANCH=<branch-name> bundle exec cap solr8-staging deploy`.
 1. verify your changes have worked and mark your PR ready for review
 1. Once the PR has been merged cordiante a time to deploy the changes to production `bundle exec cap solr8-production deploy`
-  
+
 
 You can see the list of Capistrano environments [here](https://github.com/pulibrary/pul_solr/tree/main/config/deploy)
 
