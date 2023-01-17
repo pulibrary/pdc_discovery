@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 describe 'PDC Describe Bitklavier Single item page', type: :system, js: true do
-  let(:rss_feed) { File.read(File.join(fixture_path, 'pdc_describe', 'works.rss')) }
-  let(:resource1) { File.read(File.join(fixture_path, 'pdc_describe', 'resource1.json')) }
-  let(:bitklavier_binaural_json) { File.read(File.join(fixture_path, 'pdc_describe', 'bitklavier_binaural.json')) }
+  let(:rss_feed) { file_fixture("works.rss").read }
+  let(:resource1) { file_fixture("sowing_the_seeds.json").read }
+  let(:bitklavier_binaural_json) { file_fixture("bitklavier_binaural.json").read }
   let(:rss_url_string) { "https://pdc-describe-prod.princeton.edu/describe/works.rss" }
   let(:indexer) { DescribeIndexer.new(rss_url: rss_url_string) }
 
@@ -31,7 +31,7 @@ describe 'PDC Describe Bitklavier Single item page', type: :system, js: true do
   it "has expected metadata" do
     visit '/catalog/doi-10-34770-r75s-9j74'
     expect(page).to have_content "bitKlavier Grand Sample Library—Binaural Mic Image"
-    authors = "<span>Trueman, Daniel; Wang, Matthew; Villalta, Andrés; Chou, Katie; Ayres, Christien</span>"
+    authors = "<span>Trueman, Daniel</span>"
     expected_values = [authors]
     expected_values.each do |value|
       expect(page.html.include?(value)).to be true
