@@ -13,4 +13,13 @@ class ImportHelper
   def self.ark_uri(value)
     uri_with_prefix("http://arks.princeton.edu", value)
   end
+
+  # Returns true if a record already exists in Solr with this ARK as one of the URIs
+  # and that record was imported from PDC Describe.
+  def self.pdc_describe_match_found?(ark_uri)
+    return false if ark_uri.nil?
+    solr_query = "#{Blacklight.default_index.connection.uri}select?q=uri_ssim:#{ark_uri}+AND+data_source_ssi:pdc_describe"
+    solr_response = JSON.parse(URI.open(solr_query).read)
+    solr_response["response"]["numFound"] != 0
+  end
 end
