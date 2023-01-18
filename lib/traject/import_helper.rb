@@ -18,11 +18,8 @@ class ImportHelper
   # and that record was imported from PDC Describe.
   def self.pdc_describe_match_found?(ark_uri)
     return false if ark_uri.nil?
-    puts "==HECTOR-WAS-HERE=="
-    puts "base: #{Blacklight.default_index.connection.uri}"
     solr_query = "#{Blacklight.default_index.connection.uri}select?q=data_source_ssi:pdc_describe+AND+uri_ssim:#{ark_uri}"
-    puts "query: #{solr_query}"
-    solr_response = JSON.parse(URI.open(solr_query).read)
-    solr_response["response"]["numFound"] != 0
+    response = HTTParty.get(solr_query)
+    response.parsed_response["response"]["numFound"] != 0
   end
 end
