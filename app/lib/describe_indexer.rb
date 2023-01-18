@@ -56,6 +56,8 @@ private
       resource_json = URI.open(url).read
       resource_xml = JSON.parse(resource_json).to_xml
       traject_indexer.process(resource_xml)
+    rescue => ex
+      Rails.logger.warn "Error importing record from #{url}. Exception: ##{ex.message}"
     end
   end
 end
