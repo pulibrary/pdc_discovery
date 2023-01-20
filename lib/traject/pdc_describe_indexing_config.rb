@@ -26,6 +26,11 @@ to_field 'id' do |record, accumulator, _c|
   accumulator.concat [munged_doi]
 end
 
+# Track the source of this record
+to_field 'data_source_ssi' do |_record, accumulator, _c|
+  accumulator.concat ["pdc_describe"]
+end
+
 # to_field 'abstract_tsim', extract_xpath("/item/metadata/key[text()='dcterms.abstract']/../value")
 # to_field 'creator_tesim', extract_xpath("/item/metadata/key[text()='dcterms.creator']/../value")
 to_field 'contributor_tsim' do |record, accumulator, _c|

@@ -24,6 +24,18 @@ RSpec.describe DspaceIndexer do
         response = Blacklight.default_index.connection.get 'select', params: { q: '*:*' }
         expect(response["response"]["numFound"]).to eq 39
       end
+
+      it "skips records already imported from PDC Describe" do
+        # q=data_source_ssi:pdc_describe AND uri_ssim:http://arks.princeton.edu/ark:/88435/dsp017s75df84b
+        solr_query_regex = /.*q=data_source_ssi\:pdc_describe\sAND\suri_ssim\:http\:\/\/arks.princeton.edu\/ark\:\/88435\/dsp017s75df84b/
+        stub_request(:get, solr_query_regex).to_return(status: 200, body: '{"response":{"numFound":1}}', headers: {})
+
+        response = Blacklight.default_index.connection.get 'select', params: { q: '*:*' }
+        expect(response["response"]["numFound"]).to eq 0
+        indexer.index
+        response = Blacklight.default_index.connection.get 'select', params: { q: '*:*' }
+        expect(response["response"]["numFound"]).to eq 38
+      end
     end
 
     context 'invoking from CLI' do
