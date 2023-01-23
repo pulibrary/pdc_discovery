@@ -342,38 +342,19 @@ to_field 'genre_ssim', extract_xpath("/hash/resource/resource-type")
 # to_field 'mediator_ssim', extract_xpath("/item/metadata/key[text()='dcterms.mediator']/../value")
 # to_field 'source_ssim', extract_xpath("/item/metadata/key[text()='dcterms.source']/../value")
 
-# # ==================
-# # Store all files metadata as a single JSON string so that we can display detailed information for each of them.
-# to_field 'files_ss' do |record, accumulator, _context|
-#   dataspace_handle = record.xpath('/item/handle/text()').text
-#   bitstreams = record.xpath("/item/bitstreams").map do |node|
-#     {
-#       name: node.xpath("name").text,
-#       description: node.xpath("description").text,
-#       format: node.xpath("format").text,
-#       size: node.xpath("sizeBytes").text,
-#       mime_type: node.xpath("mimeType").text,
-#       sequence: node.xpath("sequenceId").text,
-#       bundle_name: node.xpath("bundleName").text,
-#       handle: dataspace_handle
-#     }
-#   end
+# ==================
+# Store all files metadata as a single JSON string so that we can display detailed information for each of them.
+to_field 'files_ss' do |record, accumulator, _context|
+  files = record.xpath("/hash/files/file").map do |file|
+    {
+      name: file.xpath("filename").text,
+      size: file.xpath("size").text
+    }
+  end
+  accumulator.concat [files.to_json.to_s]
+end
 
-#   # Only files in the ORIGINAL bundle in DataSpace need to be indexed,
-#   # the rest are files that have been deleted or have purposes outside
-#   # of PDC Discovery (e.g. extracted text).
-#   #
-#   # We also explicitly exclude DSpace license.txt file since it's a DSpace
-#   # generated file and we don't want it in PDC Discovery.
-#   bitstreams.reject! do |bitstream|
-#     bitstream[:bundle_name] != "ORIGINAL" || bitstream[:name] == "license.txt"
-#   end
-
-#   accumulator.concat [bitstreams.to_json.to_s]
-# end
-
-# # Indexes the entire text in a catch-all field.
-# to_field 'all_text_teimv' do |record, accumulator, _context|
-#   all_text = record.xpath("//text()").map(&:to_s).join(" ")
-#   accumulator.concat [all_text]
-# end
+# Indexes the entire text in a catch-all field.
+to_field 'all_text_teimv' do |record, accumulator, _context|
+  accumulator.concat [record.text]
+end

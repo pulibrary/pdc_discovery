@@ -95,12 +95,24 @@ RSpec.describe DescribeIndexer do
     end
 
     context "files" do
-      # TODO: Index filenames for PDC Describe objects
-      xit 'files' do
-        # The fixture has three files but we expect two of them to be ignored
-        files = JSON.parse(result['files_ss'].first)
-        expect(files.count).to eq 1
-        expect(files.first["name"]).to eq 'Lee_princeton_0181D_10086.pdf'
+      it "stores file detailed information" do
+        files = JSON.parse(indexed_record['files_ss'])
+        file1 = files.find { |file| file["name"] == "10.80021/3m1k-6036/122/file1.jpg" }
+        file2 = files.find { |file| file["name"] == "10.80021/3m1k-6036/122/file2.txt" }
+        expect(file1["size"]).to eq "316781"
+        expect(file2["size"]).to eq "396003"
+      end
+    end
+
+    context "all text catch all field" do
+      it "indexes the all text catch all field" do
+        files = JSON.parse(indexed_record['files_ss'])
+        file_name = File.basename(files.first["name"])
+        response = Blacklight.default_index.connection.get 'select', params: { q: file_name }
+        expect(response["response"]["numFound"]).to eq 1
+
+        response = Blacklight.default_index.connection.get 'select', params: { q: "non-existing-value" }
+        expect(response["response"]["numFound"]).to eq 0
       end
     end
   end
