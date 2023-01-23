@@ -39,6 +39,14 @@ describe 'PDC Describe Bitklavier Single item page', type: :system, js: true do
   end
   # rubocop:enable RSpec/ExampleLength
 
+  it "renders collection tags as links" do
+    visit '/catalog/doi-10-34770-r75s-9j74'
+    tag1 = "<a href=\"/?f[collection_tag_ssim][]=Humanities"
+    tag2 = "<a href=\"/?f[collection_tag_ssim][]=Something+else"
+    expect(page.html.include?(tag1)).to be true
+    expect(page.html.include?(tag2)).to be true
+  end
+
   # rubocop:disable Layout/LineLength
   xit "has expected citation information" do
     visit '/catalog/78348'

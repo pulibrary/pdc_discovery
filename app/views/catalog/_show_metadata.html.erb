@@ -16,7 +16,7 @@
               <%= render_field_row "Collection", @document.collection_name %>
             <% end %>
             <% if @document.collection_tags.present? %>
-              <%= render_field_row_many "Collection Tags", @document.collection_tags %>
+              <%= render_field_row_search_links "Collection Tags", @document.collection_tags, "collection_tag_ssim" %>
             <% end %>
             <%= render_field_row "Date Accessioned", @document.accessioned_date, true %> <!-- displayed by default -->
             <%= render_field_row "Issue date", @document.issued_date, true %> <!-- displayed by default -->
