@@ -137,14 +137,12 @@ class SolrDocument
     fetch("data_source_ssi", "dataspace")
   end
 
-  # rubocop:disable Lint/UselessAssignment
   def files
-    files ||= begin
+    @files ||= begin
       data = JSON.parse(fetch("files_ss", "[]"))
       data.map { |x| DatasetFile.from_hash(x, data_source) }.sort_by(&:sequence)
     end
   end
-  # rubocop:enable Lint/UselessAssignment
 
   # Returns an array with the counts by file extension
   # e.g. [{extension: "txt", file_count: 3}, {extension: "csv", file_count: 1}]
