@@ -105,7 +105,7 @@ RSpec.describe DescribeIndexer do
     end
 
     context "all text catch all field" do
-      it "indexes the all text catch all field" do
+      it "indexes the file name in the all text catch all field" do
         files = JSON.parse(indexed_record['files_ss'])
         file_name = File.basename(files.first["name"])
         response = Blacklight.default_index.connection.get 'select', params: { q: file_name }
