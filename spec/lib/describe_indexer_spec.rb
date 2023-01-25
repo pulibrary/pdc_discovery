@@ -97,8 +97,8 @@ RSpec.describe DescribeIndexer do
     context "files" do
       it "stores file detailed information" do
         files = JSON.parse(indexed_record['files_ss'])
-        file1 = files.find { |file| file["name"] == "10.80021/3m1k-6036/122/file1.jpg" }
-        file2 = files.find { |file| file["name"] == "10.80021/3m1k-6036/122/file2.txt" }
+        file1 = files.find { |file| file["name"] == "file1.jpg" }
+        file2 = files.find { |file| file["name"] == "file2.txt" }
         expect(file1["size"]).to eq "316781"
         expect(file2["size"]).to eq "396003"
       end
