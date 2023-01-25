@@ -3,6 +3,8 @@
 # rubocop:disable Metrics/BlockLength
 describe 'DataSpace research data all fields indexing', type: :system do
   subject(:result) do
+    Blacklight.default_index.connection.delete_by_query("*:*")
+    Blacklight.default_index.connection.commit
     indexer.map_record(record)
   end
   let(:indexer) do

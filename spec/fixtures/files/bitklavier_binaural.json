@@ -90,9 +90,12 @@
     },
     "files": [
         {
-            "base": "old-san-juan",
-            "extension": "jpg",
-            "created_at": "2023-01-09T12:19:55.923-05:00"
+            "filename": "10.80021/3m1k-6036/122/file1.jpg",
+            "size": 316781
+        },
+        {
+            "filename": "10.80021/3m1k-6036/122/file2.txt",
+            "size": 396003
         }
     ],
     "collection": {

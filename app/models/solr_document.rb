@@ -133,11 +133,15 @@ class SolrDocument
     fetch(METHODS_FIELD, [])
   end
 
+  def data_source
+    fetch("data_source_ssi", "dataspace")
+  end
+
   # rubocop:disable Lint/UselessAssignment
   def files
     files ||= begin
       data = JSON.parse(fetch("files_ss", "[]"))
-      data.map { |x| DatasetFile.from_hash(x) }.sort_by(&:sequence)
+      data.map { |x| DatasetFile.from_hash(x, data_source) }.sort_by(&:sequence)
     end
   end
   # rubocop:enable Lint/UselessAssignment
