@@ -100,6 +100,7 @@ RSpec.describe DescribeIndexer do
         file1 = files.find { |file| file["name"] == "file1.jpg" }
         file2 = files.find { |file| file["name"] == "file2.txt" }
         expect(file1["size"]).to eq "316781"
+        expect(file1["url"]).to eq "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.80021/3m1k-6036/122/file1.jpg"
         expect(file2["size"]).to eq "396003"
       end
     end

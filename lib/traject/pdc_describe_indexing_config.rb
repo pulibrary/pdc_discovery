@@ -345,13 +345,11 @@ to_field 'genre_ssim', extract_xpath("/hash/resource/resource-type")
 # ==================
 # Store all files metadata as a single JSON string so that we can display detailed information for each of them.
 to_field 'files_ss' do |record, accumulator, _context|
-  # TODO: Remove prefix once we export the complete URI in PDC Describe
-  url_prefix = "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration"
   files = record.xpath("/hash/files/file").map do |file|
     {
       name: File.basename(file.xpath("filename").text),
       size: file.xpath("size").text,
-      url: "#{url_prefix}/#{file.xpath('filename').text}"
+      url: file.xpath('url').text
     }
   end
   accumulator.concat [files.to_json.to_s]
