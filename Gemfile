@@ -6,12 +6,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.3'
 
 gem 'bcrypt', '~> 3.1.7'
-gem 'blacklight', '>= 7.0'
+gem 'blacklight', '8.0.0.beta5'
 gem 'blacklight_dynamic_sitemap'
-gem 'blacklight-marc', '>= 7.0.0.rc1', '< 8'
-gem "blacklight_range_limit", '~> 8.2'
+gem 'blacklight-marc'
+gem "blacklight_range_limit", github: 'projectblacklight/blacklight_range_limit', branch: 'carolyncole-patch-1'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bootstrap', '~> 4.0'
+gem 'deprecation'
 gem 'devise'
 gem 'devise-guests', '~> 0.6'
 gem 'faraday_middleware'

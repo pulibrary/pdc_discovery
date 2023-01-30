@@ -52,6 +52,25 @@ describe 'Search Results Page', type: :system, js: true do
 
   # rubocop:disable RSpec/ExampleLength
   describe "facets" do
+    it "can click on a facet" do
+      visit '/'
+
+      ####### Start Modal Hack #######
+      # For some strange reason the modal is blocking the page
+      # If we make the modal smaller we can interact with the page
+      modal = page.find("#blacklight-modal", visible:false)
+      modal.execute_script("this.style.height = '10px'")
+      modal.execute_script("this.style.width = '10px'")
+      ####### End Modal Hack  #######
+
+      expect(page).to have_css('#facet-year_available_itsi', visible: false)
+
+      page.find('h3.facet-field-heading button', text: 'Year Published').click
+      sleep(1) # let facet animation finish and wait for it to potentially re-collapse
+  
+      expect(page).to have_css('#facet-year_available_itsi', visible: true) # assert that it didn't re-collapse
+    end
+
     it "shows expected facets" do
       visit '/?search_field=all_fields&q='
       domain_facet_html = '<div class="card facet-limit blacklight-domain_ssi ">'
