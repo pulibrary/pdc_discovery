@@ -4,7 +4,10 @@
   <p class="lead">
     <%= content_tag :div, role: 'navigation', aria: { label: t('blacklight.search.header') } do %>
       <div class="<%= container_classes %>">
-        <%= render_search_bar  %>
+        <%= render Blacklight::SearchBarComponent.new(
+          url: search_action_url,
+          params: search_state.params_for_search
+        )  %>
       </div>
     <% end %>
   </p>

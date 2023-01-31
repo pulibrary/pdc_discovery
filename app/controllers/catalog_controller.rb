@@ -211,6 +211,10 @@ class CatalogController < ApplicationController
     # # if the name of the solr.SuggestComponent provided in your solrconfig.xml is not the
     # # default 'mySuggester', uncomment and provide it below
     # # config.autocomplete_suggester = 'mySuggester'
+    config.search_state_fields = config.search_state_fields + [
+      :doi, :ark, :id,
+      :a # this is in the search parameters becuase the search bar is shown on the error page
+    ]
   end
 
   # Returns the raw BibTex citation information
