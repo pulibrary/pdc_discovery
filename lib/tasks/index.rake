@@ -3,33 +3,30 @@
 namespace :index do
   desc 'Delete index and re-index all research data'
   task research_data: :environment do
-    puts "Deleting index..."
-    Rake::Task['index:delete'].invoke
-    puts "Indexing PDC Describe data..."
+    Rails.logger.info "Research Data indexing started"
+    Rake::Task['index:delete_solr_all'].invoke
     Rake::Task['index:pdc_describe_research_data'].invoke
-    puts "Indexing Data Space research data collections..."
     Rake::Task['index:dspace_research_data'].invoke
-    puts "Done."
+    Rails.logger.info "Research Data indexing completed"
   end
 
   desc 'Index all DSpace research data collections'
   task dspace_research_data: :environment do
-    puts "Harvesting and indexing DataSpace research data collections"
+    Rails.logger.info "Harvesting and indexing DataSpace research data collections started"
     DspaceResearchDataHarvester.harvest(false)
-    puts "Done harvesting DataSpace research data."
+    Rails.logger.info "Harvesting and indexing DataSpace research data collections completed"
   end
 
   desc 'Index all PDC Describe data'
   task pdc_describe_research_data: :environment do
-    puts "Harvesting and indexing PDC Describe data"
+    Rails.logger.info "Harvesting and indexing PDC Describe data started"
     DescribeIndexer.new.index
-    puts "Done harvesting PDC Describe data."
+    Rails.logger.info "Harvesting and indexing PDC Describe data completed"
   end
 
   desc 'Remove all indexed Documents from Solr'
-  task delete: :environment do
-    raise("Deleting indices in Solr is unsupported for the environment #{Rails.env}") if Rails.env.production?
-
+  task delete_solr_all: :environment do
+    Rails.logger.info "Deleting all Solr documents"
     Blacklight.default_index.connection.delete_by_query('*:*')
     Blacklight.default_index.connection.commit
   end
