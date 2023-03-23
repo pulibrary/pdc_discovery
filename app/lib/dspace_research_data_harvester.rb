@@ -38,7 +38,7 @@ class DspaceResearchDataHarvester
   # @example
   #   DspaceResearchDataHarvester.harvest
   def self.harvest(use_cache = false)
-    Rails.logger.info "Harvesting and indexing research data collections"
+    Rails.logger.info "Harvesting and indexing research data collections has started"
 
     unless use_cache
       # Fetch latest community information from DataSpace
@@ -52,6 +52,6 @@ class DspaceResearchDataHarvester
       Rails.logger.info "Harvesting collection id #{collection.collection_id}"
       r.harvest(collection)
     end
-    Rails.logger.info "Done harvesting research data."
+    Rails.logger.info "Harvesting and indexing research data collections has completed"
   end
 end
