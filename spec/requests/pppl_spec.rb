@@ -25,5 +25,7 @@ RSpec.describe "PPPL has a harvest endpoint", type: :request do
     # The most recently indexed item (pppl2) should be first
     first_doi_url = results.first["uri_ssim"].first
     expect(first_doi_url).to match(JSON.parse(pppl2)["resource"]["doi"])
+    # The data feed should include funders
+    expect(results.first.keys).to include("funders_ss")
   end
 end
