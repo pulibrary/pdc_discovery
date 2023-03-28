@@ -261,7 +261,7 @@ class CatalogController < ApplicationController
     # Limit to items from PPPL
     pppl_query = "community_root_name_ssi:Princeton Plasma Physics Laboratory"
 
-    query = { q: pppl_query, fl: '*', format: 'json' }
+    query = { q: pppl_query, fl: '*', format: 'json', sort: 'timestamp desc' }
 
     solr_response = search_service.repository.search(**query)
 
