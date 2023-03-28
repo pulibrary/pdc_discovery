@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   root to: 'catalog#index'
   concern :searchable, Blacklight::Routes::Searchable.new
 
+  get 'pppl' => 'catalog#pppl', as: :pppl_endpoint
+
   get 'catalog/:id/bibtex' => 'catalog#bibtex', as: :catalog_bibtex
 
   resource :catalog, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
