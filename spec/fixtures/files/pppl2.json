@@ -1,1 +1,93 @@
-{"resource":{"titles":[{"title":"Data for The value of fusion energy to a decarbonized United States electric grid","title_type":null}],"description":"Fusion could be a part of future decarbonized electricity systems, but it will need to compete with other technologies. In particular, pulsed tokamaks plants have a unique operational mode, and evaluating which characteristics make them economically competitive can help select between design pathways. Using a capacity expansion and operations model, we determined cost thresholds for pulsed tokamaks to reach a range of penetration levels in a future decarbonized US Eastern Interconnection. The required capital cost to reach a fusion capacity of 100 GW varied from $3000 to $7200/kW, and the equilibrium penetration increases rapidly with decreasing cost. The value per unit power capacity depends on the variable operational cost and on cost of its competition, particularly fission, much more than on the pulse cycle parameters. These findings can therefore provide initial cost targets for fusion more generally in the United States. This dataset is too large to download directly from this item page. You can access and download the data via Globus at this link: https://app.globus.org/file-manager?destination_id=dc43f461-0ca7-4203-848c-33a9fc00a464\u0026destination_path=%2Ff8em-3c49%2F (See https://docs.globus.org/how-to/get-started/ for instructions on how to use Globus; sign-in is required).","collection_tags":[],"creators":[{"value":"Schwartz, Jacob A.","name_type":"Personal","given_name":"Jacob A.","family_name":"Schwartz","identifier":{"value":"0000-0001-9636-8181","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":1},{"value":"Ricks, Wilson","name_type":"Personal","given_name":"Wilson","family_name":"Ricks","identifier":null,"affiliations":[],"sequence":2},{"value":"Kolemen, Egemen","name_type":"Personal","given_name":"Egemen","family_name":"Kolemen","identifier":null,"affiliations":[],"sequence":3},{"value":"Jenkins, Jesse D.","name_type":"Personal","given_name":"Jesse D.","family_name":"Jenkins","identifier":null,"affiliations":[],"sequence":4}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton University","publication_year":"2022","ark":"ark:/88435/dsp012j62s808w","doi":"10.5281/zenodo.7507006","rights":{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"},"version_number":"1","related_objects":[],"keywords":[],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""}],"domains":[]},"files":[{"filename":"10.5281/zenodo.7507006/209/works-12.rss","size":1187,"url":"https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.5281/zenodo.7507006/209/works-12.rss"}],"collection":{"title":"Princeton Plasma Physics Laboratory","description":"","code":"PPPL","created_at":"2022-04-18T11:27:37.363-04:00","updated_at":"2022-04-27T16:59:55.756-04:00"}}
+{
+    "resource": {
+        "titles": [
+            {
+                "title": "Data for The value of fusion energy to a decarbonized United States electric grid",
+                "title_type": null
+            }
+        ],
+        "description": "Fusion could be a part of future decarbonized electricity systems, but it will need to compete with other technologies. In particular, pulsed tokamaks plants have a unique operational mode, and evaluating which characteristics make them economically competitive can help select between design pathways. Using a capacity expansion and operations model, we determined cost thresholds for pulsed tokamaks to reach a range of penetration levels in a future decarbonized US Eastern Interconnection. The required capital cost to reach a fusion capacity of 100 GW varied from $3000 to $7200/kW, and the equilibrium penetration increases rapidly with decreasing cost. The value per unit power capacity depends on the variable operational cost and on cost of its competition, particularly fission, much more than on the pulse cycle parameters. These findings can therefore provide initial cost targets for fusion more generally in the United States. This dataset is too large to download directly from this item page. You can access and download the data via Globus at this link: https://app.globus.org/file-manager?destination_id=dc43f461-0ca7-4203-848c-33a9fc00a464&destination_path=%2Ff8em-3c49%2F (See https://docs.globus.org/how-to/get-started/ for instructions on how to use Globus; sign-in is required).",
+        "collection_tags": [],
+        "creators": [
+            {
+                "value": "Schwartz, Jacob A.",
+                "name_type": "Personal",
+                "given_name": "Jacob A.",
+                "family_name": "Schwartz",
+                "identifier": {
+                    "value": "0000-0001-9636-8181",
+                    "scheme": "ORCID",
+                    "scheme_uri": "https://orcid.org"
+                },
+                "affiliations": [],
+                "sequence": 1
+            },
+            {
+                "value": "Ricks, Wilson",
+                "name_type": "Personal",
+                "given_name": "Wilson",
+                "family_name": "Ricks",
+                "identifier": null,
+                "affiliations": [],
+                "sequence": 2
+            },
+            {
+                "value": "Kolemen, Egemen",
+                "name_type": "Personal",
+                "given_name": "Egemen",
+                "family_name": "Kolemen",
+                "identifier": null,
+                "affiliations": [],
+                "sequence": 3
+            },
+            {
+                "value": "Jenkins, Jesse D.",
+                "name_type": "Personal",
+                "given_name": "Jesse D.",
+                "family_name": "Jenkins",
+                "identifier": null,
+                "affiliations": [],
+                "sequence": 4
+            }
+        ],
+        "resource_type": "Dataset",
+        "resource_type_general": "Dataset",
+        "publisher": "Princeton University",
+        "publication_year": "2022",
+        "ark": "ark:/88435/dsp012j62s808w",
+        "doi": "10.5281/zenodo.7507006",
+        "rights": {
+            "identifier": "CC BY",
+            "uri": "https://creativecommons.org/licenses/by/4.0/",
+            "name": "Creative Commons Attribution 4.0 International"
+        },
+        "version_number": "1",
+        "related_objects": [],
+        "keywords": [],
+        "contributors": [],
+        "organizational_contributors": [],
+        "funders": [
+            {
+                "ror": "https://ror.org/01bj3aw27",
+                "funder_name": "United States Department of Energy",
+                "award_number": "DE-AC02-09CH11466",
+                "award_uri": ""
+            }
+        ],
+        "domains": []
+    },
+    "files": [
+        {
+            "filename": "10.5281/zenodo.7507006/209/works-12.rss",
+            "size": 1187,
+            "url": "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.5281/zenodo.7507006/209/works-12.rss"
+        }
+    ],
+    "collection": {
+        "title": "Princeton Plasma Physics Laboratory",
+        "description": "",
+        "code": "PPPL",
+        "created_at": "2022-04-18T11:27:37.363-04:00",
+        "updated_at": "2022-04-27T16:59:55.756-04:00"
+    }
+}

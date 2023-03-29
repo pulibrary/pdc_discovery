@@ -322,6 +322,21 @@ to_field 'genre_ssim', extract_xpath("/hash/resource/resource-type")
 # to_field 'translator_ssim', extract_xpath("/item/metadata/key[text()='dc.contributor.translator']/../value")
 # to_field 'funding_agency_ssim', extract_xpath("/item/metadata/key[text()='dc.contributor.funder']/../value")
 
+# ==================
+# Funders
+# Store all funders as a single JSON string so that we can display detailed information for each of them.
+to_field 'funders_ss' do |record, accumulator, _context|
+  funders = record.xpath("/hash/resource/funders/funder").map do |funder|
+    {
+      name: funder.xpath("funder-name").text,
+      ror: funder.xpath("ror").text,
+      award_number: funder.xpath("award-number").text,
+      award_uri: funder.xpath("award-uri").text
+    }
+  end
+  accumulator.concat [funders.to_json.to_s]
+end
+
 # # ==================
 # # accrual fields
 # to_field 'accrual_method_ssim', extract_xpath("/item/metadata/key[text()='dcterms.accrualMethod']/../value")
