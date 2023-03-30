@@ -40,8 +40,9 @@ RSpec.describe "PPPL has a harvest endpoint", type: :request do
     results = JSON.parse(response.body)
     # There should be 3 records in the index, but only 2 of them are from PPPL
     expect(results.count).to eq 2
+    parsed_data = JSON.parse(results.first["pdc_describe_json_ss"])
     # The most recently indexed item (pppl2) should be first
-    first_doi_url = results.first["uri_ssim"].first
+    first_doi_url = JSON.parse(results.first["pdc_describe_json_ss"])["resource"]["doi"]
     expect(first_doi_url).to match(JSON.parse(pppl2)["resource"]["doi"])
   end
 end
