@@ -33,9 +33,9 @@ RSpec.describe "PPPL has a harvest endpoint", type: :request do
   end
 
   # This is the second try at a PPPL harvesting endpoint.
-  # Instead of providing solr fields, we provide the entire datacite record.
-  it "provides datacite records for OSTI reporting" do
-    get "/pppl_datacite.json"
+  # Instead of providing solr fields, we provide the entire PDC Describe JSON record.
+  it "provides PDC Describe JSON records for OSTI reporting" do
+    get "/pppl_reporting_feed.json"
     expect(response).to have_http_status(:success)
     results = JSON.parse(response.body)
     # There should be 3 records in the index, but only 2 of them are from PPPL
