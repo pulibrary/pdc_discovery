@@ -24,7 +24,7 @@ RSpec.describe DescribeIndexer do
       end
 
       it "stores a copy of the full JSON in CDATA" do
-        stored_json = indexed_record["datacite_ss"]
+        stored_json = indexed_record["pdc_describe_json_ss"]
         parsed_json = JSON.parse(stored_json)
         expect(parsed_json["resource"]["titles"][0]["title"]).to eq "bitKlavier Grand Sample Library—Binaural Mic Image"
       end
