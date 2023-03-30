@@ -26,6 +26,12 @@ to_field 'id' do |record, accumulator, _c|
   accumulator.concat [munged_doi]
 end
 
+# the <pdc_describe_json> element contains a CDATA node with a JSON blob in it
+to_field 'pdc_describe_json_ss' do |record, accumulator, _c|
+  datacite = record.xpath("/hash/pdc_describe_json/text()").first.content
+  accumulator.concat [datacite]
+end
+
 # Track the source of this record
 to_field 'data_source_ssi' do |_record, accumulator, _c|
   accumulator.concat ["pdc_describe"]

@@ -39,9 +39,24 @@ class DescribeIndexer
     end
   end
 
-  def index_one(json)
+  # Given a json document, return an XML string that contains
+  # the JSON blob as a CDATA element
+  # @param [String] json
+  # @return [String]
+  def prep_for_indexing(json)
     xml = JSON.parse(json).to_xml
-    traject_indexer.process(xml)
+    doc = Nokogiri::XML(xml)
+    collection_node = doc.at('collection')
+    cdata = Nokogiri::XML::CDATA.new(doc, json)
+    collection_node.add_next_sibling("<pdc_describe_json></pdc_describe_json>")
+    pdc_describe_json_node = doc.at('pdc_describe_json')
+    pdc_describe_json_node.add_child(cdata)
+    doc.to_s
+  end
+
+  def index_one(json)
+    resource_xml = prep_for_indexing(json)
+    traject_indexer.process(resource_xml)
     traject_indexer.complete
   end
 
@@ -54,7 +69,7 @@ private
     url_list = doc.xpath("//item/url/text()").map(&:to_s)
     url_list.each do |url|
       resource_json = URI.open(url).read
-      resource_xml = JSON.parse(resource_json).to_xml
+      resource_xml = prep_for_indexing(resource_json)
       traject_indexer.process(resource_xml)
     rescue => ex
       Rails.logger.warn "Error importing record from #{url}. Exception: #{ex.message}"

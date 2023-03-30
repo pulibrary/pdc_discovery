@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   concern :searchable, Blacklight::Routes::Searchable.new
 
   get 'pppl' => 'catalog#pppl', as: :pppl_endpoint
+  get 'pppl_reporting_feed' => 'catalog#pppl_reporting_feed', as: :pppl_reporting_feed
 
   get 'catalog/:id/bibtex' => 'catalog#bibtex', as: :catalog_bibtex
 

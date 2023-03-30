@@ -23,6 +23,12 @@ RSpec.describe DescribeIndexer do
         expect(indexed_record["id"]).to eq "doi-10-34770-r75s-9j74"
       end
 
+      it "stores a copy of the full JSON in CDATA" do
+        stored_json = indexed_record["pdc_describe_json_ss"]
+        parsed_json = JSON.parse(stored_json)
+        expect(parsed_json["resource"]["titles"][0]["title"]).to eq "bitKlavier Grand Sample Library—Binaural Mic Image"
+      end
+
       it "author" do
         expect(indexed_record["author_tesim"]).to eq ['Trueman, Daniel']
       end
