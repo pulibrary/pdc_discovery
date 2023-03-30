@@ -272,11 +272,11 @@ class CatalogController < ApplicationController
   end
 
   # Create an endpoint for PPPL / OSTI harvesting that provides full datacite records
-  def pppl_datacite
+  def pppl_reporting_feed
     # Limit to items from PPPL
     pppl_query = "community_root_name_ssi:Princeton Plasma Physics Laboratory"
 
-    query = { q: pppl_query, fl: '*', format: 'json', sort: 'timestamp desc' }
+    query = { q: pppl_query, fl: 'pdc_describe_json_ss', format: 'json', sort: 'timestamp desc' }
 
     solr_response = search_service.repository.search(**query)
 

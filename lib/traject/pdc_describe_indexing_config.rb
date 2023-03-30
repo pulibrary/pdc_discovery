@@ -32,7 +32,6 @@ to_field 'pdc_describe_json_ss' do |record, accumulator, _c|
   accumulator.concat [datacite]
 end
 
-
 # Track the source of this record
 to_field 'data_source_ssi' do |_record, accumulator, _c|
   accumulator.concat ["pdc_describe"]

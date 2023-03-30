@@ -16,7 +16,7 @@ RSpec.describe "PPPL has a harvest endpoint", type: :request do
     indexer.index_one(pppl2)
   end
 
-  # This was the first pass at a PPPL harvesting endpoint. 
+  # This was the first pass at a PPPL harvesting endpoint.
   # I'm leaving it in place for now, but we should remove it if Chun decides
   # he prefers the second endpoint better. --Bess 29 March 2023
   it "provides data needed for OSTI reporting" do
@@ -32,7 +32,7 @@ RSpec.describe "PPPL has a harvest endpoint", type: :request do
     expect(results.first.keys).to include("funders_ss")
   end
 
-  # This is the second try at a PPPL harvesting endpoint. 
+  # This is the second try at a PPPL harvesting endpoint.
   # Instead of providing solr fields, we provide the entire datacite record.
   it "provides datacite records for OSTI reporting" do
     get "/pppl_datacite.json"
