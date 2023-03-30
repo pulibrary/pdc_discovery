@@ -26,8 +26,9 @@ to_field 'id' do |record, accumulator, _c|
   accumulator.concat [munged_doi]
 end
 
+# the <datacite> element contains a CDATA node with a JSON blob in it
 to_field 'datacite_ss' do |record, accumulator, _c|
-  datacite = record.xpath("/hash/datacite/text()").to_s
+  datacite = record.xpath("/hash/datacite/text()").first.content
   accumulator.concat [datacite]
 end
 
