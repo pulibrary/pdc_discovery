@@ -26,6 +26,12 @@ to_field 'id' do |record, accumulator, _c|
   accumulator.concat [munged_doi]
 end
 
+to_field 'datacite_ss' do |record, accumulator, _c|
+  datacite = record.xpath("/hash/datacite/text()").to_s
+  accumulator.concat [datacite]
+end
+
+
 # Track the source of this record
 to_field 'data_source_ssi' do |_record, accumulator, _c|
   accumulator.concat ["pdc_describe"]

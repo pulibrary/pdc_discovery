@@ -23,6 +23,10 @@ RSpec.describe DescribeIndexer do
         expect(indexed_record["id"]).to eq "doi-10-34770-r75s-9j74"
       end
 
+      it "stores a copy of the full JSON in CDATA" do
+        stored_json = indexed_record["datacite_ss"]
+      end
+
       it "author" do
         expect(indexed_record["author_tesim"]).to eq ['Trueman, Daniel']
       end

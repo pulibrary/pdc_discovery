@@ -41,6 +41,12 @@ class DescribeIndexer
 
   def index_one(json)
     xml = JSON.parse(json).to_xml
+    doc = Nokogiri::XML(xml)
+    collection_node = doc.at('collection')
+    cdata = Nokogiri::XML::CDATA.new(doc, json)
+    collection_node.add_next_sibling("<datacite></datacite>")
+    datacite_node = doc.at('datacite')
+    datacite_node.add_child(cdata)
     traject_indexer.process(xml)
     traject_indexer.complete
   end
