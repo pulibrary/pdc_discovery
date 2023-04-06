@@ -8,7 +8,7 @@ RSpec.describe DspaceResearchDataHarvester do
   end
 
   it "has a convenience method for indexing all collections" do
-    expect_any_instance_of(described_class).to receive(:harvest).exactly(33).times
+    expect_any_instance_of(described_class).to receive(:harvest).exactly(34).times
     described_class.harvest(true)
   end
 
