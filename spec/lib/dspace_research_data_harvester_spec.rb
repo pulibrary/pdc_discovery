@@ -4,11 +4,11 @@ RSpec.describe DspaceResearchDataHarvester do
   let(:rdh) { described_class.new }
 
   it "has a list of collections to index" do
-    expect(rdh.collections_to_index.count).to eq 33
+    expect(rdh.collections_to_index.count).to eq 34
   end
 
   it "has a convenience method for indexing all collections" do
-    expect_any_instance_of(described_class).to receive(:harvest).exactly(33).times
+    expect_any_instance_of(described_class).to receive(:harvest).exactly(34).times
     described_class.harvest(true)
   end
 
