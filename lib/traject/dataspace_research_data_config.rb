@@ -17,13 +17,14 @@ settings do
   provide "dataspace_communities", DataspaceCommunities.new('./spec/fixtures/files/dataspace_communities.json')
 end
 
+Rails.logger.info "Solr leader: #{ImportHelper.solr_leader_url}"
+
 each_record do |record, context|
   uris = record.xpath("/item/metadata/key[text()='dc.identifier.uri']/../value")
-  if ImportHelper.pdc_describe_match?(uris)
-    id = record.xpath('/item/id')
-    Rails.logger.info "Skipping DataSpace record #{id} - already imported from PDC Describe"
-    context.skip!("Skipping DataSpace record #{id} - already imported from PDC Describe")
-  end
+  next unless ImportHelper.pdc_describe_match?(uris)
+  id = record.xpath('/item/id')
+  Rails.logger.info "Skipping DataSpace record #{id} - already imported from PDC Describe"
+  context.skip!("Skipping DataSpace record #{id} - already imported from PDC Describe")
 end
 
 # ==================
