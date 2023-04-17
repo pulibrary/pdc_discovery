@@ -18,7 +18,6 @@ settings do
 end
 
 each_record do |record, context|
-  Rails.logger.info "Solr leader: #{ImportHelper.solr_leader_url}"
   uris = record.xpath("/item/metadata/key[text()='dc.identifier.uri']/../value")
   next unless ImportHelper.pdc_describe_match?(uris)
   id = record.xpath('/item/id')
