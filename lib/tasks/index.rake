@@ -14,6 +14,7 @@ namespace :index do
   task dspace_research_data: :environment do
     Rails.logger.info "Harvesting and indexing DataSpace research data collections started"
     DspaceResearchDataHarvester.harvest(false)
+    Blacklight.default_index.connection.commit
     Rails.logger.info "Harvesting and indexing DataSpace research data collections completed"
   end
 
@@ -21,6 +22,7 @@ namespace :index do
   task pdc_describe_research_data: :environment do
     Rails.logger.info "Harvesting and indexing PDC Describe data started"
     DescribeIndexer.new.index
+    Blacklight.default_index.connection.commit
     Rails.logger.info "Harvesting and indexing PDC Describe data completed"
   end
 

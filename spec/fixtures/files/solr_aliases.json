@@ -1,0 +1,13 @@
+{
+    "responseHeader":{
+      "status":0,
+      "QTime":1},
+    "aliases":{
+      "catalog-alma-production":"catalog-alma-production3",
+      "library-prod":"library-prod1",
+      "special-collections-prod":"special-collections-prod2",
+      "dss":"dss-production2",
+      "lae-prod":"lae-prod3",
+      "catalog-alma-production-rebuild":"catalog-alma-production2",
+      "pdc-discovery-production":"pdc-discovery-production-3"},
+    "properties":{}}
