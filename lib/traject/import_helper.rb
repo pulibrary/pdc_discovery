@@ -28,9 +28,7 @@ class ImportHelper
       query: "action=LISTALIASES"
     )
     response = HTTParty.get(alias_list_query.to_s)
-    aliased_collection = if response.code == 200
-                           response.parsed_response.dig("aliases", collection)
-                         end
+    aliased_collection = (response.parsed_response.dig("aliases", collection) if response.code == 200)
     aliased_collection || collection
   end
 
