@@ -84,7 +84,7 @@ class ImportHelper
   # report that the record still exists for a few minutes after being deleted.)
   def self.pdc_describe_match_by_uri?(uri)
     return false if uri.nil?
-    solr_query = "#{solr_leader_url}select?q=data_source_ssi:pdc_describe+AND+uri_ssim:#{uri}"
+    solr_query = "#{solr_leader_url}select?q=data_source_ssi:pdc_describe+AND+uri_ssim:\"#{uri}\""
     response = HTTParty.get(solr_query)
     response.parsed_response["response"]["numFound"] != 0
   end
