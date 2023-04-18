@@ -3,8 +3,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.3'
+ruby '3.1.0'
 
+gem 'net-ssh', '7.0.0.beta1'
 gem 'bcrypt', '~> 3.1.7'
 gem 'blacklight', '>= 7.0'
 gem 'blacklight_dynamic_sitemap'
