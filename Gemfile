@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.3'
+ruby '3.1.0'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'blacklight', '>= 7.0'
@@ -21,6 +21,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
 gem 'listen', '~> 3.3'
 gem 'multi_xml'
+gem 'net-ssh', '7.0.0.beta1'
 gem "nokogiri", ">= 1.13.4"
 gem 'oai'
 gem 'pg'

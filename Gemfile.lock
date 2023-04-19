@@ -288,7 +288,7 @@ GEM
       net-ssh (>= 2.6.5, < 7.0.0)
     net-smtp (0.3.3)
       net-protocol
-    net-ssh (6.1.0)
+    net-ssh (7.0.0.beta1)
     nio4r (2.5.8)
     nokogiri (1.14.3)
       mini_portile2 (~> 2.8.0)
@@ -558,6 +558,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.3)
   multi_xml
+  net-ssh (= 7.0.0.beta1)
   nokogiri (>= 1.13.4)
   oai
   pg
@@ -588,7 +589,7 @@ DEPENDENCIES
   whenever
 
 RUBY VERSION
-   ruby 3.0.3p157
+   ruby 3.1.0p0
 
 BUNDLED WITH
    2.3.26

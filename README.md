@@ -7,7 +7,7 @@ A discovery portal for Princeton research data. Initially it will provide a bett
 
 
 ## Dependencies
-* Ruby: 3.0.3
+* Ruby: 3.1.0
 * nodejs: 12.18.3
 * yarn: 1.22.10
 * postgres: `brew install postgresql@14; brew services start postgresql@14`
