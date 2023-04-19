@@ -5,7 +5,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.0'
 
-gem 'net-ssh', '7.0.0.beta1'
 gem 'bcrypt', '~> 3.1.7'
 gem 'blacklight', '>= 7.0'
 gem 'blacklight_dynamic_sitemap'
@@ -22,6 +21,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
 gem 'listen', '~> 3.3'
 gem 'multi_xml'
+gem 'net-ssh', '7.0.0.beta1'
 gem "nokogiri", ">= 1.13.4"
 gem 'oai'
 gem 'pg'
