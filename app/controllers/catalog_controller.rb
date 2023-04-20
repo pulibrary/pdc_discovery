@@ -255,26 +255,10 @@ class CatalogController < ApplicationController
     redirect_to(solr_document_path(id: document.id))
   end
 
-  # Create an endpoint for PPPL / OSTI harvesting
-  # A catalog query for PPPL: https://datacommons.princeton.edu/discovery/?f%5Bcommunity_root_name_ssi%5D%5B%5D=Princeton+Plasma+Physics+Laboratory&q=&search_field=all_fields&fl=*&format=json
-  def pppl
-    # Limit to items from PPPL
-    pppl_query = "community_root_name_ssi:Princeton Plasma Physics Laboratory"
-
-    query = { q: pppl_query, fl: '*', format: 'json', sort: 'timestamp desc' }
-
-    solr_response = search_service.repository.search(**query)
-
-    @documents = solr_response.documents
-    respond_to do |format|
-      format.json { render json: @documents }
-    end
-  end
-
   # Create an endpoint for PPPL / OSTI harvesting that provides full datacite records
   def pppl_reporting_feed
     # Limit to items from PPPL
-    pppl_query = "community_root_name_ssi:Princeton Plasma Physics Laboratory"
+    pppl_query = "data_source_ssi:pdc_describe community_root_name_ssi:'Princeton Plasma Physics Laboratory'"
 
     query = { q: pppl_query, fl: 'pdc_describe_json_ss', format: 'json', sort: 'timestamp desc' }
 
