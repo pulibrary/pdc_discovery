@@ -16,24 +16,7 @@ RSpec.describe "PPPL has a harvest endpoint", type: :request do
     indexer.index_one(pppl2)
   end
 
-  # This was the first pass at a PPPL harvesting endpoint.
-  # I'm leaving it in place for now, but we should remove it if Chun decides
-  # he prefers the second endpoint better. --Bess 29 March 2023
-  it "provides data needed for OSTI reporting" do
-    get "/pppl.json"
-    expect(response).to have_http_status(:success)
-    results = JSON.parse(response.body)
-    # There should be 3 records in the index, but only 2 of them are from PPPL
-    expect(results.count).to eq 2
-    # The most recently indexed item (pppl2) should be first
-    first_doi_url = results.first["uri_ssim"].first
-    expect(first_doi_url).to match(JSON.parse(pppl2)["resource"]["doi"])
-    # The data feed should include funders
-    expect(results.first.keys).to include("funders_ss")
-  end
-
-  # This is the second try at a PPPL harvesting endpoint.
-  # Instead of providing solr fields, we provide the entire PDC Describe JSON record.
+  # We provide the entire PDC Describe JSON record in the solr field pdc_describe_json_ss
   it "provides PDC Describe JSON records for OSTI reporting" do
     get "/pppl_reporting_feed.json"
     expect(response).to have_http_status(:success)
