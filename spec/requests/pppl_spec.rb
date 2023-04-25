@@ -18,7 +18,7 @@ RSpec.describe "PPPL has a harvest endpoint", type: :request do
     indexer.index_one(other_data)
     indexer.index_one(pppl3)
 
-    # Note that pppl2 should have the most recent timestamp, since it was indexed last
+    # Note that pppl4 should have the most recent timestamp, since it was indexed last
     indexer.index_one(pppl4)
   end
 
