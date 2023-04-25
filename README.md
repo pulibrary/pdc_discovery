@@ -91,3 +91,12 @@ The deploy will update the configuration for all Solr collections in the given e
 You can view the [Honeybadger Uptime check](https://app.honeybadger.io/projects/95072/sites/d932489f-8a8c-4058-964b-df268f589f5a). Currently it checks every minute and will report downtime when two checks fail in a row (i.e. we should know within 2 minutes).
 
 To be notified of downtime enable notifications in Honeybadger under: Settings + Alerts & Integrtions + email (Edit). Enable notifications for "Uptime Events" for "PDC Discovery Production". Notice that email notifications settings are *per project*.
+
+## PPPL / OSTI data feed
+There is a data feed at `/pppl_reporting_feed.json`.
+It provides a feed of the full JSON blob from PDC Describe for every object tagged as belonging to the Princeton Plasma Physics Laborary group, sorted by most recently updated first. This is so PPPL can harvest data sets to report to OSTI.
+This feed can be paged through using the parameters `per_page` and `page`, like this:
+
+```
+https://pdc-discovery-staging.princeton.edu/discovery/pppl_reporting_feed.json?per_page=2&page=3
+```
