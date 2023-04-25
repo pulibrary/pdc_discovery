@@ -261,9 +261,9 @@ class CatalogController < ApplicationController
     pppl_query = "data_source_ssi:pdc_describe community_root_name_ssi:'Princeton Plasma Physics Laboratory'"
     page = params["page"] || "1"
     per_page = params["per_page"] || "10"
-    start = per_page.to_i * (page.to_i - 1) + 1
+    start = per_page.to_i * (page.to_i - 1)
 
-    query = { q: pppl_query, fl: 'pdc_describe_json_ss', format: 'json', sort: 'timestamp desc', rows: per_page}
+    query = { q: pppl_query, fl: 'pdc_describe_json_ss', format: 'json', sort: 'timestamp desc', rows: per_page, start: start }
 
     solr_response = search_service.repository.search(**query)
 
