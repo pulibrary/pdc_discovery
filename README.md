@@ -94,7 +94,7 @@ To be notified of downtime enable notifications in Honeybadger under: Settings +
 
 ## PPPL / OSTI data feed
 There is a data feed at `/pppl_reporting_feed.json`.
-It provides a feed of the full JSON blob from PDC Describe for every object tagged as belonging to the Princeton Plasma Physics Laborary group, sorted by most recently updated first. This is so PPPL can harvest data sets to report to OSTI.
+It provides a feed of the full JSON blob from PDC Describe for every object tagged as belonging to the Princeton Plasma Physics Laboratory group, sorted by most recently updated first. This is so PPPL can harvest data sets to report to OSTI.
 This feed can be paged through using the parameters `per_page` and `page`, like this:
 
 ```
