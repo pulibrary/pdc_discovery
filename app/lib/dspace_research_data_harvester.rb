@@ -9,9 +9,9 @@ class DspaceResearchDataHarvester
   REST_LIMIT = 100
   CACHE_COMMUNITIES_FILE = Rails.root.join('spec', 'fixtures', 'files', 'dataspace_communities.json')
 
-  def collections_to_index
+  def collections_to_index(collection_config = COLLECTION_CONFIG)
     collections = []
-    CSV.foreach(COLLECTION_CONFIG, quote_char: '"', col_sep: ',', row_sep: :auto, headers: true) do |row|
+    CSV.foreach(collection_config, quote_char: '"', col_sep: ',', row_sep: :auto, headers: true) do |row|
       rdc = ResearchDataCollection.new(row)
       collections << rdc
     end
@@ -53,5 +53,64 @@ class DspaceResearchDataHarvester
       r.harvest(collection)
     end
     Rails.logger.info "Harvesting and indexing research data collections has completed"
+  end
+
+  def migration_csv_headers
+    ["parent_community", "community", "collection_name", "title", "handle", "ark_url", "doi", "curator", "redescribed", "pdc_describe_id", "data_migrated"]
+  end
+
+  def item_title(item_node)
+    item_node.xpath("./name").text.strip
+  end
+
+  def item_handle(item_node)
+    item_node.xpath("./handle").text.strip
+  end
+
+  ##
+  # Sometimes the DSpace "ParentCommunity,Community,CollectionName" has three levels of hierarchy,
+  # sometimes only two. We want the top level to consistently show up as the Parent Community
+  # Given an array with three elements, "ParentCommunity,Community,CollectionName",
+  # if the ParentCommunity=="NA" shift everything left one space and leave CollectionName blank
+  # @param [Array] three_levels
+  # @return [Array]
+  def csv_communities(three_levels)
+    raise "Error assigning parent_community" unless three_levels.count == 3
+    return three_levels if three_levels[0] != "NA"
+    three_levels[0] = three_levels[1]
+    three_levels[1] = three_levels[2]
+    three_levels[2] = ""
+    three_levels
+  end
+
+  ##
+  # Given a collection_id and a file location, produce a migration spreadsheet
+  def produce_migration_spreadsheet(parent_community, community, collection_name, collection_id, tracking_csv)
+    url = "#{server}/collections/#{collection_id}/items"
+
+    resp = Faraday.get(url, {}, { 'Accept': 'application/xml' })
+    xml_doc = Nokogiri::XML(resp.body)
+
+    CSV.open(tracking_csv, "a") do |csv|
+      xml_doc.xpath("/items/item").each do |item_node|
+        handle = item_handle(item_node)
+        collection_hierarchy = csv_communities([parent_community, community, collection_name])
+        everything_else = [item_title(item_node), handle, "https://dataspace.princeton.edu/handle/#{handle}", '', '', '', '', '']
+        csv << collection_hierarchy + everything_else
+      end
+    end
+  end
+
+  ##
+  # Generate a CSV with a row for each DSpace item that needs to be migrated to PDC Describe
+  def produce_full_migration_spreadsheet(tracking_csv, collections_csv)
+    Rails.logger.info "Generating DSpace migration tracking CSV"
+    CSV.open(tracking_csv, "w") do |csv|
+      csv << migration_csv_headers
+    end
+    collections_to_index(collections_csv).each do |collection|
+      # TODO: parent community should be pushed to the left if it is NA
+      produce_migration_spreadsheet(collection.parent_community, collection.community, collection.collection_name, collection.collection_id, tracking_csv)
+    end
   end
 end
