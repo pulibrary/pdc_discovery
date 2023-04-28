@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<items>
+  <item>
+    <expand>metadata
+    </expand>
+    <expand>parentCollection
+    </expand>
+    <expand>parentCollectionList
+    </expand>
+    <expand>parentCommunityList
+    </expand>
+    <expand>bitstreams
+    </expand>
+    <expand>all
+    </expand>
+    <handle>88435/dsp01db78tg111
+    </handle>
+    <id>118127
+    </id>
+    <name>Hyperdiffusion of dust particles in a turbulent tokamak plasma
+    </name>
+    <type>item
+    </type>
+    <archived>true
+    </archived>
+    <lastModified>2021-07-08 15:59:14.185
+    </lastModified>
+    <withdrawn>false
+    </withdrawn>
+  </item>
+</items>
