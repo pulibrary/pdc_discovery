@@ -2,6 +2,8 @@
 
 A discovery portal for Princeton research data. Initially it will provide a better browsing experience for the research data contained in [DataSpace](https://dataspace.princeton.edu).
 
+Please note: While this is open-source software, we would disourage anyone from trying to just check it out and run it. Princeton specifics, from styling to authentication and authorization, are hard coded, and we have not invested any time in the kind of configurabily that would be needed for use at another institution. Instead it should be taken as an example of breaking a monolithic project into separate components, and developing iteratively in response to local user feedback.
+
 [![CircleCI](https://circleci.com/gh/pulibrary/pdc_discovery.svg?style=svg)](https://circleci.com/gh/pulibrary/pdc_discovery)
 [![Coverage Status](https://coveralls.io/repos/github/pulibrary/pdc_discovery/badge.svg?branch=main)](https://coveralls.io/github/pulibrary/pdc_discovery?branch=main)
 
