@@ -216,19 +216,20 @@ module ApplicationHelper
   end
 
   def authors_search_results_helper(field)
-    field[:value].join("; ")
+    field[:document].authors_ordered.map { |author| author["value"] }.join("; ")
   end
 
-  def render_author(name, add_separator)
+  def render_author(author, add_separator)
+    name = author["value"]
     return if name.blank?
 
+    orcid = author.dig("identifier", "value") if author.dig("identifier", "scheme") == "ORCID"
     icon_html = '<i class="bi bi-person-fill"></i>'
     separator = add_separator ? ";" : ""
     name_html = "#{name}#{separator}"
-    if name == 'Koeser, Rebecca Sutton'
-      # Hard-coded for now to demo how researchers with ORCiD will display
+    if orcid
       icon_html = '<img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />'
-      name_html = '<a href="https://orcid.org/0000-0002-8762-8057" target="_blank">' + name + '</a>' + separator
+      name_html = '<a href="https://orcid.org/' + orcid + '" target="_blank">' + name + '</a>' + separator
     end
 
     html = <<-HTML

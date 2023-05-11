@@ -66,6 +66,20 @@ class SolrDocument
     fetch('author_tesim', [])
   end
 
+  def authors_ordered
+    @authors_ordered ||= begin
+      pdc_describe_json = fetch('pdc_describe_json_ss', nil)
+      if pdc_describe_json
+        # Sort the data by the sequence
+        record = JSON.parse(pdc_describe_json)
+        record["resource"]["creators"].sort_by { |creator| creator["sequence"] }
+      else
+        # Do the best we can with DataSpace records
+        authors.map { |name| author_from_name(name) }
+      end
+    end
+  end
+
   # Returns a string with the authors and shortens it if there are more than 2 authors.
   # https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/in_text_citations_author_authors.html
   def authors_et_al
@@ -75,6 +89,20 @@ class SolrDocument
     else
       authors_all.first + " et al."
     end
+  end
+
+  # Create an author hash when we only have an author name (e.g. for records coming from DataSpace)
+  # In this case order/sequence cannot be determined.
+  def author_from_name(name)
+    {
+      "value" => name,
+      "name_type" => "Personal",
+      "given_name" => nil,
+      "family_name" => nil,
+      "identifier" => nil,
+      "affiliations" => [],
+      "sequence" => 0
+    }
   end
 
   def creators

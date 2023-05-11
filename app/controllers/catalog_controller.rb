@@ -111,7 +111,13 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
+
+    # Notice that for the author field we key of the `author_tesim` field but in reality
+    # we render a different value (see the helper). We use `author_tesim` in here because
+    # that is a common field between all our records, the ones coming from DataSpace
+    # and the ones coming from PDC Describe.
     config.add_index_field 'author_tesim', label: 'Author(s)', helper_method: :authors_search_results_helper
+
     config.add_index_field 'format', label: 'Format'
     config.add_index_field 'abstract_tsim', label: 'Abstract'
     config.add_index_field 'published_ssim', label: 'Published'
