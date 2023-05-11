@@ -50,5 +50,25 @@ RSpec.describe SolrDocument do
       expect(doc.file_counts[1]).to eq csv_group
     end
   end
+
+  describe "#authors_ordered" do
+    it "handles order for PDC Describe records" do
+      pdc_describe_data = File.read(File.join(fixture_path, 'files', 'pppl1.json'))
+      doc = described_class.new({ id: "1", pdc_describe_json_ss: pdc_describe_data })
+      expect(doc.authors_ordered.first["sequence"]).to eq 1
+      expect(doc.authors_ordered.first["value"]).to eq "Wang, Yin"
+      expect(doc.authors_ordered.last["sequence"]).to eq 5
+      expect(doc.authors_ordered.last["value"]).to eq "Ji, Hantao"
+      expect(doc.authors_ordered.count).to eq 5
+    end
+
+    it "returns the authors unordered DataSpace records" do
+      doc = described_class.new({ id: "1", author_tesim: ["Eve Tuck", "K. Wayne Yang"] })
+      expect(doc.authors_ordered.first["sequence"]).to eq 0
+      expect(doc.authors_ordered.last["sequence"]).to eq 0
+      expect(doc.authors_ordered.any?{ |author| author["value"] == "Eve Tuck"}).to eq true
+      expect(doc.authors_ordered.count).to eq 2
+    end
+  end
 end
 # rubocop:enable RSpec/ExampleLength
