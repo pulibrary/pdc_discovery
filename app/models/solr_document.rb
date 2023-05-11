@@ -62,20 +62,24 @@ class SolrDocument
     titles.first
   end
 
+  # Returns the list of author names (ordered if possible)
   def authors
-    fetch('author_tesim', [])
+    authors_ordered.map { |author| author["value"] }
   end
 
+  # Returns the list of authors with all their information
+  # including name and ORCID. (ordered if possible)
   def authors_ordered
     @authors_ordered ||= begin
       pdc_describe_json = fetch('pdc_describe_json_ss', nil)
       if pdc_describe_json
-        # Sort the data by the sequence
+        # Get the author data and sort it
         record = JSON.parse(pdc_describe_json)
         record["resource"]["creators"].sort_by { |creator| creator["sequence"] }
       else
         # Do the best we can with DataSpace records
-        authors.map { |name| author_from_name(name) }
+        names = fetch('author_tesim', [])
+        names.map { |name| author_from_name(name) }
       end
     end
   end

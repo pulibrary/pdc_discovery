@@ -22,7 +22,7 @@
           <span itemprop="name"><%= @document.title %></span>
         </h1>
         <% @document.authors_ordered.each_with_index do |author, ix| %>
-          <%= render_author(author, ix < (@document.authors.count-1)) %>
+          <%= render_author(author, ix < (@document.authors_ordered.count-1)) %>
         <% end %>
       </div>
     </header>
