@@ -54,7 +54,8 @@ RSpec.describe SolrDocument do
   describe "#authors_ordered" do
     it "handles order for PDC Describe records" do
       pdc_describe_data = File.read(File.join(fixture_path, 'files', 'pppl1.json'))
-      doc = described_class.new({ id: "1", pdc_describe_json_ss: pdc_describe_data })
+      pdc_authors = pdc_describe_data["resource"]["creators"].to_json
+      doc = described_class.new({ id: "1", authors_json_ss: pdc_authors })
       expect(doc.authors_ordered.first["sequence"]).to eq 1
       expect(doc.authors_ordered.first["value"]).to eq "Wang, Yin"
       expect(doc.authors_ordered.last["sequence"]).to eq 5

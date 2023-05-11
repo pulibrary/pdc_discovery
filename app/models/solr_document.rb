@@ -71,13 +71,15 @@ class SolrDocument
   # including name and ORCID. (ordered if possible)
   def authors_ordered
     @authors_ordered ||= begin
-      pdc_describe_json = fetch('pdc_describe_json_ss', nil)
-      if pdc_describe_json
-        # Get the author data and sort it
-        record = JSON.parse(pdc_describe_json)
-        record["resource"]["creators"].sort_by { |creator| creator["sequence"] }
+      authors_json = fetch('authors_json_ss', nil)
+      if authors_json
+        # PDC Describe records contain this field;
+        # det the author data and sort it.
+        authors = JSON.parse(authors_json)
+        authors.sort_by { |creator| creator["sequence"] }
       else
-        # Do the best we can with DataSpace records
+        # DataSpace record don't contain this field;
+        # do the best we can with author_tesim value.
         names = fetch('author_tesim', [])
         names.map { |name| author_from_name(name) }
       end
