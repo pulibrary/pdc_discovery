@@ -223,7 +223,7 @@ module ApplicationHelper
     name = author["value"]
     return if name.blank?
 
-    orcid = author.dig("identifier", "value") if author.dig("identifier", "scheme") == "ORCID"
+    orcid = author.dig("identifier", "value") if author.dig("identifier", "scheme")&.upcase  == "ORCID"
     icon_html = '<i class="bi bi-person-fill"></i>'
     separator = add_separator ? ";" : ""
     name_html = "#{name}#{separator}"
