@@ -2,9 +2,16 @@
 
 namespace :index do
   desc 'Delete index and re-index all research data'
+  task research_data_clean_slate: :environment do
+    Rails.logger.info "Deleting all Solr documents"
+    Rake::Task['index:delete_solr_all'].invoke
+    Rails.logger.info "Deleted all Solr documents"
+    Rake::Task['index:research_data'].invoke
+  end
+
+  desc 'Re-index all research data (without deleting first)'
   task research_data: :environment do
     Rails.logger.info "Research Data indexing started"
-    Rake::Task['index:delete_solr_all'].invoke
     Rake::Task['index:pdc_describe_research_data'].invoke
     Rake::Task['index:dspace_research_data'].invoke
     Rails.logger.info "Research Data indexing completed"
