@@ -66,7 +66,7 @@ RSpec.describe SolrDocument do
       doc = described_class.new({ id: "1", author_tesim: ["Eve Tuck", "K. Wayne Yang"] })
       expect(doc.authors_ordered.first["sequence"]).to eq 0
       expect(doc.authors_ordered.last["sequence"]).to eq 0
-      expect(doc.authors_ordered.any?{ |author| author["value"] == "Eve Tuck"}).to eq true
+      expect(doc.authors_ordered.any? { |author| author["value"] == "Eve Tuck" }).to eq true
       expect(doc.authors_ordered.count).to eq 2
     end
   end
