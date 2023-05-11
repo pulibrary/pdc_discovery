@@ -83,6 +83,13 @@ to_field 'author_ssim' do |record, accumulator, _c|
   accumulator.concat author_names
 end
 
+# Extract the author data from the pdc_describe_json and save it on its own field as JSON
+to_field 'authors_json_ss' do |record, accumulator, _c|
+  pdc_json = record.xpath("/hash/pdc_describe_json/text()").first.content
+  authors = JSON.parse(pdc_json).dig("resource", "creators") || []
+  accumulator.concat [authors.to_json]
+end
+
 # ==================
 # title fields
 to_field 'title_tesim' do |record, accumulator, _c|

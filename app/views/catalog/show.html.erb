@@ -21,8 +21,8 @@
         <h1 class="index_title document-title-heading col">
           <span itemprop="name"><%= @document.title %></span>
         </h1>
-        <% @document.authors.each_with_index do |author, ix| %>
-          <%= render_author(author, ix < (@document.authors.count-1)) %>
+        <% @document.authors_ordered.each_with_index do |author, ix| %>
+          <%= render_author(author, ix < (@document.authors_ordered.count-1)) %>
         <% end %>
       </div>
     </header>
@@ -48,7 +48,6 @@
         <dd class="col-md-12 abstract-container">
           <div class="document-abstract">
             <header>Abstract:</header>
-            
             <p id="document-abstract-text" class="truncate-line-clamp"><%== Rinku.auto_link(abstract, mode=:all, link_attr=nil, skip_tags=nil) %></p>
             <a id="document-abstract-text-toggle" href="#"><i class="bi bi-caret-down"></i><span>Show More</span></a>
           </div>

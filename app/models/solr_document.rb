@@ -62,8 +62,28 @@ class SolrDocument
     titles.first
   end
 
+  # Returns the list of author names (ordered if possible)
   def authors
-    fetch('author_tesim', [])
+    authors_ordered.map { |author| author["value"] }
+  end
+
+  # Returns the list of authors with all their information
+  # including name and ORCID. (ordered if possible)
+  def authors_ordered
+    @authors_ordered ||= begin
+      authors_json = fetch('authors_json_ss', nil)
+      if authors_json
+        # PDC Describe records contain this field;
+        # det the author data and sort it.
+        authors = JSON.parse(authors_json)
+        authors.sort_by { |creator| creator["sequence"] }
+      else
+        # DataSpace record don't contain this field;
+        # do the best we can with author_tesim value.
+        names = fetch('author_tesim', [])
+        names.map { |name| author_from_name(name) }
+      end
+    end
   end
 
   # Returns a string with the authors and shortens it if there are more than 2 authors.
@@ -75,6 +95,20 @@ class SolrDocument
     else
       authors_all.first + " et al."
     end
+  end
+
+  # Create an author hash when we only have an author name (e.g. for records coming from DataSpace)
+  # In this case order/sequence cannot be determined.
+  def author_from_name(name)
+    {
+      "value" => name,
+      "name_type" => "Personal",
+      "given_name" => nil,
+      "family_name" => nil,
+      "identifier" => nil,
+      "affiliations" => [],
+      "sequence" => 0
+    }
   end
 
   def creators
