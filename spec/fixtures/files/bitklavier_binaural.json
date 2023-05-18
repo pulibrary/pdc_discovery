@@ -100,7 +100,7 @@
             "url": "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.80021/3m1k-6036/122/file2.txt"
         }
     ],
-    "collection": {
+    "group": {
         "title": "Research Data",
         "description": null,
         "code": "RD",

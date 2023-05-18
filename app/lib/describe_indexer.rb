@@ -46,7 +46,7 @@ class DescribeIndexer
   def prep_for_indexing(json)
     xml = JSON.parse(json).to_xml
     doc = Nokogiri::XML(xml)
-    collection_node = doc.at('collection')
+    collection_node = doc.at('group')
     cdata = Nokogiri::XML::CDATA.new(doc, json)
     collection_node.add_next_sibling("<pdc_describe_json></pdc_describe_json>")
     pdc_describe_json_node = doc.at('pdc_describe_json')

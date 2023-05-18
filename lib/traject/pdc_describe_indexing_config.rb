@@ -53,9 +53,9 @@ end
 
 # ==================
 # Community and Collections fields
-to_field 'community_name_ssi', extract_xpath("/hash/collection/title")
-to_field 'community_root_name_ssi', extract_xpath("/hash/collection/title")
-to_field 'community_path_name_ssi', extract_xpath("/hash/collection/title")
+to_field 'community_name_ssi', extract_xpath("/hash/group/title")
+to_field 'community_root_name_ssi', extract_xpath("/hash/group/title")
+to_field 'community_path_name_ssi', extract_xpath("/hash/group/title")
 
 to_field 'collection_tag_ssim' do |record, accumulator, _c|
   collection_tags = record.xpath("/hash/resource/collection-tags/collection-tag").map(&:text)

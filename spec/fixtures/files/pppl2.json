@@ -83,7 +83,7 @@
             "url": "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.5281/zenodo.7507006/209/works-12.rss"
         }
     ],
-    "collection": {
+    "group": {
         "title": "Princeton Plasma Physics Laboratory",
         "description": "",
         "code": "PPPL",
