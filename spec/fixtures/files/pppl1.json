@@ -27,7 +27,11 @@
                 "name_type": "Personal",
                 "given_name": "Erik",
                 "family_name": "Gilson",
-                "identifier": null,
+                "identifier": {
+                    "value": "0000-0001-6820-9132",
+                    "scheme": "ORCID",
+                    "scheme_uri": "https://orcid.org"
+                },
                 "affiliations": [],
                 "sequence": 2
             },
@@ -36,7 +40,11 @@
                 "name_type": "Personal",
                 "given_name": "Fatima",
                 "family_name": "Ebrahimi",
-                "identifier": null,
+                "identifier": {
+                    "value": "0000-0003-3109-5367",
+                    "scheme": "ORCID",
+                    "scheme_uri": "https://orcid.org"
+                },
                 "affiliations": [],
                 "sequence": 3
             },
@@ -45,7 +53,11 @@
                 "name_type": "Personal",
                 "given_name": "Jeremy",
                 "family_name": "Goodman",
-                "identifier": null,
+                "identifier": {
+                    "value": "0000-0002-6710-7748",
+                    "scheme": "ORCID",
+                    "scheme_uri": "https://orcid.org"
+                },
                 "affiliations": [],
                 "sequence": 4
             },
@@ -54,7 +66,11 @@
                 "name_type": "Personal",
                 "given_name": "Hantao",
                 "family_name": "Ji",
-                "identifier": null,
+                "identifier": {
+                    "value": "0000-0001-9600-9963",
+                    "scheme": "ORCID",
+                    "scheme_uri": "https://orcid.org"
+                },
                 "affiliations": [],
                 "sequence": 5
             }
@@ -71,8 +87,79 @@
             "name": "Creative Commons Attribution 4.0 International"
         },
         "version_number": "1",
-        "related_objects": [],
-        "keywords": [],
+        "related_objects": [
+            {
+                "related_identifier": "10.1103/PhysRevLett.129.115001",
+                "related_identifier_type": "DOI",
+                "relation_type": "IsCitedBy",
+                "valid_type_values": [
+                    "ARK",
+                    "arXiv",
+                    "bibcode",
+                    "DOI",
+                    "EAN13",
+                    "EISSN",
+                    "Handle",
+                    "ISBN",
+                    "ISSN",
+                    "ISTC",
+                    "LISSN",
+                    "LSID",
+                    "PMID",
+                    "PURL",
+                    "UPC",
+                    "URL",
+                    "URN",
+                    "IGSN",
+                    "w3id"
+                ],
+                "valid_related_identifier_type": true,
+                "valid_relationship_types": [
+                    "IsCitedBy",
+                    "Cites",
+                    "IsSupplementTo",
+                    "IsSupplementedBy",
+                    "IsContinuedBy",
+                    "Continues",
+                    "HasMetadata",
+                    "IsMetadataFor",
+                    "IsNewVersionOf",
+                    "IsPreviousVersionOf",
+                    "HasVersion",
+                    "IsVersionOf",
+                    "IsPartOf",
+                    "HasPart",
+                    "IsReferencedBy",
+                    "References",
+                    "IsDocumentedBy",
+                    "Documents",
+                    "IsCompiledBy",
+                    "Compiles",
+                    "IsVariantFormOf",
+                    "IsOriginalFormOf",
+                    "IsIdenticalTo",
+                    "IsReviewedBy",
+                    "Reviews",
+                    "IsDerivedFrom",
+                    "IsSourceOf",
+                    "IsObsoletedBy",
+                    "Obsoletes",
+                    "IsDescribedBy",
+                    "Describes",
+                    "IsRequiredBy",
+                    "Requires"
+                ],
+                "valid_relation_type": true,
+                "errors": []
+            }
+        ],
+        "keywords": [
+            "magnetorotational instability",
+            "taylor-couette flow",
+            "liquid metal",
+            "mhd instability",
+            "accretion disk"
+        ],
         "contributors": [],
         "organizational_contributors": [],
         "funders": [
@@ -95,20 +182,15 @@
                 "award_uri": ""
             }
         ],
-        "domains": []
+        "domains": [],
+        "migrated": true
     },
-    "files": [
-        {
-            "filename": "10.11578/1888278/210/works-12.rss",
-            "size": 1187,
-            "url": "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.11578/1888278/210/works-12.rss"
-        }
-    ],
+    "files": [],
     "group": {
-        "title": "Princeton Plasma Physics Laboratory",
+        "title": "Princeton Plasma Physics Lab (PPPL)",
         "description": "",
         "code": "PPPL",
         "created_at": "2022-04-18T11:27:37.363-04:00",
-        "updated_at": "2022-04-27T16:59:55.756-04:00"
+        "updated_at": "2023-05-18T14:34:30.737-04:00"
     }
 }

@@ -27,7 +27,11 @@
                 "name_type": "Personal",
                 "given_name": "Maasaki",
                 "family_name": "Yamada",
-                "identifier": null,
+                "identifier": {
+                    "value": "0000-0003-4996-1649",
+                    "scheme": "ORCID",
+                    "scheme_uri": "https://orcid.org"
+                },
                 "affiliations": [],
                 "sequence": 2
             },
@@ -36,7 +40,11 @@
                 "name_type": "Personal",
                 "given_name": "Hantao",
                 "family_name": "Ji",
-                "identifier": null,
+                "identifier": {
+                    "value": "0000-0001-9600-9963",
+                    "scheme": "ORCID",
+                    "scheme_uri": "https://orcid.org"
+                },
                 "affiliations": [],
                 "sequence": 3
             },
@@ -45,7 +53,11 @@
                 "name_type": "Personal",
                 "given_name": "Jongsoo",
                 "family_name": "Yoo",
-                "identifier": null,
+                "identifier": {
+                    "value": "0000-0003-3881-1995",
+                    "scheme": "ORCID",
+                    "scheme_uri": "https://orcid.org"
+                },
                 "affiliations": [],
                 "sequence": 4
             },
@@ -54,7 +66,11 @@
                 "name_type": "Personal",
                 "given_name": "William",
                 "family_name": "Fox",
-                "identifier": null,
+                "identifier": {
+                    "value": "0000-0001-6289-858X",
+                    "scheme": "ORCID",
+                    "scheme_uri": "https://orcid.org"
+                },
                 "affiliations": [],
                 "sequence": 5
             },
@@ -63,7 +79,11 @@
                 "name_type": "Personal",
                 "given_name": "Jonathan",
                 "family_name": "Jara-Almonte",
-                "identifier": null,
+                "identifier": {
+                    "value": "0000-0003-0760-6198",
+                    "scheme": "ORCID",
+                    "scheme_uri": "https://orcid.org"
+                },
                 "affiliations": [],
                 "sequence": 6
             },
@@ -115,35 +135,15 @@
                 "award_uri": ""
             }
         ],
-        "domains": []
+        "domains": [],
+        "migrated": true
     },
-    "files": [
-        {
-            "filename": "10.11578/1366453/280/Myers_Nature_Archive.zip",
-            "size": 31509688,
-            "url": "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.11578/1366453/280/Myers_Nature_Archive.zip"
-        },
-        {
-            "filename": "10.11578/1366453/280/license.txt",
-            "size": 3223,
-            "url": "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.11578/1366453/280/license.txt"
-        },
-        {
-            "filename": "10.11578/1366453/280/readme.pdf",
-            "size": 102305,
-            "url": "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.11578/1366453/280/readme.pdf"
-        },
-        {
-            "filename": "10.11578/1366453/280/readme.pdf.txt",
-            "size": 8486,
-            "url": "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.11578/1366453/280/readme.pdf.txt"
-        }
-    ],
+    "files": [],
     "group": {
-        "title": "Princeton Plasma Physics Laboratory",
+        "title": "Princeton Plasma Physics Lab (PPPL)",
         "description": "",
         "code": "PPPL",
         "created_at": "2022-04-18T11:27:37.363-04:00",
-        "updated_at": "2022-04-27T16:59:55.756-04:00"
+        "updated_at": "2023-05-18T14:34:30.737-04:00"
     }
 }

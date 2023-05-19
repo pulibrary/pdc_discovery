@@ -54,7 +54,11 @@
                 "name_type": "Personal",
                 "given_name": "Ji",
                 "family_name": "Hantao",
-                "identifier": null,
+                "identifier": {
+                    "value": "0000-0001-9600-9963",
+                    "scheme": "ORCID",
+                    "scheme_uri": "https://orcid.org"
+                },
                 "affiliations": [],
                 "sequence": 5
             },
@@ -81,7 +85,11 @@
                 "name_type": "Personal",
                 "given_name": "Ren",
                 "family_name": "Yang",
-                "identifier": null,
+                "identifier": {
+                    "value": "0000-0003-4571-9046",
+                    "scheme": "ORCID",
+                    "scheme_uri": "https://orcid.org"
+                },
                 "affiliations": [],
                 "sequence": 8
             },
@@ -99,7 +107,11 @@
                 "name_type": "Personal",
                 "given_name": "Fox",
                 "family_name": "William",
-                "identifier": null,
+                "identifier": {
+                    "value": "0000-0001-6289-858X",
+                    "scheme": "ORCID",
+                    "scheme_uri": "https://orcid.org"
+                },
                 "affiliations": [],
                 "sequence": 10
             },
@@ -108,7 +120,11 @@
                 "name_type": "Personal",
                 "given_name": "Yamada",
                 "family_name": "Masaaki",
-                "identifier": null,
+                "identifier": {
+                    "value": "0000-0003-4996-1649",
+                    "scheme": "ORCID",
+                    "scheme_uri": "https://orcid.org"
+                },
                 "affiliations": [],
                 "sequence": 11
             },
@@ -117,7 +133,11 @@
                 "name_type": "Personal",
                 "given_name": "Alt",
                 "family_name": "Andrew",
-                "identifier": null,
+                "identifier": {
+                    "value": "0000-0001-9475-8282",
+                    "scheme": "ORCID",
+                    "scheme_uri": "https://orcid.org"
+                },
                 "affiliations": [],
                 "sequence": 12
             },
@@ -268,50 +288,15 @@
                 "award_uri": ""
             }
         ],
-        "domains": []
+        "domains": [],
+        "migrated": true
     },
-    "files": [
-        {
-            "filename": "10.11578/1814938/285/fig1.cdf",
-            "size": 3996,
-            "url": "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.11578/1814938/285/fig1.cdf"
-        },
-        {
-            "filename": "10.11578/1814938/285/fig2.cdf",
-            "size": 4532,
-            "url": "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.11578/1814938/285/fig2.cdf"
-        },
-        {
-            "filename": "10.11578/1814938/285/fig3.cdf",
-            "size": 10340,
-            "url": "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.11578/1814938/285/fig3.cdf"
-        },
-        {
-            "filename": "10.11578/1814938/285/fig4.cdf",
-            "size": 10844,
-            "url": "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.11578/1814938/285/fig4.cdf"
-        },
-        {
-            "filename": "10.11578/1814938/285/license.txt",
-            "size": 3223,
-            "url": "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.11578/1814938/285/license.txt"
-        },
-        {
-            "filename": "10.11578/1814938/285/readme.pdf",
-            "size": 111345,
-            "url": "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.11578/1814938/285/readme.pdf"
-        },
-        {
-            "filename": "10.11578/1814938/285/readme.pdf.txt",
-            "size": 5838,
-            "url": "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.11578/1814938/285/readme.pdf.txt"
-        }
-    ],
+    "files": [],
     "group": {
-      "title": "Princeton Plasma Physics Laboratory",
-      "description": "",
-      "code": "PPPL",
-      "created_at": "2022-04-18T11:27:37.363-04:00",
-      "updated_at": "2022-04-27T16:59:55.756-04:00"
+        "title": "Princeton Plasma Physics Lab (PPPL)",
+        "description": "",
+        "code": "PPPL",
+        "created_at": "2022-04-18T11:27:37.363-04:00",
+        "updated_at": "2023-05-18T14:34:30.737-04:00"
     }
 }
