@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# Require ImportHelper so we can get the solr leader
+require ::Rails.root.join('lib', 'traject', 'import_helper.rb')
+
 namespace :index do
   desc 'Delete index and re-index all research data'
   task research_data_clean_slate: :environment do
@@ -21,7 +24,8 @@ namespace :index do
   task dspace_research_data: :environment do
     Rails.logger.info "Harvesting and indexing DataSpace research data collections started"
     DspaceResearchDataHarvester.harvest(false)
-    Blacklight.default_index.connection.commit
+    solr = RSolr.connect url: ::ImportHelper.solr_leader_url
+    solr.commit
     Rails.logger.info "Harvesting and indexing DataSpace research data collections completed"
   end
 
@@ -29,15 +33,17 @@ namespace :index do
   task pdc_describe_research_data: :environment do
     Rails.logger.info "Harvesting and indexing PDC Describe data started"
     DescribeIndexer.new.index
-    Blacklight.default_index.connection.commit
+    solr = RSolr.connect url: ::ImportHelper.solr_leader_url
+    solr.commit
     Rails.logger.info "Harvesting and indexing PDC Describe data completed"
   end
 
   desc 'Remove all indexed Documents from Solr'
   task delete_solr_all: :environment do
     Rails.logger.info "Deleting all Solr documents"
-    Blacklight.default_index.connection.delete_by_query('*:*')
-    Blacklight.default_index.connection.commit
+    solr = RSolr.connect url: ::ImportHelper.solr_leader_url
+    solr.delete_by_query('*:*')
+    solr.commit
   end
 
   desc 'Fetches the most recent community information from DataSpace and saves it to a file.'
