@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# Require ImportHelper so we can get the solr leader
+require ::Rails.root.join('lib', 'traject', 'import_helper.rb')
+
 namespace :index do
   desc 'Delete index and re-index all research data'
   task research_data_clean_slate: :environment do
@@ -45,5 +48,19 @@ namespace :index do
     cache_file = ENV['COMMUNITIES_FILE'] || './spec/fixtures/files/dataspace_communities.json'
     communities = DataspaceCommunities.new
     File.write(cache_file, JSON.pretty_generate(communities.tree))
+  end
+
+  task get_solr_writer: :environment do
+    puts "--"
+    puts Blacklight.default_index.connection.uri
+    puts ImportHelper.solr_writer_url
+  end
+
+  task update_solr_writer: :environment do
+    puts "--"
+    puts Blacklight.default_index.connection.uri
+    new_writer_url = ImportHelper.solr_writer_url
+    puts new_writer_url
+    puts ImportHelper.update_solr_alias(Blacklight.default_index.connection.uri, new_writer_url)
   end
 end

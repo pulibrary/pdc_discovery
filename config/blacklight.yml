@@ -1,7 +1,7 @@
 load_defaults: 7.19.2
 development:
   adapter: solr
-  url: <%= ENV['SOLR_URL'] || "http://#{ENV['lando_pdc_development_solr_conn_host']}:#{ENV['lando_pdc_development_solr_conn_port']}/solr/pdc-core-dev" %>
+  url: <%= "http://localhost:9000/solr/pdc-discovery-staging-hector" %>
 test: &test
   adapter: solr
   url: <%= ENV['SOLR_URL'] ||  "http://#{ENV['lando_pdc_test_solr_conn_host']}:#{ENV['lando_pdc_test_solr_conn_port']}/solr/pdc-core-test" %>
