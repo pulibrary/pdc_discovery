@@ -1,17 +1,14 @@
 load_defaults: 7.19.2
 development:
   adapter: solr
-  url: <%= "http://localhost:9000/solr/pdc-discovery-staging-hector" %>
-  xurl: <%= ENV['SOLR_URL'] || "http://#{ENV['lando_pdc_development_solr_conn_host']}:#{ENV['lando_pdc_development_solr_conn_port']}/solr/pdc-core-dev" %>
-  solr_config_set: pdc-discovery-staging
+  url: <%= ENV['SOLR_URL'] || "http://#{ENV['lando_pdc_development_solr_conn_host']}:#{ENV['lando_pdc_development_solr_conn_port']}/solr/pdc-core-dev" %>
 test: &test
   adapter: solr
   url: <%= ENV['SOLR_URL'] ||  "http://#{ENV['lando_pdc_test_solr_conn_host']}:#{ENV['lando_pdc_test_solr_conn_port']}/solr/pdc-core-test" %>
-  solr_config_set: pdc-discovery-test
 production:
   adapter: solr
   url: <%= ENV['SOLR_URL'] %>
-  solr_config_set: pdc-discovery-prod
+  solr_config_set: pdc-discovery-production
 staging:
   adapter: solr
   url: <%= ENV['SOLR_URL'] %>

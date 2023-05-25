@@ -10,7 +10,7 @@ require_relative './import_helper'
 ##
 # If you need to debug PDC Describe indexing, change the log level to Logger::DEBUG
 settings do
-  provide 'solr.url', Blacklight.default_index.connection.uri.to_s
+  provide 'solr.url', SolrCloudHelper.collection_writer_url
   provide 'reader_class_name', 'Traject::NokogiriReader'
   provide 'solr_writer.commit_on_close', 'true'
   provide 'repository', ENV['REPOSITORY_ID']
