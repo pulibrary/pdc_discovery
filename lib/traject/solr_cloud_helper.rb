@@ -3,7 +3,6 @@
 # rubocop:disable Style/ClassVars (OK here since we are not inheriting this class)
 # https://rubydoc.info/gems/rubocop/RuboCop/Cop/Style/ClassVars
 class SolrCloudHelper
-
   def self.alias_uri
     Blacklight.default_index.connection.uri
   end
@@ -63,8 +62,6 @@ class SolrCloudHelper
         # Re-create it
         delete_collection!(solr_alias_uri, alternate_collection)
         create_collection(solr_alias_uri, alternate_collection)
-      else
-        # Use the existing one
       end
     else
       # Create it
@@ -116,10 +113,10 @@ class SolrCloudHelper
     )
     response = HTTParty.get(collection_list_query.to_s)
     collections = if response.code == 200
-      response.parsed_response.dig("collections") || []
-    else
-      []
-    end
+                    response.parsed_response.dig("collections") || []
+                  else
+                    []
+                  end
     collections.any?(collection_name)
   end
 
@@ -132,11 +129,7 @@ class SolrCloudHelper
       query: "action=CREATE&name=#{collection_name}&collection.configName=#{config_set}&numShards=1&replicationFactor=2"
     )
     response = HTTParty.get(create_query.to_s)
-    if response.parsed_response.has_key?("success")
-      collection_name
-    else
-      nil
-    end
+    response.parsed_response.key?("success") ? collection_name : nil
   end
 
   def self.delete_collection!(solr_alias_uri, collection_name)
