@@ -6,6 +6,7 @@ require 'traject/nokogiri_reader'
 require 'blacklight'
 require_relative './domain'
 require_relative './import_helper'
+require_relative './solr_cloud_helper'
 
 ##
 # If you need to debug PDC Describe indexing, change the log level to Logger::DEBUG
