@@ -4,7 +4,6 @@
 # https://rubydoc.info/gems/rubocop/RuboCop/Cop/Style/ClassVars
 class ImportHelper
   @@solr_leader_url = nil
-  @@solr_writer_url = nil
 
   def self.uri_with_prefix(prefix, value)
     return nil if value.blank?
@@ -14,98 +13,6 @@ class ImportHelper
   def self.solr_leader_url
     @@solr_leader_url ||= solr_leader_for_uri(Blacklight.default_index.connection.uri)
   end
-
-  def self.solr_writer_url
-    solr_config_name = "pdc-discovery-staging"
-    @@solr_writer_url ||= solr_writer_for_uri(Blacklight.default_index.connection.uri, solr_config_name)
-  end
-
-  def self.solr_writer_for_uri(solr_uri, solr_config_name)
-    byebug
-    alternate_collection = alternate_collection_for_alias(solr_uri)
-    if collection_exist?(solr_uri, alternate_collection)
-      alternate_collection
-    else
-      create_collection(solr_uri, alternate_collection, solr_config_name)
-    end
-  end
-
-  # solr_uri = http://xxx/solr/pdc-discovery-staging
-  def self.current_collection_for_alias(solr_uri)
-    alias_name = solr_uri.path.split("/").last
-    alias_list_query = URI::HTTP.build(
-      schema: solr_uri.scheme,
-      host: solr_uri.host,
-      port: solr_uri.port,
-      path: "/solr/admin/collections",
-      query: "action=LISTALIASES"
-    )
-    response = HTTParty.get(alias_list_query.to_s)
-    # The response will indicate the actual collection the alias points to.
-    collection_name = response.parsed_response.dig("aliases", alias_name) if response.code == 200
-    collection_name || alias_name
-  end
-
-  # solr_uri = http://xxx/solr/pdc-discovery-staging
-  # returns pdc-discovery-staging-N (or pdc-discovery-staging)
-  def self.alternate_collection_for_alias(solr_uri)
-    solr_collection = current_collection_for_alias(solr_uri)
-    if solr_collection.end_with?("-1")
-      solr_collection.gsub("-1", "-2")
-    elsif solr_collection.end_with?("-2")
-      solr_collection.gsub("-2", "-1")
-    else
-      solr_collection
-    end
-  end
-
-  def self.collection_exist?(solr_uri, collection_name)
-    collection_list_query = URI::HTTP.build(
-      schema: solr_uri.scheme,
-      host: solr_uri.host,
-      port: solr_uri.port,
-      path: "/solr/admin/collections",
-      query: "action=LIST"
-    )
-    response = HTTParty.get(collection_list_query.to_s)
-    collections = if response.code == 200
-      response.parsed_response.dig("collections") || []
-    else
-      []
-    end
-    collections.any?(collection_name)
-  end
-
-  def self.create_collection(solr_uri, collection_name, config_name)
-    create_query = URI::HTTP.build(
-      schema: solr_uri.scheme,
-      host: solr_uri.host,
-      port: solr_uri.port,
-      path: "/solr/admin/collections",
-      query: "action=CREATE&name=#{collection_name}&collection.configName=#{config_name}&numShards=1&replicationFactor=2"
-    )
-    response = HTTParty.get(create_query.to_s)
-    if response.parsed_response.has_key?("success")
-      collection_name
-    else
-      nil
-    end
-  end
-
-  def self.update_solr_alias(solr_uri, collection_name)
-    alias_name = solr_uri.path.split("/").last
-    create_query = URI::HTTP.build(
-      schema: solr_uri.scheme,
-      host: solr_uri.host,
-      port: solr_uri.port,
-      path: "/solr/admin/collections",
-      query: "action=CREATEALIAS&name=#{alias_name}&collections=#{collection_name}"
-    )
-    response = HTTParty.get(create_query.to_s)
-    byebug
-    true
-  end
-
 
   # Finds the Solr collection that a Solr URI maps to.
   #

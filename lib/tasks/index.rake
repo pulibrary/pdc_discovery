@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Require ImportHelper so we can get the solr leader
-require ::Rails.root.join('lib', 'traject', 'import_helper.rb')
+require ::Rails.root.join('lib', 'traject', 'solr_cloud_helper.rb')
 
 namespace :index do
   desc 'Delete index and re-index all research data'
@@ -50,17 +50,16 @@ namespace :index do
     File.write(cache_file, JSON.pretty_generate(communities.tree))
   end
 
-  task get_solr_writer: :environment do
-    puts "--"
-    puts Blacklight.default_index.connection.uri
-    puts ImportHelper.solr_writer_url
+  desc 'Prints to console the current Solr URLs and how they are configured'
+  task print_solr_urls: :environment do
+    puts "Solr alias.: #{Blacklight.default_index.connection.uri}"
+    puts "Solr reader: #{SolrCloudHelper.collection_reader_url}"
+    puts "Solr writer: #{SolrCloudHelper.collection_writer_url}"
   end
 
-  task update_solr_writer: :environment do
-    puts "--"
-    puts Blacklight.default_index.connection.uri
-    new_writer_url = ImportHelper.solr_writer_url
-    puts new_writer_url
-    puts ImportHelper.update_solr_alias(Blacklight.default_index.connection.uri, new_writer_url)
+  desc 'Updates the Solr alias to point to the writer URL (toggles from reader to writer)'
+  task toggle_solr_writer: :environment do
+    SolrCloudHelper.toggle_solr_writer!
+    Rake::Task['index:print_solr_urls'].invoke
   end
 end
