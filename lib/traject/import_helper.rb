@@ -30,7 +30,7 @@ class ImportHelper
   # and that record was imported from PDC Describe.
   def self.pdc_describe_match_by_uri?(solr_url, uri)
     return false if uri.nil?
-    solr_query = "#{solr_url}select?q=data_source_ssi:pdc_describe+AND+uri_ssim:\"#{uri}\""
+    solr_query = File.join(solr_url, "select?q=data_source_ssi:pdc_describe+AND+uri_ssim:\"#{uri}\"")
     response = HTTParty.get(solr_query)
     response.parsed_response["response"]["numFound"] != 0
   end
