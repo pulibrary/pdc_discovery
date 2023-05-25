@@ -24,5 +24,5 @@
 set :job_template, "bash -l -c 'export PATH=\"/usr/local/bin/:$PATH\" && :job'"
 
 every :day, at: '12:20am', roles: [:reindex] do
-  rake "index:research_data_clean_slate"
+  rake "index:research_data"
 end
