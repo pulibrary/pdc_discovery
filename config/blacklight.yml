@@ -5,6 +5,7 @@ development:
 test: &test
   adapter: solr
   url: <%= ENV['SOLR_URL'] ||  "http://#{ENV['lando_pdc_test_solr_conn_host']}:#{ENV['lando_pdc_test_solr_conn_port']}/solr/pdc-core-test" %>
+  solr_config_set: pdc-discovery-test
 production:
   adapter: solr
   url: <%= ENV['SOLR_URL'] %>
