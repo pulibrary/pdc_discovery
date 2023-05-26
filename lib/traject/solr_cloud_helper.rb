@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/ClassLength
 class SolrCloudHelper
   def self.alias_uri
     Blacklight.default_index.connection.uri
@@ -127,7 +128,8 @@ class SolrCloudHelper
       query: "action=CREATE&name=#{collection_name}&collection.configName=#{config_set}&numShards=1&replicationFactor=2"
     )
     response = HTTParty.get(create_query.to_s)
-    response.parsed_response.key?("success") ? collection_name : nil
+    return unless response.code == 200 && response.parsed_response.key?("success")
+    collection_name
   end
 
   def self.delete_collection!(solr_alias_uri, collection_name)
@@ -164,3 +166,4 @@ class SolrCloudHelper
     response.code == 200
   end
 end
+# rubocop:enable Metrics/ClassLength
