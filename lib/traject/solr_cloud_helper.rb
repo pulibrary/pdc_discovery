@@ -148,7 +148,7 @@ class SolrCloudHelper
   end
 
   # Build a URI using another URI as the base.
-  def self.build_uri(base_uri:, path:, query:)
+  def self.build_uri(base_uri:, path:, query: nil)
     URI::HTTP.build(
       schema: base_uri.scheme,
       userinfo: base_uri.userinfo,
