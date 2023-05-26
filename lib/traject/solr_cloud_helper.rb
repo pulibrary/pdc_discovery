@@ -156,7 +156,7 @@ class SolrCloudHelper
     response.code == 200
   end
 
-  def uri_from_solr_alias(path:, query:)
+  def self.uri_from_solr_alias(path:, query:)
     URI::HTTP.build(
       schema: solr_alias_uri.scheme,
       userinfo: solr_alias.userinfo,
