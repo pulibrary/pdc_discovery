@@ -10,7 +10,7 @@ RSpec.describe SolrCloudHelper do
 
   before do
     stub_request(:get, "http://fake-solr/solr/admin/collections?action=LIST")
-    .to_return(status: 200, body: solr_collection_list, headers: { 'content-type' => 'application/json; charset=utf-8' })
+      .to_return(status: 200, body: solr_collection_list, headers: { 'content-type' => 'application/json; charset=utf-8' })
   end
 
   describe "#collection_exist?" do
