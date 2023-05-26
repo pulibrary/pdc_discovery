@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# rubocop:disable Style/ClassVars (OK here since we are not inheriting this class)
-# https://rubydoc.info/gems/rubocop/RuboCop/Cop/Style/ClassVars
 class SolrCloudHelper
   def self.alias_uri
     Blacklight.default_index.connection.uri
@@ -166,4 +164,3 @@ class SolrCloudHelper
     response.code == 200
   end
 end
-# rubocop:enable Style/ClassVars
