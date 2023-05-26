@@ -73,15 +73,17 @@ class SolrCloudHelper
   # Returns the Solr URL based on the provided `solr_alias_uri`` but updated to use
   # the indicated `collection` instead of pointing to the alias.
   def self.build_solr_url_for_collection(solr_alias_uri, collection)
-    URI::HTTP.build(schema: solr_alias_uri.scheme, host: solr_alias_uri.host, port: solr_alias_uri.port, path: "/solr/#{collection}").to_s
+    URI::HTTP.build(
+      schema: solr_alias_uri.scheme,
+      userinfo: solr_alias_uri.userinfo,
+      host: solr_alias_uri.host,
+      port: solr_alias_uri.port,
+      path: "/solr/#{collection}").to_s
   end
 
   def self.current_collection_for_alias(solr_alias_uri)
     alias_name = solr_alias_uri.path.split("/").last
-    alias_list_query = URI::HTTP.build(
-      schema: solr_alias_uri.scheme,
-      host: solr_alias_uri.host,
-      port: solr_alias_uri.port,
+    alias_list_query = uri_from_solr_alias(
       path: "/solr/admin/collections",
       query: "action=LISTALIASES"
     )
@@ -103,10 +105,7 @@ class SolrCloudHelper
   end
 
   def self.collection_exist?(solr_alias_uri, collection_name)
-    collection_list_query = URI::HTTP.build(
-      schema: solr_alias_uri.scheme,
-      host: solr_alias_uri.host,
-      port: solr_alias_uri.port,
+    collection_list_query = uri_from_solr_alias(
       path: "/solr/admin/collections",
       query: "action=LIST"
     )
@@ -120,10 +119,7 @@ class SolrCloudHelper
   end
 
   def self.create_collection(solr_alias_uri, collection_name)
-    create_query = URI::HTTP.build(
-      schema: solr_alias_uri.scheme,
-      host: solr_alias_uri.host,
-      port: solr_alias_uri.port,
+    create_query = uri_from_solr_alias(
       path: "/solr/admin/collections",
       query: "action=CREATE&name=#{collection_name}&collection.configName=#{config_set}&numShards=1&replicationFactor=2"
     )
@@ -133,10 +129,7 @@ class SolrCloudHelper
   end
 
   def self.delete_collection!(solr_alias_uri, collection_name)
-    create_query = URI::HTTP.build(
-      schema: solr_alias_uri.scheme,
-      host: solr_alias_uri.host,
-      port: solr_alias_uri.port,
+    create_query = uri_from_solr_alias(
       path: "/solr/admin/collections",
       query: "action=DELETE&name=#{collection_name}"
     )
@@ -155,15 +148,23 @@ class SolrCloudHelper
       return true
     end
 
-    create_query = URI::HTTP.build(
-      schema: alias_uri.scheme,
-      host: alias_uri.host,
-      port: alias_uri.port,
+    create_query = uri_from_solr_alias(
       path: "/solr/admin/collections",
       query: "action=CREATEALIAS&name=#{alias_name}&collections=#{writer_collection}"
     )
     response = HTTParty.get(create_query.to_s)
     response.code == 200
+  end
+
+  def uri_from_solr_alias(path:, query:)
+    URI::HTTP.build(
+      schema: solr_alias_uri.scheme,
+      userinfo: solr_alias.userinfo,
+      host: solr_alias_uri.host,
+      port: solr_alias_uri.port,
+      path: path,
+      query: query
+    )
   end
 end
 # rubocop:enable Metrics/ClassLength
