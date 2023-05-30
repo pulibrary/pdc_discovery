@@ -139,7 +139,7 @@ class SolrCloudHelper
     end
 
     create_query = build_uri(
-      base_uri: solr_alias_uri,
+      base_uri: alias_uri,
       path: "/solr/admin/collections",
       query: "action=CREATEALIAS&name=#{alias_name}&collections=#{writer_collection}"
     )

@@ -71,4 +71,15 @@ RSpec.describe SolrCloudHelper do
       expect(described_class.collection_reader_url + "/").to eq Blacklight.default_index.connection.uri.to_s
     end
   end
+
+  describe "#update_solr_alias!" do
+    it "makes the call to CREATEALIAS" do
+      allow(described_class).to receive(:alias_uri).and_return(URI.parse("http://fake-solr/solr/pdc-discovery-staging"))
+      stub_request(:get, "http://fake-solr/solr/admin/collections?action=LISTALIASES")
+        .to_return(status: 200, body: solr_aliases_1, headers: json_response)
+      stub_request(:get, "http://fake-solr/solr/admin/collections?action=CREATEALIAS&collections=pdc-discovery-staging-2&name=pdc-discovery-staging")
+        .to_return(status: 200, body: "", headers: json_response)
+      expect(described_class.update_solr_alias!).to eq true
+    end
+  end
 end
