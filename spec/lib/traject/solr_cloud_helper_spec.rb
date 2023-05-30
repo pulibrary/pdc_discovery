@@ -2,6 +2,7 @@
 require "./lib/traject/solr_cloud_helper.rb"
 
 RSpec.describe SolrCloudHelper do
+  let(:json_response) { {'content-type' => 'application/json; charset=utf-8'} }
   let(:alias_uri) { URI::HTTP.build(schema: "http", host: "fake-solr", path: "/solr/pdc-discovery-staging") }
   let(:alias_unknown_uri) { URI::HTTP.build(schema: "http", host: "fake-solr", path: "/solr/alias-unknown") }
   let(:solr_collection_list) { file_fixture("solr_collection_list.json").read }
@@ -10,7 +11,7 @@ RSpec.describe SolrCloudHelper do
 
   before do
     stub_request(:get, "http://fake-solr/solr/admin/collections?action=LIST")
-      .to_return(status: 200, body: solr_collection_list, headers: { 'content-type' => 'application/json; charset=utf-8' })
+      .to_return(status: 200, body: solr_collection_list, headers: json_response)
   end
 
   describe "#collection_exist?" do
@@ -23,7 +24,7 @@ RSpec.describe SolrCloudHelper do
   describe "#current_collection_for_alias" do
     it "returns the collection for the alias" do
       stub_request(:get, "http://fake-solr/solr/admin/collections?action=LISTALIASES")
-        .to_return(status: 200, body: solr_aliases_1, headers: { 'content-type' => 'application/json; charset=utf-8' })
+        .to_return(status: 200, body: solr_aliases_1, headers: json_response)
       expect(described_class.current_collection_for_alias(alias_uri)).to eq "pdc-discovery-staging-1"
     end
   end
@@ -32,12 +33,12 @@ RSpec.describe SolrCloudHelper do
     it "returns alternate collection for the alias" do
       # when alias points to pdc-discovery-staging-1, alternate is pdc-discovery-staging-2
       stub_request(:get, "http://fake-solr/solr/admin/collections?action=LISTALIASES")
-        .to_return(status: 200, body: solr_aliases_1, headers: { 'content-type' => 'application/json; charset=utf-8' })
+        .to_return(status: 200, body: solr_aliases_1, headers: json_response)
       expect(described_class.alternate_collection_for_alias(alias_uri)).to eq "pdc-discovery-staging-2"
 
       # when alias points to pdc-discovery-staging-2, alternate is pdc-discovery-staging-1
       stub_request(:get, "http://fake-solr/solr/admin/collections?action=LISTALIASES")
-        .to_return(status: 200, body: solr_aliases_2, headers: { 'content-type' => 'application/json; charset=utf-8' })
+        .to_return(status: 200, body: solr_aliases_2, headers: json_response)
       expect(described_class.alternate_collection_for_alias(alias_uri)).to eq "pdc-discovery-staging-1"
 
       # when alias is unknown return the alias (i.e. no alternate)
@@ -48,8 +49,26 @@ RSpec.describe SolrCloudHelper do
   describe "#collection_writer_for_alias" do
     it "returns the alternate collection as the collection_writer" do
       stub_request(:get, "http://fake-solr/solr/admin/collections?action=LISTALIASES")
-        .to_return(status: 200, body: solr_aliases_1, headers: { 'content-type' => 'application/json; charset=utf-8' })
+        .to_return(status: 200, body: solr_aliases_1, headers: json_response)
       expect(described_class.collection_writer_for_alias(alias_uri, false)).to eq "http://fake-solr/solr/pdc-discovery-staging-2"
+    end
+
+    it "re-creates the alternate collection that will be used as the collection_writer" do
+      stub_request(:get, "http://fake-solr/solr/admin/collections?action=LISTALIASES")
+        .to_return(status: 200, body: solr_aliases_1, headers: json_response)
+      stub_request(:get, "http://fake-solr/solr/admin/collections?action=DELETE&name=pdc-discovery-staging-2")
+        .to_return(status: 200, body: "", headers: {})
+      stub_request(:get, "http://fake-solr/solr/admin/collections?action=CREATE&collection.configName=pdc-discovery-test&name=pdc-discovery-staging-2&numShards=1&replicationFactor=2")
+        .to_return(status: 200, body: '{"success":"true"}', headers: json_response)
+      expect(described_class.collection_writer_for_alias(alias_uri, true)).to eq "http://fake-solr/solr/pdc-discovery-staging-2"
+    end
+  end
+
+  describe "collection_reader_url" do
+    it "defaults to the Solr used by Blacklight" do
+      stub_request(:get, "http://fake-solr/solr/admin/collections?action=LISTALIASES")
+        .to_return(status: 200, body: solr_aliases_1, headers: json_response)
+      expect(described_class.collection_reader_url + "/").to eq Blacklight.default_index.connection.uri.to_s
     end
   end
 end
