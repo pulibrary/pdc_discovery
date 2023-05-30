@@ -2,7 +2,7 @@
 require "./lib/traject/solr_cloud_helper.rb"
 
 RSpec.describe SolrCloudHelper do
-  let(:json_response) { {'content-type' => 'application/json; charset=utf-8'} }
+  let(:json_response) { { 'content-type' => 'application/json; charset=utf-8' } }
   let(:alias_uri) { URI::HTTP.build(schema: "http", host: "fake-solr", path: "/solr/pdc-discovery-staging") }
   let(:alias_unknown_uri) { URI::HTTP.build(schema: "http", host: "fake-solr", path: "/solr/alias-unknown") }
   let(:solr_collection_list) { file_fixture("solr_collection_list.json").read }
