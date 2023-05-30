@@ -65,6 +65,15 @@ To create a tagged release use the [steps in the RDSS handbook](https://github.c
 rake index:research_data
 ```
 
+### Solr configuration in production/staging
+In production and staging we use Solr cloud to manage our Solr index. Our configuration uses a Solr *alias* to point to the current Solr *collection* that we are using. For example, in staging the alias `pdc-discovery-staging` points to the `pdc-discovery-staging-1` collection.
+
+When we index new content we create a new Solr collection (e.g. `pdc-discovery-staging-2`) and index our data to this new collection. Once the indexing has completed we update our Solr alias to point to this new collection.
+
+Our indexing process automatically toggles between `pdc-discovery-staging-1` and `pdc-discovery-staging-2`.
+
+This dual collection approach allows us to index to a separate area in Solr and prevents users from seeing partial results while we are running the index process.
+
 ### Updating Solr in production/staging
 To make changes to the Solr in production/staging you need to update the files in the [pul_solr](https://github.com/pulibrary/pul_solr) repository and deploy them. The basic steps are:
 

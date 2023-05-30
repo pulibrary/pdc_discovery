@@ -6,9 +6,10 @@ require 'traject/nokogiri_reader'
 require 'blacklight'
 require_relative './domain'
 require_relative './import_helper'
+require_relative './solr_cloud_helper'
 
 settings do
-  provide 'solr.url', Blacklight.default_index.connection.uri.to_s
+  provide 'solr.url', SolrCloudHelper.collection_writer_url
   provide 'reader_class_name', 'Traject::NokogiriReader'
   provide 'solr_writer.commit_on_close', 'true'
   provide 'repository', ENV['REPOSITORY_ID']
@@ -19,7 +20,7 @@ end
 
 each_record do |record, context|
   uris = record.xpath("/item/metadata/key[text()='dc.identifier.uri']/../value")
-  next unless ImportHelper.pdc_describe_match?(uris)
+  next unless ImportHelper.pdc_describe_match?(settings["solr.url"], uris)
   id = record.xpath('/item/id')
   Rails.logger.info "Skipping DataSpace record #{id} - already imported from PDC Describe"
   context.skip!("Skipping DataSpace record #{id} - already imported from PDC Describe")

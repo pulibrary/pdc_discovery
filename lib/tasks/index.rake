@@ -1,36 +1,37 @@
 # frozen_string_literal: true
 
-namespace :index do
-  desc 'Delete index and re-index all research data'
-  task research_data_clean_slate: :environment do
-    Rails.logger.info "Deleting all Solr documents"
-    Rake::Task['index:delete_solr_all'].invoke
-    Rails.logger.info "Deleted all Solr documents"
-    Rake::Task['index:research_data'].invoke
-  end
+# Require ImportHelper so we can get the solr leader
+require ::Rails.root.join('lib', 'traject', 'solr_cloud_helper.rb')
 
-  desc 'Re-index all research data (without deleting first)'
+namespace :index do
+  desc 'Re-index all research data'
   task research_data: :environment do
-    Rails.logger.info "Research Data indexing started"
+    SolrCloudHelper.create_collection_writer
+    Rails.logger.info "Indexing: Created a new collection for writing: #{SolrCloudHelper.collection_writer_url}"
+
+    Rails.logger.info "Indexing: Research Data indexing started"
     Rake::Task['index:pdc_describe_research_data'].invoke
     Rake::Task['index:dspace_research_data'].invoke
-    Rails.logger.info "Research Data indexing completed"
+    Rails.logger.info "Indexing: Research Data indexing completed"
+
+    SolrCloudHelper.update_solr_alias!
+    Rails.logger.info "Indexing: Updated Solr to read from the new collection: #{SolrCloudHelper.alias_url} -> #{SolrCloudHelper.collection_reader_url}"
   end
 
   desc 'Index all DSpace research data collections'
   task dspace_research_data: :environment do
-    Rails.logger.info "Harvesting and indexing DataSpace research data collections started"
+    Rails.logger.info "Indexing: Harvesting and indexing DataSpace research data collections started"
     DspaceResearchDataHarvester.harvest(false)
-    Blacklight.default_index.connection.commit
-    Rails.logger.info "Harvesting and indexing DataSpace research data collections completed"
+    SolrCloudHelper.collection_writer_commit!
+    Rails.logger.info "Indexing: Harvesting and indexing DataSpace research data collections completed"
   end
 
   desc 'Index all PDC Describe data'
   task pdc_describe_research_data: :environment do
-    Rails.logger.info "Harvesting and indexing PDC Describe data started"
+    Rails.logger.info "Indexing: Harvesting and indexing PDC Describe data started"
     DescribeIndexer.new.index
-    Blacklight.default_index.connection.commit
-    Rails.logger.info "Harvesting and indexing PDC Describe data completed"
+    SolrCloudHelper.collection_writer_commit!
+    Rails.logger.info "Indexing: Harvesting and indexing PDC Describe data completed"
   end
 
   desc 'Remove all indexed Documents from Solr'
@@ -45,5 +46,18 @@ namespace :index do
     cache_file = ENV['COMMUNITIES_FILE'] || './spec/fixtures/files/dataspace_communities.json'
     communities = DataspaceCommunities.new
     File.write(cache_file, JSON.pretty_generate(communities.tree))
+  end
+
+  desc 'Prints to console the current Solr URLs and how they are configured'
+  task print_solr_urls: :environment do
+    puts "Solr alias.: #{SolrCloudHelper.alias_url}"
+    puts "Solr reader: #{SolrCloudHelper.collection_reader_url}"
+    puts "Solr writer: #{SolrCloudHelper.collection_writer_url}"
+  end
+
+  desc 'Updates the Solr alias to point to the most up to date collection'
+  task update_solr_alias: :environment do
+    puts "Solr updated: #{SolrCloudHelper.update_solr_alias!}"
+    Rake::Task['index:print_solr_urls'].invoke
   end
 end
