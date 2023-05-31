@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-
+# claudia was here
 class User < ApplicationRecord
   # Connects this user object to Blacklights Bookmarks.
   include Blacklight::User
