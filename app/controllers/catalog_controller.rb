@@ -91,7 +91,7 @@ class CatalogController < ApplicationController
     #   years_25: { label: 'within 25 Years', fq: "pub_date_ssim:[#{Time.zone.now.year - 25} TO *]" }
     # }
 
-    config.add_facet_field 'domain_ssi', label: 'Domain'                      # DSpace records only
+    config.add_facet_field 'domain_ssim', label: 'Domain'
     config.add_facet_field 'community_root_name_ssi', label: 'Community'
     config.add_facet_field 'subcommunity_name_ssi', label: 'Subcommunity'     # DSpace records only
     config.add_facet_field 'collection_name_ssi', label: 'Collection'

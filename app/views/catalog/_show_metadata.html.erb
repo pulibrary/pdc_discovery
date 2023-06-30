@@ -10,7 +10,9 @@
             <%= render_field_row_many "Author", @document.authors, true, '; ' %> <!-- displayed by default -->
             <%= render_field_row_many "Creator", @document.creators %>
             <%= render_field_row_many "Contributor", @document.contributors %>
-            <%= render_field_row_search_link "Domain", @document.domain, "domain_ssi" %>
+            <% if @document.domains.present? %>
+              <%= render_field_row_search_links "Domains", @document.domains, "domain_ssim" %>
+            <% end %>
             <%= render_field_row "Community", @document.community_path %>
             <% if @document.collection_name.present? %>
               <%= render_field_row "Collection", @document.collection_name %>

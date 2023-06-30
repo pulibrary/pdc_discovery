@@ -121,8 +121,9 @@ to_field 'alternative_title_tesim', extract_xpath("/item/metadata/key[text()='dc
 
 # ==================
 # Calculate domain from the communities
-
-to_field 'domain_ssi' do |record, accumulator, _context|
+# Notice that we expect only one domain from DSpace records but the field
+# is multi-value because PDC Describe supports more than one domain.
+to_field 'domain_ssim' do |record, accumulator, _context|
   communities = record.xpath("/item/parentCommunityList/type[text()='community']/../name").map(&:text)
   domains = Domain.from_communities(communities)
   if domains.count > 1
