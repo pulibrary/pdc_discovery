@@ -4,7 +4,7 @@ RSpec.describe ApplicationHelper, type: :helper do
   describe "#render_field_row_search_link" do
     let(:title) { "Domain" }
     let(:value) { "Humanities" }
-    let(:field) { "domain_ssim," }
+    let(:field) { "domain_ssim" }
     let(:search_link) { helper.search_link(value, field) }
     let(:rendered_search_link) { helper.render_field_row_search_link(title, value, field) }
 
