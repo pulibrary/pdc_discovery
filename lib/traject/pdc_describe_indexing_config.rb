@@ -59,6 +59,12 @@ to_field 'collection_tag_ssim' do |record, accumulator, _c|
   accumulator.concat collection_tags
 end
 
+========================================
+# HERE I AM
+# Need to index community, subcommunity, and group...and decide
+# how much compatibility with the previous version we really want to preserve
+========================================
+
 # # ==================
 # # Community, Subcommunity, and Group
 # to_field 'community_ssim' do |record, accumulator, _c|
