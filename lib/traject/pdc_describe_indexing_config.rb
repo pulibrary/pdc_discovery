@@ -53,32 +53,15 @@ to_field 'uri_ssim' do |record, accumulator, _c|
 end
 
 # ==================
-# Collection tags
+# Community and Collections fields
+to_field 'community_name_ssi', extract_xpath("/hash/group/title")
+to_field 'community_root_name_ssi', extract_xpath("/hash/group/title")
+to_field 'community_path_name_ssi', extract_xpath("/hash/group/title")
+
 to_field 'collection_tag_ssim' do |record, accumulator, _c|
   collection_tags = record.xpath("/hash/resource/collection-tags/collection-tag").map(&:text)
   accumulator.concat collection_tags
 end
-
-========================================
-# HERE I AM
-# Need to index community, subcommunity, and group...and decide
-# how much compatibility with the previous version we really want to preserve
-========================================
-
-# # ==================
-# # Community, Subcommunity, and Group
-# to_field 'community_ssim' do |record, accumulator, _c|
-#   communities = record.xpath("/hash/resource/communities").map(&:text)
-#   accumulator.concat communities
-# end
-
-# to_field 'subcommunity_ssim' do |record, accumulator, _c|
-#   subcommunities = record.xpath("/hash/resource/subcommunities").map(&:text)
-#   accumulator.concat subcommunities
-# end
-
-# to_field 'group_title_ssi', extract_xpath("/hash/group/title")
-# to_field 'group_code_ssi', extract_xpath("/hash/group/code")
 
 # ==================
 # author fields
