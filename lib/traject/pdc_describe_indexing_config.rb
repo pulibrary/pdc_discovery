@@ -23,7 +23,6 @@ end
 to_field 'id' do |record, accumulator, _c|
   raw_doi = record.xpath("/hash/resource/doi/text()").to_s
   munged_doi = "doi-" + raw_doi.tr('/', '-').tr('.', '-')
-  # munged_doi = "doi-" + raw_doi.tr('/', '-').tr('.', '-') + '-' + Time.now.seconds_since_midnight.to_i.to_s
   accumulator.concat [munged_doi]
 end
 
