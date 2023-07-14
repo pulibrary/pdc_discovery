@@ -84,7 +84,9 @@ to_field 'community_path_name_ssi' do |record, accumulator, _c|
   accumulator.concat [path_name]
 end
 
-to_field 'collection_name_ssi' do |record, accumulator, _c|
+# collection_name_ssi (single value) is the legacy field from DataSpace records
+# collection_tag_ssim (multi value) is the new field for DataSpace + PDC Describe records
+to_field ['collection_name_ssi', 'collection_tag_ssim'] do |record, accumulator, _c|
   collection_name = record.xpath("/item/parentCollection/name").map(&:text).first
   accumulator.concat [collection_name]
 end

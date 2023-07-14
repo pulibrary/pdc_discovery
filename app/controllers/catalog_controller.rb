@@ -95,8 +95,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'communities_ssim', label: 'Community'
     config.add_facet_field 'subcommunities_ssim', label: 'Subcommunity'
 
-    config.add_facet_field 'collection_name_ssi', label: 'Collection'
-    config.add_facet_field 'collection_tag_ssim', label: 'Collection Tags'    # PDC Describe records only
+    config.add_facet_field 'collection_tag_ssim', label: 'Collection Tags'
 
     config.add_facet_field 'genre_ssim', label: 'Type'
     config.add_facet_field 'year_available_itsi', label: 'Year Published', range: true
