@@ -4,7 +4,7 @@ RSpec.describe ApplicationHelper, type: :helper do
   describe "#render_field_row_search_link" do
     let(:title) { "Domain" }
     let(:value) { "Humanities" }
-    let(:field) { "domain_ssi" }
+    let(:field) { "domain_ssim" }
     let(:search_link) { helper.search_link(value, field) }
     let(:rendered_search_link) { helper.render_field_row_search_link(title, value, field) }
 
@@ -23,13 +23,13 @@ RSpec.describe ApplicationHelper, type: :helper do
       end
 
       it "pre-pends the link" do
-        expect(search_link).to eq "/discovery/?f[domain_ssi][]=Humanities&q=&search_field=all_fields"
+        expect(search_link).to eq "/discovery/?f[domain_ssim][]=Humanities&q=&search_field=all_fields"
       end
     end
 
     context "when there is not an assets prefix" do
       it "does not pre-pend the link" do
-        expect(search_link).to eq "/?f[domain_ssi][]=Humanities&q=&search_field=all_fields"
+        expect(search_link).to eq "/?f[domain_ssim][]=Humanities&q=&search_field=all_fields"
       end
     end
   end

@@ -4,7 +4,6 @@ require 'logger'
 require 'traject'
 require 'traject/nokogiri_reader'
 require 'blacklight'
-require_relative './domain'
 require_relative './import_helper'
 require_relative './solr_cloud_helper'
 
@@ -108,18 +107,10 @@ to_field 'alternative_title_tesim' do |record, accumulator, _c|
   accumulator.concat alternative_titles.map { |title| title.xpath("./title").text }
 end
 
-# # ==================
-# # Calculate domain from the communities
-
-# to_field 'domain_ssi' do |record, accumulator, _context|
-#   communities = record.xpath("/item/parentCommunityList/type[text()='community']/../name").map(&:text)
-#   domains = Domain.from_communities(communities)
-#   if domains.count > 1
-#     id = record.xpath('/item/id/text()')
-#     logger.warn "Multiple domains detected for record: #{id}, using only the first one."
-#   end
-#   accumulator.concat [domains.first]
-# end
+to_field 'domain_ssim' do |record, accumulator, _context|
+  domains = record.xpath("/hash/resource/domains/domain").map(&:text)
+  accumulator.concat domains
+end
 
 # # ==================
 # # contributor fields

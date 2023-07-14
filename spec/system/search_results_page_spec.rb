@@ -54,7 +54,7 @@ describe 'Search Results Page', type: :system, js: true do
   describe "facets" do
     it "shows expected facets" do
       visit '/?search_field=all_fields&q='
-      domain_facet_html = '<div class="card facet-limit blacklight-domain_ssi ">'
+      domain_facet_html = '<div class="card facet-limit blacklight-domain_ssim ">'
       expect(page.html.include?(domain_facet_html)).to be true
 
       community_facet_html = '<div class="card facet-limit blacklight-community_root_name_ssi ">'

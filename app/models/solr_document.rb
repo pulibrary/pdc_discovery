@@ -502,8 +502,8 @@ class SolrDocument
     fetch("source_ssim", [])
   end
 
-  def domain
-    fetch("domain_ssi", "")
+  def domains
+    fetch("domain_ssim", "")
   end
 
   def icon_css
