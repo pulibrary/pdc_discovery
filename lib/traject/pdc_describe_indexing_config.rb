@@ -23,6 +23,12 @@ end
 to_field 'id' do |record, accumulator, _c|
   raw_doi = record.xpath("/hash/resource/doi/text()").to_s
   munged_doi = "doi-" + raw_doi.tr('/', '-').tr('.', '-')
+  # TODO: remove this after testing
+  puts "sleeping"
+  sleep(1)
+  puts "awaken"
+  munged_doi = "doi-" + raw_doi.tr('/', '-').tr('.', '-') + '-' + Time.now.seconds_since_midnight.to_i.to_s
+  # ===================
   accumulator.concat [munged_doi]
 end
 
@@ -53,18 +59,31 @@ end
 
 # ==================
 # Community and Collections fields
+# These fields mimic the DataSpace data and will eventually be retired.
 to_field 'community_name_ssi', extract_xpath("/hash/group/title")
 to_field 'community_root_name_ssi', extract_xpath("/hash/group/title")
 to_field 'community_path_name_ssi', extract_xpath("/hash/group/title")
 
+# These fields use the new PDC Describe structure (notice that they are multi-value)
+to_field 'communities_ssim', extract_xpath("/hash/resource/communities/community")
+to_field 'subcommunities_ssim', extract_xpath("/hash/resource/subcommunities/subcommunity")
+
+# ==================
+# Collection tags
+# There is no equivalent in DataSpace.
 to_field 'collection_tag_ssim' do |record, accumulator, _c|
   collection_tags = record.xpath("/hash/resource/collection-tags/collection-tag").map(&:text)
   accumulator.concat collection_tags
 end
 
 # ==================
-# author fields
+# Group in PDC Describe, e.g. Research data or PPPL
+# There is no equivalent in DataSpace.
+to_field 'group_title_ssi', extract_xpath("/hash/group/title")
+to_field 'group_code_ssi', extract_xpath("/hash/group/code")
 
+# ==================
+# author fields
 to_field 'author_tesim' do |record, accumulator, _c|
   author_names = record.xpath("/hash/resource/creators/creator/value").map(&:text)
   accumulator.concat author_names

@@ -51,8 +51,11 @@ end
 # Community and Collections fields
 # Communities can be nested. We gather the community name, the name of the "root" community for the community,
 # and the full path (including nested communities) to the community.
+#
+# Fields communities_ssim and subcommunities_ssim represent the new structure that we
+# are moving to for this information as we migrate from DataSpace to PDC Describe.
 
-to_field 'community_name_ssi' do |record, accumulator, _c|
+to_field ['community_name_ssi','communities_ssim'] do |record, accumulator, _c|
   # We are assuming the largest ID represents the parent community in the tree hierarchy
   # (i.e. grandparent nodes were created first and have smaller IDs)
   community_id = record.xpath("/item/parentCommunityList/id").map(&:text).map(&:to_i).sort.last
@@ -60,7 +63,7 @@ to_field 'community_name_ssi' do |record, accumulator, _c|
   accumulator.concat [community&.name]
 end
 
-to_field 'subcommunity_name_ssi' do |record, accumulator, _c|
+to_field ['subcommunity_name_ssi','subcommunities_ssim'] do |record, accumulator, _c|
   community_id = record.xpath("/item/parentCommunityList/id").map(&:text).map(&:to_i).sort.last
   community = settings["dataspace_communities"].find_by_id(community_id)
   if !community.nil? && community.parent_id

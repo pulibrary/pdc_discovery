@@ -92,8 +92,9 @@ class CatalogController < ApplicationController
     # }
 
     config.add_facet_field 'domain_ssim', label: 'Domain'
-    config.add_facet_field 'community_root_name_ssi', label: 'Community'
-    config.add_facet_field 'subcommunity_name_ssi', label: 'Subcommunity'     # DSpace records only
+    config.add_facet_field 'communities_ssim', label: 'Community'
+    config.add_facet_field 'subcommunities_ssim', label: 'Subcommunity'
+
     config.add_facet_field 'collection_name_ssi', label: 'Collection'
     config.add_facet_field 'collection_tag_ssim', label: 'Collection Tags'    # PDC Describe records only
 
@@ -103,6 +104,10 @@ class CatalogController < ApplicationController
     # Notice that is facet is not shown. Yet facet searches by this field do work
     # and we use them when users click on the "Keywords" links in the Show page.
     config.add_facet_field 'subject_all_ssim', label: 'Keywords', show: false
+
+    # An extra facet to filter DataSpace vs PDC Describe records at will
+    # (this is handy during the migration)
+    config.add_facet_field 'data_source_ssi', label: 'Source'
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
