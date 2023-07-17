@@ -23,12 +23,6 @@ end
 to_field 'id' do |record, accumulator, _c|
   raw_doi = record.xpath("/hash/resource/doi/text()").to_s
   munged_doi = "doi-" + raw_doi.tr('/', '-').tr('.', '-')
-  # TODO: remove this after testing
-  puts "sleeping"
-  sleep(1)
-  puts "awaken"
-  munged_doi = "doi-" + raw_doi.tr('/', '-').tr('.', '-') + '-' + Time.now.seconds_since_midnight.to_i.to_s
-  # ===================
   accumulator.concat [munged_doi]
 end
 
@@ -70,7 +64,7 @@ to_field 'subcommunities_ssim', extract_xpath("/hash/resource/subcommunities/sub
 
 # ==================
 # Collection tags
-# There is no equivalent in DataSpace.
+# This replaces the single-value "collection name" from DataSpace.
 to_field 'collection_tag_ssim' do |record, accumulator, _c|
   collection_tags = record.xpath("/hash/resource/collection-tags/collection-tag").map(&:text)
   accumulator.concat collection_tags
