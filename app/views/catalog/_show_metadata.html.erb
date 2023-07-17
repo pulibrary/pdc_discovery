@@ -13,15 +13,11 @@
             <% if @document.domains.present? %>
               <%= render_field_row_search_links "Domains", @document.domains, "domain_ssim" %>
             <% end %>
-            <%= render_field_row "Community", @document.community_path %>
             <% if @document.communities.present? %>
               <%= render_field_row_search_links "Communities", @document.communities, "communities_ssim" %>
             <% end %>
             <% if @document.subcommunities.present? %>
               <%= render_field_row_search_links "Subcommunities", @document.subcommunities, "subcommunities_ssim" %>
-            <% end %>
-            <% if @document.collection_name.present? %>
-              <%= render_field_row "Collection", @document.collection_name %>
             <% end %>
             <% if @document.collection_tags.present? %>
               <%= render_field_row_search_links "Collection Tags", @document.collection_tags, "collection_tag_ssim" %>
