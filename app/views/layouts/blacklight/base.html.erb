@@ -78,14 +78,8 @@
     }
 
     // Hide the subcommunity facet unless we are faceting by community or subcommunity.
-    if (!activeFacet("community_root_name_ssi") && !activeFacet("subcommunity_name_ssi")) {
-      hideFacetGroup("subcommunity_name_ssi");
-    }
-
-    // Hide the collection facet unless we are faceting by the PPPL community or Music and Arts
-    // We do this because these are the only groups that use collections in DataSpace and PPPL has more than one.
-    if (activeFacet("community_root_name_ssi") != "Princeton+Plasma+Physics+Laboratory" && activeFacet("community_root_name_ssi") != "Music+and+Arts") {
-      hideFacetGroup("collection_name_ssi");
+    if (!activeFacet("communities_ssim") && !activeFacet("subcommunities_ssim")) {
+      hideFacetGroup("subcommunities_ssim");
     }
   });
   </script>

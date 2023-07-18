@@ -51,6 +51,9 @@ end
 # Community and Collections fields
 # Communities can be nested. We gather the community name, the name of the "root" community for the community,
 # and the full path (including nested communities) to the community.
+#
+# Fields communities_ssim and subcommunities_ssim represent the new structure that we
+# are moving to for this information as we migrate from DataSpace to PDC Describe.
 
 to_field 'community_name_ssi' do |record, accumulator, _c|
   # We are assuming the largest ID represents the parent community in the tree hierarchy
@@ -60,7 +63,15 @@ to_field 'community_name_ssi' do |record, accumulator, _c|
   accumulator.concat [community&.name]
 end
 
-to_field 'subcommunity_name_ssi' do |record, accumulator, _c|
+to_field 'communities_ssim' do |record, accumulator, _c|
+  # Same as community_name_ssi but we also include the root_name.
+  community_id = record.xpath("/item/parentCommunityList/id").map(&:text).map(&:to_i).sort.last
+  community = settings["dataspace_communities"].find_by_id(community_id)
+  root_name = settings["dataspace_communities"].find_root_name(community_id)
+  accumulator.concat [community&.name, root_name].uniq
+end
+
+to_field ['subcommunity_name_ssi', 'subcommunities_ssim'] do |record, accumulator, _c|
   community_id = record.xpath("/item/parentCommunityList/id").map(&:text).map(&:to_i).sort.last
   community = settings["dataspace_communities"].find_by_id(community_id)
   if !community.nil? && community.parent_id
@@ -81,7 +92,9 @@ to_field 'community_path_name_ssi' do |record, accumulator, _c|
   accumulator.concat [path_name]
 end
 
-to_field 'collection_name_ssi' do |record, accumulator, _c|
+# collection_name_ssi (single value) is the legacy field from DataSpace records
+# collection_tag_ssim (multi value) is the new field for DataSpace + PDC Describe records
+to_field ['collection_name_ssi', 'collection_tag_ssim'] do |record, accumulator, _c|
   collection_name = record.xpath("/item/parentCollection/name").map(&:text).first
   accumulator.concat [collection_name]
 end

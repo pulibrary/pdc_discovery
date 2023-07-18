@@ -119,7 +119,15 @@ class SolrDocument
   end
 
   def community_path
-    fetch("community_path_name_ssi", "")
+    communities.first
+  end
+
+  def communities
+    fetch("communities_ssim", [])
+  end
+
+  def subcommunities
+    fetch("subcommunities_ssim", [])
   end
 
   def collection_name

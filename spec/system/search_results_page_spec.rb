@@ -50,14 +50,13 @@ describe 'Search Results Page', type: :system, js: true do
     end
   end
 
-  # rubocop:disable RSpec/ExampleLength
   describe "facets" do
     it "shows expected facets" do
       visit '/?search_field=all_fields&q='
       domain_facet_html = '<div class="card facet-limit blacklight-domain_ssim ">'
       expect(page.html.include?(domain_facet_html)).to be true
 
-      community_facet_html = '<div class="card facet-limit blacklight-community_root_name_ssi ">'
+      community_facet_html = '<div class="card facet-limit blacklight-communities_ssim ">'
       expect(page.html.include?(community_facet_html)).to be true
 
       type_facet_html = '<div class="card facet-limit blacklight-genre_ssim ">'
@@ -65,22 +64,17 @@ describe 'Search Results Page', type: :system, js: true do
 
       year_facet_html = '<div class="card facet-limit blacklight-year_available_itsi ">'
       expect(page.html.include?(year_facet_html)).to be true
-
-      # Collection facet is not rendered by defailt
-      collection_facet_html = '<div class="card facet-limit blacklight-collection_name_ssi ">'
-      expect(page.html.include?(collection_facet_html)).to be false
     end
-    # rubocop:enable RSpec/ExampleLength
 
     it "shows collection facet for PPPL" do
-      visit '/?f%5Bcommunity_root_name_ssi%5D%5B%5D=Princeton+Plasma+Physics+Laboratory'
-      collection_facet_html = '<div class="card facet-limit blacklight-collection_name_ssi ">'
+      visit '/?f%5Bcommunities_ssim%5D%5B%5D=Princeton+Plasma+Physics+Laboratory'
+      collection_facet_html = '<div class="card facet-limit blacklight-collection_tag_ssim ">'
       expect(page.html.include?(collection_facet_html)).to be true
     end
 
     it "shows collection facet for Music and Arts" do
-      visit '/?f%5Bcommunity_root_name_ssi%5D%5B%5D=Music+and+Arts'
-      collection_facet_html = '<div class="card facet-limit blacklight-collection_name_ssi ">'
+      visit '/?f%5Bcommunities_ssim%5D%5B%5D=Music+and+Arts'
+      collection_facet_html = '<div class="card facet-limit blacklight-collection_tag_ssim ">'
       expect(page.html.include?(collection_facet_html)).to be true
     end
 
