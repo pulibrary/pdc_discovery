@@ -68,7 +68,7 @@ to_field 'communities_ssim' do |record, accumulator, _c|
   community_id = record.xpath("/item/parentCommunityList/id").map(&:text).map(&:to_i).sort.last
   community = settings["dataspace_communities"].find_by_id(community_id)
   root_name = settings["dataspace_communities"].find_root_name(community_id)
-  accumulator.concat [community&.name, root_name]
+  accumulator.concat [community&.name, root_name].uniq
 end
 
 to_field ['subcommunity_name_ssi', 'subcommunities_ssim'] do |record, accumulator, _c|
