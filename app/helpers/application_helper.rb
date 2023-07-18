@@ -194,14 +194,13 @@ module ApplicationHelper
 
   def render_globus_download(uri, item_id)
     return if uri.nil?
+    # The `globus-download-link` CSS class is used to track download clicks in Plausible
     html = <<-HTML
     <div id="globus">
-      <button type="button" class="globus_button lux-button solid medium">
-        <a href="#{uri}" title="Opens in a new tab" class="globus-download-link"
-          target="_blank" rel="noopener noreferrer" data-item-id="#{item_id}">
-          #{image_tag('globus_logo.png', width: '20')} Download from Globus
-        </a>
-      </button>
+      <a href="#{uri}" title="Opens in a new tab" class="btn globus_button globus-download-link"
+        target="_blank" rel="noopener noreferrer" data-item-id="#{item_id}">
+        #{image_tag('globus_logo.png', width: '20', alt: 'Globus logo')} Download from Globus
+      </a>
     </div>
     HTML
     html.html_safe
