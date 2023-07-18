@@ -71,5 +71,17 @@ RSpec.describe SolrDocument do
       expect(doc.authors_ordered.count).to eq 2
     end
   end
+
+  describe "#globus_uri_from_description" do
+    it "returns nil when no Globus URI available in the description" do
+      doc = described_class.new({ id: "1", author_tesim: [] })
+      expect(doc.globus_uri_from_description).to be nil
+    end
+
+    it "returns the Globus URI when it is available in the description" do
+      doc = described_class.new({ id: "1", description_tsim: ["xxx https://app.globus.org/file-manager?origin_id=dc43f461-0ca7-4203-848c-33a9fc00a464&origin_path=%2F yyy"] })
+      expect(doc.globus_uri_from_description).to eq "https://app.globus.org/file-manager?origin_id=dc43f461-0ca7-4203-848c-33a9fc00a464&origin_path=%2F"
+    end
+  end
 end
 # rubocop:enable RSpec/ExampleLength

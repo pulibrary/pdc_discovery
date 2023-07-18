@@ -50,6 +50,9 @@ class SolrDocument
     "interactive resource" => "bi-pc-display-horizontal"
   }.freeze
 
+  # .*?\s is lazy match so the regex stop as soon as space is found
+  GLOBUS_URI_REGEX = /.*(https\:\/\/app.globus.org\/file-manager.*?\s).*/.freeze
+
   def id
     fetch('id')
   end
@@ -216,7 +219,12 @@ class SolrDocument
     uri.each do |link|
       return link if link.downcase.start_with?('https://app.globus.org/')
     end
-    nil
+    globus_uri_from_description
+  end
+
+  def globus_uri_from_description
+    match = description&.match(GLOBUS_URI_REGEX)
+    return match.captures.first.strip if match
   end
 
   def extent
