@@ -76,6 +76,9 @@ RSpec.describe SolrDocument do
     it "returns nil when no Globus URI available in the description" do
       doc = described_class.new({ id: "1", author_tesim: [] })
       expect(doc.globus_uri_from_description).to be nil
+
+      doc = described_class.new({ id: "1", description_tsim: ["no globus URI in here"] })
+      expect(doc.globus_uri_from_description).to be nil
     end
 
     it "returns the Globus URI when it is available in the description" do
