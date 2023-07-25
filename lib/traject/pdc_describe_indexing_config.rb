@@ -381,6 +381,7 @@ to_field 'files_ss' do |record, accumulator, _context|
   files = record.xpath("/hash/files/file").map do |file|
     {
       name: File.basename(file.xpath("filename").text),
+      full_name: file.xpath("filename").text,
       size: file.xpath("size").text,
       url: file.xpath('url').text
     }
