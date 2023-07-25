@@ -378,10 +378,11 @@ end
 # ==================
 # Store all files metadata as a single JSON string so that we can display detailed information for each of them.
 to_field 'files_ss' do |record, accumulator, _context|
+  raw_doi = record.xpath("/hash/resource/doi/text()").to_s
   files = record.xpath("/hash/files/file").map do |file|
     {
       name: File.basename(file.xpath("filename").text),
-      full_name: file.xpath("filename").text,
+      full_name: ImportHelper.display_filename(file.xpath("filename").text, raw_doi),
       size: file.xpath("size").text,
       url: file.xpath('url').text
     }

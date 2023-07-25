@@ -34,4 +34,21 @@ class ImportHelper
     response = HTTParty.get(solr_query)
     response.parsed_response["response"]["numFound"] != 0
   end
+
+  # Calculates the display filename for a PDC Describe file.
+  # PDC Describe files are prefixed with DOI + database_id, for example "10.123/4567/40/folder1/filename1.txt"
+  # (where 40 is the database id).
+  # This method strips the DOI and the database ID from the path so that we display a friendly
+  # path to the user, e.g. "folder1/filename1.txt".
+  def self.display_filename(full_path, doi)
+    display_filename = nil
+    if doi.present? && full_path.start_with?(doi)
+      # drop the DOI
+      filename_no_doi = full_path[doi.length..-1]
+      db_id = filename_no_doi.match(/\/\d+\//).to_s
+      # drop the database ID
+      display_filename = filename_no_doi[db_id.length..-1] unless db_id.empty?
+    end
+    display_filename || full_path
+  end
 end
