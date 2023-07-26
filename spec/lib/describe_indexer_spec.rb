@@ -112,6 +112,11 @@ RSpec.describe DescribeIndexer do
         expect(file3["name"]).to eq "file3.txt"
         expect(file3["full_name"]).to eq "10.80021/3m1k-6036/122/folder-a/file3.txt"
       end
+      it "excludes PDC preservation files" do
+        files = JSON.parse(indexed_record['files_ss'])
+        datacite_xml = files.find { |file| file["full_name"].include? "/princeton_data_commons/datacite.xml" }
+        expect(datacite_xml).to be nil
+      end
     end
 
     context "all text catch all field" do

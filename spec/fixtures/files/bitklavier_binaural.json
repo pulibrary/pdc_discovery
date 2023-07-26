@@ -100,6 +100,11 @@
             "url": "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.80021/3m1k-6036/122/file2.txt"
         },
         {
+            "filename": "10.80021/3m1k-6036/122/princeton_data_commons/datacite.xml",
+            "size": 123,
+            "url": "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.80021/3m1k-6036/122/princeton_data_commons/datacite.xml"
+        },
+        {
             "filename": "10.80021/3m1k-6036/122/folder-a/file3.txt",
             "size": 396003,
             "url": "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.80021/3m1k-6036/122/folder-a/file3.txt"

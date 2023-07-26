@@ -376,17 +376,23 @@ end
 # to_field 'source_ssim', extract_xpath("/item/metadata/key[text()='dcterms.source']/../value")
 
 # ==================
-# Store all files metadata as a single JSON string so that we can display detailed information for each of them.
+# Store files metadata as a single JSON string so that we can display detailed information for each of them.
 to_field 'files_ss' do |record, accumulator, _context|
   raw_doi = record.xpath("/hash/resource/doi/text()").to_s
   files = record.xpath("/hash/files/file").map do |file|
-    {
-      name: File.basename(file.xpath("filename").text),
-      full_name: ImportHelper.display_filename(file.xpath("filename").text, raw_doi),
-      size: file.xpath("size").text,
-      url: file.xpath('url').text
-    }
-  end
+    file_name = file.xpath("filename").text
+    if file_name.include?("/princeton_data_commons/")
+      # Exclude the preservation files
+      nil
+    else
+      {
+        name: File.basename(file.xpath("filename").text),
+        full_name: ImportHelper.display_filename(file.xpath("filename").text, raw_doi),
+        size: file.xpath("size").text,
+        url: file.xpath('url').text
+      }
+    end
+  end.compact
   accumulator.concat [files.to_json.to_s]
 end
 
