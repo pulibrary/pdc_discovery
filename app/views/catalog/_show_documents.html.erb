@@ -28,7 +28,7 @@
                   <td>
                     <span>
                       <i class="bi bi-file-arrow-down"></i>
-                      <a href="<%= file.download_url %>" class="documents-file-link" target="_blank" title="<%= file.name %>"><%= truncate(file.name, length: 60) %></a>
+                      <a href="<%= file.download_url %>" class="documents-file-link" target="_blank" title="<%= file.full_path %>"><%= truncate(file.full_path, length: 60) %></a>
                     </span>
                   </td>
                   <% if @document.data_source == "dataspace" %>

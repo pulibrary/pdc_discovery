@@ -185,7 +185,7 @@ class SolrDocument
   def files
     @files ||= begin
       data = JSON.parse(fetch("files_ss", "[]"))
-      data.map { |x| DatasetFile.from_hash(x, data_source) }.sort_by(&:sequence)
+      data.map { |file| DatasetFile.from_hash(file, data_source) }.sort_by(&:sequence)
     end
   end
 

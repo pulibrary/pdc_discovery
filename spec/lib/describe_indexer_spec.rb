@@ -105,9 +105,17 @@ RSpec.describe DescribeIndexer do
         files = JSON.parse(indexed_record['files_ss'])
         file1 = files.find { |file| file["name"] == "file1.jpg" }
         file2 = files.find { |file| file["name"] == "file2.txt" }
+        file3 = files.find { |file| file["name"] == "file3.txt" }
         expect(file1["size"]).to eq "316781"
         expect(file1["url"]).to eq "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.80021/3m1k-6036/122/file1.jpg"
         expect(file2["size"]).to eq "396003"
+        expect(file3["name"]).to eq "file3.txt"
+        expect(file3["full_name"]).to eq "10.80021/3m1k-6036/122/folder-a/file3.txt"
+      end
+      it "excludes PDC preservation files" do
+        files = JSON.parse(indexed_record['files_ss'])
+        datacite_xml = files.find { |file| file["full_name"].include? "/princeton_data_commons/datacite.xml" }
+        expect(datacite_xml).to be nil
       end
     end
 

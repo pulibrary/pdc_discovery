@@ -2,7 +2,7 @@
 
 class DatasetFile
   attr_accessor :name, :description, :format, :size, :mime_type, :sequence, :handle, :extension,
-    :source, :download_url
+    :source, :download_url, :full_path
 
   def self.from_hash(data, data_source)
     if data_source == "pdc_describe"
@@ -16,6 +16,7 @@ class DatasetFile
     hash = data.with_indifferent_access
     file = DatasetFile.new
     file.source = "dataspace"
+    file.full_path = hash[:name]
     file.name = hash[:name]
     file.extension = File.extname(file.name)
     file.extension = file.extension[1..] if file.extension != "." # drop the leading period
@@ -34,6 +35,7 @@ class DatasetFile
     hash = data.with_indifferent_access
     file = DatasetFile.new
     file.source = "pdc_describe"
+    file.full_path = hash[:full_name]
     file.name = hash[:name]
     file.extension = File.extname(file.name)
     file.extension = file.extension[1..] if file.extension != "." # drop the leading period
