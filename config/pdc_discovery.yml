@@ -3,12 +3,16 @@ default: &default
   pdc_describe_rss: <%= ENV["PDC_DESCRIBE_RSS"] || "https://pdc-describe-staging.princeton.edu/describe/works.rss" %>
   index_pdc_describe: true
   plausible_site_id: <%= "pdc-discovery-staging.princeton.edu" %>
+  globus_collection_uuid: <%= "1a30e7c2-0066-426a-95b9-d6f0fbd1dac3" %>
+  globus_collection_root_folder: <%= "pdc-describe-staging-postcuration" %>
 
 development:
   <<: *default
 
 test:
   <<: *default
+  globus_collection_uuid: <%= "xxxx-yyyy-zzzz-aaaa-bbbb" %>
+  globus_collection_root_folder: <%= "pdc-describe-testing-postcuration" %>
 
 production:
   <<: *default
@@ -16,6 +20,8 @@ production:
   plausible_site_id: <%= "datacommons.princeton.edu/discovery" %>
   pdc_describe_rss: <%= ENV["PDC_DESCRIBE_RSS"] || "https://pdc-describe-prod.princeton.edu/describe/works.rss" %>
   index_pdc_describe: true
+  globus_collection_uuid: <%= "748032cf-017e-4164-84c3-1970617319c4" %>
+  globus_collection_root_folder: <%= "pdc-describe-prod-postcuration" %>
 
 staging:
   <<: *default
