@@ -72,6 +72,20 @@ RSpec.describe SolrDocument do
     end
   end
 
+  describe "#globus_uri" do
+    let(:globus_uri_ssi) { "https://app.globus.org/file-manager?origin_id=xx&origin_path=%2Ffoldern%2Ffile.txt" }
+    let(:uri_ssim) { ["https://princeton.edu", "https://app.globus.org/something/something"] }
+    it "returns the indexed value when available" do
+      doc = described_class.new({ id: "1", globus_uri_ssi: globus_uri_ssi, uri_ssim: uri_ssim })
+      expect(doc.globus_uri).to eq "https://app.globus.org/file-manager?origin_id=xx&origin_path=%2Ffoldern%2Ffile.txt"
+    end
+
+    it "returns the value from the URIs" do
+      doc = described_class.new({ id: "1", uri_ssim: uri_ssim })
+      expect(doc.globus_uri).to eq "https://app.globus.org/something/something"
+    end
+  end
+
   describe "#globus_uri_from_description" do
     it "returns nil when no Globus URI available in the description" do
       doc = described_class.new({ id: "1", author_tesim: [] })

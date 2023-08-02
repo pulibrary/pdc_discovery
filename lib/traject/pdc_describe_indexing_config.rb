@@ -125,152 +125,7 @@ to_field 'domain_ssim' do |record, accumulator, _context|
   accumulator.concat domains
 end
 
-# # ==================
-# # contributor fields
-
-# to_field 'advisor_tesim', extract_xpath("/item/metadata/key[text()='dc.contributor.advisor']/../value")
-# to_field 'editor_tesim', extract_xpath("/item/metadata/key[text()='dc.contributor.editor']/../value")
-# to_field 'illustrator_tesim', extract_xpath("/item/metadata/key[text()='dc.contributor.illustrator']/../value")
-# to_field 'other_contributor_tsim', extract_xpath("/item/metadata/key[text()='dc.contributor.other']/../value")
-# to_field 'creator_tesim', extract_xpath("/item/metadata/key[text()='dc.creator']/../value")
-
-# # ==================
-# # coverage fields
-
-# to_field 'spatial_coverage_tesim', extract_xpath("/item/metadata/key[text()='dc.coverage.spatial']/../value")
-# to_field 'temporal_coverage_tesim', extract_xpath("/item/metadata/key[text()='dc.coverage.temporal']/../value")
-# to_field 'coverage_tesim', extract_xpath("/item/metadata/key[text()='dcterms.coverage']/../value")
-
-# # ==================
-# # date fields
-
-# to_field "date_ssim" do |record, accumulator, _context|
-#   dates = record.xpath("/item/metadata/key[text()='dc.date']/../value").map(&:text)
-#   accumulator.concat DateNormalizer.format_array_for_display(dates)
-# end
-
-# to_field "date_ssim" do |record, accumulator, _context|
-#   dates = record.xpath("/item/metadata/key[text()='dcterms.date']/../value").map(&:text)
-#   accumulator.concat DateNormalizer.format_array_for_display(dates)
-# end
-
-# to_field "date_accessioned_ssim" do |record, accumulator, _context|
-#   dates = record.xpath("/item/metadata/key[text()='dc.date.accessioned']/../value").map(&:text)
-#   accumulator.concat DateNormalizer.format_array_for_display(dates)
-# end
-
-# to_field "date_available_ssim" do |record, accumulator, _context|
-#   dates = record.xpath("/item/metadata/key[text()='dc.date.available']/../value").map(&:text)
-#   accumulator.concat DateNormalizer.format_array_for_display(dates)
-# end
-
-# to_field "year_available_itsi" do |record, accumulator, _context|
-#   dates = record.xpath("/item/metadata/key[text()='dc.date.available']/../value").map(&:text)
-#   accumulator.concat [DateNormalizer.years_from_dates(dates).first]
-# end
-
-# to_field "date_created_ssim" do |record, accumulator, _context|
-#   dates = record.xpath("/item/metadata/key[text()='dc.date.created']/../value").map(&:text)
-#   accumulator.concat DateNormalizer.format_array_for_display(dates)
-# end
-
-# to_field "date_created_ssim" do |record, accumulator, _context|
-#   dates = record.xpath("/item/metadata/key[text()='dcterms.created']/../value").map(&:text)
-#   accumulator.concat DateNormalizer.format_array_for_display(dates)
-# end
-
-# to_field "date_submitted_ssim" do |record, accumulator, _context|
-#   dates = record.xpath("/item/metadata/key[text()='dc.date.submitted']/../value").map(&:text)
-#   accumulator.concat DateNormalizer.format_array_for_display(dates)
-# end
-
-# to_field "date_submitted_ssim" do |record, accumulator, _context|
-#   dates = record.xpath("/item/metadata/key[text()='dcterms.dateSubmitted']/../value").map(&:text)
-#   accumulator.concat DateNormalizer.format_array_for_display(dates)
-# end
-
-# to_field "date_modified_ssim" do |record, accumulator, _context|
-#   dates = record.xpath("/item/metadata/key[text()='dcterms.modified']/../value").map(&:text)
-#   accumulator.concat DateNormalizer.format_array_for_display(dates)
-# end
-
 to_field 'issue_date_ssim', extract_xpath("/hash/resource/publication-year")
-
-# # Date in yyyy-mm-dd format so we can sort by it
-# to_field "issue_date_strict_ssi" do |record, accumulator, _context|
-#   dates = record.xpath("/item/metadata/key[text()='dc.date.issued']/../value").map(&:text)
-#   dates += record.xpath("/item/metadata/key[text()='dcterms.issued']/../value").map(&:text)
-#   accumulator.concat [DateNormalizer.strict_dates(dates).first]
-# end
-
-# to_field "date_accepted_ssim" do |record, accumulator, _context|
-#   dates = record.xpath("/item/metadata/key[text()='dcterms.dateAccepted']/../value").map(&:text)
-#   accumulator.concat DateNormalizer.format_array_for_display(dates)
-# end
-
-# to_field "copyright_date_ssim" do |record, accumulator, _context|
-#   dates = record.xpath("/item/metadata/key[text()='dc.date.copyright']/../value").map(&:text)
-#   accumulator.concat DateNormalizer.format_array_for_display(dates)
-# end
-
-# to_field "copyright_date_ssim" do |record, accumulator, _context|
-#   dates = record.xpath("/item/metadata/key[text()='dcterms.dateCopyrighted']/../value").map(&:text)
-#   accumulator.concat DateNormalizer.format_array_for_display(dates)
-# end
-
-# to_field "date_valid_ssim" do |record, accumulator, _context|
-#   dates = record.xpath("/item/metadata/key[text()='dcterms.valid']/../value").map(&:text)
-#   accumulator.concat DateNormalizer.format_array_for_display(dates)
-# end
-
-# # ==================
-# # description fields
-
-# to_field 'provenance_ssim', extract_xpath("/item/metadata/key[text()='dc.description.provenance']/../value")
-# to_field 'sponsorship_ssim', extract_xpath("/item/metadata/key[text()='dc.description.sponsorship']/../value")
-# to_field 'statementofresponsibility_ssim', extract_xpath("/item/metadata/key[text()='dc.description.statementofresponsibility']/../value")
-# to_field 'tableofcontents_tesim', extract_xpath("/item/metadata/key[text()='dc.description.tableofcontents']/../value")
-# to_field 'description_uri_ssim', extract_xpath("/item/metadata/key[text()='dc.description.uri']/../value")
-
-# # ==================
-# # identifier fields
-
-# to_field 'other_identifier_ssim', extract_xpath("/item/metadata/key[text()='dcterms.identifier']/../value")
-# to_field 'citation_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.citation']/../value")
-# to_field 'govdoc_id_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.govdoc']/../value")
-# to_field 'isan_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.isan']/../value")
-# to_field 'isbn_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.isbn']/../value")
-# to_field 'issn_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.issn']/../value")
-# to_field 'sici_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.sici']/../value")
-# to_field 'ismn_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.ismn']/../value")
-# to_field 'local_id_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.other']/../value")
-
-# # ==================
-# # Indexing the URL for now. We might need to index to a more complex structure if we want to store
-# # more than just the URL (e.g. a title or the language)
-# #
-# # TODO: What should we do with values that don't start with HTTP
-# # (e.g. doi:10.1088/0029-5515/57/1/016034 in document id: 84912)?
-# # Should we fix them before we index them?
-# to_field 'referenced_by_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.isreferencedby']/../value")
-# to_field 'referenced_by_ssim', extract_xpath("/item/metadata/key[text()='dcterms.references']/../value")
-
-# ==================
-# format fields
-# to_field 'format_ssim', extract_xpath("/item/metadata/key[text()='dc.format']/../value")
-# to_field 'format_ssim', extract_xpath("/item/metadata/key[text()='dcterms.format']/../value")
-# to_field 'extent_ssim', extract_xpath("/item/metadata/key[text()='dc.format.extent']/../value")
-# to_field 'extent_ssim', extract_xpath("/item/metadata/key[text()='dcterms.extent']/../value")
-# to_field 'medium_ssim', extract_xpath("/item/metadata/key[text()='dc.format.medium']/../value")
-# to_field 'medium_ssim', extract_xpath("/item/metadata/key[text()='dcterms.medium']/../value")
-# to_field 'mimetype_ssim', extract_xpath("/item/metadata/key[text()='dc.format.mimetype']/../value")
-
-# # ==================
-# # language fields
-# to_field 'language_ssim', extract_xpath("/item/metadata/key[text()='dc.language']/../value")
-# to_field 'language_ssim', extract_xpath("/item/metadata/key[text()='dcterms.language']/../value")
-# to_field 'language_ssim', extract_xpath("/item/metadata/key[text()='dc.language.iso']/../value")
-# to_field 'language_ssim', extract_xpath("/item/metadata/key[text()='dc.language.rfc3066']/../value")
 
 # ==================
 # publisher fields
@@ -279,48 +134,9 @@ to_field 'publisher_ssim', extract_xpath("/hash/resource/publisher")
 # to_field 'publisher_corporate_ssim', extract_xpath("/item/metadata/key[text()='dc.publisher.corporate']/../value")
 
 # # ==================
-# # relation fields
-# to_field 'relation_ssim', extract_xpath("/item/metadata/key[text()='dc.relation']/../value")
-# to_field 'relation_ssim', extract_xpath("/item/metadata/key[text()='dcterms.relation']/../value")
-# to_field 'relation_is_format_of_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.isformatof']/../value")
-# to_field 'relation_is_format_of_ssim', extract_xpath("/item/metadata/key[text()='dcterms.isFormatOf']/../value")
-# to_field 'relation_has_format_ssim', extract_xpath("/item/metadata/key[text()='dcterms.hasFormat']/../value")
-# to_field 'relation_is_part_of_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.ispartof']/../value")
-# to_field 'relation_is_part_of_ssim', extract_xpath("/item/metadata/key[text()='dcterms.isPartOf']/../value")
-# to_field 'relation_is_part_of_series_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.ispartofseries']/../value")
-# to_field 'relation_has_part_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.haspart']/../value")
-# to_field 'relation_has_part_ssim', extract_xpath("/item/metadata/key[text()='dcterms.hasPart']/../value")
-# to_field 'relation_is_version_of_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.isversionof']/../value")
-# to_field 'relation_is_version_of_ssim', extract_xpath("/item/metadata/key[text()='dcterms.isVersionOf']/../value")
-# to_field 'relation_has_version_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.hasversion']/../value")
-# to_field 'relation_has_version_ssim', extract_xpath("/item/metadata/key[text()='dcterms.hasVersion']/../value")
-# to_field 'relation_is_based_on_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.isbasedon']/../value")
-# to_field 'relation_is_referenced_by_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.isreferencedby']/../value")
-# to_field 'relation_is_referenced_by_ssim', extract_xpath("/item/metadata/key[text()='dcterms.isReferencedBy']/../value")
-# to_field 'relation_requires_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.requires']/../value")
-# to_field 'relation_requires_ssim', extract_xpath("/item/metadata/key[text()='dcterms.requires']/../value")
-# to_field 'relation_is_required_by_ssim', extract_xpath("/item/metadata/key[text()='dcterms.isRequiredBy']/../value")
-# to_field 'relation_replaces_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.replaces']/../value")
-# to_field 'relation_replaces_ssim', extract_xpath("/item/metadata/key[text()='dcterms.replaces']/../value")
-# to_field 'relation_is_replaced_by_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.isreplacedby']/../value")
-# to_field 'relation_is_replaced_by_ssim', extract_xpath("/item/metadata/key[text()='dcterms.isReplacedBy']/../value")
-# to_field 'relation_uri_ssim', extract_xpath("/item/metadata/key[text()='dc.relation.uri']/../value")
-
-# # ==================
 # # rights fields
 to_field 'rights_name_ssi', extract_xpath("/hash/resource/rights/name")
 to_field 'rights_uri_ssi', extract_xpath("/hash/resource/rights/uri")
-
-# # ==================
-# # subject fields
-# to_field 'subject_tesim', extract_xpath("/item/metadata/key[text()='dc.subject']/../value")
-# to_field 'subject_tesim', extract_xpath("/item/metadata/key[text()='dcterms.subject']/../value")
-# to_field 'subject_classification_tesim', extract_xpath("/item/metadata/key[text()='dc.subject.classification']/../value")
-# to_field 'subject_ddc_tesim', extract_xpath("/item/metadata/key[text()='dc.subject.ddc']/../value")
-# to_field 'subject_lcc_tesim', extract_xpath("/item/metadata/key[text()='dc.subject.lcc']/../value")
-# to_field 'subject_lcsh_tesim', extract_xpath("/item/metadata/key[text()='dc.subject.lcsh']/../value")
-# to_field 'subject_mesh_tesim', extract_xpath("/item/metadata/key[text()='dc.subject.mesh']/../value")
-# to_field 'subject_other_tesim', extract_xpath("/item/metadata/key[text()='dc.subject.other']/../value")
 
 # subject_all_ssim is used for faceting (must be string)
 # subject_all_tesim is used for searching (use text english)
@@ -334,11 +150,6 @@ end
 to_field 'genre_ssim', extract_xpath("/hash/resource/resource-type")
 # to_field 'provenance_ssim', extract_xpath("/item/metadata/key[text()='dc.provenance']/../value")
 # to_field 'peer_review_status_ssim', extract_xpath("/item/metadata/key[text()='dc.description.version']/../value")
-
-# # ==================
-# # contributor fields
-# to_field 'translator_ssim', extract_xpath("/item/metadata/key[text()='dc.contributor.translator']/../value")
-# to_field 'funding_agency_ssim', extract_xpath("/item/metadata/key[text()='dc.contributor.funder']/../value")
 
 # ==================
 # Funders
@@ -354,26 +165,6 @@ to_field 'funders_ss' do |record, accumulator, _context|
   end
   accumulator.concat [funders.to_json.to_s]
 end
-
-# # ==================
-# # accrual fields
-# to_field 'accrual_method_ssim', extract_xpath("/item/metadata/key[text()='dcterms.accrualMethod']/../value")
-# to_field 'accrual_periodicity_ssim', extract_xpath("/item/metadata/key[text()='dcterms.accrualPeriodicity']/../value")
-# to_field 'accrual_policy_ssim', extract_xpath("/item/metadata/key[text()='dcterms.accrualPolicy']/../value")
-
-# # ==================
-# # audience and citation fields
-# to_field 'audience_ssim', extract_xpath("/item/metadata/key[text()='dcterms.audience']/../value")
-# to_field 'available_ssim', extract_xpath("/item/metadata/key[text()='dcterms.available']/../value")
-# to_field 'bibliographic_citation_ssim', extract_xpath("/item/metadata/key[text()='dcterms.bibliographicCitation']/../value")
-# to_field 'conforms_to_ssim', extract_xpath("/item/metadata/key[text()='dcterms.comformsTo']/../value")
-
-# # ==================
-# # other dcterm fields
-# to_field 'education_level_ssim', extract_xpath("/item/metadata/key[text()='dcterms.educationLevel']/../value")
-# to_field 'instructional_method_ssim', extract_xpath("/item/metadata/key[text()='dcterms.instructionalMethod']/../value")
-# to_field 'mediator_ssim', extract_xpath("/item/metadata/key[text()='dcterms.mediator']/../value")
-# to_field 'source_ssim', extract_xpath("/item/metadata/key[text()='dcterms.source']/../value")
 
 # ==================
 # Store files metadata as a single JSON string so that we can display detailed information for each of them.
@@ -394,6 +185,15 @@ to_field 'files_ss' do |record, accumulator, _context|
     end
   end.compact
   accumulator.concat [files.to_json.to_s]
+end
+
+# Calculate the URI to the globus folder for this dataset
+to_field 'globus_uri_ssi' do |record, accumulator, _context|
+  filename = record.xpath("/hash/files/file/filename/text()").first&.text
+  if filename
+    globus_uri = ImportHelper.globus_folder_uri_from_file(filename)
+    accumulator.concat [globus_uri]
+  end
 end
 
 # Indexes the entire text in a catch-all field.

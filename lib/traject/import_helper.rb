@@ -51,4 +51,13 @@ class ImportHelper
     end
     display_filename || full_path
   end
+
+  # Returns the URI to access the folder in Globus where the data is stored for the given file
+  def self.globus_folder_uri_from_file(filename)
+    origin_id = Rails.configuration.pdc_discovery.globus_collection_uuid
+    root_folder = Rails.configuration.pdc_discovery.globus_collection_root_folder
+    file_path = File.dirname(filename)
+    origin_path = CGI.escape("/#{root_folder}/#{file_path}/")
+    "https://app.globus.org/file-manager?origin_id=#{origin_id}&origin_path=#{origin_path}"
+  end
 end

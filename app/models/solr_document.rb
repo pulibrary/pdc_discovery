@@ -224,9 +224,16 @@ class SolrDocument
   end
 
   def globus_uri
+    # First we try to use the value indexed (only exists for PDC Describe records)
+    indexed_uri = fetch("globus_uri_ssi", nil)
+    return indexed_uri unless indexed_uri.nil?
+
+    # ...then check the links indexed to see if one of them looks like a Globus URI
     uri.each do |link|
       return link if link.downcase.start_with?('https://app.globus.org/')
     end
+
+    # ...if all fails, see if there is a Globus URI in the description
     globus_uri_from_description
   end
 
