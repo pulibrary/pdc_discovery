@@ -3,7 +3,7 @@ default: &default
   pdc_describe_rss: <%= ENV["PDC_DESCRIBE_RSS"] || "https://pdc-describe-staging.princeton.edu/describe/works.rss" %>
   index_pdc_describe: true
   plausible_site_id: <%= "pdc-discovery-staging.princeton.edu" %>
-  globus_collection_uuid: <%= "1a30e7c2-0066-426a-95b9-d6f0fbd1dac3" %>
+  globus_collection_uuid: <%= "7c83af0e-d88c-4f39-96b5-eeb302d04070" %>
   globus_collection_root_folder: <%= "pdc-describe-staging-postcuration" %>
 
 development:
@@ -20,7 +20,9 @@ production:
   plausible_site_id: <%= "datacommons.princeton.edu/discovery" %>
   pdc_describe_rss: <%= ENV["PDC_DESCRIBE_RSS"] || "https://pdc-describe-prod.princeton.edu/describe/works.rss" %>
   index_pdc_describe: true
-  globus_collection_uuid: <%= "748032cf-017e-4164-84c3-1970617319c4" %>
+  # Notice that we use the Globus Collection UUID for the "guest" collection in
+  # Globus which is public and read-only (as opposed to the "managed" collection)
+  globus_collection_uuid: <%= "bb151d8e-ea3f-4612-b357-94d07f538f0c" %>
   globus_collection_root_folder: <%= "pdc-describe-prod-postcuration" %>
 
 staging:
