@@ -1,6 +1,6 @@
 default: &default
   dataspace_url: <%= ENV["DATASPACE_URL"] || "https://dataspace-dev.princeton.edu" %>
-  pdc_describe_rss: <%= "http://localhost:3000/works.rss" %>
+  pdc_describe_rss: <%= ENV["PDC_DESCRIBE_RSS"] || "https://pdc-describe-staging.princeton.edu/describe/works.rss" %>
   index_pdc_describe: true
   plausible_site_id: <%= "pdc-discovery-staging.princeton.edu" %>
   globus_collection_uuid: <%= "7c83af0e-d88c-4f39-96b5-eeb302d04070" %>

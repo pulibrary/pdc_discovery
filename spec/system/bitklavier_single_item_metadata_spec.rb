@@ -27,17 +27,20 @@ describe 'PDC Describe Bitklavier Single item page', type: :system, js: true do
     expect(page).to have_css '.issue-date-heading'
   end
 
-  # rubocop:disable RSpec/ExampleLength
   it "has expected metadata" do
     visit '/catalog/doi-10-34770-r75s-9j74'
     expect(page).to have_content "bitKlavier Grand Sample Library—Binaural Mic Image"
-    authors = "<span>Trueman, Daniel</span>"
-    expected_values = [authors]
-    expected_values.each do |value|
-      expect(page.html.include?(value)).to be true
-    end
+    author_top_of_page = '<span class="author-name">'
+    author_popover_title = 'data-original-title="Trueman, Daniel"'
+    author_popover_orcid = 'https://orcid.org/1234-1234-1234-1234'
+    author_popover_affiliation = "target=_blank>1234-1234-1234-1234</a><br/>\nPrinceton Plasma Physics Laboratory<br/>"
+    author_meta = 'Trueman, Daniel (Princeton Plasma Physics Laboratory)'
+    expect(page.html.include?(author_top_of_page)).to be true
+    expect(page.html.include?(author_popover_title)).to be true
+    expect(page.html.include?(author_popover_orcid)).to be true
+    expect(page.html.include?(author_popover_affiliation)).to be true
+    expect(page.html.include?(author_meta)).to be true
   end
-  # rubocop:enable RSpec/ExampleLength
 
   it "renders collection tags as links" do
     visit '/catalog/doi-10-34770-r75s-9j74'
