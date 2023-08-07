@@ -67,30 +67,13 @@ class SolrDocument
 
   # Returns the list of author names (ordered if possible)
   def authors
-    authors_ordered.map { |author| author["value"] }
+    authors_ordered.map { |author| author.value }
   end
 
-  # Returns the list of authors with all their information
-  # including name and ORCID. (ordered if possible)
+  # Returns the list of authors with all their information including
+  # name, ORCID, and affiliation. List is ordered if possible.
   def authors_ordered
     @authors_ordered ||= begin
-      authors_json = fetch('authors_json_ss', nil)
-      if authors_json
-        # PDC Describe records contain this field;
-        # get the author data and sort it.
-        authors = JSON.parse(authors_json)
-        authors.sort_by { |creator| creator["sequence"] }
-      else
-        # DataSpace record don't contain this field;
-        # do the best we can with author_tesim value.
-        names = fetch('author_tesim', [])
-        names.map { |name| author_from_name(name) }
-      end
-    end
-  end
-
-  def authors_citation
-    @authors_citation ||= begin
       authors_json = fetch('authors_json_ss', nil)
       if authors_json
         # PDC Describe records contain this field;

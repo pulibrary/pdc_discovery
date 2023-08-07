@@ -56,18 +56,18 @@ RSpec.describe SolrDocument do
       pdc_describe_data = JSON.parse(File.read(File.join(fixture_path, 'files', 'pppl1.json')))
       pdc_authors = pdc_describe_data["resource"]["creators"].to_json
       doc = described_class.new({ id: "1", authors_json_ss: pdc_authors })
-      expect(doc.authors_ordered.first["sequence"]).to eq 1
-      expect(doc.authors_ordered.first["value"]).to eq "Wang, Yin"
-      expect(doc.authors_ordered.last["sequence"]).to eq 5
-      expect(doc.authors_ordered.last["value"]).to eq "Ji, Hantao"
+      expect(doc.authors_ordered.first.sequence).to eq 1
+      expect(doc.authors_ordered.first.value).to eq "Wang, Yin"
+      expect(doc.authors_ordered.last.sequence).to eq 5
+      expect(doc.authors_ordered.last.value).to eq "Ji, Hantao"
       expect(doc.authors_ordered.count).to eq 5
     end
 
     it "returns the authors unordered for DataSpace records" do
       doc = described_class.new({ id: "1", author_tesim: ["Eve Tuck", "K. Wayne Yang"] })
-      expect(doc.authors_ordered.first["sequence"]).to eq 0
-      expect(doc.authors_ordered.last["sequence"]).to eq 0
-      expect(doc.authors_ordered.any? { |author| author["value"] == "Eve Tuck" }).to eq true
+      expect(doc.authors_ordered.first.sequence).to eq 0
+      expect(doc.authors_ordered.last.sequence).to eq 0
+      expect(doc.authors_ordered.any? { |author| author.value == "Eve Tuck" }).to eq true
       expect(doc.authors_ordered.count).to eq 2
     end
   end
