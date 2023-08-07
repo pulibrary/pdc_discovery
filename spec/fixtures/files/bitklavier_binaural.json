@@ -21,8 +21,19 @@
                 "name_type": "Personal",
                 "given_name": "Daniel",
                 "family_name": "Trueman",
-                "identifier": null,
-                "affiliations": [],
+                "identifier": {
+                    "value": "1234-1234-1234-1234",
+                    "scheme": "ORCID",
+                    "scheme_uri": "https://orcid.org"
+                },
+                "affiliations": [
+                    {
+                        "value": "Princeton Plasma Physics Laboratory",
+                        "identifier": "https://ror.org/03vn1ts68",
+                        "scheme": "ROR",
+                        "scheme_uri": null
+                    }
+                ],
                 "sequence": 1
             }
         ],
