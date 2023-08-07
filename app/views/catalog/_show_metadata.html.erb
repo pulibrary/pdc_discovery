@@ -7,7 +7,7 @@
           <thead></thead>
           <tbody>
             <%= render_field_row_many "Alternative Title", @document.alternative_title %>
-            <%= render_field_row_many "Author", @document.authors, true, '; ' %> <!-- displayed by default -->
+            <%= render_authors_many "Author", @document.authors_citation %>
             <%= render_field_row_many "Creator", @document.creators %>
             <%= render_field_row_many "Contributor", @document.contributors %>
             <% if @document.domains.present? %>

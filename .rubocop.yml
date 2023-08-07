@@ -26,7 +26,7 @@ Rails/Output:
     - app/lib/cli.rb
 
 RSpec/AnyInstance:
-  Exclude: 
+  Exclude:
     - spec/lib/research_data_harvester_spec.rb
 
 RSpec/ExampleLength:
@@ -35,4 +35,13 @@ RSpec/ExampleLength:
     - spec/system/banner_spec.rb
 
 Rails/UnknownEnv:
+  Enabled: false
+
+Style/NumericPredicate:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Style/IfUnlessModifier:
   Enabled: false

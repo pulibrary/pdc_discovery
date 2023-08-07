@@ -41,6 +41,23 @@ module ApplicationHelper
     html.html_safe
   end
 
+  # Outputs the HTML to render multiple authors and their affiliations as an HTML table row
+  def render_authors_many(title, authors)
+    return if authors.empty?
+    authors_encoded = authors.map do |author|
+      text = author.value
+      text += " (#{author.affiliation_name})" if author.affiliation_name
+      html_escape(text)
+    end
+    html = <<-HTML
+    <tr>
+      <th scope="row"><span>#{title.pluralize(authors.count)}</span></th>
+      <td><span>#{authors_encoded.join('<br/>')}</span></td>
+    </tr>
+    HTML
+    html.html_safe
+  end
+
   # Outputs the HTML to render a single value as an HTML table row with a link
   def render_field_row_link(title, url, show_always = false)
     return if url.blank?
@@ -218,23 +235,66 @@ module ApplicationHelper
     field[:document].authors_ordered.map { |author| author["value"] }.join("; ")
   end
 
+  # Produces the HTML to render a single author and accounts for ORCID and Affiliation information
+  # rubocop:disable Metrics/PerceivedComplexity
   def render_author(author, add_separator)
-    name = author["value"]
+    name = author.value
     return if name.blank?
 
-    orcid = author.dig("identifier", "value") if author.dig("identifier", "scheme")&.upcase == "ORCID"
-    icon_html = '<i class="bi bi-person-fill"></i>'
     separator = add_separator ? ";" : ""
-    name_html = "#{name}#{separator}"
+    orcid = author.identifier&.dig("value") if author.identifier&.dig("scheme")&.upcase == "ORCID"
+
+    orcid_html = ""
     if orcid
-      icon_html = '<img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />'
-      name_html = '<a href="https://orcid.org/' + orcid + '" target="_blank">' + name + '</a>' + separator
+      orcid_html = <<-HTML
+        <img alt='ORCID logo' src='https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png' width='16' height='16' />
+        ORCID: <a href='https://orcid.org/#{orcid}' target=_blank>#{orcid}</a><br/>
+      HTML
     end
 
+    affiliation_html = author.affiliation_name ? author.affiliation_name + '<br/>' : ""
+
+    tooltip_html = <<-HTML
+      #{orcid_html}#{affiliation_html}
+    HTML
+
+    name_html = if tooltip_html.strip == ""
+                  # Just the name
+                  "#{name}#{separator}"
+                else
+                  # The name and extra information for the popover
+                  <<-HTML
+                    <a tabindex="0"
+                      data-toggle="popover"
+                      title="#{name}"
+                      data-html="true"
+                      data-placement="bottom"
+                      data-content="#{tooltip_html}"
+                      class="author_popover_link">#{name}
+                    </a>#{separator}
+                  HTML
+                end
+
     html = <<-HTML
-    <span class="author-name">
-      #{icon_html}
-      #{name_html}
+      <span class="author-name">
+        #{name_html}
+      </span>
+    HTML
+    html.html_safe
+  end
+  # rubocop:enable Metrics/PerceivedComplexity
+
+  # Produces the HTML to render the affiliations for a group of authors
+  def render_author_affiliations(authors)
+    affiliations = authors.map { |author| author.affiliation_index > 0 ? author.affiliation : nil }.compact
+
+    affiliations_html = affiliations.map do |affiliation|
+      "<span class='author-name'><sup>#{affiliation['index']}</sup> #{affiliation['value']}</span>"
+    end.uniq
+
+    html = <<-HTML
+    <div class="author-affiliations">
+      #{affiliations_html.join(', ')}
     </span>
     HTML
     html.html_safe

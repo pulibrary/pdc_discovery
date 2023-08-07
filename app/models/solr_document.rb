@@ -77,7 +77,7 @@ class SolrDocument
       authors_json = fetch('authors_json_ss', nil)
       if authors_json
         # PDC Describe records contain this field;
-        # det the author data and sort it.
+        # get the author data and sort it.
         authors = JSON.parse(authors_json)
         authors.sort_by { |creator| creator["sequence"] }
       else
@@ -86,6 +86,24 @@ class SolrDocument
         names = fetch('author_tesim', [])
         names.map { |name| author_from_name(name) }
       end
+    end
+  end
+
+  def authors_citation
+    @authors_citation ||= begin
+      authors_json = fetch('authors_json_ss', nil)
+      if authors_json
+        # PDC Describe records contain this field;
+        # get the author data and sort it.
+        authors = JSON.parse(authors_json).map { |hash| Author.new(hash) }
+        authors.sort_by(&:sequence)
+      else
+        # DataSpace record don't contain this field;
+        # do the best we can with author_tesim value.
+        names = fetch('author_tesim', [])
+        authors = names.map { |name| Author.new({ "value" => name }) }
+      end
+      AuthorsCitation.new(authors).authors
     end
   end
 

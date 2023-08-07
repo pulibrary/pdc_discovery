@@ -10,6 +10,11 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  .author_popover_link {
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+  }
 </style>
 <% @page_title = "#{@document.title} || 'untitled'" %>
 <% content_for(:head) { render_link_rel_alternates } %>
@@ -21,8 +26,8 @@
         <h1 class="index_title document-title-heading col">
           <span itemprop="name"><%= @document.title %></span>
         </h1>
-        <% @document.authors_ordered.each_with_index do |author, ix| %>
-          <%= render_author(author, ix < (@document.authors_ordered.count-1)) %>
+        <% @document.authors_citation.each_with_index do |author, ix| %>
+          <%= render_author(author, ix < (@document.authors_citation.count-1)) %>
         <% end %>
       </div>
     </header>
@@ -224,6 +229,10 @@
 
     // Copy button for DOI
     setupCopyDoiToClipboard();
+
+    // Enable the popover functionality for authors
+    // https://getbootstrap.com/docs/4.6/components/popovers/
+    $('[data-toggle="popover"]').popover({ trigger: 'click'});
   });
 
 </script>
