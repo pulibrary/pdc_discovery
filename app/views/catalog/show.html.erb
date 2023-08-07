@@ -26,8 +26,8 @@
         <h1 class="index_title document-title-heading col">
           <span itemprop="name"><%= @document.title %></span>
         </h1>
-        <% @document.authors_citation.each_with_index do |author, ix| %>
-          <%= render_author(author, ix < (@document.authors_citation.count-1)) %>
+        <% @document.authors_ordered.each_with_index do |author, ix| %>
+          <%= render_author(author, ix < (@document.authors_ordered.count-1)) %>
         <% end %>
       </div>
     </header>
