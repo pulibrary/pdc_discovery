@@ -15,18 +15,4 @@ class Author
   def affiliation_name
     @affiliation&.fetch("value", nil)
   end
-
-  def affiliation_index
-    if @affiliation
-      @affiliation.fetch("index", 0)
-    else
-      0
-    end
-  end
-
-  def affiliation_index=(index)
-    if @affiliation
-      @affiliation["index"] = index
-    end
-  end
 end

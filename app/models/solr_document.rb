@@ -101,9 +101,8 @@ class SolrDocument
         # DataSpace record don't contain this field;
         # do the best we can with author_tesim value.
         names = fetch('author_tesim', [])
-        authors = names.map { |name| Author.new({ "value" => name }) }
+        names.map { |name| Author.new({ "value" => name }) }
       end
-      AuthorsCitation.new(authors).authors
     end
   end
 
