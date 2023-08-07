@@ -275,11 +275,7 @@ module ApplicationHelper
                   HTML
                 end
 
-    html = <<-HTML
-      <span class="author-name">
-        #{name_html}
-      </span>
-    HTML
+    html = "<span class=\"author-name\">#{name_html}</span>"
     html.html_safe
   end
   # rubocop:enable Metrics/PerceivedComplexity

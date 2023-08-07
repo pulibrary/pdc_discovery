@@ -16,7 +16,7 @@ describe 'Single item page', type: :system, js: true do
     visit '/catalog/78348'
     expect(page).to have_css '.document-title-heading'
     expect(page).to have_css '.authors-heading'
-    expect(page).to have_css 'div.authors-heading > span > i.bi-person-fill'
+    expect(page).to have_css 'div.authors-heading > span.author-name'
     expect(page).to have_css '.issue-date-heading'
   end
 
@@ -25,11 +25,12 @@ describe 'Single item page', type: :system, js: true do
     visit '/catalog/78348'
     expect(page).to have_content "Midplane neutral density profiles in the National Spherical Torus Experiment"
     find('#show-more-metadata-link').click
-    authors = "<span>Stotler, D.; F. Scotti; R.E. Bell; A. Diallo; B.P. LeBlanc; M. Podesta; A.L. Roquemore; P.W. Ross</span>"
+    author1 = '<span class="author-name">Stotler, D.;</span>'
+    author2 = '<span class="author-name">F. Scotti;</span>'
     community1 = '<a href="/?f[communities_ssim][]=Spherical+Torus&amp;q=&amp;search_field=all_fields">Spherical Torus</a>'
     community2 = '<a href="/?f[communities_ssim][]=Princeton+Plasma+Physics+Laboratory&amp;q=&amp;search_field=all_fields">Princeton Plasma Physics Laboratory</a>'
     collection = '<span><a href="/?f[collection_tag_ssim][]=NSTX&amp;q=&amp;search_field=all_fields">NSTX</a></span>'
-    expected_values = [authors, community1, community2, collection]
+    expected_values = [author1, author2, community1, community2, collection]
     expected_values.each do |value|
       expect(page.html.include?(value)).to be true
     end

@@ -23,7 +23,7 @@ describe 'PDC Describe Bitklavier Single item page', type: :system, js: true do
     visit '/catalog/doi-10-34770-r75s-9j74'
     expect(page).to have_css '.document-title-heading'
     expect(page).to have_css '.authors-heading'
-    expect(page).to have_css 'div.authors-heading > span > i.bi-person-fill'
+    expect(page).to have_css 'div.authors-heading > span.author-name'
     expect(page).to have_css '.issue-date-heading'
   end
 
