@@ -4,7 +4,6 @@ default: &default
   index_pdc_describe: true
   plausible_site_id: <%= "pdc-discovery-staging.princeton.edu" %>
   globus_collection_uuid: <%= "7c83af0e-d88c-4f39-96b5-eeb302d04070" %>
-  globus_collection_root_folder: <%= "pdc-describe-staging-postcuration" %>
 
 development:
   <<: *default
@@ -12,7 +11,6 @@ development:
 test:
   <<: *default
   globus_collection_uuid: <%= "xxxx-yyyy-zzzz-aaaa-bbbb" %>
-  globus_collection_root_folder: <%= "pdc-describe-testing-postcuration" %>
 
 production:
   <<: *default
@@ -23,7 +21,6 @@ production:
   # Notice that we use the Globus Collection UUID for the "guest" collection in
   # Globus which is public and read-only (as opposed to the "managed" collection)
   globus_collection_uuid: <%= "bb151d8e-ea3f-4612-b357-94d07f538f0c" %>
-  globus_collection_root_folder: <%= "pdc-describe-prod-postcuration" %>
 
 staging:
   <<: *default

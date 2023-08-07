@@ -27,7 +27,7 @@ RSpec.describe ImportHelper do
     it "returns the URI with the origin and path parameters" do
       globus_folder_uri = described_class.globus_folder_uri_from_file("10.123/4567/40/file1.txt")
       expect(globus_folder_uri.include?("origin_id=xxxx-yyyy-zzzz-aaaa-bbbb")).to be true
-      expect(globus_folder_uri.include?("origin_path=%2Fpdc-describe-testing-postcuration%2F10.123%2F4567%2F40%2F")).to be true
+      expect(globus_folder_uri.include?("origin_path=%2F10.123%2F4567%2F40%2F")).to be true
     end
   end
 end
