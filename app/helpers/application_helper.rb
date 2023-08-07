@@ -232,7 +232,7 @@ module ApplicationHelper
   end
 
   def authors_search_results_helper(field)
-    field[:document].authors_ordered.map { |author| author.value }.join("; ")
+    field[:document].authors_ordered.map(&:value).join("; ")
   end
 
   # Produces the HTML to render a single author and accounts for ORCID and Affiliation information

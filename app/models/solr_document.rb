@@ -67,7 +67,7 @@ class SolrDocument
 
   # Returns the list of author names (ordered if possible)
   def authors
-    authors_ordered.map { |author| author.value }
+    authors_ordered.map(&:value)
   end
 
   # Returns the list of authors with all their information including
