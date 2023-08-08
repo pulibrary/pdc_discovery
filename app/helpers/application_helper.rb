@@ -236,12 +236,33 @@ module ApplicationHelper
   end
 
   # Produces the HTML to render a single author and accounts for ORCID and Affiliation information
-  # rubocop:disable Metrics/PerceivedComplexity
   def render_author(author, add_separator)
     name = author.value
     return if name.blank?
 
     separator = add_separator ? ";" : ""
+    tooltip_html = author_tooltip_html(author)
+    author_html = if tooltip_html.strip == ""
+                    "#{name}#{separator}"
+                  else
+                    <<-HTML
+                      <a data-toggle="popover"
+                        title="#{name}"
+                        data-html="true"
+                        data-placement="bottom"
+                        data-content="#{tooltip_html}"
+                        class="author_popover_link">#{name}
+                      </a>#{separator}
+                    HTML
+                  end
+
+    html = "<span class=\"author-name\">#{author_html}</span>"
+    html.html_safe
+  end
+
+  # Returns the HTML for the author tooltip combining whatever information
+  # we have available for the author (e.g. ORCID, Affiliation).
+  def author_tooltip_html(author)
     orcid = author.identifier&.dig("value") if author.identifier&.dig("scheme")&.upcase == "ORCID"
 
     orcid_html = ""
@@ -254,31 +275,8 @@ module ApplicationHelper
 
     affiliation_html = author.affiliation_name ? author.affiliation_name + '<br/>' : ""
 
-    tooltip_html = <<-HTML
-      #{orcid_html}#{affiliation_html}
-    HTML
-
-    name_html = if tooltip_html.strip == ""
-                  # Just the name
-                  "#{name}#{separator}"
-                else
-                  # The name and extra information for the popover
-                  <<-HTML
-                    <a tabindex="0"
-                      data-toggle="popover"
-                      title="#{name}"
-                      data-html="true"
-                      data-placement="bottom"
-                      data-content="#{tooltip_html}"
-                      class="author_popover_link">#{name}
-                    </a>#{separator}
-                  HTML
-                end
-
-    html = "<span class=\"author-name\">#{name_html}</span>"
-    html.html_safe
+    "#{orcid_html}#{affiliation_html}"
   end
-  # rubocop:enable Metrics/PerceivedComplexity
 
   # Produces the HTML to render the affiliations for a group of authors
   def render_author_affiliations(authors)
