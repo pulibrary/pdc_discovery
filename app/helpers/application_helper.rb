@@ -245,12 +245,16 @@ module ApplicationHelper
     author_html = if tooltip_html.strip == ""
                     "#{name}#{separator}"
                   else
+                    # For popover options
+                    # see https://getbootstrap.com/docs/4.6/components/popovers/
                     <<-HTML
-                      <a data-toggle="popover"
+                      <a tabindex="0"
                         title="#{name}"
+                        data-toggle="popover"
                         data-html="true"
                         data-placement="bottom"
                         data-content="#{tooltip_html}"
+                        data-trigger="focus"
                         class="author_popover_link">#{name}
                       </a>#{separator}
                     HTML
