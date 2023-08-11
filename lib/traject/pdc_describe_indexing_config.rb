@@ -114,7 +114,6 @@ to_field 'authors_affiliation_ssim' do |record, accumulator, _c|
   pdc_json = record.xpath("/hash/pdc_describe_json/text()").first.content
   authors_json = JSON.parse(pdc_json).dig("resource", "creators") || []
   affiliations = authors_json.map { |author| Author.new(author).affiliation_name }
-  puts affiliations.compact.uniq
   accumulator.concat affiliations.compact.uniq
 end
 
