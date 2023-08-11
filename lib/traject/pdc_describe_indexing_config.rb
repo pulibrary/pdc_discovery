@@ -103,6 +103,13 @@ to_field 'authors_json_ss' do |record, accumulator, _c|
   accumulator.concat [authors.to_json]
 end
 
+to_field 'authors_orcid_ssim' do |record, accumulator, _c|
+  pdc_json = record.xpath("/hash/pdc_describe_json/text()").first.content
+  authors_json = JSON.parse(pdc_json).dig("resource", "creators") || []
+  orcids = authors_json.map { |author| Author.new(author).orcid }
+  accumulator.concat orcids
+end
+
 # ==================
 # title fields
 to_field 'title_tesim' do |record, accumulator, _c|

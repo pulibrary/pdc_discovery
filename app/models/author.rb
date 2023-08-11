@@ -15,4 +15,10 @@ class Author
   def affiliation_name
     @affiliation&.fetch("value", nil)
   end
+
+  def orcid
+    if @identifier&.dig("scheme") == "ORCID"
+      @identifier&.dig("value")
+    end
+  end
 end

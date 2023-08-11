@@ -189,6 +189,14 @@ class CatalogController < ApplicationController
       }
     end
 
+    config.add_search_field('orcid') do |field|
+      field.label = "ORCID"
+      field.solr_parameters = {
+        qf: 'authors_orcid_ssim',
+        pf: 'authors_orcid_ssim'
+      }
+    end
+
     # Specifying a :qt only to show it's possible, and so our internal automated
     # tests can test it. In this case it's the same as
     # config[:default_solr_parameters][:qt], so isn't actually neccesary.
