@@ -286,8 +286,9 @@ module ApplicationHelper
 
     affiliation_html = ""
     if author.affiliation_name
+      affiliation_link = search_link(author.affiliation_name, "authors_affiliation_ssim")
       affiliation_html = <<-HTML
-        <a href='#{search_link(author.affiliation_name, "authors_affiliation_ssim")}'>#{author.affiliation_name}</a><br/>
+        <a href='#{affiliation_link}'>#{author.affiliation_name}</a><br/>
       HTML
     end
 
