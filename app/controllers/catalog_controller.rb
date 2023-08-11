@@ -96,6 +96,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'subcommunities_ssim', label: 'Subcommunity'
 
     config.add_facet_field 'collection_tag_ssim', label: 'Collection Tags'
+    config.add_facet_field 'authors_affiliation_ssim', label: 'Affiliation'
 
     config.add_facet_field 'genre_ssim', label: 'Type'
     config.add_facet_field 'year_available_itsi', label: 'Year Published', range: true

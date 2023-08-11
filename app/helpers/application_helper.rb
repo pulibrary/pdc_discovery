@@ -71,8 +71,14 @@ module ApplicationHelper
     html.html_safe
   end
 
-  def search_link(value, field)
-    "#{subdirectory_for_links}/?f[#{field}][]=#{CGI.escape(value)}&q=&search_field=all_fields"
+  # Returns a search link to search by a facet field
+  def search_link(value, facet_field)
+    "#{subdirectory_for_links}/?f[#{facet_field}][]=#{CGI.escape(value)}&q=&search_field=all_fields"
+  end
+
+  # Returns a search link to search by a specific field
+  def search_link_by_field(value, field = "")
+    "#{subdirectory_for_links}/?&q=#{CGI.escape(value)}&search_field=#{field}"
   end
 
   # Outputs the HTML to render a single value as an HTML table row with a search link
@@ -274,10 +280,17 @@ module ApplicationHelper
       orcid_html = <<-HTML
         <img alt='ORCID logo' src='https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png' width='16' height='16' />
         ORCID: <a href='https://orcid.org/#{orcid}' target=_blank>#{orcid}</a><br/>
+        <br/>
+        Find other works <a href='#{search_link_by_field(orcid)}'>by this author</a>.<br/>
       HTML
     end
 
-    affiliation_html = author.affiliation_name ? author.affiliation_name + '<br/>' : ""
+    affiliation_html = ""
+    if author.affiliation_name
+      affiliation_html = <<-HTML
+        <a href='#{search_link(author.affiliation_name, "authors_affiliation_ssim")}'>#{author.affiliation_name}</a><br/>
+      HTML
+    end
 
     "#{orcid_html}#{affiliation_html}"
   end
