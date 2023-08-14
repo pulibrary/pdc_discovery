@@ -96,6 +96,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'subcommunities_ssim', label: 'Subcommunity'
 
     config.add_facet_field 'collection_tag_ssim', label: 'Collection Tags'
+    config.add_facet_field 'authors_affiliation_ssim', label: 'Affiliation'
 
     config.add_facet_field 'genre_ssim', label: 'Type'
     config.add_facet_field 'year_available_itsi', label: 'Year Published', range: true
@@ -186,6 +187,14 @@ class CatalogController < ApplicationController
         'spellcheck.dictionary': 'author',
         qf: '${author_qf}',
         pf: '${author_pf}'
+      }
+    end
+
+    config.add_search_field('orcid') do |field|
+      field.label = "ORCID"
+      field.solr_parameters = {
+        qf: 'authors_orcid_ssim',
+        pf: 'authors_orcid_ssim'
       }
     end
 

@@ -103,6 +103,20 @@ to_field 'authors_json_ss' do |record, accumulator, _c|
   accumulator.concat [authors.to_json]
 end
 
+to_field 'authors_orcid_ssim' do |record, accumulator, _c|
+  pdc_json = record.xpath("/hash/pdc_describe_json/text()").first.content
+  authors_json = JSON.parse(pdc_json).dig("resource", "creators") || []
+  orcids = authors_json.map { |author| Author.new(author).orcid }
+  accumulator.concat orcids.compact.uniq
+end
+
+to_field 'authors_affiliation_ssim' do |record, accumulator, _c|
+  pdc_json = record.xpath("/hash/pdc_describe_json/text()").first.content
+  authors_json = JSON.parse(pdc_json).dig("resource", "creators") || []
+  affiliations = authors_json.map { |author| Author.new(author).affiliation_name }
+  accumulator.concat affiliations.compact.uniq
+end
+
 # ==================
 # title fields
 to_field 'title_tesim' do |record, accumulator, _c|
