@@ -6,11 +6,10 @@
 </div>
 
 <div id="sidebar-keywords" class="sidebar">
-  <table id="sidebar-table">
-    <%= render_sidebar_licenses @document.license %>
-    <%= render_subject_search_links "Keywords", @document.subject, "subject_all_ssim" %>
-    <% file_counts = @document.file_counts.map { |group| "#{group[:extension]}(#{group[:file_count]})" } %>
-    <%= render_sidebar_row "File Types: ", file_counts.join(", ") %>
-    <%= render_sidebar_doi_row @document.doi_url, @document.doi_value %>
-  </table>
+  <%= render_sidebar_licenses @document.license %>
+  <%= render_sidebar_subject_search_links "Keywords", @document.subject, "subject_all_ssim" %>
+  <% file_counts = @document.file_counts.map { |group| "#{group[:extension]}(#{group[:file_count]})" } %>
+  <%= render_sidebar_values "File Types: ", file_counts, ", " %>
+  <%= render_sidebar_doi_row @document.doi_url, @document.doi_value %>
+  <%= render_sidebar_related_identifiers "Related Identifiers", @document.related_identifiers %>
 </div>
