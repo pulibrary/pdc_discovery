@@ -100,5 +100,17 @@ RSpec.describe SolrDocument do
       expect(doc.globus_uri_from_description).to eq "https://app.globus.org/file-manager?origin_id=dc43f461-0ca7-4203-848c-33a9fc00a464&origin_path=%2F"
     end
   end
+
+  describe "#subjects" do
+    it "returns the values for PDC Describe records" do
+      doc = described_class.new({ id: "1", data_source_ssi: "pdc_describe", subject_all_ssim: ["subject1", "subject2"] })
+      expect(doc.subject.sort).to eq ["subject1", "subject2"]
+    end
+
+    it "returns the values for DataSpace records" do
+      doc = described_class.new({ id: "1", subject_tesim: ["subject1", "subject2"] })
+      expect(doc.subject.sort).to eq ["subject1", "subject2"]
+    end
+  end
 end
 # rubocop:enable RSpec/ExampleLength
