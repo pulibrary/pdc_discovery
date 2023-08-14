@@ -2,6 +2,7 @@
 
 require 'rails_helper'
 
+# rubocop:disable Metrics/BlockLength
 # rubocop:disable RSpec/ExampleLength
 RSpec.describe SolrDocument do
   describe "#authors_et_al" do
@@ -113,4 +114,5 @@ RSpec.describe SolrDocument do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
 # rubocop:enable RSpec/ExampleLength
