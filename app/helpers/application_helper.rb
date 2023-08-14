@@ -110,60 +110,6 @@ module ApplicationHelper
     html.html_safe
   end
 
-  # Outputs the HTML to render a single value as an HTML table row
-  # to be displayed on the sidebar.
-  def render_sidebar_row(title, value)
-    return if value.nil?
-    html = <<-HTML
-    <tr>
-      <th scope="row" class="sidebar-label"><span>#{title}</span></th>
-      <td class="sidebar-value"><span>#{html_escape(value)}</span></td>
-    </tr>
-    HTML
-    html.html_safe
-  end
-
-  # Outputs the HTML to render the DOI as an HTML table row to be
-  # displayed on the sidebar with a copy to clipboard button next to it.
-  def render_sidebar_doi_row(url, value)
-    return if url.nil?
-    tooltip = "Copy DOI URL to the clipboard"
-    html = <<-HTML
-    <tr>
-      <th scope="row" class="sidebar-label"><span>DOI:</span></th>
-      <td class="sidebar-value">
-        <span>#{link_to(value, url, target: '_blank', rel: 'noopener noreferrer')}</span>
-        <button id="copy-doi" class="btn btn-sm" data-url="#{url}" title="#{tooltip}">
-          <i id="copy-doi-icon" class="bi bi-clipboard" title="#{tooltip}"></i>
-          <span id="copy-doi-label" class="copy-doi-label-normal">COPY</span>
-        </button>
-      </td>
-    </tr>
-    HTML
-    html.html_safe
-  end
-
-  def render_sidebar_licenses(licenses)
-    return if licenses.count.zero?
-
-    licenses_html = licenses.map do |license|
-      url = License.url(license)
-      if url.nil?
-        "<span>#{html_escape(license)}</span>"
-      else
-        "<span>" + link_to(license, url, target: '_blank', rel: 'noopener noreferrer') + "</span>"
-      end
-    end
-
-    html = <<-HTML
-    <tr>
-      <th scope="row" class="sidebar-label"><span>#{'License'.pluralize(licenses.count)}:</span></th>
-      <td class="sidebar-value">#{licenses_html.join('<br/>')}</td>
-    </tr>
-    HTML
-    html.html_safe
-  end
-
   # Renders citation information APA-ish and BibTeX.
   # Notice that the only the APA style is visible, the BibTeX citataion is enabled via JavaScript.
   def render_cite_as(document)
@@ -193,24 +139,6 @@ module ApplicationHelper
           <span class="copy-citation-label-normal">DOWNLOAD</span>
         </button>
       </div>
-    HTML
-    html.html_safe
-  end
-
-  # Outputs the HTML to render a list of subjects
-  # (this is used on the sidebar)
-  def render_subject_search_links(title, values, field)
-    return if values.count.zero?
-    # Must use <divs> instead of <spans> for them to wrap inside the sidebar
-    links_html = values.map do |value|
-      "#{link_to(value, search_link(value, field), class: 'badge badge-dark sidebar-value-badge', title: value)}<br/>"
-    end
-
-    html = <<-HTML
-    <tr>
-      <th scope="row" class="sidebar-label"><span>#{title}: </span></th>
-      <td>#{links_html.join(' ')}</td>
-    </tr>
     HTML
     html.html_safe
   end

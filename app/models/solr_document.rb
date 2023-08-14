@@ -182,6 +182,10 @@ class SolrDocument
     fetch("data_source_ssi", "dataspace")
   end
 
+  def pdc_describe_record?
+    data_source == "pdc_describe"
+  end
+
   def files
     @files ||= begin
       data = JSON.parse(fetch("files_ss", "[]"))
@@ -270,6 +274,13 @@ class SolrDocument
     fetch("publisher_corporate_ssim", [])
   end
 
+  def related_identifiers
+    @related_identifiers ||= begin
+      hash = JSON.parse(fetch("pdc_describe_json_ss", "{}"))
+      hash.dig("resource", "related_objects") || []
+    end
+  end
+
   def relation
     fetch("relation_ssim", [])
   end
@@ -352,7 +363,11 @@ class SolrDocument
   end
 
   def subject
-    fetch("subject_tesim", [])
+    if pdc_describe_record?
+      fetch("subject_all_ssim", [])
+    else
+      fetch("subject_tesim", [])
+    end
   end
 
   def subject_classification
