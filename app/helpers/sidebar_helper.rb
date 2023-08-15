@@ -83,12 +83,14 @@ module SidebarHelper
     identifiers_html = identifiers.map do |identifier|
       id = identifier["related_identifier"]
       type = identifier["relation_type"]&.titleize
-      if url.start_with?("https://", "http://")
+      if id.nil? || type.nil?
+        nil
+      elsif id.start_with?("https://", "http://")
         "#{type} <a href=#{id} target=_blank>#{id}</a>"
       else
         "#{type} #{id}"
       end
-    end.join("<br/>")
+    end.compact.join("<br/>")
 
     html = <<-HTML
       <div class="sidebar-row">
