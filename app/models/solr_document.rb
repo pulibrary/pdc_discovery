@@ -243,7 +243,7 @@ class SolrDocument
 
   def globus_uri_from_description
     match = description&.match(GLOBUS_URI_REGEX)
-    return match.captures.first.strip if match
+    match.captures.first.strip if match
   end
 
   def extent
