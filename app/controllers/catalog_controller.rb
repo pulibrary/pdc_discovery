@@ -253,7 +253,12 @@ class CatalogController < ApplicationController
     documents = solr_response.documents
 
     raise Blacklight::Exceptions::RecordNotFound if documents.empty?
-    document = documents.first
+    preferred = documents.select { |d| d.data_source == 'pdc_discovery' }
+    document = if preferred.empty?
+                 documents.first
+               else
+                 preferred.first
+               end
 
     redirect_to(solr_document_path(id: document.id))
   end
