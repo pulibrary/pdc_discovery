@@ -82,18 +82,7 @@ module SidebarHelper
     return if identifiers.count == 0
 
     identifiers_html = identifiers.map do |identifier|
-      id = identifier["related_identifier"]
-      id_type = identifier["related_identifier_type"]
-      type = identifier["relation_type"]&.titleize
-      if id.nil? || type.nil?
-        nil
-      elsif id.start_with?("https://", "http://")
-        "#{type} <a href=#{id} target=_blank>#{id}</a>"
-      elsif id_type == "DOI"
-        "#{type} <a href=https://doi.org/#{id} target=_blank>#{id}</a>"
-      else
-        "#{type} #{id}"
-      end
+      related_identifier_value(identifier)
     end.compact.join("<br/>")
 
     html = <<-HTML
@@ -103,6 +92,23 @@ module SidebarHelper
       </div>
     HTML
     html.html_safe
+  end
+
+  private
+
+  def related_identifier_value(identifier)
+    id = identifier["related_identifier"]
+    id_type = identifier["related_identifier_type"]
+    type = identifier["relation_type"]&.titleize
+    if id.nil? || type.nil?
+      nil
+    elsif id.start_with?("https://", "http://")
+      "#{type} <a href=#{id} target=_blank>#{id}</a>"
+    elsif id_type == "DOI"
+      "#{type} <a href=https://doi.org/#{id} target=_blank>#{id}</a>"
+    else
+      "#{type} #{id}"
+    end
   end
 end
 # rubocop:enable Rails/OutputSafety
