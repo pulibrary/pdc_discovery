@@ -8,7 +8,7 @@ class Author
     @given_name = hash["given_name"]
     @family_name = hash["family_name"]
     @identifier = hash["identifier"]
-    @affiliation = hash["affiliations"] ? hash["affiliations"].first : nil
+    @affiliation = hash["affiliations"]&.first
     @sequence = hash["sequence"] || 0
   end
 
