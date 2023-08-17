@@ -108,7 +108,7 @@ end
 # Toggle the WebMock settings below to test data retrieval against a live DSpace instance
 # WebMock.enable_net_connect!
 WebMock.disable_net_connect!(allow_localhost: true,
-                             allow: "chromedriver.storage.googleapis.com")
+                             allow: ["github.com", "objects.githubusercontent.com"])
 
 # Source: https://github.com/sul-dlss/rspec-solr
 # send a GET request to the indicated Solr request handler with the indicated Solr parameters
