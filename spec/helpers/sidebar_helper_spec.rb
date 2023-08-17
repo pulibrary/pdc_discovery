@@ -22,7 +22,7 @@ RSpec.describe SidebarHelper, type: :helper do
       expect(html.include?("badid")).to be false
     end
 
-    it "renders handles DOI identifiers as links" do
+    it "renders DOI identifiers as links" do
       expect(html.include?("<a href=https://doi.org/10.123/456")).to be true
     end
   end
