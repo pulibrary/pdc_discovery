@@ -24,12 +24,11 @@
 set :job_template, "bash -l -c 'export PATH=\"/usr/local/bin/:$PATH\" && :job'"
 
 # Rebuild index completely every night
-every :day, at: '12:20am', roles: [:reindex] do
-  rake "index:research_data"
-end
+# every :day, at: '12:20am', roles: [:reindex] do
+#   rake "index:research_data"
+# end
 
-# Reindex content from PDC Describe much more often, so newly approved works
-# show up right away
+# Rebuild index completely every 30 minutes while we're doing active data migration
 every 30.minutes, roles: [:reindex] do
-  rake "index:pdc_describe_research_data"
+  rake "index:research_data"
 end
