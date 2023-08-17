@@ -6,14 +6,13 @@ RSpec.configure do |config|
   end
 
   config.before(:each, type: :system, js: true) do
-    Webdrivers::Chromedriver.required_version = "114.0.5735.90"
     if ENV["RUN_IN_BROWSER"]
-      driven_by(:selenium_chrome)
+      driven_by(:selenium)
     else
-      driven_by(:selenium_chrome_headless)
+      driven_by(:selenium_headless)
     end
   end
   config.before(:each, type: :system, js: true, in_browser: true) do
-    driven_by(:selenium_chrome)
+    driven_by(:selenium)
   end
 end

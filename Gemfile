@@ -67,6 +67,5 @@ group :test do
   gem 'capybara', '>= 3.26'
   gem 'coveralls_reborn', '~> 0.24.0', require: false
   gem 'selenium-webdriver'
-  gem 'webdrivers'
   gem 'webmock'
 end
