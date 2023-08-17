@@ -6,7 +6,8 @@ RSpec.describe SidebarHelper, type: :helper do
     let(:link_id) { { "related_identifier" => "http://abc.org/999", "relation_type" => "IsCitedBy" } }
     let(:bad_id1) { { "related_identifier" => nil, "relation_type" => "badid" } }
     let(:bad_id2) { { "related_identifier" => "badid", "relation_type" => nil } }
-    let(:identifiers) { [text_id, link_id, bad_id1, bad_id2] }
+    let(:doi_id) { { "related_identifier" => "10.123/456", "relation_type" => "IsCitedBy", "related_identifier_type" => "DOI" } }
+    let(:identifiers) { [text_id, link_id, bad_id1, bad_id2, doi_id] }
     let(:html) { helper.render_sidebar_related_identifiers("Related Identifiers", identifiers) }
 
     it "titleize relation type" do
@@ -19,6 +20,10 @@ RSpec.describe SidebarHelper, type: :helper do
 
     it "ignores bad identifiers" do
       expect(html.include?("badid")).to be false
+    end
+
+    it "renders DOI identifiers as links" do
+      expect(html.include?("<a href=https://doi.org/10.123/456")).to be true
     end
   end
 end
