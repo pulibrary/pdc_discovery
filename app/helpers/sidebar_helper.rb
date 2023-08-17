@@ -8,11 +8,12 @@ module SidebarHelper
     tooltip = "Copy DOI URL to the clipboard"
     html = <<-HTML
       <span class="sidebar-header">DOI</span><br/>
-      <span class="sidebar-value">#{link_to(value, url, target: '_blank', rel: 'noopener noreferrer')}</span>
+      <span class="sidebar-value">#{link_to(value, url, target: '_blank', rel: 'noopener noreferrer')}
         <button id="copy-doi" style="padding-top: 0;" class="btn btn-sm" data-url="#{url}" title="#{tooltip}">
           <i id="copy-doi-icon" class="bi bi-clipboard" title="#{tooltip}"></i>
           <span id="copy-doi-label" class="copy-doi-label-normal">COPY</span>
         </button>
+      </span>
     HTML
     html.html_safe
   end
@@ -82,11 +83,14 @@ module SidebarHelper
 
     identifiers_html = identifiers.map do |identifier|
       id = identifier["related_identifier"]
+      id_type = identifier["related_identifier_type"]
       type = identifier["relation_type"]&.titleize
       if id.nil? || type.nil?
         nil
       elsif id.start_with?("https://", "http://")
         "#{type} <a href=#{id} target=_blank>#{id}</a>"
+      elsif id_type == "DOI"
+        "#{type} <a href=https://doi.org/#{id} target=_blank>#{id}</a>"
       else
         "#{type} #{id}"
       end
