@@ -23,9 +23,9 @@
 # Sets the PATH environment variable and run the job
 set :job_template, "bash -l -c 'export PATH=\"/usr/local/bin/:$PATH\" && :job'"
 
-# Reindex content from DataSpace nightly
+# Rebuild index completely every night
 every :day, at: '12:20am', roles: [:reindex] do
-  rake "index:dspace_research_data"
+  rake "index:research_data"
 end
 
 # Reindex content from PDC Describe much more often, so newly approved works
