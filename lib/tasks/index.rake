@@ -6,13 +6,15 @@ require ::Rails.root.join('lib', 'traject', 'solr_cloud_helper.rb')
 namespace :index do
   desc 'Re-index all research data'
   task research_data: :environment do
+    Rails.logger.info "Indexing: Research Data indexing started"
     SolrCloudHelper.create_collection_writer
     Rails.logger.info "Indexing: Created a new collection for writing: #{SolrCloudHelper.collection_writer_url}"
 
-    Rails.logger.info "Indexing: Research Data indexing started"
+    Rails.logger.info "Indexing: Fetching PDC Describe records"
     Rake::Task['index:pdc_describe_research_data'].invoke
+    Rails.logger.info "Indexing: Fetching DataSpace records"
     Rake::Task['index:dspace_research_data'].invoke
-    Rails.logger.info "Indexing: Research Data indexing completed"
+    Rails.logger.info "Indexing: Fetching completed"
 
     SolrCloudHelper.update_solr_alias!
     Rails.logger.info "Indexing: Updated Solr to read from the new collection: #{SolrCloudHelper.alias_url} -> #{SolrCloudHelper.collection_reader_url}"
