@@ -130,6 +130,4 @@ RSpec.describe DspaceResearchDataHarvester do
       end
     end
   end
-
-
 end
