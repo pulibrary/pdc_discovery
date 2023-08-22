@@ -26,7 +26,7 @@ gem "nokogiri", ">= 1.13.4"
 gem 'oai'
 gem 'pg'
 gem 'plausible_api'
-gem 'puma', '~> 5.0'
+gem 'puma', '~> 5.6'
 gem 'rails', '~> 6.1.4'
 gem 'rinku'
 gem 'rsolr', '>= 1.0', '< 3'
