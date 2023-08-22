@@ -4,11 +4,11 @@ RSpec.describe DspaceResearchDataHarvester do
   let(:rdh) { described_class.new }
 
   it "has a list of collections to index" do
-    expect(rdh.collections_to_index.count).to eq 34
+    expect(rdh.collections_to_index.count).to eq 35
   end
 
   it "has a convenience method for indexing all collections" do
-    expect_any_instance_of(described_class).to receive(:harvest).exactly(34).times
+    expect_any_instance_of(described_class).to receive(:harvest).exactly(35).times
     described_class.harvest(true)
   end
 
@@ -114,7 +114,19 @@ RSpec.describe DspaceResearchDataHarvester do
         rdh.produce_full_migration_spreadsheet(tracking_csv, shortened_collections_csv)
         csv = CSV.parse(File.read(tracking_csv), headers: true)
         expect(csv[0]["title"]).to eq "Hyperdiffusion of dust particles in a turbulent tokamak plasma"
-        expect(csv[7]["title"]).to eq "A novel scheme for error field correction in permanent magnet stellarators"
+        expect(csv[8]["title"]).to eq "A novel scheme for error field correction in permanent magnet stellarators"
+      end
+
+      context "migration is already in progress" do
+        let(:in_progress_csv) { File.join(fixture_path, "migration", 'migration_in_progress.csv') }
+
+        it 'produces a csv for all items in need of migration not already on the in-progress spreadsheet' do
+          rdh.produce_delta_migration_spreadsheet(tracking_csv, shortened_collections_csv, in_progress_csv)
+          csv = CSV.parse(File.read(tracking_csv), headers: true)
+          # The chatbot fixture is the only one that isn't in the migration in progress spreadsheet
+          expect(csv[0]["title"]).to eq "Chatbots as social companions: Perceiving consciousness, human likeness, and social health benefits in machines"
+          expect(csv.count).to eq 1
+        end
       end
     end
   end
