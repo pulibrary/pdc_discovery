@@ -20,8 +20,9 @@ namespace :migration do
       puts "Usage: bundle exec rake migration:produce_delta_spreadsheet\\[/full/path/to/in_progress.csv]"
       exit 1
     end
+    in_progress_csv = args[:in_progress_csv]
     tracking_csv = "/tmp/delta_dataspace_migration_spreadsheet_#{Time.zone.now.strftime('%Y_%m_%d_%H_%M')}.csv"
     collections_csv = Rails.root.join("config", "collections.csv")
-    DspaceResearchDataHarvester.new.produce_full_migration_spreadsheet(tracking_csv, collections_csv)
+    DspaceResearchDataHarvester.new.produce_delta_migration_spreadsheet(tracking_csv, collections_csv, in_progress_csv)
   end
 end

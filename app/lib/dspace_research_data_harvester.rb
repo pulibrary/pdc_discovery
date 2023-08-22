@@ -102,6 +102,27 @@ class DspaceResearchDataHarvester
   end
 
   ##
+  # Delta between migration needed and what's on the in progress spreadsheet
+  def delta_migration(parent_community, community, collection_name, collection_id, tracking_csv, in_progress_csv)
+    in_progress_data = CSV.parse(File.read(in_progress_csv), headers: true)
+    in_progress_handles = in_progress_data.by_col["handle"]
+    url = "#{server}/collections/#{collection_id}/items"
+
+    resp = Faraday.get(url, {}, { 'Accept': 'application/xml' })
+    xml_doc = Nokogiri::XML(resp.body)
+
+    CSV.open(tracking_csv, "a") do |csv|
+      xml_doc.xpath("/items/item").each do |item_node|
+        handle = item_handle(item_node)
+        next if in_progress_handles.include?(handle)
+        collection_hierarchy = csv_communities([parent_community, community, collection_name])
+        everything_else = [item_title(item_node), handle, "https://dataspace.princeton.edu/handle/#{handle}", '', '', '', '', '']
+        csv << collection_hierarchy + everything_else
+      end
+    end
+  end
+
+  ##
   # Generate a CSV with a row for each DSpace item that needs to be migrated to PDC Describe
   def produce_full_migration_spreadsheet(tracking_csv, collections_csv)
     Rails.logger.info "Generating DSpace migration tracking CSV"
@@ -111,6 +132,19 @@ class DspaceResearchDataHarvester
     collections_to_index(collections_csv).each do |collection|
       # TODO: parent community should be pushed to the left if it is NA
       produce_migration_spreadsheet(collection.parent_community, collection.community, collection.collection_name, collection.collection_id, tracking_csv)
+    end
+  end
+
+  # Generate a CSV with a row for each DSpace item that needs to be migrated
+  # and is not yet present in the in_progress spreadsheet
+  def produce_delta_migration_spreadsheet(tracking_csv, collections_csv, in_progress_csv)
+    Rails.logger.info "Generating DSpace DELTA migration tracking CSV"
+    Rails.logger.info "Calculating delta against #{in_progress_csv}"
+    CSV.open(tracking_csv, "w") do |csv|
+      csv << migration_csv_headers
+    end
+    collections_to_index(collections_csv).each do |collection|
+      delta_migration(collection.parent_community, collection.community, collection.collection_name, collection.collection_id, tracking_csv, in_progress_csv)
     end
   end
 end

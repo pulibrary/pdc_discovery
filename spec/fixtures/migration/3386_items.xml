@@ -28,4 +28,32 @@
     <withdrawn>false
     </withdrawn>
   </item>
+  <item>
+    <expand>metadata
+    </expand>
+    <expand>parentCollection
+    </expand>
+    <expand>parentCollectionList
+    </expand>
+    <expand>parentCommunityList
+    </expand>
+    <expand>bitstreams
+    </expand>
+    <expand>all
+    </expand>
+    <handle>88435/dsp01t435gh23t
+    </handle>
+    <id>123456
+    </id>
+    <name>Chatbots as social companions: Perceiving consciousness, human likeness, and social health benefits in machines
+    </name>
+    <type>item
+    </type>
+    <archived>true
+    </archived>
+    <lastModified>2023-07-08 15:59:14.185
+    </lastModified>
+    <withdrawn>false
+    </withdrawn>
+  </item>
 </items>
