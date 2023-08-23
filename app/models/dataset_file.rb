@@ -27,7 +27,7 @@ class DatasetFile
     # Technically the handle is a property of the dataset item rather than the file (aka bitstream)
     # but we store it at the file level for convenience.
     file.handle = hash[:handle]
-    file.download_url = "#{DatasetFile.download_root}/#{file.handle}/#{file.sequence}/#{file.name}"
+    file.download_url = "#{DatasetFile.download_root}/#{file.handle}/#{file.sequence}"
     file
   end
 
