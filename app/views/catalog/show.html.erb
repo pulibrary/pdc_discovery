@@ -250,7 +250,15 @@
     // Enable the popover functionality for authors
     // https://getbootstrap.com/docs/4.6/components/popovers/
     // https://getbootstrap.com/docs/4.6/components/popovers/#dismiss-on-next-click
-    $('[data-toggle="popover"]').popover({ trigger: 'focus'});
+    //
+    // Delay is used to delay the closing of the pop over when clicking on links inside of it.
+    // The delay allows the link to recognize the click and open the corresponding URL before
+    // closing. Otherwise, sometimes the pop up closes before the link has a chance to open
+    // (see https://stackoverflow.com/questions/27012667/link-in-bootstrap-popover-doesnt-work)
+    $('[data-toggle="popover"]').popover({
+      trigger: 'focus',
+      delay: { hide: 200 }
+    });
   });
 
 </script>
