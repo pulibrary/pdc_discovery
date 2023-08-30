@@ -1,7 +1,7 @@
 ---
 version: 2.1
 orbs:
-  browser-tools: circleci/browser-tools@1.4.2
+  browser-tools: circleci/browser-tools@1.4.4
 
 executors:
   pdc_discovery_executor_build:
@@ -137,12 +137,11 @@ jobs:
             curl -H 'Content-type: application/json' http://solr:SolrRocks@127.0.0.1:8983/api/collections/ -d '{create: {name: pdc_discovery-core-test, config: pdc_discovery, numShards: 1}}'
       - bundle_install
       - yarn_install
-      - browser-tools/install-browser-tools
+      - browser-tools/install-firefox
       - run: |
           ruby --version
           node --version
           java --version
-          google-chrome --version
       - run: bundle exec rake db:create
       - run: bundle exec rake db:migrate
       - run: bundle exec rake db:migrate RAILS_ENV=test
