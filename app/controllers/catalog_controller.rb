@@ -29,6 +29,8 @@ class CatalogController < ApplicationController
       rows: 10
     }
 
+    config.track_search_session = { storage: false }
+
     # solr path which will be added to solr base url before the other solr params.
     # config.solr_path = 'select'
     # config.document_solr_path = 'get'
