@@ -11,6 +11,17 @@ class CatalogController < ApplicationController
     redirect_to error_page
   end
 
+  # Override show method to remove next and previous search links
+  def show
+    @document = search_service.fetch(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json
+      additional_export_formats(@document, format)
+    end
+  end
+
   configure_blacklight do |config|
     ## Class for sending and receiving requests from a search index
     # config.repository_class = Blacklight::Solr::Repository
@@ -28,8 +39,6 @@ class CatalogController < ApplicationController
     config.default_solr_params = {
       rows: 10
     }
-
-    config.track_search_session = { storage: false }
 
     # solr path which will be added to solr base url before the other solr params.
     # config.solr_path = 'select'
