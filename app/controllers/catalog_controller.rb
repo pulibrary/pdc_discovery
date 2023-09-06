@@ -263,6 +263,12 @@ class CatalogController < ApplicationController
     redirect_to(solr_document_path(id: document.id))
   end
 
+  def current_search_session
+  end
+
+  def setup_next_and_previous_documents
+  end
+
   def resolve_ark
     raise Blacklight::Exceptions::RecordNotFound unless params.key?(:ark)
 
