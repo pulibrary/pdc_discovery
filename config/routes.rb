@@ -13,6 +13,9 @@ Rails.application.routes.draw do
 
   get 'catalog/:id/bibtex' => 'catalog#bibtex', as: :catalog_bibtex
 
+  get 'catalog/:id/track', to: redirect('/catalog/%{id}')
+
+
   resource :catalog, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
     concerns :searchable
     concerns :range_searchable

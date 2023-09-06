@@ -2,6 +2,7 @@
 require 'rails_helper'
 
 RSpec.describe "Catalog", type: :request do
+
   context "when indexing from DSpace" do
     let(:dspace_fixtures) { File.read(File.join(fixture_path, 'spherical_torus.xml')) }
     let(:indexer) do
@@ -9,6 +10,11 @@ RSpec.describe "Catalog", type: :request do
     end
     before do
       indexer.index
+    end
+
+    it 'discards search tracking parameters' do
+      get "/catalog/84912/track?counter=1&document_id=84912"
+      expect(response).to redirect_to("/catalog/84912")
     end
 
     describe "GET /doi/:doi" do
