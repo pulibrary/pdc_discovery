@@ -205,6 +205,9 @@
             <% @document.mediator.each do |mediator| %>
               <%= render_field_row "Mediator", mediator %>
             <% end %>
+
+            <!-- TODO: Claudia to add code here to display funder information if available -->
+
             <% @document.source.each do |source| %>
               <%= render_field_row "Source", source %>
             <% end %>
