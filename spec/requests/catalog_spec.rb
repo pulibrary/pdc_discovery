@@ -89,4 +89,52 @@ RSpec.describe "Catalog", type: :request do
       end
     end
   end
+
+  context "when a connection error is encountered while trying to access the Solr endpoint" do
+    let(:document_id) { "84912" }
+    let(:repository) { instance_double(Blacklight::Solr::Repository) }
+    let(:repository2) { instance_double(Blacklight::Solr::Repository) }
+    let(:search_service) { instance_double(Blacklight::SearchService) }
+    let(:search_service2) { instance_double(Blacklight::SearchService) }
+    let(:ping) { true }
+
+    before do
+      allow(search_service2).to receive(:fetch).and_return(nil)
+      allow(repository2).to receive(:ping).and_return(ping)
+      allow(repository2).to receive(:search).and_return(nil)
+      allow(search_service2).to receive(:repository).and_return(repository2)
+
+      allow(repository).to receive(:ping).and_return(ping)
+      allow(search_service).to receive(:repository).and_return(repository)
+
+      allow(Blacklight::SearchService).to receive(:new).and_return(search_service, search_service2)
+    end
+
+    context "when Solr is not at all accessible" do
+      let(:ping) { false }
+
+      before do
+        allow(search_service).to receive(:fetch).and_raise(Blacklight::Exceptions::ECONNREFUSED)
+        get "/catalog/#{document_id}"
+      end
+
+      it "responds with an error view" do
+        expect(response).to redirect_to("/errors/network_error")
+      end
+    end
+
+    context "when Solr is accessible" do
+      let(:document) { SolrDocument.new(id: document_id) }
+
+      before do
+        allow(search_service).to receive(:fetch).and_raise(Blacklight::Exceptions::ECONNREFUSED)
+        allow(search_service).to receive(:fetch).and_return([nil, document])
+        get "/catalog/#{document_id}"
+      end
+
+      it "retrieves Solr Documents using a given DOI" do
+        expect(response.status).to eq(200)
+      end
+    end
+  end
 end
