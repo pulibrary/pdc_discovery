@@ -6,9 +6,23 @@ class CatalogController < ApplicationController
 
   include Blacklight::Marc::Catalog
 
+  around_action :retry_on_exception
+
   rescue_from Blacklight::Exceptions::RecordNotFound do
     error_page = Rails.env.production? || Rails.env.staging? ? '/discovery/errors/not_found' : '/errors/not_found'
     redirect_to error_page
+  end
+
+  def retry_on_exception
+    yield
+  rescue Blacklight::Exceptions::ECONNREFUSED
+    # If the Solr service is available, retry the HTTP request
+    if search_service.repository.ping
+      retry
+    else
+      error_page = Rails.env.production? || Rails.env.staging? ? '/discovery/errors/network_error' : '/errors/network_error'
+      redirect_to error_page
+    end
   end
 
   configure_blacklight do |config|
