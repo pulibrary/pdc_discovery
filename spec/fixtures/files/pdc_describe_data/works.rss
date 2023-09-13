@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  Created by saving the url.  The associates json files were created by running: 
+  @url = "https://datacommons.princeton.edu/describe/works.rss"
+  doc = Nokogiri::XML(URI.open(@rss_url))
+  url_list = doc.xpath("//item/url/text()").map(&:to_s)
+  url_list.each do |url|
+    uri = URI.parse(url)
+    file_name =  uri.path.gsub( "/describe/works/", "spec/fixtures/files/pdc_describe_data/")
+    resource_json = URI.open(url).read
+    File.open(Rails.root.join(file_name), "w") { |f| f.write resource_json }
+  end
+ -->
+<rss version="2.0">
+  <channel>
+    <title>Princeton Data Commons RSS Feed</title>
+    <description>Princeton Data Commons RSS Feed of approved submissions</description>
+    <link>https://datacommons.princeton.edu/describe/</link>
+    <item>
+      <title>Stellarator coil design using cubic splines for improved access on the outboard side</title>
+      <url>https://datacommons.princeton.edu/describe/works/59.json</url>
+      <date_changed>2023-08-16 20:14:51 -0400</date_changed>
+    </item>
+    <item>
+      <title>Reduced Physics Model of the Tokamak Scrape-off-Layer for Pulse Design</title>
+      <url>https://datacommons.princeton.edu/describe/works/86.json</url>
+      <date_changed>2023-08-31 13:18:29 -0400</date_changed>
+    </item>
+    <item>
+      <title>Laboratory study of the failed torus mechanism in arched, line-tied, magnetic flux ropes</title>
+      <url>https://datacommons.princeton.edu/describe/works/85.json</url>
+      <date_changed>2023-09-13 08:23:50 -0400</date_changed>
+    </item>
+    <item>
+      <title>bitKlavier Grand Sample Library—Piano Bar Mic Image</title>
+      <url>https://datacommons.princeton.edu/describe/works/36.json</url>
+      <date_changed>2023-08-17 14:12:49 -0400</date_changed>
+    </item>
+    <item>
+      <title>Source data for "Observation of Axisymmetric Standard Magnetorotational Instability in the Laboratory"</title>
+      <url>https://datacommons.princeton.edu/describe/works/48.json</url>
+      <date_changed>2023-09-13 08:23:50 -0400</date_changed>
+    </item>
+    <item>
+      <title>Lower Hybrid Drift Waves During Guide Field Reconnection</title>
+      <url>https://datacommons.princeton.edu/describe/works/45.json</url>
+      <date_changed>2023-09-13 08:23:50 -0400</date_changed>
+    </item>
+    <item>
+      <title>Initial operation and data processing on a system for real-time evaluation of Thomson scattering signals on the Large Helical Device</title>
+      <url>https://datacommons.princeton.edu/describe/works/51.json</url>
+      <date_changed>2023-08-22 14:59:25 -0400</date_changed>
+    </item>
+    <item>
+      <title>Novel angular velocity estimation technique for plasma filaments</title>
+      <url>https://datacommons.princeton.edu/describe/works/79.json</url>
+      <date_changed>2023-08-21 15:07:54 -0400</date_changed>
+    </item>
+    <item>
+      <title>Hyperdiffusion of dust particles in a turbulent tokamak plasma</title>
+      <url>https://datacommons.princeton.edu/describe/works/67.json</url>
+      <date_changed>2023-08-22 15:36:36 -0400</date_changed>
+    </item>
+    <item>
+      <title>Observation of synergy between lower hybrid waves at two frequencies in EAST</title>
+      <url>https://datacommons.princeton.edu/describe/works/69.json</url>
+      <date_changed>2023-08-23 12:04:34 -0400</date_changed>
+    </item>
+    <item>
+      <title>Identification of a non-axisymmetric mode in laboratory experiments searching for standard magnetorotational instability</title>
+      <url>https://datacommons.princeton.edu/describe/works/66.json</url>
+      <date_changed>2023-09-13 08:23:50 -0400</date_changed>
+    </item>
+    <item>
+      <title>Energetic particle optimization of quasi-axisymmetric stellarator equilibria</title>
+      <url>https://datacommons.princeton.edu/describe/works/60.json</url>
+      <date_changed>2023-08-18 12:05:55 -0400</date_changed>
+    </item>
+    <item>
+      <title>Linear gyrokinetic simulations of microinstabilities within the pedestal region of H-mode NSTX discharges in a highly shaped geometry</title>
+      <url>https://datacommons.princeton.edu/describe/works/106.json</url>
+      <date_changed>2023-09-11 17:22:34 -0400</date_changed>
+    </item>
+    <item>
+      <title>Study of the impact of pre- and real-time deposition of lithium on plasma performance on NSTX</title>
+      <url>https://datacommons.princeton.edu/describe/works/92.json</url>
+      <date_changed>2023-08-28 14:05:37 -0400</date_changed>
+    </item>
+    <item>
+      <title>A reduced-turbulence regime in the Large Helical Device upon injection of low-Z materials powders</title>
+      <url>https://datacommons.princeton.edu/describe/works/105.json</url>
+      <date_changed>2023-08-24 16:06:49 -0400</date_changed>
+    </item>
+    <item>
+      <title>Fusion Pilot Plant performance and the role of a Sustained High Power Density tokamak</title>
+      <url>https://datacommons.princeton.edu/describe/works/62.json</url>
+      <date_changed>2023-08-18 12:07:35 -0400</date_changed>
+    </item>
+    <item>
+      <title>A dynamic magnetic tension force as the cause of failed solar eruptions</title>
+      <url>https://datacommons.princeton.edu/describe/works/40.json</url>
+      <date_changed>2023-09-13 08:23:51 -0400</date_changed>
+    </item>
+    <item>
+      <title>Geometric concepts for stellarator permanent magnet arrays</title>
+      <url>https://datacommons.princeton.edu/describe/works/57.json</url>
+      <date_changed>2023-08-17 16:25:57 -0400</date_changed>
+    </item>
+    <item>
+      <title>Observation of quasi-coherent edge fluctuations in Ohmic plasmas on NSTX</title>
+      <url>https://datacommons.princeton.edu/describe/works/98.json</url>
+      <date_changed>2023-08-28 15:47:41 -0400</date_changed>
+    </item>
+    <item>
+      <title>Attention and awareness in the dorsal attention network</title>
+      <url>https://datacommons.princeton.edu/describe/works/33.json</url>
+      <date_changed>2023-08-08 14:33:12 -0400</date_changed>
+    </item>
+    <item>
+      <title>First impurity powder injection experiments in LHD</title>
+      <url>https://datacommons.princeton.edu/describe/works/58.json</url>
+      <date_changed>2023-08-17 16:28:18 -0400</date_changed>
+    </item>
+    <item>
+      <title>Energy Exchange Dynamics across L-H Transitions in NSTX</title>
+      <url>https://datacommons.princeton.edu/describe/works/95.json</url>
+      <date_changed>2023-08-28 15:27:31 -0400</date_changed>
+    </item>
+    <item>
+      <title>Nonlinear fishbone dynamics in spherical tokamaks</title>
+      <url>https://datacommons.princeton.edu/describe/works/93.json</url>
+      <date_changed>2023-08-28 15:14:28 -0400</date_changed>
+    </item>
+    <item>
+      <title>A novel scheme for error field correction in permanent magnet stellarators</title>
+      <url>https://datacommons.princeton.edu/describe/works/61.json</url>
+      <date_changed>2023-08-17 16:31:12 -0400</date_changed>
+    </item>
+    <item>
+      <title>Blob-hole correlation model for edge turbulence and comparisons with NSTX GPI data</title>
+      <url>https://datacommons.princeton.edu/describe/works/94.json</url>
+      <date_changed>2023-08-28 15:17:52 -0400</date_changed>
+    </item>
+    <item>
+      <title>Enhancement of edge turbulence concomitant with ELM suppression during boron powder injection in EAST</title>
+      <url>https://datacommons.princeton.edu/describe/works/70.json</url>
+      <date_changed>2023-08-23 12:10:03 -0400</date_changed>
+    </item>
+    <item>
+      <title>Plasma measurements of the Fe XVII L-shell emission and blending with F VIII and F IX</title>
+      <url>https://datacommons.princeton.edu/describe/works/97.json</url>
+      <date_changed>2023-08-28 15:40:49 -0400</date_changed>
+    </item>
+    <item>
+      <title>A multi-machine scaling of halo current rotation</title>
+      <url>https://datacommons.princeton.edu/describe/works/96.json</url>
+      <date_changed>2023-08-28 15:37:04 -0400</date_changed>
+    </item>
+    <item>
+      <title>Phase coherence of parametric-decay modes during high-harmonic fast-wave heating in the National Spherical Torus Experiment</title>
+      <url>https://datacommons.princeton.edu/describe/works/107.json</url>
+      <date_changed>2023-09-11 17:28:23 -0400</date_changed>
+    </item>
+    <item>
+      <title>Design of an arrangement of cubic magnets for a quasi-axisymmetric stellarator experiment</title>
+      <url>https://datacommons.princeton.edu/describe/works/39.json</url>
+      <date_changed>2023-08-22 15:30:53 -0400</date_changed>
+    </item>
+    <item>
+      <title>Type-I ELM mitigation by continuous lithium granule gravitational injection into the upper tungsten divertor in EAST</title>
+      <url>https://datacommons.princeton.edu/describe/works/63.json</url>
+      <date_changed>2023-08-23 11:57:17 -0400</date_changed>
+    </item>
+    <item>
+      <title>Observation of a reduced-turbulence regime with boron powder injection in a stellarator</title>
+      <url>https://datacommons.princeton.edu/describe/works/104.json</url>
+      <date_changed>2023-08-24 16:07:09 -0400</date_changed>
+    </item>
+    <item>
+      <title>Midplane neutral density profiles in the National Spherical Torus Experiment</title>
+      <url>https://datacommons.princeton.edu/describe/works/72.json</url>
+      <date_changed>2023-08-31 13:14:28 -0400</date_changed>
+    </item>
+    <item>
+      <title>Supporting data for Baldwin et al 2019 "Temporally Compound Heat Waves and Global Warming: An Emerging Hazard"</title>
+      <url>https://datacommons.princeton.edu/describe/works/34.json</url>
+      <date_changed>2023-09-01 16:03:00 -0400</date_changed>
+    </item>
+    <item>
+      <title>CKavity Library: Next-Generation Sequencing</title>
+      <url>https://datacommons.princeton.edu/describe/works/55.json</url>
+      <date_changed>2023-09-05 13:20:05 -0400</date_changed>
+    </item>
+    <item>
+      <title>Electromagnetic total-f algorithm for gyrokinetic particle-in-cell simulations of boundary plasma in XGC</title>
+      <url>https://datacommons.princeton.edu/describe/works/41.json</url>
+      <date_changed>2023-09-08 14:46:11 -0400</date_changed>
+    </item>
+    <item>
+      <title>Theory based scaling of edge turbulence and implications for the scrape-off layer width</title>
+      <url>https://datacommons.princeton.edu/describe/works/100.json</url>
+      <date_changed>2023-09-08 15:41:31 -0400</date_changed>
+    </item>
+    <item>
+      <title>Supplemental material for: Verification, validation, and results of an approximate model for the stress of a Tokamak toroidal field coil at the inboard midplane</title>
+      <url>https://datacommons.princeton.edu/describe/works/71.json</url>
+      <date_changed>2023-08-24 16:30:02 -0400</date_changed>
+    </item>
+    <item>
+      <title>Effects of collisional ion orbit loss on tokamak radial electric field and toroidal rotation in an L-mode plasma</title>
+      <url>https://datacommons.princeton.edu/describe/works/65.json</url>
+      <date_changed>2023-08-17 15:41:37 -0400</date_changed>
+    </item>
+    <item>
+      <title>Computation of Alfvèn eigenmode stability and saturation through a reduced fast ion transport model in the TRANSP tokamak transport code</title>
+      <url>https://datacommons.princeton.edu/describe/works/108.json</url>
+      <date_changed>2023-09-11 17:33:12 -0400</date_changed>
+    </item>
+    <item>
+      <title>Blob Structure and Motion in the Edge and SOL of NSTX</title>
+      <url>https://datacommons.princeton.edu/describe/works/115.json</url>
+      <date_changed>2023-08-31 13:11:27 -0400</date_changed>
+    </item>
+    <item>
+      <title>Nasa Budgetary Data</title>
+      <url>https://datacommons.princeton.edu/describe/works/118.json</url>
+      <date_changed>2023-09-05 14:34:22 -0400</date_changed>
+    </item>
+    <item>
+      <title>Saturation of Alfven modes in tokamaks</title>
+      <url>https://datacommons.princeton.edu/describe/works/111.json</url>
+      <date_changed>2023-09-12 16:41:17 -0400</date_changed>
+    </item>
+    <item>
+      <title>Validation and benchmarking of two particle-in-cell codes for a glow discharge</title>
+      <url>https://datacommons.princeton.edu/describe/works/77.json</url>
+      <date_changed>2023-09-13 08:23:51 -0400</date_changed>
+    </item>
+    <item>
+      <title>Density Limits as Disruption Forecasters for Spherical Tokamaks</title>
+      <url>https://datacommons.princeton.edu/describe/works/101.json</url>
+      <date_changed>2023-08-28 14:01:20 -0400</date_changed>
+    </item>
+    <item>
+      <title>Data for "The value of fusion energy to a decarbonized United States electric grid"</title>
+      <url>https://datacommons.princeton.edu/describe/works/64.json</url>
+      <date_changed>2023-09-13 08:23:51 -0400</date_changed>
+    </item>
+    <item>
+      <title>Feasibility study of a high spatial and time resolution beam emission spectroscopy diagnostic for localized density fluctuation measurements in Lithium Tokamak eXperiment-β (LTX-β)</title>
+      <url>https://datacommons.princeton.edu/describe/works/84.json</url>
+      <date_changed>2023-09-13 08:23:51 -0400</date_changed>
+    </item>
+    <item>
+      <title>Neoclassical transport in strong gradient regions of large aspect ratio tokamaks</title>
+      <url>https://datacommons.princeton.edu/describe/works/83.json</url>
+      <date_changed>2023-08-29 10:26:01 -0400</date_changed>
+    </item>
+    <item>
+      <title>Global gyrokinetic study of shaping effects on electromagnetic modes at NSTX aspect ratio with ad hoc parallel magnetic perturbation effects</title>
+      <url>https://datacommons.princeton.edu/describe/works/78.json</url>
+      <date_changed>2023-08-29 15:26:30 -0400</date_changed>
+    </item>
+    <item>
+      <title>Thermal ion kinetic effects and Landau damping in fishbone modes</title>
+      <url>https://datacommons.princeton.edu/describe/works/80.json</url>
+      <date_changed>2023-08-29 16:08:41 -0400</date_changed>
+    </item>
+    <item>
+      <title>Collisional dependence of Alfven mode saturation in tokamaks</title>
+      <url>https://datacommons.princeton.edu/describe/works/112.json</url>
+      <date_changed>2023-09-12 16:44:25 -0400</date_changed>
+    </item>
+    <item>
+      <title>Phase space effects on fast ion distribution function modeling in tokamaks</title>
+      <url>https://datacommons.princeton.edu/describe/works/113.json</url>
+      <date_changed>2023-09-12 16:50:20 -0400</date_changed>
+    </item>
+    <item>
+      <title>Mitigation of Alfven activity by 3D magnetic perturbations on NSTX</title>
+      <url>https://datacommons.princeton.edu/describe/works/114.json</url>
+      <date_changed>2023-09-12 16:58:23 -0400</date_changed>
+    </item>
+    <item>
+      <title>Effect of progressively increasing lithium conditioning on edge transport and stability in high triangularity NSTX H-modes</title>
+      <url>https://datacommons.princeton.edu/describe/works/119.json</url>
+      <date_changed>2023-09-12 17:05:21 -0400</date_changed>
+    </item>
+    <item>
+      <title>Operational Space and Performance Limiting Events in the First Physics Campaign of MAST-U</title>
+      <url>https://datacommons.princeton.edu/describe/works/81.json</url>
+      <date_changed>2023-09-08 14:52:36 -0400</date_changed>
+    </item>
+    <item>
+      <title>Electron-density-sensitive Line Ratios of Fe XIII--XVI from Laboratory Sources Compared to CHIANTI</title>
+      <url>https://datacommons.princeton.edu/describe/works/120.json</url>
+      <date_changed>2023-09-12 17:08:13 -0400</date_changed>
+    </item>
+    <item>
+      <title>Quasi-linear gyrokinetic predictions of the Coriolis momentum pinch in NSTX</title>
+      <url>https://datacommons.princeton.edu/describe/works/110.json</url>
+      <date_changed>2023-09-11 17:40:57 -0400</date_changed>
+    </item>
+    <item>
+      <title>Topological Langmuir-cyclotron wave</title>
+      <url>https://datacommons.princeton.edu/describe/works/82.json</url>
+      <date_changed>2023-08-18 13:19:32 -0400</date_changed>
+    </item>
+    <item>
+      <title>Chatbots as social companions: Perceiving consciousness, human likeness, and social health benefits in machines</title>
+      <url>https://datacommons.princeton.edu/describe/works/76.json</url>
+      <date_changed>2023-09-13 08:23:52 -0400</date_changed>
+    </item>
+    <item>
+      <title>Examination of OH and H2O2 production by uniform and non-uniform modes of dielectric barrier discharge in He/air mixture</title>
+      <url>https://datacommons.princeton.edu/describe/works/103.json</url>
+      <date_changed>2023-09-13 08:23:52 -0400</date_changed>
+    </item>
+    <item>
+      <title>Self-consistent simulation of compressional Alfvén eigenmodes excitation and runaway electron diffusion in tokamak disruptions</title>
+      <url>https://datacommons.princeton.edu/describe/works/102.json</url>
+      <date_changed>2023-08-31 13:41:32 -0400</date_changed>
+    </item>
+    <item>
+      <title>Role of fast ions in spontaneous neoclassical tearing mode instabilities in NSTX</title>
+      <url>https://datacommons.princeton.edu/describe/works/90.json</url>
+      <date_changed>2023-08-29 10:16:58 -0400</date_changed>
+    </item>
+    <item>
+      <title>3D full wave fast wave modeling with realistic HHFW antenna geometry and SOL plasma in NSTX-U</title>
+      <url>https://datacommons.princeton.edu/describe/works/89.json</url>
+      <date_changed>2023-08-31 13:30:16 -0400</date_changed>
+    </item>
+    <item>
+      <title>Sleep spindle refractoriness segregates periods of memory reactivation</title>
+      <url>https://datacommons.princeton.edu/describe/works/50.json</url>
+      <date_changed>2023-08-23 08:42:08 -0400</date_changed>
+    </item>
+    <item>
+      <title>bitKlavier Grand Sample Library—Binaural Mic Image</title>
+      <url>https://datacommons.princeton.edu/describe/works/35.json</url>
+      <date_changed>2023-09-01 12:19:23 -0400</date_changed>
+    </item>
+    <item>
+      <title>Dataset for the letter "Shifting and Splitting of Resonance Lines due to Dynamical Friction in Plasmas" Phys. Rev. Lett. 130, 105101 (2023)</title>
+      <url>https://datacommons.princeton.edu/describe/works/88.json</url>
+      <date_changed>2023-08-29 10:10:58 -0400</date_changed>
+    </item>
+    <item>
+      <title>Why is El Nino warm?</title>
+      <url>https://datacommons.princeton.edu/describe/works/117.json</url>
+      <date_changed>2023-09-05 14:16:09 -0400</date_changed>
+    </item>
+  </channel>
+</rss>

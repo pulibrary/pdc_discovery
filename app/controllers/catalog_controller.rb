@@ -91,14 +91,18 @@ class CatalogController < ApplicationController
     #   years_25: { label: 'within 25 Years', fq: "pub_date_ssim:[#{Time.zone.now.year - 25} TO *]" }
     # }
 
-    config.add_facet_field 'domain_ssim', label: 'Domain'
-    config.add_facet_field 'communities_ssim', label: 'Community'
-    config.add_facet_field 'subcommunities_ssim', label: 'Subcommunity'
+    # TODO: When we upgrade to Blacklight 8
+    #  We can remove the `component: Blacklight::FacetFieldListComponent` from the `add_facet_field` lines
+    #  It is only present to remove a deprecation warning in Blacklight 7 that ironically is not needed for Blacklight 8
+    #
+    config.add_facet_field 'domain_ssim', label: 'Domain', limit: 5, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field 'communities_ssim', label: 'Community', limit: 5, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field 'subcommunities_ssim', label: 'Subcommunity', limit: 5, component: Blacklight::FacetFieldListComponent
 
-    config.add_facet_field 'collection_tag_ssim', label: 'Collection Tags'
-    config.add_facet_field 'authors_affiliation_ssim', label: 'Affiliation'
+    config.add_facet_field 'collection_tag_ssim', label: 'Collection Tags', limit: 5, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field 'authors_affiliation_ssim', label: 'Affiliation', limit: 5, component: Blacklight::FacetFieldListComponent
 
-    config.add_facet_field 'genre_ssim', label: 'Type'
+    config.add_facet_field 'genre_ssim', label: 'Type', limit: 5, component: Blacklight::FacetFieldListComponent
     config.add_facet_field 'year_available_itsi', label: 'Year Published', range: true
 
     # Notice that is facet is not shown. Yet facet searches by this field do work
