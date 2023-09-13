@@ -311,6 +311,6 @@ class CatalogController < ApplicationController
     # puts @document.funders
     # puts "========== "
     # byebug
-    nil
+    # nil
   end
 end

@@ -238,6 +238,31 @@ module ApplicationHelper
     HTML
     html.html_safe
   end
+
+  def render_funder(funder, show_always = false)
+    return if funder.nil?
+    css_class = show_always ? "" : "toggable-row hidden-row"
+    text = if !funder['ror'].nil?
+      link_to(funder['name'], search_link(funder['name'], funder['ror']))
+    else
+      funder['name']
+           end
+
+    if !funder['award_uri'].empty?
+      text += ", " + link_to(funder['award_number'], search_link(funder['award_number'], funder['award_uri']))
+    elsif !funder['award_number'].empty?
+      text += ", " + funder['award_number'] 
+    end
+
+    html_escape(text)
+    html = <<-HTML
+    <tr class="#{css_class}">
+      <th scope="row"><span>Funders</span></th>
+      <td><span>#{text}</span></td>
+    </tr>
+    HTML
+    html.html_safe
+  end
 end
 # rubocop:enable Rails/OutputSafety
 # rubocop:enable Metrics/ModuleLength
