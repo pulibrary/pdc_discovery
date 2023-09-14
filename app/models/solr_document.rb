@@ -562,5 +562,36 @@ class SolrDocument
     citation.bibtex_id
   end
   # rubocop:enable Rails/Delegate
+
+  # Access and parse the embargo date timestamp
+  # @return [Date]
+  def embargo_date
+    value = fetch("embargo_date_dtsi", nil)
+    return if value.nil?
+
+    Date.parse(value)
+  rescue Date::Error => date_error
+    Rails.logger.warn("Failed to parse the embargo date value for #{id}: #{value}. The error was: #{date_error}")
+    # This ensures that works under embargo with invalid embargo dates are still inaccessible
+    @embargo_invalid = true
+    nil
+  end
+
+  # Determines whether or not the embargo is invalid
+  # @return [Boolean]
+  def embargo_invalid?
+    embargo_date if @embargo_date.nil?
+    @embargo_invalid
+  end
+
+  # Determine if the PDC Describe resource is under active embargo
+  # @return [Boolean]
+  def embargoed?
+    return true if embargo_invalid?
+    return false if embargo_date.blank?
+
+    current_date = Time.zone.now
+    embargo_date >= current_date
+  end
 end
 # rubocop:enable Metrics/ClassLength

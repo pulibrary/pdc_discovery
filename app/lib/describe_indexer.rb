@@ -44,7 +44,8 @@ class DescribeIndexer
   # @param [String] json
   # @return [String]
   def prep_for_indexing(json)
-    xml = JSON.parse(json).to_xml
+    parsed = JSON.parse(json)
+    xml = parsed.to_xml
     doc = Nokogiri::XML(xml)
     collection_node = doc.at('group')
     cdata = Nokogiri::XML::CDATA.new(doc, json)
@@ -62,12 +63,26 @@ class DescribeIndexer
 
 private
 
+  def rss_http_response
+    URI.open(@rss_url)
+  end
+
+  def rss_xml_doc
+    Nokogiri::XML(rss_http_response)
+  end
+
+  def rss_url_nodes
+    rss_xml_doc.xpath("//item/url/text()")
+  end
+
+  def rss_url_list
+    rss_url_nodes.map(&:to_s)
+  end
+
   ##
   # Parse the rss_url, get a JSON resource url for each item, convert it to XML, and pass it to traject
   def perform_indexing
-    doc = Nokogiri::XML(URI.open(@rss_url))
-    url_list = doc.xpath("//item/url/text()").map(&:to_s)
-    url_list.each do |url|
+    rss_url_list.each do |url|
       resource_json = URI.open(url).read
       resource_xml = prep_for_indexing(resource_json)
       traject_indexer.process(resource_xml)

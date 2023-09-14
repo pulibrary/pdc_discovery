@@ -30,4 +30,5 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  document:
+    embargo_heading: "File(s) associated with this object are embargoed until %{embargo_date}."

@@ -48,14 +48,21 @@
         <% end %>
       </div>
     </header>
-
+    <% if @document.embargoed? %>
+      <header class="documentHeader row">
+        <div class="col-sm-12">
+          <div class="document-embargo-heading col">
+            <span class="badge"><%= t('document.embargo_heading', embargo_date: @document.embargo_date) %></span>
+          </div>
+        </div>
+      </header>
+    <% end %>
     <div class="lux">
       <% if @document.issued_date.present? %>
         <div class="issue-date-heading">
           Issue date: <%= @document.issued_date %>
         </div>
       <% end %>
-
       <div class="document-citation">
         <header>Cite as:
           <button id="show-apa-citation-button" type='button' class='cite-as-button btn btn-primary btn-xsm' title='Show citation'>Text</button>

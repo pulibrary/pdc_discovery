@@ -62,4 +62,17 @@ namespace :index do
     puts "Solr updated: #{SolrCloudHelper.update_solr_alias!}"
     Rake::Task['index:print_solr_urls'].invoke
   end
+
+  desc 'Index fixture data'
+  task fixtures: :environment do
+    indexer = DescribeIndexer.new
+
+    fixture_names = ['pdc_describe_active_embargo.json', 'pdc_describe_expired_embargo.json']
+    fixture_names.each do |fixture_name|
+      fixture_path = Rails.root.join("spec", "fixtures", "files", fixture_name)
+      fixture_json = File.read(fixture_path)
+      indexer.index_one(fixture_json)
+    end
+    SolrCloudHelper.collection_writer_commit!
+  end
 end
