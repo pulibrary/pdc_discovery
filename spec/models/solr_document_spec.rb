@@ -113,6 +113,61 @@ RSpec.describe SolrDocument do
       expect(doc.subject.sort).to eq ["subject1", "subject2"]
     end
   end
+
+  describe "#embargo_date" do
+    subject(:solr_document) { described_class.new({ id: "1", embargo_date_dtsi: embargo_date_dtsi }) }
+    let(:embargo_date) { Date.parse(embargo_date_dtsi) }
+
+    context "when the embargo is available as a datestamp" do
+      let(:embargo_date_dtsi) { "2033-09-15T17:33:18Z" }
+
+      it "parses the embargo date timestamp into a Date object" do
+        expect(solr_document.embargo_date).to be_a(Date)
+        expect(solr_document.embargo_date).to eq(embargo_date)
+      end
+    end
+
+    context "when the embargo is invalid" do
+      let(:embargo_date_dtsi) { "invalid" }
+
+      before do
+        allow(Rails.logger).to receive(:warn)
+      end
+
+      it "returns a nil value and logs a warning" do
+        expect(solr_document.embargo_date).to be nil
+        expect(Rails.logger).to have_received(:warn).with("Failed to parse the embargo date value for #{solr_document.id}: invalid. The error was: invalid date")
+      end
+    end
+  end
+
+  describe "#embargoed?" do
+    subject(:solr_document) { described_class.new({ id: "1", embargo_date_dtsi: embargo_date_dtsi }) }
+
+    context "when the embargo is active" do
+      let(:embargo_date_dtsi) { "2033-05-20T17:33:18Z" }
+
+      it "indicates that the Document is active for the PDC Describe work" do
+        expect(solr_document.embargoed?).to be true
+      end
+    end
+
+    context "when the embargo has expired" do
+      let(:embargo_date_dtsi) { "1972-05-20T17:33:18Z" }
+
+      it "does not indicate that the Document is active for the PDC Describe work" do
+        expect(solr_document.embargoed?).to be false
+      end
+    end
+
+    context "when the embargo date is invalid" do
+      let(:embargo_date_dtsi) { "invalid" }
+
+      it "indicates that the Document is active for the PDC Describe work" do
+        expect(solr_document.embargoed?).to be true
+      end
+    end
+  end
 end
 # rubocop:enable Metrics/BlockLength
 # rubocop:enable RSpec/ExampleLength

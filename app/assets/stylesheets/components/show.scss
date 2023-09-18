@@ -40,3 +40,16 @@
 .description-container {
   padding-left: 0px;
 }
+
+.document {
+  &-embargo {
+    &-heading {
+      text-align: center;
+      .badge {
+        background-color: #ffecbd;
+        color: #705000;
+        border-color: transparent;
+      }
+    }
+  }
+}

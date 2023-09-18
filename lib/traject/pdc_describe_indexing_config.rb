@@ -181,6 +181,11 @@ to_field 'funders_ss' do |record, accumulator, _context|
 end
 
 # ==================
+# Embargo Date
+# Store and index the embargo date from the PDC Describe Work as a single value
+to_field 'embargo_date_dtsi', extract_xpath("/hash/embargo-date")
+
+# ==================
 # Store files metadata as a single JSON string so that we can display detailed information for each of them.
 to_field 'files_ss' do |record, accumulator, _context|
   raw_doi = record.xpath("/hash/resource/doi/text()").to_s
