@@ -247,26 +247,24 @@ module ApplicationHelper
     html = <<-HTML
     <tr class="toggable-row hidden-row">
       <th scope="row"><span>Funders</span></th>
-      <td><span>#{funders_html.join("<br/>")}</span></td>
+      <td><span>#{funders_html.join('<br/>')}</span></td>
     </tr>
     HTML
     html.html_safe
   end
 
   def render_funder(funder)
-    funder_name = ""
-    if funder['ror']
-      funder_name = link_to(funder['name'], search_link(funder['name'], funder['ror']))
-    else
-      funder_name = funder['name']
-    end
+    funder_name = if funder['ror']
+                    link_to(funder['name'], search_link(funder['name'], funder['ror']))
+                  else
+                    funder['name']
+                  end
 
-    funder_award = ""
-    if !funder['award_uri'].blank?
-      funder_award = link_to(funder['award_number'], funder['award_uri'])
-    elsif !funder['award_number'].blank?
-      funder_award = funder['award_number']
-    end
+    funder_award = if funder['award_uri'].present?
+                     link_to(funder['award_number'], funder['award_uri'])
+                   elsif funder['award_number'].present?
+                     funder['award_number']
+                   end
 
     if funder_award.blank?
       funder_name
