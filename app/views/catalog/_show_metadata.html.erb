@@ -205,16 +205,7 @@
             <% @document.mediator.each do |mediator| %>
               <%= render_field_row "Mediator", mediator %>
             <% end %>
-            <% @document.funders.each do |funder|%>
-              <%= render_funder funder%>
-            <%end%>
-
-            <tr>
-            <th>Funders: </th>
-            <td><%=link_to("Claudia", "princeton.edu")%>, 123
-            <br>Hector, <%=link_to("456", "princeton.edu")%></td>
-            </tr>
-            
+            <%= render_funders @document.funders %>
             <% @document.source.each do |source| %>
               <%= render_field_row "Source", source %>
             <% end %>
