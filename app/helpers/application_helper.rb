@@ -240,7 +240,7 @@ module ApplicationHelper
   end
 
   def render_funders(funders)
-    return if funders.count == 0
+    return if funders.nil? || funders.count == 0
 
     funders_html = funders.map { |funder| render_funder(funder) }
 

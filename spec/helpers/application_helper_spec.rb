@@ -33,4 +33,35 @@ RSpec.describe ApplicationHelper, type: :helper do
       end
     end
   end
+
+  describe "#render_funders" do
+    it "does not render if there are no funders" do
+      expect(render_funders([])).to be nil
+      expect(render_funders(nil)).to be nil
+    end
+  end
+
+  describe "#render_funder" do
+    it "renders names as hyperlinks when there is an ROR" do
+      funder = { 'ror' => 'http://ror.org/123', 'name' => 'some funding organization' }
+      expect(render_funder(funder).include?('<a href="/?f[http://ror.org/123]')).to be true
+    end
+
+    it "renders names as text when there is no ROR" do
+      funder = { 'name' => 'some funding organization' }
+      expect(render_funder(funder).include?("<a href")).to be false
+    end
+
+    it "renders award as link when there is a URI" do
+    end
+
+    it "renders award as text when there is no URI" do
+    end
+
+    it "concatenates name and award when both are available" do
+    end
+
+    it "displays only funder name when no award information is available" do
+    end
+  end
 end
