@@ -44,7 +44,8 @@ RSpec.describe ApplicationHelper, type: :helper do
   describe "#render_funder" do
     it "renders names as hyperlinks when there is an ROR" do
       funder = { 'ror' => 'http://ror.org/123', 'name' => 'some funding organization' }
-      expect(render_funder(funder).include?('<a href="/?f[http://ror.org/123]')).to be true
+      expected_link = '<a href="/?f[http://ror.org/123]'
+      expect(render_funder(funder).include?(expected_link)).to be true
     end
 
     it "renders names as text when there is no ROR" do
@@ -53,15 +54,26 @@ RSpec.describe ApplicationHelper, type: :helper do
     end
 
     it "renders award as link when there is a URI" do
+      funder = {'name' => "name", 'award_number' => '123', 'award_uri' => "http://nsf/123"}
+      expected_link = '<a href="http://nsf/123'
+      expect(render_funder(funder).include?(expected_link)).to be true
+
     end
 
     it "renders award as text when there is no URI" do
+      funder = { 'name' => 'some funding organization', 'award_number' => '123' }
+      expect(render_funder(funder).include?("<a href")).to be false
     end
 
     it "concatenates name and award when both are available" do
+      funder = {'name' => "name", 'award_number' => '123'}
+      expect(render_funder(funder).to(eq("name, 123"))).to be true
+
     end
 
     it "displays only funder name when no award information is available" do
+      funder = { 'name' => 'some funding organization' }
+      expect(render_funder(funder)).to(eq(funder["name"])).to be true
     end
   end
 end
