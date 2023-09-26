@@ -183,7 +183,17 @@ end
 # ==================
 # Embargo Date
 # Store and index the embargo date from the PDC Describe Work as a single value
-to_field 'embargo_date_dtsi', extract_xpath("/hash/embargo-date")
+to_field 'embargo_date_dtsi' do |record, accumulator, _context|
+  embargo_value = record.xpath("/hash/embargo-date/text()").to_s
+  valid_date = begin
+                 DateTime.parse(embargo_value)
+               rescue
+                 nil
+               end
+  if valid_date
+    accumulator.concat [embargo_value]
+  end
+end
 
 # ==================
 # Store files metadata as a single JSON string so that we can display detailed information for each of them.
