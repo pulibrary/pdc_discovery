@@ -44,7 +44,7 @@ RSpec.describe ApplicationHelper, type: :helper do
   describe "#render_funder" do
     it "renders names as hyperlinks when there is an ROR" do
       funder = { 'ror' => "http://ror.org/123", 'name' => "some funding organization" }
-      expected_link = '<a href="/?f[http://ror.org/123]'
+      expected_link = '<a href="http://ror.org/123">some funding organization</a>'
       expect(render_funder(funder).include?(expected_link)).to be true
     end
 

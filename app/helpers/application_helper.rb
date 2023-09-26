@@ -255,7 +255,7 @@ module ApplicationHelper
 
   def render_funder(funder)
     funder_name = if funder['ror']
-                    link_to(funder['name'], search_link(funder['name'], funder['ror']))
+                    link_to(funder['name'], funder['ror'])
                   else
                     funder['name']
                   end
