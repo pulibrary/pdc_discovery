@@ -238,6 +238,40 @@ module ApplicationHelper
     HTML
     html.html_safe
   end
+
+  def render_funders(funders)
+    return if funders.nil? || funders.count == 0
+
+    funders_html = funders.map { |funder| render_funder(funder) }
+
+    html = <<-HTML
+    <tr class="toggable-row hidden-row">
+      <th scope="row"><span>Funders</span></th>
+      <td><span>#{funders_html.join('<br/>')}</span></td>
+    </tr>
+    HTML
+    html.html_safe
+  end
+
+  def render_funder(funder)
+    funder_name = if funder['ror'].present?
+                    link_to(funder['name'], funder['ror'])
+                  else
+                    funder['name']
+                  end
+
+    funder_award = if funder['award_uri'].present?
+                     link_to(funder['award_number'], funder['award_uri'])
+                   elsif funder['award_number'].present?
+                     funder['award_number']
+                   end
+
+    if funder_award.blank?
+      funder_name
+    else
+      funder_name + ", " + funder_award
+    end
+  end
 end
 # rubocop:enable Rails/OutputSafety
 # rubocop:enable Metrics/ModuleLength

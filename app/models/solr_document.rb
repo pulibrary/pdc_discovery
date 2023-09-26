@@ -194,6 +194,12 @@ class SolrDocument
     groups.map { |key, value| { extension: key, file_count: value.count } }.sort_by { |group| -group[:file_count] }
   end
 
+  def funders
+    funders_string = fetch("funders_ss", "[]")
+    @funders = JSON.parse(funders_string)
+    @funders
+  end
+
   def table_of_contents
     fetch("tableofcontents_tesim", [])
   end
