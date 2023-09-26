@@ -264,6 +264,57 @@ RSpec.describe DescribeIndexer do
           expect(files).not_to be_empty
         end
       end
+
+      context "when there work is not under embargo" do
+        let(:item_file_fixture) { file_fixture("pdc_describe_no_embargo.json") }
+        let(:embargo_resource) { item_file_fixture.read }
+        # This redundancy is required for consistent testing
+        let(:rss_feed) { file_fixture("works.rss").read }
+        let(:rss_url) { "https://pdc-describe-prod.princeton.edu/describe/works.rss" }
+        let(:indexer) do
+          described_class.new(rss_url: rss_url)
+        end
+        let(:solr_response) do
+          Blacklight.default_index.connection.get 'select', params: { q: '*:*' }
+        end
+        let(:response) { solr_response["response"] }
+        let(:num_found) { response["numFound"] }
+        let(:docs) { response["docs"] }
+        let(:doc) { docs.first }
+        let(:files) do
+          values = doc["files_ss"]
+          JSON.parse(values)
+        end
+
+        before do
+          stub_request(:get, rss_url)
+            .to_return(status: 200, body: rss_feed, headers: {})
+          stub_request(:get, "https://pdc-describe-prod.princeton.edu/describe/works/6.json")
+            .to_return(status: 200, body: embargo_resource, headers: {})
+          stub_request(:get, "https://pdc-describe-prod.princeton.edu/describe/works/20.json")
+            .to_return(status: 200, body: embargo_resource, headers: {})
+
+          Rails.configuration.pdc_discovery.index_pdc_describe = true
+          indexer.index
+        end
+
+        it "does not index an embargo date" do
+          expect(solr_response).to include("response")
+          expect(response).to include("numFound")
+          expect(num_found).to eq 1
+          expect(docs).not_to be_empty
+          expect(doc).not_to include("embargo_date_dtsi")
+        end
+
+        it "does not index the files" do
+          expect(solr_response).to include("response")
+          expect(response).to include("numFound")
+          expect(num_found).to eq 1
+          expect(docs).not_to be_empty
+          expect(doc).to include("files_ss")
+          expect(files).to be_empty
+        end
+      end
     end
   end
 end
