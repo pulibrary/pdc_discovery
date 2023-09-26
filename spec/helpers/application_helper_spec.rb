@@ -51,6 +51,9 @@ RSpec.describe ApplicationHelper, type: :helper do
     it "renders names as text when there is no ROR" do
       funder = { 'name' => "some funding organization" }
       expect(render_funder(funder).include?("<a href")).to be false
+
+      funder = { 'ror' => '', 'name' => "some funding organization" }
+      expect(render_funder(funder).include?("<a href")).to be false
     end
 
     it "renders award as link when there is a URI" do

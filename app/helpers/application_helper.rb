@@ -254,7 +254,7 @@ module ApplicationHelper
   end
 
   def render_funder(funder)
-    funder_name = if funder['ror']
+    funder_name = if funder['ror'].present?
                     link_to(funder['name'], funder['ror'])
                   else
                     funder['name']
