@@ -296,21 +296,4 @@ class CatalogController < ApplicationController
       format.json { render json: @documents }
     end
   end
-
-  # TODO: Hector to remove this before merging
-  def show
-    super
-    # Helper code to make sure the funder data is what we expect
-    # @document.funders is an array of funders, each funder has the
-    # following fields:
-    #     "name"          e.g. "Princeton Neuroscience Institute Innovation Fund",
-    #     "ror"           e.g. "https://ror.org/01bj3aw27"
-    #     "award_number"  e.g. "PRINU-24400-G0002-10005089-101"
-    #     "award_uri"     e.g. "http://nsf/123"
-    # puts "Funders == "
-    # puts @document.funders
-    # puts "========== "
-    # byebug
-    # nil
-  end
 end
