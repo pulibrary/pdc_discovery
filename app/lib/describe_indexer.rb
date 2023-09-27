@@ -86,6 +86,7 @@ private
       resource_json = URI.open(url).read
       resource_xml = prep_for_indexing(resource_json)
       traject_indexer.process(resource_xml)
+      Rails.logger.info "Successfully imported record from #{url}."
     rescue => ex
       Rails.logger.warn "Error importing record from #{url}. Exception: #{ex.message}"
       Honeybadger.notify "Error importing record from #{url}. Exception: #{ex.message}"
