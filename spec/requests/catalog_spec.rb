@@ -110,11 +110,24 @@ RSpec.describe "Catalog", type: :request do
       allow(Blacklight::SearchService).to receive(:new).and_return(search_service, search_service2)
     end
 
-    context "when Solr is not at all accessible" do
+    context "when Solr is not at all accessible for the Blacklight client" do
       let(:ping) { false }
 
       before do
         allow(search_service).to receive(:fetch).and_raise(Blacklight::Exceptions::ECONNREFUSED)
+        get "/catalog/#{document_id}"
+      end
+
+      it "responds with an error view" do
+        expect(response).to redirect_to("/errors/network_error")
+      end
+    end
+
+    context "when Solr is not at all accessible for the RSolr client" do
+      let(:ping) { false }
+
+      before do
+        allow(search_service).to receive(:fetch).and_raise(RSolr::Error::ConnectionRefused)
         get "/catalog/#{document_id}"
       end
 

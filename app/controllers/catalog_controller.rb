@@ -15,7 +15,7 @@ class CatalogController < ApplicationController
 
   def retry_on_exception
     yield
-  rescue Blacklight::Exceptions::ECONNREFUSED
+  rescue Blacklight::Exceptions::ECONNREFUSED, RSolr::Error::ConnectionRefused
     # If the Solr service is available, retry the HTTP request
     if search_service.repository.ping
       retry
