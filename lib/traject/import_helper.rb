@@ -33,6 +33,11 @@ class ImportHelper
     solr_query = File.join(solr_url, "select?q=data_source_ssi:pdc_describe+AND+uri_ssim:\"#{uri}\"")
     response = HTTParty.get(solr_query)
     response.parsed_response["response"]["numFound"] != 0
+  rescue Errno::ECONNREFUSED => connection_error
+    error_message = "HTTP GET request failed for #{solr_query}: #{connection_error}"
+    Rails.logger.error(error_message)
+    Honeybadger.notify(error_message)
+    false
   end
 
   # Calculates the display filename for a PDC Describe file.
