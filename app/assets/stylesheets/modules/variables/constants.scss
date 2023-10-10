@@ -1,0 +1,81 @@
+$color-grayscale-light: rgb(197, 200, 206);
+$color-princeton-salmon-lighter: rgb(255, 252, 250);
+$color-tan: rgb(188, 139, 82);
+$color-bleu-de-france-dark: rgb(45, 112, 180);
+$color-bleu-de-france-light: rgb(108, 163, 218);
+$color-green: rgb(124, 181, 24);
+$color-princeton-orange-on-white: rgb(231, 117, 0);
+$color-grayscale-warm-darker: rgb(92, 84, 51);
+$color-tan-lighter: rgb(219, 193, 163);
+$color-grayscale-dark: rgb(107, 115, 128);
+$color-grayscale: rgb(149, 156, 167);
+$color-white: rgb(255, 255, 255);
+$color-grayscale-lighter: rgb(245, 245, 245);
+$color-grayscale-warm-light: rgb(210, 202, 173);
+$color-yellow: rgb(255, 186, 10);
+$color-bleu-de-france: rgb(44, 110, 175);
+$color-tan-dark: rgb(158, 113, 61);
+$color-bleu-de-france-darker: rgb(35, 87, 139);
+$color-bleu-de-france-lighter: rgb(149, 189, 228);
+$color-red: rgb(201, 40, 19);
+$color-princeton-salmon-light: rgb(255, 227, 199);
+$color-grayscale-darker: rgb(65, 70, 78);
+$color-rich-black: rgb(0, 17, 35);
+$color-grayscale-warm: rgb(186, 175, 130);
+$color-grayscale-warm-dark: rgb(151, 138, 83);
+$color-tan-light: rgb(202, 163, 119);
+$color-grayscale-warm-lighter: rgb(250, 249, 245);
+$color-tan-darker: rgb(121, 87, 47);
+$color-princeton-salmon: rgb(255, 201, 148);
+$color-princeton-orange-on-black: rgb(245, 128, 37);
+
+$opacity-disabled: 0.5;
+$height-header: 55px;
+$height-footer: 64px;
+$tappable-square: 44px;
+$duration-quickly: 0.08s;
+$duration-slowly: 0.5s;
+$z-index-modal: 9999;
+$z-index-sticky: 100;
+$media-query-small: (
+  max-width: 599px,
+);
+$media-query-medium: (
+  min-width: 600px,
+);
+$media-query-medium-max: (
+  max-width: 899px,
+);
+$media-query-large: (
+  min-width: 900px,
+);
+$media-query-x-large: (
+  min-width: 1200px,
+);
+$media-query-xx-large: (
+  min-width: 1800px,
+);
+$media-query-xxx-large: (
+  min-width: 2300px,
+);
+
+$box-shadow-small: 0 0 0 1px rgba(92, 106, 196, 0.1);
+$box-shadow-small-inset: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+$box-shadow-selected: 0 0 0 1px #e77500;
+$box-shadow-large: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+
+$border-radius-default: 3px;
+$border-radius-circle: 50%;
+$border-radius-pill: 16px;
+
+$space-xx-large: 128px;
+$space-x-large: 64px;
+$space-large: 48px;
+$space-base: 24px;
+$space-small: 16px;
+$space-x-small: 8px;
+$space-xx-small: 4px;
+
+$line-height-base: 1.6;
+$line-height-small: 1.175;
+$line-height-heading: 1;

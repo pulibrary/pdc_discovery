@@ -29,8 +29,3 @@ console.log(
 
 // Example: Import a stylesheet in app/frontend/index.css
 // import '~/index.css'
-
-import Vue from "vue/dist/vue.esm";
-import system from "lux-design-system";
-import "lux-design-system/dist/system/system.css";
-import "lux-design-system/dist/system/tokens/tokens.scss";
