@@ -1,4 +1,5 @@
 @import "./variables/typography";
+@import "./variables/constants";
 
 .deployment-version {
   text-align: right;
@@ -11,11 +12,7 @@
 
   color: #000000; /* gray */
 
-  .lux-text-style[data-v-ba32f400] {
-    font-size: $font-size-x-small;
-
-    span::before {
-      content: " ";
-    }
+  span::before {
+    content: " ";
   }
 }
