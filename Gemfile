@@ -15,6 +15,7 @@ gem 'bootstrap', '~> 4.0'
 gem 'devise'
 gem 'devise-guests', '~> 0.6'
 gem 'faraday_middleware'
+gem "health-monitor-rails"
 gem 'honeybadger'
 gem 'httparty'
 gem 'jbuilder', '~> 2.7'

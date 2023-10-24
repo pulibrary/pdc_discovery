@@ -213,6 +213,8 @@ GEM
       activesupport (>= 5.0)
     hashdiff (1.0.1)
     hashie (5.0.0)
+    health-monitor-rails (11.2.0)
+      railties (>= 6.1)
     honeybadger (5.2.1)
     http (5.1.1)
       addressable (~> 2.8)
@@ -564,6 +566,7 @@ DEPENDENCIES
   ed25519
   faraday_middleware
   foreman
+  health-monitor-rails
   honeybadger
   httparty
   jbuilder (~> 2.7)
@@ -603,4 +606,4 @@ RUBY VERSION
    ruby 3.1.0p0
 
 BUNDLED WITH
-   2.3.26
+   2.4.20
