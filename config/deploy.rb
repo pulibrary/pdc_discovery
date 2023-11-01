@@ -1,7 +1,7 @@
 set :application, "pdc_discovery"
 set :repo_url, "https://github.com/pulibrary/pdc_discovery.git"
 
-set :linked_dirs, %w(log public/system public/assets)
+set :linked_dirs, %w[log public/system public/assets node_modules]
 
 # Default branch is :main
 set :branch, ENV["BRANCH"] || "main"
