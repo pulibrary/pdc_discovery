@@ -300,12 +300,24 @@ class CatalogController < ApplicationController
   # Create an endpoint for PPPL / OSTI harvesting that provides full datacite records
   def pppl_reporting_feed
     # Limit to items from PPPL
-    pppl_query = 'data_source_ssi:pdc_describe group_code_ssi:"PPPL"'
+    lucene_queries = ['data_source_ssi:pdc_describe', 'group_code_ssi:"PPPL"']
+    lucene_expr = lucene_queries.join(" ")
     page = params["page"] || "1"
     per_page = params["per_page"] || "10"
     start = per_page.to_i * (page.to_i - 1)
 
-    query = { q: pppl_query, fl: 'pdc_describe_json_ss', format: 'json', sort: 'timestamp desc', rows: per_page, start: start }
+    # query_sort = 'timestamp desc'
+    query_sort = 'id desc'
+    query_fl = 'pdc_describe_json_ss'
+    query_format = 'json'
+    query = {
+      q: lucene_expr,
+      fl: query_fl,
+      format: query_format,
+      sort: query_sort,
+      rows: per_page,
+      start: start
+    }
 
     solr_response = search_service.repository.search(**query)
 

@@ -37,6 +37,7 @@ to_field 'contributor_tsim', extract_xpath("/item/metadata/key[text()='dcterms.c
 to_field 'description_tsim', extract_xpath("/item/metadata/key[text()='dc.description']/../value")
 to_field 'description_tsim', extract_xpath("/item/metadata/key[text()='dcterms.description']/../value")
 to_field 'handle_ssim', extract_xpath('/item/handle')
+# The internal DataSpace Item ID
 to_field 'id', extract_xpath('/item/id')
 to_field 'uri_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.uri']/../value")
 to_field 'collection_id_ssi', extract_xpath('/item/parentCollection/id')
