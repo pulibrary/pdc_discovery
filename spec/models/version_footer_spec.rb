@@ -37,6 +37,22 @@ RSpec.describe VersionFooter do
         expect(info[:tagged_release]).to be true
       end
     end
+
+    context "with rollback information" do
+      before do
+        described_class.revision_file = Pathname.new(fixture_path).join("REVISION").to_s
+        described_class.revisions_logfile = Pathname.new(fixture_path).join("revisions_rollback.log").to_s
+        described_class.reset!
+      end
+      it "detects current information" do
+        info = described_class.info
+        expect(info[:stale]).to be false
+        expect(info[:sha]).to eq "to"
+        expect(info[:branch]).to eq "rolled"
+        expect(info[:version]).to eq "(Deployment date could not be parsed from: deploy rolled back to release 20211210150445\n.)"
+        expect(info[:tagged_release]).to be false
+      end
+    end
   end
 end
 # rubocop enable RSpec/ExampleLength

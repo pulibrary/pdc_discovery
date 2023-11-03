@@ -1,0 +1,4 @@
+Branch version-1 (at 5b6dae5c4ad9aaa0faad5208f1bf8108bd5934bf) deployed as release 20211201212153 by deploy
+Branch version-2 (at 2222ae5c4ad9aaa0faad5208f1bf8108bd5934bf) deployed as release 20211202212153 by deploy
+Branch v0.8.0 (at 7a3b1d7c0f77db526963568ece3e0bb5a6399ce4) deployed as release 20211210150445 by deploy
+deploy rolled back to release 20211210150445
