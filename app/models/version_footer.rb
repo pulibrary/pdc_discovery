@@ -13,6 +13,8 @@
 #
 # rubocop:disable Style/ClassVars
 class VersionFooter
+  DEPLOYMENT_LOGFILE_COL_NUMBER = 7
+
   @@stale = true
   @@git_sha = nil
   @@branch = nil
@@ -68,13 +70,23 @@ class VersionFooter
                  end
   end
 
+  def self.find_version
+    return "Not in deployed environment" unless File.exist?(revisions_logfile)
+
+    output = `tail -1 #{revisions_logfile}`
+    entries = output.chomp.split(" ")
+    return "(Deployment date could not be parsed from: #{output}.)" if entries.length <= DEPLOYMENT_LOGFILE_COL_NUMBER
+
+    deployment_entry = entries[DEPLOYMENT_LOGFILE_COL_NUMBER]
+    deployment_date = Date.parse(deployment_entry)
+    return "(Deployment date could not be parsed from: #{deployment_entry}.)" if deployment_date.nil?
+
+    formatted = deployment_date.strftime("%d %B %Y")
+    formatted
+  end
+
   def self.version
-    @@version ||= if File.exist?(revisions_logfile)
-                    deployed = `tail -1 #{revisions_logfile}`.chomp.split(" ")[7]
-                    Date.parse(deployed).strftime("%d %B %Y")
-                  else
-                    "Not in deployed environment"
-                  end
+    @@version ||= find_version
   end
 
   # This file is local to the application.
