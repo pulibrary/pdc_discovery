@@ -306,8 +306,7 @@ class CatalogController < ApplicationController
     per_page = params["per_page"] || "10"
     start = per_page.to_i * (page.to_i - 1)
 
-    # query_sort = 'timestamp desc'
-    query_sort = 'id desc'
+    query_sort = 'internal_id_lsi desc'
     query_fl = 'pdc_describe_json_ss'
     query_format = 'json'
     query = {

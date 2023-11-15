@@ -38,9 +38,9 @@ RSpec.describe "PPPL has a harvest endpoint", type: :request do
     expect(json_resource).to include("doi")
     doi = json_resource["doi"]
 
-    pppl2_json = JSON.parse(pppl2)
-    # The most recently indexed item (pppl2) should be first
-    expect(doi).to match(pppl2_json["resource"]["doi"])
+    pppl1_json = JSON.parse(pppl1)
+    # The most recently indexed item (pppl1) should be first
+    expect(doi).to match(pppl1_json["resource"]["doi"])
   end
 
   context "when requesting 2 items per page" do
@@ -57,10 +57,10 @@ RSpec.describe "PPPL has a harvest endpoint", type: :request do
       json_result = JSON.parse(result["pdc_describe_json_ss"])
       json_resource = json_result["resource"]
       doi = json_resource["doi"]
-      pppl2_json = JSON.parse(pppl2)
+      pppl1_json = JSON.parse(pppl1)
 
       # The first item on the first page is pppl2 because it was indexed most recently
-      expect(doi).to match(pppl2_json["resource"]["doi"])
+      expect(doi).to match(pppl1_json["resource"]["doi"])
 
       get "/pppl_reporting_feed.json?per_page=2&page=2"
       expect(results.count).to eq 2
@@ -70,7 +70,7 @@ RSpec.describe "PPPL has a harvest endpoint", type: :request do
       expect(json_result).to include("resource")
       expect(json_resource).to include("doi")
 
-      expect(doi).to match(pppl2_json["resource"]["doi"])
+      expect(doi).to match(pppl1_json["resource"]["doi"])
     end
 
     context "when requesting a specific page of results" do
