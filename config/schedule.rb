@@ -29,6 +29,8 @@ set :job_template, "bash -l -c 'export PATH=\"/usr/local/bin/:$PATH\" && :job'"
 # end
 
 # Rebuild index completely every 30 minutes while we're doing active data migration
-every 30.minutes, roles: [:reindex] do
-  rake "index:research_data"
-end
+# Turning this off in staging only to test whether this reindex
+# process is what's making the staging server do frequent garbage collection
+# every 30.minutes, roles: [:reindex] do
+#   rake "index:research_data"
+# end
