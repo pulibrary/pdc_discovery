@@ -110,7 +110,7 @@ class SolrCloudHelper
     create_query = build_uri(
       base_uri: solr_alias_uri,
       path: "/solr/admin/collections",
-      query: "action=CREATE&name=#{collection_name}&collection.configName=#{config_set}&numShards=1&replicationFactor=2"
+      query: "action=CREATE&name=#{collection_name}&collection.configName=#{config_set}&numShards=1&replicationFactor=1"
     )
     response = HTTParty.get(create_query.to_s)
     return unless response.code == 200 && response.parsed_response.key?("success")
