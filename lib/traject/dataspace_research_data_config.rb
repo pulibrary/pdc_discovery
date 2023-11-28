@@ -37,7 +37,14 @@ to_field 'contributor_tsim', extract_xpath("/item/metadata/key[text()='dcterms.c
 to_field 'description_tsim', extract_xpath("/item/metadata/key[text()='dc.description']/../value")
 to_field 'description_tsim', extract_xpath("/item/metadata/key[text()='dcterms.description']/../value")
 to_field 'handle_ssim', extract_xpath('/item/handle')
+# The internal DataSpace Item ID
 to_field 'id', extract_xpath('/item/id')
+# For sorting by the internal DataSpace Item ID
+to_field 'internal_id_lsi' do |record, accumulator, _c|
+  internal_id_element = record.at_xpath('/item/id')
+  internal_id = internal_id_element.text
+  accumulator.concat([internal_id.to_i])
+end
 to_field 'uri_ssim', extract_xpath("/item/metadata/key[text()='dc.identifier.uri']/../value")
 to_field 'collection_id_ssi', extract_xpath('/item/parentCollection/id')
 to_field 'handle_ssi', extract_xpath('/item/handle')

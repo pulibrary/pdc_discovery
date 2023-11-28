@@ -27,30 +27,75 @@ RSpec.describe "PPPL has a harvest endpoint", type: :request do
     get "/pppl_reporting_feed.json"
     expect(response).to have_http_status(:success)
     results = JSON.parse(response.body)
+
     # There should be 5 records in the index, but only 4 of them are from PPPL
     expect(results.count).to eq 4
-    # The most recently indexed item (pppl4) should be first
-    first_doi_url = JSON.parse(results.first["pdc_describe_json_ss"])["resource"]["doi"]
-    expect(first_doi_url).to match(JSON.parse(pppl4)["resource"]["doi"])
+    result = results.first
+    expect(result).to include("pdc_describe_json_ss")
+    json_result = JSON.parse(result["pdc_describe_json_ss"])
+    expect(json_result).to include("resource")
+    json_resource = json_result["resource"]
+    expect(json_resource).to include("doi")
+    doi = json_resource["doi"]
+
+    pppl1_json = JSON.parse(pppl1)
+    # The most recently indexed item (pppl1) should be first
+    expect(doi).to match(pppl1_json["resource"]["doi"])
   end
 
-  it "can paginate through multiple pages of responses" do
-    get "/pppl_reporting_feed.json?per_page=2"
-    results = JSON.parse(response.body)
+  context "when requesting 2 items per page" do
+    before do
+      get "/pppl_reporting_feed.json?per_page=2"
+    end
 
-    # The first item on the first page is pppl4 because it was indexed most recently
-    doi1 = JSON.parse(results.first["pdc_describe_json_ss"])["resource"]["doi"]
-    expect(doi1).to match(JSON.parse(pppl4)["resource"]["doi"])
+    it "can paginate through multiple pages of responses" do
+      results = JSON.parse(response.body)
+      result = results.first
 
-    # Because we set the per_page parameter to 2, we should see two results on the first page
-    expect(results.count).to eq 2
+      # Because we set the per_page parameter to 2, we should see two results on the first page
+      expect(results.count).to eq 2
+      json_result = JSON.parse(result["pdc_describe_json_ss"])
+      json_resource = json_result["resource"]
+      doi = json_resource["doi"]
+      pppl1_json = JSON.parse(pppl1)
 
-    get "/pppl_reporting_feed.json?per_page=2&page=2"
-    results = JSON.parse(response.body)
-    expect(results.count).to eq 2
+      # The first item on the first page is pppl2 because it was indexed most recently
+      expect(doi).to match(pppl1_json["resource"]["doi"])
 
-    # The first item on the second page should be pppl2
-    doi2 = JSON.parse(results.first["pdc_describe_json_ss"])["resource"]["doi"]
-    expect(doi2).to match(JSON.parse(pppl2)["resource"]["doi"])
+      get "/pppl_reporting_feed.json?per_page=2&page=2"
+      expect(results.count).to eq 2
+
+      # The first item on the second page should be pppl2
+      expect(result).to include("pdc_describe_json_ss")
+      expect(json_result).to include("resource")
+      expect(json_resource).to include("doi")
+
+      expect(doi).to match(pppl1_json["resource"]["doi"])
+    end
+
+    context "when requesting a specific page of results" do
+      before do
+        get "/pppl_reporting_feed.json?per_page=3&page=2"
+      end
+
+      it "can paginate through multiple pages of responses" do
+        results = JSON.parse(response.body)
+        result = results.first
+
+        json_result = JSON.parse(result["pdc_describe_json_ss"])
+        json_resource = json_result["resource"]
+        doi = json_resource["doi"]
+        pppl4_json = JSON.parse(pppl4)
+
+        expect(results.count).to eq 1
+
+        # The first item on the second page should be pppl2
+        expect(result).to include("pdc_describe_json_ss")
+        expect(json_result).to include("resource")
+        expect(json_resource).to include("doi")
+
+        expect(doi).to match(pppl4_json["resource"]["doi"])
+      end
+    end
   end
 end
