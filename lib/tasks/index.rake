@@ -4,7 +4,7 @@
 require ::Rails.root.join('lib', 'traject', 'solr_cloud_helper.rb')
 
 namespace :index do
-  desc 'Re-index all research data'
+  desc 'CRON JOB Re-index all research data'
   task research_data: :environment do
     Rails.logger.info "Indexing: Research Data indexing started"
     SolrCloudHelper.create_collection_writer
