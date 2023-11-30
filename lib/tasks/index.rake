@@ -12,8 +12,10 @@ namespace :index do
 
     Rails.logger.info "Indexing: Fetching PDC Describe records"
     Rake::Task['index:pdc_describe_research_data'].invoke
-    Rails.logger.info "Indexing: Fetching DataSpace records"
-    Rake::Task['index:dspace_research_data'].invoke
+    # ============== Temporarily skip the reindex from DataSpace =========================
+    # Rails.logger.info "Indexing: Fetching DataSpace records"
+    # Rake::Task['index:dspace_research_data'].invoke
+    # ====================================================================================
     Rails.logger.info "Indexing: Fetching completed"
 
     SolrCloudHelper.update_solr_alias!
