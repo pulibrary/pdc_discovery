@@ -12,5 +12,8 @@ production:
   solr_config_set: pdc-discovery-production
 staging:
   adapter: solr
-  url: <%= ENV['SOLR_URL'] %>
+  # Temporarily go straight to a Solr node (lib-solr-staging4)
+  # instead of going through the load balancer (lib-solr8-staging configured via Ansible).
+  # I am not sure this will by pass Zookeper but worth a shot.
+  url: http://lib-solr-staging4.princeton.edu:8983/solr/pdc-discovery-staging
   solr_config_set: pdc-discovery-staging
