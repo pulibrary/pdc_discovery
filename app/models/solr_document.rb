@@ -187,6 +187,14 @@ class SolrDocument
     end
   end
 
+  def total_file_size
+    total = 0
+    files.each do |file|
+      total += file.size.to_i
+    end
+    total
+  end
+
   # Returns an array with the counts by file extension
   # e.g. [{extension: "txt", file_count: 3}, {extension: "csv", file_count: 1}]
   def file_counts
