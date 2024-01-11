@@ -15,12 +15,17 @@ describe 'Show PDC Page', type: :system, js: true do
       .to_return(status: 200, body: File.open(Rails.root.join("spec", "fixtures", "files", "pdc_describe_data", "works.rss")).read, headers: {})
     indexer = DescribeIndexer.new(rss_url: "http://pdc_test_data/works.rss")
     indexer.index
-    page.driver.browser.manage.window.resize_to(4000, 4000)
+    # page.driver.browser.manage.window.resize_to(4000, 4000)
   end
 
   it "renders total file size" do
     visit '/catalog/doi-10-34770-bm4s-t361'
     expect(page).to have_content("Total Size")
     expect(page).to have_content("373 MB")
+  end
+  it 'has the README files first' do
+    visit '/catalog/doi-10-34770-bm4s-t361'
+    first_filename_spot = find(:css, '#files-table>tbody>tr:first-child>td', match: :first).text
+    expect(first_filename_spot).to eq("Fig11b_readme.hdf")
   end
 end
