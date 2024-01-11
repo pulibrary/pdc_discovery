@@ -1,1 +1,329 @@
-{"resource":{"titles":[{"title":"3D full wave fast wave modeling with realistic HHFW antenna geometry and SOL plasma in NSTX-U","title_type":null}],"description":"Data for \"3D full wave fast wave modeling with realistic HHFW antenna geometry and SOL plasma in NSTX-U\"","collection_tags":[],"creators":[{"value":"Bertelli, Nicola","name_type":"Personal","given_name":"Nicola","family_name":"Bertelli","identifier":{"value":"0000-0002-9326-7585","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0},{"value":"Shiraiwa, Syun'ichi","name_type":"Personal","given_name":"Syun'ichi","family_name":"Shiraiwa","identifier":{"value":"0000-0001-5249-0441","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":1},{"value":"Ono, Masayuki","name_type":"Personal","given_name":"Masayuki","family_name":"Ono","identifier":{"value":"0000-0001-9849-9417","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":2}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2022","ark":"ark:/88435/dsp01wh246w38h","doi":"10.34770/bm4s-t361","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1088/1741-4326/ac9690","related_identifier_type":"DOI","relation_type":"IsCitedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":["HHFW","3D RF modeling","Petra-M","fast wave","NSTX-U"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["NSTX-U","Spherical Torus"],"migrated":true},"files":[{"filename":"10.34770/bm4s-t361/89/Fig10a.hdf","size":608392,"display_size":"594 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig10a.hdf"},{"filename":"10.34770/bm4s-t361/89/Fig10b.hdf","size":608536,"display_size":"594 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig10b.hdf"},{"filename":"10.34770/bm4s-t361/89/Fig11a.hdf","size":22016,"display_size":"21.5 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig11a.hdf"},{"filename":"10.34770/bm4s-t361/89/Fig11b.hdf","size":22016,"display_size":"21.5 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig11b.hdf"},{"filename":"10.34770/bm4s-t361/89/Fig12_13_14_15_c.hdf","size":32657352,"display_size":"31.1 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig12_13_14_15_c.hdf"},{"filename":"10.34770/bm4s-t361/89/Fig12_13_a.hdf","size":40310640,"display_size":"38.4 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig12_13_a.hdf"},{"filename":"10.34770/bm4s-t361/89/Fig12_13_b.hdf","size":40310640,"display_size":"38.4 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig12_13_b.hdf"},{"filename":"10.34770/bm4s-t361/89/Fig14_15_a.hdf","size":75084528,"display_size":"71.6 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig14_15_a.hdf"},{"filename":"10.34770/bm4s-t361/89/Fig14_15_b.hdf","size":75084528,"display_size":"71.6 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig14_15_b.hdf"},{"filename":"10.34770/bm4s-t361/89/Fig16a.hdf","size":17264,"display_size":"16.9 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig16a.hdf"},{"filename":"10.34770/bm4s-t361/89/Fig16b.hdf","size":17264,"display_size":"16.9 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig16b.hdf"},{"filename":"10.34770/bm4s-t361/89/Fig1a.png","size":72628,"display_size":"70.9 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig1a.png"},{"filename":"10.34770/bm4s-t361/89/Fig1b.png","size":301258,"display_size":"294 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig1b.png"},{"filename":"10.34770/bm4s-t361/89/Fig2.png","size":225329,"display_size":"220 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig2.png"},{"filename":"10.34770/bm4s-t361/89/Fig3a.png","size":669489,"display_size":"654 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig3a.png"},{"filename":"10.34770/bm4s-t361/89/Fig3b.png","size":1524537,"display_size":"1.45 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig3b.png"},{"filename":"10.34770/bm4s-t361/89/Fig4.hdf","size":11307376,"display_size":"10.8 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig4.hdf"},{"filename":"10.34770/bm4s-t361/89/Fig5_7_8a.hdf","size":40511960,"display_size":"38.6 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig5_7_8a.hdf"},{"filename":"10.34770/bm4s-t361/89/Fig6.hdf","size":151856,"display_size":"148 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig6.hdf"},{"filename":"10.34770/bm4s-t361/89/Fig8b.hdf","size":32944056,"display_size":"31.4 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig8b.hdf"},{"filename":"10.34770/bm4s-t361/89/Fig9a.hdf","size":19271048,"display_size":"18.4 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig9a.hdf"},{"filename":"10.34770/bm4s-t361/89/Fig9b.hdf","size":19271048,"display_size":"18.4 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig9b.hdf"},{"filename":"10.34770/bm4s-t361/89/readme.txt","size":5173,"display_size":"5.05 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/readme.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+    "resource": {
+        "titles": [
+            {
+                "title": "3D full wave fast wave modeling with realistic HHFW antenna geometry and SOL plasma in NSTX-U",
+                "title_type": null
+            }
+        ],
+        "description": "Data for \"3D full wave fast wave modeling with realistic HHFW antenna geometry and SOL plasma in NSTX-U\"",
+        "collection_tags": [],
+        "creators": [
+            {
+                "value": "Bertelli, Nicola",
+                "name_type": "Personal",
+                "given_name": "Nicola",
+                "family_name": "Bertelli",
+                "identifier": {
+                    "value": "0000-0002-9326-7585",
+                    "scheme": "ORCID",
+                    "scheme_uri": "https://orcid.org"
+                },
+                "affiliations": [
+                    {
+                        "value": "Princeton Plasma Physics Laboratory",
+                        "identifier": "https://ror.org/03vn1ts68",
+                        "scheme": "ROR",
+                        "scheme_uri": null
+                    }
+                ],
+                "sequence": 0
+            },
+            {
+                "value": "Shiraiwa, Syun'ichi",
+                "name_type": "Personal",
+                "given_name": "Syun'ichi",
+                "family_name": "Shiraiwa",
+                "identifier": {
+                    "value": "0000-0001-5249-0441",
+                    "scheme": "ORCID",
+                    "scheme_uri": "https://orcid.org"
+                },
+                "affiliations": [
+                    {
+                        "value": "Princeton Plasma Physics Laboratory",
+                        "identifier": "https://ror.org/03vn1ts68",
+                        "scheme": "ROR",
+                        "scheme_uri": null
+                    }
+                ],
+                "sequence": 1
+            },
+            {
+                "value": "Ono, Masayuki",
+                "name_type": "Personal",
+                "given_name": "Masayuki",
+                "family_name": "Ono",
+                "identifier": {
+                    "value": "0000-0001-9849-9417",
+                    "scheme": "ORCID",
+                    "scheme_uri": "https://orcid.org"
+                },
+                "affiliations": [
+                    {
+                        "value": "Princeton Plasma Physics Laboratory",
+                        "identifier": "https://ror.org/03vn1ts68",
+                        "scheme": "ROR",
+                        "scheme_uri": null
+                    }
+                ],
+                "sequence": 2
+            }
+        ],
+        "resource_type": "Dataset",
+        "resource_type_general": "Dataset",
+        "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+        "publication_year": "2022",
+        "ark": "ark:/88435/dsp01wh246w38h",
+        "doi": "10.34770/bm4s-t361",
+        "rights_many": [
+            {
+                "identifier": "CC BY",
+                "uri": "https://creativecommons.org/licenses/by/4.0/",
+                "name": "Creative Commons Attribution 4.0 International"
+            }
+        ],
+        "version_number": "1",
+        "related_objects": [
+            {
+                "related_identifier": "10.1088/1741-4326/ac9690",
+                "related_identifier_type": "DOI",
+                "relation_type": "IsCitedBy",
+                "valid_type_values": [
+                    "ARK",
+                    "arXiv",
+                    "bibcode",
+                    "DOI",
+                    "EAN13",
+                    "EISSN",
+                    "Handle",
+                    "ISBN",
+                    "ISSN",
+                    "ISTC",
+                    "LISSN",
+                    "LSID",
+                    "PMID",
+                    "PURL",
+                    "UPC",
+                    "URL",
+                    "URN",
+                    "IGSN",
+                    "w3id"
+                ],
+                "valid_related_identifier_type": true,
+                "valid_relationship_types": [
+                    "IsCitedBy",
+                    "Cites",
+                    "IsSupplementTo",
+                    "IsSupplementedBy",
+                    "IsContinuedBy",
+                    "Continues",
+                    "HasMetadata",
+                    "IsMetadataFor",
+                    "IsNewVersionOf",
+                    "IsPreviousVersionOf",
+                    "HasVersion",
+                    "IsVersionOf",
+                    "IsPartOf",
+                    "HasPart",
+                    "IsReferencedBy",
+                    "References",
+                    "IsDocumentedBy",
+                    "Documents",
+                    "IsCompiledBy",
+                    "Compiles",
+                    "IsVariantFormOf",
+                    "IsOriginalFormOf",
+                    "IsIdenticalTo",
+                    "IsReviewedBy",
+                    "Reviews",
+                    "IsDerivedFrom",
+                    "IsSourceOf",
+                    "IsObsoletedBy",
+                    "Obsoletes",
+                    "IsDescribedBy",
+                    "Describes",
+                    "IsRequiredBy",
+                    "Requires"
+                ],
+                "valid_relation_type": true,
+                "errors": []
+            }
+        ],
+        "keywords": [
+            "HHFW",
+            "3D RF modeling",
+            "Petra-M",
+            "fast wave",
+            "NSTX-U"
+        ],
+        "contributors": [],
+        "organizational_contributors": [],
+        "funders": [
+            {
+                "ror": "https://ror.org/01bj3aw27",
+                "funder_name": "United States Department of Energy",
+                "award_number": "DE-AC02-09CH11466",
+                "award_uri": ""
+            }
+        ],
+        "domains": [
+            "Natural Sciences"
+        ],
+        "communities": [
+            "Princeton Plasma Physics Laboratory"
+        ],
+        "subcommunities": [
+            "NSTX-U",
+            "Spherical Torus"
+        ],
+        "migrated": true
+    },
+    "files": [
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig10a.hdf",
+            "size": 608392,
+            "display_size": "594 KB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig10a.hdf"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig10b.hdf",
+            "size": 608536,
+            "display_size": "594 KB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig10b.hdf"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig11a.hdf",
+            "size": 22016,
+            "display_size": "21.5 KB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig11a.hdf"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig11b_readme.hdf",
+            "size": 22016,
+            "display_size": "21.5 KB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig11b_readme.hdf"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig12_13_14_15_c.hdf",
+            "size": 32657352,
+            "display_size": "31.1 MB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig12_13_14_15_c.hdf"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig12_13_a.hdf",
+            "size": 40310640,
+            "display_size": "38.4 MB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig12_13_a.hdf"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig12_13_b.hdf",
+            "size": 40310640,
+            "display_size": "38.4 MB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig12_13_b.hdf"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig14_15_a.hdf",
+            "size": 75084528,
+            "display_size": "71.6 MB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig14_15_a.hdf"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig14_15_b.hdf",
+            "size": 75084528,
+            "display_size": "71.6 MB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig14_15_b.hdf"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig16a.hdf",
+            "size": 17264,
+            "display_size": "16.9 KB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig16a.hdf"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig16b.hdf",
+            "size": 17264,
+            "display_size": "16.9 KB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig16b.hdf"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig1a.png",
+            "size": 72628,
+            "display_size": "70.9 KB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig1a.png"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig1b.png",
+            "size": 301258,
+            "display_size": "294 KB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig1b.png"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig2.png",
+            "size": 225329,
+            "display_size": "220 KB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig2.png"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig3a.png",
+            "size": 669489,
+            "display_size": "654 KB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig3a.png"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig3b.png",
+            "size": 1524537,
+            "display_size": "1.45 MB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig3b.png"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig4.hdf",
+            "size": 11307376,
+            "display_size": "10.8 MB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig4.hdf"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig5_7_8a.hdf",
+            "size": 40511960,
+            "display_size": "38.6 MB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig5_7_8a.hdf"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig6.hdf",
+            "size": 151856,
+            "display_size": "148 KB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig6.hdf"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig8b.hdf",
+            "size": 32944056,
+            "display_size": "31.4 MB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig8b.hdf"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/readme.txt",
+            "size": 5173,
+            "display_size": "5.05 KB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/readme.txt"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig9a.hdf",
+            "size": 19271048,
+            "display_size": "18.4 MB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig9a.hdf"
+        },
+        {
+            "filename": "10.34770/bm4s-t361/89/Fig9b.hdf",
+            "size": 19271048,
+            "display_size": "18.4 MB",
+            "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig9b.hdf"
+        }
+    ],
+    "group": {
+        "title": "Princeton Plasma Physics Lab (PPPL)",
+        "description": null,
+        "code": "PPPL",
+        "created_at": "2022-04-28T16:30:00.195-04:00",
+        "updated_at": "2023-05-18T14:20:45.272-04:00"
+    }
+}
