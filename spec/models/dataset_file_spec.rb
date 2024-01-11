@@ -21,4 +21,27 @@ RSpec.describe DatasetFile do
       expect(file.download_url).to eq hash[:url]
     end
   end
+  describe "sort Dataset files by name and size" do
+  let(:file1) { DatasetFile.from_hash({
+    name: "file_name.txt",
+    size: "455511",
+    download_url: "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/file_name.txt"
+  }, "pdc_describe") }
+  let(:file2) { DatasetFile.from_hash({
+    name: "Fig9b.hdf",
+    size: "19271048",
+    download_url: "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig9b.hdf"
+  }, "pdc_describe") }
+  let(:file3) { DatasetFile.from_hash({
+    name: "Fig8b.hdf",
+    size: "5173",
+    download_url: "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/readme.txt"
+  }, "pdc_describe") }
+  
+  let(:file_array) {[file1, file2, file3]}
+    it "sorts README files first" do
+      expect(file_array).to sort_by(file_array.find("readme"))
+      true 
+    end
+  end
 end
