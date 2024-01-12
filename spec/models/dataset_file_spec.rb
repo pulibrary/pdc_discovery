@@ -24,14 +24,14 @@ RSpec.describe DatasetFile do
   describe "sort Dataset files by name and size" do
     let(:file1) do
       DatasetFile.from_hash({
-                              name: "file_name.txt",
+                              name: "b.txt",
                               size: "455511",
                               download_url: "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/file_name.txt"
                             }, "pdc_describe")
     end
     let(:file2) do
       DatasetFile.from_hash({
-                              name: "Fig9b.hdf",
+                              name: "a.txt",
                               size: "19271048",
                               download_url: "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig9b.hdf"
                             }, "pdc_describe")
@@ -46,9 +46,14 @@ RSpec.describe DatasetFile do
 
     let(:file_array) { [file1, file2, file3] }
     it "sorts README files first" do
-      expect(file_array.first.name).to eq "file_name.txt"
+      expect(file_array.first.name).to eq "b.txt"
       sorted_file_array = DatasetFile.sort_file_array(file_array)
       expect(sorted_file_array.first.name).to eq "README.txt"
+    end
+    it "sorts everything else alphabetically" do
+      expect(file_array.map(&:name)).to eq ["b.txt", "a.txt", "README.txt"]
+      sorted_file_array = DatasetFile.sort_file_array(file_array)
+      expect(sorted_file_array.map(&:name)).to eq ["README.txt", "a.txt", "b.txt"]
     end
   end
 end
