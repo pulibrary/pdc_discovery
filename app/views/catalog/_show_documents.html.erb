@@ -8,7 +8,6 @@
         <% if @document.embargoed? || @document.files.empty? %>
           <%= render_empty_files %>
         <% else %>
-        <% byebug %>
           <table id="files-table" class="table">
             <thead>
               <tr>
@@ -21,7 +20,7 @@
               </tr>
             </thead>
             <tbody>
-              <% @document.files.each_with_index do |file, ix| %>
+              <% DatasetFile.sort_file_array(@document.files).each_with_index do |file, ix| %>
                 <tr class="document-download">
                   <th scope="row">
                     <span><span><%= ix + 1 %></span></span>
