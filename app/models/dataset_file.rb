@@ -49,9 +49,10 @@ class DatasetFile
   end
 
   def self.sort_file_array(file_array)
+    sorted_by_name = file_array.sort_by(&:name)
     sorted_file_array = []
-    sorted_file_array.concat(file_array.select { |a| a.name.downcase.include? "readme" })
-    sorted_file_array.concat(file_array.difference(sorted_file_array))
+    sorted_file_array.concat(sorted_by_name.select { |a| a.name.downcase.include? "readme" })
+    sorted_file_array.concat(sorted_by_name.difference(sorted_file_array))
     sorted_file_array
   end
 end

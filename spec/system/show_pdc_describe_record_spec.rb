@@ -27,4 +27,9 @@ describe 'Show PDC Page', type: :system, js: true do
     first_filename_spot = find(:css, '#files-table>tbody>tr:first-child>td', match: :first).text
     expect(first_filename_spot).to eq("Fig11b_readme.hdf")
   end
+  it 'sorts files by name initially' do
+    visit '/catalog/doi-10-34770-bm4s-t361'
+    third_filename_spot = find(:xpath, "//table[@id='files-table']/tbody/tr[3]/td[1]").text
+    expect(third_filename_spot).to eq("Fig10a.hdf")
+  end
 end
