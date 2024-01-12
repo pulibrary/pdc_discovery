@@ -32,4 +32,13 @@ describe 'Show PDC Page', type: :system, js: true do
     third_filename_spot = find(:xpath, "//table[@id='files-table']/tbody/tr[3]/td[1]").text
     expect(third_filename_spot).to eq("Fig10a.hdf")
   end
+  it 'correctly sorts by file size' do
+    visit '/catalog/doi-10-34770-bm4s-t361'
+    first_filename_spot = find(:css, '#files-table>tbody>tr:first-child>td', match: :first).text
+    expect(first_filename_spot).to eq("Fig11b_readme.hdf")
+    find(:xpath, "//thead/tr/th[3]").click
+    first_filename_spot = find(:css, '#files-table>tbody>tr:first-child>td', match: :first).text
+    # "readme.txt" is the smallest file and so now it is first
+    expect(first_filename_spot).to eq("readme.txt")
+  end
 end
