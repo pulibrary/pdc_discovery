@@ -38,7 +38,7 @@ RSpec.describe DatasetFile do
     end
     let(:file3) do
       DatasetFile.from_hash({
-                              name: "readme.txt",
+                              name: "README.txt",
                               size: "5173",
                               download_url: "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/readme.txt"
                             }, "pdc_describe")
@@ -48,7 +48,7 @@ RSpec.describe DatasetFile do
     it "sorts README files first" do
       expect(file_array.first.name).to eq "file_name.txt"
       sorted_file_array = DatasetFile.sort_file_array(file_array)
-      expect(sorted_file_array.first.name).to eq "readme.txt"
+      expect(sorted_file_array.first.name).to eq "README.txt"
     end
   end
 end
