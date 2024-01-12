@@ -36,7 +36,7 @@
                       <span><%= file.description %></span>
                     </td>
                   <% end %>
-                  <td>
+                  <td data-order="<%= file.size %>">
                     <span><span><%= number_to_human_size(file.size) %></span></span>
                   </td>
                 </tr>
