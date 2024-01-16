@@ -141,6 +141,12 @@ end
 
 to_field 'issue_date_ssim', extract_xpath("/hash/resource/publication-year")
 
+to_field 'pdc_created_at_dtsi' do |record, accumulator, _context|
+  raw_date_string = record.xpath('/hash/group/created-at').map(&:text).first
+  formatted_date_string = raw_date_string.split(".").first.concat("Z")
+  accumulator.concat [formatted_date_string]
+end
+
 # ==================
 # publisher fields
 to_field 'publisher_ssim', extract_xpath("/hash/resource/publisher")
