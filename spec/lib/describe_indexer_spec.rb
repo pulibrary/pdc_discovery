@@ -87,8 +87,12 @@ RSpec.describe DescribeIndexer do
       # The pdc_created_at_dtsi field is used to describe when a record was created in PDC
       # This is used to sort the Recently Published page
       it "pdc_created_at_dtsi" do
-        expect(indexed_record["pdc_created_at_dtsi"]).to eq "2023-01-05T11:26:07Z"
+        expect(indexed_record["pdc_created_at_dtsi"]).to eq "2021-12-31T19:00:00Z"
         # example timestamp 1997-12-31T23:59:59Z
+      end
+
+      it "pdc_updated_at_dtsi" do
+        expect(indexed_record["pdc_updated_at_dtsi"]).to eq "2021-12-31T20:00:00Z"
       end
 
       it "publisher_ssim" do
