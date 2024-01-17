@@ -3,26 +3,31 @@ require 'rails_helper'
 
 # rubocop:disable RSpec/ExampleLength
 RSpec.describe RecentlyAdded do
+  let(:item1) { file_fixture("pppl1.json").read }
+  let(:item2) { file_fixture("pppl2.json").read }
+  let(:item3) { file_fixture("pppl3.json").read }
+  let(:indexer) do
+    DescribeIndexer.new(rss_url: "file://whatever.rss")
+  end
+  let(:indexed_record) do
+    response = Blacklight.default_index.connection.get 'select', params: { q: '*:*' }
+    response["response"]["docs"].first
+  end
   before do
-    stub_request(:get, "http://mysolr/solr/pdc-core-test/select?q=*:*&sort=issue_date_strict_ssi%20desc&wt=json").to_return(
-      status: 200,
-      body: file_fixture("recently_added.json"),
-      headers: {
-        'Content-Type' => 'application/json;charset=UTF-8',
-        'Accept' => 'application/json',
-        'User-Agent' => 'Faraday v1.0.1'
-      }
-    )
+    Blacklight.default_index.connection.delete_by_query("*:*")
+    Blacklight.default_index.connection.commit
+    indexer.index_one(item1)
+    indexer.index_one(item2)
+    indexer.index_one(item3)
   end
 
-  it "returns a payload of the ten most recent items with required fields" do
-    allow(Blacklight).to receive(:default_configuration).and_return(Struct.new(:connection_config).new({ url: "http://mysolr/solr/pdc-core-test" }))
+  it "returns a payload of the most recent items with required fields" do
     feed = described_class.feed
-    expect(feed.count).to eq 10
-    expect(feed.first.title).to eq "Shakespeare and Company Project Dataset: Lending Library Members"
-    expect(feed.first.authors_et_al).to eq "Kotin, Joshua et al."
+    expect(feed.count).to eq 3
+    expect(feed.first.title).to eq "Lower Hybrid Drift Waves During Guide Field Reconnection"
+    expect(feed.first.authors_et_al).to eq "Yoo, Jongsoo et al."
     expect(feed.first.genre).to eq "Dataset"
-    expect(feed.first.issued_date).to eq "July 2020"
+    expect(feed.first.issued_date).to eq "2020"
   end
 end
 # rubocop:enable RSpec/ExampleLength
