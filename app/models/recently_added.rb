@@ -6,7 +6,7 @@ class RecentlyAdded
     solr = RSolr.connect(url: solr_url)
     solr_params = {
       q: '*:*',
-      sort: 'issue_date_strict_ssi desc'
+      sort: 'pdc_created_at_dtsi desc'
     }
     response = solr.get('select', params: solr_params)
     entries = response["response"]["docs"].map { |doc| SolrDocument.new(doc) }
