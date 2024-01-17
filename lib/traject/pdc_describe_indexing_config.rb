@@ -141,6 +141,10 @@ end
 
 to_field 'issue_date_ssim', extract_xpath("/hash/resource/publication-year")
 
+to_field 'pdc_created_at_dtsi', extract_xpath('/hash/created-at')
+
+to_field 'pdc_updated_at_dtsi', extract_xpath('/hash/updated-at')
+
 # ==================
 # publisher fields
 to_field 'publisher_ssim', extract_xpath("/hash/resource/publisher")
