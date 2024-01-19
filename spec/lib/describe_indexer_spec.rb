@@ -99,6 +99,10 @@ RSpec.describe DescribeIndexer do
         expect(indexed_record["publisher_ssim"].first).to eq "Princeton University"
       end
 
+      it "migrated_bsi" do
+        expect(indexed_record["migrated_bsi"]).to eq true
+      end
+
       xit 'referenced_by' do
         expect(result['referenced_by_ssim'].first).to eq 'https://arxiv.org/abs/1903.06605'
       end
