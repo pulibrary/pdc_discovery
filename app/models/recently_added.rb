@@ -6,6 +6,7 @@ class RecentlyAdded
     solr = RSolr.connect(url: solr_url)
     solr_params = {
       q: '*:*',
+      fq: 'migrated_bsi:false',
       sort: 'pdc_created_at_dtsi desc'
     }
     response = solr.get('select', params: solr_params)

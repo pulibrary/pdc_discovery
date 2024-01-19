@@ -13,6 +13,8 @@ RSpec.describe RecentlyAdded do
     response = Blacklight.default_index.connection.get 'select', params: { q: '*:*' }
     response["response"]["docs"].first
   end
+  let(:feed) { described_class.feed }
+
   before do
     Blacklight.default_index.connection.delete_by_query("*:*")
     Blacklight.default_index.connection.commit
@@ -22,12 +24,14 @@ RSpec.describe RecentlyAdded do
   end
 
   it "returns a payload of the most recent items with required fields" do
-    feed = described_class.feed
-    expect(feed.count).to eq 3
     expect(feed.first.title).to eq "Lower Hybrid Drift Waves During Guide Field Reconnection"
     expect(feed.first.authors_et_al).to eq "Yoo, Jongsoo et al."
     expect(feed.first.genre).to eq "Dataset"
     expect(feed.first.issued_date).to eq "2020"
+  end
+  it 'excludes migrated works' do
+    # there are 3 items in the index, but only 2 are not migrated
+    expect(feed.count).to eq 2
   end
 end
 # rubocop:enable RSpec/ExampleLength
