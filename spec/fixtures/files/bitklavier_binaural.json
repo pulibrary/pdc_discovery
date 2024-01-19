@@ -97,7 +97,8 @@
                 "type": "CONTACT_PERSON"
             }
         ],
-        "funders": []
+        "funders": [],
+        "migrated": true
     },
     "files": [
         {
