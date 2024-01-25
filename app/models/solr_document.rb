@@ -370,6 +370,14 @@ class SolrDocument
     fetch("rights_holder_ssim", [])
   end
 
+  # PDC Describe records have enhanced license information (e.g. the name, the identifier, and a URL)
+  def rights_enhanced
+    @rights_enhanced ||= begin
+      hash = JSON.parse(fetch("pdc_describe_json_ss", "{}"))
+      hash.dig("resource", "rights_many") || []
+    end
+  end
+
   def subject
     if pdc_describe_record?
       fetch("subject_all_ssim", [])
