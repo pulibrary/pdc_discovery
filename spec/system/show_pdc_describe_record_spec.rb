@@ -22,6 +22,11 @@ describe 'Show PDC Page', type: :system, js: true do
     expect(page).to have_content("Total Size")
     expect(page).to have_content("373 MB")
   end
+  it "renders rights statement" do
+    visit '/catalog/doi-10-34770-bm4s-t361'
+    expect(page).to have_content("Creative Commons Attribution 4.0 International (CC BY)")
+    expect(page).to have_link('CC BY', href: 'https://creativecommons.org/licenses/by/4.0/')
+  end
   it 'has the README files first' do
     visit '/catalog/doi-10-34770-bm4s-t361'
     first_filename_spot = find(:css, '#files-table>tbody>tr:first-child>td', match: :first).text
