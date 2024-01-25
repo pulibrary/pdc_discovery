@@ -63,6 +63,17 @@
           Issue date: <%= @document.issued_date %>
         </div>
       <% end %>
+
+      <%if @document.rights_enhanced.present?%>
+        <div class="rights-heading">
+          <b><header>Rights:</header></b>
+          <% @document.rights_enhanced.each do |right|%>
+            <%=right["name"]%>
+            (<a href= "<%=right["uri"]%>" target="_blank"><%=right["identifier"]%></a>)
+          <%end%>
+        </div>
+      <%end%>
+
       <div class="document-citation">
         <header>Cite as:
           <button id="show-apa-citation-button" type='button' class='cite-as-button btn btn-primary btn-xsm' title='Show citation'>Text</button>
