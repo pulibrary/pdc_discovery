@@ -21,4 +21,8 @@ if Rails.env.development? || Rails.env.test?
     desc "Run test suite and style checker"
     task spec: :rubocop
   end
+  Rake::Task["solr:marc:index"].clear
+  Rake::Task["solr:marc:index:info"].clear
+  Rake::Task["solr:marc:index_test_data"].clear
+  Rake::Task["blacklight:index:seed"].clear
 end
