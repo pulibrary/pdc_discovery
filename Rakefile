@@ -22,4 +22,7 @@ if Rails.env.development? || Rails.env.test?
     task spec: :rubocop
   end
   Rake::Task["solr:marc:index"].clear
+  Rake::Task["solr:marc:index:info"].clear
+  Rake::Task["solr:marc:index_test_data"].clear
+  Rake::Task["blacklight:index:seed"].clear
 end
