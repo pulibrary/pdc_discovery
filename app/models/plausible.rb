@@ -33,7 +33,9 @@ class Plausible
 
     site_id = Rails.configuration.pdc_discovery.plausible_site_id
     page = "/discovery/catalog/#{document_id}"
-    url = "#{PLAUSIBLE_API_URL}/stats/breakdown?site_id=#{site_id}&property=event:props:filename&filters=event:page==#{page}&metrics=visitors,pageviews"
+    # Notice that the Plausible gem use above in pageviews uses "event:page==..." but when we use the raw API
+    # we cannot pass "=="
+    url = "#{PLAUSIBLE_API_URL}/stats/breakdown?site_id=#{site_id}&property=event:props:filename&filters=event:page=#{page}&metrics=visitors,pageviews"
     authorization = "Bearer #{ENV['PLAUSIBLE_KEY']}"
     response = HTTParty.get(url, headers: { 'Authorization' => authorization })
     total_downloads = 0
