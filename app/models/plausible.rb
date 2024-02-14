@@ -31,11 +31,15 @@ class Plausible
   def self.downloads(document_id)
     return 'X' if ENV['PLAUSIBLE_KEY'].nil?
 
+    # Plausible API breakdown API: https://plausible.io/docs/stats-api#get-apiv1statsbreakdown
+    # Notice that the Plausible API uses "==" to filter: https://plausible.io/docs/stats-api#filtering
     site_id = Rails.configuration.pdc_discovery.plausible_site_id
+    property = "event:props:filename"
     page = "/discovery/catalog/#{document_id}"
-    # Notice that the Plausible gem use above in pageviews uses "event:page==..." but when we use the raw API
-    # we cannot pass "=="
-    url = "#{PLAUSIBLE_API_URL}/stats/breakdown?site_id=#{site_id}&property=event:props:filename&filters=event:page=#{page}&metrics=visitors,pageviews"
+    filters = "event:page==#{page}"
+    metrics = "visitors,pageviews"
+    period = "12mo"
+    url = "#{PLAUSIBLE_API_URL}/stats/breakdown?site_id=#{site_id}&property=#{property}&filters=#{filters}&metrics=#{metrics}&period=#{period}"
     authorization = "Bearer #{ENV['PLAUSIBLE_KEY']}"
     response = HTTParty.get(url, headers: { 'Authorization' => authorization })
     total_downloads = 0
