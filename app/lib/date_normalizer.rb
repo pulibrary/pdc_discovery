@@ -49,11 +49,15 @@ class DateNormalizer
       Date.strptime(date_string).strftime('%Y').to_i
     elsif date_string.match?(/\d{4}-\d{2}/)
       Date.strptime(date_string, '%Y-%m').strftime('%Y').to_i
-    else
+    elsif date_string.match?(/^\d{4}/) && date_string.size == 4
       date_string.to_i
+    else
+      time = Time.zone.parse(date_string)
+      time.year
     end
   rescue ArgumentError
     # bad formatted date
+    Rails.logger.warn("Error parsing date #{date_string}")
     nil
   end
 end

@@ -114,7 +114,7 @@ to_field 'author_tesim', extract_xpath("/item/metadata/key[text()='dc.contributo
 # single value is used for sorting
 to_field 'author_si' do |record, accumulator, _c|
   values = record.xpath("/item/metadata/key[text()='dc.contributor.author']/../value").map(&:text)
-  accumulator.concat [values.uniq.sort.first]
+  accumulator.concat [values.first]
 end
 
 # all values as strings for faceting

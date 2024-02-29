@@ -4,6 +4,7 @@ RSpec.describe DateNormalizer do
   let(:years) { ['2015'] }
   let(:months_and_years) { ['2015-08'] }
   let(:timestamps) { ['2015-08-18T18:14:22Z'] }
+  let(:month_year_name) { ['August 2020'] }
 
   describe "#format_array_for_display" do
     it "formats four digit years" do
@@ -27,6 +28,7 @@ RSpec.describe DateNormalizer do
       expect(described_class.years_from_dates(timestamps)).to eq [2015]
       expect(described_class.years_from_dates(months_and_years)).to eq [2015]
       expect(described_class.years_from_dates(years)).to eq [2015]
+      expect(described_class.years_from_dates(month_year_name)).to eq [2020]
     end
 
     it "handles bad dates" do

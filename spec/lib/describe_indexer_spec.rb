@@ -95,6 +95,10 @@ RSpec.describe DescribeIndexer do
         expect(indexed_record["pdc_updated_at_dtsi"]).to eq "2021-12-31T20:00:00Z"
       end
 
+      it "issue_date_strict_ssi" do
+        expect(indexed_record["issue_date_strict_ssi"]).to eq "2021-01-01"
+      end
+
       it "publisher_ssim" do
         expect(indexed_record["publisher_ssim"].first).to eq "Princeton University"
       end
@@ -187,6 +191,39 @@ RSpec.describe DescribeIndexer do
         indexer.index
         response = Blacklight.default_index.connection.get 'select', params: { q: '*:*' }
         expect(response["response"]["numFound"]).to eq 2
+      end
+
+      it "can sort by issue_date_strict_ssi" do
+        Rails.configuration.pdc_discovery.index_pdc_describe = true
+        indexer.index
+        response = Blacklight.default_index.connection.get 'select', params: { q: '*:*', sort: 'issue_date_strict_ssi desc' }
+        expect(response["response"]["numFound"]).to eq 2
+        expect(response["response"]['docs'].first['pdc_created_at_dtsi']).to eq("2023-07-11T11:06:10Z")
+        expect(response["response"]['docs'].last['pdc_created_at_dtsi']).to eq("2021-12-31T19:00:00Z")
+        expect(response["response"]['docs'].first["issue_date_strict_ssi"]).to eq "2023-01-01"
+        expect(response["response"]['docs'].last["issue_date_strict_ssi"]).to eq "2021-01-01"
+      end
+
+      context "works with multiple creators" do
+        let(:pppl1) { File.read(File.join(fixture_path, 'files', 'pppl1.json')) }
+        let(:pppl2) { File.read(File.join(fixture_path, 'files', 'pppl2.json')) }
+        before do
+          stub_request(:get, "https://pdc-describe-prod.princeton.edu/describe/works/6.json")
+            .to_return(status: 200, body: pppl1, headers: {})
+          stub_request(:get, "https://pdc-describe-prod.princeton.edu/describe/works/20.json")
+            .to_return(status: 200, body: pppl2, headers: {})
+        end
+
+        it "can sort by the first author" do
+          Rails.configuration.pdc_discovery.index_pdc_describe = true
+          indexer.index
+          response = Blacklight.default_index.connection.get 'select', params: { q: '*:*', sort: 'author_si desc' }
+          expect(response["response"]["numFound"]).to eq 2
+          expect(response["response"]['docs'].first['author_tesim'].first).to eq("Wang, Yin")
+          expect(response["response"]['docs'].last['author_tesim'].first).to eq("Schwartz, Jacob A.")
+          expect(response["response"]['docs'].first["issue_date_strict_ssi"]).to eq "2021-12-31"
+          expect(response["response"]['docs'].last["issue_date_strict_ssi"]).to eq "2022-01-01"
+        end
       end
 
       context "when there are items which are under active embargo" do
