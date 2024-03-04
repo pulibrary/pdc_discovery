@@ -43,7 +43,7 @@ class Plausible
     page = "/discovery/catalog/#{document_id}"
     filters = "event:page==#{page}"
     metrics = "visitors,pageviews"
-    period="custom"
+    period = "custom"
     url = "#{PLAUSIBLE_API_URL}/stats/breakdown?site_id=#{site_id}&property=#{property}&filters=#{filters}&metrics=#{metrics}&period=#{period}&date=#{date_period}"
     authorization = "Bearer #{ENV['PLAUSIBLE_KEY']}"
     response = HTTParty.get(url, headers: { 'Authorization' => authorization })

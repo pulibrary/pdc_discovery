@@ -6,7 +6,8 @@ require 'rails_helper'
 RSpec.describe Plausible do
   before do
     plausible = "https://plausible.io/api/v1"
-    url = "#{plausible}/stats/breakdown?filters=event:page==/discovery/catalog/88163&metrics=visitors,pageviews&property=event:props:filename&site_id=pdc-discovery-staging.princeton.edu&period=12mo"
+    date_period = "2021-01-01,#{Time.zone.today.strftime('%Y-%m-%d')}"
+    url = "#{plausible}/stats/breakdown?filters=event:page==/discovery/catalog/88163&metrics=visitors,pageviews&property=event:props:filename&site_id=pdc-discovery-staging.princeton.edu&period=custom&date=#{date_period}"
     stub_request(:get, url)
       .with(
         headers: {
