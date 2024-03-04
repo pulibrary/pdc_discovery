@@ -73,7 +73,7 @@
         "resource_type": "Dataset",
         "resource_type_general": "Dataset",
         "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
-        "publication_year": "2022",
+        "publication_year": "2023",
         "ark": "ark:/88435/dsp01wh246w38h",
         "doi": "10.34770/bm4s-t361",
         "rights_many": [
@@ -150,13 +150,7 @@
                 "errors": []
             }
         ],
-        "keywords": [
-            "HHFW",
-            "3D RF modeling",
-            "Petra-M",
-            "fast wave",
-            "NSTX-U"
-        ],
+        "keywords": ["HHFW", "3D RF modeling", "Petra-M", "fast wave", "NSTX-U"],
         "contributors": [],
         "organizational_contributors": [],
         "funders": [
@@ -167,15 +161,12 @@
                 "award_uri": ""
             }
         ],
-        "domains": [
-            "Natural Sciences"
-        ],
-        "communities": [
-            "Princeton Plasma Physics Laboratory"
-        ],
+        "domains": ["Natural Sciences"],
+        "communities": ["Princeton Plasma Physics Laboratory"],
         "subcommunities": [
             "NSTX-U",
-            "Spherical Torus"
+            "Spherical Torus",
+            "Tokamak Experimental Sciences"
         ],
         "migrated": true
     },
@@ -321,9 +312,12 @@
     ],
     "group": {
         "title": "Princeton Plasma Physics Lab (PPPL)",
-        "description": null,
+        "description": "",
         "code": "PPPL",
         "created_at": "2022-04-28T16:30:00.195-04:00",
-        "updated_at": "2023-05-18T14:20:45.272-04:00"
-    }
+        "updated_at": "2024-02-16T09:06:20.108-05:00"
+    },
+    "embargo_date": null,
+    "created_at": "2023-08-18T13:47:14Z",
+    "updated_at": "2024-02-23T11:05:11Z"
 }

@@ -6,9 +6,18 @@
                 "title_type": null
             }
         ],
-        "description": "In 2017, seven members of the Archive-It Mid-Atlantic Users Group (AITMA) conducted a study of 14 subjects representative of their stakeholder populations to assess the usability of Archive-It, a web archiving subscription service of the Internet Archive. While Archive-It is the most widely-used tool for web archiving, little is known about how users interact with the service.This study intended to teach us what users expect from web archives, which exist as another form of archival material. End-user subjects executed four search tasks using the public Archive-It interface and the Wayback Machine to access archived information on websites from the facilitators’ own harvested collections and provide feedback about their experiences. The tasks were designed to have straightforward pass or fail outcomes,\r\n    and the facilitators took notes on the subjects’ behavior and commentary during the sessions.Overall, participants reported mildly positive impressions of Archive-It public user interface based on their session. The study identified several key areas of improvement for the Archive-It service pertaining to metadata options, terminology display, indexing of dates, and the site’s search box.\r\n-\r\nDownload the README.txt for a detailed description of this dataset's content.",
+        "description": "In 2017, seven members of the Archive-It Mid-Atlantic Users Group (AITMA) conducted a study of 14 subjects representative of their stakeholder populations to assess the usability of Archive-It, a web archiving subscription service of the Internet Archive. While Archive-It is the most widely-used tool for web archiving, little is known about how users interact with the service. This study intended to teach us what users expect from web archives, which exist as another form of archival material. End-user subjects executed four search tasks using the public Archive-It interface and the Wayback Machine to access archived information on websites from the facilitators' own harvested collections and provide feedback about their experiences. The tasks were designed to have straightforward pass or fail outcomes,\r\nand the facilitators took notes on the subjects' behavior and commentary during the sessions. Overall, participants reported mildly positive impressions of Archive-It public user interface based on their session. The study identified several key areas of improvement for the Archive-It service pertaining to metadata options, terminology display, indexing of dates, and the site's search box.\r\n\r\nDownload the README.txt for a detailed description of this dataset's content.",
         "collection_tags": [],
         "creators": [
+            {
+                "value": "Abrams, Samantha",
+                "name_type": "Personal",
+                "given_name": "Samantha",
+                "family_name": "Abrams",
+                "identifier": null,
+                "affiliations": [],
+                "sequence": 0
+            },
             {
                 "value": "Antracoli, Alexis",
                 "name_type": "Personal",
@@ -62,40 +71,41 @@
                 "identifier": null,
                 "affiliations": [],
                 "sequence": 6
-            },
-            {
-                "value": "Abrams, Samantha",
-                "name_type": "Personal",
-                "given_name": "Samantha",
-                "family_name": "Abrams",
-                "identifier": null,
-                "affiliations": [],
-                "sequence": 7
             }
         ],
         "resource_type": "Dataset",
-        "resource_type_general": "",
+        "resource_type_general": "Dataset",
         "publisher": "Princeton University",
         "publication_year": "2023",
-        "ark": null,
-        "doi": "10.34770/doc-1",
-        "rights": {
-            "identifier": "GPLv3",
-            "uri": "https://www.gnu.org/licenses/gpl-3.0.en.html",
-            "name": "GNU General Public License"
-        },
+        "ark": "ark:/88435/dsp01d791sj97j",
+        "doi": "10.34770/00yp-2w12",
+        "rights_many": [
+            {
+                "identifier": "CC BY",
+                "uri": "https://creativecommons.org/licenses/by/4.0/",
+                "name": "Creative Commons Attribution 4.0 International"
+            }
+        ],
         "version_number": "1",
         "related_objects": [],
         "keywords": [],
         "contributors": [],
-        "funders": []
+        "organizational_contributors": [],
+        "funders": [],
+        "domains": [],
+        "communities": [],
+        "subcommunities": [],
+        "migrated": true
     },
     "files": [],
     "group": {
-        "title": "Research Data",
-        "description": null,
+        "title": "Princeton Research Data Service (PRDS)",
+        "description": "",
         "code": "RD",
-        "created_at": "2023-01-05T11:26:07.005-05:00",
-        "updated_at": "2023-01-05T11:26:07.005-05:00"
-    }
+        "created_at": "2022-04-28T16:30:00.190-04:00",
+        "updated_at": "2024-01-23T11:29:40.724-05:00"
+    },
+    "embargo_date": null,
+    "created_at": "2023-07-11T11:06:10Z",
+    "updated_at": "2023-09-13T08:23:50Z"
 }

@@ -89,7 +89,7 @@ end
 # single value is used for sorting
 to_field 'author_si' do |record, accumulator, _c|
   author_names = record.xpath("/hash/resource/creators/creator/value").map(&:text)
-  accumulator.concat [author_names.uniq.sort.first]
+  accumulator.concat [author_names.first]
 end
 
 # all values as strings for faceting
@@ -145,6 +145,24 @@ end
 to_field 'issue_date_ssim', extract_xpath("/hash/resource/publication-year")
 
 to_field 'pdc_created_at_dtsi', extract_xpath('/hash/created-at')
+
+to_field "issue_date_strict_ssi" do |record, accumulator, _context|
+  migrated = record.xpath("/hash/resource/migrated/text()").to_s
+  date = if migrated == "true"
+           pub_year = record.xpath("/hash/resource/publication-year/text()").to_s
+           "#{pub_year}-01-01"
+         else
+           date_value = record.xpath("/hash/created-at/text()").to_s
+           begin
+             DateTime.parse(date_value).strftime('%Y-%m-%d')
+           rescue
+             nil
+           end
+         end
+  if date
+    accumulator.concat [date]
+  end
+end
 
 to_field 'pdc_updated_at_dtsi', extract_xpath('/hash/updated-at')
 
