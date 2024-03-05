@@ -37,5 +37,6 @@ describe 'Search Results PDC Page', type: :system, js: true do
     click_on "Year Published"
     expect(page).to have_content "View larger"
     expect(page).not_to have_content "[Missing]"
+    expect(page).to have_content "2022\n2022"
   end
 end
