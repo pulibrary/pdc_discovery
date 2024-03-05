@@ -33,5 +33,9 @@ describe 'Search Results PDC Page', type: :system, js: true do
     expect(page).to have_content("System Studies")
     click_on("System Studies")
     expect(page).to have_content("Fusion Pilot Plant performance and the role of a Sustained High Power Density tokamak")
+
+    click_on "Year Published"
+    expect(page).to have_content "View larger"
+    expect(page).not_to have_content "[Missing]"
   end
 end

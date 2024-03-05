@@ -144,6 +144,8 @@ end
 
 to_field 'issue_date_ssim', extract_xpath("/hash/resource/publication-year")
 
+to_field 'year_available_itsi', extract_xpath("/hash/resource/publication-year")
+
 to_field 'pdc_created_at_dtsi', extract_xpath('/hash/created-at')
 
 to_field "issue_date_strict_ssi" do |record, accumulator, _context|
