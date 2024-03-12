@@ -208,7 +208,7 @@ module ApplicationHelper
       orcid_html = <<-HTML
         <img alt='ORCID logo' src='https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png' width='16' height='16' />
         ORCID: <a href='https://orcid.org/#{orcid}' target=_blank>#{orcid}</a><br/>
-        Find other works <a href='#{search_link_by_field(orcid)}'>by this author</a> in PDC Discovery.<br/>
+        Find other works <a href='#{search_link_by_field(orcid, 'ORCID')}'>by this author</a> in PDC Discovery.<br/>
       HTML
     end
 
