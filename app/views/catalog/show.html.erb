@@ -182,6 +182,9 @@
       $("#download-bibtex").click(function (e) {
         e.preventDefault();
         window.location.href= this.dataset["url"];
+
+        // Track in Plausible that the citation was downloaded
+        log_plausible_citation("download-bibtex");
       });
     }
 
@@ -249,6 +252,10 @@
         var label = $(this).children("span");
         var citation = this.dataset["text"];
         copyToClipboard(citation, icon, label, "copy-doi-label-normal", "copy-doi-label-copied");
+
+        // Track in Plausible that the citation was copied
+        var action = (this.id === "copy-apa-citation-button") ? "copy-apa" : "copy-bibtex";
+        log_plausible_citation(action);
         return false;
       });
     }

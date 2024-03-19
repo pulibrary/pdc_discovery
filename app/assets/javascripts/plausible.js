@@ -13,3 +13,9 @@ function log_plausible_globus_download(id) {
   console.log("log_plausible_globus_download: " + id);
   plausible("Download", { props: { filename: "globus-download" } });
 }
+
+// The possible action values for citation are: "copy-apa", "copy-bibtex", "download-bibtex"
+function log_plausible_citation(action) {
+  console.log("log_plausible_citation_copy: " + action);
+  plausible("Citation", { props: { citation_action: action } });
+}
