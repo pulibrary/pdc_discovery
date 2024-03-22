@@ -5,9 +5,9 @@ require_relative 'boot'
 require 'rails/all'
 require_relative 'lando_env'
 
-# Require the gems listed in Gemfile, including any gems
-# you've limited to :test, :development, or :production.
-Bundler.require(*Rails.groups)
+# Require the gems listed in Gemfile, but only the default ones
+# and those for the environment rails is running in
+Bundler.require(:default, Rails.env)
 
 module PdcDiscovery
   class Application < Rails::Application
