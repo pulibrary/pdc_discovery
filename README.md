@@ -56,7 +56,6 @@ We utilize Rubocop for our Ryby code and Prettier for our JavaScript
 3. Access pdc_discovery at [http://localhost:3000/](http://localhost:3000/)
 
 ## Deploying
-pulbot: `pulbot deploy pdc_discovery to [staging|production]`
 
 To create a tagged release use the [steps in the RDSS handbook](https://github.com/pulibrary/rdss-handbook/blob/main/release_process.md)
 
