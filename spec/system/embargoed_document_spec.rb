@@ -29,8 +29,10 @@ describe 'Embargoed Document page', type: :system, js: true do
       let(:item_file_fixture) { file_fixture("pdc_describe_active_embargo.json") }
       it "renders a message to the client expressing this and detailing the embargo date" do
         visit "/catalog/#{document_id}"
-        embargo_message_included = page.html.include?("File(s) associated with this object are embargoed until 2033-09-13.")
-        expect(embargo_message_included).to be true
+        embargo_message_header= find(:css, '.document-embargo-heading', match: :first).text
+        expect(embargo_message_header).to eq("File(s) associated with this object are embargoed until 2033-09-13.")
+        embargo_element = find(:css, '#no_files', match: :first).text
+        expect(embargo_element).to eq("File(s) associated with this object are embargoed until 2033-09-13.")
       end
     end
 
