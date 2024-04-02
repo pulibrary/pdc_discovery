@@ -165,6 +165,15 @@ module ApplicationHelper
     html.html_safe
   end
 
+  def render_embargo_files(embargo_date)
+    html = <<-HTML
+    <div id="no_files">
+    File(s) associated with this object are embargoed until #{embargo_date}
+    </div>
+    HTML
+    html.html_safe
+  end
+
   def authors_search_results_helper(field)
     field[:document].authors_ordered.map(&:value).join("; ")
   end
