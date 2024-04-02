@@ -5,7 +5,9 @@
 
         <!-- Only render file download table if there are files in DataSpace -->
 
-        <% if @document.embargoed? || @document.files.empty? %>
+        <% if @document.embargoed? %>
+          <%= render_embargo_files(@document.embargo_date) %>
+        <%elsif @document.files.empty? %>
           <%= render_empty_files %>
         <% else %>
           <table id="files-table" class="table">
