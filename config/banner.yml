@@ -6,8 +6,8 @@ test:
   title: Welcome to the <i>test</i> site
   body: This is a <b>test</b> <a href="mailto:fake@princeton.edu">message.</a>
 staging:
-  title: Welcome to Princeton Data Commons Discovery (Staging)!
-  body: PRDS is proud to share our new website for the discovery and sharing of research data. Have a look around and <a href="mailto:prds@princeton.edu">let us know what you think.</a>
+  title: Welcome to Princeton Data Commons Discovery! (Staging)
+  body: Have a look around our new website for the discovery and sharing of research data and <a href="mailto:prds@princeton.edu"> let us know what you think</a>. See our <a href="https://researchdata.princeton.edu/research-lifecycle-guide/getting-started-princeton-data-commons-describe-contributor" target="_blank"> Getting Started as a Princeton Data Commons Contributor</a> guide for instructions on how to publish your research data and code.
 production:
   title: Welcome to Princeton Data Commons Discovery!
-  body: PRDS is proud to share our new website for the discovery and sharing of research data. Have a look around and <a href="mailto:prds@princeton.edu">let us know what you think.</a>
+  body: Have a look around our new website for the discovery and sharing of research data and <a href="mailto:prds@princeton.edu"> let us know what you think</a>. See our <a href="https://researchdata.princeton.edu/research-lifecycle-guide/getting-started-princeton-data-commons-describe-contributor" target="_blank"> Getting Started as a Princeton Data Commons Contributor</a> guide for instructions on how to publish your research data and code.
