@@ -254,6 +254,13 @@ class CatalogController < ApplicationController
     ]
   end
 
+  def show
+    super
+    if params["format"] == "json"
+      render json: DocumentExport.new(@document)
+    end
+  end
+
   # Returns the raw BibTex citation information
   def bibtex
     _unused, @document = search_service.fetch(params[:id])
