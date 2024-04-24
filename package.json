@@ -25,7 +25,7 @@
     "vite-plugin-ruby": "^3.2.0"
   },
   "peerDependencies": {
-    "postcss": "^8.0.0"
+    "postcss": ">=8.4.31"
   },
   "scripts": {
     "lint": "yarn run prettier --check app/javascript/**/*{js,css,scss} app/assets/javascripts/**/*js app/assets/stylesheets/**/*{css,scss}",
