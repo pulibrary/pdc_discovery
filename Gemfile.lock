@@ -398,6 +398,8 @@ GEM
       rspec-expectations (~> 3.10)
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
+    rspec-retry (0.6.2)
+      rspec-core (> 3.3)
     rspec-solr (3.0.0)
       rspec (~> 3.5)
       rspec-collection_matchers
@@ -588,6 +590,7 @@ DEPENDENCIES
   rsolr (>= 1.0, < 3)
   rspec
   rspec-rails (~> 5.0.0)
+  rspec-retry
   rspec-solr
   rubocop-rspec
   sass-rails (>= 6)
