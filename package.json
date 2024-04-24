@@ -6,7 +6,6 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "lodash": "^4.17.21",
-    "postcss": "^8.4.31",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^7.8.2",
     "postcss-tools": "^2.0.3",
@@ -23,6 +22,9 @@
     "stylelint-scss": "^3.20.1",
     "vite": "^4.5.3",
     "vite-plugin-ruby": "^3.2.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.0.0"
   },
   "scripts": {
     "lint": "yarn run prettier --check app/javascript/**/*{js,css,scss} app/assets/javascripts/**/*js app/assets/stylesheets/**/*{css,scss}",
