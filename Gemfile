@@ -47,6 +47,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec'
   gem 'rspec-rails', '~> 5.0.0'
+  gem "rspec-retry"
   gem 'rspec-solr'
   gem 'rubocop-rspec'
   gem 'yard'
