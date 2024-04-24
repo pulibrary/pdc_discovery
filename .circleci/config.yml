@@ -1,7 +1,7 @@
 ---
 version: 2.1
 orbs:
-  browser-tools: circleci/browser-tools@1.4.4
+  browser-tools: circleci/browser-tools@1.4.8
 
 executors:
   pdc_discovery_executor_build:
@@ -80,6 +80,8 @@ jobs:
     steps:
       - attach_workspace:
           at: '~/pdc_discovery'
+      - browser-tools/install-firefox:
+          version: 'latest'
       - checkout
       - run:
           name: Check current version of node
@@ -137,7 +139,6 @@ jobs:
             curl -H 'Content-type: application/json' http://solr:SolrRocks@127.0.0.1:8983/api/collections/ -d '{create: {name: pdc_discovery-core-test, config: pdc_discovery, numShards: 1}}'
       - bundle_install
       - yarn_install
-      - browser-tools/install-firefox
       - run: |
           ruby --version
           node --version
