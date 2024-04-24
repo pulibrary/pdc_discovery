@@ -90,6 +90,7 @@ jobs:
       - run: sudo apt update && sudo apt install postgresql-client
       - bundle_install
       - yarn_install
+      - browser-tools/install-firefox
       - persist_to_workspace:
           root: '~/pdc_discovery'
           paths: '*'
