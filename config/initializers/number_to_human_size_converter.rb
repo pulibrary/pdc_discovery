@@ -6,12 +6,12 @@ module ActiveSupport
     class NumberToHumanSizeConverter < NumberConverter
       private
 
-        # Allows a base to be specified for the conversion
-        # 1024 was the default and that produces gigibytes
-        # 1000 produces gigabytes
-        def base
-          options[:base] || 1000
-        end
+      # Allows a base to be specified for the conversion
+      # 1024 was the default and that produces gigibytes
+      # 1000 produces gigabytes
+      def base
+        options[:base] || 1000
+      end
     end
   end
 end
