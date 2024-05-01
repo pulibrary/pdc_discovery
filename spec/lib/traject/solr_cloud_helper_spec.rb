@@ -58,7 +58,7 @@ RSpec.describe SolrCloudHelper do
         .to_return(status: 200, body: solr_aliases_1, headers: json_response)
       stub_request(:get, "http://fake-solr/solr/admin/collections?action=DELETE&name=pdc-discovery-staging-2")
         .to_return(status: 200, body: "", headers: {})
-      stub_request(:get, "http://fake-solr/solr/admin/collections?action=CREATE&collection.configName=pdc-discovery-test&name=pdc-discovery-staging-2&numShards=1&replicationFactor=2")
+      stub_request(:get, "http://fake-solr/solr/admin/collections?action=CREATE&collection.configName=pdc-discovery-test&name=pdc-discovery-staging-2&numShards=1&replicationFactor=3")
         .to_return(status: 200, body: '{"success":"true"}', headers: json_response)
       expect(described_class.collection_writer_for_alias(alias_uri, true)).to eq "http://fake-solr/solr/pdc-discovery-staging-2"
     end

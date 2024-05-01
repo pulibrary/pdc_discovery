@@ -61,9 +61,13 @@ To create a tagged release use the [steps in the RDSS handbook](https://github.c
 
 ## Indexing research data from DataSpace and PDC Describe
 
+PDC Discovery indexes data from both DataSpace and from PDC Describe via the following rake task:
+
 ```ruby
 rake index:research_data
 ```
+
+This rake task is scheduled to run every 30 minutes on the production and staging servers.
 
 ### Solr configuration in production/staging
 In production and staging we use Solr cloud to manage our Solr index. Our configuration uses a Solr *alias* to point to the current Solr *collection* that we are using. For example, in staging the alias `pdc-discovery-staging` points to the `pdc-discovery-staging-1` collection.
@@ -74,25 +78,23 @@ Our indexing process automatically toggles between `pdc-discovery-staging-1` and
 
 This dual collection approach allows us to index to a separate area in Solr and prevents users from seeing partial results while we are running the index process.
 
-### Updating Solr in production/staging
-To make changes to the Solr in production/staging you need to update the files in the [pul_solr](https://github.com/pulibrary/pul_solr) repository and deploy them. The basic steps are:
+### Updating the Solr schema in production/staging
+To make changes to the Solr schema in production/staging you need to update the files in the [pul_solr](https://github.com/pulibrary/pul_solr) repository and deploy them. The basic steps are:
 
-#### getting your changes into pul_solr [configuration file for PDC Discovery](https://github.com/pulibrary/pul_solr/tree/main/solr_configs/pdc-discovery)
+#### Getting your changes into pul_solr [configuration file for PDC Discovery](https://github.com/pulibrary/pul_solr/tree/main/solr_configs/pdc-discovery)
 1. Copy your configuration updates to pul_solr (This command assumes all your projects live in one folder on your machine)
    ```
    cp solr/conf/* ../pul_solr/solr_configs/pdc-discovery/conf/
    ```
 1. create a **Draft** PR in pul_solr with your changes (<branch-name> is the name of your new branch for the PR)
 
-
-#### getting your changes onto the server
+#### Getting your changes onto the server
 1. Connect to the VPN.
 1. Optional. You can tunnel to machine running Solr `ssh -L 8983:localhost:8983 pulsys@lib-solr-staging4` if you want to see your current configuration (e.g. `solrconfig.xml` or `schema.xml`).
 1. Make sure you are on the `pul-solr` repo.
 1. Deploy the changes, e.g. `BRANCH=<branch-name> bundle exec cap solr8-staging deploy`.
 1. verify your changes have worked and mark your PR ready for review
 1. Once the PR has been merged cordiante a time to deploy the changes to production `bundle exec cap solr8-production deploy`
-
 
 You can see the list of Capistrano environments [here](https://github.com/pulibrary/pul_solr/tree/main/config/deploy)
 
