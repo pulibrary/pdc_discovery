@@ -26,6 +26,11 @@ namespace :index do
     DspaceResearchDataHarvester.harvest(false)
     SolrCloudHelper.collection_writer_commit!
     Rails.logger.info "Indexing: Harvesting and indexing DataSpace research data collections completed"
+  rescue => ex
+    # DataSpace errors quite often.
+    # Log the exception and let other process continue.
+    Rails.logger.error("Indexing: Error harvesting data from DataSpace: #{ex.message}")
+    Honeybadger.notify("Indexing: Error harvesting data from DataSpace: #{ex.message}")
   end
 
   desc 'Index all PDC Describe data'
