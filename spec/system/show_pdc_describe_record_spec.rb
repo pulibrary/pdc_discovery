@@ -20,7 +20,7 @@ describe 'Show PDC Page', type: :system, js: true do
   it "renders total file size" do
     visit '/catalog/doi-10-34770-bm4s-t361'
     expect(page).to have_content("Total Size")
-    expect(page).to have_content("373 MB")
+    expect(page).to have_content("391 MB")
   end
   it "renders rights statement" do
     visit '/catalog/doi-10-34770-bm4s-t361'
@@ -32,6 +32,17 @@ describe 'Show PDC Page', type: :system, js: true do
     first_filename_spot = find(:css, '#files-table>tbody>tr:first-child>td', match: :first).text
     expect(first_filename_spot).to eq("Fig11b_readme.hdf")
   end
+
+  it "reports sizes using MB and KB" do
+    visit '/catalog/doi-10-34770-bm4s-t361'
+    # These tests are to validate our monkey-patched number_to_human_size (see number_to_human_size_converter.rb)
+    # is dividing the size by 1000 instead of using the Rails default of 1024.
+    file_size = find(:css, '#files-table>tbody>tr:first-child>td:nth-child(3)', match: :first).text
+    expect(file_size).to eq("22 KB")
+    file_size = find(:css, '#files-table>tbody>tr:nth-child(6)>td:nth-child(3)', match: :first).text
+    expect(file_size).to eq("32.7 MB")
+  end
+
   it 'sorts files by name initially' do
     visit '/catalog/doi-10-34770-bm4s-t361'
     third_filename_spot = find(:xpath, "//table[@id='files-table']/tbody/tr[3]/td[1]").text
