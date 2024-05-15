@@ -255,7 +255,7 @@ class CatalogController < ApplicationController
   end
 
   def show
-    super
+    super()
     if params["format"] == "json"
       render json: DocumentExport.new(@document)
     end

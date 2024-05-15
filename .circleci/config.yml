@@ -1,12 +1,13 @@
 ---
 version: 2.1
+
 orbs:
   browser-tools: circleci/browser-tools@1.4.4
 
 executors:
   pdc_discovery_executor_build:
     docker:
-      - image: cimg/ruby:3.2-browsers
+      - image: cimg/ruby:3.3.2-browsers
         environment: &docker_env_default
           BUNDLER_VERSION: 2.3.11
           BUNDLE_JOBS: 3
@@ -14,9 +15,10 @@ executors:
           BUNDLE_PATH: vendor/bundle
           RAILS_ENV: test
     working_directory: ~/pdc_discovery
+
   pdc_discovery_executor:
     docker:
-      - image: cimg/ruby:3.2-browsers
+      - image: cimg/ruby:3.3.2-browsers
         environment:
           <<: *docker_env_default
           DB_HOST: localhost

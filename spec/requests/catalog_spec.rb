@@ -125,9 +125,17 @@ RSpec.describe "Catalog", type: :request do
 
     context "when Solr is not at all accessible for the RSolr client" do
       let(:ping) { false }
+      let(:uri) { instance_double(URI::HTTP) }
+      let(:request) { double(Net::HTTPRequest) }
 
       before do
-        allow(search_service).to receive(:fetch).and_raise(RSolr::Error::ConnectionRefused)
+        allow(uri).to receive(:user)
+        allow(uri).to receive(:password)
+        allow(uri).to receive(:dup).and_return(uri)
+        allow(request).to receive(:[]).with(:uri).and_return(uri)
+        allow(request).to receive(:[]=)
+        allow(request).to receive(:get?)
+        allow(search_service).to receive(:fetch).and_raise(RSolr::Error::ConnectionRefused, request)
         get "/catalog/#{document_id}"
       end
 
