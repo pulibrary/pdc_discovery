@@ -1,12 +1,13 @@
 ---
 version: 2.1
+
 orbs:
   browser-tools: circleci/browser-tools@1.4.4
 
 executors:
   pdc_discovery_executor_build:
     docker:
-      - image: cimg/ruby:3.1.0-browsers
+      - image: cimg/ruby:3.3.2-browsers
         environment: &docker_env_default
           BUNDLER_VERSION: 2.3.11
           BUNDLE_JOBS: 3
@@ -14,9 +15,10 @@ executors:
           BUNDLE_PATH: vendor/bundle
           RAILS_ENV: test
     working_directory: ~/pdc_discovery
+
   pdc_discovery_executor:
     docker:
-      - image: cimg/ruby:3.1.0-browsers
+      - image: cimg/ruby:3.3.2-browsers
         environment:
           <<: *docker_env_default
           DB_HOST: localhost
@@ -45,7 +47,7 @@ commands:
       # Restore bundle cache
       - restore_cache:
           keys:
-            - pdc_discovery-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
+            - pdc_discovery-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}-dev
       - run:
           name: Update bundler
           command: |
@@ -55,7 +57,7 @@ commands:
           name: Install dependencies
           command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs 4 --retry 3
       - save_cache:
-          key: pdc_discovery-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
+          key: pdc_discovery-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}-dev
           paths:
             - ./vendor/bundle
   yarn_install:
