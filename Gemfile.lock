@@ -637,6 +637,7 @@ DEPENDENCIES
   rubocop-rspec
   sass-rails (>= 6)
   selenium-webdriver
+  strscan (>= 3.1.0)
   thor
   traject
   turbolinks (~> 5)
