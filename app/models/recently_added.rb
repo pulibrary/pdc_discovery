@@ -7,7 +7,7 @@ class RecentlyAdded
     solr_params = {
       q: '*:*',
       fq: 'migrated_bsi:false',
-      sort: 'pdc_created_at_dtsi desc'
+      sort: 'pdc_updated_at_dtsi desc'
     }
     response = solr.get('select', params: solr_params)
     entries = response["response"]["docs"].map { |doc| SolrDocument.new(doc) }
