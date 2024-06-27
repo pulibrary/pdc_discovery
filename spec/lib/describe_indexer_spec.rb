@@ -221,7 +221,7 @@ RSpec.describe DescribeIndexer do
           expect(response["response"]["numFound"]).to eq 2
           expect(response["response"]['docs'].first['author_tesim'].first).to eq("Wang, Yin")
           expect(response["response"]['docs'].last['author_tesim'].first).to eq("Schwartz, Jacob A.")
-          expect(response["response"]['docs'].first["issue_date_strict_ssi"]).to eq "2021-12-31"
+          expect(response["response"]['docs'].first["issue_date_strict_ssi"]).to eq "2021-12-30"
           expect(response["response"]['docs'].last["issue_date_strict_ssi"]).to eq "2022-01-01"
         end
       end
