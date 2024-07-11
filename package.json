@@ -10,7 +10,6 @@
     "lodash": "^4.17.21",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^7.8.2",
-    "postcss-tools": "^2.0.3",
     "sass": "^1.54.9",
     "turbolinks": "^5.2.0"
   },
