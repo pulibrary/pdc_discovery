@@ -36,4 +36,4 @@ jobs:
         with:
           # default `doc` as default of `.yardopts`
           # output-dir: 'doc'
-          ruby-version: '3.2.4'
+          ruby-version: '3.3.2'
