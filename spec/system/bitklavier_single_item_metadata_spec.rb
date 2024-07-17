@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'rails_helper'
 
 describe 'PDC Describe Bitklavier Single item page', type: :system, js: true do
   let(:rss_feed) { file_fixture("works.rss").read }

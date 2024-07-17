@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'rails_helper'
 
 describe 'Embargoed Document page', type: :system, js: true do
   context "when the Solr Document has an embargo date" do

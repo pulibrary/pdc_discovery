@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'rails_helper'
 
 describe 'Application landing page', type: :system do
   context "checking the page structure" do

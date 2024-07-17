@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'rails_helper'
+
 describe 'DataSpace research data indexing', type: :system do
   subject(:result) do
     indexer.map_record(record)

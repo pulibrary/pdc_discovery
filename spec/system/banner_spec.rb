@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'rails_helper'
+
 describe 'Website banner', type: :system, js: true do
   let(:community_fetch_with_expanded_metadata) { file_fixture("single_item.xml").read }
   let(:indexer) do

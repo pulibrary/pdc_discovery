@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'rails_helper'
 
 RSpec.describe 'Dynamic Sitemap', type: :system, js: false do
   let(:globus_fixtures) { File.read(File.join(fixture_path, 'globus_items.xml')) }
