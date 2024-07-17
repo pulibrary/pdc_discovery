@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "rails_helper"
+
 RSpec.describe DspaceIndexer do
   describe 'indexing a community from DataSpace' do
     let(:community_fetch_with_expanded_metadata) { File.read(File.join(fixture_path, 'astrophysical_sciences.xml')) }

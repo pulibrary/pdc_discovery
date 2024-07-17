@@ -22,6 +22,7 @@ module PdcDiscovery
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.eager_load_paths << Rails.root.join("app", "lib")
 
     config.pdc_discovery = config_for(:pdc_discovery)
   end

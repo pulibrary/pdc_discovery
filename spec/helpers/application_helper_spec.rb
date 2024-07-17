@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "rails_helper"
+
 RSpec.describe ApplicationHelper, type: :helper do
   describe "#render_field_row_search_link" do
     let(:title) { "Domain" }

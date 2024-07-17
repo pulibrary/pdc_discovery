@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "rails_helper"
+
 RSpec.describe DateNormalizer do
   let(:years) { ['2015'] }
   let(:months_and_years) { ['2015-08'] }
