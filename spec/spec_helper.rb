@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require "coveralls"
+Coveralls.wear!("rails")
+
+require "rails_helper"
+
 require 'rspec-solr'
-require 'coveralls'
-Coveralls.wear!
 
 # Adds the ability to retry flaky tests.
 # See https://github.com/NoRedInk/rspec-retry

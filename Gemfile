@@ -51,6 +51,7 @@ group :development, :test do
   gem "rspec-retry"
   gem 'rspec-solr'
   gem 'rubocop-rspec'
+  gem "simplecov", "~> 0.22"
   gem 'yard'
 end
 
@@ -68,7 +69,7 @@ end
 group :test do
   gem 'axe-core-rspec'
   gem 'capybara', '>= 3.26'
-  gem 'coveralls_reborn', '~> 0.24.0', require: false
+  gem "coveralls_reborn", require: false
   gem 'selenium-webdriver'
   gem 'webmock'
 end
