@@ -151,6 +151,11 @@ jobs:
       - run:
           name: Run Rspec
           command: COVERALLS_REPO_TOKEN=$COVERALLS_REPO_TOKEN bundle exec rspec
+      - store_artifacts:
+          path:
+            ~/pdc_discovery/coverage
+            ~/pdc_discovery/tmp/capybara
+            ~/pdc_discovery/tmp/screenshots
 
 workflows:
   version: 2
