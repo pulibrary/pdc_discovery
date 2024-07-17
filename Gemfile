@@ -44,6 +44,7 @@ gem 'whenever'
 group :development, :test do
   gem 'bixby'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'coveralls_reborn', '~> 0.28', require: false
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec'
@@ -51,6 +52,7 @@ group :development, :test do
   gem "rspec-retry"
   gem 'rspec-solr'
   gem 'rubocop-rspec'
+  gem 'simplecov', '~> 0.22'
   gem 'yard'
 end
 
@@ -68,7 +70,6 @@ end
 group :test do
   gem 'axe-core-rspec'
   gem 'capybara', '>= 3.26'
-  gem 'coveralls_reborn', '~> 0.24.0', require: false
   gem 'selenium-webdriver'
   gem 'webmock'
 end

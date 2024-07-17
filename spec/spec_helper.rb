@@ -4,6 +4,16 @@ require 'rails_helper'
 require 'rspec-solr'
 require 'coveralls'
 Coveralls.wear!
+require "simplecov"
+require "simplecov_json_formatter"
+SimpleCov.start "rails" do
+  multi = SimpleCov::Formatter::MultiFormatter.new([
+                                                     SimpleCov::Formatter::SimpleFormatter,
+                                                     SimpleCov::Formatter::HTMLFormatter,
+                                                     SimpleCov::Formatter::JSONFormatter
+                                                   ])
+  formatter(multi)
+end
 
 # Adds the ability to retry flaky tests.
 # See https://github.com/NoRedInk/rspec-retry

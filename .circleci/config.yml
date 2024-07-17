@@ -144,13 +144,15 @@ jobs:
           ruby --version
           node --version
           java --version
-      - run: bundle exec rake db:create
-      - run: bundle exec rake db:migrate
+      - run: bundle exec rake db:create RAILS_ENV=test
       - run: bundle exec rake db:migrate RAILS_ENV=test
       # Test
       - run:
           name: Run Rspec
           command: COVERALLS_REPO_TOKEN=$COVERALLS_REPO_TOKEN bundle exec rspec
+      - store_artifacts:
+          path:
+            ~/pdc_discovery/coverage
 
 workflows:
   version: 2
