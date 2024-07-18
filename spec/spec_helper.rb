@@ -11,10 +11,6 @@ SimpleCov.start do
   add_filter "app/channels"
   add_filter "app/jobs"
   add_filter "app/mailers"
-  # Remove this
-  add_filter "lib/traject/dataspace_research_data_config.rb"
-  # Remove this
-  add_filter "lib/traject/pdc_describe_indexing_config.rb"
 
   multi = SimpleCov::Formatter::MultiFormatter.new([
                                                      SimpleCov::Formatter::HTMLFormatter,
