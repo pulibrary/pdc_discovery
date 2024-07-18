@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'rails_helper'
 RSpec.describe SidebarHelper, type: :helper do
   describe "#render_sidebar_related_identifiers" do
     let(:text_id) { { "related_identifier" => "123", "relation_type" => "IsCitedBy" } }

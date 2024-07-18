@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'rails_helper'
 
 describe 'Item page with Globus download integration', type: :system, js: true do
   let(:globus_fixtures) { File.read(File.join(fixture_path, 'globus_items.xml')) }

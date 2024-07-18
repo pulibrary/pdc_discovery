@@ -1,9 +1,28 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
-require 'rspec-solr'
-require 'coveralls'
+ENV['RACK_ENV'] ||= 'test'
+
+require "coveralls"
 Coveralls.wear!
+
+require "simplecov"
+require "simplecov_json_formatter"
+SimpleCov.start do
+  add_filter "app/channels"
+  add_filter "app/jobs"
+  add_filter "app/mailers"
+
+  multi = SimpleCov::Formatter::MultiFormatter.new([
+                                                     SimpleCov::Formatter::HTMLFormatter,
+                                                     SimpleCov::Formatter::JSONFormatter
+                                                   ])
+  formatter(multi)
+end
+
+require "pry-byebug"
+require 'webmock/rspec'
+require 'axe-rspec'
+require 'rspec-solr'
 
 # Adds the ability to retry flaky tests.
 # See https://github.com/NoRedInk/rspec-retry
@@ -25,7 +44,6 @@ require "rspec/retry"
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
-  config.include Rails.application.routes.url_helpers
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
