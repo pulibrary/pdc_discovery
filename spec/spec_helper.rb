@@ -3,11 +3,11 @@
 ENV['RACK_ENV'] ||= 'test'
 
 require "coveralls"
-Coveralls.wear!("rails")
+Coveralls.wear!
 
 require "simplecov"
 require "simplecov_json_formatter"
-SimpleCov.start("rails") do
+SimpleCov.start do
   add_filter "app/channels"
   add_filter "app/jobs"
   add_filter "app/mailers"
