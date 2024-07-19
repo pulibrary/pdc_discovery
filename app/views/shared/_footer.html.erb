@@ -16,9 +16,11 @@
   </div>
   <div id="footer">
     <div class="content">
-      <%= link_to("Policy and Guidelines",home_policies_path) %>
-      <div class= "pul-accessible">
-        <%= link_to("Accessibility","https://accessibility.princeton.edu/help", target:"blank") %>
+      <div class= "footer-links">
+      <ul>
+        <li><%= link_to("Policy and Guidelines",home_policies_path) %></li>
+        <li><%= link_to("Accessibility","https://accessibility.princeton.edu/help", target:"blank", class:"pul-accessible") %></li>
+      </ul>
       </div>
       <%= link_to(image_tag("pul_logo_0.png", alt: "Princeton University Library"), "https://library.princeton.edu", target: "blank") %>
       <%= link_to(image_tag("footer_logo.png", alt: "Princeton Research Data Service"), "https://researchdata.princeton.edu", target: "blank") %>
