@@ -3,7 +3,7 @@
 require "httparty"
 require "json"
 
-# Fetches information about Communities (and collections)
+# Fetches information about DataSpace Communities (and collections)
 # and handles the nested structure of Communities.
 #
 # rubocop:disable Style/Next

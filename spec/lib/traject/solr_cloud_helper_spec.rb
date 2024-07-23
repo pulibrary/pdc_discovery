@@ -107,7 +107,7 @@ RSpec.describe SolrCloudHelper do
       expect(described_class.update_solr_alias!).to eq true
     end
 
-    it "??" do
+    it "updates solr alias" do
       expect(described_class.update_solr_alias!).to eq true
     end
   end
