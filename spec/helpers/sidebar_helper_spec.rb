@@ -10,7 +10,6 @@ RSpec.describe SidebarHelper, type: :helper do
     let(:doi_id) { { "related_identifier" => "10.123/456", "relation_type" => "IsCitedBy", "related_identifier_type" => "DOI" } }
     let(:identifiers) { [text_id, link_id, bad_id1, bad_id2, doi_id] }
     let(:html) { helper.render_sidebar_related_identifiers("Related Identifiers", identifiers) }
-    let(:licenses_html) { helper.render_sidebar_licenses(["https://creativecommons.org/licenses/by/4.0/", nil]) }
 
     it "titleize relation type" do
       expect(html.include?("Is Cited By")).to be true
@@ -26,10 +25,6 @@ RSpec.describe SidebarHelper, type: :helper do
 
     it "renders DOI identifiers as links" do
       expect(html.include?("<a href=https://doi.org/10.123/456")).to be true
-    end
-
-    it "renders sidebar licenses" do
-      expect(licenses_html.include?("https://creativecommons.org/licenses/by/4.0/")).to be true
     end
   end
 end

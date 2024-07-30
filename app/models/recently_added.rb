@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class RecentlyAdded
-  # @note No coverage for StandardError but depends on library
   def self.feed
     solr_url = Blacklight.default_configuration.connection_config[:url]
     solr = RSolr.connect(url: solr_url)

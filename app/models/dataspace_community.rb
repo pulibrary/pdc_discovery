@@ -36,7 +36,6 @@ class DataspaceCommunity
     end
   end
 
-  # @note Not covered in testing but not called
   def to_hash
     hash = {
       id: @id,
@@ -49,7 +48,6 @@ class DataspaceCommunity
     hash
   end
 
-  # @note Not covered in testing but not called
   def to_json(opts)
     to_hash.to_json(opts)
   end
