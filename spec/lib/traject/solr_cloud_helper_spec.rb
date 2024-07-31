@@ -33,6 +33,9 @@ RSpec.describe SolrCloudHelper do
         .to_return(status: 200, body: solr_aliases_1, headers: json_response)
       expect(described_class.current_collection_for_alias(alias_uri)).to eq "pdc-discovery-staging-1"
     end
+    it "updates solr alias" do
+      expect(described_class.update_solr_alias!).to eq true
+    end
   end
 
   describe "#alternate_collection_for_alias" do
