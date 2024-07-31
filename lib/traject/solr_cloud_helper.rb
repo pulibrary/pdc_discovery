@@ -130,6 +130,7 @@ class SolrCloudHelper
   # Set the solr_alias to point to the current writer collection
   def self.update_solr_alias!
     writer_collection = collection_writer_url.split("/").last
+
     alias_name = alias_uri.path.split("/").last
     if alias_name == writer_collection
       # Nothing to do

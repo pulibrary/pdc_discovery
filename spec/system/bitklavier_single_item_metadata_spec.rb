@@ -54,34 +54,34 @@ describe 'PDC Describe Bitklavier Single item page', type: :system, js: true do
   end
 
   # rubocop:disable Layout/LineLength
-  # xit "has expected citation information" do
-  #  visit '/catalog/78348'
-  # apa_citation = "Stotler, D., F. Scotti, R.E. Bell, A. Diallo, B.P. LeBlanc, M. Podesta, A.L. Roquemore, & P.W. Ross. (2016). Midplane neutral density profiles in the National Spherical Torus Experiment [Data set]. Princeton Plasma Physics Laboratory, Princeton University."
-  # expect(page).to have_content apa_citation
-  #  expect(page.html.include?('<button id="show-apa-citation-button"')).to be true
-  # expect(page.html.include?('<button id="show-bibtex-citation-button"')).to be true
-  # end
+  xit "has expected citation information" do
+    visit '/catalog/78348'
+    apa_citation = "Stotler, D., F. Scotti, R.E. Bell, A. Diallo, B.P. LeBlanc, M. Podesta, A.L. Roquemore, & P.W. Ross. (2016). Midplane neutral density profiles in the National Spherical Torus Experiment [Data set]. Princeton Plasma Physics Laboratory, Princeton University."
+    expect(page).to have_content apa_citation
+    expect(page.html.include?('<button id="show-apa-citation-button"')).to be true
+    expect(page.html.include?('<button id="show-bibtex-citation-button"')).to be true
+  end
   # rubocop:enable Layout/LineLength
 
-  # xit "has expected HTML SPAN element with COinS information" do
-  # visit '/catalog/78348'
-  # expect(page.html.include?('<span class="Z3988"')).to be true
-  # end
+  xit "has expected HTML SPAN element with COinS information" do
+    visit '/catalog/78348'
+    expect(page.html.include?('<span class="Z3988"')).to be true
+  end
 
-  # xit "renders pageviews and downloads stats" do
-  # visit '/catalog/78348'
-  # expect(page.html.include?('<span id="pageviews"')).to be true
-  #   expect(page.html.include?('<span id="downloads"')).to be true
-  # end
+  xit "renders pageviews and downloads stats" do
+    visit '/catalog/78348'
+    expect(page.html.include?('<span id="pageviews"')).to be true
+    expect(page.html.include?('<span id="downloads"')).to be true
+  end
 
   context "clickable links" do
     let(:globus_download_link) { "https://app.globus.org/file-manager?origin_id=dc43f461-0ca7-4203-848c-33a9fc00a464=%2Fvsj7-4j83%2F" }
 
-    # xit "renders hyperlinks in the abstract and description fields" do
-    # visit '/catalog/78348'
-    # expect(page.html.include?('<a href="http://torus.example.com">http://torus.example.com</a>')).to be true
-    # links = page.find("div.document-description").find_all("a").map { |a| a["href"] }
-    # expect(links.include?(globus_download_link)).to be true
-    # end
+    xit "renders hyperlinks in the abstract and description fields" do
+      visit '/catalog/78348'
+      expect(page.html.include?('<a href="http://torus.example.com">http://torus.example.com</a>')).to be true
+      links = page.find("div.document-description").find_all("a").map { |a| a["href"] }
+      expect(links.include?(globus_download_link)).to be true
+    end
   end
 end

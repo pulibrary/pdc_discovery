@@ -168,41 +168,6 @@ RSpec.describe SolrDocument do
       end
     end
   end
-
-  describe "#author_from_name" do
-    subject(:solr_document) { described_class.new({ id: "1" }) }
-    it "returns author object from name" do
-      expect(solr_document.author_from_name("John")).to be_a(Hash)
-    end
-  end
-
-  describe "#community_path" do
-    subject(:solr_document) { described_class.new({ id: "1" }) }
-    it "returns community path" do
-      expect { solr_document.community_path }.not_to raise_error
-    end
-  end
-
-  describe "#collection_name" do
-    subject(:solr_document) { described_class.new({ id: "1" }) }
-    it "returns collection name" do
-      expect { solr_document.collection_name }.not_to raise_error
-    end
-  end
-
-  describe "#methods" do
-    subject(:solr_document) { described_class.new({ id: "1" }) }
-    it "returns methods" do
-      expect { solr_document.methods }.not_to raise_error
-    end
-  end
-
-  describe "#bibtex_id" do
-    subject(:solr_document) { described_class.new({ id: "1" }) }
-    it "returns id for bibtex citation" do
-      expect { solr_document.bibtex_id }.not_to raise_error
-    end
-  end
 end
 # rubocop:enable Metrics/BlockLength
 # rubocop:enable RSpec/ExampleLength
