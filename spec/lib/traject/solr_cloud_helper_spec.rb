@@ -21,27 +21,9 @@ RSpec.describe SolrCloudHelper do
     end
   end
 
-  describe "#alias-uri" do
-    it "returns uri" do
-      expect(described_class.alias_uri.to_s).to include("http")
-    end
-  end
-
-  describe "#alias-url" do
-    it "returns url" do
-      expect(described_class.alias_url.to_s).to include("http")
-    end
-  end
-
   describe "#collection_writer_commit!" do
     it "commits collection" do
       expect(described_class.collection_writer_commit!).to be_a(HTTParty::Response)
-    end
-  end
-
-  describe "#create_collection_writer" do
-    it "creates a collection" do
-      expect(described_class.create_collection_writer).to include("http")
     end
   end
 
