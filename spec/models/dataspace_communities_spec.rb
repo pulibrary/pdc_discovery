@@ -4,6 +4,7 @@ require 'rails_helper'
 
 RSpec.describe DataspaceCommunities do
   let(:communities) { described_class.new('./spec/fixtures/files/dataspace_communities.json') }
+  let(:communities_blank) { described_class.new('') }
 
   describe "#find_by_id" do
     it "finds a root community" do

@@ -158,4 +158,20 @@ RSpec.describe "Catalog", type: :request do
       end
     end
   end
+
+  describe "#show" do
+    it "shows the catalog" do
+      document = SolrDocument.new(id: "doi-10-34770-r75s-9j74")
+      get "/catalog/#{document.id}", params: { format: "json" }
+      expect(response.status).to eq(200)
+    end
+  end
+
+  describe "#bibtex" do
+    it "returns citations" do
+      document = SolrDocument.new(id: "doi-10-34770-r75s-9j74")
+      get "/catalog/#{document.id}/bibtex", params: { id: document.id }
+      expect(response.status).to eq(200)
+    end
+  end
 end
