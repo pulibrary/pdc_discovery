@@ -40,6 +40,7 @@ Rails.application.routes.draw do
   get 'features' => 'home#features', as: :home_features
   get 'submit' => 'home#submit', as: :home_submit
   get 'policies' => 'home#policies', as: :home_policies
+  get 'contributors' => 'home#contributors', as: :home_contributors
 
   # Route all errors to the error controller
   get 'errors/not_found'
