@@ -8,4 +8,6 @@ class HomeController < ApplicationController
   def submit; end
 
   def policies; end
+
+  def contributors; end
 end
