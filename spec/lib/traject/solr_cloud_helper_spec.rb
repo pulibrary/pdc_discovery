@@ -21,11 +21,20 @@ RSpec.describe SolrCloudHelper do
     end
   end
 
+  describe "#collection_writer_commit!" do
+    it "commits collection" do
+      expect(described_class.collection_writer_commit!).to be_a(HTTParty::Response)
+    end
+  end
+
   describe "#current_collection_for_alias" do
     it "returns the collection for the alias" do
       stub_request(:get, "http://fake-solr/solr/admin/collections?action=LISTALIASES")
         .to_return(status: 200, body: solr_aliases_1, headers: json_response)
       expect(described_class.current_collection_for_alias(alias_uri)).to eq "pdc-discovery-staging-1"
+    end
+    it "updates solr alias" do
+      expect(described_class.update_solr_alias!).to eq true
     end
   end
 

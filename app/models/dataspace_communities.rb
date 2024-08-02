@@ -112,6 +112,7 @@ class DataspaceCommunities
 
   # Returns the ID of the root community for a given community.
   # @param id [<Int>] ID of the community.
+  # @note No testing coverage but not called and private
   def find_root(id)
     find_path_ids(id, []).last
   end
