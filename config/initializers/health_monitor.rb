@@ -3,7 +3,9 @@ Rails.application.config.after_initialize do
   HealthMonitor.configure do |config|
     config.cache
 
-    config.add_custom_provider(SolrStatus)
+    config.solr.configure do |c|
+      c.url = Blacklight.default_index.connection.uri.to_s
+    end
 
     # Make this health check available at /health
     config.path = :health
