@@ -6,9 +6,4 @@ RSpec.describe "Static Pages", type: :request do
     get "/about"
     expect(response).to have_http_status(:success)
   end
-
-  it "has a how to submit page" do
-    get "/submit"
-    expect(response).to have_http_status(:success)
-  end
 end

@@ -27,7 +27,7 @@ describe 'Application landing page', type: :system do
       visit '/'
       expect(page).to have_link "Home", href: "/"
       expect(page).to have_link "About", href: "/about"
-      expect(page).to have_link "How to Submit", href: "/submit"
+      expect(page).to have_link "How to Submit", href: "https://datacommons.princeton.edu/describe/"
       expect(page).to have_link "Accessibility", href: "https://accessibility.princeton.edu/help"
     end
   end

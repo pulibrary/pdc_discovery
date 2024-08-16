@@ -5,8 +5,6 @@ class HomeController < ApplicationController
 
   def features; end
 
-  def submit; end
-
   def policies; end
 
   def contributors; end
