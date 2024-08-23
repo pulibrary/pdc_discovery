@@ -5,6 +5,7 @@ Rails.application.config.after_initialize do
 
     config.solr.configure do |c|
       c.url = Blacklight.default_index.connection.uri.to_s
+      c.collection = Blacklight.default_index.connection.uri.path.split("/").last
     end
 
     # Make this health check available at /health
