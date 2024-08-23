@@ -13,6 +13,8 @@ class HomeController < ApplicationController
 
   # Called by the "Contact Us" modal form
   def contact_us
+    # byebug
     # TODO: email to prds@princeton.edu
+    render json: {}
   end
 end

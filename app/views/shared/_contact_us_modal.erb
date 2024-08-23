@@ -1,0 +1,39 @@
+<div class="modal fade" id="contactUsModal" tabindex="-1" role="dialog" aria-labelledby="contactUsModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactUsModalLabel">Contact Us</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form id="contact-us-form">
+        <div class="modal-body">
+            <!-- TODO: Add captcha -->
+            Name:* <input id="name" name="name" placeholder="Your name"/><br/>
+            Email:* <input id="email" name="email" placeholder="Your email address"/><br/>
+            Comment:* <textarea id="comment" name="comment" rows="6" cols="44" placeholder="Your comment"></textarea><br/>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button id="contact-us-submit" type="button" class="btn btn-primary">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  $("#contact-us-submit").on("click", function() {
+    var form = $("#contact-us-form");
+    $.ajax({
+        type: "POST",
+        url: "<%= home_contact_us_path() %>",
+        data: form.serialize(),
+        success: function(data)
+        {
+          $('#contactUsModal').modal('hide');
+        }
+    });
+  });
+</script>
