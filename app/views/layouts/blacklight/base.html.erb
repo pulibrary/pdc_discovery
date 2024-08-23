@@ -56,6 +56,12 @@
     </main>
 
     <%= render partial: 'shared/footer' %>
+
+    <!-- hector: Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactUsModal">
+      Contact Us
+    </button>
+    <%= render partial: 'shared/contact_us_modal' %>
     <%= render partial: 'shared/modal' %>
 
 <script>

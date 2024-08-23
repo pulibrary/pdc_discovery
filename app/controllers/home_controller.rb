@@ -10,4 +10,9 @@ class HomeController < ApplicationController
   def policies; end
 
   def contributors; end
+
+  # Called by the "Contact Us" modal form
+  def contact_us
+    # TODO: email to prds@princeton.edu
+  end
 end
