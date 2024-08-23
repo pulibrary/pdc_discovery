@@ -1,3 +1,11 @@
+<style>
+  .contact-us-label {
+    margin-bottom: 0px;
+  }
+  .contact-us-input {
+    margin-bottom: 10px;
+  }
+</style>
 <div class="modal fade" id="contactUsModal" tabindex="-1" role="dialog" aria-labelledby="contactUsModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -7,12 +15,24 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form id="contact-us-form">
+      <form id="contact-us-form" action="<%= home_contact_us_path() %>" method="POST">
         <div class="modal-body">
-            <!-- TODO: Add captcha -->
-            Name:* <input id="name" name="name" placeholder="Your name"/><br/>
-            Email:* <input id="email" name="email" placeholder="Your email address"/><br/>
-            Comment:* <textarea id="comment" name="comment" rows="6" cols="44" placeholder="Your comment"></textarea><br/>
+            <div style="height: 0px;">
+              <input id="feedback" name="feedback" class="invisible"/>
+            </div>
+            <%= token_tag nil %>
+
+            <span title="This field is required">*</span>
+            <label for="name" class="contact-us-label">Name</label><br/>
+            <input id="name" name="name" class="contact-us-input" placeholder="Your name" required/><br/>
+
+            <span title="This field is required">*</span>
+            <label for="email" class="contact-us-label">Email</label><br/>
+            <input id="email" name="email" class="contact-us-input" placeholder="Your email address" type="email" required/><br/>
+
+            <span title="This field is required">*</span>
+            <label for="comment" class="contact-us-label">Comment</label>
+            <textarea id="comment" name="comment" class="contact-us-input" rows="6" cols="44" placeholder="Your comment" required></textarea><br/>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -25,15 +45,9 @@
 
 <script>
   $("#contact-us-submit").on("click", function() {
-    var form = $("#contact-us-form");
-    $.ajax({
-        type: "POST",
-        url: "<%= home_contact_us_path() %>",
-        data: form.serialize(),
-        success: function(data)
-        {
-          $('#contactUsModal').modal('hide');
-        }
-    });
+    var form = $("#contact-us-form")[0];
+    if (form.reportValidity() === true) {
+      form.submit();
+    }
   });
 </script>

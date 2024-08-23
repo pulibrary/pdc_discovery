@@ -11,8 +11,17 @@ class HomeController < ApplicationController
 
   # Called by the "Contact Us" modal form
   def contact_us
-    # byebug
-    # TODO: email to prds@princeton.edu
-    render json: {}
+    render json: {} if is_bot?
+
+    # TODO: send email to prds@princeton.edu
+    flash.alert = "Thank you for your message."
+    redirect_to request.env["HTTP_REFERER"]
   end
+
+  private
+
+    def is_bot?
+      # This field is invisible and therefore only bots populate it
+      params[:feedback] != ""
+    end
 end
