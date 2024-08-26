@@ -55,4 +55,18 @@ describe 'Application landing page', type: :system do
       expect(first_title).to eq "Lower Hybrid Drift Waves During Guide Field Reconnection"
     end
   end
+
+  context "Contact Us" do
+    it "sends emails", js: true do
+      visit "/"
+      click_on "Contact Us"
+      fill_in "feedback", with: "ha ha ha"
+      fill_in "name", with: "somebody's name"
+      fill_in "email", with: "somebody@gmail.com"
+      fill_in "comment", with: "this is a message"
+      click_on "Send"
+      expect(page.html.include?("We have sent your message to our team")).to be true
+      # TODO: Detect that email was sent
+    end
+  end
 end
