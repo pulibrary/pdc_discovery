@@ -60,7 +60,6 @@ describe 'Application landing page', type: :system do
     it "sends emails", js: true do
       visit "/"
       click_on "Contact Us"
-      fill_in "feedback", with: "ha ha ha"
       fill_in "name", with: "somebody's name"
       fill_in "email", with: "somebody@gmail.com"
       fill_in "comment", with: "this is a message"
