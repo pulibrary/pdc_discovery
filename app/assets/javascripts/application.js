@@ -14,3 +14,18 @@
 // For blacklight_range_limit built-in JS, if you don't want it you don't need
 // this:
 //= require 'blacklight_range_limit'
+
+$(function() {
+  // Force focus to the first input box
+  $("#contactUsModal").on("shown.bs.modal", function (e) {
+    $("#name").focus();
+  });
+
+  // Validate form elements before submitting
+  $("#contact-us-submit").on("click", function() {
+    var form = $("#contact-us-form")[0];
+    if (form.reportValidity() === true) {
+      form.submit();
+    }
+  });
+});
