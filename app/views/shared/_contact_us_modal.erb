@@ -1,0 +1,36 @@
+<div class="modal fade" id="contactUsModal" tabindex="-1" role="dialog" aria-labelledby="contactUsModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactUsModalLabel">Contact Us</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form id="contact-us-form" action="<%= home_contact_us_path() %>" method="POST">
+        <div class="modal-body">
+            <div style="height: 0px;">
+              <input id="feedback" name="feedback" class="invisible"/>
+            </div>
+            <%= token_tag nil %>
+
+            <span title="This field is required">*</span>
+            <label for="name" class="contact-us-label">Name</label><br/>
+            <input id="name" name="name" class="contact-us-input" placeholder="Your name" required/><br/>
+
+            <span title="This field is required">*</span>
+            <label for="email" class="contact-us-label">Email</label><br/>
+            <input id="email" name="email" class="contact-us-input" placeholder="Your email address" type="email" required/><br/>
+
+            <span title="This field is required">*</span>
+            <label for="comment" class="contact-us-label">Comment</label>
+            <textarea id="comment" name="comment" class="contact-us-input" rows="6" cols="44" placeholder="Your comment" required></textarea><br/>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button id="contact-us-submit" type="button" class="btn btn-primary">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

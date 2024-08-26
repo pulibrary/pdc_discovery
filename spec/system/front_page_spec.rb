@@ -55,4 +55,24 @@ describe 'Application landing page', type: :system do
       expect(first_title).to eq "Lower Hybrid Drift Waves During Guide Field Reconnection"
     end
   end
+
+  context "Contact Us" do
+    let(:message_delivery) { instance_double(ActionMailer::Parameterized::MessageDelivery) }
+
+    before do
+      allow(message_delivery).to receive(:deliver_later)
+      allow(ContactUsMailer).to receive(:build_message).and_return(message_delivery)
+    end
+
+    it "sends emails", js: true do
+      visit "/"
+      click_on "Contact Us"
+      fill_in "name", with: "somebody's name"
+      fill_in "email", with: "somebody@gmail.com"
+      fill_in "comment", with: "this is a message"
+      click_on "Send"
+      expect(page.html.include?("We have sent your message to our team")).to be true
+      expect(message_delivery).to have_received(:deliver_later)
+    end
+  end
 end
