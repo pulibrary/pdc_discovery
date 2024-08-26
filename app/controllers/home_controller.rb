@@ -15,8 +15,11 @@ class HomeController < ApplicationController
       # Pretend everything is hunkydory but do nothing
       render json: {}
     else
-      # TODO: send email to prds@princeton.edu
-      # Reload the page and tell the user we've sent their message
+      # Send the email...
+      mail = ContactUsMailer.build_message(contact_info)
+      mail.deliver_later(wait: 10.seconds)
+
+      # ...reload the page, and tell the user we've sent their message
       flash.alert = "We have sent your message to our team."
       redirect_to request.env["HTTP_REFERER"] || "/"
     end
@@ -28,5 +31,13 @@ class HomeController < ApplicationController
     # The feedback field is invisible therefore if it's submitted in the request
     # we can safely assume it was a bot.
     params[:feedback].present?
+  end
+
+  def contact_info
+    {
+      name: params[:name],
+      email: params[:email],
+      message: params[:comment]
+    }
   end
 end

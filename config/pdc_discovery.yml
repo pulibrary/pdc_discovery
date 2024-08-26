@@ -4,6 +4,7 @@ default: &default
   index_pdc_describe: true
   plausible_site_id: <%= "pdc-discovery-staging.princeton.edu" %>
   globus_collection_uuid: <%= "7c83af0e-d88c-4f39-96b5-eeb302d04070" %>
+  contact_email: "prds@princeton.edu"
 
 development:
   <<: *default
