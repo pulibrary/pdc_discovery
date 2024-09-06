@@ -157,13 +157,40 @@ RSpec.describe "Catalog", type: :request do
         expect(response.status).to eq(200)
       end
     end
-  end
 
-  describe "#show" do
-    it "shows the catalog" do
-      document = SolrDocument.new(id: "doi-10-34770-r75s-9j74")
-      get "/catalog/#{document.id}", params: { format: "json" }
-      expect(response.status).to eq(200)
+    context "when the client is a bot" do
+      let(:headers) do
+        {
+          "User-Agent": "ChatGPT-User"
+        }
+      end
+      let(:uris) { ["http://localhost/test"] }
+      let(:document) { SolrDocument.new(id: document_id, globus_uri_ssi: uris) }
+
+      before do
+        allow(search_service).to receive(:fetch).and_return([nil, document])
+        get "/catalog/#{document_id}", headers: headers
+      end
+
+      it "does not display the Globus download button" do
+        expect(response.status).to eq(200)
+        expect(response.body).not_to include("Download from Globus")
+      end
+    end
+
+    context "when the client is not a bot" do
+      let(:uris) { ["http://localhost/test"] }
+      let(:document) { SolrDocument.new(id: document_id, globus_uri_ssi: uris) }
+
+      before do
+        allow(search_service).to receive(:fetch).and_return([nil, document])
+        get "/catalog/#{document_id}"
+      end
+
+      it "does display the Globus download button" do
+        expect(response.status).to eq(200)
+        expect(response.body).to include("Download from Globus")
+      end
     end
   end
 
