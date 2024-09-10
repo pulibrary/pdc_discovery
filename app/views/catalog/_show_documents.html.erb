@@ -52,8 +52,6 @@
 
         <% if !request.bot? %>
           <%= render_globus_download(@document.globus_uri, @document.id) %>
-        <% else %>
-          <div>foo2</div>
         <% end %>
       </div>
     </div>
