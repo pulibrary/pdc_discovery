@@ -38,6 +38,7 @@ gem 'turbolinks', '~> 5'
 gem 'twitter-typeahead-rails', '0.11.1.pre.corejavascript'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'vite_rails'
+gem 'voight_kampff', require: 'voight_kampff/rails'
 gem 'whenever'
 
 group :development, :test do
