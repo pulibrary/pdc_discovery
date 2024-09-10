@@ -161,7 +161,7 @@ RSpec.describe "Catalog", type: :request do
     context "when the client is a bot" do
       let(:headers) do
         {
-          "User-Agent": "Bot"
+          "User-Agent": "ChatGPT-User"
         }
       end
       let(:uris) { ["http://localhost/test"] }
@@ -192,46 +192,47 @@ RSpec.describe "Catalog", type: :request do
         expect(response.body).to include("Download from Globus")
       end
     end
-  end
 
-  describe "#show" do
-    let(:document) { SolrDocument.new(id: "doi-10-34770-r75s-9j74") }
+    describe "#show" do
+      let(:document) { SolrDocument.new(id: "doi-10-34770-r75s-9j74") }
 
-    it "shows the catalog" do
-      get "/catalog/#{document.id}", params: { format: "json" }
-      expect(response.status).to eq(200)
-    end
-
-    context "when the client is a bot" do
-      let(:headers) do
-        {
-          "User-Agent": "Bot"
-        }
-      end
-
-      before do
-        allow(search_service).to receive(:fetch).and_raise(Blacklight::Exceptions::ECONNREFUSED)
-        allow(search_service).to receive(:fetch).and_return([nil, document])
-        get "/catalog/#{document_id}", headers: headers
-      end
-
-      it "does not display the Globus download button" do
+      it "shows the catalog" do
+        get "/catalog/#{document.id}", params: { format: "json" }
         expect(response.status).to eq(200)
       end
-    end
 
-    context "when the client is not a bot" do
-      let(:headers) do
-        {}
+      context "when the client is a bot" do
+        let(:headers) do
+          {
+            "User-Agent": "Bot"
+          }
+        end
+
+        before do
+          allow(search_service).to receive(:fetch).and_return([nil, document])
+          get "/catalog/#{document_id}", headers: headers
+        end
+
+        it "does not display the Globus download button" do
+          expect(response.status).to eq(200)
+          expect(response.body).not_to include("Download from Globus")
+        end
       end
 
-      before do
-        get "/catalog/#{document.id}", headers: headers
-      end
+      context "when the client is not a bot" do
+        let(:headers) do
+          {}
+        end
 
-      it "does not display the Globus download button" do
-        expect(response.status).to eq(302)
-        expect(response.body).not_to have_content "Download from Globus"
+        before do
+          allow(search_service).to receive(:fetch).and_return([nil, document])
+          get "/catalog/#{document.id}"
+        end
+
+        it "does displays the Globus download button" do
+          expect(response.status).to eq(200)
+          expect(response.body).to include("Download from Globus")
+        end
       end
     end
   end
