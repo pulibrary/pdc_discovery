@@ -164,10 +164,10 @@ RSpec.describe "Catalog", type: :request do
           "User-Agent": "Bot"
         }
       end
-      let(:document) { SolrDocument.new(id: document_id) }
+      let(:uris) { ["http://localhost/test"] }
+      let(:document) { SolrDocument.new(id: document_id, globus_uri_ssi: uris) }
 
       before do
-        allow(search_service).to receive(:fetch).and_raise(Blacklight::Exceptions::ECONNREFUSED)
         allow(search_service).to receive(:fetch).and_return([nil, document])
         get "/catalog/#{document_id}", headers: headers
       end
@@ -179,10 +179,10 @@ RSpec.describe "Catalog", type: :request do
     end
 
     context "when the client is not a bot" do
-      let(:document) { SolrDocument.new(id: document_id) }
+      let(:uris) { ["http://localhost/test"] }
+      let(:document) { SolrDocument.new(id: document_id, globus_uri_ssi: uris) }
 
       before do
-        allow(search_service).to receive(:fetch).and_raise(Blacklight::Exceptions::ECONNREFUSED)
         allow(search_service).to receive(:fetch).and_return([nil, document])
         get "/catalog/#{document_id}"
       end

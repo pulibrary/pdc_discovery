@@ -50,7 +50,9 @@
 
         <!-- End of file download table -->
 
-        <%= render_globus_download(@document.globus_uri, @document.id) %>
+        <% if !request.bot? %>
+          <%= render_globus_download(@document.globus_uri, @document.id) %>
+        <% end %>
       </div>
     </div>
   </div>
