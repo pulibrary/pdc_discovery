@@ -58,7 +58,7 @@ describe 'Show PDC Page', type: :system, js: true do
     # "readme.txt" is the smallest file and so now it is first
     expect(first_filename_spot).to eq("readme.txt")
   end
-  
+
   context "when crawler visits the site" do
     before do
       allow_any_instance_of(CatalogController).to receive(:agent_is_crawler?).and_return(true)

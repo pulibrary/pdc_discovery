@@ -253,13 +253,12 @@ class CatalogController < ApplicationController
       :a # this is in the search parameters becuase the search bar is shown on the error page
     ]
 
-    # Sets up Blacklight crawler detection 
+    # Sets up Blacklight crawler detection
     config.crawler_detector = lambda { |request|
       return true if request.env['HTTP_USER_AGENT'].blank?
       request.bot?
     }
   end
-  
 
   def show
     @render_links = !agent_is_crawler?
