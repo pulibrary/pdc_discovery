@@ -30,7 +30,11 @@
                   <td>
                     <span>
                       <i class="bi bi-file-arrow-down"></i>
-                      <a href="<%= file.download_url %>" class="documents-file-link" target="_blank" title="<%= file.full_path %>"><%= truncate(file.full_path, length: 60) %></a>
+                      <% if @render_links%>
+                        <a href="<%= file.download_url %>" class="documents-file-link" target="_blank" title="<%= file.full_path %>"><%= truncate(file.full_path, length: 60) %></a>
+                      <% else %>
+                        <%= truncate(file.full_path, length: 60) %>
+                      <% end %>
                     </span>
                   </td>
                   <% if @document.data_source == "dataspace" %>

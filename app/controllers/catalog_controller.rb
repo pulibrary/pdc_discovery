@@ -252,14 +252,17 @@ class CatalogController < ApplicationController
       :doi, :ark, :id,
       :a # this is in the search parameters becuase the search bar is shown on the error page
     ]
+
+    # Sets up Blacklight crawler detection 
+    config.crawler_detector = lambda { |request|
+      return true if request.env['HTTP_USER_AGENT'].blank?
+      request.bot?
+    }
   end
+  
 
   def show
-    byebug
-    if agent_is_crawler? 
-      render plain: "I'm like everyone else."
-      return
-    end
+    @render_links = !agent_is_crawler?
     super
     if params["format"] == "json"
       render json: DocumentExport.new(@document)
