@@ -61,14 +61,11 @@ describe 'Show PDC Page', type: :system, js: true do
   
   context "when crawler visits the site" do
     before do
-      # allow_any_instance_of(CatalogController).to receive(:agent_is_crawler?).and_return(true)
+      allow_any_instance_of(CatalogController).to receive(:agent_is_crawler?).and_return(true)
     end
     it 'does not display links when there is a crawler' do
       visit '/catalog/doi-10-34770-bm4s-t361'
-      byebug
-      # expect(page).to have_link(href: 'https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig11b_readme.hdf')
-      expect(page).to have_link(href: 'Fig11b_readme.hdf')
-      # expect(third_filename_spot).to eq("Fig10a.hdf")
+      expect(page).to_not have_link(href: 'https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig11b_readme.hdf')
     end
   end
 end
