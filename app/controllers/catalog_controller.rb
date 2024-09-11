@@ -255,7 +255,12 @@ class CatalogController < ApplicationController
   end
 
   def show
-    super()
+    byebug
+    if agent_is_crawler? 
+      render plain: "I'm like everyone else."
+      return
+    end
+    super
     if params["format"] == "json"
       render json: DocumentExport.new(@document)
     end
