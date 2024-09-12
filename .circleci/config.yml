@@ -3,6 +3,7 @@ version: 2.1
 
 orbs:
   browser-tools: circleci/browser-tools@1.4.4
+  coveralls: coveralls/coveralls@2.2.1
 
 executors:
   pdc_discovery_executor_build:
@@ -149,10 +150,11 @@ jobs:
       # Test
       - run:
           name: Run Rspec
-          command: COVERALLS_REPO_TOKEN=$COVERALLS_REPO_TOKEN bundle exec rspec
+          command: bundle exec rspec
       - store_artifacts:
           path:
             ~/pdc_discovery/coverage
+      - coveralls/upload
 
 workflows:
   version: 2
