@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   match "/doi/*doi", via: :get, to: "catalog#resolve_doi", as: :resolve_doi, format: false
   match "/ark/*ark", via: :get, to: "catalog#resolve_ark", as: :resolve_ark, format: false
 
-  resources :bookmarks do
+  resources :bookmarks, only: [:index, :update, :create, :destroy] do
     concerns :exportable
 
     collection do
