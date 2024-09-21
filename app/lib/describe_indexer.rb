@@ -61,6 +61,17 @@ class DescribeIndexer
     traject_indexer.complete
   end
 
+  def client
+    @client ||= Blacklight.default_index.connection
+  end
+
+  def delete!(query:)
+    client.delete_by_query(query)
+    client.commit
+    client.optimize
+    client
+  end
+
 private
 
   def rss_http_response

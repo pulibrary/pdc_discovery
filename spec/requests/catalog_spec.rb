@@ -7,8 +7,13 @@ RSpec.describe "Catalog", type: :request do
     let(:indexer) do
       DspaceIndexer.new(dspace_fixtures)
     end
+
     before do
       indexer.index
+    end
+
+    after do
+      indexer.delete!(query: "*:*")
     end
 
     describe "GET /doi/:doi" do
@@ -69,8 +74,7 @@ RSpec.describe "Catalog", type: :request do
       let(:indexer) { DescribeIndexer.new(rss_url: rss_url_string) }
 
       before do
-        Blacklight.default_index.connection.delete_by_query("*:*")
-        Blacklight.default_index.connection.commit
+        indexer.delete!(query: "*:*")
         stub_request(:get, "https://pdc-describe-prod.princeton.edu/describe/works.rss")
           .to_return(status: 200, body: rss_feed)
         stub_request(:get, "https://pdc-describe-prod.princeton.edu/describe/works/6.json")
@@ -86,6 +90,22 @@ RSpec.describe "Catalog", type: :request do
         expect(response).to redirect_to(solr_document_path(id: document_id))
         follow_redirect!
         expect(response.body).to include("test title")
+      end
+
+      describe "#show" do
+        it "shows the catalog" do
+          document = SolrDocument.new(id: "doi-10-34770-r75s-9j74")
+          get "/catalog/#{document.id}", params: { format: "json" }
+          expect(response.status).to eq(200)
+        end
+      end
+
+      describe "#bibtex" do
+        it "returns citations" do
+          document = SolrDocument.new(id: "doi-10-34770-r75s-9j74")
+          get "/catalog/#{document.id}/bibtex", params: { id: document.id }
+          expect(response.status).to eq(200)
+        end
       end
     end
   end

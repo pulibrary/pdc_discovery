@@ -49,3 +49,5 @@ node_modules
 # https://vitejs.dev/guide/env-and-mode.html#env-files
 *.local
 .yardoc/
+
+spec/fixtures/migration/dspace_migration.csv
