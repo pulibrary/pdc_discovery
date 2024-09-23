@@ -41,37 +41,39 @@
         "name": "<%= @document.title %>",
         "author": 
           [
-          <% @document.authors.each do |author| %>
+          <% @document.authors_ordered.each do |author| %>
             { 
-              "name": "<%= author %>"
-              "affiliation":
-              "identifier": 
-            }
+              "name": "<%= author.value %>"
+              "affiliation": "<%= author.affiliation_name%>"
+              "identifier": "<%= author.orcid%>"
+            },
             <% end %>
           ],
-          "datePublished": "<%= @document.date_created %>",
-          "dateModified": "<%= @document.date_modified %>",
-          "version": "", 
+          "datePublished": "2024-09-23",
+          "dateModified": "2024-09-23",
+          "version": "1", 
           "description": "<%= @document.description %>",
           "keywords": 
-          [
-          ],
+          <%= @document.subject %>,
           "citation:": 
           [
-            <%# "<%= @document.citation % >", %>
-            "",
+            "<%= @document.citation.to_s('apa')%>",
           ],
           "schemaVersion": "https://schema.org/version/28.0",
           "license": 
-          {
-            "@type": "Dataset",
-            "text": "",
-            "url": "",
-          },
+          [
+            <% @document.rights_enhanced.each do |rights| %>
+            {
+              "@type": "Dataset",
+              "text": "<%= rights['identifier']%>",
+              "url": "<%= rights['uri']%>",
+            },
+            <% end %>
+          ]
           "provider": 
           {
               "@type": "Organization",
-              "name": "PDC Discovery"
+              "name": "Princeton University"
           }
       }
       <% end %>
