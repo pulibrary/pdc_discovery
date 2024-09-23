@@ -263,7 +263,7 @@ class CatalogController < ApplicationController
   def show
     @render_links = !agent_is_crawler?
     super
-    byebug
+    # byebug
     if params["format"] == "json"
       render json: DocumentExport.new(@document)
     end
