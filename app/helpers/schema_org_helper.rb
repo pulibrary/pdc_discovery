@@ -11,14 +11,14 @@ module SchemaOrgHelper
 
   def authors_helper(authors)
     authors_json = authors.each.map do |author|
-      json_str = "\n\t\t\t{\n\t\t\t" + '"name": ' + author.value 
+      json_str = "\n\t\t\t{\n\t\t\t" + '"name": ' + '"' + author.value + '"'
 
       if author.affiliation_name.present?
-        json_str += "\n\t\t\t" + '"affiliation": ' + author.affiliation_name 
+        json_str += "\n\t\t\t" + '"affiliation": ' + '"' + author.affiliation_name + '"'
       end
       
       if author.orcid.present?
-        json_str += "\n\t\t\t" + '"identifier": ' + author.orcid
+        json_str += "\n\t\t\t" + '"identifier": ' + '"' + author.orcid + '"'
       end
 
       json_str += "\n\t\t\t}"
@@ -31,9 +31,9 @@ module SchemaOrgHelper
   def licenses_helper(licenses)
     licenses_json = licenses.each.map do |license|
       "{\n" + 
-      "\t\t\t" + "@type: " + "Dataset" + ",\n" + 
-      "\t\t\t" + "text: " + license['identifier'] + ",\n" + 
-      "\t\t\t" + "url: " + license['uri'] + 
+      "\t\t\t" + '"@type:" ' + '"Dataset"' + ",\n" + 
+      "\t\t\t" + '"text:" ' + '"' + license['identifier'] + '"' + ",\n" + 
+      "\t\t\t" + '"url:" ' + '"' + license['uri'] + '"' + 
       "}"
     end
     html = "[" + licenses_json.join(",") + "]"
