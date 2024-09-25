@@ -50,16 +50,7 @@
             "<%= @document.citation.to_s('apa')%>",
           ],
           "schemaVersion": "https://schema.org/version/28.0",
-          "license":
-          [
-            <% @document.rights_enhanced.each do |rights| %>
-            {
-              "@type": "Dataset",
-              "text": "<%= rights['identifier']%>",
-              "url": "<%= rights['uri']%>",
-            },
-            <% end %>
-          ]
+          "license": <%= licenses_helper(@document.rights_enhanced) %>,
           "provider":
           {
               "@type": "Organization",
