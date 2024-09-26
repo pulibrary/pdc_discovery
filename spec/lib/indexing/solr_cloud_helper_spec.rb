@@ -1,7 +1,8 @@
 # frozen_string_literal: true
-require "./lib/traject/solr_cloud_helper.rb"
 
-RSpec.describe SolrCloudHelper do
+require 'rails_helper'
+
+RSpec.describe Indexing::SolrCloudHelper do
   let(:json_response) { { 'content-type' => 'application/json; charset=utf-8' } }
   let(:alias_uri) { URI::HTTP.build(schema: "http", host: "fake-solr", path: "/solr/pdc-discovery-staging") }
   let(:alias_unknown_uri) { URI::HTTP.build(schema: "http", host: "fake-solr", path: "/solr/alias-unknown") }

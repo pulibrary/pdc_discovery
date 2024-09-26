@@ -24,7 +24,7 @@ class DescribeIndexer
   end
 
   def datacite_indexing_config_path
-    pathname = ::Rails.root.join('lib', 'traject', "pdc_describe_indexing_config.rb")
+    pathname = ::Rails.root.join('config', 'traject', "pdc_describe_indexing_config.rb")
     pathname.to_s
   end
 

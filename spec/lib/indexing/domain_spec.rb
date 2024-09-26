@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require "./lib/traject/domain.rb"
+require 'rails_helper'
 
-RSpec.describe Domain do
+RSpec.describe Indexing::Domain do
   describe '#from_community' do
     it "handles unknown communities" do
       expect(described_class.from_community("nope")).to be nil
