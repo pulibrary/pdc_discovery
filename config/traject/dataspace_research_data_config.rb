@@ -4,12 +4,10 @@ require 'logger'
 require 'traject'
 require 'traject/nokogiri_reader'
 require 'blacklight'
-require_relative './domain'
-require_relative './import_helper'
-require_relative './solr_cloud_helper'
+require 'indexing'
 
 settings do
-  provide 'solr.url', SolrCloudHelper.collection_writer_url
+  provide 'solr.url', Indexing::SolrCloudHelper.collection_writer_url
   provide 'reader_class_name', 'Traject::NokogiriReader'
   provide 'solr_writer.commit_on_close', 'true'
   provide 'repository', ENV['REPOSITORY_ID']
@@ -20,7 +18,7 @@ end
 
 each_record do |record, context|
   uris = record.xpath("/item/metadata/key[text()='dc.identifier.uri']/../value")
-  next unless ImportHelper.pdc_describe_match?(settings["solr.url"], uris)
+  next unless Indexing::ImportHelper.pdc_describe_match?(settings["solr.url"], uris)
   id = record.xpath('/item/id')
   Rails.logger.info "Skipping DataSpace record #{id} - already imported from PDC Describe"
   context.skip!("Skipping DataSpace record #{id} - already imported from PDC Describe")
@@ -145,7 +143,7 @@ to_field 'alternative_title_tesim', extract_xpath("/item/metadata/key[text()='dc
 # is multi-value because PDC Describe supports more than one domain.
 to_field 'domain_ssim' do |record, accumulator, _context|
   communities = record.xpath("/item/parentCommunityList/type[text()='community']/../name").map(&:text)
-  domains = Domain.from_communities(communities)
+  domains = Indexing::Domain.from_communities(communities)
   if domains.count > 1
     id = record.xpath('/item/id/text()')
     logger.warn "Multiple domains detected for record: #{id}, using only the first one."

@@ -4,13 +4,12 @@ require 'logger'
 require 'traject'
 require 'traject/nokogiri_reader'
 require 'blacklight'
-require_relative './import_helper'
-require_relative './solr_cloud_helper'
+require 'indexing'
 
 ##
 # If you need to debug PDC Describe indexing, change the log level to Logger::DEBUG
 settings do
-  provide 'solr.url', SolrCloudHelper.collection_writer_url
+  provide 'solr.url', Indexing::SolrCloudHelper.collection_writer_url
   provide 'reader_class_name', 'Traject::NokogiriReader'
   provide 'solr_writer.commit_on_close', 'true'
   provide 'repository', ENV['REPOSITORY_ID']
@@ -49,8 +48,8 @@ end
 to_field 'description_tsim', extract_xpath("/hash/resource/description")
 # to_field 'handle_ssim', extract_xpath('/item/handle')
 to_field 'uri_ssim' do |record, accumulator, _c|
-  doi = ImportHelper.doi_uri(record.xpath("/hash/resource/doi").text)
-  ark = ImportHelper.ark_uri(record.xpath("/hash/resource/ark").text)
+  doi = Indexing::ImportHelper.doi_uri(record.xpath("/hash/resource/doi").text)
+  ark = Indexing::ImportHelper.ark_uri(record.xpath("/hash/resource/ark").text)
   accumulator.concat [doi, ark].compact
 end
 
@@ -234,7 +233,7 @@ to_field 'files_ss' do |record, accumulator, _context|
     else
       {
         name: File.basename(file.xpath("filename").text),
-        full_name: ImportHelper.display_filename(file.xpath("filename").text, raw_doi),
+        full_name: Indexing::ImportHelper.display_filename(file.xpath("filename").text, raw_doi),
         size: file.xpath("size").text,
         url: file.xpath('url').text
       }
@@ -247,7 +246,7 @@ end
 to_field 'globus_uri_ssi' do |record, accumulator, _context|
   filename = record.xpath("/hash/files/file/filename/text()").first&.text
   if filename
-    globus_uri = ImportHelper.globus_folder_uri_from_file(filename)
+    globus_uri = Indexing::ImportHelper.globus_folder_uri_from_file(filename)
     accumulator.concat [globus_uri]
   end
 end
