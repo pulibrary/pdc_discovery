@@ -22,6 +22,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
 gem 'listen', '~> 3.3'
 gem 'multi_xml'
+gem 'mutex_m'
 gem 'net-ssh', '7.0.0.beta1'
 gem "nokogiri", ">= 1.13.4"
 gem 'oai'

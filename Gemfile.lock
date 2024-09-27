@@ -317,6 +317,7 @@ GEM
     multi_xml (0.7.1)
       bigdecimal (~> 3.1)
     multipart-post (2.4.1)
+    mutex_m (0.2.0)
     net-imap (0.4.16)
       date
       net-protocol
@@ -642,6 +643,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.3)
   multi_xml
+  mutex_m
   net-ssh (= 7.0.0.beta1)
   nokogiri (>= 1.13.4)
   oai
