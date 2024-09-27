@@ -14,7 +14,7 @@ describe 'DataSpace research data all fields indexing', type: :system do
     end
   end
   let(:dspace_xml) do
-    File.join(fixture_path, 'single_item_dc_fields_all.xml')
+    File.join(fixture_paths.first, 'single_item_dc_fields_all.xml')
   end
   let(:nokogiri_reader) do
     Traject::NokogiriReader.new(File.read(dspace_xml), indexer.settings)

@@ -35,8 +35,10 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 RSpec.configure do |config|
   config.include Rails.application.routes.url_helpers
-  # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  config.fixture_path = Rails.root.join('spec', 'fixtures').to_s
+
+  # Note that as of Rails 7, "fixture_path" is deprecated. You have to call "fixture_paths.first" instead.
+  config.fixture_paths = []
+  config.fixture_paths << Rails.root.join('spec', 'fixtures').to_s
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
