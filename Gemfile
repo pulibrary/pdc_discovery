@@ -50,7 +50,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec'
-  gem 'rspec-rails', '~> 5.0.0'
+  gem 'rspec-rails'
   gem "rspec-retry"
   gem 'rspec-solr'
   gem 'rubocop-rspec'
