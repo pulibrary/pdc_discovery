@@ -3,7 +3,7 @@ require 'rails_helper'
 
 RSpec.describe "Catalog", type: :request do
   context "when indexing from DSpace" do
-    let(:dspace_fixtures) { File.read(File.join(fixture_path, 'spherical_torus.xml')) }
+    let(:dspace_fixtures) { File.read(File.join(fixture_paths.first, 'spherical_torus.xml')) }
     let(:indexer) do
       DspaceIndexer.new(dspace_fixtures)
     end

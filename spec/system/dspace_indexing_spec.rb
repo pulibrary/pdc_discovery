@@ -12,7 +12,7 @@ describe 'DataSpace research data indexing', type: :system do
     end
   end
   let(:dspace_xml) do
-    File.join(fixture_path, 'astrophysical_sciences.xml')
+    File.join(fixture_paths.first, 'astrophysical_sciences.xml')
   end
   let(:nokogiri_reader) do
     Traject::NokogiriReader.new(File.read(dspace_xml), indexer.settings)
