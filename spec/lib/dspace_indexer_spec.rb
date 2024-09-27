@@ -1,13 +1,16 @@
 # frozen_string_literal: true
 
+require 'rails_helper'
+
 RSpec.describe DspaceIndexer do
   describe 'indexing a community from DataSpace' do
-    let(:community_fetch_with_expanded_metadata) { File.read(File.join(fixture_path, 'astrophysical_sciences.xml')) }
-    let(:indexer) do
-      described_class.new(community_fetch_with_expanded_metadata)
-    end
+    # let(:community_fetch_with_expanded_metadata) { File.read(File.join(fixture_paths.first, 'astrophysical_sciences.xml')) }
+    # let(:indexer) do
+    #   described_class.new(community_fetch_with_expanded_metadata)
+    # end
 
     it "has a traject indexer" do
+      byebug
       expect(indexer.traject_indexer).to be_instance_of Traject::Indexer::NokogiriIndexer
     end
 
