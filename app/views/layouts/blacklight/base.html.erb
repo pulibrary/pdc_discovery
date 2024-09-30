@@ -33,32 +33,7 @@
       More info: https://getbootstrap.com/docs/4.6/components/popovers/
     -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script type ="application/ld+json">
-     <% if !@document.nil?%>
-      { "@context": "http://schema.org",
-        "@type": "Dataset",
-        "identifier": "<%= @document.doi_url %>",
-        "name": "<%= @document.title %>",
-        "author": <%= authors_helper(@document.authors_ordered) %>,
-          "datePublished": "2024-09-23",
-          "dateModified": "2024-09-23",
-          "version": "1",
-          "description": "<%= @document.description %>",
-          "keywords": <%= keywords_helper(@document.subject) %>,
-          "citation:":
-          [
-            "<%= @document.citation.to_s('apa')%>",
-          ],
-          "schemaVersion": "https://schema.org/version/28.0",
-          "license": <%= licenses_helper(@document.rights_enhanced) %>,
-          "provider":
-          {
-              "@type": "Organization",
-              "name": "Princeton University"
-          }
-      }
-      <% end %>
-    </script>
+    <%= render partial: 'shared/schema_org'%>
   </head>
   <body class="<%= render_body_class %>">
     <nav id="skip-link" role="navigation" aria-label="<%= t('blacklight.skip_links.label') %>">
