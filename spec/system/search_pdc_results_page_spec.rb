@@ -41,4 +41,9 @@ describe 'Search Results PDC Page', type: :system, js: true do
     click_on "View larger"
     expect(page).to have_content "2022\n2022"
   end
+
+  it 'does not render Schema.org tags' do
+    visit '/?search_field=all_fields&q='
+    expect(page.html.include?('"@context": "http://schema.org",')).to be false
+  end
 end
