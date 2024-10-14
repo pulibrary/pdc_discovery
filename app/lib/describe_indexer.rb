@@ -83,7 +83,7 @@ private
   # Parse the rss_url, get a JSON resource url for each item, convert it to XML, and pass it to traject
   def perform_indexing
     rss_url_list.each do |url|
-      resource_json = URI.open(url).read
+      resource_json = URI.open(url, read_timeout: 30).read
       resource_xml = prep_for_indexing(resource_json)
       traject_indexer.process(resource_xml)
       Rails.logger.info "Successfully imported record from #{url}."
