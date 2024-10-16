@@ -113,3 +113,20 @@ This feed can be paged through using the parameters `per_page` and `page`, like 
 ```
 https://pdc-discovery-staging.princeton.edu/discovery/pppl_reporting_feed.json?per_page=2&page=3
 ```
+
+## Mail
+
+### Mail on Development
+Mailcatcher is a gem that can also be installed locally.  See the [mailcatcher documentation](https://mailcatcher.me/) for how to run it on your machine.
+
+### Mail on Staging
+To See mail that has been sent on the staging server you can utilize capistrano to open up both mailcatcher consoles in your browser.
+
+```
+cap staging  mailcatcher:console
+```
+
+Look in your default browser for the consoles
+
+### Mail on Production
+Emails on production are sent via [Pony Express](https://github.com/pulibrary/pul-it-handbook/blob/f54dfdc7ada1ff993a721f6edb4aa1707bb3a3a5/services/smtp-mail-server.md).
