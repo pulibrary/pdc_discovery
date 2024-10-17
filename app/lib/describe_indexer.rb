@@ -82,14 +82,27 @@ private
   ##
   # Parse the rss_url, get a JSON resource url for each item, convert it to XML, and pass it to traject
   def perform_indexing
+    urls_to_retry = []
     rss_url_list.each do |url|
-      resource_json = URI.open(url, read_timeout: 30).read
-      resource_xml = prep_for_indexing(resource_json)
-      traject_indexer.process(resource_xml)
-      Rails.logger.info "Successfully imported record from #{url}."
+      process_url(url)
+    rescue
+      urls_to_retry << url
+    end
+
+    # retry an errored urls a second time and send error only if they don't work a second time
+    urls_to_retry.each do |url|
+      process_url(url)
     rescue => ex
       Rails.logger.warn "Error importing record from #{url}. Exception: #{ex.message}"
       Honeybadger.notify "Error importing record from #{url}. Exception: #{ex.message}"
     end
+  end
+
+  def process_url(url)
+    uri = URI.open(url, open_timeout: 30, read_timeout: 30)
+    resource_json = uri.read
+    resource_xml = prep_for_indexing(resource_json)
+    traject_indexer.process(resource_xml)
+    Rails.logger.info "Successfully imported record from #{url}."
   end
 end
