@@ -30,3 +30,21 @@ before "deploy:reverted", "deploy:assets:precompile"
 # Uncomment to re-index on every deploy. Only needed when we're actively
 # updating how indexing happens.
 # after "deploy:published", "pdc_discovery:reindex"
+
+namespace :mailcatcher do
+  desc "Opens Mailcatcher Consoles"
+  task :console do
+    on roles(:app) do |host|
+      mail_host = host.hostname
+      user = "pulsys"
+      port = rand(9000..9999)
+      puts "Opening #{mail_host} Mailcatcher Console on port #{port} as user #{user}"
+      Net::SSH.start(mail_host, user) do |session|
+        session.forward.local(port, "localhost", 1080)
+        puts "Press Ctrl+C to end Console connection"
+        `open http://localhost:#{port}/`
+        session.loop(0.1) { true }
+      end
+    end
+  end
+end
