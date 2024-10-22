@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+
+# rubocop:disable Rails/OutputSafety
 module SchemaOrgHelper
   def keywords_helper(subjects)
     keywords_json = subjects.map do |subject|
@@ -30,11 +32,12 @@ module SchemaOrgHelper
       ""
     else
       html = '"license": {'
-      html += "\n\t\t\t" + '"@type": ' + '"Dataset"' + ",\n" +
-              "\t\t\t" + '"text": ' + '"' + licenses[0]['identifier'] + '"' + ",\n" +
+      html += "\n\t\t\t" + '"@type": ' + '"Dataset"' + ",\n" \
+              "\t\t\t" + '"text": ' + '"' + licenses[0]['identifier'] + '"' + ",\n" \
               "\t\t\t" + '"url": ' + '"' + licenses[0]['uri'] + '"'
       html += "\n\t\t\t},"
       html.html_safe
     end
   end
 end
+# rubocop:enable Rails/OutputSafety
