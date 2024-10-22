@@ -9,9 +9,9 @@
         "version": "1",
         "description": "<%= @document.description %>",
         "keywords": <%= keywords_helper(@document.subject) %>,
-        "citation":
+        "citation": 
         [
-            "<%= @document.citation.to_s('apa')%>",
+            "<a href="<%= @document.doi_url%>" target="_blank"> "<%= @document.citation.to_s('apa')%>" </a>"
         ],
         "schemaVersion": "https://schema.org/version/28.0",
         <%= license_helper(@document.rights_enhanced) %>
@@ -23,3 +23,6 @@
     }
     </script>
 <% end %>
+
+
+
