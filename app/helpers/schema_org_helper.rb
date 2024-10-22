@@ -14,7 +14,7 @@ module SchemaOrgHelper
       json_str = "\n\t\t\t{\n\t\t\t" + '"name": ' + '"' + author.value + '"'
       if author.affiliation_name.present?
         json_str += ",\n\t\t\t" + '"affiliation": ' + '"' + author.affiliation_name + '"'
-      end  
+      end
       if author.orcid.present?
         json_str += ",\n\t\t\t" + '"identifier": ' + '"' + author.orcid + '"'
       end
@@ -26,16 +26,15 @@ module SchemaOrgHelper
   end
 
   def license_helper(licenses)
-    if licenses.count == 0 
+    if licenses.count == 0
       ""
     else
       html = '"license": {'
-      html += "\n\t\t\t" + '"@type": ' + '"Dataset"' + ",\n" + 
-        "\t\t\t" + '"text": ' + '"' + licenses[0]['identifier'] + '"' + ",\n" + 
-        "\t\t\t" + '"url": ' + '"' + licenses[0]['uri'] + '"'  
+      html += "\n\t\t\t" + '"@type": ' + '"Dataset"' + ",\n" +
+              "\t\t\t" + '"text": ' + '"' + licenses[0]['identifier'] + '"' + ",\n" +
+              "\t\t\t" + '"url": ' + '"' + licenses[0]['uri'] + '"'
       html += "\n\t\t\t},"
       html.html_safe
     end
   end
 end
-

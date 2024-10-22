@@ -58,7 +58,7 @@ describe 'Show PDC Page', type: :system, js: true do
     # "readme.txt" is the smallest file and so now it is first
     expect(first_filename_spot).to eq("readme.txt")
   end
-  
+
   it 'renders Schema.org tags' do
     visit '/catalog/doi-10-34770-bm4s-t361'
     expect(page.html.include?('"@context": "http://schema.org",')).to be true

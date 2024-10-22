@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 RSpec.describe SchemaOrgHelper, type: :helper do
-  let(:author_with_orcid) do  
+  let(:author_with_orcid) do
     {
       "value" => "some_name",
       "identifier" => {
@@ -11,7 +11,7 @@ RSpec.describe SchemaOrgHelper, type: :helper do
       },
       "affiliations" => [
         { "value" => "some_affiliation" }
-      ],
+      ]
     }
   end
 
@@ -21,7 +21,7 @@ RSpec.describe SchemaOrgHelper, type: :helper do
     }
   end
 
-  let(:license) do 
+  let(:license) do
     {
       "identifier" => "some_identifier",
       "uri" => "some_uri"
@@ -30,9 +30,9 @@ RSpec.describe SchemaOrgHelper, type: :helper do
 
   describe "#render_sidebar_related_identifiers" do
     it "renders keywords" do
-      expect(helper.keywords_helper(['a','b'])).to eq '["a","b"]'
+      expect(helper.keywords_helper(['a', 'b'])).to eq '["a","b"]'
     end
-    
+
     it "does not render keywords" do
       expect(helper.keywords_helper([])).to eq '[]'
     end
@@ -41,7 +41,7 @@ RSpec.describe SchemaOrgHelper, type: :helper do
       author = [Author.new(author_with_orcid)]
       # Expected output with orcid and affiliation
       expected_output = "[\n\t\t\t{\n\t\t\t\"name\": \"some_name\",\n\t\t\t\"affiliation\": \"some_affiliation\",\n\t\t\t\"identifier\": \"0000-0000-1111-1111\"\n\t\t\t}]"
-    
+
       # Call the helper function with the authors array and verify the result
       expect(helper.authors_helper(author)).to eq expected_output
     end
@@ -50,11 +50,11 @@ RSpec.describe SchemaOrgHelper, type: :helper do
       author = [Author.new(author_without_orcid)]
       # Expected output without orcid and affiliation
       expected_output = "[\n\t\t\t{\n\t\t\t\"name\": \"some_name\"\n\t\t\t}]"
-    
+
       # Call the helper function with the authors array and verify the result
       expect(helper.authors_helper(author)).to eq expected_output
     end
-    
+
     it "render one license" do
       expected_output = "\"license\": {\n\t\t\t\"@type\": \"Dataset\",\n\t\t\t\"text\": \"some_identifier\",\n\t\t\t\"url\": \"some_uri\"\n\t\t\t},"
       expect(helper.license_helper([license])).to eq expected_output
@@ -63,6 +63,5 @@ RSpec.describe SchemaOrgHelper, type: :helper do
     it "renders no license" do
       expect(helper.license_helper([])).to eq ""
     end
-
   end
 end
