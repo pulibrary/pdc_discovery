@@ -426,7 +426,7 @@ GEM
     responders (3.1.1)
       actionpack (>= 5.2)
       railties (>= 5.2)
-    rexml (3.3.7)
+    rexml (3.3.8)
     rinku (2.0.6)
     rsolr (2.6.0)
       builder (>= 2.1.2)
@@ -629,7 +629,7 @@ DEPENDENCIES
   capistrano (= 3.16, < 3.17)
   capistrano-passenger
   capistrano-rails (~> 1.4)
-  capybara (>= 3.26)
+  capybara (~> 3.40)
   coveralls_reborn (~> 0.28)
   devise
   devise-guests (~> 0.6)

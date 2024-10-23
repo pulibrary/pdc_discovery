@@ -10,6 +10,11 @@ require 'active_support/core_ext/integer/time'
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # Suppress selenium deprecation messages, since we can't do anything about them.
+  # We depend on selenium-webdriver to do that for us.
+  selenium_logger = Selenium::WebDriver.logger
+  selenium_logger.level = :error
+
   config.cache_classes = false
   config.action_view.cache_template_loading = true
 
