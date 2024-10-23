@@ -629,7 +629,7 @@ DEPENDENCIES
   capistrano (= 3.16, < 3.17)
   capistrano-passenger
   capistrano-rails (~> 1.4)
-  capybara (~> 3.40)
+  capybara
   coveralls_reborn (~> 0.28)
   devise
   devise-guests (~> 0.6)
