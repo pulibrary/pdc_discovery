@@ -1,0 +1,28 @@
+<% if !@document.nil?%>
+<!-- Renders Schema.org tags -->
+    <script type ="application/ld+json">
+    { "@context": "http://schema.org",
+        "@type": "Dataset",
+        "identifier": "<%= @document.doi_url %>",
+        "name": "<%= @document.title %>",
+        "author": <%= authors_helper(@document.authors_ordered) %>,
+        "version": "1",
+        "description": "<%= @document.description %>",
+        "keywords": <%= keywords_helper(@document.subject) %>,
+        "citation": 
+        [
+            "<a href="<%= @document.doi_url%>" target="_blank"> "<%= @document.citation.to_s('apa')%>" </a>"
+        ],
+        "schemaVersion": "https://schema.org/version/28.0",
+        <%= license_helper(@document.rights_enhanced) %>
+        "provider":
+        {
+            "@type": "Organization",
+            "name": "Princeton University"
+        }
+    }
+    </script>
+<% end %>
+
+
+
