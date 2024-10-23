@@ -71,7 +71,7 @@ end
 
 group :test do
   gem 'axe-core-rspec'
-  gem 'capybara', '>= 3.26'
+  gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webmock'
 end
