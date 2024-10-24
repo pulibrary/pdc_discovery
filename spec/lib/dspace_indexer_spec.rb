@@ -38,6 +38,44 @@ RSpec.describe DspaceIndexer do
         response = Blacklight.default_index.connection.get 'select', params: { q: '*:*' }
         expect(response["response"]["numFound"]).to eq 38
       end
+
+      context "when an error is raised" do
+        before do
+          indexer.traject_indexer.configure do
+            to_field 'id' do |_, _, _|
+              raise(StandardError, "I just like raising errors")
+            end
+          end
+
+          allow(indexer.traject_indexer.logger).to receive(:error)
+        end
+
+        it "propagates StandardError instances" do
+          expect { indexer.index }.to raise_error(StandardError, "I just like raising errors")
+
+          expect(indexer.traject_indexer.logger).not_to be_falsy
+          expect(indexer.traject_indexer.logger).to have_received(:error).with(/Unexpected error on record/).at_least(:once)
+        end
+      end
+
+      context "when a max skipped records error is raised" do
+        before do
+          indexer.traject_indexer.configure do
+            to_field 'id' do |_, _, _|
+              raise(Traject::SolrJsonWriter::MaxSkippedRecordsExceeded)
+            end
+          end
+
+          allow(indexer.traject_indexer.logger).to receive(:error)
+        end
+
+        it "only logs an error message" do
+          indexer.index
+
+          expect(indexer.traject_indexer.logger).not_to be_falsy
+          expect(indexer.traject_indexer.logger).to have_received(:error).with("Encountered exception: Traject::SolrJsonWriter::MaxSkippedRecordsExceeded").at_least(:once)
+        end
+      end
     end
 
     context 'invoking from CLI' do
