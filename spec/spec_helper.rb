@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 ENV['RACK_ENV'] ||= 'test'
+ENV['RAILS_ENV'] ||= 'test'
 
 require "coveralls"
 Coveralls.wear!
