@@ -14,6 +14,30 @@ settings do
   provide 'logger', Logger.new($stderr, level: Logger::ERROR)
   provide "nokogiri.each_record_xpath", "//items/item"
   provide "dataspace_communities", DataspaceCommunities.new('./spec/fixtures/files/dataspace_communities.json')
+
+  provide "mapping_rescue", lambda { |context, exception|
+    if exception.is_a?(Traject::SolrJsonWriter::MaxSkippedRecordsExceeded)
+      context.logger.error("Encountered exception: #{exception}")
+    else
+
+      # This is the implementation from Traject::Indexer#default_mapping_rescue
+      # @see https://github.com/traject/traject/blob/main/lib/traject/indexer.rb#L483
+      msg = "Unexpected error on record #{context.record_inspect}\n"
+      msg += "    while executing #{context.index_step.inspect}\n"
+
+      msg += begin
+        "\n    Record: #{context.source_record}\n"
+             rescue StandardError => to_s_exception
+               "\n    (Could not log record, #{to_s_exception})\n"
+      end
+
+      msg += Traject::Util.exception_to_log_message(exception)
+
+      context.logger.error(msg) if context.logger
+
+      raise exception
+    end
+  }
 end
 
 each_record do |record, context|
