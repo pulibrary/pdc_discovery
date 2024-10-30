@@ -494,22 +494,17 @@ class SolrDocument
 
   def dates_created
     if pdc_describe_record?
-      fetch("issue_date_strict_ssi", [])
+      # pdc describe - issue_date_strict_ssi comes as a string
+      # here we force it to be an array, so function returns always an an array
+      [fetch("issue_date_strict_ssi", nil)].compact
     else
+      # dataspace - date_created_ssim comes as an array
       fetch("date_created_ssim", [])
-    end
+    end 
   end
 
   def date_created
-    if pdc_describe_record?
-      begin
-        DateTime.parse(dates_created).strftime('%Y-%m-%d')
-      rescue
-        nil
-      end
-    else
-      dates_created.first
-    end
+    dates_created.first
   end
 
   def dates_submitted
