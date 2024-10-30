@@ -493,11 +493,23 @@ class SolrDocument
   end
 
   def dates_created
-    fetch("date_created_ssim", [])
+    if pdc_describe_record?
+      fetch("issue_date_strict_ssi", [])
+    else
+      fetch("date_created_ssim", [])
+    end
   end
 
   def date_created
-    dates_created.first
+    if pdc_describe_record?
+      begin
+        DateTime.parse(dates_created).strftime('%Y-%m-%d')
+      rescue
+        nil
+      end
+    else
+      dates_created.first
+    end
   end
 
   def dates_submitted
@@ -525,11 +537,27 @@ class SolrDocument
   end
 
   def dates_modified
-    fetch("date_modified_ssim", [])
+    if pdc_describe_record?
+      # pdc describe - date_modified comes as a string
+      # here we force it to be an array, so function returns same value
+      [fetch("pdc_updated_at_dtsi", nil)].compact 
+    else
+      # dataspace - date_modified comes as an array
+      fetch("date_modified_ssim", [])
+    end
   end
 
   def date_modified
     dates_modified.first
+    # if pdc_describe_record?
+    #   begin
+    #     DateTime.parse(dates_modified.first).strftime('%Y-%m-%d')
+    #   rescue
+    #     nil
+    #   end
+    # else
+    #   dates_modified.first
+    # end
   end
 
   def dates_valid
