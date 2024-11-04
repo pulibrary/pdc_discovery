@@ -15,38 +15,10 @@
               <tr>
                 <th scope="col" nowrap="nowrap"><span>#</span></th>
                 <th scope="col" nowrap="nowrap"><span>Filename</span></th>
-                <% if @document.data_source == "dataspace" %>
-                  <th scope="col"><span>Description</span></th>
-                <% end %>
                 <th scope="col" nowrap="nowrap"><span>Filesize</span></th>
               </tr>
             </thead>
             <tbody>
-              <% DatasetFile.sort_file_array(@document.files).each_with_index do |file, ix| %>
-                <tr class="document-download">
-                  <th scope="row">
-                    <span><span><%= ix + 1 %></span></span>
-                  </th>
-                  <td>
-                    <span>
-                      <i class="bi bi-file-arrow-down"></i>
-                      <% if @render_links%>
-                        <a href="<%= file.download_url %>" class="documents-file-link" target="_blank" title="<%= file.full_path %>"><%= truncate(file.full_path, length: 60) %></a>
-                      <% else %>
-                        <%= truncate(file.full_path, length: 60) %>
-                      <% end %>
-                    </span>
-                  </td>
-                  <% if @document.data_source == "dataspace" %>
-                    <td>
-                      <span><%= file.description %></span>
-                    </td>
-                  <% end %>
-                  <td data-order="<%= file.size %>">
-                    <span><span><%= number_to_human_size(file.size) %></span></span>
-                  </td>
-                </tr>
-              <% end %>
             </tbody>
             <tfoot></tfoot>
           </table>
@@ -64,6 +36,7 @@
 $(function() {
 
   // Wire DataTable for the file list.
+  // TODO: Update to load via AJAX
   $('#files-table').DataTable();
 
   // Track file downloads via Plausible.
