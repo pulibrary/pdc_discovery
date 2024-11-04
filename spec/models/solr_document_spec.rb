@@ -21,6 +21,46 @@ RSpec.describe SolrDocument do
     end
   end
 
+  describe "#dates_created" do
+    it "handles pdc dates" do
+      doc = described_class.new({ id: "1", issue_date_strict_ssi: "2024-10-30", data_source_ssi: "pdc_describe" })
+      expect(doc.dates_created.first).to eq "2024-10-30"
+
+      doc = described_class.new({ id: "2", data_source_ssi: "pdc_describe" })
+      expect(doc.dates_created.first).to be nil
+    end
+    it "handles dataspace dates" do
+      doc = described_class.new({ id: "3", date_created_ssim: ["2024-10-30"], data_source_ssi: "dataspace" })
+      expect(doc.dates_created.first).to eq "2024-10-30"
+
+      doc = described_class.new({ id: "4", data_source_ssi: "dataspace" })
+      expect(doc.dates_created.first).to be nil
+    end
+  end
+
+  describe "#dates_modified" do
+    it "handles pdc dates" do
+      doc = described_class.new({ id: "1", pdc_updated_at_dtsi: "2024-10-30", data_source_ssi: "pdc_describe" })
+      expect(doc.dates_modified.first).to eq "2024-10-30"
+
+      doc = described_class.new({ id: "2", data_source_ssi: "pdc_describe" })
+      expect(doc.dates_modified.first).to be nil
+
+      doc = described_class.new({ id: "3", pdc_updated_at_dtsi: "2024-10-30T01:01:01Z", data_source_ssi: "pdc_describe" })
+      expect(doc.dates_modified.first).to eq "2024-10-30"
+
+      doc = described_class.new({ id: "4", pdc_updated_at_dtsi: "string", data_source_ssi: "pdc_describe" })
+      expect(doc.dates_modified.first).to be nil
+    end
+    it "handles dataspace dates" do
+      doc = described_class.new({ id: "4", date_modified_ssim: ["2024-10-30"], data_source_ssi: "dataspace" })
+      expect(doc.dates_modified.first).to eq "2024-10-30"
+
+      doc = described_class.new({ id: "6", data_source_ssi: "dataspace" })
+      expect(doc.dates_modified.first).to be nil
+    end
+  end
+
   describe "#icons_css" do
     it "handles icons for known genres" do
       doc = described_class.new({ id: "1", genre_ssim: ["Dataset"] })

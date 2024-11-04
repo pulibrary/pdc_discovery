@@ -6,6 +6,8 @@
         "identifier": "<%= @document.doi_url %>",
         "name": "<%= @document.title %>",
         "author": <%= authors_helper(@document.authors_ordered) %>,
+        "datePublished": "<%= @document.date_created %>",
+        "dateModified": "<%= @document.date_modified %>",
         "version": "1",
         "description": "<%= @document.description %>",
         "keywords": <%= keywords_helper(@document.subject) %>,
