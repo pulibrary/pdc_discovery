@@ -500,7 +500,7 @@ class SolrDocument
     else
       # dataspace - date_created_ssim comes as an array
       fetch("date_created_ssim", [])
-    end 
+    end
   end
 
   def date_created
