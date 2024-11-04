@@ -205,8 +205,8 @@ RSpec.describe DescribeIndexer do
       end
 
       context "works with multiple creators" do
-        let(:pppl1) { File.read(File.join(fixture_path, 'files', 'pppl1.json')) }
-        let(:pppl2) { File.read(File.join(fixture_path, 'files', 'pppl2.json')) }
+        let(:pppl1) { File.read(File.join(fixture_paths.first, 'files', 'pppl1.json')) }
+        let(:pppl2) { File.read(File.join(fixture_paths.first, 'files', 'pppl2.json')) }
         before do
           stub_request(:get, "https://pdc-describe-prod.princeton.edu/describe/works/6.json")
             .to_return(status: 200, body: pppl1, headers: {})

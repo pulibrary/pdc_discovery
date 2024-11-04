@@ -2,12 +2,12 @@
 require 'rails_helper'
 
 RSpec.describe "PPPL has a harvest endpoint", type: :request do
-  let(:pppl1) { File.read(File.join(fixture_path, 'files', 'pppl1.json')) }
-  let(:pppl2) { File.read(File.join(fixture_path, 'files', 'pppl2.json')) }
-  let(:pppl3) { File.read(File.join(fixture_path, 'files', 'pppl3.json')) }
-  let(:pppl4) { File.read(File.join(fixture_path, 'files', 'pppl4.json')) }
+  let(:pppl1) { File.read(File.join(fixture_paths.first, 'files', 'pppl1.json')) }
+  let(:pppl2) { File.read(File.join(fixture_paths.first, 'files', 'pppl2.json')) }
+  let(:pppl3) { File.read(File.join(fixture_paths.first, 'files', 'pppl3.json')) }
+  let(:pppl4) { File.read(File.join(fixture_paths.first, 'files', 'pppl4.json')) }
 
-  let(:other_data) { File.read(File.join(fixture_path, 'files', 'bitklavier_binaural.json')) }
+  let(:other_data) { File.read(File.join(fixture_paths.first, 'files', 'bitklavier_binaural.json')) }
   let(:indexer) { DescribeIndexer.new }
 
   before do

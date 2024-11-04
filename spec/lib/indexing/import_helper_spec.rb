@@ -1,7 +1,8 @@
 # frozen_string_literal: true
-require "./lib/traject/import_helper.rb"
 
-RSpec.describe ImportHelper do
+require 'rails_helper'
+
+RSpec.describe Indexing::ImportHelper do
   describe "#display_filename" do
     it "handles normal cases correctly" do
       doi = "10.123/4567"

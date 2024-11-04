@@ -59,6 +59,11 @@ describe 'Show PDC Page', type: :system, js: true do
     expect(first_filename_spot).to eq("readme.txt")
   end
 
+  it 'renders Schema.org tags' do
+    visit '/catalog/doi-10-34770-bm4s-t361'
+    expect(page.html.include?('"@context": "http://schema.org",')).to be true
+  end
+
   context "when crawler visits the site" do
     before do
       allow_any_instance_of(CatalogController).to receive(:agent_is_crawler?).and_return(true)

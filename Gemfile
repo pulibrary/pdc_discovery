@@ -22,13 +22,14 @@ gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
 gem 'listen', '~> 3.3'
 gem 'multi_xml'
+gem 'mutex_m'
 gem 'net-ssh', '7.0.0.beta1'
 gem "nokogiri", ">= 1.13.4"
 gem 'oai'
 gem 'pg'
 gem 'plausible_api'
-gem 'puma', '~> 5.6'
-gem 'rails', '~> 6.1.7'
+gem 'puma'
+gem 'rails', '~> 7.2'
 gem 'rinku'
 gem 'rsolr', '>= 1.0', '< 3'
 gem 'sass-rails', '>= 6'
@@ -49,7 +50,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec'
-  gem 'rspec-rails', '~> 5.0.0'
+  gem 'rspec-rails'
   gem "rspec-retry"
   gem 'rspec-solr'
   gem 'rubocop-rspec'
@@ -70,7 +71,7 @@ end
 
 group :test do
   gem 'axe-core-rspec'
-  gem 'capybara', '>= 3.26'
+  gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webmock'
 end

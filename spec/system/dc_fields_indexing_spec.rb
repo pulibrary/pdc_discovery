@@ -10,11 +10,11 @@ describe 'DataSpace research data all fields indexing', type: :system do
   end
   let(:indexer) do
     Traject::Indexer::NokogiriIndexer.new.tap do |i|
-      i.load_config_file(Rails.root.join('lib', 'traject', 'dataspace_research_data_config.rb'))
+      i.load_config_file(Rails.root.join('config', 'traject', 'dataspace_research_data_config.rb'))
     end
   end
   let(:dspace_xml) do
-    File.join(fixture_path, 'single_item_dc_fields_all.xml')
+    File.join(fixture_paths.first, 'single_item_dc_fields_all.xml')
   end
   let(:nokogiri_reader) do
     Traject::NokogiriReader.new(File.read(dspace_xml), indexer.settings)

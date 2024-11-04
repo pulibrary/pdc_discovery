@@ -26,9 +26,9 @@ RSpec.describe DspaceResearchDataHarvester do
     end
     let(:csv_row) { CSV::Row.new(csv_data.keys, csv_data.values) }
     let(:rdc) { ResearchDataCollection.new(csv_row) }
-    let(:collection_1282_xml) { File.read(File.join(fixture_path, 'spherical_torus.xml')) }
-    let(:dspace_1308_items) { File.read(File.join(fixture_path, "migration", "1308_items.xml")) }
-    let(:dspace_3386_items) { File.read(File.join(fixture_path, "migration", "3386_items.xml")) }
+    let(:collection_1282_xml) { File.read(File.join(fixture_paths.first, 'spherical_torus.xml')) }
+    let(:dspace_1308_items) { File.read(File.join(fixture_paths.first, "migration", "1308_items.xml")) }
+    let(:dspace_3386_items) { File.read(File.join(fixture_paths.first, "migration", "3386_items.xml")) }
 
     before do
       Blacklight.default_index.connection.delete_by_query("*:*")
@@ -70,8 +70,8 @@ RSpec.describe DspaceResearchDataHarvester do
     end
 
     context "migration tracking" do
-      let(:shortened_collections_csv) { File.join(fixture_path, 'migration', 'collections.csv') }
-      let(:tracking_csv) { File.join(fixture_path, "migration", 'dspace_migration.csv') }
+      let(:shortened_collections_csv) { File.join(fixture_paths.first, 'migration', 'collections.csv') }
+      let(:tracking_csv) { File.join(fixture_paths.first, "migration", 'dspace_migration.csv') }
 
       require 'csv'
 
@@ -118,7 +118,7 @@ RSpec.describe DspaceResearchDataHarvester do
       end
 
       context "migration is already in progress" do
-        let(:in_progress_csv) { File.join(fixture_path, "migration", 'migration_in_progress.csv') }
+        let(:in_progress_csv) { File.join(fixture_paths.first, "migration", 'migration_in_progress.csv') }
 
         it 'produces a csv for all items in need of migration not already on the in-progress spreadsheet' do
           rdh.produce_delta_migration_spreadsheet(tracking_csv, shortened_collections_csv, in_progress_csv)

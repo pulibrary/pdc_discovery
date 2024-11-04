@@ -18,11 +18,11 @@ describe 'PPPL research data indexing', type: :system do
   let(:output) { TrajectOutput.new }
   let(:indexer) do
     Traject::Indexer::NokogiriIndexer.new.tap do |i|
-      i.load_config_file(Rails.root.join('lib', 'traject', 'dataspace_research_data_config.rb'))
+      i.load_config_file(Rails.root.join('config', 'traject', 'dataspace_research_data_config.rb'))
     end
   end
   let(:dspace_xml) do
-    File.join(fixture_path, 'astrophysical_sciences.xml')
+    File.join(fixture_paths.first, 'astrophysical_sciences.xml')
   end
   let(:dspace_xml_io) { File.read(dspace_xml) }
   let(:nokogiri_reader) do

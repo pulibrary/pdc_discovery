@@ -2,7 +2,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Dynamic Sitemap', type: :system, js: false do
-  let(:globus_fixtures) { File.read(File.join(fixture_path, 'globus_items.xml')) }
+  let(:globus_fixtures) { File.read(File.join(fixture_paths.first, 'globus_items.xml')) }
   let(:indexer) do
     DspaceIndexer.new(globus_fixtures)
   end

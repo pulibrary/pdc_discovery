@@ -4,23 +4,45 @@ require 'logger'
 require 'traject'
 require 'traject/nokogiri_reader'
 require 'blacklight'
-require_relative './domain'
-require_relative './import_helper'
-require_relative './solr_cloud_helper'
+require 'indexing'
 
 settings do
-  provide 'solr.url', SolrCloudHelper.collection_writer_url
+  provide 'solr.url', Indexing::SolrCloudHelper.collection_writer_url
   provide 'reader_class_name', 'Traject::NokogiriReader'
   provide 'solr_writer.commit_on_close', 'true'
   provide 'repository', ENV['REPOSITORY_ID']
   provide 'logger', Logger.new($stderr, level: Logger::ERROR)
   provide "nokogiri.each_record_xpath", "//items/item"
   provide "dataspace_communities", DataspaceCommunities.new('./spec/fixtures/files/dataspace_communities.json')
+
+  provide "mapping_rescue", lambda { |context, exception|
+    if exception.is_a?(Traject::SolrJsonWriter::MaxSkippedRecordsExceeded)
+      context.logger.error("Encountered exception: #{exception}")
+    else
+
+      # This is the implementation from Traject::Indexer#default_mapping_rescue
+      # @see https://github.com/traject/traject/blob/main/lib/traject/indexer.rb#L483
+      msg = "Unexpected error on record #{context.record_inspect}\n"
+      msg += "    while executing #{context.index_step.inspect}\n"
+
+      msg += begin
+        "\n    Record: #{context.source_record}\n"
+             rescue StandardError => to_s_exception
+               "\n    (Could not log record, #{to_s_exception})\n"
+      end
+
+      msg += Traject::Util.exception_to_log_message(exception)
+
+      context.logger.error(msg) if context.logger
+
+      raise exception
+    end
+  }
 end
 
 each_record do |record, context|
   uris = record.xpath("/item/metadata/key[text()='dc.identifier.uri']/../value")
-  next unless ImportHelper.pdc_describe_match?(settings["solr.url"], uris)
+  next unless Indexing::ImportHelper.pdc_describe_match?(settings["solr.url"], uris)
   id = record.xpath('/item/id')
   Rails.logger.info "Skipping DataSpace record #{id} - already imported from PDC Describe"
   context.skip!("Skipping DataSpace record #{id} - already imported from PDC Describe")
@@ -145,7 +167,7 @@ to_field 'alternative_title_tesim', extract_xpath("/item/metadata/key[text()='dc
 # is multi-value because PDC Describe supports more than one domain.
 to_field 'domain_ssim' do |record, accumulator, _context|
   communities = record.xpath("/item/parentCommunityList/type[text()='community']/../name").map(&:text)
-  domains = Domain.from_communities(communities)
+  domains = Indexing::Domain.from_communities(communities)
   if domains.count > 1
     id = record.xpath('/item/id/text()')
     logger.warn "Multiple domains detected for record: #{id}, using only the first one."
