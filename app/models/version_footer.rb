@@ -14,6 +14,8 @@
 # rubocop:disable Style/ClassVars
 class VersionFooter
   DEPLOYMENT_LOGFILE_COL_NUMBER = 7
+  REVISIONS_LOG_COL = 3
+  DEFAULT_SHA = "Unknown SHA"
 
   @@stale = true
   @@git_sha = nil
@@ -31,29 +33,52 @@ class VersionFooter
     @@git_sha = nil
     @@branch = nil
     @@version = nil
-    # @@stale = true # potentially add this to prevent @@stale from retaining state from prior test
+
+    @@local_sha = nil
+    @@revisions = nil
+
+    @@git_sha = nil
+    @@revisions_head = nil
+    @@revisions_log = nil
   end
 
-  def self.stale?
-    return false if @@stale == false
-    # Only read the file when version information is stale
-    if File.exist?(revision_file)
-      local_sha = File.read(revision_file).chomp.gsub(/\)$/, '')
-      @@stale = local_sha != git_sha
-    else
-      @@stale = true
-    end
-    @@stale
+  def self.revisions
+    return unless File.exist?(revision_file)
+
+    @@revisions ||= File.read(revision_file).chomp
+  end
+
+  def self.local_sha
+    return unless revisions
+
+    @@local_sha ||= revisions.gsub(/\)$/, '')
+  end
+
+  def self.revisions_log
+    return unless File.exist?(revisions_logfile)
+
+    content = `tail -1 #{revisions_logfile}`.chomp
+    elements = content.split(" ")
+    return if elements.length < REVISIONS_LOG_COL
+
+    element = elements[REVISIONS_LOG_COL]
+    @@revisions_log ||= element.gsub(/\)$/, '')
+  end
+
+  def self.revisions_head
+    return unless Rails.env.development? || Rails.env.test?
+
+    @@revisions_head ||= `git rev-parse HEAD`.chomp
   end
 
   def self.git_sha
-    @@git_sha ||= if File.exist?(revisions_logfile)
-                    `tail -1 #{revisions_logfile}`.chomp.split(" ")[3].gsub(/\)$/, '')
-                  elsif Rails.env.development? || Rails.env.test?
-                    `git rev-parse HEAD`.chomp
-                  else
-                    "Unknown SHA"
-                  end
+    @@git_sha ||= revisions_log || revisions_head || DEFAULT_SHA
+  end
+
+  def self.stale?
+    return false unless local_sha
+
+    local_sha != git_sha
   end
 
   def self.tagged_release?
