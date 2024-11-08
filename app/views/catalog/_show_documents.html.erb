@@ -13,14 +13,17 @@
           <table id="files-table" class="table">
             <thead>
               <tr>
-                <th scope="col" nowrap="nowrap"><span>#</span></th>
-                <th scope="col" nowrap="nowrap"><span>Filename</span></th>
-                <th scope="col" nowrap="nowrap"><span>Filesize</span></th>
+                  <th>Name</th>
+                  <th>Size</th>
               </tr>
             </thead>
-            <tbody>
-            </tbody>
-            <tfoot></tfoot>
+            <tbody></tbody>
+            <tfoot>
+              <tr>
+                  <th>Name</th>
+                  <th>Size</th>
+              </tr>
+            </tfood>
           </table>
         <% end %>
 
@@ -35,9 +38,13 @@
 <script type="text/javascript">
 $(function() {
 
-  // Wire DataTable for the file list.
-  // TODO: Update to load via AJAX
-  $('#files-table').DataTable();
+  $('#files-table').DataTable({
+    ajax: "<%= catalog_file_list_path(@document) %>",
+    columns: [
+        { data: 'name' },
+        { data: 'size' }
+    ]
+  });
 
   // Track file downloads via Plausible.
   $(".documents-file-link").click(function() {

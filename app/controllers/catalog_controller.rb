@@ -268,6 +268,16 @@ class CatalogController < ApplicationController
     end
   end
 
+  def file_list
+    document = solr_find(params["id"])
+
+    file1 = {name: "hello.txt", size: 123}
+    file2 = {name: "bye.txt", size: 222}
+    file_list = {data: [file1, file2]}
+
+    render json: file_list.to_json
+  end
+
   # Returns the raw BibTex citation information
   def bibtex
     _unused, @document = search_service.fetch(params[:id])
@@ -339,4 +349,17 @@ class CatalogController < ApplicationController
       format.json { render json: @documents }
     end
   end
+
+  private
+    def solr_find(id)
+      solr_url = Blacklight.default_configuration.connection_config[:url]
+      solr = RSolr.connect(url: solr_url)
+      solr_params = {
+        q: "id:#{id}",
+        fl: '*',
+      }
+      response = solr.get('select', params: solr_params)
+      solr_doc = response["response"]["docs"][0]
+      SolrDocument.new(solr_doc)
+    end
 end
