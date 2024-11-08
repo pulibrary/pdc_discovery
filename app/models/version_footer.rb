@@ -31,6 +31,7 @@ class VersionFooter
     @@git_sha = nil
     @@branch = nil
     @@version = nil
+    # @@stale = true # potentially add this to prevent @@stale from retaining state from prior test
   end
 
   def self.stale?

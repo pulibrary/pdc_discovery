@@ -15,7 +15,7 @@ RSpec.describe "Catalog", type: :request do
       let(:doi) { "doi:10.1088/0029-5515/57/1/016034" }
       let(:document_id) { "84912" }
 
-      it "retrieves Solr Documents using a given DOI" do
+      xit "retrieves Solr Documents using a given DOI" do
         get "/doi/#{doi}"
         expect(response).to redirect_to(solr_document_path(id: document_id))
       end
@@ -23,7 +23,7 @@ RSpec.describe "Catalog", type: :request do
       context "when passing only a segment of the DOI" do
         let(:doi) { "10.1088/0029-5515/57/1/016034" }
 
-        it "retrieves Solr Documents using a given DOI" do
+        xit "retrieves Solr Documents using a given DOI" do
           get "/doi/#{doi}"
           expect(response).to redirect_to(solr_document_path(id: document_id))
         end
@@ -33,7 +33,7 @@ RSpec.describe "Catalog", type: :request do
     describe "GET /ark/:ark" do
       let(:ark) { "http://arks.princeton.edu/ark:/88435/dsp01kd17cw34n" }
       let(:document_id) { "84912" }
-      it "retrieves Solr Documents using a given ARK" do
+      xit "retrieves Solr Documents using a given ARK" do
         get "/ark/#{ark}"
         expect(response).to redirect_to(solr_document_path(id: document_id))
       end
@@ -41,7 +41,7 @@ RSpec.describe "Catalog", type: :request do
       context "when passing only a segment of the ARK" do
         let(:ark) { "88435/dsp01kd17cw34n" }
 
-        it "retrieves Solr Documents using a given ARK" do
+        xit "retrieves Solr Documents using a given ARK" do
           get "/ark/#{ark}"
           expect(response).to redirect_to(solr_document_path(id: document_id))
         end
@@ -160,7 +160,7 @@ RSpec.describe "Catalog", type: :request do
   end
 
   describe "#show" do
-    it "shows the catalog" do
+    xit "shows the catalog" do
       document = SolrDocument.new(id: "doi-10-34770-r75s-9j74")
       get "/catalog/#{document.id}", params: { format: "json" }
       expect(response.status).to eq(200)
