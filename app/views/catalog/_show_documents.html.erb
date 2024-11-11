@@ -13,17 +13,11 @@
           <table id="files-table" class="table">
             <thead>
               <tr>
-                  <th>Name</th>
+                  <th>Filename</th>
                   <th>Size</th>
               </tr>
             </thead>
             <tbody></tbody>
-            <tfoot>
-              <tr>
-                  <th>Name</th>
-                  <th>Size</th>
-              </tr>
-            </tfood>
           </table>
         <% end %>
 
@@ -41,8 +35,40 @@ $(function() {
   $('#files-table').DataTable({
     ajax: "<%= catalog_file_list_path(@document) %>",
     columns: [
-        { data: 'name' },
+        { data: 'full_path' },
         { data: 'size' }
+    ],
+    columnDefs: [
+      {
+        // filename
+        render: function (data, type, row) {
+          if (type == "display") {
+            html = `<a href="${row.download_url}">${data}</a>`;
+            return html;
+          }
+
+          // Force any readme file to sort to the top
+          var sortValue;
+          if (data.toLowerCase().includes("readme")) {
+            sortValue = "A" + data;
+          } else {
+            sortValue = "Z" + data;
+          }
+          return sortValue;
+        },
+        targets: 0,
+      },
+      {
+        // file size
+        render: function (data, type, row) {
+          if (type == "display") {
+            return row.display_size;
+          }
+          return parseInt(data, 10);
+        },
+        targets: 1,
+        className: 'dt-right'
+      }
     ]
   });
 

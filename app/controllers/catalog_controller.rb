@@ -268,12 +268,11 @@ class CatalogController < ApplicationController
     end
   end
 
+  # This endpoint is used to feed the AJAX call on the Show page for the file list and
+  # therefore the return JSON must be something that DataTables can use.
   def file_list
     document = solr_find(params["id"])
-
-    file1 = {name: "hello.txt", size: 123}
-    file2 = {name: "bye.txt", size: 222}
-    file_list = {data: [file1, file2]}
+    file_list = {data: document.files}
 
     render json: file_list.to_json
   end

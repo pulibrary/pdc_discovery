@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class DatasetFile
-  attr_accessor :name, :description, :format, :size, :mime_type, :sequence, :handle, :extension,
+  attr_accessor :name, :description, :format, :size, :display_size, :mime_type, :sequence, :handle, :extension,
     :source, :download_url, :full_path
 
   def self.from_hash(data, data_source)
@@ -23,6 +23,7 @@ class DatasetFile
     file.description = hash[:description]
     file.mime_type = hash[:mime_type]
     file.size = hash[:size]
+    file.display_size = ActiveSupport::NumberHelper.number_to_human_size(file.size)
     file.sequence = (hash[:sequence] || "").to_i
     # Technically the handle is a property of the dataset item rather than the file (aka bitstream)
     # but we store it at the file level for convenience.
@@ -40,6 +41,7 @@ class DatasetFile
     file.extension = File.extname(file.name)
     file.extension = file.extension[1..] if file.extension != "." # drop the leading period
     file.size = hash[:size]
+    file.display_size = ActiveSupport::NumberHelper.number_to_human_size(file.size)
     file.download_url = hash[:url]
     file
   end
