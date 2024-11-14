@@ -240,7 +240,7 @@ GEM
       activesupport (>= 6.1)
     hashdiff (1.1.1)
     hashie (5.0.0)
-    health-monitor-rails (12.3.0)
+    health-monitor-rails (12.4.0)
       railties (>= 6.1)
     honeybadger (5.16.0)
       logger
@@ -636,7 +636,7 @@ DEPENDENCIES
   ed25519
   faraday_middleware
   foreman
-  health-monitor-rails
+  health-monitor-rails (= 12.4.0)
   honeybadger
   httparty
   jbuilder (~> 2.7)
