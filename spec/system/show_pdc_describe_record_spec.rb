@@ -30,14 +30,14 @@ describe 'Show PDC Page', type: :system, js: true do
   end
   it 'has the README files first' do
     visit '/catalog/doi-10-34770-bm4s-t361'
-    sleep(0.5)
+    sleep(0.1) # wait for the files to load via AJAX
     first_filename_spot = find(:css, '#files-table>tbody>tr:first-child>td', match: :first).text
     expect(first_filename_spot).to eq("Fig11b_readme.hdf")
   end
 
   it "reports sizes using MB and KB" do
     visit '/catalog/doi-10-34770-bm4s-t361'
-    sleep(0.5)
+    sleep(0.1) # wait for the files to load via AJAX
     # These tests are to validate our monkey-patched number_to_human_size (see number_to_human_size_converter.rb)
     # is dividing the size by 1000 instead of using the Rails default of 1024.
     file_size = find(:css, '#files-table>tbody>tr:first-child>td:nth-child(2)', match: :first).text
@@ -53,10 +53,10 @@ describe 'Show PDC Page', type: :system, js: true do
   end
   it 'correctly sorts by file size' do
     visit '/catalog/doi-10-34770-bm4s-t361'
-    sleep(0.5)
+    sleep(0.1) # wait for the files to load via AJAX
     first_filename_spot = find(:css, '#files-table>tbody>tr:first-child>td', match: :first).text
     expect(first_filename_spot).to eq("Fig11b_readme.hdf")
-    find(:xpath, "//thead/tr/th[2]").click  # sort by file size
+    find(:xpath, "//thead/tr/th[2]").click # sort by file size
     first_filename_spot = find(:css, '#files-table>tbody>tr:first-child>td', match: :first).text
     # "readme.txt" is the smallest file and so now it is first
     expect(first_filename_spot).to eq("readme.txt")

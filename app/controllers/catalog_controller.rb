@@ -272,7 +272,7 @@ class CatalogController < ApplicationController
   # therefore the return JSON must be something that DataTables can use.
   def file_list
     document = solr_find(params["id"])
-    file_list = {data: document.files}
+    file_list = { data: document.files }
 
     render json: file_list.to_json
   end
@@ -350,15 +350,13 @@ class CatalogController < ApplicationController
   end
 
   private
-    def solr_find(id)
-      solr_url = Blacklight.default_configuration.connection_config[:url]
-      solr = RSolr.connect(url: solr_url)
-      solr_params = {
-        q: "id:#{id}",
-        fl: '*',
-      }
-      response = solr.get('select', params: solr_params)
-      solr_doc = response["response"]["docs"][0]
-      SolrDocument.new(solr_doc)
-    end
+
+  def solr_find(id)
+    solr_url = Blacklight.default_configuration.connection_config[:url]
+    solr = RSolr.connect(url: solr_url)
+    solr_params = { q: "id:#{id}", fl: '*' }
+    response = solr.get('select', params: solr_params)
+    solr_doc = response["response"]["docs"][0]
+    SolrDocument.new(solr_doc)
+  end
 end
