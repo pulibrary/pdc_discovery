@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'pppl_reporting_feed' => 'catalog#pppl_reporting_feed', as: :pppl_reporting_feed
 
   get 'catalog/:id/bibtex' => 'catalog#bibtex', as: :catalog_bibtex
+  get 'catalog/:id/file-list' => 'catalog#file_list', as: :catalog_file_list
 
   resource :catalog, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
     concerns :searchable

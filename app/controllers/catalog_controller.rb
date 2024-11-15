@@ -268,6 +268,15 @@ class CatalogController < ApplicationController
     end
   end
 
+  # This endpoint is used to feed the AJAX call on the Show page for the file list and
+  # therefore the return JSON must be something that DataTables can use.
+  def file_list
+    document = solr_find(params["id"])
+    file_list = { data: document.files }
+
+    render json: file_list.to_json
+  end
+
   # Returns the raw BibTex citation information
   def bibtex
     _unused, @document = search_service.fetch(params[:id])
@@ -338,5 +347,16 @@ class CatalogController < ApplicationController
     respond_to do |format|
       format.json { render json: @documents }
     end
+  end
+
+  private
+
+  def solr_find(id)
+    solr_url = Blacklight.default_configuration.connection_config[:url]
+    solr = RSolr.connect(url: solr_url)
+    solr_params = { q: "id:#{id}", fl: '*' }
+    response = solr.get('select', params: solr_params)
+    solr_doc = response["response"]["docs"][0]
+    SolrDocument.new(solr_doc)
   end
 end
