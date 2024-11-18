@@ -35,15 +35,15 @@ $(function() {
   $('#files-table').DataTable({
     ajax: "<%= catalog_file_list_path(@document) %>",
     columns: [
-        { data: 'full_path' },
-        { data: 'size' }
+        { data: 0 },
+        { data: 1 }
     ],
     columnDefs: [
       {
         // filename
         render: function (data, type, row) {
           if (type == "display") {
-            html = `<a href="${row.download_url}">${data}</a>`;
+            html = `<a href="${row[2]}">${data}</a>`;
             return html;
           }
 
@@ -62,7 +62,7 @@ $(function() {
         // file size
         render: function (data, type, row) {
           if (type == "display") {
-            return row.display_size;
+            return row[3];
           }
           return parseInt(data, 10);
         },

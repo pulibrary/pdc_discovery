@@ -272,8 +272,15 @@ class CatalogController < ApplicationController
   # therefore the return JSON must be something that DataTables can use.
   def file_list
     document = solr_find(params["id"])
-    file_list = { data: document.files }
-
+    data_list = []
+    (0..4).each do 
+      document.files.each do |file|
+        file_info = [file.full_path, file.size, file.download_url, file.display_size]
+        data_list << file_info
+      end
+    end
+    
+    file_list = { data: data_list }
     render json: file_list.to_json
   end
 
