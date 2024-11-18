@@ -42,8 +42,14 @@ $(function() {
       {
         // filename
         render: function (data, type, row) {
+          var html;
           if (type == "display") {
-            html = `<a href="${row.download_url}">${data}</a>`;
+            if(data.endsWith("/")){
+              html = data;
+            }
+            else{
+              html = `<a href="${row.download_url}">${data}</a>`;
+            }
             return html;
           }
 
@@ -62,7 +68,12 @@ $(function() {
         // file size
         render: function (data, type, row) {
           if (type == "display") {
-            return row.display_size;
+            if(row.full_path.endsWith("/")){
+              return "";
+            }
+            else{
+              return row.display_size;
+            }
           }
           return parseInt(data, 10);
         },
