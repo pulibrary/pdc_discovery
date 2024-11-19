@@ -47,11 +47,26 @@ class Plausible
     url = "#{PLAUSIBLE_API_URL}/stats/breakdown?site_id=#{site_id}&property=#{property}&filters=#{filters}&metrics=#{metrics}&period=#{period}&date=#{date_period}"
     authorization = "Bearer #{ENV['PLAUSIBLE_KEY']}"
     response = HTTParty.get(url, headers: { 'Authorization' => authorization })
-    total_downloads = 0
-    response["results"].each do |result|
-      next if result["filename"] == "(none)" # Skip old test data
-      total_downloads += result["visitors"]
+
+    # retry if the response is an error
+    if response.code != 200
+      Rails.logger.error "PLAUSIBLE ERROR: #{response}"
+      sleep(1.0)
+      response = HTTParty.get(url, headers: { 'Authorization' => authorization })
     end
+
+    total_downloads = 0
+
+    # retry if the response is an error
+    if response.code != 200
+      Rails.logger.error "PLAUSIBLE ERROR after retry: #{response}"
+    else
+      response["results"].each do |result|
+        next if result["filename"] == "(none)" # Skip old test data
+        total_downloads += result["visitors"]
+      end
+    end
+
     total_downloads
   rescue => e
     Rails.logger.error "PLAUSIBLE ERROR: (Downloads for document: #{document_id}) #{e.message}"
