@@ -8,7 +8,7 @@
         "author": <%= authors_helper(@document.authors_ordered) %>,
         "datePublished": "<%= @document.date_created %>",
         "dateModified": "<%= @document.date_modified %>",
-        "version": "1",
+        "version": "<%= @document.version_number %>",
         "description": "<%= @document.description %>",
         "keywords": <%= keywords_helper(@document.subject) %>,
         "citation": 
