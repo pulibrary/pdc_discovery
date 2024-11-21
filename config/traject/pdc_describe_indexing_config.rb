@@ -251,6 +251,12 @@ to_field 'globus_uri_ssi' do |record, accumulator, _context|
   end
 end
 
+# Version number
+to_field 'version_ssi' do |record, accumulator, _context|
+  version_number = record.xpath("/hash/resource/version-number/text()").first&.text
+  accumulator.concat [version_number]
+end
+
 # Indexes the entire text in a catch-all field.
 to_field 'all_text_teimv' do |record, accumulator, _context|
   accumulator.concat [record.text]
