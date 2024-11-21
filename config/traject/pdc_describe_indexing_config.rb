@@ -27,6 +27,12 @@ end
 
 # the <pdc_describe_json> element contains a CDATA node with a JSON blob in it
 to_field 'pdc_describe_json_ss' do |record, accumulator, _c|
+  byebug
+  # Here is the weird part: `record.xpath("/hash/pdc_describe_json/text()").first`
+  # returns nil for the huge record.
+  #
+  # Very strange given that we confirmed that the value was set in the prep_for_indexing()
+  # method in describe_indexer.rb plus it works for all other records!
   datacite = record.xpath("/hash/pdc_describe_json/text()").first.content
   accumulator.concat [datacite]
 end
