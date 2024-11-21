@@ -321,6 +321,10 @@ class SolrDocument
     fetch("relation_has_version_ssim", [])
   end
 
+  def version_number
+    fetch("version_number_ssi", "")
+  end
+
   def relation_is_based_on
     fetch("relation_is_based_on_ssim", [])
   end
