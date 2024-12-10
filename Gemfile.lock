@@ -171,6 +171,15 @@ GEM
       rexml
     crass (1.0.6)
     csv (3.3.0)
+    dartsass-rails (0.5.1)
+      railties (>= 6.0.0)
+      sass-embedded (~> 1.63)
+    dartsass-sprockets (3.1.0)
+      railties (>= 4.0.0)
+      sassc-embedded (~> 1.69)
+      sprockets (> 3.0)
+      sprockets-rails
+      tilt
     date (3.3.4)
     deprecation (1.1.0)
       activesupport
@@ -238,6 +247,24 @@ GEM
     foreman (0.88.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    google-protobuf (4.29.1)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.29.1-aarch64-linux)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.29.1-arm64-darwin)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.29.1-x86-linux)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.29.1-x86_64-darwin)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.29.1-x86_64-linux)
+      bigdecimal
+      rake (>= 13)
     hashdiff (1.1.1)
     hashie (5.0.0)
     health-monitor-rails (12.4.0)
@@ -484,16 +511,28 @@ GEM
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
-    sass-rails (6.0.0)
-      sassc-rails (~> 2.1, >= 2.1.1)
-    sassc (2.4.0)
-      ffi (~> 1.9)
-    sassc-rails (2.1.2)
-      railties (>= 4.0.0)
-      sassc (>= 2.0)
-      sprockets (> 3.0)
-      sprockets-rails
-      tilt
+    sass-embedded (1.82.0-aarch64-linux-gnu)
+      google-protobuf (~> 4.28)
+    sass-embedded (1.82.0-aarch64-linux-musl)
+      google-protobuf (~> 4.28)
+    sass-embedded (1.82.0-arm-linux-gnueabihf)
+      google-protobuf (~> 4.28)
+    sass-embedded (1.82.0-arm-linux-musleabihf)
+      google-protobuf (~> 4.28)
+    sass-embedded (1.82.0-arm64-darwin)
+      google-protobuf (~> 4.28)
+    sass-embedded (1.82.0-x86-linux-gnu)
+      google-protobuf (~> 4.28)
+    sass-embedded (1.82.0-x86-linux-musl)
+      google-protobuf (~> 4.28)
+    sass-embedded (1.82.0-x86_64-darwin)
+      google-protobuf (~> 4.28)
+    sass-embedded (1.82.0-x86_64-linux-gnu)
+      google-protobuf (~> 4.28)
+    sass-embedded (1.82.0-x86_64-linux-musl)
+      google-protobuf (~> 4.28)
+    sassc-embedded (1.80.1)
+      sass-embedded (~> 1.80)
     scrub_rb (1.0.1)
     securerandom (0.3.1)
     selenium-webdriver (4.25.0)
@@ -631,6 +670,8 @@ DEPENDENCIES
   capistrano-rails (~> 1.4)
   capybara
   coveralls_reborn (~> 0.28)
+  dartsass-rails (~> 0.5.0)
+  dartsass-sprockets
   devise
   devise-guests (~> 0.6)
   ed25519
@@ -661,7 +702,6 @@ DEPENDENCIES
   rspec-retry
   rspec-solr
   rubocop-rspec
-  sass-rails (>= 6)
   selenium-webdriver
   simplecov (~> 0.22)
   strscan (>= 3.1.0)
