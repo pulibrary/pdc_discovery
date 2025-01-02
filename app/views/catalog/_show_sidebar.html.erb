@@ -10,7 +10,6 @@
   <%= render_sidebar_subject_search_links "Keywords", @document.subject, "subject_all_ssim" %>
 
   <% file_counts = @document.file_counts.map { |group| "#{group[:extension]}(#{group[:file_count]})" } %>
-  <%# TODO: restore the count to be 10 (3 different places below) %>
   <%if file_counts.count <= 2 %>
     <%= render_sidebar_values "File Types: ", file_counts, ", " %>
   <% else %>

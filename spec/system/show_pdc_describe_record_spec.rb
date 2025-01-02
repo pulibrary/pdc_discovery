@@ -52,12 +52,32 @@ describe 'Show PDC Page', type: :system, js: true do
     expect(third_filename_spot).to eq("Fig10a.hdf")
   end
 
-  # TODO: change to test file types!
-  it 'shows file types' do
+  it 'shows file types when there is more than 10 in sidebar' do
+    # Load a record with more than 2 file types - set the limit to be 2 in _show_sidebar.html.erb
     visit '/catalog/doi-10-34770-bm4s-t361'
-    third_filename_spot = find(:xpath, "//table[@id='files-table']/tbody/tr[3]/td[1]").text
-    expect(third_filename_spot).to eq("Fig10a.hdf")
+    # Checks that the Show More button appears
+    expect(page).to have_content("Show More")
+    # Checks that first ten file types appear
+    inital_file_types = find(:xpath, "//*[@id='document-file-type-list']/div/span[2]").text
+    expect(inital_file_types).to eq("hdf(17), png(5)")
+    expect(page).to have_selector('#document-file-type-list-extra', visible: false)
+    # Click the button
+    find(:xpath, "//*[@id='document-file-type-list-toggle']/span").click
+    # Checks that the Show Less button appears
+    expect(page).to have_content("Show Less")
+    # Checks that all file types appear
+    expect(inital_file_types).to eq("hdf(17), png(5)")
+    rest_of_file_types = find(:xpath, "//*[@id='document-file-type-list-extra']/div/span[2]").text
+    expect(rest_of_file_types).to eq("txt(1)")
+    expect(page).to have_selector('#document-file-type-list-extra', visible: true)
+    # Clicks button again
+    find(:xpath, "//*[@id='document-file-type-list-toggle']/span").click
+    # Checks that Show More button appears and file types become hidden again
+    expect(page).to have_content("Show More")
+    expect(inital_file_types).to eq("hdf(17), png(5)")
+    expect(page).to have_selector('#document-file-type-list-extra', visible: false)
   end
+  
 
   it 'correctly sorts by file size' do
     visit '/catalog/doi-10-34770-bm4s-t361'
