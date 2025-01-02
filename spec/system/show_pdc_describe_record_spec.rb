@@ -51,6 +51,14 @@ describe 'Show PDC Page', type: :system, js: true do
     third_filename_spot = find(:xpath, "//table[@id='files-table']/tbody/tr[3]/td[1]").text
     expect(third_filename_spot).to eq("Fig10a.hdf")
   end
+
+  # TODO: change to test file types!
+  it 'shows file types' do
+    visit '/catalog/doi-10-34770-bm4s-t361'
+    third_filename_spot = find(:xpath, "//table[@id='files-table']/tbody/tr[3]/td[1]").text
+    expect(third_filename_spot).to eq("Fig10a.hdf")
+  end
+
   it 'correctly sorts by file size' do
     visit '/catalog/doi-10-34770-bm4s-t361'
     sleep(0.1) # wait for the files to load via AJAX
