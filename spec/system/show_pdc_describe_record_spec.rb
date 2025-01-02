@@ -57,7 +57,7 @@ describe 'Show PDC Page', type: :system, js: true do
     visit '/catalog/doi-10-34770-bm4s-t361'
     # Checks that the Show More button appears
     expect(page).to have_content("Show More")
-    # Checks that first ten file types appear
+    # Checks that first 2 file types appear
     inital_file_types = find(:xpath, "//*[@id='document-file-type-list']/div/span[2]").text
     expect(inital_file_types).to eq("hdf(17), png(5)")
     expect(page).to have_selector('#document-file-type-list-extra', visible: false)
