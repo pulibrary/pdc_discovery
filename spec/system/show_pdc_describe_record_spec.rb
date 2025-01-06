@@ -77,7 +77,6 @@ describe 'Show PDC Page', type: :system, js: true do
     expect(inital_file_types).to eq("hdf(17), png(5)")
     expect(page).to have_selector('#document-file-type-list-extra', visible: false)
   end
-  
 
   it 'correctly sorts by file size' do
     visit '/catalog/doi-10-34770-bm4s-t361'
