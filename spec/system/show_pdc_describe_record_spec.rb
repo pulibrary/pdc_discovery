@@ -51,6 +51,29 @@ describe 'Show PDC Page', type: :system, js: true do
     third_filename_spot = find(:xpath, "//table[@id='files-table']/tbody/tr[3]/td[1]").text
     expect(third_filename_spot).to eq("Fig10a.hdf")
   end
+
+  it 'shows file types when there is more than 10 in sidebar' do
+    visit '/catalog/doi-10-34770-bm4s-t361'
+    # initially only first ten file types are shown
+    expect(page).to have_content("Show More")
+    expect(page).to have_selector('#document-file-type-list-toggle', visible: true)
+    inital_file_types = find(:xpath, "//*[@id='document-file-type-list']/div/span[2]").text
+    expect(inital_file_types).to eq("hdf(12), ccc(1), bbb(1), aaa(1), pdf(1), py(1), rb(1), xls(1), doc(1), tiff(1)")
+    expect(page).to have_selector('#document-file-type-list-extra', visible: false)
+    # clicks the Show More button to show the rest of the file types
+    find(:xpath, "//*[@id='document-file-type-list-toggle']/span").click
+    expect(page).to have_content("Show Less")
+    expect(inital_file_types).to eq("hdf(12), ccc(1), bbb(1), aaa(1), pdf(1), py(1), rb(1), xls(1), doc(1), tiff(1)")
+    rest_of_file_types = find(:xpath, "//*[@id='document-file-type-list-extra']/div/span[2]").text
+    expect(rest_of_file_types).to eq("jpg(1), txt(1)")
+    expect(page).to have_selector('#document-file-type-list-extra', visible: true)
+    # Clicks the Show Less button to hide the rest of the file types
+    find(:xpath, "//*[@id='document-file-type-list-toggle']/span").click
+    expect(page).to have_content("Show More")
+    expect(inital_file_types).to eq("hdf(12), ccc(1), bbb(1), aaa(1), pdf(1), py(1), rb(1), xls(1), doc(1), tiff(1)")
+    expect(page).to have_selector('#document-file-type-list-extra', visible: false)
+  end
+
   it 'correctly sorts by file size' do
     visit '/catalog/doi-10-34770-bm4s-t361'
     sleep(0.1) # wait for the files to load via AJAX
