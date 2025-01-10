@@ -25,5 +25,6 @@ production:
 
 staging:
   <<: *default
-  pdc_describe_rss: <%= ENV["PDC_DESCRIBE_RSS"] || "https://pdc-describe-staging.princeton.edu/describe/works.rss" %>
+  # Notice that we fetch production data for indexing since it is more realistic
+  pdc_describe_rss: <%= ENV["PDC_DESCRIBE_RSS"] || "https://pdc-describe-prod.princeton.edu/describe/works.rss" %>
   plausible_site_id: <%= "pdc-discovery-staging.princeton.edu" %>
