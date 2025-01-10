@@ -16,6 +16,13 @@ settings do
   provide 'logger', Logger.new($stderr, level: Logger::WARN)
 end
 
+# Converting the XML to JSON is a bit expensive therefore we make that conversion
+# only once per record and save it to the context so that we can re-use it.
+each_record do |record, context|
+  xml = record.xpath("/hash").first.to_xml
+  context.clipboard[:record_json] = Hash.from_xml(xml).to_json
+end
+
 # ==================
 # Main fields
 
@@ -25,16 +32,8 @@ to_field 'id' do |record, accumulator, _c|
   accumulator.concat [munged_doi]
 end
 
-# the <pdc_describe_json> element contains a CDATA node with a JSON blob in it
-to_field 'pdc_describe_json_ss' do |record, accumulator, _c|
-  byebug
-  # Here is the weird part: `record.xpath("/hash/pdc_describe_json/text()").first`
-  # returns nil for the huge record.
-  #
-  # Very strange given that we confirmed that the value was set in the prep_for_indexing()
-  # method in describe_indexer.rb plus it works for all other records!
-  datacite = record.xpath("/hash/pdc_describe_json/text()").first.content
-  accumulator.concat [datacite]
+to_field 'pdc_describe_json_ss' do |record, accumulator, context|
+  accumulator.concat [context.clipboard[:record_json]]
 end
 
 # Track the source of this record
@@ -105,21 +104,21 @@ to_field 'author_ssim' do |record, accumulator, _c|
 end
 
 # Extract the author data from the pdc_describe_json and save it on its own field as JSON
-to_field 'authors_json_ss' do |record, accumulator, _c|
-  pdc_json = record.xpath("/hash/pdc_describe_json/text()").first.content
-  authors = JSON.parse(pdc_json).dig("resource", "creators") || []
+to_field 'authors_json_ss' do |record, accumulator, context|
+  pdc_json = context.clipboard[:record_json]
+  authors = JSON.parse(pdc_json).dig("hash", "resource", "creators") || []
   accumulator.concat [authors.to_json]
 end
 
-to_field 'authors_orcid_ssim' do |record, accumulator, _c|
-  pdc_json = record.xpath("/hash/pdc_describe_json/text()").first.content
+to_field 'authors_orcid_ssim' do |record, accumulator, context|
+  pdc_json = context.clipboard[:record_json]
   authors_json = JSON.parse(pdc_json).dig("resource", "creators") || []
   orcids = authors_json.map { |author| Author.new(author).orcid }
   accumulator.concat orcids.compact.uniq
 end
 
-to_field 'authors_affiliation_ssim' do |record, accumulator, _c|
-  pdc_json = record.xpath("/hash/pdc_describe_json/text()").first.content
+to_field 'authors_affiliation_ssim' do |record, accumulator, context|
+  pdc_json = context.clipboard[:record_json]
   authors_json = JSON.parse(pdc_json).dig("resource", "creators") || []
   affiliations = authors_json.map { |author| Author.new(author).affiliation_name }
   accumulator.concat affiliations.compact.uniq
@@ -229,6 +228,10 @@ end
 
 # ==================
 # Store files metadata as a single JSON string so that we can display detailed information for each of them.
+#
+# Note that this information is duplicated with what we save in `pdc_describe_json_ss`. For large
+# datasets (e.g. those with 60K files) this is less than ideal. We should look into optimizing
+# this when we take care of https://github.com/pulibrary/pdc_discovery/issues/738
 to_field 'files_ss' do |record, accumulator, _context|
   raw_doi = record.xpath("/hash/resource/doi/text()").to_s
   files = record.xpath("/hash/files/file").map do |file|

@@ -39,31 +39,12 @@ class DescribeIndexer
     end
   end
 
-  # Given a json document, return an XML string that contains
-  # the JSON blob as a CDATA element
+  # Converts the JSON payload to XML which is what Traject expects
   # @param [String] json
   # @return [String]
   def prep_for_indexing(json)
     parsed = JSON.parse(json)
-
-    puts parsed["resource"]["doi"]
-    if parsed["resource"]["doi"].include?("n42z-hb72")
-      puts "truncating file list"
-      parsed["files"] = []
-    end
-
-    byebug
-
-    # This line takes ~2 minutes for the huge dataset
-    xml = parsed.to_xml
-
-    doc = Nokogiri::XML(xml)
-    collection_node = doc.at('group')
-    cdata = Nokogiri::XML::CDATA.new(doc, json)   # 13_880_264 (13 MB) for the huge dataset
-    collection_node.add_next_sibling("<pdc_describe_json></pdc_describe_json>")
-    pdc_describe_json_node = doc.at('pdc_describe_json')
-    pdc_describe_json_node.add_child(cdata)
-    doc.to_s
+    parsed.to_xml
   end
 
   def index_one(json)
@@ -121,18 +102,18 @@ private
   end
 
   def process_url(url)
-    # Only process to record for now:
+    # Only process two records for now:
     #
     #   small: https://pdc-describe-prod.princeton.edu/describe/works/349.json DOI: 10.34770/jmx2-4219
     #   huge.: https://pdc-describe-prod.princeton.edu/describe/works/470.json DOI: /n42z-hb72
     #
     # The huge dataset has 60K files.
-    if url != "https://pdc-describe-prod.princeton.edu/describe/works/470.json" &&
-      url != "https://pdc-describe-prod.princeton.edu/describe/works/349.json"
-      puts "SKIP: #{url}"
-      return
-    end
-    puts "PROCESS: #{url}"
+    # if url != "https://pdc-describe-prod.princeton.edu/describe/works/470.json" &&
+    #   url != "https://pdc-describe-prod.princeton.edu/describe/works/349.json"
+    #   puts "SKIP: #{url}"
+    #   return
+    # end
+    # puts "PROCESS: #{url}"
     # Bumping the timeout because fetching record https://pdc-describe-prod.princeton.edu/describe/works/470.json
     # (which has 60K files) takes more than 30 seconds.
     uri = URI.open(url, open_timeout: 60, read_timeout: 60)
