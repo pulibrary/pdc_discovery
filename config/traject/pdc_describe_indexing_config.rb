@@ -12,6 +12,17 @@ settings do
   provide 'solr.url', Indexing::SolrCloudHelper.collection_writer_url
   provide 'reader_class_name', 'Traject::NokogiriReader'
   provide 'solr_writer.commit_on_close', 'true'
+
+  # ====================================================================
+  # TEMPORARY: Testing Solr parameters to see if we can get rid of errors indexing.
+  #
+  # See also: https://www.rubydoc.info/gems/traject/Traject/SolrJsonWriter
+  # Parameters to consider:
+  #   batch_size
+  #   thread_pool
+  #
+  provide 'solr_writer.batch_size', 1
+
   provide 'repository', ENV['REPOSITORY_ID']
   provide 'logger', Logger.new($stderr, level: Logger::WARN)
 end
