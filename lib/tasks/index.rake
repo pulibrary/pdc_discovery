@@ -3,21 +3,14 @@
 namespace :index do
   desc 'CRON JOB Re-index all research data'
   task research_data: :environment do
-    # TEMPORARY: Skip the cronjob while we are testing
-    Rails.logger.info "Indexing: Skipped cron job indexing"
-  end
-
-  task research_data_manual: :environment do
-    # TEMPORARY: Manual reindexing
     Rails.logger.info "Indexing: Research Data indexing started"
     Indexing::SolrCloudHelper.create_collection_writer
     Rails.logger.info "Indexing: Created a new collection for writing: #{Indexing::SolrCloudHelper.collection_writer_url}"
 
     Rails.logger.info "Indexing: Fetching PDC Describe records"
     Rake::Task['index:pdc_describe_research_data'].invoke
-    # TEMPORARY: Skip DataSpace for now
-    # Rails.logger.info "Indexing: Fetching DataSpace records"
-    # Rake::Task['index:dspace_research_data'].invoke
+    Rails.logger.info "Indexing: Fetching DataSpace records"
+    Rake::Task['index:dspace_research_data'].invoke
     Rails.logger.info "Indexing: Fetching completed"
 
     Indexing::SolrCloudHelper.update_solr_alias!
