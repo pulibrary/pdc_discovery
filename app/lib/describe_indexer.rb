@@ -89,16 +89,16 @@ private
     rss_url_list.each do |url|
       process_url(url)
     rescue => ex
-      Rails.logger.warn "Error importing record from #{url}. Will retry. Exception: #{ex.message}"
+      Rails.logger.warn "Indexing: Error importing record from #{url}. Will retry. Exception: #{ex.message}"
       urls_to_retry << url
     end
 
     # retry an errored urls a second time and send error only if they don't work a second time
     urls_to_retry.each do |url|
-      Rails.logger.info "Retrying record #{url}."
+      Rails.logger.info "Indexing: Retrying record #{url}."
       process_url(url)
     rescue => ex
-      Rails.logger.error "Error importing record from #{url}. Retry failed. Exception: #{ex.message}"
+      Rails.logger.error "Indexing: Error importing record from #{url}. Retry failed. Exception: #{ex.message}"
       Honeybadger.notify "Error importing record from #{url}. Exception: #{ex.message}"
     end
   end
@@ -116,6 +116,7 @@ private
     traject_indexer.process(resource_xml)
     elapsed_index = Time.zone.now - start_index
 
-    Rails.logger.info "Successfully imported record from #{url} (read: #{'%.2f' % elapsed_read} s, index: #{'%.2f' % elapsed_index} s)"
+    timing_info = "(read: #{format('%.2f', elapsed_read)} s, index: #{format('%.2f', elapsed_index)} s)"
+    Rails.logger.info "Indexing: Successfully imported record from #{url}. #{timing_info} "
   end
 end

@@ -13,15 +13,13 @@ settings do
   provide 'reader_class_name', 'Traject::NokogiriReader'
   provide 'solr_writer.commit_on_close', 'true'
 
-  # ====================================================================
-  # TEMPORARY: Testing Solr parameters to see if we can get rid of errors indexing.
+  # There are some parameters in Traject that allows us to configure values related
+  # to the Solr connection, in particular `batch_size` and the `thread_pool`. However,
+  # given that we are calling traject for each individual record (rather than for a
+  # batch of records) they might not apply to our scenario.
   #
-  # See also: https://www.rubydoc.info/gems/traject/Traject/SolrJsonWriter
-  # Parameters to consider:
-  #   batch_size
-  #   thread_pool
-  #
-  # provide 'solr_writer.batch_size', 1
+  # The documentation is here in case we want to try them out:
+  # https://www.rubydoc.info/gems/traject/Traject/SolrJsonWriter
 
   provide 'repository', ENV['REPOSITORY_ID']
   provide 'logger', Logger.new($stderr, level: Logger::WARN)
@@ -240,28 +238,25 @@ end
 # ==================
 # Store files metadata as a single JSON string so that we can display detailed information for each of them.
 #
-# Note that this information is duplicated with what we save in `pdc_describe_json_ss`. For large
+# TODO: Note that this information is duplicated with what we save in `pdc_describe_json_ss`. For large
 # datasets (e.g. those with 60K files) this is less than ideal. We should look into optimizing
 # this when we take care of https://github.com/pulibrary/pdc_discovery/issues/738
 to_field 'files_ss' do |record, accumulator, _context|
-  # raw_doi = record.xpath("/hash/resource/doi/text()").to_s
-  # files = record.xpath("/hash/files/file").map do |file|
-  #   file_name = file.xpath("filename").text
-  #   if file_name.include?("/princeton_data_commons/")
-  #     # Exclude the preservation files
-  #     nil
-  #   else
-  #     {
-  #       name: File.basename(file.xpath("filename").text),
-  #       full_name: Indexing::ImportHelper.display_filename(file.xpath("filename").text, raw_doi),
-  #       size: file.xpath("size").text,
-  #       url: file.xpath('url').text
-  #     }
-  #   end
-  # end.compact
-  # TEMPORARY: Does the index work better if we remove this duplicated value?
-  #            We should be able to calculate this with the data on pdc_describe_json_ss
-  files = []
+  raw_doi = record.xpath("/hash/resource/doi/text()").to_s
+  files = record.xpath("/hash/files/file").map do |file|
+    file_name = file.xpath("filename").text
+    if file_name.include?("/princeton_data_commons/")
+      # Exclude the preservation files
+      nil
+    else
+      {
+        name: File.basename(file.xpath("filename").text),
+        full_name: Indexing::ImportHelper.display_filename(file.xpath("filename").text, raw_doi),
+        size: file.xpath("size").text,
+        url: file.xpath('url').text
+      }
+    end
+  end.compact
   accumulator.concat [files.to_json.to_s]
 end
 
