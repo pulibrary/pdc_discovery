@@ -29,7 +29,7 @@ end
 # only once per record and save it to the context so that we can re-use it.
 each_record do |record, context|
   xml = record.xpath("/hash").first.to_xml
-  context.clipboard[:record_json] = Hash.from_xml(xml).to_json
+  context.clipboard[:record_json] = Hash.from_xml(xml)["hash"].to_json
 end
 
 # ==================
@@ -115,7 +115,7 @@ end
 # Extract the author data from the pdc_describe_json and save it on its own field as JSON
 to_field 'authors_json_ss' do |_record, accumulator, context|
   pdc_json = context.clipboard[:record_json]
-  authors = JSON.parse(pdc_json).dig("hash", "resource", "creators") || []
+  authors = JSON.parse(pdc_json).dig("resource", "creators") || []
   accumulator.concat [authors.to_json]
 end
 
