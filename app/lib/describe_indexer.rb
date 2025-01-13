@@ -88,38 +88,34 @@ private
     urls_to_retry = []
     rss_url_list.each do |url|
       process_url(url)
-    rescue
+    rescue => ex
+      Rails.logger.warn "Error importing record from #{url}. Will retry. Exception: #{ex.message}"
       urls_to_retry << url
     end
 
     # retry an errored urls a second time and send error only if they don't work a second time
     urls_to_retry.each do |url|
+      Rails.logger.info "Retrying record #{url}."
       process_url(url)
     rescue => ex
-      Rails.logger.warn "Error importing record from #{url}. Exception: #{ex.message}"
+      Rails.logger.error "Error importing record from #{url}. Retry failed. Exception: #{ex.message}"
       Honeybadger.notify "Error importing record from #{url}. Exception: #{ex.message}"
     end
   end
 
   def process_url(url)
-    # Only process two records for now:
-    #
-    #   small: https://pdc-describe-prod.princeton.edu/describe/works/349.json DOI: 10.34770/jmx2-4219
-    #   huge.: https://pdc-describe-prod.princeton.edu/describe/works/470.json DOI: /n42z-hb72
-    #
-    # The huge dataset has 60K files.
-    # if url != "https://pdc-describe-prod.princeton.edu/describe/works/470.json" &&
-    #   url != "https://pdc-describe-prod.princeton.edu/describe/works/349.json"
-    #   puts "SKIP: #{url}"
-    #   return
-    # end
-    # puts "PROCESS: #{url}"
-    # Bumping the timeout because fetching record https://pdc-describe-prod.princeton.edu/describe/works/470.json
-    # (which has 60K files) takes more than 30 seconds.
+    # Bumping the timeout to 60 seconds because datasets with lots of files (e.g. more than 30K files)
+    # can take a while to be read (for example https://pdc-describe-prod.princeton.edu/describe/works/470.json)
+    start_read = Time.zone.now
     uri = URI.open(url, open_timeout: 60, read_timeout: 60)
     resource_json = uri.read
+    elapsed_read = Time.zone.now - start_read
+
+    start_index = Time.zone.now
     resource_xml = prep_for_indexing(resource_json)
     traject_indexer.process(resource_xml)
-    Rails.logger.info "Successfully imported record from #{url}."
+    elapsed_index = Time.zone.now - start_index
+
+    Rails.logger.info "Successfully imported record from #{url} (read: #{'%.2f' % elapsed_read} s, index: #{'%.2f' % elapsed_index} s)"
   end
 end

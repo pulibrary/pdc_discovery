@@ -28,7 +28,10 @@ set :job_template, "bash -l -c 'export PATH=\"/usr/local/bin/:$PATH\" && :job'"
 #   rake "index:research_data"
 # end
 
-# Rebuild index completely every 30 minutes while we're doing active data migration
-every 30.minutes, roles: [:reindex] do
+# Rebuild index completely every 60 minutes
+#
+# Bumped the schedule to 60 minutes since it's taking close to 30 minutes now that we are
+# indexing datasets with very large number of files.
+every 60.minutes, roles: [:reindex] do
   rake "index:research_data"
 end

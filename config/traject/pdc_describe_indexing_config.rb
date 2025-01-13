@@ -21,7 +21,7 @@ settings do
   #   batch_size
   #   thread_pool
   #
-  provide 'solr_writer.batch_size', 1
+  # provide 'solr_writer.batch_size', 1
 
   provide 'repository', ENV['REPOSITORY_ID']
   provide 'logger', Logger.new($stderr, level: Logger::WARN)
@@ -43,7 +43,7 @@ to_field 'id' do |record, accumulator, _c|
   accumulator.concat [munged_doi]
 end
 
-to_field 'pdc_describe_json_ss' do |record, accumulator, context|
+to_field 'pdc_describe_json_ss' do |_record, accumulator, context|
   accumulator.concat [context.clipboard[:record_json]]
 end
 
@@ -115,20 +115,20 @@ to_field 'author_ssim' do |record, accumulator, _c|
 end
 
 # Extract the author data from the pdc_describe_json and save it on its own field as JSON
-to_field 'authors_json_ss' do |record, accumulator, context|
+to_field 'authors_json_ss' do |_record, accumulator, context|
   pdc_json = context.clipboard[:record_json]
   authors = JSON.parse(pdc_json).dig("hash", "resource", "creators") || []
   accumulator.concat [authors.to_json]
 end
 
-to_field 'authors_orcid_ssim' do |record, accumulator, context|
+to_field 'authors_orcid_ssim' do |_record, accumulator, context|
   pdc_json = context.clipboard[:record_json]
   authors_json = JSON.parse(pdc_json).dig("resource", "creators") || []
   orcids = authors_json.map { |author| Author.new(author).orcid }
   accumulator.concat orcids.compact.uniq
 end
 
-to_field 'authors_affiliation_ssim' do |record, accumulator, context|
+to_field 'authors_affiliation_ssim' do |_record, accumulator, context|
   pdc_json = context.clipboard[:record_json]
   authors_json = JSON.parse(pdc_json).dig("resource", "creators") || []
   affiliations = authors_json.map { |author| Author.new(author).affiliation_name }
@@ -244,21 +244,24 @@ end
 # datasets (e.g. those with 60K files) this is less than ideal. We should look into optimizing
 # this when we take care of https://github.com/pulibrary/pdc_discovery/issues/738
 to_field 'files_ss' do |record, accumulator, _context|
-  raw_doi = record.xpath("/hash/resource/doi/text()").to_s
-  files = record.xpath("/hash/files/file").map do |file|
-    file_name = file.xpath("filename").text
-    if file_name.include?("/princeton_data_commons/")
-      # Exclude the preservation files
-      nil
-    else
-      {
-        name: File.basename(file.xpath("filename").text),
-        full_name: Indexing::ImportHelper.display_filename(file.xpath("filename").text, raw_doi),
-        size: file.xpath("size").text,
-        url: file.xpath('url').text
-      }
-    end
-  end.compact
+  # raw_doi = record.xpath("/hash/resource/doi/text()").to_s
+  # files = record.xpath("/hash/files/file").map do |file|
+  #   file_name = file.xpath("filename").text
+  #   if file_name.include?("/princeton_data_commons/")
+  #     # Exclude the preservation files
+  #     nil
+  #   else
+  #     {
+  #       name: File.basename(file.xpath("filename").text),
+  #       full_name: Indexing::ImportHelper.display_filename(file.xpath("filename").text, raw_doi),
+  #       size: file.xpath("size").text,
+  #       url: file.xpath('url').text
+  #     }
+  #   end
+  # end.compact
+  # TEMPORARY: Does the index work better if we remove this duplicated value?
+  #            We should be able to calculate this with the data on pdc_describe_json_ss
+  files = []
   accumulator.concat [files.to_json.to_s]
 end
 
