@@ -39,20 +39,12 @@ class DescribeIndexer
     end
   end
 
-  # Given a json document, return an XML string that contains
-  # the JSON blob as a CDATA element
+  # Converts the JSON payload to XML which is what Traject expects
   # @param [String] json
   # @return [String]
   def prep_for_indexing(json)
     parsed = JSON.parse(json)
-    xml = parsed.to_xml
-    doc = Nokogiri::XML(xml)
-    collection_node = doc.at('group')
-    cdata = Nokogiri::XML::CDATA.new(doc, json)
-    collection_node.add_next_sibling("<pdc_describe_json></pdc_describe_json>")
-    pdc_describe_json_node = doc.at('pdc_describe_json')
-    pdc_describe_json_node.add_child(cdata)
-    doc.to_s
+    parsed.to_xml
   end
 
   def index_one(json)
@@ -96,24 +88,35 @@ private
     urls_to_retry = []
     rss_url_list.each do |url|
       process_url(url)
-    rescue
+    rescue => ex
+      Rails.logger.warn "Indexing: Error importing record from #{url}. Will retry. Exception: #{ex.message}"
       urls_to_retry << url
     end
 
     # retry an errored urls a second time and send error only if they don't work a second time
     urls_to_retry.each do |url|
+      Rails.logger.info "Indexing: Retrying record #{url}."
       process_url(url)
     rescue => ex
-      Rails.logger.warn "Error importing record from #{url}. Exception: #{ex.message}"
+      Rails.logger.error "Indexing: Error importing record from #{url}. Retry failed. Exception: #{ex.message}"
       Honeybadger.notify "Error importing record from #{url}. Exception: #{ex.message}"
     end
   end
 
   def process_url(url)
-    uri = URI.open(url, open_timeout: 30, read_timeout: 30)
+    # Bumping the timeout to 60 seconds because datasets with lots of files (e.g. more than 30K files)
+    # can take a while to be read (for example https://pdc-describe-prod.princeton.edu/describe/works/470.json)
+    start_read = Time.zone.now
+    uri = URI.open(url, open_timeout: 60, read_timeout: 60)
     resource_json = uri.read
+    elapsed_read = Time.zone.now - start_read
+
+    start_index = Time.zone.now
     resource_xml = prep_for_indexing(resource_json)
     traject_indexer.process(resource_xml)
-    Rails.logger.info "Successfully imported record from #{url}."
+    elapsed_index = Time.zone.now - start_index
+
+    timing_info = "(read: #{format('%.2f', elapsed_read)} s, index: #{format('%.2f', elapsed_index)} s)"
+    Rails.logger.info "Indexing: Successfully imported record from #{url}. #{timing_info} "
   end
 end

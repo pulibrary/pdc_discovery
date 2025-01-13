@@ -12,8 +12,24 @@ settings do
   provide 'solr.url', Indexing::SolrCloudHelper.collection_writer_url
   provide 'reader_class_name', 'Traject::NokogiriReader'
   provide 'solr_writer.commit_on_close', 'true'
+
+  # There are some parameters in Traject that allows us to configure values related
+  # to the Solr connection, in particular `batch_size` and the `thread_pool`. However,
+  # given that we are calling traject for each individual record (rather than for a
+  # batch of records) they might not apply to our scenario.
+  #
+  # The documentation is here in case we want to try them out:
+  # https://www.rubydoc.info/gems/traject/Traject/SolrJsonWriter
+
   provide 'repository', ENV['REPOSITORY_ID']
   provide 'logger', Logger.new($stderr, level: Logger::WARN)
+end
+
+# Converting the XML to JSON is a bit expensive therefore we make that conversion
+# only once per record and save it to the context so that we can re-use it.
+each_record do |record, context|
+  xml = record.xpath("/hash").first.to_xml
+  context.clipboard[:record_json] = Hash.from_xml(xml)["hash"].to_json
 end
 
 # ==================
@@ -25,10 +41,8 @@ to_field 'id' do |record, accumulator, _c|
   accumulator.concat [munged_doi]
 end
 
-# the <pdc_describe_json> element contains a CDATA node with a JSON blob in it
-to_field 'pdc_describe_json_ss' do |record, accumulator, _c|
-  datacite = record.xpath("/hash/pdc_describe_json/text()").first.content
-  accumulator.concat [datacite]
+to_field 'pdc_describe_json_ss' do |_record, accumulator, context|
+  accumulator.concat [context.clipboard[:record_json]]
 end
 
 # Track the source of this record
@@ -99,21 +113,21 @@ to_field 'author_ssim' do |record, accumulator, _c|
 end
 
 # Extract the author data from the pdc_describe_json and save it on its own field as JSON
-to_field 'authors_json_ss' do |record, accumulator, _c|
-  pdc_json = record.xpath("/hash/pdc_describe_json/text()").first.content
+to_field 'authors_json_ss' do |_record, accumulator, context|
+  pdc_json = context.clipboard[:record_json]
   authors = JSON.parse(pdc_json).dig("resource", "creators") || []
   accumulator.concat [authors.to_json]
 end
 
-to_field 'authors_orcid_ssim' do |record, accumulator, _c|
-  pdc_json = record.xpath("/hash/pdc_describe_json/text()").first.content
+to_field 'authors_orcid_ssim' do |_record, accumulator, context|
+  pdc_json = context.clipboard[:record_json]
   authors_json = JSON.parse(pdc_json).dig("resource", "creators") || []
   orcids = authors_json.map { |author| Author.new(author).orcid }
   accumulator.concat orcids.compact.uniq
 end
 
-to_field 'authors_affiliation_ssim' do |record, accumulator, _c|
-  pdc_json = record.xpath("/hash/pdc_describe_json/text()").first.content
+to_field 'authors_affiliation_ssim' do |_record, accumulator, context|
+  pdc_json = context.clipboard[:record_json]
   authors_json = JSON.parse(pdc_json).dig("resource", "creators") || []
   affiliations = authors_json.map { |author| Author.new(author).affiliation_name }
   accumulator.concat affiliations.compact.uniq
@@ -223,6 +237,10 @@ end
 
 # ==================
 # Store files metadata as a single JSON string so that we can display detailed information for each of them.
+#
+# TODO: Note that this information is duplicated with what we save in `pdc_describe_json_ss`. For large
+# datasets (e.g. those with 60K files) this is less than ideal. We should look into optimizing
+# this when we take care of https://github.com/pulibrary/pdc_discovery/issues/738
 to_field 'files_ss' do |record, accumulator, _context|
   raw_doi = record.xpath("/hash/resource/doi/text()").to_s
   files = record.xpath("/hash/files/file").map do |file|
