@@ -1,1 +1,89 @@
-{"resource":{"titles":[{"title":"Why is El Nino warm?","title_type":null}],"description":"Dataset constructed from GFDL-FLOR preindustrial control experiment run by Wenchang Yang (wenchang@princeton.edu) on Princeton University's tiger CPU. Processing by Allison Hogikyan (hogikyan@princeton.edu) on Princeton University's tigress data processing node. June 2021.","collection_tags":[],"creators":[{"value":"Hogikyan, Allison","name_type":"Personal","given_name":"Allison","family_name":"Hogikyan","identifier":null,"affiliations":[],"sequence":0},{"value":"Resplandy, Laure","name_type":"Personal","given_name":"Laure","family_name":"Resplandy","identifier":null,"affiliations":[],"sequence":1},{"value":"Yang, Wenchang","name_type":"Personal","given_name":"Wenchang","family_name":"Yang","identifier":null,"affiliations":[],"sequence":2},{"value":"Fueglistaler, Stephan","name_type":"Personal","given_name":"Stephan","family_name":"Fueglistaler","identifier":null,"affiliations":[],"sequence":3}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton University","publication_year":"2021","ark":"ark:/88435/dsp01rr172128k","doi":"10.34770/g7fe-hs07","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[],"keywords":["El Nino - Southern Oscillation","Surface energy budget"],"contributors":[],"organizational_contributors":[],"funders":[],"domains":["Natural Sciences"],"communities":["Department of Geosciences"],"subcommunities":[],"migrated":true},"files":[{"filename":"10.34770/g7fe-hs07/117/warmest_FLOR_figs.nc","size":5128475,"display_size":"4.89 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g7fe-hs07/117/warmest_FLOR_figs.nc"},{"filename":"10.34770/g7fe-hs07/117/warmest_flor_figs_readme.txt","size":4780,"display_size":"4.67 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g7fe-hs07/117/warmest_flor_figs_readme.txt"}],"group":{"title":"Princeton Research Data Service (PRDS)","description":null,"code":"RD","created_at":"2022-04-28T16:30:00.190-04:00","updated_at":"2023-05-18T14:20:45.251-04:00"}}
+{
+  "resource": {
+    "titles": [{ "title": "Why is El Nino warm?", "title_type": null }],
+    "description": "Dataset constructed from GFDL-FLOR preindustrial control experiment run by Wenchang Yang (wenchang@princeton.edu) on Princeton University's tiger CPU. Processing by Allison Hogikyan (hogikyan@princeton.edu) on Princeton University's tigress data processing node. June 2021.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Hogikyan, Allison",
+        "name_type": "Personal",
+        "given_name": "Allison",
+        "family_name": "Hogikyan",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 0
+      },
+      {
+        "value": "Resplandy, Laure",
+        "name_type": "Personal",
+        "given_name": "Laure",
+        "family_name": "Resplandy",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 1
+      },
+      {
+        "value": "Yang, Wenchang",
+        "name_type": "Personal",
+        "given_name": "Wenchang",
+        "family_name": "Yang",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 2
+      },
+      {
+        "value": "Fueglistaler, Stephan",
+        "name_type": "Personal",
+        "given_name": "Stephan",
+        "family_name": "Fueglistaler",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 3
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton University",
+    "publication_year": "2021",
+    "ark": "ark:/88435/dsp01rr172128k",
+    "doi": "10.34770/g7fe-hs07",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [],
+    "keywords": ["El Nino - Southern Oscillation", "Surface energy budget"],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [],
+    "domains": ["Natural Sciences"],
+    "communities": ["Department of Geosciences"],
+    "subcommunities": [],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.34770/g7fe-hs07/117/warmest_FLOR_figs.nc",
+      "size": 5128475,
+      "display_size": "4.89 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g7fe-hs07/117/warmest_FLOR_figs.nc"
+    },
+    {
+      "filename": "10.34770/g7fe-hs07/117/warmest_flor_figs_readme.txt",
+      "size": 4780,
+      "display_size": "4.67 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g7fe-hs07/117/warmest_flor_figs_readme.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Research Data Service (PRDS)",
+    "description": null,
+    "code": "RD",
+    "created_at": "2022-04-28T16:30:00.190-04:00",
+    "updated_at": "2023-05-18T14:20:45.251-04:00"
+  }
+}

@@ -1,1 +1,176 @@
-{"resource":{"titles":[{"title":"Theory based scaling of edge turbulence and implications for the scrape-off layer width","title_type":null}],"description":"Turbulence and plasma parameter data from the National Spherical Torus Experiment NSTX [M. Ono, S.M. Kaye, Y.-K.M. Peng, G. Barnes et al., Nucl. Fusion 40, 557 (2000)] is examined and interpreted based on various theoretical estimates. In particular, quantities of interest for assessing the role of turbulent transport on the midplane scrape-off layer heat flux width are assessed. Because most turbulence quantities exhibit large scatter and little scaling within a given operation mode, this paper focuses on length and time scales and dimensionless parameters between operational modes including Ohmic, low (L), and high (H) modes using a large NSTX edge turbulence database [S.J. Zweben, W.M. Davis, S.M. Kaye, J.R. Myra et al., Nucl. Fusion 55, 093035 (2015)]. These are compared with theoretical estimates for drift and interchange rates, profile modification saturation levels, a resistive ballooning condition, and dimensionless parameters characterizing L and high H mode conditions. It is argued that the underlying instability physics governing edge turbulence in different operational modes is in fact similar, and is consistent with curvature-driven drift ballooning. Saturation physics, however, is dependent on the operational mode. Five dimensionless parameters for drift-interchange turbulence are obtained and employed to assess the important of turbulence in setting the scrape-off layer heat flux width lambda_q and its scaling. An explicit proportionality of the width lambda_q to safety factor and major radius (qR) is obtained under these conditions. Quantitative estimates and reduced model numerical simulations suggest that the turbulence mechanism is not negligible in determining lambda_q in NSTX, at least for high plasma current discharges.","collection_tags":[],"creators":[{"value":"Myra, J. R.","name_type":"Personal","given_name":"J. R.","family_name":"Myra","identifier":{"value":"0000-0001-5939-8429","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":0},{"value":"Russell, D. A.","name_type":"Personal","given_name":"D. A.","family_name":"Russell","identifier":{"value":"0000-0002-6531-9421","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":1},{"value":"Zweben, S. J.","name_type":"Personal","given_name":"S. J.","family_name":"Zweben","identifier":{"value":"0000-0002-1738-0586","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":2}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2016","ark":"ark:/88435/dsp018p58pg426","doi":"10.11578/1366750","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1063/1.4966564","related_identifier_type":"DOI","relation_type":"IsReferencedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":["Edge turbulence","Transport","Scrape-off layer","Heat flux"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["NSTX","Spherical Torus"],"migrated":true},"files":[{"filename":"10.11578/1366750/100/ARK_DATA.zip","size":192972,"display_size":"188 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1366750/100/ARK_DATA.zip"},{"filename":"10.11578/1366750/100/readme.txt","size":2633,"display_size":"2.57 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1366750/100/readme.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Theory based scaling of edge turbulence and implications for the scrape-off layer width",
+        "title_type": null
+      }
+    ],
+    "description": "Turbulence and plasma parameter data from the National Spherical Torus Experiment NSTX [M. Ono, S.M. Kaye, Y.-K.M. Peng, G. Barnes et al., Nucl. Fusion 40, 557 (2000)] is examined and interpreted based on various theoretical estimates. In particular, quantities of interest for assessing the role of turbulent transport on the midplane scrape-off layer heat flux width are assessed. Because most turbulence quantities exhibit large scatter and little scaling within a given operation mode, this paper focuses on length and time scales and dimensionless parameters between operational modes including Ohmic, low (L), and high (H) modes using a large NSTX edge turbulence database [S.J. Zweben, W.M. Davis, S.M. Kaye, J.R. Myra et al., Nucl. Fusion 55, 093035 (2015)]. These are compared with theoretical estimates for drift and interchange rates, profile modification saturation levels, a resistive ballooning condition, and dimensionless parameters characterizing L and high H mode conditions. It is argued that the underlying instability physics governing edge turbulence in different operational modes is in fact similar, and is consistent with curvature-driven drift ballooning. Saturation physics, however, is dependent on the operational mode. Five dimensionless parameters for drift-interchange turbulence are obtained and employed to assess the important of turbulence in setting the scrape-off layer heat flux width lambda_q and its scaling. An explicit proportionality of the width lambda_q to safety factor and major radius (qR) is obtained under these conditions. Quantitative estimates and reduced model numerical simulations suggest that the turbulence mechanism is not negligible in determining lambda_q in NSTX, at least for high plasma current discharges.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Myra, J. R.",
+        "name_type": "Personal",
+        "given_name": "J. R.",
+        "family_name": "Myra",
+        "identifier": {
+          "value": "0000-0001-5939-8429",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 0
+      },
+      {
+        "value": "Russell, D. A.",
+        "name_type": "Personal",
+        "given_name": "D. A.",
+        "family_name": "Russell",
+        "identifier": {
+          "value": "0000-0002-6531-9421",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 1
+      },
+      {
+        "value": "Zweben, S. J.",
+        "name_type": "Personal",
+        "given_name": "S. J.",
+        "family_name": "Zweben",
+        "identifier": {
+          "value": "0000-0002-1738-0586",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 2
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2016",
+    "ark": "ark:/88435/dsp018p58pg426",
+    "doi": "10.11578/1366750",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.1063/1.4966564",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsReferencedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": ["Edge turbulence", "Transport", "Scrape-off layer", "Heat flux"],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["NSTX", "Spherical Torus"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.11578/1366750/100/ARK_DATA.zip",
+      "size": 192972,
+      "display_size": "188 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1366750/100/ARK_DATA.zip"
+    },
+    {
+      "filename": "10.11578/1366750/100/readme.txt",
+      "size": 2633,
+      "display_size": "2.57 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1366750/100/readme.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

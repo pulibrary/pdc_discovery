@@ -1,1 +1,222 @@
-{"resource":{"titles":[{"title":"Phase coherence of parametric-decay modes during high-harmonic fast-wave heating in the National Spherical Torus Experiment","title_type":null}],"description":"Third-order spectral analysis, in particular the auto bicoherence, was applied to probe signals from high-harmonic fast-wave heating experiments in the National Spherical Torus Experiment. Strong evidence was found for parametric decay of the 30 MHz radio-frequency (RF) pump wave, with a low-frequency daughter wave at 2.7 MHz, the local majority-ion cyclotron frequency. The primary decay modes have auto bicoherence values around 0.85, very close to the theoretical value of one, which corresponds to total phase coherence with the pump wave. The threshold RF pump power for onset of parametric decay was found to be between 200 kW and 400 kW.","collection_tags":[],"creators":[{"value":"Carlsson, J.","name_type":"Personal","given_name":"J.","family_name":"Carlsson","identifier":{"value":"0000-0003-4614-8150","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0},{"value":"Wilson, J. R.","name_type":"Personal","given_name":"J. R.","family_name":"Wilson","identifier":{"value":"0000-0003-3627-1278","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":1},{"value":"Hosea, J.","name_type":"Personal","given_name":"J.","family_name":"Hosea","identifier":null,"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":2},{"value":"Greenough, N.","name_type":"Personal","given_name":"N.","family_name":"Greenough","identifier":null,"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":3},{"value":"Perkins, R.","name_type":"Personal","given_name":"R.","family_name":"Perkins","identifier":{"value":"0000-0002-7216-0201","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":4}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2016","ark":"ark:/88435/dsp015d86p263n","doi":"10.11578/1366987","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1063/1.4954825","related_identifier_type":"DOI","relation_type":"IsCitedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":["Bicoherence","Third order spectral analysis","PDI","HHFW","NSTX"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["NSTX","Spherical Torus"],"migrated":true},"files":[{"filename":"10.11578/1366987/107/ARK_DATA.zip","size":129011078,"display_size":"123 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1366987/107/ARK_DATA.zip"},{"filename":"10.11578/1366987/107/readme.txt","size":769,"display_size":"769 Bytes","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1366987/107/readme.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Phase coherence of parametric-decay modes during high-harmonic fast-wave heating in the National Spherical Torus Experiment",
+        "title_type": null
+      }
+    ],
+    "description": "Third-order spectral analysis, in particular the auto bicoherence, was applied to probe signals from high-harmonic fast-wave heating experiments in the National Spherical Torus Experiment. Strong evidence was found for parametric decay of the 30 MHz radio-frequency (RF) pump wave, with a low-frequency daughter wave at 2.7 MHz, the local majority-ion cyclotron frequency. The primary decay modes have auto bicoherence values around 0.85, very close to the theoretical value of one, which corresponds to total phase coherence with the pump wave. The threshold RF pump power for onset of parametric decay was found to be between 200 kW and 400 kW.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Carlsson, J.",
+        "name_type": "Personal",
+        "given_name": "J.",
+        "family_name": "Carlsson",
+        "identifier": {
+          "value": "0000-0003-4614-8150",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      },
+      {
+        "value": "Wilson, J. R.",
+        "name_type": "Personal",
+        "given_name": "J. R.",
+        "family_name": "Wilson",
+        "identifier": {
+          "value": "0000-0003-3627-1278",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 1
+      },
+      {
+        "value": "Hosea, J.",
+        "name_type": "Personal",
+        "given_name": "J.",
+        "family_name": "Hosea",
+        "identifier": null,
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 2
+      },
+      {
+        "value": "Greenough, N.",
+        "name_type": "Personal",
+        "given_name": "N.",
+        "family_name": "Greenough",
+        "identifier": null,
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 3
+      },
+      {
+        "value": "Perkins, R.",
+        "name_type": "Personal",
+        "given_name": "R.",
+        "family_name": "Perkins",
+        "identifier": {
+          "value": "0000-0002-7216-0201",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 4
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2016",
+    "ark": "ark:/88435/dsp015d86p263n",
+    "doi": "10.11578/1366987",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.1063/1.4954825",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsCitedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": ["Bicoherence", "Third order spectral analysis", "PDI", "HHFW", "NSTX"],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["NSTX", "Spherical Torus"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.11578/1366987/107/ARK_DATA.zip",
+      "size": 129011078,
+      "display_size": "123 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1366987/107/ARK_DATA.zip"
+    },
+    {
+      "filename": "10.11578/1366987/107/readme.txt",
+      "size": 769,
+      "display_size": "769 Bytes",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1366987/107/readme.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

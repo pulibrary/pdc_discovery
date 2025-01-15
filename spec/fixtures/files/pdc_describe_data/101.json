@@ -1,1 +1,234 @@
-{"resource":{"titles":[{"title":"Density Limits as Disruption Forecasters for Spherical Tokamaks","title_type":null}],"description":"Fusion power output from spherical tokamaks would benefit from increased confined plasma density, but there exists a limit on the density before confinement is lost and the plasma current is disrupted. This density limit has long been characterized by a simple, global Greenwald limit proportional to the plasma current and inversely proportional to the cross sectional area of the plasma. It is shown that in the database of discharges from the NSTX and MAST spherical tokamaks, the likelihood of disruption does increase above the Greenwald limit, and especially in the plasma current rampdown phase. The physics of the density limit has been recently theoretically explored through local criteria. Several of these are tested using the disruption event characterization and forecasting (DECAFTM) code for their potential effectiveness as disruption warning signals. For a limited set of NSTX discharges, a local island power balance criteria was found to be less reliable, presently, than the Greenwald limit. An empirical critical edge line density and a boundary turbulent transport limit were both tested for MAST-U, which has an electron density profile measurement with high spatial resolution in the outer part of the plasma. Both were found to have similar dependencies on key plasma parameters. In a limited set of MAST-U discharges that appear to disrupt due to rising density at values under the Greenwald limit, crossing of the boundary turbulent transport limit occurred close to the time of disruption. Finally, these limits were evaluated for their potential use in real-time, and it was found that with the necessary real-time inputs and with refinement through further testing, these limits could be implemented in a real-time disruption forecasting system.","collection_tags":[],"creators":[{"value":"Berkery, John","name_type":"Personal","given_name":"John","family_name":"Berkery","identifier":{"value":"0000-0002-8062-3210","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2023","ark":"ark:/88435/dsp01rn3014659","doi":"10.34770/67tb-0988","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1088/1361-6587/ace476","related_identifier_type":"DOI","relation_type":"IsReferencedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":["density limit","disruptions","tokamak"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["MAST-U","Spherical Torus"],"migrated":true},"files":[{"filename":"10.34770/67tb-0988/101/Fig1.dat","size":1501047,"display_size":"1.43 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig1.dat"},{"filename":"10.34770/67tb-0988/101/Fig10_left.dat","size":22572201,"display_size":"21.5 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig10_left.dat"},{"filename":"10.34770/67tb-0988/101/Fig10_mid.dat","size":22539704,"display_size":"21.5 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig10_mid.dat"},{"filename":"10.34770/67tb-0988/101/Fig10_right.dat","size":22552387,"display_size":"21.5 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig10_right.dat"},{"filename":"10.34770/67tb-0988/101/Fig11.dat","size":52830,"display_size":"51.6 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig11.dat"},{"filename":"10.34770/67tb-0988/101/Fig2.dat","size":21262,"display_size":"20.8 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig2.dat"},{"filename":"10.34770/67tb-0988/101/Fig3.dat","size":1252848,"display_size":"1.19 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig3.dat"},{"filename":"10.34770/67tb-0988/101/Fig4.dat","size":22889,"display_size":"22.4 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig4.dat"},{"filename":"10.34770/67tb-0988/101/Fig5.dat","size":1189,"display_size":"1.16 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig5.dat"},{"filename":"10.34770/67tb-0988/101/Fig6.dat","size":3176417,"display_size":"3.03 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig6.dat"},{"filename":"10.34770/67tb-0988/101/Fig7.dat","size":52289,"display_size":"51.1 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig7.dat"},{"filename":"10.34770/67tb-0988/101/Fig8.dat","size":21346896,"display_size":"20.4 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig8.dat"},{"filename":"10.34770/67tb-0988/101/Fig9_left.dat","size":21537876,"display_size":"20.5 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig9_left.dat"},{"filename":"10.34770/67tb-0988/101/Fig9_mid.dat","size":22068404,"display_size":"21 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig9_mid.dat"},{"filename":"10.34770/67tb-0988/101/Fig9_right.dat","size":23247734,"display_size":"22.2 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig9_right.dat"},{"filename":"10.34770/67tb-0988/101/Readme.txt","size":2328,"display_size":"2.27 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Readme.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Density Limits as Disruption Forecasters for Spherical Tokamaks",
+        "title_type": null
+      }
+    ],
+    "description": "Fusion power output from spherical tokamaks would benefit from increased confined plasma density, but there exists a limit on the density before confinement is lost and the plasma current is disrupted. This density limit has long been characterized by a simple, global Greenwald limit proportional to the plasma current and inversely proportional to the cross sectional area of the plasma. It is shown that in the database of discharges from the NSTX and MAST spherical tokamaks, the likelihood of disruption does increase above the Greenwald limit, and especially in the plasma current rampdown phase. The physics of the density limit has been recently theoretically explored through local criteria. Several of these are tested using the disruption event characterization and forecasting (DECAFTM) code for their potential effectiveness as disruption warning signals. For a limited set of NSTX discharges, a local island power balance criteria was found to be less reliable, presently, than the Greenwald limit. An empirical critical edge line density and a boundary turbulent transport limit were both tested for MAST-U, which has an electron density profile measurement with high spatial resolution in the outer part of the plasma. Both were found to have similar dependencies on key plasma parameters. In a limited set of MAST-U discharges that appear to disrupt due to rising density at values under the Greenwald limit, crossing of the boundary turbulent transport limit occurred close to the time of disruption. Finally, these limits were evaluated for their potential use in real-time, and it was found that with the necessary real-time inputs and with refinement through further testing, these limits could be implemented in a real-time disruption forecasting system.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Berkery, John",
+        "name_type": "Personal",
+        "given_name": "John",
+        "family_name": "Berkery",
+        "identifier": {
+          "value": "0000-0002-8062-3210",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2023",
+    "ark": "ark:/88435/dsp01rn3014659",
+    "doi": "10.34770/67tb-0988",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.1088/1361-6587/ace476",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsReferencedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": ["density limit", "disruptions", "tokamak"],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["MAST-U", "Spherical Torus"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.34770/67tb-0988/101/Fig1.dat",
+      "size": 1501047,
+      "display_size": "1.43 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig1.dat"
+    },
+    {
+      "filename": "10.34770/67tb-0988/101/Fig10_left.dat",
+      "size": 22572201,
+      "display_size": "21.5 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig10_left.dat"
+    },
+    {
+      "filename": "10.34770/67tb-0988/101/Fig10_mid.dat",
+      "size": 22539704,
+      "display_size": "21.5 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig10_mid.dat"
+    },
+    {
+      "filename": "10.34770/67tb-0988/101/Fig10_right.dat",
+      "size": 22552387,
+      "display_size": "21.5 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig10_right.dat"
+    },
+    {
+      "filename": "10.34770/67tb-0988/101/Fig11.dat",
+      "size": 52830,
+      "display_size": "51.6 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig11.dat"
+    },
+    {
+      "filename": "10.34770/67tb-0988/101/Fig2.dat",
+      "size": 21262,
+      "display_size": "20.8 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig2.dat"
+    },
+    {
+      "filename": "10.34770/67tb-0988/101/Fig3.dat",
+      "size": 1252848,
+      "display_size": "1.19 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig3.dat"
+    },
+    {
+      "filename": "10.34770/67tb-0988/101/Fig4.dat",
+      "size": 22889,
+      "display_size": "22.4 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig4.dat"
+    },
+    {
+      "filename": "10.34770/67tb-0988/101/Fig5.dat",
+      "size": 1189,
+      "display_size": "1.16 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig5.dat"
+    },
+    {
+      "filename": "10.34770/67tb-0988/101/Fig6.dat",
+      "size": 3176417,
+      "display_size": "3.03 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig6.dat"
+    },
+    {
+      "filename": "10.34770/67tb-0988/101/Fig7.dat",
+      "size": 52289,
+      "display_size": "51.1 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig7.dat"
+    },
+    {
+      "filename": "10.34770/67tb-0988/101/Fig8.dat",
+      "size": 21346896,
+      "display_size": "20.4 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig8.dat"
+    },
+    {
+      "filename": "10.34770/67tb-0988/101/Fig9_left.dat",
+      "size": 21537876,
+      "display_size": "20.5 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig9_left.dat"
+    },
+    {
+      "filename": "10.34770/67tb-0988/101/Fig9_mid.dat",
+      "size": 22068404,
+      "display_size": "21 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig9_mid.dat"
+    },
+    {
+      "filename": "10.34770/67tb-0988/101/Fig9_right.dat",
+      "size": 23247734,
+      "display_size": "22.2 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Fig9_right.dat"
+    },
+    {
+      "filename": "10.34770/67tb-0988/101/Readme.txt",
+      "size": 2328,
+      "display_size": "2.27 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/67tb-0988/101/Readme.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

@@ -1,1 +1,283 @@
-{"resource":{"titles":[{"title":"Midplane neutral density profiles in the National Spherical Torus Experiment","title_type":null}],"description":"Atomic and molecular density data in the outer midplane of NSTX [Ono et al., Nucl. Fusion 40, 557 (2000)] are inferred from tangential camera data via a forward modeling procedure using the DEGAS 2 Monte Carlo neutral transport code. The observed Balmer-b light emission data from 17 shots during the 2010 NSTX campaign display no obvious trends with discharge parameters such as the divertor Balmer-a emission level or edge deuterium ion density. Simulations of 12 time slices in 7 of these discharges produce molecular densities near the vacuum vessel wall of 2–8 􏰁 10^17 m􏰈3 and atomic densities ranging from 1 to 7 􏰁 10^16 m􏰈3; neither has a clear correlation with other parameters. Validation of the technique, begun in an earlier publication, is continued with an assessment of the sensitivity of the simulated camera image and neutral densities to uncertainties in the data input to the model. The simulated camera image is sensitive to the plasma profiles and virtually nothing else. The neutral densities at the vessel wall depend most strongly on the spatial distribution of the source; simulations with a localized neutral source yield densities within a factor of two of the baseline, uniform source, case. The uncertainties in the neutral densities associated with other model inputs and assumptions are 50%.","collection_tags":["NSTX"],"creators":[{"value":"Stotler, D.","name_type":"Personal","given_name":"D.","family_name":"Stotler","identifier":{"value":"0000-0001-5521-8718","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0},{"value":"Scotti, F.","name_type":"Personal","given_name":"F.","family_name":"Scotti","identifier":null,"affiliations":[],"sequence":1},{"value":"Bell, R. E.","name_type":"Personal","given_name":"R. E.","family_name":"Bell","identifier":{"value":"0000-0001-9544-498X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":2},{"value":"Diallo, A.","name_type":"Personal","given_name":"A.","family_name":"Diallo","identifier":{"value":"0000-0002-0706-060X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":3},{"value":"LeBlanc, B. P.","name_type":"Personal","given_name":"B. P.","family_name":"LeBlanc","identifier":{"value":"0000-0003-1455-0129","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":4},{"value":"Podesta, M.","name_type":"Personal","given_name":"M.","family_name":"Podesta","identifier":{"value":"0000-0003-4975-0585","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":5},{"value":"Roquemore, A. L.","name_type":"Personal","given_name":"A. L.","family_name":"Roquemore","identifier":null,"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":6},{"value":"Ross, P. W.","name_type":"Personal","given_name":"P. W.","family_name":"Ross","identifier":null,"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":7}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2015","ark":"ark:/88435/dsp01zg64tp300","doi":"10.11578/1366462","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1063/1.4928372","related_identifier_type":"DOI","relation_type":"IsReferencedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":["NSTX","Neutrals","Monte-Carlo simulation","Edge plasma diagnostics"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["NSTX","Spherical Torus"],"migrated":true},"files":[{"filename":"10.11578/1366462/72/Stotler_PoP.zip","size":1120515,"display_size":"1.07 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1366462/72/Stotler_PoP.zip"},{"filename":"10.11578/1366462/72/license.txt","size":3223,"display_size":"3.15 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1366462/72/license.txt"},{"filename":"10.11578/1366462/72/readme.txt","size":8632,"display_size":"8.43 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1366462/72/readme.txt"},{"filename":"10.11578/1366462/72/readme.txt.txt","size":7839,"display_size":"7.66 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1366462/72/readme.txt.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Midplane neutral density profiles in the National Spherical Torus Experiment",
+        "title_type": null
+      }
+    ],
+    "description": "Atomic and molecular density data in the outer midplane of NSTX [Ono et al., Nucl. Fusion 40, 557 (2000)] are inferred from tangential camera data via a forward modeling procedure using the DEGAS 2 Monte Carlo neutral transport code. The observed Balmer-b light emission data from 17 shots during the 2010 NSTX campaign display no obvious trends with discharge parameters such as the divertor Balmer-a emission level or edge deuterium ion density. Simulations of 12 time slices in 7 of these discharges produce molecular densities near the vacuum vessel wall of 2–8 􏰁 10^17 m􏰈3 and atomic densities ranging from 1 to 7 􏰁 10^16 m􏰈3; neither has a clear correlation with other parameters. Validation of the technique, begun in an earlier publication, is continued with an assessment of the sensitivity of the simulated camera image and neutral densities to uncertainties in the data input to the model. The simulated camera image is sensitive to the plasma profiles and virtually nothing else. The neutral densities at the vessel wall depend most strongly on the spatial distribution of the source; simulations with a localized neutral source yield densities within a factor of two of the baseline, uniform source, case. The uncertainties in the neutral densities associated with other model inputs and assumptions are 50%.",
+    "collection_tags": ["NSTX"],
+    "creators": [
+      {
+        "value": "Stotler, D.",
+        "name_type": "Personal",
+        "given_name": "D.",
+        "family_name": "Stotler",
+        "identifier": {
+          "value": "0000-0001-5521-8718",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      },
+      {
+        "value": "Scotti, F.",
+        "name_type": "Personal",
+        "given_name": "F.",
+        "family_name": "Scotti",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 1
+      },
+      {
+        "value": "Bell, R. E.",
+        "name_type": "Personal",
+        "given_name": "R. E.",
+        "family_name": "Bell",
+        "identifier": {
+          "value": "0000-0001-9544-498X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 2
+      },
+      {
+        "value": "Diallo, A.",
+        "name_type": "Personal",
+        "given_name": "A.",
+        "family_name": "Diallo",
+        "identifier": {
+          "value": "0000-0002-0706-060X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 3
+      },
+      {
+        "value": "LeBlanc, B. P.",
+        "name_type": "Personal",
+        "given_name": "B. P.",
+        "family_name": "LeBlanc",
+        "identifier": {
+          "value": "0000-0003-1455-0129",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 4
+      },
+      {
+        "value": "Podesta, M.",
+        "name_type": "Personal",
+        "given_name": "M.",
+        "family_name": "Podesta",
+        "identifier": {
+          "value": "0000-0003-4975-0585",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 5
+      },
+      {
+        "value": "Roquemore, A. L.",
+        "name_type": "Personal",
+        "given_name": "A. L.",
+        "family_name": "Roquemore",
+        "identifier": null,
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 6
+      },
+      {
+        "value": "Ross, P. W.",
+        "name_type": "Personal",
+        "given_name": "P. W.",
+        "family_name": "Ross",
+        "identifier": null,
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 7
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2015",
+    "ark": "ark:/88435/dsp01zg64tp300",
+    "doi": "10.11578/1366462",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.1063/1.4928372",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsReferencedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": ["NSTX", "Neutrals", "Monte-Carlo simulation", "Edge plasma diagnostics"],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["NSTX", "Spherical Torus"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.11578/1366462/72/Stotler_PoP.zip",
+      "size": 1120515,
+      "display_size": "1.07 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1366462/72/Stotler_PoP.zip"
+    },
+    {
+      "filename": "10.11578/1366462/72/license.txt",
+      "size": 3223,
+      "display_size": "3.15 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1366462/72/license.txt"
+    },
+    {
+      "filename": "10.11578/1366462/72/readme.txt",
+      "size": 8632,
+      "display_size": "8.43 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1366462/72/readme.txt"
+    },
+    {
+      "filename": "10.11578/1366462/72/readme.txt.txt",
+      "size": 7839,
+      "display_size": "7.66 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1366462/72/readme.txt.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

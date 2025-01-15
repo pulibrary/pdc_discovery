@@ -1,1 +1,324 @@
-{"resource":{"titles":[{"title":"Global gyrokinetic study of shaping effects on electromagnetic modes at NSTX aspect ratio with ad hoc parallel magnetic perturbation effects","title_type":null}],"description":"Plasma shaping may have a stronger effect on global turbulence in tight-aspect-ratio tokamaks than in conventional-aspect-ratio tokamaks due to the higher toroidicity and more acute poloidal asymmetry in the magnetic field. In addition, previous local gyrokinetic studies have shown that it is necessary to include parallel magnetic field perturbations in order to accurately compute growth rates of electromagnetic modes in tight-aspect-ratio tokamaks. In this work, the effects of elongation and triangularity on global, ion-scale, linear electromagnetic modes are studied at NSTX aspect ratio and high plasma beta using the global gyrokinetic particle-in-cell code XGC. The effects of compressional magnetic perturbations are approximated via a well-known modification to the particle drifts that was developed for flux-tube simulations [N. Joiner et al., Phys. Plasmas 17, 072104 (2010)], without proof of its validity in a global simulation. Magnetic equilibria are re-constructed for each distinct plasma profile that is used. Coulomb collision effects are not considered. Within the limitations imposed by the present study, it is found that linear growth rates of electromagnetic modes (collisionless microtearing modes and kinetic ballooning modes) are significantly reduced by NSTX-like shaping. For example, growth rates of kinetic ballooning modes at high beta are reduced to the level of that of collisionless trapped electron modes.","collection_tags":[],"creators":[{"value":"Sharma, A. Y.","name_type":"Personal","given_name":"A. Y.","family_name":"Sharma","identifier":null,"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0},{"value":"Cole, M. D. J.","name_type":"Personal","given_name":"M. D. J.","family_name":"Cole","identifier":{"value":"0000-0001-9682-989X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":1},{"value":"Görler, T.","name_type":"Personal","given_name":"T.","family_name":"Görler","identifier":null,"affiliations":[],"sequence":2},{"value":"Chen, Y.","name_type":"Personal","given_name":"Y.","family_name":"Chen","identifier":null,"affiliations":[],"sequence":3},{"value":"Hatch, D. R.","name_type":"Personal","given_name":"D. R.","family_name":"Hatch","identifier":null,"affiliations":[],"sequence":4},{"value":"Guttenfelder, W.","name_type":"Personal","given_name":"W.","family_name":"Guttenfelder","identifier":{"value":"0000-0001-8181-058X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":5},{"value":"Hager, R.","name_type":"Personal","given_name":"R.","family_name":"Hager","identifier":{"value":"0000-0002-4624-3150","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":6},{"value":"Sturdevant, B. J.","name_type":"Personal","given_name":"B. J.","family_name":"Sturdevant","identifier":{"value":"0000-0002-1116-2983","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":7},{"value":"Ku, S.","name_type":"Personal","given_name":"S.","family_name":"Ku","identifier":{"value":"0000-0002-9964-1208","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":8},{"value":"Mishchenko, A.","name_type":"Personal","given_name":"A.","family_name":"Mishchenko","identifier":{"value":"0000-0003-1436-4502","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":9},{"value":"Chang, C. S.","name_type":"Personal","given_name":"C. S.","family_name":"Chang","identifier":{"value":"0000-0002-3346-5731","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":10}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2022","ark":"ark:/88435/dsp015x21tj58z","doi":"10.34770/415v-8p16","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1063/5.0106925","related_identifier_type":"DOI","relation_type":"IsCitedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":["Gyrokinetic simulations","Particle-in-cell method","Plasma confinement","Plasma instabilities","Tokamaks"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""},{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-05CH11231","award_uri":""},{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"FES-ERCAPm499","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["NSTX","Spherical Torus"],"migrated":true},"files":[{"filename":"10.34770/415v-8p16/78/data.zip","size":170625200,"display_size":"163 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/415v-8p16/78/data.zip"},{"filename":"10.34770/415v-8p16/78/license.txt","size":3223,"display_size":"3.15 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/415v-8p16/78/license.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Global gyrokinetic study of shaping effects on electromagnetic modes at NSTX aspect ratio with ad hoc parallel magnetic perturbation effects",
+        "title_type": null
+      }
+    ],
+    "description": "Plasma shaping may have a stronger effect on global turbulence in tight-aspect-ratio tokamaks than in conventional-aspect-ratio tokamaks due to the higher toroidicity and more acute poloidal asymmetry in the magnetic field. In addition, previous local gyrokinetic studies have shown that it is necessary to include parallel magnetic field perturbations in order to accurately compute growth rates of electromagnetic modes in tight-aspect-ratio tokamaks. In this work, the effects of elongation and triangularity on global, ion-scale, linear electromagnetic modes are studied at NSTX aspect ratio and high plasma beta using the global gyrokinetic particle-in-cell code XGC. The effects of compressional magnetic perturbations are approximated via a well-known modification to the particle drifts that was developed for flux-tube simulations [N. Joiner et al., Phys. Plasmas 17, 072104 (2010)], without proof of its validity in a global simulation. Magnetic equilibria are re-constructed for each distinct plasma profile that is used. Coulomb collision effects are not considered. Within the limitations imposed by the present study, it is found that linear growth rates of electromagnetic modes (collisionless microtearing modes and kinetic ballooning modes) are significantly reduced by NSTX-like shaping. For example, growth rates of kinetic ballooning modes at high beta are reduced to the level of that of collisionless trapped electron modes.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Sharma, A. Y.",
+        "name_type": "Personal",
+        "given_name": "A. Y.",
+        "family_name": "Sharma",
+        "identifier": null,
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      },
+      {
+        "value": "Cole, M. D. J.",
+        "name_type": "Personal",
+        "given_name": "M. D. J.",
+        "family_name": "Cole",
+        "identifier": {
+          "value": "0000-0001-9682-989X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 1
+      },
+      {
+        "value": "Görler, T.",
+        "name_type": "Personal",
+        "given_name": "T.",
+        "family_name": "Görler",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 2
+      },
+      {
+        "value": "Chen, Y.",
+        "name_type": "Personal",
+        "given_name": "Y.",
+        "family_name": "Chen",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 3
+      },
+      {
+        "value": "Hatch, D. R.",
+        "name_type": "Personal",
+        "given_name": "D. R.",
+        "family_name": "Hatch",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 4
+      },
+      {
+        "value": "Guttenfelder, W.",
+        "name_type": "Personal",
+        "given_name": "W.",
+        "family_name": "Guttenfelder",
+        "identifier": {
+          "value": "0000-0001-8181-058X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 5
+      },
+      {
+        "value": "Hager, R.",
+        "name_type": "Personal",
+        "given_name": "R.",
+        "family_name": "Hager",
+        "identifier": {
+          "value": "0000-0002-4624-3150",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 6
+      },
+      {
+        "value": "Sturdevant, B. J.",
+        "name_type": "Personal",
+        "given_name": "B. J.",
+        "family_name": "Sturdevant",
+        "identifier": {
+          "value": "0000-0002-1116-2983",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 7
+      },
+      {
+        "value": "Ku, S.",
+        "name_type": "Personal",
+        "given_name": "S.",
+        "family_name": "Ku",
+        "identifier": {
+          "value": "0000-0002-9964-1208",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 8
+      },
+      {
+        "value": "Mishchenko, A.",
+        "name_type": "Personal",
+        "given_name": "A.",
+        "family_name": "Mishchenko",
+        "identifier": {
+          "value": "0000-0003-1436-4502",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 9
+      },
+      {
+        "value": "Chang, C. S.",
+        "name_type": "Personal",
+        "given_name": "C. S.",
+        "family_name": "Chang",
+        "identifier": {
+          "value": "0000-0002-3346-5731",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 10
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2022",
+    "ark": "ark:/88435/dsp015x21tj58z",
+    "doi": "10.34770/415v-8p16",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.1063/5.0106925",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsCitedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": [
+      "Gyrokinetic simulations",
+      "Particle-in-cell method",
+      "Plasma confinement",
+      "Plasma instabilities",
+      "Tokamaks"
+    ],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      },
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-05CH11231",
+        "award_uri": ""
+      },
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "FES-ERCAPm499",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["NSTX", "Spherical Torus"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.34770/415v-8p16/78/data.zip",
+      "size": 170625200,
+      "display_size": "163 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/415v-8p16/78/data.zip"
+    },
+    {
+      "filename": "10.34770/415v-8p16/78/license.txt",
+      "size": 3223,
+      "display_size": "3.15 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/415v-8p16/78/license.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

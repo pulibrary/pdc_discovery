@@ -1,1 +1,259 @@
-{"resource":{"titles":[{"title":"Effects of collisional ion orbit loss on tokamak radial electric field and toroidal rotation in an L-mode plasma","title_type":null}],"description":"Ion orbit loss has been used to model the formation of a strong negative radial electric field Er in the tokamak edge, as well as edge momentum transport and toroidal rotation. To quantitatively measure ion orbit loss, an orbit-flux formulation has been developed and numerically applied to the gyrokinetic particle-in-cell code XGC. We study collisional ion orbit loss in an axisymmetric DIII-D L-mode plasma using gyrokinetic ions and drift-kinetic electrons. Numerical simulations, where the plasma density and temperature profiles are maintained through neutral ionization and heating, show the formation of a quasisteady negative Er in the edge. We have measured a radially outgoing ion gyrocenter flux due to collisional scattering of ions into the loss orbits, which is balanced by the radially incoming ion gyrocenter flux from confined orbits on the collisional time scale. This suggests that collisional ion orbit loss can shift Er in the negative direction compared to that in plasmas without orbit loss. It is also found that collisional ion orbit loss can contribute to a radially outgoing (counter-current) toroidal-angular-momentum flux, which is not balanced by the toroidal-angular-momentum flux carried by ions on the confined orbits. Therefore, the edge toroidal rotation shifts in the co-current direction on the collisional time scale.","collection_tags":[],"creators":[{"value":"Zhu, Hongxuan","name_type":"Personal","given_name":"Hongxuan","family_name":"Zhu","identifier":{"value":"0000-0002-9844-6972","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0},{"value":"Stoltzfus-Dueck, T","name_type":"Personal","given_name":"T","family_name":"Stoltzfus-Dueck","identifier":{"value":"0000-0003-2587-6298","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":1},{"value":"Hager, R","name_type":"Personal","given_name":"R","family_name":"Hager","identifier":{"value":"0000-0002-4624-3150","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":2},{"value":"Ku, S","name_type":"Personal","given_name":"S","family_name":"Ku","identifier":{"value":"0000-0002-9964-1208","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":3},{"value":"Chang, C.S.","name_type":"Personal","given_name":"C.S.","family_name":"Chang","identifier":{"value":"0000-0002-3346-5731","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":4}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2023","ark":"ark:/88435/dsp01r494vp42z","doi":"10.34770/hj83-n134","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1088/1741-4326/acc815","related_identifier_type":"DOI","relation_type":"IsReferencedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":["ion orbit loss","radial electric field","tokamak edge plasmas","gyrokinetic simulations"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""},{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-05CH11231","award_uri":""},{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"SciDAC-4","award_uri":""},{"ror":"https://ror.org/00hx57361","funder_name":"Princeton University","award_number":"N/A","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["Theory and Computation"],"migrated":true},"files":[{"filename":"10.34770/hj83-n134/65/ARK_DATA.zip","size":16770702,"display_size":"16 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/hj83-n134/65/ARK_DATA.zip"},{"filename":"10.34770/hj83-n134/65/README.txt","size":359,"display_size":"359 Bytes","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/hj83-n134/65/README.txt"},{"filename":"10.34770/hj83-n134/65/license.txt","size":3223,"display_size":"3.15 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/hj83-n134/65/license.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Effects of collisional ion orbit loss on tokamak radial electric field and toroidal rotation in an L-mode plasma",
+        "title_type": null
+      }
+    ],
+    "description": "Ion orbit loss has been used to model the formation of a strong negative radial electric field Er in the tokamak edge, as well as edge momentum transport and toroidal rotation. To quantitatively measure ion orbit loss, an orbit-flux formulation has been developed and numerically applied to the gyrokinetic particle-in-cell code XGC. We study collisional ion orbit loss in an axisymmetric DIII-D L-mode plasma using gyrokinetic ions and drift-kinetic electrons. Numerical simulations, where the plasma density and temperature profiles are maintained through neutral ionization and heating, show the formation of a quasisteady negative Er in the edge. We have measured a radially outgoing ion gyrocenter flux due to collisional scattering of ions into the loss orbits, which is balanced by the radially incoming ion gyrocenter flux from confined orbits on the collisional time scale. This suggests that collisional ion orbit loss can shift Er in the negative direction compared to that in plasmas without orbit loss. It is also found that collisional ion orbit loss can contribute to a radially outgoing (counter-current) toroidal-angular-momentum flux, which is not balanced by the toroidal-angular-momentum flux carried by ions on the confined orbits. Therefore, the edge toroidal rotation shifts in the co-current direction on the collisional time scale.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Zhu, Hongxuan",
+        "name_type": "Personal",
+        "given_name": "Hongxuan",
+        "family_name": "Zhu",
+        "identifier": {
+          "value": "0000-0002-9844-6972",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      },
+      {
+        "value": "Stoltzfus-Dueck, T",
+        "name_type": "Personal",
+        "given_name": "T",
+        "family_name": "Stoltzfus-Dueck",
+        "identifier": {
+          "value": "0000-0003-2587-6298",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 1
+      },
+      {
+        "value": "Hager, R",
+        "name_type": "Personal",
+        "given_name": "R",
+        "family_name": "Hager",
+        "identifier": {
+          "value": "0000-0002-4624-3150",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 2
+      },
+      {
+        "value": "Ku, S",
+        "name_type": "Personal",
+        "given_name": "S",
+        "family_name": "Ku",
+        "identifier": {
+          "value": "0000-0002-9964-1208",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 3
+      },
+      {
+        "value": "Chang, C.S.",
+        "name_type": "Personal",
+        "given_name": "C.S.",
+        "family_name": "Chang",
+        "identifier": {
+          "value": "0000-0002-3346-5731",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 4
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2023",
+    "ark": "ark:/88435/dsp01r494vp42z",
+    "doi": "10.34770/hj83-n134",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.1088/1741-4326/acc815",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsReferencedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": [
+      "ion orbit loss",
+      "radial electric field",
+      "tokamak edge plasmas",
+      "gyrokinetic simulations"
+    ],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      },
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-05CH11231",
+        "award_uri": ""
+      },
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "SciDAC-4",
+        "award_uri": ""
+      },
+      {
+        "ror": "https://ror.org/00hx57361",
+        "funder_name": "Princeton University",
+        "award_number": "N/A",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["Theory and Computation"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.34770/hj83-n134/65/ARK_DATA.zip",
+      "size": 16770702,
+      "display_size": "16 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/hj83-n134/65/ARK_DATA.zip"
+    },
+    {
+      "filename": "10.34770/hj83-n134/65/README.txt",
+      "size": 359,
+      "display_size": "359 Bytes",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/hj83-n134/65/README.txt"
+    },
+    {
+      "filename": "10.34770/hj83-n134/65/license.txt",
+      "size": 3223,
+      "display_size": "3.15 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/hj83-n134/65/license.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

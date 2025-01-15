@@ -1,1 +1,307 @@
-{"resource":{"titles":[{"title":"Fusion Pilot Plant performance and the role of a Sustained High Power Density tokamak","title_type":null}],"description":"Recent U.S. fusion development strategy reports all recommend that the U.S. should pursue innovative science and technology to enable construction of a Fusion Pilot Plant (FPP) that produces net electricity from fusion at low capital cost. Compact tokamaks have been proposed as a means of potentially reducing the capital cost of a fusion pilot plant. However, compact steady-state tokamak FPPs face the challenge of integrating a high fraction of self-driven current with high core confinement, plasma pressure, and high divertor parallel heat flux. This integration is sufficiently challenging that a dedicated sustained-high-power-density (SHPD) tokamak facility is proposed by the U.S. community as the optimal way to close this integration gap. Performance projections for the steady-state tokamak FPP regime are presented and a preliminary SHPD device with substantial flexibility in lower aspect ratio (A=2-2.5), shaping, and divertor configuration to narrow gaps to a FPP is described.\r\n\r\nOriginal images for each of the 16 figures in the Nuclear Fusion article plus CSV or TXT files for the data in each of the figures where applicable.","collection_tags":[],"creators":[{"value":"Menard, Jonathan","name_type":"Personal","given_name":"Jonathan","family_name":"Menard","identifier":{"value":"0000-0003-1292-3286","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0},{"value":"Grierson, Brian","name_type":"Personal","given_name":"Brian","family_name":"Grierson","identifier":{"value":"0000-0001-5918-6506","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":1},{"value":"Brown, Tom","name_type":"Personal","given_name":"Tom","family_name":"Brown","identifier":null,"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":2},{"value":"Rana, Chirag","name_type":"Personal","given_name":"Chirag","family_name":"Rana","identifier":{"value":"0000-0002-8460-4543","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":3},{"value":"Zhai, Yuhu","name_type":"Personal","given_name":"Yuhu","family_name":"Zhai","identifier":{"value":"0000-0003-2777-2871","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":4},{"value":"Poli, Francesca","name_type":"Personal","given_name":"Francesca","family_name":"Poli","identifier":{"value":"0000-0003-3959-4371","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":5},{"value":"Maingi, Rajesh","name_type":"Personal","given_name":"Rajesh","family_name":"Maingi","identifier":{"value":"0000-0003-1238-8121","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":6},{"value":"Guttenfelder, Walter","name_type":"Personal","given_name":"Walter","family_name":"Guttenfelder","identifier":{"value":"0000-0001-8181-058X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":7},{"value":"Snyder, Philip","name_type":"Personal","given_name":"Philip","family_name":"Snyder","identifier":null,"affiliations":[],"sequence":8}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2022","ark":"ark:/88435/dsp01kk91fp703","doi":"10.11578/1888274","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1088/1741-4326/ac49aa","related_identifier_type":"DOI","relation_type":"IsReferencedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":["fusion pilot plant","steady-state tokamak","core-edge integration","high-temperature superconductors","liquid metals"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["Advanced Projects","System Studies"],"migrated":true},"files":[{"filename":"10.11578/1888274/62/ARK_DATA.zip","size":5864131,"display_size":"5.59 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1888274/62/ARK_DATA.zip"},{"filename":"10.11578/1888274/62/README.txt","size":3848,"display_size":"3.76 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1888274/62/README.txt"},{"filename":"10.11578/1888274/62/license.txt","size":3223,"display_size":"3.15 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1888274/62/license.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Fusion Pilot Plant performance and the role of a Sustained High Power Density tokamak",
+        "title_type": null
+      }
+    ],
+    "description": "Recent U.S. fusion development strategy reports all recommend that the U.S. should pursue innovative science and technology to enable construction of a Fusion Pilot Plant (FPP) that produces net electricity from fusion at low capital cost. Compact tokamaks have been proposed as a means of potentially reducing the capital cost of a fusion pilot plant. However, compact steady-state tokamak FPPs face the challenge of integrating a high fraction of self-driven current with high core confinement, plasma pressure, and high divertor parallel heat flux. This integration is sufficiently challenging that a dedicated sustained-high-power-density (SHPD) tokamak facility is proposed by the U.S. community as the optimal way to close this integration gap. Performance projections for the steady-state tokamak FPP regime are presented and a preliminary SHPD device with substantial flexibility in lower aspect ratio (A=2-2.5), shaping, and divertor configuration to narrow gaps to a FPP is described.\r\n\r\nOriginal images for each of the 16 figures in the Nuclear Fusion article plus CSV or TXT files for the data in each of the figures where applicable.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Menard, Jonathan",
+        "name_type": "Personal",
+        "given_name": "Jonathan",
+        "family_name": "Menard",
+        "identifier": {
+          "value": "0000-0003-1292-3286",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      },
+      {
+        "value": "Grierson, Brian",
+        "name_type": "Personal",
+        "given_name": "Brian",
+        "family_name": "Grierson",
+        "identifier": {
+          "value": "0000-0001-5918-6506",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 1
+      },
+      {
+        "value": "Brown, Tom",
+        "name_type": "Personal",
+        "given_name": "Tom",
+        "family_name": "Brown",
+        "identifier": null,
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 2
+      },
+      {
+        "value": "Rana, Chirag",
+        "name_type": "Personal",
+        "given_name": "Chirag",
+        "family_name": "Rana",
+        "identifier": {
+          "value": "0000-0002-8460-4543",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 3
+      },
+      {
+        "value": "Zhai, Yuhu",
+        "name_type": "Personal",
+        "given_name": "Yuhu",
+        "family_name": "Zhai",
+        "identifier": {
+          "value": "0000-0003-2777-2871",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 4
+      },
+      {
+        "value": "Poli, Francesca",
+        "name_type": "Personal",
+        "given_name": "Francesca",
+        "family_name": "Poli",
+        "identifier": {
+          "value": "0000-0003-3959-4371",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 5
+      },
+      {
+        "value": "Maingi, Rajesh",
+        "name_type": "Personal",
+        "given_name": "Rajesh",
+        "family_name": "Maingi",
+        "identifier": {
+          "value": "0000-0003-1238-8121",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 6
+      },
+      {
+        "value": "Guttenfelder, Walter",
+        "name_type": "Personal",
+        "given_name": "Walter",
+        "family_name": "Guttenfelder",
+        "identifier": {
+          "value": "0000-0001-8181-058X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 7
+      },
+      {
+        "value": "Snyder, Philip",
+        "name_type": "Personal",
+        "given_name": "Philip",
+        "family_name": "Snyder",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 8
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2022",
+    "ark": "ark:/88435/dsp01kk91fp703",
+    "doi": "10.11578/1888274",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.1088/1741-4326/ac49aa",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsReferencedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": [
+      "fusion pilot plant",
+      "steady-state tokamak",
+      "core-edge integration",
+      "high-temperature superconductors",
+      "liquid metals"
+    ],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["Advanced Projects", "System Studies"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.11578/1888274/62/ARK_DATA.zip",
+      "size": 5864131,
+      "display_size": "5.59 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1888274/62/ARK_DATA.zip"
+    },
+    {
+      "filename": "10.11578/1888274/62/README.txt",
+      "size": 3848,
+      "display_size": "3.76 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1888274/62/README.txt"
+    },
+    {
+      "filename": "10.11578/1888274/62/license.txt",
+      "size": 3223,
+      "display_size": "3.15 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1888274/62/license.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

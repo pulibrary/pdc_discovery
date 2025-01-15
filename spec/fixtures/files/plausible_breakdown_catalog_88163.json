@@ -1,19 +1,19 @@
 {
-    "results": [
-        {
-            "filename": "(none)",
-            "pageviews": 39,
-            "visitors": 16
-        },
-        {
-            "filename": "globus-download",
-            "pageviews": 0,
-            "visitors": 4
-        },
-        {
-            "filename": "Corr_MVPA_archive.tar.gz",
-            "pageviews": 0,
-            "visitors": 2
-        }
-    ]
+  "results": [
+    {
+      "filename": "(none)",
+      "pageviews": 39,
+      "visitors": 16
+    },
+    {
+      "filename": "globus-download",
+      "pageviews": 0,
+      "visitors": 4
+    },
+    {
+      "filename": "Corr_MVPA_archive.tar.gz",
+      "pageviews": 0,
+      "visitors": 2
+    }
+  ]
 }

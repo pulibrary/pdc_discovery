@@ -1,1 +1,174 @@
-{"resource":{"titles":[{"title":"Examination of OH and H2O2 production by uniform and non-uniform modes of dielectric barrier discharge in He/air mixture","title_type":null}],"description":"In this work we have carried out a parametrical study of hydroxyl radical (OH) generation in nanosecond dielectric barrier discharge (DBD) in He/air mixture using a laser-induced fluorescence approach. The foci of the study are the investigation of differences between uniform and non-uniform modes of the discharges and the difference in production of OH and H2O2 Nanosecond-time scale imaging of the discharge shows transition from streamer to diffuse mode when applied electric field to the discharge gap approaches ∼90 kV cm−1. The results show that both OH production in the gas phase and downstream H2O2 delivery rates to liquid depend on the discharge mode operation and are respectively 30% and 3 times higher for the non-uniform DBD compared to the diffuse discharge.","collection_tags":[],"creators":[{"value":"Yatom, Shurik","name_type":"Personal","given_name":"Shurik","family_name":"Yatom","identifier":{"value":"0000-0001-8716-8487","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0},{"value":"Dobrynin, Danil","name_type":"Personal","given_name":"Danil","family_name":"Dobrynin","identifier":{"value":"0000-0003-4671-5370","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":1}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2022","ark":"ark:/88435/dsp01j3860b20c","doi":"10.34770/1avt-h679","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1088/1361-6463/ac95a6","related_identifier_type":"DOI","relation_type":"IsCitedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":["dielectric barrier discharge","laser induced fluorescence","hydroxyl radical","hydrogen peroxide"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""},{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-SC0021379","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["Discovery Plasma Science"],"migrated":true},"files":[{"filename":"10.34770/1avt-h679/103/all OH LIF decays.xlsx","size":19406,"display_size":"19 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/1avt-h679/103/all%20OH%20LIF%20decays.xlsx"},{"filename":"10.34770/1avt-h679/103/laser width.xlsx","size":29194,"display_size":"28.5 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/1avt-h679/103/laser%20width.xlsx"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Examination of OH and H2O2 production by uniform and non-uniform modes of dielectric barrier discharge in He/air mixture",
+        "title_type": null
+      }
+    ],
+    "description": "In this work we have carried out a parametrical study of hydroxyl radical (OH) generation in nanosecond dielectric barrier discharge (DBD) in He/air mixture using a laser-induced fluorescence approach. The foci of the study are the investigation of differences between uniform and non-uniform modes of the discharges and the difference in production of OH and H2O2 Nanosecond-time scale imaging of the discharge shows transition from streamer to diffuse mode when applied electric field to the discharge gap approaches ∼90 kV cm−1. The results show that both OH production in the gas phase and downstream H2O2 delivery rates to liquid depend on the discharge mode operation and are respectively 30% and 3 times higher for the non-uniform DBD compared to the diffuse discharge.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Yatom, Shurik",
+        "name_type": "Personal",
+        "given_name": "Shurik",
+        "family_name": "Yatom",
+        "identifier": {
+          "value": "0000-0001-8716-8487",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      },
+      {
+        "value": "Dobrynin, Danil",
+        "name_type": "Personal",
+        "given_name": "Danil",
+        "family_name": "Dobrynin",
+        "identifier": {
+          "value": "0000-0003-4671-5370",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 1
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2022",
+    "ark": "ark:/88435/dsp01j3860b20c",
+    "doi": "10.34770/1avt-h679",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.1088/1361-6463/ac95a6",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsCitedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": [
+      "dielectric barrier discharge",
+      "laser induced fluorescence",
+      "hydroxyl radical",
+      "hydrogen peroxide"
+    ],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      },
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-SC0021379",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["Discovery Plasma Science"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.34770/1avt-h679/103/all OH LIF decays.xlsx",
+      "size": 19406,
+      "display_size": "19 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/1avt-h679/103/all%20OH%20LIF%20decays.xlsx"
+    },
+    {
+      "filename": "10.34770/1avt-h679/103/laser width.xlsx",
+      "size": 29194,
+      "display_size": "28.5 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/1avt-h679/103/laser%20width.xlsx"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

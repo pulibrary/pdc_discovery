@@ -1,1 +1,103 @@
-{"resource":{"titles":[{"title":"CKavity Library: Next-Generation Sequencing","title_type":null},{"title":"A library of novel genes with combinatorially diverse cavities, built on a stably folded structural template","title_type":"AlternativeTitle"}],"description":"Protein sequence space is vast; nature uses only an infinitesimal fraction of possible sequences to sustain life. Are there solutions to biological problems other than those provided by nature? Can we create artificial proteins that sustain life? To investigate this question, the Hecht lab has created combinatorial collections, or libraries, of novel sequences with no homology to those found in living organisms. These libraries were subjected to screens and selections, leading to the identification of sequences with roles in catalysis, modulating gene regulation, and metal homeostasis. However, the resulting functional proteins formed dynamic rather than well-ordered structures. This impeded structural characterization and made it difficult to ascertain a mechanism of action. To address this, Christina Karas's thesis work focuses on developing a new model of libraries based on the de novo protein S-824, a four-helix bundle with a very stable three-dimensional structure. The first part of this research focused on mutagenesis of S-824 and characterization of the resulting proteins, revealing that this scaffold tolerates amino acid substitutions, including buried polar residues and the removal of hydrophobic side chains to create a putative cavity. Distinct from previous libraries, Karas targeted variability to a specific region of the protein, seeking to create a cavity and potential active site. The second part of this work details the design and creation of a library encoding 1.7 x 10^6 unique proteins, assembled from degenerate oligonucleotides. The third and fourth parts of this work cover the screening effort for a range of activities, both in vitro and in vivo. I found that this collection binds heme readily, leading to abundant peroxidase activity. Hits for lipase and phosphatase activity were also detected. This work details the development of a new strategy for creating de novo sequences geared toward function rather than structure.","collection_tags":[],"creators":[{"value":"Leach, Robert","name_type":"Personal","given_name":"Robert","family_name":"Leach","identifier":null,"affiliations":[],"sequence":0},{"value":"Hecht, Michael","name_type":"Personal","given_name":"Michael","family_name":"Hecht","identifier":null,"affiliations":[],"sequence":1},{"value":"Karas, Christina","name_type":"Personal","given_name":"Christina","family_name":"Karas","identifier":null,"affiliations":[],"sequence":2}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton University","publication_year":"2019","ark":"ark:/88435/dsp015999n626m","doi":"10.34770/wzgz-x526","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[],"keywords":["de novo genes","synthetic biology","Next-generation sequencing","DNA library"],"contributors":[],"organizational_contributors":[],"funders":[],"domains":[],"communities":[],"subcommunities":[],"migrated":true},"files":[{"filename":"10.34770/wzgz-x526/55/CKavity_Library_NGS.zip","size":509040576,"display_size":"485 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/wzgz-x526/55/CKavity_Library_NGS.zip"},{"filename":"10.34770/wzgz-x526/55/README.txt","size":3514,"display_size":"3.43 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/wzgz-x526/55/README.txt"},{"filename":"10.34770/wzgz-x526/55/README.txt.txt","size":3346,"display_size":"3.27 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/wzgz-x526/55/README.txt.txt"},{"filename":"10.34770/wzgz-x526/55/license.txt","size":3223,"display_size":"3.15 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/wzgz-x526/55/license.txt"}],"group":{"title":"Princeton Research Data Service (PRDS)","description":null,"code":"RD","created_at":"2022-04-28T16:30:00.190-04:00","updated_at":"2023-05-18T14:20:45.251-04:00"}}
+{
+  "resource": {
+    "titles": [
+      { "title": "CKavity Library: Next-Generation Sequencing", "title_type": null },
+      {
+        "title": "A library of novel genes with combinatorially diverse cavities, built on a stably folded structural template",
+        "title_type": "AlternativeTitle"
+      }
+    ],
+    "description": "Protein sequence space is vast; nature uses only an infinitesimal fraction of possible sequences to sustain life. Are there solutions to biological problems other than those provided by nature? Can we create artificial proteins that sustain life? To investigate this question, the Hecht lab has created combinatorial collections, or libraries, of novel sequences with no homology to those found in living organisms. These libraries were subjected to screens and selections, leading to the identification of sequences with roles in catalysis, modulating gene regulation, and metal homeostasis. However, the resulting functional proteins formed dynamic rather than well-ordered structures. This impeded structural characterization and made it difficult to ascertain a mechanism of action. To address this, Christina Karas's thesis work focuses on developing a new model of libraries based on the de novo protein S-824, a four-helix bundle with a very stable three-dimensional structure. The first part of this research focused on mutagenesis of S-824 and characterization of the resulting proteins, revealing that this scaffold tolerates amino acid substitutions, including buried polar residues and the removal of hydrophobic side chains to create a putative cavity. Distinct from previous libraries, Karas targeted variability to a specific region of the protein, seeking to create a cavity and potential active site. The second part of this work details the design and creation of a library encoding 1.7 x 10^6 unique proteins, assembled from degenerate oligonucleotides. The third and fourth parts of this work cover the screening effort for a range of activities, both in vitro and in vivo. I found that this collection binds heme readily, leading to abundant peroxidase activity. Hits for lipase and phosphatase activity were also detected. This work details the development of a new strategy for creating de novo sequences geared toward function rather than structure.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Leach, Robert",
+        "name_type": "Personal",
+        "given_name": "Robert",
+        "family_name": "Leach",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 0
+      },
+      {
+        "value": "Hecht, Michael",
+        "name_type": "Personal",
+        "given_name": "Michael",
+        "family_name": "Hecht",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 1
+      },
+      {
+        "value": "Karas, Christina",
+        "name_type": "Personal",
+        "given_name": "Christina",
+        "family_name": "Karas",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 2
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton University",
+    "publication_year": "2019",
+    "ark": "ark:/88435/dsp015999n626m",
+    "doi": "10.34770/wzgz-x526",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [],
+    "keywords": [
+      "de novo genes",
+      "synthetic biology",
+      "Next-generation sequencing",
+      "DNA library"
+    ],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [],
+    "domains": [],
+    "communities": [],
+    "subcommunities": [],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.34770/wzgz-x526/55/CKavity_Library_NGS.zip",
+      "size": 509040576,
+      "display_size": "485 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/wzgz-x526/55/CKavity_Library_NGS.zip"
+    },
+    {
+      "filename": "10.34770/wzgz-x526/55/README.txt",
+      "size": 3514,
+      "display_size": "3.43 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/wzgz-x526/55/README.txt"
+    },
+    {
+      "filename": "10.34770/wzgz-x526/55/README.txt.txt",
+      "size": 3346,
+      "display_size": "3.27 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/wzgz-x526/55/README.txt.txt"
+    },
+    {
+      "filename": "10.34770/wzgz-x526/55/license.txt",
+      "size": 3223,
+      "display_size": "3.15 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/wzgz-x526/55/license.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Research Data Service (PRDS)",
+    "description": null,
+    "code": "RD",
+    "created_at": "2022-04-28T16:30:00.190-04:00",
+    "updated_at": "2023-05-18T14:20:45.251-04:00"
+  }
+}

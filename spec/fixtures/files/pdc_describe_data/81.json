@@ -1,1 +1,240 @@
-{"resource":{"titles":[{"title":"Operational Space and Performance Limiting Events in the First Physics Campaign of MAST-U","title_type":null}],"description":"The MAST-U fusion plasma research device, the upgrade to the Mega Amp Spherical Tokamak, has recently completed its first campaign of physics operation. MAST-U operated with Ohmic, or one or two neutral beams for heating, at 400-800 kA plasma current, in conventional or “SuperX” divertor configurations. Equilibrium reconstructions provide key plasma physics parameters vs. time for each discharge, and diagrams are produced which show where the prevalence of operation occurred as well as the limits in various operational spaces. When compared to stability limits, the operation of MAST-U so far has generally stayed out of the low q, low density instability region, and below the high density Greenwald limit, high beta global stability limits, and high elongation vertical stability limit. MAST-U still has the potential to reach higher elongation, which could benefit the plasma performance. Despite the majority of operation happening below established stability limits, disruptions did occur in the flat-top phase of MAST-U plasmas. The reasons for these disruptions are highlighted, and possible strategies to avoid them and to extend the operational space of MAST-U in future campaigns are discussed.\r\n\r\nThe data for reproducing each figure is included here. For Figures 1-7 and 9b, the \"x\" and \"y\" data gives the center of the squares of the contour plots (labeled, with units, inside each file). The \"z\" data gives the Log10 of the number of equilibria in each square (for 9b the average amplitude of the FFT). For Figures 8, 9a, and 10, the data given are the time series of the various quantities plotted, which are labelled, with units, inside each file.","collection_tags":[],"creators":[{"value":"Berkery, John","name_type":"Personal","given_name":"John","family_name":"Berkery","identifier":{"value":"0000-0002-8062-3210","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2023","ark":"ark:/88435/dsp01td96k574c","doi":"10.34770/bn8n-b319","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1088/1361-6587/acb464","related_identifier_type":"DOI","relation_type":"IsReferencedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":["Spherical Tokamak"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""},{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-SC0018623","award_uri":""},{"ror":"","funder_name":"EUROfusion Consortium","award_number":"101052200","award_uri":""},{"ror":"","funder_name":"Engineering \u0026 Physical Sciences Research Council","award_number":"EP/T012250/1","award_uri":""},{"ror":"","funder_name":"Engineering \u0026 Physical Sciences Research Council","award_number":"EP/W006839/1","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["MAST-U","Spherical Torus"],"migrated":true},"files":[{"filename":"10.34770/bn8n-b319/81/Fig1.dat","size":27052,"display_size":"26.4 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig1.dat"},{"filename":"10.34770/bn8n-b319/81/Fig10.dat","size":502931,"display_size":"491 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig10.dat"},{"filename":"10.34770/bn8n-b319/81/Fig2.dat","size":25496,"display_size":"24.9 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig2.dat"},{"filename":"10.34770/bn8n-b319/81/Fig3.dat","size":48462,"display_size":"47.3 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig3.dat"},{"filename":"10.34770/bn8n-b319/81/Fig4.dat","size":30569,"display_size":"29.9 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig4.dat"},{"filename":"10.34770/bn8n-b319/81/Fig5.dat","size":64085,"display_size":"62.6 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig5.dat"},{"filename":"10.34770/bn8n-b319/81/Fig6.dat","size":27104,"display_size":"26.5 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig6.dat"},{"filename":"10.34770/bn8n-b319/81/Fig7.dat","size":29773,"display_size":"29.1 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig7.dat"},{"filename":"10.34770/bn8n-b319/81/Fig8.dat","size":2751096,"display_size":"2.62 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig8.dat"},{"filename":"10.34770/bn8n-b319/81/Fig9a.dat","size":4293,"display_size":"4.19 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig9a.dat"},{"filename":"10.34770/bn8n-b319/81/Fig9b.dat","size":491165,"display_size":"480 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig9b.dat"},{"filename":"10.34770/bn8n-b319/81/Readme.txt","size":1796,"display_size":"1.75 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Readme.txt"},{"filename":"10.34770/bn8n-b319/81/license.txt","size":3223,"display_size":"3.15 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/license.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Operational Space and Performance Limiting Events in the First Physics Campaign of MAST-U",
+        "title_type": null
+      }
+    ],
+    "description": "The MAST-U fusion plasma research device, the upgrade to the Mega Amp Spherical Tokamak, has recently completed its first campaign of physics operation. MAST-U operated with Ohmic, or one or two neutral beams for heating, at 400-800 kA plasma current, in conventional or “SuperX” divertor configurations. Equilibrium reconstructions provide key plasma physics parameters vs. time for each discharge, and diagrams are produced which show where the prevalence of operation occurred as well as the limits in various operational spaces. When compared to stability limits, the operation of MAST-U so far has generally stayed out of the low q, low density instability region, and below the high density Greenwald limit, high beta global stability limits, and high elongation vertical stability limit. MAST-U still has the potential to reach higher elongation, which could benefit the plasma performance. Despite the majority of operation happening below established stability limits, disruptions did occur in the flat-top phase of MAST-U plasmas. The reasons for these disruptions are highlighted, and possible strategies to avoid them and to extend the operational space of MAST-U in future campaigns are discussed.\r\n\r\nThe data for reproducing each figure is included here. For Figures 1-7 and 9b, the \"x\" and \"y\" data gives the center of the squares of the contour plots (labeled, with units, inside each file). The \"z\" data gives the Log10 of the number of equilibria in each square (for 9b the average amplitude of the FFT). For Figures 8, 9a, and 10, the data given are the time series of the various quantities plotted, which are labelled, with units, inside each file.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Berkery, John",
+        "name_type": "Personal",
+        "given_name": "John",
+        "family_name": "Berkery",
+        "identifier": {
+          "value": "0000-0002-8062-3210",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2023",
+    "ark": "ark:/88435/dsp01td96k574c",
+    "doi": "10.34770/bn8n-b319",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.1088/1361-6587/acb464",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsReferencedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": ["Spherical Tokamak"],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      },
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-SC0018623",
+        "award_uri": ""
+      },
+      {
+        "ror": "",
+        "funder_name": "EUROfusion Consortium",
+        "award_number": "101052200",
+        "award_uri": ""
+      },
+      {
+        "ror": "",
+        "funder_name": "Engineering \u0026 Physical Sciences Research Council",
+        "award_number": "EP/T012250/1",
+        "award_uri": ""
+      },
+      {
+        "ror": "",
+        "funder_name": "Engineering \u0026 Physical Sciences Research Council",
+        "award_number": "EP/W006839/1",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["MAST-U", "Spherical Torus"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.34770/bn8n-b319/81/Fig1.dat",
+      "size": 27052,
+      "display_size": "26.4 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig1.dat"
+    },
+    {
+      "filename": "10.34770/bn8n-b319/81/Fig10.dat",
+      "size": 502931,
+      "display_size": "491 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig10.dat"
+    },
+    {
+      "filename": "10.34770/bn8n-b319/81/Fig2.dat",
+      "size": 25496,
+      "display_size": "24.9 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig2.dat"
+    },
+    {
+      "filename": "10.34770/bn8n-b319/81/Fig3.dat",
+      "size": 48462,
+      "display_size": "47.3 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig3.dat"
+    },
+    {
+      "filename": "10.34770/bn8n-b319/81/Fig4.dat",
+      "size": 30569,
+      "display_size": "29.9 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig4.dat"
+    },
+    {
+      "filename": "10.34770/bn8n-b319/81/Fig5.dat",
+      "size": 64085,
+      "display_size": "62.6 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig5.dat"
+    },
+    {
+      "filename": "10.34770/bn8n-b319/81/Fig6.dat",
+      "size": 27104,
+      "display_size": "26.5 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig6.dat"
+    },
+    {
+      "filename": "10.34770/bn8n-b319/81/Fig7.dat",
+      "size": 29773,
+      "display_size": "29.1 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig7.dat"
+    },
+    {
+      "filename": "10.34770/bn8n-b319/81/Fig8.dat",
+      "size": 2751096,
+      "display_size": "2.62 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig8.dat"
+    },
+    {
+      "filename": "10.34770/bn8n-b319/81/Fig9a.dat",
+      "size": 4293,
+      "display_size": "4.19 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig9a.dat"
+    },
+    {
+      "filename": "10.34770/bn8n-b319/81/Fig9b.dat",
+      "size": 491165,
+      "display_size": "480 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Fig9b.dat"
+    },
+    {
+      "filename": "10.34770/bn8n-b319/81/Readme.txt",
+      "size": 1796,
+      "display_size": "1.75 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/Readme.txt"
+    },
+    {
+      "filename": "10.34770/bn8n-b319/81/license.txt",
+      "size": 3223,
+      "display_size": "3.15 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bn8n-b319/81/license.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

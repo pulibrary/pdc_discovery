@@ -1,1 +1,227 @@
-{"resource":{"titles":[{"title":"Neoclassical transport in strong gradient regions of large aspect ratio tokamaks","title_type":null}],"description":"We present a new neoclassical transport model for large aspect ratio tokamaks where the gradient scale lengths are of the size of the ion poloidal gyroradius. Previous work on neoclassical transport across transport barriers assumed large density and potential gradients but a small temperature gradient, or neglected the gradient of the mean parallel flow. Using large aspect ratio and low collisionality expansions, we relax these restrictive assumptions. We define a new set of variables based on conserved quantities, which simplifies the drift kinetic equation whilst keeping strong gradients, and derive equations describing the transport of particles, parallel momentum and energy by ions in the banana regime. The poloidally varying parts of density and electric potential are included. Studying contributions from both passing and trapped particles, we show that the resulting transport is dominated by trapped particles. We find that a non-zero neoclassical particle flux requires parallel momentum input which could be provided through interaction with turbulence or impurities. We derive upper and lower bounds for the energy flux across a transport barrier in both temperature and density and present example profiles and fluxes.","collection_tags":[],"creators":[{"value":"Trinczek, Silvia","name_type":"Personal","given_name":"Silvia","family_name":"Trinczek","identifier":{"value":"0000-0002-6868-5216","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0},{"value":"Parra, Felix I.","name_type":"Personal","given_name":"Felix I.","family_name":"Parra","identifier":{"value":"0000-0001-9621-7404","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":1},{"value":"Catto, Peter J.","name_type":"Personal","given_name":"Peter J.","family_name":"Catto","identifier":{"value":"0000-0002-0349-1736","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":2},{"value":"Calvo, Iván","name_type":"Personal","given_name":"Iván","family_name":"Calvo","identifier":{"value":"0000-0003-3118-3463","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":3},{"value":"Landreman, Matt","name_type":"Personal","given_name":"Matt","family_name":"Landreman","identifier":{"value":"0000-0002-7233-577X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":4}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2023","ark":"ark:/88435/dsp0137720g96v","doi":"10.34770/0hs8-8242","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1017/S0022377823000430","related_identifier_type":"DOI","relation_type":"IsCitedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":["plasma physics","tokamak","neoclassical transport","pedestal"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""},{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-FG02-91ER-54109","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["Theory"],"migrated":true},"files":[{"filename":"10.34770/0hs8-8242/83/Profile and Flux Calculation.zip","size":3771,"display_size":"3.68 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/0hs8-8242/83/Profile%20and%20Flux%20Calculation.zip"},{"filename":"10.34770/0hs8-8242/83/ReadMe.txt","size":526,"display_size":"526 Bytes","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/0hs8-8242/83/ReadMe.txt"},{"filename":"10.34770/0hs8-8242/83/exact gt.nb","size":77733,"display_size":"75.9 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/0hs8-8242/83/exact%20gt.nb"},{"filename":"10.34770/0hs8-8242/83/license.txt","size":3223,"display_size":"3.15 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/0hs8-8242/83/license.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Neoclassical transport in strong gradient regions of large aspect ratio tokamaks",
+        "title_type": null
+      }
+    ],
+    "description": "We present a new neoclassical transport model for large aspect ratio tokamaks where the gradient scale lengths are of the size of the ion poloidal gyroradius. Previous work on neoclassical transport across transport barriers assumed large density and potential gradients but a small temperature gradient, or neglected the gradient of the mean parallel flow. Using large aspect ratio and low collisionality expansions, we relax these restrictive assumptions. We define a new set of variables based on conserved quantities, which simplifies the drift kinetic equation whilst keeping strong gradients, and derive equations describing the transport of particles, parallel momentum and energy by ions in the banana regime. The poloidally varying parts of density and electric potential are included. Studying contributions from both passing and trapped particles, we show that the resulting transport is dominated by trapped particles. We find that a non-zero neoclassical particle flux requires parallel momentum input which could be provided through interaction with turbulence or impurities. We derive upper and lower bounds for the energy flux across a transport barrier in both temperature and density and present example profiles and fluxes.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Trinczek, Silvia",
+        "name_type": "Personal",
+        "given_name": "Silvia",
+        "family_name": "Trinczek",
+        "identifier": {
+          "value": "0000-0002-6868-5216",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      },
+      {
+        "value": "Parra, Felix I.",
+        "name_type": "Personal",
+        "given_name": "Felix I.",
+        "family_name": "Parra",
+        "identifier": {
+          "value": "0000-0001-9621-7404",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 1
+      },
+      {
+        "value": "Catto, Peter J.",
+        "name_type": "Personal",
+        "given_name": "Peter J.",
+        "family_name": "Catto",
+        "identifier": {
+          "value": "0000-0002-0349-1736",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 2
+      },
+      {
+        "value": "Calvo, Iván",
+        "name_type": "Personal",
+        "given_name": "Iván",
+        "family_name": "Calvo",
+        "identifier": {
+          "value": "0000-0003-3118-3463",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 3
+      },
+      {
+        "value": "Landreman, Matt",
+        "name_type": "Personal",
+        "given_name": "Matt",
+        "family_name": "Landreman",
+        "identifier": {
+          "value": "0000-0002-7233-577X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 4
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2023",
+    "ark": "ark:/88435/dsp0137720g96v",
+    "doi": "10.34770/0hs8-8242",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.1017/S0022377823000430",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsCitedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": ["plasma physics", "tokamak", "neoclassical transport", "pedestal"],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      },
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-FG02-91ER-54109",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["Theory"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.34770/0hs8-8242/83/Profile and Flux Calculation.zip",
+      "size": 3771,
+      "display_size": "3.68 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/0hs8-8242/83/Profile%20and%20Flux%20Calculation.zip"
+    },
+    {
+      "filename": "10.34770/0hs8-8242/83/ReadMe.txt",
+      "size": 526,
+      "display_size": "526 Bytes",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/0hs8-8242/83/ReadMe.txt"
+    },
+    {
+      "filename": "10.34770/0hs8-8242/83/exact gt.nb",
+      "size": 77733,
+      "display_size": "75.9 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/0hs8-8242/83/exact%20gt.nb"
+    },
+    {
+      "filename": "10.34770/0hs8-8242/83/license.txt",
+      "size": 3223,
+      "display_size": "3.15 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/0hs8-8242/83/license.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

@@ -2,7 +2,7 @@
 name: Deploy API docs to GitHub Pages
 on:
   push:
-    branches: ['main']
+    branches: ["main"]
     # paths:
     #   - '.github/workflows/pages.yml'
     #   - '.yardopts'
@@ -19,7 +19,7 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: 'pages'
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
@@ -36,4 +36,4 @@ jobs:
         with:
           # default `doc` as default of `.yardopts`
           # output-dir: 'doc'
-          ruby-version: '3.3.2'
+          ruby-version: "3.3.2"

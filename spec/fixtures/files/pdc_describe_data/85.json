@@ -1,1 +1,371 @@
-{"resource":{"titles":[{"title":"Laboratory study of the failed torus mechanism in arched, line-tied, magnetic flux ropes","title_type":null}],"description":"Coronal mass ejections (CMEs) are some of the most energetic and violent events in our solar system. The prediction and understanding of CMEs is of particular importance due to the impact that they can have on Earth-based satellite systems, and in extreme cases, ground-based electronics. CMEs often occur when long-lived magnetic flux ropes (MFRs) anchored to the solar surface destabilize and erupt away from the Sun. One potential cause for these eruptions is an ideal magnetohydrodynamic (MHD) instability such as the kink or torus instability. Previous experiments on the Magnetic Reconnection eXperiment (MRX) revealed a class of MFRs that were torus-unstable but kink-stable, which failed to erupt. These “failed-tori” went through a process similar to Taylor relaxation where the toroidal current was redistributed before the eruption ultimately failed. We have investigated this behavior through additional diagnostics that measure the current distribution at the foot points and the energy distribution before and after an event. These measurements indicate that ideal MHD effects are sufficient to explain the energy distribution changes during failed torus events. This excludes Taylor relaxation as a possible mechanism of current redistribution during an event. A new model that only requires non-ideal effects in a thin layer above the electrodes is presented to explain the observed phenomena. This work broadens our understanding of the stability of MFRs and the mechanism behind the failed torus through the improved prediction of the torus instability and through new diagnostics to measure the energy inventory and current profile at the foot points.","collection_tags":[],"creators":[{"value":"Alt, Andrew","name_type":"Personal","given_name":"Andrew","family_name":"Alt","identifier":{"value":"0000-0001-9475-8282","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0},{"value":"Ji, Hantao","name_type":"Personal","given_name":"Hantao","family_name":"Ji","identifier":{"value":"0000-0001-9600-9963","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":1},{"value":"Yoo, Jongsoo","name_type":"Personal","given_name":"Jongsoo","family_name":"Yoo","identifier":{"value":"0000-0003-3881-1995","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":2},{"value":"Bose, Sayak","name_type":"Personal","given_name":"Sayak","family_name":"Bose","identifier":{"value":"0000-0001-8093-9322","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":3},{"value":"Goodman, Aaron","name_type":"Personal","given_name":"Aaron","family_name":"Goodman","identifier":{"value":"0000-0003-3639-6572","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":4},{"value":"Yamada, Masaaki","name_type":"Personal","given_name":"Masaaki","family_name":"Yamada","identifier":{"value":"0000-0003-4996-1649","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":5}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2023","ark":"ark:/88435/dsp0176537458f","doi":"10.34770/k547-cq20","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1063/5.0137457","related_identifier_type":"DOI","relation_type":"IsCitedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":["Laboratory plasma","Flux rope","Coronal mass ejection","Laboratory Astrophysics","MHD","MRX"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""},{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-SC0019049","award_uri":""},{"ror":"https://ror.org/027ka1x80","funder_name":"National Aeronautics and Space Administration","award_number":"80HQTR17T0005","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["Discovery Plasma Science"],"migrated":true},"files":[{"filename":"10.34770/k547-cq20/85/ReadMe.txt","size":2841,"display_size":"2.77 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/ReadMe.txt"},{"filename":"10.34770/k547-cq20/85/fig10a.mat","size":39021,"display_size":"38.1 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig10a.mat"},{"filename":"10.34770/k547-cq20/85/fig10b.mat","size":6703,"display_size":"6.55 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig10b.mat"},{"filename":"10.34770/k547-cq20/85/fig10c.mat","size":8781,"display_size":"8.58 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig10c.mat"},{"filename":"10.34770/k547-cq20/85/fig11.mat","size":3817,"display_size":"3.73 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig11.mat"},{"filename":"10.34770/k547-cq20/85/fig12.mat","size":3789,"display_size":"3.7 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig12.mat"},{"filename":"10.34770/k547-cq20/85/fig13.mat","size":1785,"display_size":"1.74 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig13.mat"},{"filename":"10.34770/k547-cq20/85/fig15.mat","size":74602,"display_size":"72.9 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig15.mat"},{"filename":"10.34770/k547-cq20/85/fig17.mat","size":22498,"display_size":"22 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig17.mat"},{"filename":"10.34770/k547-cq20/85/fig18.mat","size":4176,"display_size":"4.08 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig18.mat"},{"filename":"10.34770/k547-cq20/85/fig2.mat","size":188339,"display_size":"184 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig2.mat"},{"filename":"10.34770/k547-cq20/85/fig5.mat","size":51849,"display_size":"50.6 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig5.mat"},{"filename":"10.34770/k547-cq20/85/fig6.mat","size":2770,"display_size":"2.71 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig6.mat"},{"filename":"10.34770/k547-cq20/85/fig7Eruptive.mat","size":3111,"display_size":"3.04 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig7Eruptive.mat"},{"filename":"10.34770/k547-cq20/85/fig7FailedTorus.mat","size":3277,"display_size":"3.2 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig7FailedTorus.mat"},{"filename":"10.34770/k547-cq20/85/fig8.mat","size":99284,"display_size":"97 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig8.mat"},{"filename":"10.34770/k547-cq20/85/fig9a.mat","size":46957,"display_size":"45.9 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig9a.mat"},{"filename":"10.34770/k547-cq20/85/fig9b.mat","size":46825,"display_size":"45.7 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig9b.mat"},{"filename":"10.34770/k547-cq20/85/license.txt","size":3223,"display_size":"3.15 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/license.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Laboratory study of the failed torus mechanism in arched, line-tied, magnetic flux ropes",
+        "title_type": null
+      }
+    ],
+    "description": "Coronal mass ejections (CMEs) are some of the most energetic and violent events in our solar system. The prediction and understanding of CMEs is of particular importance due to the impact that they can have on Earth-based satellite systems, and in extreme cases, ground-based electronics. CMEs often occur when long-lived magnetic flux ropes (MFRs) anchored to the solar surface destabilize and erupt away from the Sun. One potential cause for these eruptions is an ideal magnetohydrodynamic (MHD) instability such as the kink or torus instability. Previous experiments on the Magnetic Reconnection eXperiment (MRX) revealed a class of MFRs that were torus-unstable but kink-stable, which failed to erupt. These “failed-tori” went through a process similar to Taylor relaxation where the toroidal current was redistributed before the eruption ultimately failed. We have investigated this behavior through additional diagnostics that measure the current distribution at the foot points and the energy distribution before and after an event. These measurements indicate that ideal MHD effects are sufficient to explain the energy distribution changes during failed torus events. This excludes Taylor relaxation as a possible mechanism of current redistribution during an event. A new model that only requires non-ideal effects in a thin layer above the electrodes is presented to explain the observed phenomena. This work broadens our understanding of the stability of MFRs and the mechanism behind the failed torus through the improved prediction of the torus instability and through new diagnostics to measure the energy inventory and current profile at the foot points.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Alt, Andrew",
+        "name_type": "Personal",
+        "given_name": "Andrew",
+        "family_name": "Alt",
+        "identifier": {
+          "value": "0000-0001-9475-8282",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      },
+      {
+        "value": "Ji, Hantao",
+        "name_type": "Personal",
+        "given_name": "Hantao",
+        "family_name": "Ji",
+        "identifier": {
+          "value": "0000-0001-9600-9963",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 1
+      },
+      {
+        "value": "Yoo, Jongsoo",
+        "name_type": "Personal",
+        "given_name": "Jongsoo",
+        "family_name": "Yoo",
+        "identifier": {
+          "value": "0000-0003-3881-1995",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 2
+      },
+      {
+        "value": "Bose, Sayak",
+        "name_type": "Personal",
+        "given_name": "Sayak",
+        "family_name": "Bose",
+        "identifier": {
+          "value": "0000-0001-8093-9322",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 3
+      },
+      {
+        "value": "Goodman, Aaron",
+        "name_type": "Personal",
+        "given_name": "Aaron",
+        "family_name": "Goodman",
+        "identifier": {
+          "value": "0000-0003-3639-6572",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 4
+      },
+      {
+        "value": "Yamada, Masaaki",
+        "name_type": "Personal",
+        "given_name": "Masaaki",
+        "family_name": "Yamada",
+        "identifier": {
+          "value": "0000-0003-4996-1649",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 5
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2023",
+    "ark": "ark:/88435/dsp0176537458f",
+    "doi": "10.34770/k547-cq20",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.1063/5.0137457",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsCitedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": [
+      "Laboratory plasma",
+      "Flux rope",
+      "Coronal mass ejection",
+      "Laboratory Astrophysics",
+      "MHD",
+      "MRX"
+    ],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      },
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-SC0019049",
+        "award_uri": ""
+      },
+      {
+        "ror": "https://ror.org/027ka1x80",
+        "funder_name": "National Aeronautics and Space Administration",
+        "award_number": "80HQTR17T0005",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["Discovery Plasma Science"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.34770/k547-cq20/85/ReadMe.txt",
+      "size": 2841,
+      "display_size": "2.77 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/ReadMe.txt"
+    },
+    {
+      "filename": "10.34770/k547-cq20/85/fig10a.mat",
+      "size": 39021,
+      "display_size": "38.1 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig10a.mat"
+    },
+    {
+      "filename": "10.34770/k547-cq20/85/fig10b.mat",
+      "size": 6703,
+      "display_size": "6.55 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig10b.mat"
+    },
+    {
+      "filename": "10.34770/k547-cq20/85/fig10c.mat",
+      "size": 8781,
+      "display_size": "8.58 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig10c.mat"
+    },
+    {
+      "filename": "10.34770/k547-cq20/85/fig11.mat",
+      "size": 3817,
+      "display_size": "3.73 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig11.mat"
+    },
+    {
+      "filename": "10.34770/k547-cq20/85/fig12.mat",
+      "size": 3789,
+      "display_size": "3.7 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig12.mat"
+    },
+    {
+      "filename": "10.34770/k547-cq20/85/fig13.mat",
+      "size": 1785,
+      "display_size": "1.74 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig13.mat"
+    },
+    {
+      "filename": "10.34770/k547-cq20/85/fig15.mat",
+      "size": 74602,
+      "display_size": "72.9 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig15.mat"
+    },
+    {
+      "filename": "10.34770/k547-cq20/85/fig17.mat",
+      "size": 22498,
+      "display_size": "22 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig17.mat"
+    },
+    {
+      "filename": "10.34770/k547-cq20/85/fig18.mat",
+      "size": 4176,
+      "display_size": "4.08 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig18.mat"
+    },
+    {
+      "filename": "10.34770/k547-cq20/85/fig2.mat",
+      "size": 188339,
+      "display_size": "184 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig2.mat"
+    },
+    {
+      "filename": "10.34770/k547-cq20/85/fig5.mat",
+      "size": 51849,
+      "display_size": "50.6 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig5.mat"
+    },
+    {
+      "filename": "10.34770/k547-cq20/85/fig6.mat",
+      "size": 2770,
+      "display_size": "2.71 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig6.mat"
+    },
+    {
+      "filename": "10.34770/k547-cq20/85/fig7Eruptive.mat",
+      "size": 3111,
+      "display_size": "3.04 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig7Eruptive.mat"
+    },
+    {
+      "filename": "10.34770/k547-cq20/85/fig7FailedTorus.mat",
+      "size": 3277,
+      "display_size": "3.2 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig7FailedTorus.mat"
+    },
+    {
+      "filename": "10.34770/k547-cq20/85/fig8.mat",
+      "size": 99284,
+      "display_size": "97 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig8.mat"
+    },
+    {
+      "filename": "10.34770/k547-cq20/85/fig9a.mat",
+      "size": 46957,
+      "display_size": "45.9 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig9a.mat"
+    },
+    {
+      "filename": "10.34770/k547-cq20/85/fig9b.mat",
+      "size": 46825,
+      "display_size": "45.7 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/fig9b.mat"
+    },
+    {
+      "filename": "10.34770/k547-cq20/85/license.txt",
+      "size": 3223,
+      "display_size": "3.15 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/k547-cq20/85/license.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}
