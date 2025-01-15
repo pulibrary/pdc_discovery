@@ -1,1 +1,124 @@
-{"resource":{"titles":[{"title":"Chatbots as social companions: Perceiving consciousness, human likeness, and social health benefits in machines","title_type":null}],"description":"Chatbots, or artificial agents that can carry on text conversations, are increasingly used as social companions: as friends, mentors, or significant others. Because they have become widely available only recently, there is still relatively little research on their psychological impact on people. To study how human-chatbot interaction can impact social health, relationships with family and friends, and self-esteem, we conducted a study of people who have relationships with companion chatbots and people who do not. Frequent users indicated that they received social health benefits. The perceived benefit was significantly correlated with people’s perceptions of the chatbot as having consciousness, agency, experience, and, especially, human likeness. People who did not have a relationship with a chatbot reported a more neutral to negative view, judging that if they were to use it, they might suffer harm. Yet even in the non-user group, perceived benefits positively correlated with perceived consciousness, agency, experience, and human likeness. It may be that with careful development, humanlike artificial intelligence can have a net positive effect on society, aiding mental health by supplying a reliable social interaction that improves, rather than replaces, people’s interactions with each other.","collection_tags":[],"creators":[{"value":"Guingrich, Rose","name_type":"Personal","given_name":"Rose","family_name":"Guingrich","identifier":null,"affiliations":[],"sequence":0},{"value":"Graziano, Michael","name_type":"Personal","given_name":"Michael","family_name":"Graziano","identifier":null,"affiliations":[],"sequence":1}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton University","publication_year":"2023","ark":"ark:/88435/dsp01t435gh23t","doi":"10.34770/8kyd-5v18","rights_many":[{"identifier":"MIT","uri":"https://mit-license.org/","name":"MIT License"},{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[],"keywords":["chatbots","artificial intelligence","social health","mental health","human-AI interaction","mind perception","human likeness","consciousness","theory of mind"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/021nxhr62","funder_name":"National Science Foundation","award_number":"24400-B1459-FA010","award_uri":""}],"domains":["Social Sciences"],"communities":[],"subcommunities":[],"migrated":true},"files":[{"filename":"10.34770/8kyd-5v18/76/README.txt","size":4872,"display_size":"4.76 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/8kyd-5v18/76/README.txt"},{"filename":"10.34770/8kyd-5v18/76/chatbot_code.Rmd","size":76741,"display_size":"74.9 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/8kyd-5v18/76/chatbot_code.Rmd"},{"filename":"10.34770/8kyd-5v18/76/dat_control.csv","size":16776,"display_size":"16.4 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/8kyd-5v18/76/dat_control.csv"},{"filename":"10.34770/8kyd-5v18/76/dat_users.csv","size":11719,"display_size":"11.4 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/8kyd-5v18/76/dat_users.csv"},{"filename":"10.34770/8kyd-5v18/76/free_response_control.xlsx","size":24774,"display_size":"24.2 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/8kyd-5v18/76/free_response_control.xlsx"},{"filename":"10.34770/8kyd-5v18/76/free_response_users.xlsx","size":20969,"display_size":"20.5 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/8kyd-5v18/76/free_response_users.xlsx"},{"filename":"10.34770/8kyd-5v18/76/license.txt","size":3223,"display_size":"3.15 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/8kyd-5v18/76/license.txt"}],"group":{"title":"Princeton Research Data Service (PRDS)","description":null,"code":"RD","created_at":"2022-04-28T16:30:00.190-04:00","updated_at":"2023-05-18T14:20:45.251-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Chatbots as social companions: Perceiving consciousness, human likeness, and social health benefits in machines",
+        "title_type": null
+      }
+    ],
+    "description": "Chatbots, or artificial agents that can carry on text conversations, are increasingly used as social companions: as friends, mentors, or significant others. Because they have become widely available only recently, there is still relatively little research on their psychological impact on people. To study how human-chatbot interaction can impact social health, relationships with family and friends, and self-esteem, we conducted a study of people who have relationships with companion chatbots and people who do not. Frequent users indicated that they received social health benefits. The perceived benefit was significantly correlated with people’s perceptions of the chatbot as having consciousness, agency, experience, and, especially, human likeness. People who did not have a relationship with a chatbot reported a more neutral to negative view, judging that if they were to use it, they might suffer harm. Yet even in the non-user group, perceived benefits positively correlated with perceived consciousness, agency, experience, and human likeness. It may be that with careful development, humanlike artificial intelligence can have a net positive effect on society, aiding mental health by supplying a reliable social interaction that improves, rather than replaces, people’s interactions with each other.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Guingrich, Rose",
+        "name_type": "Personal",
+        "given_name": "Rose",
+        "family_name": "Guingrich",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 0
+      },
+      {
+        "value": "Graziano, Michael",
+        "name_type": "Personal",
+        "given_name": "Michael",
+        "family_name": "Graziano",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 1
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton University",
+    "publication_year": "2023",
+    "ark": "ark:/88435/dsp01t435gh23t",
+    "doi": "10.34770/8kyd-5v18",
+    "rights_many": [
+      { "identifier": "MIT", "uri": "https://mit-license.org/", "name": "MIT License" },
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [],
+    "keywords": [
+      "chatbots",
+      "artificial intelligence",
+      "social health",
+      "mental health",
+      "human-AI interaction",
+      "mind perception",
+      "human likeness",
+      "consciousness",
+      "theory of mind"
+    ],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/021nxhr62",
+        "funder_name": "National Science Foundation",
+        "award_number": "24400-B1459-FA010",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Social Sciences"],
+    "communities": [],
+    "subcommunities": [],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.34770/8kyd-5v18/76/README.txt",
+      "size": 4872,
+      "display_size": "4.76 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/8kyd-5v18/76/README.txt"
+    },
+    {
+      "filename": "10.34770/8kyd-5v18/76/chatbot_code.Rmd",
+      "size": 76741,
+      "display_size": "74.9 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/8kyd-5v18/76/chatbot_code.Rmd"
+    },
+    {
+      "filename": "10.34770/8kyd-5v18/76/dat_control.csv",
+      "size": 16776,
+      "display_size": "16.4 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/8kyd-5v18/76/dat_control.csv"
+    },
+    {
+      "filename": "10.34770/8kyd-5v18/76/dat_users.csv",
+      "size": 11719,
+      "display_size": "11.4 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/8kyd-5v18/76/dat_users.csv"
+    },
+    {
+      "filename": "10.34770/8kyd-5v18/76/free_response_control.xlsx",
+      "size": 24774,
+      "display_size": "24.2 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/8kyd-5v18/76/free_response_control.xlsx"
+    },
+    {
+      "filename": "10.34770/8kyd-5v18/76/free_response_users.xlsx",
+      "size": 20969,
+      "display_size": "20.5 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/8kyd-5v18/76/free_response_users.xlsx"
+    },
+    {
+      "filename": "10.34770/8kyd-5v18/76/license.txt",
+      "size": 3223,
+      "display_size": "3.15 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/8kyd-5v18/76/license.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Research Data Service (PRDS)",
+    "description": null,
+    "code": "RD",
+    "created_at": "2022-04-28T16:30:00.190-04:00",
+    "updated_at": "2023-05-18T14:20:45.251-04:00"
+  }
+}

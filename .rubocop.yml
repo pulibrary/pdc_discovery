@@ -7,13 +7,13 @@ AllCops:
   DisplayCopNames: true
   TargetRubyVersion: 2.6
   Exclude:
-    - 'bin/*'
-    - 'config/deploy.rb'
-    - 'vendor/**/*'
-    - 'db/schema.rb'
-    - 'node_modules/**/*'
-    - 'spec/support/**/*'
-    - 'tmp/**/*'
+    - "bin/*"
+    - "config/deploy.rb"
+    - "vendor/**/*"
+    - "db/schema.rb"
+    - "node_modules/**/*"
+    - "spec/support/**/*"
+    - "tmp/**/*"
 
 Metrics/BlockLength:
   Exclude:

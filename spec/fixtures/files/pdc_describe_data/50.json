@@ -1,1 +1,226 @@
-{"resource":{"titles":[{"title":"Sleep spindle refractoriness segregates periods of memory reactivation","title_type":null}],"description":"The stability of long-term memories is enhanced by reactivation during sleep. Correlative evidence has linked memory reactivation with thalamocortical sleep spindles, although their functional role is not fully understood. Our initial study replicated this correlation and also demonstrated a novel rhythmicity to spindles, such that a spindle is more likely to occur approximately 3–6 s following a prior spindle. We leveraged this rhythmicity to test the role of spindles in memory by using real-time spindle tracking to present cues within versus just after the presumptive refractory period; as predicted, cues presented just after the refractory period led to better memory. Our findings demonstrate a precise temporal link between sleep spindles and memory reactivation. Moreover, they reveal a previously undescribed neural mechanism whereby spindles may segment sleep into two distinct substates: prime opportunities for reactivation and gaps that segregate reactivation events.","collection_tags":[],"creators":[{"value":"Antony, James","name_type":"Personal","given_name":"James","family_name":"Antony","identifier":{"value":"0000-0003-0656-2170","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":0},{"value":"Piloto, Luis","name_type":"Personal","given_name":"Luis","family_name":"Piloto","identifier":null,"affiliations":[],"sequence":1},{"value":"Wang, Margaret","name_type":"Personal","given_name":"Margaret","family_name":"Wang","identifier":null,"affiliations":[],"sequence":2},{"value":"Brooks, Paula","name_type":"Personal","given_name":"Paula","family_name":"Brooks","identifier":{"value":"0000-0002-3245-562X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":3},{"value":"Norman, Kenneth A","name_type":"Personal","given_name":"Kenneth A","family_name":"Norman","identifier":null,"affiliations":[],"sequence":4},{"value":"Paller, Ken","name_type":"Personal","given_name":"Ken","family_name":"Paller","identifier":{"value":"0000-0003-4415-4143","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":5}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton University","publication_year":"2018","ark":"ark:/88435/dsp011z40kw63j","doi":"10.34770/qyrs-vg25","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[],"keywords":[],"contributors":[],"organizational_contributors":[],"funders":[],"domains":[],"communities":["Princeton Neuroscience Institute"],"subcommunities":[],"migrated":true},"files":[{"filename":"10.34770/qyrs-vg25/50/2_23_2017_0.archive.tar.gz","size":3338006758,"display_size":"3.11 GB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/2_23_2017_0.archive.tar.gz"},{"filename":"10.34770/qyrs-vg25/50/2_23_2017_1.archive.tar.gz","size":4196668620,"display_size":"3.91 GB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/2_23_2017_1.archive.tar.gz"},{"filename":"10.34770/qyrs-vg25/50/2_23_2017_2.archive.tar.gz","size":6328371397,"display_size":"5.89 GB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/2_23_2017_2.archive.tar.gz"},{"filename":"10.34770/qyrs-vg25/50/2_23_2017_3.archive.tar.gz","size":2862159197,"display_size":"2.67 GB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/2_23_2017_3.archive.tar.gz"},{"filename":"10.34770/qyrs-vg25/50/2_23_2017_4.archive.tar.gz","size":3221279497,"display_size":"3 GB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/2_23_2017_4.archive.tar.gz"},{"filename":"10.34770/qyrs-vg25/50/PreprocessingOverview.pdf","size":665778,"display_size":"650 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/PreprocessingOverview.pdf"},{"filename":"10.34770/qyrs-vg25/50/README.txt","size":2928,"display_size":"2.86 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/README.txt"},{"filename":"10.34770/qyrs-vg25/50/RStuff.zip","size":455511,"display_size":"445 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/RStuff.zip"},{"filename":"10.34770/qyrs-vg25/50/analysis.zip","size":2732151340,"display_size":"2.54 GB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/analysis.zip"},{"filename":"10.34770/qyrs-vg25/50/controlsubs_0.archive.tar.gz","size":1463704557,"display_size":"1.36 GB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/controlsubs_0.archive.tar.gz"},{"filename":"10.34770/qyrs-vg25/50/controlsubs_1.archive.tar.gz","size":1955090040,"display_size":"1.82 GB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/controlsubs_1.archive.tar.gz"},{"filename":"10.34770/qyrs-vg25/50/controlsubs_2.archive.tar.gz","size":1802223984,"display_size":"1.68 GB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/controlsubs_2.archive.tar.gz"},{"filename":"10.34770/qyrs-vg25/50/expfiles.zip","size":91621875,"display_size":"87.4 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/expfiles.zip"},{"filename":"10.34770/qyrs-vg25/50/pics.zip","size":642365886,"display_size":"613 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/pics.zip"},{"filename":"10.34770/qyrs-vg25/50/realtime.zip","size":293775339,"display_size":"280 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/realtime.zip"},{"filename":"10.34770/qyrs-vg25/50/subs_0.archive.tar.gz","size":4598719007,"display_size":"4.28 GB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/subs_0.archive.tar.gz"},{"filename":"10.34770/qyrs-vg25/50/subs_1.archive.tar.gz","size":3923077075,"display_size":"3.65 GB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/subs_1.archive.tar.gz"},{"filename":"10.34770/qyrs-vg25/50/subs_2.archive.tar.gz","size":3777246016,"display_size":"3.52 GB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/subs_2.archive.tar.gz"},{"filename":"10.34770/qyrs-vg25/50/subs_3.archive.tar.gz","size":4390016016,"display_size":"4.09 GB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/subs_3.archive.tar.gz"}],"group":{"title":"Princeton Research Data Service (PRDS)","description":null,"code":"RD","created_at":"2022-04-28T16:30:00.190-04:00","updated_at":"2023-05-18T14:20:45.251-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Sleep spindle refractoriness segregates periods of memory reactivation",
+        "title_type": null
+      }
+    ],
+    "description": "The stability of long-term memories is enhanced by reactivation during sleep. Correlative evidence has linked memory reactivation with thalamocortical sleep spindles, although their functional role is not fully understood. Our initial study replicated this correlation and also demonstrated a novel rhythmicity to spindles, such that a spindle is more likely to occur approximately 3–6 s following a prior spindle. We leveraged this rhythmicity to test the role of spindles in memory by using real-time spindle tracking to present cues within versus just after the presumptive refractory period; as predicted, cues presented just after the refractory period led to better memory. Our findings demonstrate a precise temporal link between sleep spindles and memory reactivation. Moreover, they reveal a previously undescribed neural mechanism whereby spindles may segment sleep into two distinct substates: prime opportunities for reactivation and gaps that segregate reactivation events.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Antony, James",
+        "name_type": "Personal",
+        "given_name": "James",
+        "family_name": "Antony",
+        "identifier": {
+          "value": "0000-0003-0656-2170",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 0
+      },
+      {
+        "value": "Piloto, Luis",
+        "name_type": "Personal",
+        "given_name": "Luis",
+        "family_name": "Piloto",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 1
+      },
+      {
+        "value": "Wang, Margaret",
+        "name_type": "Personal",
+        "given_name": "Margaret",
+        "family_name": "Wang",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 2
+      },
+      {
+        "value": "Brooks, Paula",
+        "name_type": "Personal",
+        "given_name": "Paula",
+        "family_name": "Brooks",
+        "identifier": {
+          "value": "0000-0002-3245-562X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 3
+      },
+      {
+        "value": "Norman, Kenneth A",
+        "name_type": "Personal",
+        "given_name": "Kenneth A",
+        "family_name": "Norman",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 4
+      },
+      {
+        "value": "Paller, Ken",
+        "name_type": "Personal",
+        "given_name": "Ken",
+        "family_name": "Paller",
+        "identifier": {
+          "value": "0000-0003-4415-4143",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 5
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton University",
+    "publication_year": "2018",
+    "ark": "ark:/88435/dsp011z40kw63j",
+    "doi": "10.34770/qyrs-vg25",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [],
+    "keywords": [],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [],
+    "domains": [],
+    "communities": ["Princeton Neuroscience Institute"],
+    "subcommunities": [],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.34770/qyrs-vg25/50/2_23_2017_0.archive.tar.gz",
+      "size": 3338006758,
+      "display_size": "3.11 GB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/2_23_2017_0.archive.tar.gz"
+    },
+    {
+      "filename": "10.34770/qyrs-vg25/50/2_23_2017_1.archive.tar.gz",
+      "size": 4196668620,
+      "display_size": "3.91 GB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/2_23_2017_1.archive.tar.gz"
+    },
+    {
+      "filename": "10.34770/qyrs-vg25/50/2_23_2017_2.archive.tar.gz",
+      "size": 6328371397,
+      "display_size": "5.89 GB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/2_23_2017_2.archive.tar.gz"
+    },
+    {
+      "filename": "10.34770/qyrs-vg25/50/2_23_2017_3.archive.tar.gz",
+      "size": 2862159197,
+      "display_size": "2.67 GB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/2_23_2017_3.archive.tar.gz"
+    },
+    {
+      "filename": "10.34770/qyrs-vg25/50/2_23_2017_4.archive.tar.gz",
+      "size": 3221279497,
+      "display_size": "3 GB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/2_23_2017_4.archive.tar.gz"
+    },
+    {
+      "filename": "10.34770/qyrs-vg25/50/PreprocessingOverview.pdf",
+      "size": 665778,
+      "display_size": "650 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/PreprocessingOverview.pdf"
+    },
+    {
+      "filename": "10.34770/qyrs-vg25/50/README.txt",
+      "size": 2928,
+      "display_size": "2.86 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/README.txt"
+    },
+    {
+      "filename": "10.34770/qyrs-vg25/50/RStuff.zip",
+      "size": 455511,
+      "display_size": "445 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/RStuff.zip"
+    },
+    {
+      "filename": "10.34770/qyrs-vg25/50/analysis.zip",
+      "size": 2732151340,
+      "display_size": "2.54 GB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/analysis.zip"
+    },
+    {
+      "filename": "10.34770/qyrs-vg25/50/controlsubs_0.archive.tar.gz",
+      "size": 1463704557,
+      "display_size": "1.36 GB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/controlsubs_0.archive.tar.gz"
+    },
+    {
+      "filename": "10.34770/qyrs-vg25/50/controlsubs_1.archive.tar.gz",
+      "size": 1955090040,
+      "display_size": "1.82 GB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/controlsubs_1.archive.tar.gz"
+    },
+    {
+      "filename": "10.34770/qyrs-vg25/50/controlsubs_2.archive.tar.gz",
+      "size": 1802223984,
+      "display_size": "1.68 GB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/controlsubs_2.archive.tar.gz"
+    },
+    {
+      "filename": "10.34770/qyrs-vg25/50/expfiles.zip",
+      "size": 91621875,
+      "display_size": "87.4 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/expfiles.zip"
+    },
+    {
+      "filename": "10.34770/qyrs-vg25/50/pics.zip",
+      "size": 642365886,
+      "display_size": "613 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/pics.zip"
+    },
+    {
+      "filename": "10.34770/qyrs-vg25/50/realtime.zip",
+      "size": 293775339,
+      "display_size": "280 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/realtime.zip"
+    },
+    {
+      "filename": "10.34770/qyrs-vg25/50/subs_0.archive.tar.gz",
+      "size": 4598719007,
+      "display_size": "4.28 GB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/subs_0.archive.tar.gz"
+    },
+    {
+      "filename": "10.34770/qyrs-vg25/50/subs_1.archive.tar.gz",
+      "size": 3923077075,
+      "display_size": "3.65 GB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/subs_1.archive.tar.gz"
+    },
+    {
+      "filename": "10.34770/qyrs-vg25/50/subs_2.archive.tar.gz",
+      "size": 3777246016,
+      "display_size": "3.52 GB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/subs_2.archive.tar.gz"
+    },
+    {
+      "filename": "10.34770/qyrs-vg25/50/subs_3.archive.tar.gz",
+      "size": 4390016016,
+      "display_size": "4.09 GB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/subs_3.archive.tar.gz"
+    }
+  ],
+  "group": {
+    "title": "Princeton Research Data Service (PRDS)",
+    "description": null,
+    "code": "RD",
+    "created_at": "2022-04-28T16:30:00.190-04:00",
+    "updated_at": "2023-05-18T14:20:45.251-04:00"
+  }
+}

@@ -1,3 +1,2 @@
-
 exceptions:
   rescue_rake: true

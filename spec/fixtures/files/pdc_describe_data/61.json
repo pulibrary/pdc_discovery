@@ -1,1 +1,225 @@
-{"resource":{"titles":[{"title":"A novel scheme for error field correction in permanent magnet stellarators","title_type":null}],"description":"Stellarators offer a promising path towards fusion reactors, but their design and construction are complicated by stringent tolerance requirements on highly complex 3D coils. A potential way to simplify the engineering requirements for stellarators is to use simple planar toroidal field coils along with permanent magnet arrays to generate shaping fields. In order to ensure sufficient field accuracy while minimizing engineering complexity and system cost, new techniques are required to correct the field produced by the permanent magnet arrays to within requirements set by plasma physics. This work describes a novel correction method developed for this purpose. This analysis is applied to the design of a quasi-axisymmetric stellarator that employs a combination of permanent magnets and planar toroidal field coils to generate its magnetic field. Analysis techniques and initial results using the method for error correction on a proposed permanent magnet stellarator are shown, and it is demonstrated that the method successfully meets the design requirements of the project.\r\n\r\nThese files provide the data to reproduce plots for \"A novel scheme for error field correction in permanent magnet stellarators\"","collection_tags":[],"creators":[{"value":"Rutkowski, Adam","name_type":"Personal","given_name":"Adam","family_name":"Rutkowski","identifier":null,"affiliations":[],"sequence":0},{"value":"Hammond, Kenneth","name_type":"Personal","given_name":"Kenneth","family_name":"Hammond","identifier":{"value":"0000-0002-1104-4434","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":1},{"value":"Zhu, Caoxiang","name_type":"Personal","given_name":"Caoxiang","family_name":"Zhu","identifier":{"value":"0000-0003-2337-3232","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":2},{"value":"Gates, David","name_type":"Personal","given_name":"David","family_name":"Gates","identifier":{"value":"0000-0001-5679-3124","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":3},{"value":"Chambliss, Amelia","name_type":"Personal","given_name":"Amelia","family_name":"Chambliss","identifier":{"value":"0000-0003-4559-2970","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":4}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2022","ark":"ark:/88435/dsp011831cp18z","doi":"10.34770/7ev8-8b25","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1088/1741-4326/aca98d","related_identifier_type":"DOI","relation_type":"IsReferencedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":["Stellarators"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["Advanced Projects","Stellarators"],"migrated":true},"files":[{"filename":"10.34770/7ev8-8b25/61/Data.zip","size":443310852,"display_size":"423 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/7ev8-8b25/61/Data.zip"},{"filename":"10.34770/7ev8-8b25/61/README.txt","size":3605,"display_size":"3.52 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/7ev8-8b25/61/README.txt"},{"filename":"10.34770/7ev8-8b25/61/license.txt","size":3223,"display_size":"3.15 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/7ev8-8b25/61/license.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "A novel scheme for error field correction in permanent magnet stellarators",
+        "title_type": null
+      }
+    ],
+    "description": "Stellarators offer a promising path towards fusion reactors, but their design and construction are complicated by stringent tolerance requirements on highly complex 3D coils. A potential way to simplify the engineering requirements for stellarators is to use simple planar toroidal field coils along with permanent magnet arrays to generate shaping fields. In order to ensure sufficient field accuracy while minimizing engineering complexity and system cost, new techniques are required to correct the field produced by the permanent magnet arrays to within requirements set by plasma physics. This work describes a novel correction method developed for this purpose. This analysis is applied to the design of a quasi-axisymmetric stellarator that employs a combination of permanent magnets and planar toroidal field coils to generate its magnetic field. Analysis techniques and initial results using the method for error correction on a proposed permanent magnet stellarator are shown, and it is demonstrated that the method successfully meets the design requirements of the project.\r\n\r\nThese files provide the data to reproduce plots for \"A novel scheme for error field correction in permanent magnet stellarators\"",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Rutkowski, Adam",
+        "name_type": "Personal",
+        "given_name": "Adam",
+        "family_name": "Rutkowski",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 0
+      },
+      {
+        "value": "Hammond, Kenneth",
+        "name_type": "Personal",
+        "given_name": "Kenneth",
+        "family_name": "Hammond",
+        "identifier": {
+          "value": "0000-0002-1104-4434",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 1
+      },
+      {
+        "value": "Zhu, Caoxiang",
+        "name_type": "Personal",
+        "given_name": "Caoxiang",
+        "family_name": "Zhu",
+        "identifier": {
+          "value": "0000-0003-2337-3232",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 2
+      },
+      {
+        "value": "Gates, David",
+        "name_type": "Personal",
+        "given_name": "David",
+        "family_name": "Gates",
+        "identifier": {
+          "value": "0000-0001-5679-3124",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 3
+      },
+      {
+        "value": "Chambliss, Amelia",
+        "name_type": "Personal",
+        "given_name": "Amelia",
+        "family_name": "Chambliss",
+        "identifier": {
+          "value": "0000-0003-4559-2970",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 4
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2022",
+    "ark": "ark:/88435/dsp011831cp18z",
+    "doi": "10.34770/7ev8-8b25",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.1088/1741-4326/aca98d",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsReferencedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": ["Stellarators"],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["Advanced Projects", "Stellarators"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.34770/7ev8-8b25/61/Data.zip",
+      "size": 443310852,
+      "display_size": "423 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/7ev8-8b25/61/Data.zip"
+    },
+    {
+      "filename": "10.34770/7ev8-8b25/61/README.txt",
+      "size": 3605,
+      "display_size": "3.52 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/7ev8-8b25/61/README.txt"
+    },
+    {
+      "filename": "10.34770/7ev8-8b25/61/license.txt",
+      "size": 3223,
+      "display_size": "3.15 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/7ev8-8b25/61/license.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

@@ -1,13 +1,17 @@
 {
-    "responseHeader":{
-      "status":0,
-      "QTime":9},
-    "collections":["cdh_shxco",
-      "lae-staging2",
-      "lae-staging1",
-      "catalog-alma-staging1",
-      "special-collections-staging1",
-      "oawaiver-staging",
-      "pdc-discovery-staging-1",
-      "pdc-discovery-staging-2",
-      "cicognara-staging"]}
+  "responseHeader": {
+    "status": 0,
+    "QTime": 9
+  },
+  "collections": [
+    "cdh_shxco",
+    "lae-staging2",
+    "lae-staging1",
+    "catalog-alma-staging1",
+    "special-collections-staging1",
+    "oawaiver-staging",
+    "pdc-discovery-staging-1",
+    "pdc-discovery-staging-2",
+    "cicognara-staging"
+  ]
+}

@@ -1,1 +1,200 @@
-{"resource":{"titles":[{"title":"Energy Exchange Dynamics across L-H Transitions in NSTX","title_type":null}],"description":"We studied the energy exchange dynamics across the low-to-high-confinement (L-H) in NSTX discharges using the gas-puff imaging (GPI) diagnotic. The investigation focused on the energy exchange between flows and turbulence, to help clarify the mechanism of the L-H transition. We apply this study to three type of heating schemes, including a total of 17 shots from the NSTX 2010 campaign run. Results show that the edge fluctuation characteristics (fluctuation levels, radial and poloidal correlation lengths) measured using GPI do not vary just prior to the H-mode transition, but change after the transition. Using a velocimetry approach (orthogonal-programming decomposition), velocity fields of a 24 $\\times$ 30 cm GPI view during the L-H transition were obtained with good spatial ($\\sim$1 cm) and temporal ($\\sim$2.5 $\\mu$s) resolutions. Analysis using these velocity fields shows that the production term is systematically negative just prior to the L-H transition indicating transfer from mean flows to turbulence, which is inconsistent with the predator-prey paradigm. Moreover, using the inferred absolute value of the production term, an estimate of the L-H transition duration is found to be 25 ms, which is much larger than the measured duration. These discrepancies are further reinforced by consideration of the ratio between the kinetic energy in the mean flow to the thermal free energy, which is estimated to be much less than 1, suggesting again that turbulence depletion mechanism may not be playing an important role in the transition to the H-mode. Although the Reynolds work is too small to directly deplete the turbulent free energy reservoir, order-of-magnitude analysis shows that the Reynolds stress may still make a non-negligible contribution to the observed poloidal flows.","collection_tags":[],"creators":[{"value":"Diallo, A.","name_type":"Personal","given_name":"A.","family_name":"Diallo","identifier":{"value":"0000-0002-0706-060X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0},{"value":"Banerjee, S.","name_type":"Personal","given_name":"S.","family_name":"Banerjee","identifier":{"value":"0000-0003-0859-8855","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":1},{"value":"Zweben, S. J.","name_type":"Personal","given_name":"S. J.","family_name":"Zweben","identifier":{"value":"0000-0002-1738-0586","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":2},{"value":"Stoltzfus-Dueck, T.","name_type":"Personal","given_name":"T.","family_name":"Stoltzfus-Dueck","identifier":{"value":"0000-0003-2587-6298","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":3}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2017","ark":"ark:/88435/dsp01f1881p40x","doi":"10.11578/1367547","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1088/1741-4326/aa6a24","related_identifier_type":"DOI","relation_type":"IsReferencedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":["Magnetic confinement","L-H transition","NSTX"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["NSTX","Spherical Torus"],"migrated":true},"files":[{"filename":"10.11578/1367547/95/ARK_DATA.zip","size":1872223,"display_size":"1.79 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367547/95/ARK_DATA.zip"},{"filename":"10.11578/1367547/95/readme.txt","size":2236,"display_size":"2.18 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367547/95/readme.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      { "title": "Energy Exchange Dynamics across L-H Transitions in NSTX", "title_type": null }
+    ],
+    "description": "We studied the energy exchange dynamics across the low-to-high-confinement (L-H) in NSTX discharges using the gas-puff imaging (GPI) diagnotic. The investigation focused on the energy exchange between flows and turbulence, to help clarify the mechanism of the L-H transition. We apply this study to three type of heating schemes, including a total of 17 shots from the NSTX 2010 campaign run. Results show that the edge fluctuation characteristics (fluctuation levels, radial and poloidal correlation lengths) measured using GPI do not vary just prior to the H-mode transition, but change after the transition. Using a velocimetry approach (orthogonal-programming decomposition), velocity fields of a 24 $\\times$ 30 cm GPI view during the L-H transition were obtained with good spatial ($\\sim$1 cm) and temporal ($\\sim$2.5 $\\mu$s) resolutions. Analysis using these velocity fields shows that the production term is systematically negative just prior to the L-H transition indicating transfer from mean flows to turbulence, which is inconsistent with the predator-prey paradigm. Moreover, using the inferred absolute value of the production term, an estimate of the L-H transition duration is found to be 25 ms, which is much larger than the measured duration. These discrepancies are further reinforced by consideration of the ratio between the kinetic energy in the mean flow to the thermal free energy, which is estimated to be much less than 1, suggesting again that turbulence depletion mechanism may not be playing an important role in the transition to the H-mode. Although the Reynolds work is too small to directly deplete the turbulent free energy reservoir, order-of-magnitude analysis shows that the Reynolds stress may still make a non-negligible contribution to the observed poloidal flows.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Diallo, A.",
+        "name_type": "Personal",
+        "given_name": "A.",
+        "family_name": "Diallo",
+        "identifier": {
+          "value": "0000-0002-0706-060X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      },
+      {
+        "value": "Banerjee, S.",
+        "name_type": "Personal",
+        "given_name": "S.",
+        "family_name": "Banerjee",
+        "identifier": {
+          "value": "0000-0003-0859-8855",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 1
+      },
+      {
+        "value": "Zweben, S. J.",
+        "name_type": "Personal",
+        "given_name": "S. J.",
+        "family_name": "Zweben",
+        "identifier": {
+          "value": "0000-0002-1738-0586",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 2
+      },
+      {
+        "value": "Stoltzfus-Dueck, T.",
+        "name_type": "Personal",
+        "given_name": "T.",
+        "family_name": "Stoltzfus-Dueck",
+        "identifier": {
+          "value": "0000-0003-2587-6298",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 3
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2017",
+    "ark": "ark:/88435/dsp01f1881p40x",
+    "doi": "10.11578/1367547",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.1088/1741-4326/aa6a24",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsReferencedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": ["Magnetic confinement", "L-H transition", "NSTX"],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["NSTX", "Spherical Torus"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.11578/1367547/95/ARK_DATA.zip",
+      "size": 1872223,
+      "display_size": "1.79 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367547/95/ARK_DATA.zip"
+    },
+    {
+      "filename": "10.11578/1367547/95/readme.txt",
+      "size": 2236,
+      "display_size": "2.18 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367547/95/readme.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

@@ -1,1 +1,202 @@
-{"resource":{"titles":[{"title":"Electron-density-sensitive Line Ratios of Fe XIII--XVI from Laboratory Sources Compared to CHIANTI","title_type":null}],"description":"We present electron-density-sensitive line ratios for Fe XIII–XVI measured in the spectral wavelength range of 200–440 Å and an electron density range of (1–4)×10^13 cm^−3. The results provide a test at the high-density limit of density-sensitive line ratios useful for astrophysical studies. The measurements were performed on the National Spherical Torus Experiment-Upgrade, where electron densities were measured independently by the laser Thomson scattering diagnostic. Spectra were collected with a flat-field grazing-incidence spectrometer, which provided a spectral resolution of up to 0.3 Å, i.e., high resolution across the broad wavelength range. The response of the instrument was relatively calibrated using spectroscopic techniques in order to improve accuracy. The line ratios are compared to other laboratory sources and the latest version of CHIANTI (8.0.2), and an agreement within 30% is found.","collection_tags":[],"creators":[{"value":"Weller, M. E.","name_type":"Personal","given_name":"M. E.","family_name":"Weller","identifier":null,"affiliations":[],"sequence":0},{"value":"Beiersdorfer, P.","name_type":"Personal","given_name":"P.","family_name":"Beiersdorfer","identifier":{"value":"0000-0003-0127-599X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":1},{"value":"Soukhanovskii, V. A.","name_type":"Personal","given_name":"V. A.","family_name":"Soukhanovskii","identifier":null,"affiliations":[],"sequence":2},{"value":"Scotti, F.","name_type":"Personal","given_name":"F.","family_name":"Scotti","identifier":null,"affiliations":[],"sequence":3},{"value":"LeBlanc, B. P.","name_type":"Personal","given_name":"B. P.","family_name":"LeBlanc","identifier":{"value":"0000-0003-1455-0129","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":4}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2018","ark":"ark:/88435/dsp01tb09j833r","doi":"10.11578/1562038","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.3847/1538-4357/aaa5a1","related_identifier_type":"DOI","relation_type":"IsCitedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":["Atomic data","Plasmas Stars: Flares","Stars: Ultraviolet","Sun: UV radiation","Spectroscopic techniques"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""},{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC52-07NA27344","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["NSTX","Spherical Torus"],"migrated":true},"files":[{"filename":"10.11578/1562038/120/ARK_DATA.zip","size":57853,"display_size":"56.5 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1562038/120/ARK_DATA.zip"},{"filename":"10.11578/1562038/120/readme.txt","size":7931,"display_size":"7.75 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1562038/120/readme.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Electron-density-sensitive Line Ratios of Fe XIII--XVI from Laboratory Sources Compared to CHIANTI",
+        "title_type": null
+      }
+    ],
+    "description": "We present electron-density-sensitive line ratios for Fe XIII–XVI measured in the spectral wavelength range of 200–440 Å and an electron density range of (1–4)×10^13 cm^−3. The results provide a test at the high-density limit of density-sensitive line ratios useful for astrophysical studies. The measurements were performed on the National Spherical Torus Experiment-Upgrade, where electron densities were measured independently by the laser Thomson scattering diagnostic. Spectra were collected with a flat-field grazing-incidence spectrometer, which provided a spectral resolution of up to 0.3 Å, i.e., high resolution across the broad wavelength range. The response of the instrument was relatively calibrated using spectroscopic techniques in order to improve accuracy. The line ratios are compared to other laboratory sources and the latest version of CHIANTI (8.0.2), and an agreement within 30% is found.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Weller, M. E.",
+        "name_type": "Personal",
+        "given_name": "M. E.",
+        "family_name": "Weller",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 0
+      },
+      {
+        "value": "Beiersdorfer, P.",
+        "name_type": "Personal",
+        "given_name": "P.",
+        "family_name": "Beiersdorfer",
+        "identifier": {
+          "value": "0000-0003-0127-599X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 1
+      },
+      {
+        "value": "Soukhanovskii, V. A.",
+        "name_type": "Personal",
+        "given_name": "V. A.",
+        "family_name": "Soukhanovskii",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 2
+      },
+      {
+        "value": "Scotti, F.",
+        "name_type": "Personal",
+        "given_name": "F.",
+        "family_name": "Scotti",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 3
+      },
+      {
+        "value": "LeBlanc, B. P.",
+        "name_type": "Personal",
+        "given_name": "B. P.",
+        "family_name": "LeBlanc",
+        "identifier": {
+          "value": "0000-0003-1455-0129",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 4
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2018",
+    "ark": "ark:/88435/dsp01tb09j833r",
+    "doi": "10.11578/1562038",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.3847/1538-4357/aaa5a1",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsCitedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": [
+      "Atomic data",
+      "Plasmas Stars: Flares",
+      "Stars: Ultraviolet",
+      "Sun: UV radiation",
+      "Spectroscopic techniques"
+    ],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      },
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC52-07NA27344",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["NSTX", "Spherical Torus"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.11578/1562038/120/ARK_DATA.zip",
+      "size": 57853,
+      "display_size": "56.5 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1562038/120/ARK_DATA.zip"
+    },
+    {
+      "filename": "10.11578/1562038/120/readme.txt",
+      "size": 7931,
+      "display_size": "7.75 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1562038/120/readme.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

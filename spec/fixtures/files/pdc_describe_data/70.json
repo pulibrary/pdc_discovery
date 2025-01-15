@@ -1,1 +1,472 @@
-{"resource":{"titles":[{"title":"Enhancement of edge turbulence concomitant with ELM suppression during boron powder injection in EAST","title_type":null}],"description":"Data supporting the manuscript \"Enhancement of edge turbulence concomitant with ELM suppression during boron powder injection in EAST\" published in Plasma of Physics, 2021.","collection_tags":[],"creators":[{"value":"Sun, Zhen","name_type":"Personal","given_name":"Zhen","family_name":"Sun","identifier":{"value":"0000-0002-7224-3592","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0},{"value":"Maingi, Rajesh","name_type":"Personal","given_name":"Rajesh","family_name":"Maingi","identifier":{"value":"0000-0003-1238-8121","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":1},{"value":"Diallo, Ahmed","name_type":"Personal","given_name":"Ahmed","family_name":"Diallo","identifier":{"value":"0000-0002-0706-060X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":2},{"value":"Xu, Wei","name_type":"Personal","given_name":"Wei","family_name":"Xu","identifier":null,"affiliations":[],"sequence":3},{"value":"Qian, Yuzhong","name_type":"Personal","given_name":"Yuzhong","family_name":"Qian","identifier":null,"affiliations":[],"sequence":4},{"value":"Tritz, Kevin","name_type":"Personal","given_name":"Kevin","family_name":"Tritz","identifier":null,"affiliations":[],"sequence":5},{"value":"Ye, Yang","name_type":"Personal","given_name":"Yang","family_name":"Ye","identifier":null,"affiliations":[],"sequence":6},{"value":"Li, Chenglong","name_type":"Personal","given_name":"Chenglong","family_name":"Li","identifier":null,"affiliations":[],"sequence":7},{"value":"Xu, Zong","name_type":"Personal","given_name":"Zong","family_name":"Xu","identifier":{"value":"0000-0001-5852-0250","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":8},{"value":"Wang, Yifeng","name_type":"Personal","given_name":"Yifeng","family_name":"Wang","identifier":null,"affiliations":[],"sequence":9},{"value":"Ye, Kaixuan","name_type":"Personal","given_name":"Kaixuan","family_name":"Ye","identifier":null,"affiliations":[],"sequence":10},{"value":"Bortolon, A.","name_type":"Personal","given_name":"A.","family_name":"Bortolon","identifier":{"value":"0000-0002-0094-0209","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":11},{"value":"Nagy, Alex","name_type":"Personal","given_name":"Alex","family_name":"Nagy","identifier":{"value":"0000-0002-8201-2528","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":12},{"value":"Zhang, Ling","name_type":"Personal","given_name":"Ling","family_name":"Zhang","identifier":{"value":"0000-0001-7880-9588","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":13},{"value":"Duan, Yanmin","name_type":"Personal","given_name":"Yanmin","family_name":"Duan","identifier":null,"affiliations":[],"sequence":14},{"value":"Lu, Zhiyuan","name_type":"Personal","given_name":"Zhiyuan","family_name":"Lu","identifier":{"value":"0000-0002-6860-3831","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":15},{"value":"Wang, Huiqian","name_type":"Personal","given_name":"Huiqian","family_name":"Wang","identifier":{"value":"0000-0003-1920-2799","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":16},{"value":"Shi, Tonghui","name_type":"Personal","given_name":"Tonghui","family_name":"Shi","identifier":null,"affiliations":[],"sequence":17},{"value":"Zhao, Hailin","name_type":"Personal","given_name":"Hailin","family_name":"Zhao","identifier":{"value":"0000-0002-6298-1217","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":18},{"value":"Wei, Gao","name_type":"Personal","given_name":"Gao","family_name":"Wei","identifier":null,"affiliations":[],"sequence":19},{"value":"Xu, Jichan","name_type":"Personal","given_name":"Jichan","family_name":"Xu","identifier":null,"affiliations":[],"sequence":20},{"value":"Chen, Ran","name_type":"Personal","given_name":"Ran","family_name":"Chen","identifier":null,"affiliations":[],"sequence":21},{"value":"Huang, Ming","name_type":"Personal","given_name":"Ming","family_name":"Huang","identifier":null,"affiliations":[],"sequence":22},{"value":"Zuo, Guizhong","name_type":"Personal","given_name":"Guizhong","family_name":"Zuo","identifier":{"value":"0000-0002-4149-089X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":23},{"value":"Xu, Guosheng","name_type":"Personal","given_name":"Guosheng","family_name":"Xu","identifier":{"value":"0000-0001-8495-8678","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":24},{"value":"Gong, Xianzu","name_type":"Personal","given_name":"Xianzu","family_name":"Gong","identifier":null,"affiliations":[],"sequence":25},{"value":"Hu, Jiansheng","name_type":"Personal","given_name":"Jiansheng","family_name":"Hu","identifier":{"value":"0000-0002-8252-0960","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":26}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2021","ark":"ark:/88435/dsp01dz010t189","doi":"10.11578/1814960","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1063/5.0058809","related_identifier_type":"DOI","relation_type":"IsCitedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":["Boron powder","Impurity seeding","Edge localized modes","EAST","Turbulence"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["ITER and Tokamaks"],"migrated":true},"files":[{"filename":"10.11578/1814960/70/ARK_DATA _figures.zip","size":9470430,"display_size":"9.03 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814960/70/ARK_DATA%20_figures.zip"},{"filename":"10.11578/1814960/70/ReadMe.rtf","size":6836,"display_size":"6.68 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814960/70/ReadMe.rtf"},{"filename":"10.11578/1814960/70/license.txt","size":3223,"display_size":"3.15 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814960/70/license.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Enhancement of edge turbulence concomitant with ELM suppression during boron powder injection in EAST",
+        "title_type": null
+      }
+    ],
+    "description": "Data supporting the manuscript \"Enhancement of edge turbulence concomitant with ELM suppression during boron powder injection in EAST\" published in Plasma of Physics, 2021.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Sun, Zhen",
+        "name_type": "Personal",
+        "given_name": "Zhen",
+        "family_name": "Sun",
+        "identifier": {
+          "value": "0000-0002-7224-3592",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      },
+      {
+        "value": "Maingi, Rajesh",
+        "name_type": "Personal",
+        "given_name": "Rajesh",
+        "family_name": "Maingi",
+        "identifier": {
+          "value": "0000-0003-1238-8121",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 1
+      },
+      {
+        "value": "Diallo, Ahmed",
+        "name_type": "Personal",
+        "given_name": "Ahmed",
+        "family_name": "Diallo",
+        "identifier": {
+          "value": "0000-0002-0706-060X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 2
+      },
+      {
+        "value": "Xu, Wei",
+        "name_type": "Personal",
+        "given_name": "Wei",
+        "family_name": "Xu",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 3
+      },
+      {
+        "value": "Qian, Yuzhong",
+        "name_type": "Personal",
+        "given_name": "Yuzhong",
+        "family_name": "Qian",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 4
+      },
+      {
+        "value": "Tritz, Kevin",
+        "name_type": "Personal",
+        "given_name": "Kevin",
+        "family_name": "Tritz",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 5
+      },
+      {
+        "value": "Ye, Yang",
+        "name_type": "Personal",
+        "given_name": "Yang",
+        "family_name": "Ye",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 6
+      },
+      {
+        "value": "Li, Chenglong",
+        "name_type": "Personal",
+        "given_name": "Chenglong",
+        "family_name": "Li",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 7
+      },
+      {
+        "value": "Xu, Zong",
+        "name_type": "Personal",
+        "given_name": "Zong",
+        "family_name": "Xu",
+        "identifier": {
+          "value": "0000-0001-5852-0250",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 8
+      },
+      {
+        "value": "Wang, Yifeng",
+        "name_type": "Personal",
+        "given_name": "Yifeng",
+        "family_name": "Wang",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 9
+      },
+      {
+        "value": "Ye, Kaixuan",
+        "name_type": "Personal",
+        "given_name": "Kaixuan",
+        "family_name": "Ye",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 10
+      },
+      {
+        "value": "Bortolon, A.",
+        "name_type": "Personal",
+        "given_name": "A.",
+        "family_name": "Bortolon",
+        "identifier": {
+          "value": "0000-0002-0094-0209",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 11
+      },
+      {
+        "value": "Nagy, Alex",
+        "name_type": "Personal",
+        "given_name": "Alex",
+        "family_name": "Nagy",
+        "identifier": {
+          "value": "0000-0002-8201-2528",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 12
+      },
+      {
+        "value": "Zhang, Ling",
+        "name_type": "Personal",
+        "given_name": "Ling",
+        "family_name": "Zhang",
+        "identifier": {
+          "value": "0000-0001-7880-9588",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 13
+      },
+      {
+        "value": "Duan, Yanmin",
+        "name_type": "Personal",
+        "given_name": "Yanmin",
+        "family_name": "Duan",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 14
+      },
+      {
+        "value": "Lu, Zhiyuan",
+        "name_type": "Personal",
+        "given_name": "Zhiyuan",
+        "family_name": "Lu",
+        "identifier": {
+          "value": "0000-0002-6860-3831",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 15
+      },
+      {
+        "value": "Wang, Huiqian",
+        "name_type": "Personal",
+        "given_name": "Huiqian",
+        "family_name": "Wang",
+        "identifier": {
+          "value": "0000-0003-1920-2799",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 16
+      },
+      {
+        "value": "Shi, Tonghui",
+        "name_type": "Personal",
+        "given_name": "Tonghui",
+        "family_name": "Shi",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 17
+      },
+      {
+        "value": "Zhao, Hailin",
+        "name_type": "Personal",
+        "given_name": "Hailin",
+        "family_name": "Zhao",
+        "identifier": {
+          "value": "0000-0002-6298-1217",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 18
+      },
+      {
+        "value": "Wei, Gao",
+        "name_type": "Personal",
+        "given_name": "Gao",
+        "family_name": "Wei",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 19
+      },
+      {
+        "value": "Xu, Jichan",
+        "name_type": "Personal",
+        "given_name": "Jichan",
+        "family_name": "Xu",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 20
+      },
+      {
+        "value": "Chen, Ran",
+        "name_type": "Personal",
+        "given_name": "Ran",
+        "family_name": "Chen",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 21
+      },
+      {
+        "value": "Huang, Ming",
+        "name_type": "Personal",
+        "given_name": "Ming",
+        "family_name": "Huang",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 22
+      },
+      {
+        "value": "Zuo, Guizhong",
+        "name_type": "Personal",
+        "given_name": "Guizhong",
+        "family_name": "Zuo",
+        "identifier": {
+          "value": "0000-0002-4149-089X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 23
+      },
+      {
+        "value": "Xu, Guosheng",
+        "name_type": "Personal",
+        "given_name": "Guosheng",
+        "family_name": "Xu",
+        "identifier": {
+          "value": "0000-0001-8495-8678",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 24
+      },
+      {
+        "value": "Gong, Xianzu",
+        "name_type": "Personal",
+        "given_name": "Xianzu",
+        "family_name": "Gong",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 25
+      },
+      {
+        "value": "Hu, Jiansheng",
+        "name_type": "Personal",
+        "given_name": "Jiansheng",
+        "family_name": "Hu",
+        "identifier": {
+          "value": "0000-0002-8252-0960",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 26
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2021",
+    "ark": "ark:/88435/dsp01dz010t189",
+    "doi": "10.11578/1814960",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.1063/5.0058809",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsCitedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": [
+      "Boron powder",
+      "Impurity seeding",
+      "Edge localized modes",
+      "EAST",
+      "Turbulence"
+    ],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["ITER and Tokamaks"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.11578/1814960/70/ARK_DATA _figures.zip",
+      "size": 9470430,
+      "display_size": "9.03 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814960/70/ARK_DATA%20_figures.zip"
+    },
+    {
+      "filename": "10.11578/1814960/70/ReadMe.rtf",
+      "size": 6836,
+      "display_size": "6.68 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814960/70/ReadMe.rtf"
+    },
+    {
+      "filename": "10.11578/1814960/70/license.txt",
+      "size": 3223,
+      "display_size": "3.15 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814960/70/license.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

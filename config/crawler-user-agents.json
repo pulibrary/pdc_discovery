@@ -25,28 +25,20 @@
   },
   {
     "pattern": "Googlebot-Image",
-    "instances": [
-      "Googlebot-Image/1.0"
-    ]
+    "instances": ["Googlebot-Image/1.0"]
   },
   {
     "pattern": "Googlebot-News",
-    "instances": [
-      "Googlebot-News"
-    ]
+    "instances": ["Googlebot-News"]
   },
   {
     "pattern": "Googlebot-Video",
-    "instances": [
-      "Googlebot-Video/1.0"
-    ]
+    "instances": ["Googlebot-Video/1.0"]
   },
   {
     "pattern": "AdsBot-Google([^-]|$)",
     "url": "https://support.google.com/webmasters/answer/1061943?hl=en",
-    "instances": [
-      "AdsBot-Google (+http://www.google.com/adsbot.html)"
-    ]
+    "instances": ["AdsBot-Google (+http://www.google.com/adsbot.html)"]
   },
   {
     "pattern": "AdsBot-Google-Mobile",
@@ -86,9 +78,7 @@
     "pattern": "APIs-Google",
     "addition_date": "2017/08/08",
     "url": "https://support.google.com/webmasters/answer/1061943?hl=en",
-    "instances": [
-      "APIs-Google (+https://developers.google.com/webmasters/APIs-Google.html)"
-    ]
+    "instances": ["APIs-Google (+https://developers.google.com/webmasters/APIs-Google.html)"]
   },
   {
     "pattern": "Google-InspectionTool",
@@ -109,9 +99,7 @@
   {
     "pattern": "GoogleOther",
     "url": "https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers",
-    "instances": [
-      "GoogleOther"
-    ]
+    "instances": ["GoogleOther"]
   },
   {
     "pattern": "bingbot",
@@ -200,10 +188,7 @@
   {
     "pattern": "httpx",
     "addition_date": "2019/12/23",
-    "instances": [
-      "python-httpx/0.16.1",
-      "python-httpx/0.13.0.dev1"
-    ],
+    "instances": ["python-httpx/0.16.1", "python-httpx/0.13.0.dev1"],
     "url": "https://www.python-httpx.org"
   },
   {
@@ -216,9 +201,7 @@
   },
   {
     "pattern": "httpunit",
-    "instances": [
-      "httpunit/1.x"
-    ]
+    "instances": ["httpunit/1.x"]
   },
   {
     "pattern": "Nutch",
@@ -232,18 +215,13 @@
     "pattern": "Go-http-client",
     "addition_date": "2016/03/26",
     "url": "https://golang.org/pkg/net/http/",
-    "instances": [
-      "Go-http-client/1.1",
-      "Go-http-client/2.0"
-    ]
+    "instances": ["Go-http-client/1.1", "Go-http-client/2.0"]
   },
   {
     "pattern": "phpcrawl",
     "addition_date": "2012/09/17",
     "url": "http://phpcrawl.cuab.de/",
-    "instances": [
-      "phpcrawl"
-    ]
+    "instances": ["phpcrawl"]
   },
   {
     "pattern": "msnbot",
@@ -287,9 +265,7 @@
   },
   {
     "pattern": "BIGLOTRON",
-    "instances": [
-      "BIGLOTRON (Beta 2;GNU/Linux)"
-    ]
+    "instances": ["BIGLOTRON (Beta 2;GNU/Linux)"]
   },
   {
     "pattern": "Teoma",
@@ -301,31 +277,22 @@
   },
   {
     "pattern": "convera",
-    "instances": [
-      "ConveraCrawler/0.9e (+http://ews.converasearch.com/crawl.htm)"
-    ],
+    "instances": ["ConveraCrawler/0.9e (+http://ews.converasearch.com/crawl.htm)"],
     "url": "http://ews.converasearch.com/crawl.htm"
   },
   {
     "pattern": "seekbot",
-    "instances": [
-      "Seekbot/1.0 (http://www.seekbot.net/bot.html) RobotsTxtFetcher/1.2"
-    ],
+    "instances": ["Seekbot/1.0 (http://www.seekbot.net/bot.html) RobotsTxtFetcher/1.2"],
     "url": "http://www.seekbot.net/bot.html"
   },
   {
     "pattern": "Gigabot",
-    "instances": [
-      "Gigabot/1.0",
-      "Gigabot/2.0 (http://www.gigablast.com/spider.html)"
-    ],
+    "instances": ["Gigabot/1.0", "Gigabot/2.0 (http://www.gigablast.com/spider.html)"],
     "url": "http://www.gigablast.com/spider.html"
   },
   {
     "pattern": "Gigablast",
-    "instances": [
-      "GigablastOpenSource/1.0"
-    ],
+    "instances": ["GigablastOpenSource/1.0"],
     "url": "https://github.com/gigablast/open-source-search-engine"
   },
   {
@@ -358,9 +325,7 @@
   },
   {
     "pattern": "HTTrack",
-    "instances": [
-      "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)"
-    ]
+    "instances": ["Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)"]
   },
   {
     "pattern": "grub\\.org",
@@ -438,9 +403,7 @@
   },
   {
     "pattern": "panscient",
-    "instances": [
-      "panscient.com"
-    ]
+    "instances": ["panscient.com"]
   },
   {
     "pattern": "yacybot",
@@ -546,21 +509,15 @@
   },
   {
     "pattern": "yanga",
-    "instances": [
-      "Yanga WorldSearch Bot v1.1/beta (http://www.yanga.co.uk/)"
-    ]
+    "instances": ["Yanga WorldSearch Bot v1.1/beta (http://www.yanga.co.uk/)"]
   },
   {
     "pattern": "buzzbot",
-    "instances": [
-      "Buzzbot/1.0 (Buzzbot; http://www.buzzstream.com; buzzbot@buzzstream.com)"
-    ]
+    "instances": ["Buzzbot/1.0 (Buzzbot; http://www.buzzstream.com; buzzbot@buzzstream.com)"]
   },
   {
     "pattern": "mlbot",
-    "instances": [
-      "MLBot (www.metadatalabs.com/mlbot)"
-    ]
+    "instances": ["MLBot (www.metadatalabs.com/mlbot)"]
   },
   {
     "pattern": "yandex\\.com\\/bots",
@@ -705,10 +662,7 @@
     "pattern": "postrank",
     "addition_date": "2010/08/03",
     "url": "http://www.postrank.com",
-    "instances": [
-      "PostRank/2.0 (postrank.com)",
-      "PostRank/2.0 (postrank.com; 1 subscribers)"
-    ]
+    "instances": ["PostRank/2.0 (postrank.com)", "PostRank/2.0 (postrank.com; 1 subscribers)"]
   },
   {
     "pattern": "Turnitin",
@@ -729,17 +683,13 @@
     "pattern": "page2rss",
     "addition_date": "2010/10/07",
     "url": "http://www.page2rss.com",
-    "instances": [
-      "Mozilla/5.0 (compatible;  Page2RSS/0.7; +http://page2rss.com/)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible;  Page2RSS/0.7; +http://page2rss.com/)"]
   },
   {
     "pattern": "sitebot",
     "addition_date": "2010/12/15",
     "url": "http://www.sitebot.org",
-    "instances": [
-      "Mozilla/5.0 (compatible; Whoiswebsitebot/0.1; +http://www.whoiswebsite.net)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; Whoiswebsitebot/0.1; +http://www.whoiswebsite.net)"]
   },
   {
     "pattern": "linkdex",
@@ -764,9 +714,7 @@
     "pattern": "ezooms",
     "addition_date": "2011/04/27",
     "url": "http://www.phpbb.com/community/viewtopic.php?f=64&t=935605&start=450#p12948289",
-    "instances": [
-      "Mozilla/5.0 (compatible; Ezooms/1.0; ezooms.bot@gmail.com)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; Ezooms/1.0; ezooms.bot@gmail.com)"]
   },
   {
     "pattern": "dotbot",
@@ -835,25 +783,19 @@
     "pattern": "europarchive\\.org",
     "addition_date": "2011/06/21",
     "url": "",
-    "instances": [
-      "Mozilla/5.0 (compatible; MSIE 7.0 +http://www.europarchive.org)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; MSIE 7.0 +http://www.europarchive.org)"]
   },
   {
     "pattern": "NerdByNature\\.Bot",
     "addition_date": "2011/07/12",
     "url": "http://www.nerdbynature.net/bot",
-    "instances": [
-      "Mozilla/5.0 (compatible; NerdByNature.Bot; http://www.nerdbynature.net/bot)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; NerdByNature.Bot; http://www.nerdbynature.net/bot)"]
   },
   {
     "pattern": "(sistrix|SISTRIX) [cC]rawler",
     "addition_date": "2011/08/02",
     "url": "https://www.sistrix.com/tutorials/crawling-errors-in-the-optimizer/",
-    "instances": [
-      "Mozilla/5.0 (compatible; SISTRIX Crawler; http://crawler.sistrix.net/)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; SISTRIX Crawler; http://crawler.sistrix.net/)"]
   },
   {
     "pattern": "Ahrefs(Bot|SiteAudit)",
@@ -871,16 +813,12 @@
   {
     "pattern": "fuelbot",
     "addition_date": "2018/06/28",
-    "instances": [
-      "fuelbot"
-    ]
+    "instances": ["fuelbot"]
   },
   {
     "pattern": "CrunchBot",
     "addition_date": "2018/06/28",
-    "instances": [
-      "CrunchBot/1.0 (+http://www.leadcrunch.com/crunchbot)"
-    ]
+    "instances": ["CrunchBot/1.0 (+http://www.leadcrunch.com/crunchbot)"]
   },
   {
     "pattern": "IndeedBot",
@@ -892,37 +830,27 @@
   {
     "pattern": "mappydata",
     "addition_date": "2018/06/28",
-    "instances": [
-      "Mozilla/5.0 (compatible; Mappy/1.0; +http://mappydata.net/bot/)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; Mappy/1.0; +http://mappydata.net/bot/)"]
   },
   {
     "pattern": "woobot",
     "addition_date": "2018/06/28",
-    "instances": [
-      "woobot"
-    ]
+    "instances": ["woobot"]
   },
   {
     "pattern": "ZoominfoBot",
     "addition_date": "2018/06/28",
-    "instances": [
-      "ZoominfoBot (zoominfobot at zoominfo dot com)"
-    ]
+    "instances": ["ZoominfoBot (zoominfobot at zoominfo dot com)"]
   },
   {
     "pattern": "PrivacyAwareBot",
     "addition_date": "2018/06/28",
-    "instances": [
-      "Mozilla/5.0 (compatible; PrivacyAwareBot/1.1; +http://www.privacyaware.org)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; PrivacyAwareBot/1.1; +http://www.privacyaware.org)"]
   },
   {
     "pattern": "Multiviewbot",
     "addition_date": "2018/06/28",
-    "instances": [
-      "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Multiviewbot"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Multiviewbot"]
   },
   {
     "pattern": "SWIMGBot",
@@ -934,16 +862,12 @@
   {
     "pattern": "Grobbot",
     "addition_date": "2018/06/28",
-    "instances": [
-      "Mozilla/5.0 (compatible; Grobbot/2.2; +https://grob.it)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; Grobbot/2.2; +https://grob.it)"]
   },
   {
     "pattern": "eright",
     "addition_date": "2018/06/28",
-    "instances": [
-      "Mozilla/5.0 (compatible; eright/1.0; +bot@eright.com)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; eright/1.0; +bot@eright.com)"]
   },
   {
     "pattern": "Apercite",
@@ -955,10 +879,7 @@
   {
     "pattern": "semanticbot",
     "addition_date": "2018/06/28",
-    "instances": [
-      "semanticbot",
-      "semanticbot (info@semanticaudience.com)"
-    ]
+    "instances": ["semanticbot", "semanticbot (info@semanticaudience.com)"]
   },
   {
     "pattern": "Aboundex",
@@ -986,9 +907,7 @@
     "pattern": "summify",
     "addition_date": "2012/01/04",
     "url": "http://summify.com",
-    "instances": [
-      "Summify (Summify/1.0.1; +http://summify.com)"
-    ]
+    "instances": ["Summify (Summify/1.0.1; +http://summify.com)"]
   },
   {
     "pattern": "CCBot",
@@ -1019,9 +938,7 @@
   {
     "pattern": "ec2linkfinder",
     "addition_date": "2012/03/22",
-    "instances": [
-      "ec2linkfinder"
-    ]
+    "instances": ["ec2linkfinder"]
   },
   {
     "pattern": "gslfbot",
@@ -1031,9 +948,7 @@
   {
     "pattern": "aiHitBot",
     "addition_date": "2012/04/16",
-    "instances": [
-      "Mozilla/5.0 (compatible; aiHitBot/2.9; +https://www.aihitdata.com/about)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; aiHitBot/2.9; +https://www.aihitdata.com/about)"]
   },
   {
     "pattern": "intelium_bot",
@@ -1054,9 +969,7 @@
     "pattern": "Yeti",
     "addition_date": "2012/05/07",
     "url": "http://naver.me/bot",
-    "instances": [
-      "Mozilla/5.0 (compatible; Yeti/1.1; +http://naver.me/bot)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; Yeti/1.1; +http://naver.me/bot)"]
   },
   {
     "pattern": "RetrevoPageAnalyzer",
@@ -1149,9 +1062,7 @@
     "pattern": "drupact",
     "addition_date": "2012/09/27",
     "url": "http://www.arocom.de/drupact",
-    "instances": [
-      "drupact/0.7; http://www.arocom.de/drupact"
-    ]
+    "instances": ["drupact/0.7; http://www.arocom.de/drupact"]
   },
   {
     "pattern": "webcompanycrawler",
@@ -1207,9 +1118,7 @@
     "pattern": "integromedb",
     "addition_date": "2013/01/10",
     "url": "http://www.integromedb.org/Crawler",
-    "instances": [
-      "www.integromedb.org/Crawler"
-    ]
+    "instances": ["www.integromedb.org/Crawler"]
   },
   {
     "pattern": "content crawler spider",
@@ -1345,9 +1254,7 @@
     "pattern": "CC Metadata Scaper",
     "addition_date": "2014/04/01",
     "url": "http://wiki.creativecommons.org/Metadata_Scraper",
-    "instances": [
-      "CC Metadata Scaper http://wiki.creativecommons.org/Metadata_Scraper"
-    ]
+    "instances": ["CC Metadata Scaper http://wiki.creativecommons.org/Metadata_Scraper"]
   },
   {
     "pattern": "g00g1e\\.net",
@@ -1379,9 +1286,7 @@
   {
     "pattern": "fr-crawler",
     "addition_date": "2014/07/31",
-    "instances": [
-      "Mozilla/5.0 (compatible; fr-crawler/1.1)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; fr-crawler/1.1)"]
   },
   {
     "pattern": "binlar",
@@ -1397,25 +1302,18 @@
   {
     "pattern": "SimpleCrawler",
     "addition_date": "2014/09/12",
-    "instances": [
-      "SimpleCrawler/0.1"
-    ]
+    "instances": ["SimpleCrawler/0.1"]
   },
   {
     "pattern": "Twitterbot",
     "addition_date": "2014/09/12",
     "url": "https://dev.twitter.com/cards/getting-started",
-    "instances": [
-      "Twitterbot/0.1",
-      "Twitterbot/1.0"
-    ]
+    "instances": ["Twitterbot/0.1", "Twitterbot/1.0"]
   },
   {
     "pattern": "cXensebot",
     "addition_date": "2014/10/05",
-    "instances": [
-      "cXensebot/1.1a"
-    ],
+    "instances": ["cXensebot/1.1a"],
     "url": "http://www.cxense.com/bot.html"
   },
   {
@@ -1443,9 +1341,7 @@
     "pattern": "A6-Indexer",
     "addition_date": "2014/12/05",
     "url": "http://www.a6corp.com/a6-web-scraping-policy/",
-    "instances": [
-      "A6-Indexer"
-    ]
+    "instances": ["A6-Indexer"]
   },
   {
     "pattern": "ADmantX",
@@ -1459,31 +1355,23 @@
     "pattern": "Facebot",
     "url": "https://developers.facebook.com/docs/sharing/best-practices#crawl",
     "addition_date": "2014/12/30",
-    "instances": [
-      "Facebot/1.0"
-    ]
+    "instances": ["Facebot/1.0"]
   },
   {
     "pattern": "OrangeBot\\/",
-    "instances": [
-      "Mozilla/5.0 (compatible; OrangeBot/2.0; support.orangebot@orange.com"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; OrangeBot/2.0; support.orangebot@orange.com"],
     "addition_date": "2015/01/12"
   },
   {
     "pattern": "memorybot",
     "url": "http://mignify.com/bot.htm",
-    "instances": [
-      "Mozilla/5.0 (compatible; memorybot/1.21.14 +http://mignify.com/bot.html)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; memorybot/1.21.14 +http://mignify.com/bot.html)"],
     "addition_date": "2015/02/01"
   },
   {
     "pattern": "AdvBot",
     "url": "http://advbot.net/bot.html",
-    "instances": [
-      "Mozilla/5.0 (compatible; AdvBot/2.0; +http://advbot.net/bot.html)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; AdvBot/2.0; +http://advbot.net/bot.html)"],
     "addition_date": "2015/02/01"
   },
   {
@@ -1507,33 +1395,25 @@
   {
     "pattern": "ltx71",
     "url": "http://ltx71.com/",
-    "instances": [
-      "ltx71 - (http://ltx71.com/)"
-    ],
+    "instances": ["ltx71 - (http://ltx71.com/)"],
     "addition_date": "2015/04/04"
   },
   {
     "pattern": "nerdybot",
     "url": "http://nerdybot.com/",
-    "instances": [
-      "nerdybot"
-    ],
+    "instances": ["nerdybot"],
     "addition_date": "2015/04/05"
   },
   {
     "pattern": "xovibot",
     "url": "http://www.xovibot.net/",
-    "instances": [
-      "Mozilla/5.0 (compatible; XoviBot/2.0; +http://www.xovibot.net/)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; XoviBot/2.0; +http://www.xovibot.net/)"],
     "addition_date": "2015/04/05"
   },
   {
     "pattern": "BUbiNG",
     "url": "http://law.di.unimi.it/BUbiNG.html",
-    "instances": [
-      "BUbiNG (+http://law.di.unimi.it/BUbiNG.html)"
-    ],
+    "instances": ["BUbiNG (+http://law.di.unimi.it/BUbiNG.html)"],
     "addition_date": "2015/04/06"
   },
   {
@@ -1550,9 +1430,7 @@
   {
     "pattern": "archive\\.org_bot",
     "url": "http://www.archive.org/details/archive.org_bot",
-    "depends_on": [
-      "heritrix"
-    ],
+    "depends_on": ["heritrix"],
     "instances": [
       "Mozilla/5.0 (compatible; heritrix/3.1.1-SNAPSHOT-20120116.200628 +http://www.archive.org/details/archive.org_bot)",
       "Mozilla/5.0 (compatible; archive.org_bot/heritrix-1.15.4 +http://www.archive.org)",
@@ -1595,9 +1473,7 @@
   {
     "pattern": "findxbot",
     "url": "http://www.findxbot.com",
-    "instances": [
-      "Mozilla/5.0 (compatible; Findxbot/1.0; +http://www.findxbot.com)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; Findxbot/1.0; +http://www.findxbot.com)"],
     "addition_date": "2015/05/07"
   },
   {
@@ -1618,9 +1494,7 @@
   {
     "pattern": "yoozBot",
     "url": "http://yooz.ir",
-    "instances": [
-      "Mozilla/5.0 (compatible; yoozBot-2.2; http://yooz.ir; info@yooz.ir)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; yoozBot-2.2; http://yooz.ir; info@yooz.ir)"],
     "addition_date": "2015/05/26"
   },
   {
@@ -1658,42 +1532,31 @@
   {
     "pattern": "AddThis",
     "url": "https://www.addthis.com",
-    "instances": [
-      "AddThis.com robot tech.support@clearspring.com"
-    ],
+    "instances": ["AddThis.com robot tech.support@clearspring.com"],
     "addition_date": "2015/06/02"
   },
   {
     "pattern": "Screaming Frog SEO Spider",
     "url": "http://www.screamingfrog.co.uk/seo-spider",
-    "instances": [
-      "Screaming Frog SEO Spider/5.1"
-    ],
+    "instances": ["Screaming Frog SEO Spider/5.1"],
     "addition_date": "2016/01/08"
   },
   {
     "pattern": "MetaURI",
     "url": "http://www.useragentstring.com/MetaURI_id_17683.php",
-    "instances": [
-      "MetaURI API/2.0 +metauri.com"
-    ],
+    "instances": ["MetaURI API/2.0 +metauri.com"],
     "addition_date": "2016/01/02"
   },
   {
     "pattern": "Scrapy",
     "url": "http://scrapy.org/",
-    "instances": [
-      "Scrapy/1.0.3 (+http://scrapy.org)"
-    ],
+    "instances": ["Scrapy/1.0.3 (+http://scrapy.org)"],
     "addition_date": "2016/01/02"
   },
   {
     "pattern": "Livelap[bB]ot",
     "url": "http://site.livelap.com/crawler",
-    "instances": [
-      "LivelapBot/0.2 (http://site.livelap.com/crawler)",
-      "Livelapbot/0.1"
-    ],
+    "instances": ["LivelapBot/0.2 (http://site.livelap.com/crawler)", "Livelapbot/0.1"],
     "addition_date": "2016/01/02"
   },
   {
@@ -1707,9 +1570,7 @@
   {
     "pattern": "CapsuleChecker",
     "url": "http://www.capsulink.com/about",
-    "instances": [
-      "CapsuleChecker (http://www.capsulink.com/)"
-    ],
+    "instances": ["CapsuleChecker (http://www.capsulink.com/)"],
     "addition_date": "2016/01/02"
   },
   {
@@ -1723,9 +1584,7 @@
   {
     "pattern": "IstellaBot",
     "url": "http://www.tiscali.it/",
-    "instances": [
-      "Mozilla/5.0 (compatible; IstellaBot/1.23.15 +http://www.tiscali.it/)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; IstellaBot/1.23.15 +http://www.tiscali.it/)"],
     "addition_date": "2016/01/09"
   },
   {
@@ -1806,9 +1665,7 @@
     "pattern": "Sysomos",
     "addition_date": "2016/02/08",
     "url": "http://www.sysomos.com",
-    "instances": [
-      "Mozilla/5.0 (compatible; Sysomos/1.0; +http://www.sysomos.com/; Sysomos)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; Sysomos/1.0; +http://www.sysomos.com/; Sysomos)"]
   },
   {
     "pattern": "Trove",
@@ -1861,32 +1718,24 @@
     "pattern": "iskanie",
     "addition_date": "2016/09/02",
     "url": "http://www.iskanie.com",
-    "instances": [
-      "iskanie (+http://www.iskanie.com)"
-    ]
+    "instances": ["iskanie (+http://www.iskanie.com)"]
   },
   {
     "pattern": "SafeDNSBot",
     "addition_date": "2016/09/10",
     "url": "https://www.safedns.com/searchbot",
-    "instances": [
-      "SafeDNSBot (https://www.safedns.com/searchbot)"
-    ]
+    "instances": ["SafeDNSBot (https://www.safedns.com/searchbot)"]
   },
   {
     "pattern": "SkypeUriPreview",
     "addition_date": "2016/10/10",
-    "instances": [
-      "Mozilla/5.0 (Windows NT 6.1; WOW64) SkypeUriPreview Preview/0.5"
-    ]
+    "instances": ["Mozilla/5.0 (Windows NT 6.1; WOW64) SkypeUriPreview Preview/0.5"]
   },
   {
     "pattern": "Veoozbot",
     "addition_date": "2016/11/03",
     "url": "http://www.veooz.com/veoozbot.html",
-    "instances": [
-      "Mozilla/5.0 (compatible; Veoozbot/1.0; +http://www.veooz.com/veoozbot.html)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; Veoozbot/1.0; +http://www.veooz.com/veoozbot.html)"]
   },
   {
     "pattern": "Slackbot",
@@ -1902,25 +1751,19 @@
     "pattern": "redditbot",
     "addition_date": "2016/11/03",
     "url": "http://www.reddit.com/feedback",
-    "instances": [
-      "Mozilla/5.0 (compatible; redditbot/1.0; +http://www.reddit.com/feedback)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; redditbot/1.0; +http://www.reddit.com/feedback)"]
   },
   {
     "pattern": "datagnionbot",
     "addition_date": "2016/11/03",
     "url": "http://www.datagnion.com/bot.html",
-    "instances": [
-      "datagnionbot (+http://www.datagnion.com/bot.html)"
-    ]
+    "instances": ["datagnionbot (+http://www.datagnion.com/bot.html)"]
   },
   {
     "pattern": "Google-Adwords-Instant",
     "addition_date": "2016/11/03",
     "url": "http://www.google.com/adsbot.html",
-    "instances": [
-      "Google-Adwords-Instant (+http://www.google.com/adsbot.html)"
-    ]
+    "instances": ["Google-Adwords-Instant (+http://www.google.com/adsbot.html)"]
   },
   {
     "pattern": "adbeat_bot",
@@ -1965,9 +1808,7 @@
   {
     "pattern": "contxbot",
     "addition_date": "2017/02/25",
-    "instances": [
-      "Mozilla/5.0 (compatible;contxbot/1.0)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible;contxbot/1.0)"]
   },
   {
     "pattern": "pinterest\\.com\\/bot",
@@ -1989,9 +1830,7 @@
   {
     "pattern": "GarlikCrawler",
     "addition_date": "2017/03/18",
-    "instances": [
-      "GarlikCrawler/1.2 (http://garlik.com/, crawler@garlik.com)"
-    ],
+    "instances": ["GarlikCrawler/1.2 (http://garlik.com/, crawler@garlik.com)"],
     "url": "http://garlik.com/"
   },
   {
@@ -2017,9 +1856,7 @@
   {
     "pattern": "FemtosearchBot",
     "addition_date": "2017/05/16",
-    "instances": [
-      "Mozilla/5.0 (compatible; FemtosearchBot/1.0; http://femtosearch.com)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; FemtosearchBot/1.0; http://femtosearch.com)"],
     "url": "http://femtosearch.com"
   },
   {
@@ -2033,25 +1870,19 @@
   {
     "pattern": "MetaJobBot",
     "addition_date": "2017/08/16",
-    "instances": [
-      "Mozilla/5.0 (compatible; MetaJobBot; http://www.metajob.de/crawler)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; MetaJobBot; http://www.metajob.de/crawler)"],
     "url": "http://www.metajob.de/the/crawler"
   },
   {
     "pattern": "DomainStatsBot",
     "addition_date": "2017/08/16",
-    "instances": [
-      "DomainStatsBot/1.0 (http://domainstats.io/our-bot)"
-    ],
+    "instances": ["DomainStatsBot/1.0 (http://domainstats.io/our-bot)"],
     "url": "http://domainstats.io/our-bot"
   },
   {
     "pattern": "mindUpBot",
     "addition_date": "2017/08/16",
-    "instances": [
-      "mindUpBot (datenbutler.de)"
-    ],
+    "instances": ["mindUpBot (datenbutler.de)"],
     "url": "http://www.datenbutler.de/"
   },
   {
@@ -2065,26 +1896,19 @@
   {
     "pattern": "Jugendschutzprogramm-Crawler",
     "addition_date": "2017/08/16",
-    "instances": [
-      "Jugendschutzprogramm-Crawler; Info: http://www.jugendschutzprogramm.de"
-    ],
+    "instances": ["Jugendschutzprogramm-Crawler; Info: http://www.jugendschutzprogramm.de"],
     "url": "http://www.jugendschutzprogramm.de"
   },
   {
     "pattern": "Xenu Link Sleuth",
     "addition_date": "2017/08/19",
-    "instances": [
-      "Xenu Link Sleuth/1.3.8"
-    ],
+    "instances": ["Xenu Link Sleuth/1.3.8"],
     "url": "http://home.snafu.de/tilman/xenulink.html"
   },
   {
     "pattern": "Pcore-HTTP",
     "addition_date": "2017/08/19",
-    "instances": [
-      "Pcore-HTTP/v0.40.3",
-      "Pcore-HTTP/v0.44.0"
-    ],
+    "instances": ["Pcore-HTTP/v0.40.3", "Pcore-HTTP/v0.44.0"],
     "url": "https://bitbucket.org/softvisio/pcore/overview"
   },
   {
@@ -2139,9 +1963,7 @@
   {
     "pattern": "Gowikibot",
     "addition_date": "2017/10/26",
-    "instances": [
-      "Mozilla/5.0 (compatible; Gowikibot/1.0; +http://www.gowikibot.com)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; Gowikibot/1.0; +http://www.gowikibot.com)"],
     "url": "http://www.gowikibot.com"
   },
   {
@@ -2157,24 +1979,18 @@
     "pattern": "Discordbot",
     "addition_date": "2017/09/22",
     "url": "https://discordapp.com",
-    "instances": [
-      "Mozilla/5.0 (compatible; Discordbot/2.0; +https://discordapp.com)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; Discordbot/2.0; +https://discordapp.com)"]
   },
   {
     "pattern": "TelegramBot",
     "addition_date": "2017/10/01",
-    "instances": [
-      "TelegramBot (like TwitterBot)"
-    ]
+    "instances": ["TelegramBot (like TwitterBot)"]
   },
   {
     "pattern": "Jetslide",
     "addition_date": "2017/09/27",
     "url": "http://jetsli.de/crawler",
-    "instances": [
-      "Mozilla/5.0 (compatible; Jetslide; +http://jetsli.de/crawler)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; Jetslide; +http://jetsli.de/crawler)"]
   },
   {
     "pattern": "newsharecounts",
@@ -2216,9 +2032,7 @@
     "pattern": "SocialRankIOBot",
     "addition_date": "2017/10/19",
     "url": "http://socialrank.io/about",
-    "instances": [
-      "SocialRankIOBot; http://socialrank.io/about"
-    ]
+    "instances": ["SocialRankIOBot; http://socialrank.io/about"]
   },
   {
     "pattern": "trendictionbot",
@@ -2232,25 +2046,19 @@
   {
     "pattern": "Ocarinabot",
     "addition_date": "2017/09/27",
-    "instances": [
-      "Ocarinabot"
-    ]
+    "instances": ["Ocarinabot"]
   },
   {
     "pattern": "epicbot",
     "addition_date": "2017/10/31",
     "url": "http://www.epictions.com/epicbot",
-    "instances": [
-      "Mozilla/5.0 (compatible; epicbot; +http://www.epictions.com/epicbot)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; epicbot; +http://www.epictions.com/epicbot)"]
   },
   {
     "pattern": "Primalbot",
     "addition_date": "2017/09/27",
     "url": "https://www.primal.com",
-    "instances": [
-      "Mozilla/5.0 (compatible; Primalbot; +https://www.primal.com;)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; Primalbot; +https://www.primal.com;)"]
   },
   {
     "pattern": "DuckDuckGo-Favicons-Bot",
@@ -2280,9 +2088,7 @@
     "pattern": "LinkArchiver",
     "addition_date": "2017/09/24",
     "url": "https://github.com/thisisparker/linkarchiver",
-    "instances": [
-      "@LinkArchiver twitter bot"
-    ]
+    "instances": ["@LinkArchiver twitter bot"]
   },
   {
     "pattern": "YaK\\/",
@@ -2305,17 +2111,13 @@
     "pattern": "Digg Deeper",
     "addition_date": "2017/09/26",
     "url": "http://digg.com/about",
-    "instances": [
-      "Digg Deeper/v1 (http://digg.com/about)"
-    ]
+    "instances": ["Digg Deeper/v1 (http://digg.com/about)"]
   },
   {
     "pattern": "dcrawl",
     "addition_date": "2017/09/22",
     "url": "https://github.com/kgretzky/dcrawl",
-    "instances": [
-      "dcrawl/1.0"
-    ]
+    "instances": ["dcrawl/1.0"]
   },
   {
     "pattern": "Snacktory",
@@ -2336,9 +2138,7 @@
   {
     "pattern": "Fyrebot",
     "addition_date": "2017/09/22",
-    "instances": [
-      "Fyrebot/1.0"
-    ]
+    "instances": ["Fyrebot/1.0"]
   },
   {
     "pattern": "EveryoneSocialBot",
@@ -2352,9 +2152,7 @@
     "pattern": "Mediatoolkitbot",
     "addition_date": "2017/10/06",
     "url": "http://mediatoolkit.com",
-    "instances": [
-      "Mediatoolkitbot (complaints@mediatoolkit.com)"
-    ]
+    "instances": ["Mediatoolkitbot (complaints@mediatoolkit.com)"]
   },
   {
     "pattern": "Luminator-robots",
@@ -2367,9 +2165,7 @@
     "pattern": "ExtLinksBot",
     "addition_date": "2017/11/02",
     "url": "https://extlinks.com/Bot.html",
-    "instances": [
-      "Mozilla/5.0 (compatible; ExtLinksBot/1.5 +https://extlinks.com/Bot.html)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; ExtLinksBot/1.5 +https://extlinks.com/Bot.html)"]
   },
   {
     "pattern": "SurveyBot",
@@ -2381,9 +2177,7 @@
   {
     "pattern": "NING\\/",
     "addition_date": "2017/11/02",
-    "instances": [
-      "NING/1.0"
-    ]
+    "instances": ["NING/1.0"]
   },
   {
     "pattern": "okhttp",
@@ -2399,25 +2193,19 @@
   {
     "pattern": "Nuzzel",
     "addition_date": "2017/11/02",
-    "instances": [
-      "Nuzzel"
-    ]
+    "instances": ["Nuzzel"]
   },
   {
     "pattern": "omgili",
     "addition_date": "2017/11/02",
     "url": "http://omgili.com",
-    "instances": [
-      "omgili/0.5 +http://omgili.com"
-    ]
+    "instances": ["omgili/0.5 +http://omgili.com"]
   },
   {
     "pattern": "PocketParser",
     "addition_date": "2017/11/02",
     "url": "https://getpocket.com/pocketparser_ua",
-    "instances": [
-      "PocketParser/2.0 (+https://getpocket.com/pocketparser_ua)"
-    ]
+    "instances": ["PocketParser/2.0 (+https://getpocket.com/pocketparser_ua)"]
   },
   {
     "pattern": "YisouSpider",
@@ -2446,32 +2234,24 @@
     "pattern": "MuckRack",
     "addition_date": "2017/11/02",
     "url": "http://muckrack.com",
-    "instances": [
-      "Mozilla/5.0 (compatible; MuckRack/1.0; +http://muckrack.com)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; MuckRack/1.0; +http://muckrack.com)"]
   },
   {
     "pattern": "Jamie's Spider",
     "addition_date": "2017/11/02",
     "url": "http://jamiembrown.com/",
-    "instances": [
-      "Jamie's Spider (http://jamiembrown.com/)"
-    ]
+    "instances": ["Jamie's Spider (http://jamiembrown.com/)"]
   },
   {
     "pattern": "AHC\\/",
     "addition_date": "2017/11/02",
     "url": "https://github.com/AsyncHttpClient/async-http-client",
-    "instances": [
-      "AHC/2.0"
-    ]
+    "instances": ["AHC/2.0"]
   },
   {
     "pattern": "NetcraftSurveyAgent",
     "addition_date": "2017/11/02",
-    "instances": [
-      "Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)"]
   },
   {
     "pattern": "Laserlikebot",
@@ -2511,82 +2291,60 @@
   {
     "pattern": "Jetty",
     "addition_date": "2017/11/02",
-    "instances": [
-      "Jetty/9.3.z-SNAPSHOT"
-    ]
+    "instances": ["Jetty/9.3.z-SNAPSHOT"]
   },
   {
     "pattern": "Upflow",
     "addition_date": "2017/11/02",
-    "instances": [
-      "Upflow/1.0"
-    ]
+    "instances": ["Upflow/1.0"]
   },
   {
     "pattern": "Thinklab",
     "addition_date": "2017/11/02",
     "url": "thinklab.com",
-    "instances": [
-      "Thinklab (thinklab.com)"
-    ]
+    "instances": ["Thinklab (thinklab.com)"]
   },
   {
     "pattern": "Traackr\\.com",
     "addition_date": "2017/11/02",
     "url": "https://www.traackr.com/",
-    "instances": [
-      "Traackr.com"
-    ]
+    "instances": ["Traackr.com"]
   },
   {
     "pattern": "Twurly",
     "addition_date": "2017/11/02",
     "url": "http://twurly.org",
-    "instances": [
-      "Ruby, Twurly v1.1 (http://twurly.org)"
-    ]
+    "instances": ["Ruby, Twurly v1.1 (http://twurly.org)"]
   },
   {
     "pattern": "Mastodon",
     "addition_date": "2017/11/02",
-    "instances": [
-      "http.rb/2.2.2 (Mastodon/1.5.1; +https://example-masto-instance.org/)"
-    ]
+    "instances": ["http.rb/2.2.2 (Mastodon/1.5.1; +https://example-masto-instance.org/)"]
   },
   {
     "pattern": "http_get",
     "addition_date": "2017/11/02",
-    "instances": [
-      "http_get"
-    ]
+    "instances": ["http_get"]
   },
   {
     "pattern": "DnyzBot",
     "addition_date": "2017/11/20",
-    "instances": [
-      "Mozilla/5.0 (compatible; DnyzBot/1.0)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; DnyzBot/1.0)"]
   },
   {
     "pattern": "botify",
     "addition_date": "2018/02/01",
-    "instances": [
-      "Mozilla/5.0 (compatible; botify; http://botify.com)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; botify; http://botify.com)"]
   },
   {
     "pattern": "007ac9 Crawler",
     "addition_date": "2018/02/09",
-    "instances": [
-      "Mozilla/5.0 (compatible; 007ac9 Crawler; http://crawler.007ac9.net/)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; 007ac9 Crawler; http://crawler.007ac9.net/)"]
   },
   {
     "pattern": "BehloolBot",
     "addition_date": "2018/02/09",
-    "instances": [
-      "Mozilla/5.0 (compatible; BehloolBot/beta; +http://www.webeaver.com/bot)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; BehloolBot/beta; +http://www.webeaver.com/bot)"]
   },
   {
     "pattern": "BrandVerity",
@@ -2600,9 +2358,7 @@
   {
     "pattern": "check_http",
     "addition_date": "2018/02/09",
-    "instances": [
-      "check_http/v2.2.1 (nagios-plugins 2.2.1)"
-    ]
+    "instances": ["check_http/v2.2.1 (nagios-plugins 2.2.1)"]
   },
   {
     "pattern": "BDCbot",
@@ -2615,16 +2371,12 @@
   {
     "pattern": "ZumBot",
     "addition_date": "2018/02/09",
-    "instances": [
-      "Mozilla/5.0 (compatible; ZumBot/1.0; http://help.zum.com/inquiry)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; ZumBot/1.0; http://help.zum.com/inquiry)"]
   },
   {
     "pattern": "EZID",
     "addition_date": "2018/02/09",
-    "instances": [
-      "EZID (EZID link checker; https://ezid.cdlib.org/)"
-    ]
+    "instances": ["EZID (EZID link checker; https://ezid.cdlib.org/)"]
   },
   {
     "pattern": "ICC-Crawler",
@@ -2637,130 +2389,95 @@
   {
     "pattern": "ArchiveBot",
     "addition_date": "2018/02/28",
-    "instances": [
-      "ArchiveTeam ArchiveBot/20170106.02 (wpull 2.0.2)"
-    ],
+    "instances": ["ArchiveTeam ArchiveBot/20170106.02 (wpull 2.0.2)"],
     "url": "https://github.com/ArchiveTeam/ArchiveBot"
   },
   {
     "pattern": "^LCC ",
     "addition_date": "2018/02/28",
-    "instances": [
-      "LCC (+http://corpora.informatik.uni-leipzig.de/crawler_faq.html)"
-    ],
+    "instances": ["LCC (+http://corpora.informatik.uni-leipzig.de/crawler_faq.html)"],
     "url": "http://corpora.informatik.uni-leipzig.de/crawler_faq.html"
   },
   {
     "pattern": "filterdb\\.iss\\.net\\/crawler",
     "addition_date": "2018/03/16",
-    "instances": [
-      "Mozilla/5.0 (compatible; oBot/2.3.1; +http://filterdb.iss.net/crawler/)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; oBot/2.3.1; +http://filterdb.iss.net/crawler/)"],
     "url": "http://filterdb.iss.net/crawler/"
   },
   {
     "pattern": "BLP_bbot",
     "addition_date": "2018/03/27",
-    "instances": [
-      "BLP_bbot/0.1"
-    ]
+    "instances": ["BLP_bbot/0.1"]
   },
   {
     "pattern": "BomboraBot",
     "addition_date": "2018/03/27",
-    "instances": [
-      "Mozilla/5.0 (compatible; BomboraBot/1.0; +http://www.bombora.com/bot)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; BomboraBot/1.0; +http://www.bombora.com/bot)"],
     "url": "http://www.bombora.com/bot"
   },
   {
     "pattern": "Buck\\/",
     "addition_date": "2018/03/27",
-    "instances": [
-      "Buck/2.2; (+https://app.hypefactors.com/media-monitoring/about.html)"
-    ],
+    "instances": ["Buck/2.2; (+https://app.hypefactors.com/media-monitoring/about.html)"],
     "url": "https://app.hypefactors.com/media-monitoring/about.html"
   },
   {
     "pattern": "Companybook-Crawler",
     "addition_date": "2018/03/27",
-    "instances": [
-      "Companybook-Crawler (+https://www.companybooknetworking.com/)"
-    ],
+    "instances": ["Companybook-Crawler (+https://www.companybooknetworking.com/)"],
     "url": "https://www.companybooknetworking.com/"
   },
   {
     "pattern": "Genieo",
     "addition_date": "2018/03/27",
-    "instances": [
-      "Mozilla/5.0 (compatible; Genieo/1.0 http://www.genieo.com/webfilter.html)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; Genieo/1.0 http://www.genieo.com/webfilter.html)"],
     "url": "http://www.genieo.com/webfilter.html"
   },
   {
     "pattern": "magpie-crawler",
     "addition_date": "2018/03/27",
-    "instances": [
-      "magpie-crawler/1.1 (U; Linux amd64; en-GB; +http://www.brandwatch.net)"
-    ],
+    "instances": ["magpie-crawler/1.1 (U; Linux amd64; en-GB; +http://www.brandwatch.net)"],
     "url": "http://www.brandwatch.net"
   },
   {
     "pattern": "MeltwaterNews",
     "addition_date": "2018/03/27",
-    "instances": [
-      "MeltwaterNews www.meltwater.com"
-    ],
+    "instances": ["MeltwaterNews www.meltwater.com"],
     "url": "http://www.meltwater.com"
   },
   {
     "pattern": "Moreover",
     "addition_date": "2018/03/27",
-    "instances": [
-      "Mozilla/5.0 Moreover/5.1 (+http://www.moreover.com)"
-    ],
+    "instances": ["Mozilla/5.0 Moreover/5.1 (+http://www.moreover.com)"],
     "url": "http://www.moreover.com"
   },
   {
     "pattern": "newspaper\\/",
     "addition_date": "2018/03/27",
-    "instances": [
-      "newspaper/0.1.0.7",
-      "newspaper/0.2.5",
-      "newspaper/0.2.6",
-      "newspaper/0.2.8"
-    ]
+    "instances": ["newspaper/0.1.0.7", "newspaper/0.2.5", "newspaper/0.2.6", "newspaper/0.2.8"]
   },
   {
     "pattern": "ScoutJet",
     "addition_date": "2018/03/27",
-    "instances": [
-      "Mozilla/5.0 (compatible; ScoutJet; +http://www.scoutjet.com/)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; ScoutJet; +http://www.scoutjet.com/)"],
     "url": "http://www.scoutjet.com/"
   },
   {
     "pattern": "(^| )sentry\\/",
     "addition_date": "2018/03/27",
-    "instances": [
-      "sentry/8.22.0 (https://sentry.io)"
-    ],
+    "instances": ["sentry/8.22.0 (https://sentry.io)"],
     "url": "https://sentry.io"
   },
   {
     "pattern": "StorygizeBot",
     "addition_date": "2018/03/27",
-    "instances": [
-      "Mozilla/5.0 (compatible; StorygizeBot; http://www.storygize.com)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; StorygizeBot; http://www.storygize.com)"],
     "url": "http://www.storygize.com"
   },
   {
     "pattern": "UptimeRobot",
     "addition_date": "2018/03/27",
-    "instances": [
-      "Mozilla/5.0+(compatible; UptimeRobot/2.0; http://www.uptimerobot.com/)"
-    ],
+    "instances": ["Mozilla/5.0+(compatible; UptimeRobot/2.0; http://www.uptimerobot.com/)"],
     "url": "http://www.uptimerobot.com/"
   },
   {
@@ -2777,9 +2494,7 @@
   {
     "pattern": "seoscanners",
     "addition_date": "2018/05/27",
-    "instances": [
-      "Mozilla/5.0 (compatible; seoscanners.net/1; +spider@seoscanners.net)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; seoscanners.net/1; +spider@seoscanners.net)"],
     "url": "http://www.seoscanners.net/"
   },
   {
@@ -2805,42 +2520,32 @@
   {
     "pattern": "MauiBot",
     "addition_date": "2018/06/06",
-    "instances": [
-      "MauiBot (crawler.feedback+wc@gmail.com)"
-    ]
+    "instances": ["MauiBot (crawler.feedback+wc@gmail.com)"]
   },
   {
     "pattern": "AlphaBot",
     "addition_date": "2018/05/27",
-    "instances": [
-      "Mozilla/5.0 (compatible; AlphaBot/3.2; +http://alphaseobot.com/bot.html)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; AlphaBot/3.2; +http://alphaseobot.com/bot.html)"],
     "url": "http://alphaseobot.com/bot.html"
   },
   {
     "pattern": "SBL-BOT",
     "addition_date": "2018/06/06",
-    "instances": [
-      "SBL-BOT (http://sbl.net)"
-    ],
+    "instances": ["SBL-BOT (http://sbl.net)"],
     "url": "http://sbl.net",
     "description": "Bot of SoftByte BlackWidow"
   },
   {
     "pattern": "IAS crawler",
     "addition_date": "2018/06/06",
-    "instances": [
-      "IAS crawler (ias_crawler; http://integralads.com/site-indexing-policy/)"
-    ],
+    "instances": ["IAS crawler (ias_crawler; http://integralads.com/site-indexing-policy/)"],
     "url": "http://integralads.com/site-indexing-policy/",
     "description": "Bot of Integral Ad Science, Inc."
   },
   {
     "pattern": "adscanner",
     "addition_date": "2018/06/24",
-    "instances": [
-      "Mozilla/5.0 (compatible; adscanner/)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; adscanner/)"]
   },
   {
     "pattern": "Netvibes",
@@ -2875,51 +2580,37 @@
   {
     "pattern": "bitlybot",
     "addition_date": "2018/06/27",
-    "instances": [
-      "bitlybot/3.0 (+http://bit.ly/)",
-      "bitlybot/2.0",
-      "bitlybot"
-    ],
+    "instances": ["bitlybot/3.0 (+http://bit.ly/)", "bitlybot/2.0", "bitlybot"],
     "url": "http://bit.ly/"
   },
   {
     "pattern": "blogmuraBot",
     "addition_date": "2018/06/27",
-    "instances": [
-      "blogmuraBot (+http://www.blogmura.com)"
-    ],
+    "instances": ["blogmuraBot (+http://www.blogmura.com)"],
     "url": "http://www.blogmura.com",
     "description": "A blog ranking site which links to blogs on just about every theme possible."
   },
   {
     "pattern": "Bot\\.AraTurka\\.com",
     "addition_date": "2018/06/27",
-    "instances": [
-      "Bot.AraTurka.com/0.0.1"
-    ],
+    "instances": ["Bot.AraTurka.com/0.0.1"],
     "url": "http://www.araturka.com"
   },
   {
     "pattern": "bot-pge\\.chlooe\\.com",
     "addition_date": "2018/06/27",
-    "instances": [
-      "bot-pge.chlooe.com/1.0.0 (+http://www.chlooe.com/)"
-    ]
+    "instances": ["bot-pge.chlooe.com/1.0.0 (+http://www.chlooe.com/)"]
   },
   {
     "pattern": "BoxcarBot",
     "addition_date": "2018/06/27",
-    "instances": [
-      "Mozilla/5.0 (compatible; BoxcarBot/1.1; +awesome@boxcar.io)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; BoxcarBot/1.1; +awesome@boxcar.io)"],
     "url": "https://boxcar.io/"
   },
   {
     "pattern": "BTWebClient",
     "addition_date": "2018/06/27",
-    "instances": [
-      "BTWebClient/180B(9704)"
-    ],
+    "instances": ["BTWebClient/180B(9704)"],
     "url": "http://www.utorrent.com/",
     "description": "µTorrent BitTorrent Client"
   },
@@ -2942,9 +2633,7 @@
   {
     "pattern": "Disqus",
     "addition_date": "2018/06/27",
-    "instances": [
-      "Disqus/1.0"
-    ],
+    "instances": ["Disqus/1.0"],
     "url": "https://disqus.com/",
     "description": "validate and quality check pages."
   },
@@ -2968,17 +2657,13 @@
   {
     "pattern": "Fever",
     "addition_date": "2018/06/27",
-    "instances": [
-      "Fever/1.38 (Feed Parser; http://feedafever.com; Allow like Gecko)"
-    ],
+    "instances": ["Fever/1.38 (Feed Parser; http://feedafever.com; Allow like Gecko)"],
     "url": "http://feedafever.com"
   },
   {
     "pattern": "Flamingo_SearchEngine",
     "addition_date": "2018/06/27",
-    "instances": [
-      "Flamingo_SearchEngine (+http://www.flamingosearch.com/bot)"
-    ]
+    "instances": ["Flamingo_SearchEngine (+http://www.flamingosearch.com/bot)"]
   },
   {
     "pattern": "FlipboardProxy",
@@ -2996,9 +2681,7 @@
   {
     "pattern": "g2reader-bot",
     "addition_date": "2018/06/27",
-    "instances": [
-      "g2reader-bot/1.0 (+http://www.g2reader.com/)"
-    ],
+    "instances": ["g2reader-bot/1.0 (+http://www.g2reader.com/)"],
     "url": "http://www.g2reader.com/"
   },
   {
@@ -3012,50 +2695,38 @@
   {
     "pattern": "imrbot",
     "addition_date": "2018/06/27",
-    "instances": [
-      "Mozilla/5.0 (compatible; imrbot/1.10.8 +http://www.mignify.com)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; imrbot/1.10.8 +http://www.mignify.com)"],
     "url": "http://www.mignify.com"
   },
   {
     "pattern": "K7MLWCBot",
     "addition_date": "2018/06/27",
-    "instances": [
-      "K7MLWCBot/1.0 (+http://www.k7computing.com)"
-    ],
+    "instances": ["K7MLWCBot/1.0 (+http://www.k7computing.com)"],
     "url": "http://www.k7computing.com",
     "description": "Virus scanner"
   },
   {
     "pattern": "Kemvibot",
     "addition_date": "2018/06/27",
-    "instances": [
-      "Kemvibot/1.0 (http://kemvi.com, marco@kemvi.com)"
-    ],
+    "instances": ["Kemvibot/1.0 (http://kemvi.com, marco@kemvi.com)"],
     "url": "http://kemvi.com"
   },
   {
     "pattern": "Landau-Media-Spider",
     "addition_date": "2018/06/27",
-    "instances": [
-      "Landau-Media-Spider/1.0(http://bots.landaumedia.de/bot.html)"
-    ],
+    "instances": ["Landau-Media-Spider/1.0(http://bots.landaumedia.de/bot.html)"],
     "url": "http://bots.landaumedia.de/bot.html"
   },
   {
     "pattern": "linkapediabot",
     "addition_date": "2018/06/27",
-    "instances": [
-      "linkapediabot (+http://www.linkapedia.com)"
-    ],
+    "instances": ["linkapediabot (+http://www.linkapedia.com)"],
     "url": "http://www.linkapedia.com"
   },
   {
     "pattern": "vkShare",
     "addition_date": "2018/07/02",
-    "instances": [
-      "Mozilla/5.0 (compatible; vkShare; +http://vk.com/dev/Share)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; vkShare; +http://vk.com/dev/Share)"],
     "url": "http://vk.com/dev/Share"
   },
   {
@@ -3071,9 +2742,7 @@
   {
     "pattern": "BLEXBot\\/",
     "addition_date": "2018/07/07",
-    "instances": [
-      "Mozilla/5.0 (compatible; BLEXBot/1.0; +http://webmeup-crawler.com/)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; BLEXBot/1.0; +http://webmeup-crawler.com/)"],
     "url": "http://webmeup-crawler.com"
   },
   {
@@ -3088,9 +2757,7 @@
   {
     "pattern": "ZuperlistBot\\/",
     "addition_date": "2018/07/07",
-    "instances": [
-      "Mozilla/5.0 (compatible; ZuperlistBot/1.0)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; ZuperlistBot/1.0)"]
   },
   {
     "pattern": "Miniflux\\/",
@@ -3129,17 +2796,13 @@
   {
     "pattern": "SEOkicks",
     "addition_date": "2018/08/22",
-    "instances": [
-      "Mozilla/5.0 (compatible; SEOkicks; +https://www.seokicks.de/robot.html)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; SEOkicks; +https://www.seokicks.de/robot.html)"],
     "url": "https://www.seokicks.de/robot.html"
   },
   {
     "pattern": "tracemyfile",
     "addition_date": "2018/08/23",
-    "instances": [
-      "Mozilla/5.0 (compatible; tracemyfile/1.0; +bot@tracemyfile.com)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; tracemyfile/1.0; +bot@tracemyfile.com)"]
   },
   {
     "pattern": "Nimbostratus-Bot",
@@ -3151,81 +2814,60 @@
   {
     "pattern": "zgrab",
     "addition_date": "2018/08/30",
-    "instances": [
-      "Mozilla/5.0 zgrab/0.x"
-    ],
+    "instances": ["Mozilla/5.0 zgrab/0.x"],
     "url": "https://github.com/zmap/zgrab2"
   },
   {
     "pattern": "PR-CY\\.RU",
     "addition_date": "2018/08/30",
-    "instances": [
-      "Mozilla/5.0 (compatible; PR-CY.RU; + https://a.pr-cy.ru)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; PR-CY.RU; + https://a.pr-cy.ru)"],
     "url": "https://a.pr-cy.ru/"
   },
   {
     "pattern": "AdsTxtCrawler",
     "addition_date": "2018/08/30",
-    "instances": [
-      "AdsTxtCrawler/1.0"
-    ]
+    "instances": ["AdsTxtCrawler/1.0"]
   },
   {
     "pattern": "Datafeedwatch",
     "addition_date": "2018/09/05",
-    "instances": [
-      "Datafeedwatch/2.1.x"
-    ],
+    "instances": ["Datafeedwatch/2.1.x"],
     "url": "https://www.datafeedwatch.com/"
   },
   {
     "pattern": "Zabbix",
     "addition_date": "2018/09/05",
-    "instances": [
-      "Zabbix"
-    ],
+    "instances": ["Zabbix"],
     "url": "https://www.zabbix.com/documentation/3.4/manual/web_monitoring"
   },
   {
     "pattern": "TangibleeBot",
     "addition_date": "2018/09/05",
-    "instances": [
-      "TangibleeBot/1.0.0.0 (http://tangiblee.com/bot)"
-    ],
+    "instances": ["TangibleeBot/1.0.0.0 (http://tangiblee.com/bot)"],
     "url": "http://tangiblee.com/bot"
   },
   {
     "pattern": "google-xrawler",
     "addition_date": "2018/09/05",
-    "instances": [
-      "google-xrawler"
-    ],
+    "instances": ["google-xrawler"],
     "url": "https://webmasters.stackexchange.com/questions/105560/what-is-the-google-xrawler-user-agent-used-for"
   },
   {
     "pattern": "axios",
     "addition_date": "2018/09/06",
-    "instances": [
-      "axios/0.18.0",
-      "axios/0.19.0"
-    ],
+    "instances": ["axios/0.18.0", "axios/0.19.0"],
     "url": "https://github.com/axios/axios"
   },
   {
     "pattern": "Amazon CloudFront",
     "addition_date": "2018/09/07",
-    "instances": [
-      "Amazon CloudFront"
-    ],
+    "instances": ["Amazon CloudFront"],
     "url": "https://aws.amazon.com/cloudfront/"
   },
   {
     "pattern": "Pulsepoint",
     "addition_date": "2018/09/24",
-    "instances": [
-      "Pulsepoint XT3 web scraper"
-    ]
+    "instances": ["Pulsepoint XT3 web scraper"]
   },
   {
     "pattern": "CloudFlare-AlwaysOnline",
@@ -3248,9 +2890,7 @@
   {
     "pattern": "WordupInfoSearch",
     "addition_date": "2018/10/07",
-    "instances": [
-      "WordupInfoSearch/1.0"
-    ]
+    "instances": ["WordupInfoSearch/1.0"]
   },
   {
     "pattern": "WebDataStats",
@@ -3263,71 +2903,53 @@
   {
     "pattern": "HttpUrlConnection",
     "addition_date": "2018/10/08",
-    "instances": [
-      "Jersey/2.25.1 (HttpUrlConnection 1.8.0_141)"
-    ]
+    "instances": ["Jersey/2.25.1 (HttpUrlConnection 1.8.0_141)"]
   },
   {
     "pattern": "ZoomBot",
     "addition_date": "2018/10/10",
-    "instances": [
-      "ZoomBot (Linkbot 1.0 http://suite.seozoom.it/bot.html)"
-    ],
+    "instances": ["ZoomBot (Linkbot 1.0 http://suite.seozoom.it/bot.html)"],
     "url": "http://suite.seozoom.it/bot.html"
   },
   {
     "pattern": "VelenPublicWebCrawler",
     "addition_date": "2018/10/09",
     "url": "https://velen.io/",
-    "instances": [
-      "VelenPublicWebCrawler (velen.io)"
-    ]
+    "instances": ["VelenPublicWebCrawler (velen.io)"]
   },
   {
     "pattern": "MoodleBot",
     "addition_date": "2018/10/10",
-    "instances": [
-      "MoodleBot/1.0"
-    ]
+    "instances": ["MoodleBot/1.0"]
   },
   {
     "pattern": "jpg-newsbot",
     "addition_date": "2018/10/10",
-    "instances": [
-      "jpg-newsbot/2.0; (+https://vipnytt.no/bots/)"
-    ],
+    "instances": ["jpg-newsbot/2.0; (+https://vipnytt.no/bots/)"],
     "url": "https://vipnytt.no/bots/"
   },
   {
     "pattern": "outbrain",
     "addition_date": "2018/10/14",
-    "instances": [
-      "Mozilla/5.0 (Java) outbrain"
-    ],
+    "instances": ["Mozilla/5.0 (Java) outbrain"],
     "url": "https://www.outbrain.com/help/advertisers/invalid-url/"
   },
   {
     "pattern": "W3C_Validator",
     "addition_date": "2018/10/14",
-    "instances": [
-      "W3C_Validator/1.3"
-    ],
+    "instances": ["W3C_Validator/1.3"],
     "url": "https://validator.w3.org/services"
   },
   {
     "pattern": "Validator\\.nu",
     "addition_date": "2018/10/14",
-    "instances": [
-      "Validator.nu/LV"
-    ],
+    "instances": ["Validator.nu/LV"],
     "url": "https://validator.w3.org/services"
   },
   {
     "pattern": "W3C-checklink",
     "addition_date": "2018/10/14",
-    "depends_on": [
-      "libwww-perl"
-    ],
+    "depends_on": ["libwww-perl"],
     "instances": [
       "W3C-checklink/2.90 libwww-perl/5.64",
       "W3C-checklink/3.6.2.3 libwww-perl/5.64",
@@ -3344,64 +2966,48 @@
   {
     "pattern": "W3C-mobileOK",
     "addition_date": "2018/10/14",
-    "instances": [
-      "W3C-mobileOK/DDC-1.0"
-    ],
+    "instances": ["W3C-mobileOK/DDC-1.0"],
     "url": "https://validator.w3.org/services"
   },
   {
     "pattern": "W3C_I18n-Checker",
     "addition_date": "2018/10/14",
-    "instances": [
-      "W3C_I18n-Checker/1.0"
-    ],
+    "instances": ["W3C_I18n-Checker/1.0"],
     "url": "https://validator.w3.org/services"
   },
   {
     "pattern": "FeedValidator",
     "addition_date": "2018/10/14",
-    "instances": [
-      "FeedValidator/1.3"
-    ],
+    "instances": ["FeedValidator/1.3"],
     "url": "https://validator.w3.org/services"
   },
   {
     "pattern": "W3C_CSS_Validator",
     "addition_date": "2018/10/14",
-    "instances": [
-      "Jigsaw/2.3.0 W3C_CSS_Validator_JFouffa/2.0"
-    ],
+    "instances": ["Jigsaw/2.3.0 W3C_CSS_Validator_JFouffa/2.0"],
     "url": "https://validator.w3.org/services"
   },
   {
     "pattern": "W3C_Unicorn",
     "addition_date": "2018/10/14",
-    "instances": [
-      "W3C_Unicorn/1.0"
-    ],
+    "instances": ["W3C_Unicorn/1.0"],
     "url": "https://validator.w3.org/services"
   },
   {
     "pattern": "Google-PhysicalWeb",
     "addition_date": "2018/10/21",
-    "instances": [
-      "Mozilla/5.0 (Google-PhysicalWeb)"
-    ]
+    "instances": ["Mozilla/5.0 (Google-PhysicalWeb)"]
   },
   {
     "pattern": "Blackboard",
     "addition_date": "2018/10/28",
-    "instances": [
-      "Blackboard Safeassign"
-    ],
+    "instances": ["Blackboard Safeassign"],
     "url": "https://help.blackboard.com/Learn/Administrator/Hosting/Tools_Management/SafeAssign"
   },
   {
     "pattern": "ICBot\\/",
     "addition_date": "2018/10/23",
-    "instances": [
-      "Mozilla/5.0 (compatible; ICBot/0.1; +https://ideasandcode.xyz"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; ICBot/0.1; +https://ideasandcode.xyz"],
     "url": "https://ideasandcode.xyz"
   },
   {
@@ -3415,26 +3021,19 @@
   {
     "pattern": "Twingly",
     "addition_date": "2018/10/23",
-    "instances": [
-      "Mozilla/5.0 (compatible; Twingly Recon; twingly.com)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; Twingly Recon; twingly.com)"],
     "url": "https://twingly.com"
   },
   {
     "pattern": "Rivva",
     "addition_date": "2018/10/23",
-    "instances": [
-      "Mozilla/5.0 (compatible; Rivva; http://rivva.de)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; Rivva; http://rivva.de)"],
     "url": "http://rivva.de"
   },
   {
     "pattern": "Experibot",
     "addition_date": "2018/11/03",
-    "instances": [
-      "Experibot-v2 http://goo.gl/ZAr8wX",
-      "Experibot-v3 http://goo.gl/ZAr8wX"
-    ],
+    "instances": ["Experibot-v2 http://goo.gl/ZAr8wX", "Experibot-v3 http://goo.gl/ZAr8wX"],
     "url": "https://amirkr.wixsite.com/experibot"
   },
   {
@@ -3447,25 +3046,19 @@
   {
     "pattern": "Dataprovider\\.com",
     "addition_date": "2018/11/24",
-    "instances": [
-      "Mozilla/5.0 (compatible; Dataprovider.com)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; Dataprovider.com)"],
     "url": "https://www.dataprovider.com/"
   },
   {
     "pattern": "GroupHigh\\/",
     "addition_date": "2018/11/24",
-    "instances": [
-      "Mozilla/5.0 (compatible; GroupHigh/1.0; +http://www.grouphigh.com/"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; GroupHigh/1.0; +http://www.grouphigh.com/"],
     "url": "http://www.grouphigh.com/"
   },
   {
     "pattern": "theoldreader\\.com",
     "addition_date": "2018/12/02",
-    "instances": [
-      "Mozilla/5.0 (compatible; theoldreader.com)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; theoldreader.com)"],
     "url": "https://www.theoldreader.com/"
   },
   {
@@ -3479,9 +3072,7 @@
   {
     "pattern": "Uptimebot\\.org",
     "addition_date": "2019/01/17",
-    "instances": [
-      "Uptimebot.org - Free website monitoring"
-    ],
+    "instances": ["Uptimebot.org - Free website monitoring"],
     "url": "http://uptimebot.org/"
   },
   {
@@ -3495,49 +3086,37 @@
   {
     "pattern": "2ip\\.ru",
     "addition_date": "2019/02/12",
-    "instances": [
-      "2ip.ru CMS Detector (https://2ip.ru/cms/)"
-    ],
+    "instances": ["2ip.ru CMS Detector (https://2ip.ru/cms/)"],
     "url": "https://2ip.ru/cms/"
   },
   {
     "pattern": "Clickagy",
     "addition_date": "2019/02/19",
-    "instances": [
-      "Clickagy Intelligence Bot v2"
-    ],
+    "instances": ["Clickagy Intelligence Bot v2"],
     "url": "https://www.clickagy.com"
   },
   {
     "pattern": "Caliperbot",
     "addition_date": "2019/03/02",
-    "instances": [
-      "Caliperbot/1.0 (+http://www.conductor.com/caliperbot)"
-    ],
+    "instances": ["Caliperbot/1.0 (+http://www.conductor.com/caliperbot)"],
     "url": "http://www.conductor.com/caliperbot"
   },
   {
     "pattern": "MBCrawler",
     "addition_date": "2019/03/02",
-    "instances": [
-      "MBCrawler/1.0 (https://monitorbacklinks.com)"
-    ],
+    "instances": ["MBCrawler/1.0 (https://monitorbacklinks.com)"],
     "url": "https://monitorbacklinks.com"
   },
   {
     "pattern": "online-webceo-bot",
     "addition_date": "2019/03/02",
-    "instances": [
-      "Mozilla/5.0 (compatible; online-webceo-bot/1.0; +http://online.webceo.com)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; online-webceo-bot/1.0; +http://online.webceo.com)"],
     "url": "http://online.webceo.com"
   },
   {
     "pattern": "B2B Bot",
     "addition_date": "2019/03/02",
-    "instances": [
-      "B2B Bot"
-    ]
+    "instances": ["B2B Bot"]
   },
   {
     "pattern": "AddSearchBot",
@@ -3589,17 +3168,13 @@
   {
     "pattern": "CheckMarkNetwork\\/",
     "addition_date": "2019/06/30",
-    "instances": [
-      "CheckMarkNetwork/1.0 (+http://www.checkmarknetwork.com/spider.html)"
-    ],
+    "instances": ["CheckMarkNetwork/1.0 (+http://www.checkmarknetwork.com/spider.html)"],
     "url": "https://www.checkmarknetwork.com/"
   },
   {
     "pattern": "www\\.uptime\\.com",
     "addition_date": "2019/07/21",
-    "instances": [
-      "Mozilla/5.0 (compatible; Uptimebot/1.0; +http://www.uptime.com/uptimebot)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; Uptimebot/1.0; +http://www.uptime.com/uptimebot)"],
     "url": "http://www.uptime.com/uptimebot"
   },
   {
@@ -3623,9 +3198,7 @@
   {
     "pattern": "MixnodeCache\\/",
     "addition_date": "2019/08/04",
-    "instances": [
-      "MixnodeCache/1.8(+https://cache.mixnode.com/)"
-    ],
+    "instances": ["MixnodeCache/1.8(+https://cache.mixnode.com/)"],
     "url": "https://cache.mixnode.com/"
   },
   {
@@ -3646,17 +3219,13 @@
   {
     "pattern": "SimpleScraper",
     "addition_date": "2019/08/16",
-    "instances": [
-      "Mozilla/5.0 (compatible; SimpleScraper)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; SimpleScraper)"],
     "url": "https://github.com/ramonkcom/simple-scraper/"
   },
   {
     "pattern": "RSSingBot",
     "addition_date": "2019/09/15",
-    "instances": [
-      "RSSingBot (http://www.rssing.com)"
-    ],
+    "instances": ["RSSingBot (http://www.rssing.com)"],
     "url": "http://www.rssing.com"
   },
   {
@@ -3670,25 +3239,19 @@
   {
     "pattern": "fedoraplanet",
     "addition_date": "2019/09/28",
-    "instances": [
-      "venus/fedoraplanet"
-    ],
+    "instances": ["venus/fedoraplanet"],
     "url": "http://fedoraplanet.org/"
   },
   {
     "pattern": "Friendica",
     "addition_date": "2019/09/28",
-    "instances": [
-      "Friendica 'The Tazmans Flax-lily' 2019.01-1293; https://hoyer.xyz"
-    ],
+    "instances": ["Friendica 'The Tazmans Flax-lily' 2019.01-1293; https://hoyer.xyz"],
     "url": "https://hoyer.xyz"
   },
   {
     "pattern": "NextCloud",
     "addition_date": "2019/09/30",
-    "instances": [
-      "NextCloud-News/1.0"
-    ],
+    "instances": ["NextCloud-News/1.0"],
     "url": "https://nextcloud.com/"
   },
   {
@@ -3747,57 +3310,43 @@
   {
     "pattern": "Google-Site-Verification",
     "addition_date": "2019/12/11",
-    "instances": [
-      "Mozilla/5.0 (compatible; Google-Site-Verification/1.0)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; Google-Site-Verification/1.0)"],
     "url": "https://support.google.com/webmasters/answer/9008080"
   },
   {
     "pattern": "TrendsmapResolver",
     "addition_date": "2020/02/24",
-    "instances": [
-      "Mozilla/5.0 (compatible; TrendsmapResolver/0.1)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; TrendsmapResolver/0.1)"],
     "url": "https://www.trendsmap.com/"
   },
   {
     "pattern": "tweetedtimes",
     "addition_date": "2020/02/24",
-    "instances": [
-      "Mozilla/5.0 (compatible; +http://tweetedtimes.com)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; +http://tweetedtimes.com)"],
     "url": "https://tweetedtimes.com/"
   },
   {
     "pattern": "NTENTbot",
     "addition_date": "2020/02/24",
-    "instances": [
-      "Mozilla/5.0 (compatible; NTENTbot; +http://www.ntent.com/ntentbot)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; NTENTbot; +http://www.ntent.com/ntentbot)"],
     "url": "https://ntent.com/ntentbot/"
   },
   {
     "pattern": "Gwene",
     "addition_date": "2020/02/24",
-    "instances": [
-      "Gwene/1.0 (The gwene.org rss-to-news gateway) Googlebot"
-    ],
+    "instances": ["Gwene/1.0 (The gwene.org rss-to-news gateway) Googlebot"],
     "url": "https://gwene.org"
   },
   {
     "pattern": "SimplePie",
     "addition_date": "2020/02/24",
-    "instances": [
-      "SimplePie/1.3-dev (Feed Parser; http://simplepie.org; Allow like Gecko)"
-    ],
+    "instances": ["SimplePie/1.3-dev (Feed Parser; http://simplepie.org; Allow like Gecko)"],
     "url": "http://simplepie.org"
   },
   {
     "pattern": "SearchAtlas",
     "addition_date": "2020/03/02",
-    "instances": [
-      "SearchAtlas.com SEO Crawler"
-    ],
+    "instances": ["SearchAtlas.com SEO Crawler"],
     "url": "http://SearchAtlas.com"
   },
   {
@@ -3811,17 +3360,13 @@
   {
     "pattern": "feedbot",
     "addition_date": "2020/03/02",
-    "instances": [
-      "wp.com feedbot/1.0 (+https://wp.com)"
-    ],
+    "instances": ["wp.com feedbot/1.0 (+https://wp.com)"],
     "url": "http://wp.com"
   },
   {
     "pattern": "UT-Dorkbot",
     "addition_date": "2020/03/02",
-    "instances": [
-      "UT-Dorkbot/1.0"
-    ],
+    "instances": ["UT-Dorkbot/1.0"],
     "url": "https://security.utexas.edu/dorkbot"
   },
   {
@@ -3835,17 +3380,13 @@
   {
     "pattern": "SerendeputyBot",
     "addition_date": "2020/03/02",
-    "instances": [
-      "SerendeputyBot/0.8.6 (http://serendeputy.com/about/serendeputy-bot)"
-    ],
+    "instances": ["SerendeputyBot/0.8.6 (http://serendeputy.com/about/serendeputy-bot)"],
     "url": "http://serendeputy.com/about/serendeputy-bot"
   },
   {
     "pattern": "Eyeotabot",
     "addition_date": "2020/03/02",
-    "instances": [
-      "Mozilla/5.0 (compatible; Eyeotabot/1.0; +http://www.eyeota.com)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; Eyeotabot/1.0; +http://www.eyeota.com)"],
     "url": "http://www.eyeota.com"
   },
   {
@@ -3859,9 +3400,7 @@
   {
     "pattern": "Neticle Crawler",
     "addition_date": "2020/03/02",
-    "instances": [
-      "Neticle Crawler v1.0 ( https://neticle.com/bot/en/ )"
-    ],
+    "instances": ["Neticle Crawler v1.0 ( https://neticle.com/bot/en/ )"],
     "url": "https://neticle.com/bot/en/"
   },
   {
@@ -3882,25 +3421,19 @@
   {
     "pattern": "AwarioSmartBot",
     "addition_date": "2020/03/02",
-    "instances": [
-      "AwarioSmartBot/1.0 (+https://awario.com/bots.html; bots@awario.com)"
-    ],
+    "instances": ["AwarioSmartBot/1.0 (+https://awario.com/bots.html; bots@awario.com)"],
     "url": "https://awario.com/bots.html"
   },
   {
     "pattern": "AwarioRssBot",
     "addition_date": "2020/03/02",
-    "instances": [
-      "AwarioRssBot/1.0 (+https://awario.com/bots.html; bots@awario.com)"
-    ],
+    "instances": ["AwarioRssBot/1.0 (+https://awario.com/bots.html; bots@awario.com)"],
     "url": "https://awario.com/bots.html"
   },
   {
     "pattern": "RyteBot",
     "addition_date": "2020/03/02",
-    "instances": [
-      "RyteBot/1.0.0 (+https://bot.ryte.com/)"
-    ],
+    "instances": ["RyteBot/1.0.0 (+https://bot.ryte.com/)"],
     "url": "https://bot.ryte.com/"
   },
   {
@@ -3922,9 +3455,7 @@
   {
     "pattern": "NAVER Blog Rssbot",
     "addition_date": "2020/03/16",
-    "instances": [
-      "NAVER Blog Rssbot"
-    ],
+    "instances": ["NAVER Blog Rssbot"],
     "url": "http://www.naver.com"
   },
   {
@@ -3938,9 +3469,7 @@
   {
     "pattern": "SentiBot",
     "addition_date": "2020/03/16",
-    "instances": [
-      "SentiBot www.sentibot.eu (compatible with Googlebot)"
-    ],
+    "instances": ["SentiBot www.sentibot.eu (compatible with Googlebot)"],
     "url": "https://sites.google.com/senti1.com/sentibot-eu/home"
   },
   {
@@ -3954,32 +3483,24 @@
   {
     "pattern": "Pandalytics",
     "addition_date": "2020/03/16",
-    "instances": [
-      "Pandalytics/1.0 (https://domainsbot.com/pandalytics/)"
-    ],
+    "instances": ["Pandalytics/1.0 (https://domainsbot.com/pandalytics/)"],
     "url": "https://domainsbot.com/pandalytics/"
   },
   {
     "pattern": "VKRobot",
     "addition_date": "2020/03/16",
-    "instances": [
-      "Mozilla/5.0 (compatible; VKRobot/1.0)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; VKRobot/1.0)"]
   },
   {
     "pattern": "bidswitchbot",
     "addition_date": "2020/03/16",
-    "instances": [
-      "bidswitchbot/1.0"
-    ],
+    "instances": ["bidswitchbot/1.0"],
     "url": "https://www.bidswitch.com/about-us/"
   },
   {
     "pattern": "tigerbot",
     "addition_date": "2020/03/16",
-    "instances": [
-      "tigerbot"
-    ]
+    "instances": ["tigerbot"]
   },
   {
     "pattern": "NIXStatsbot",
@@ -3992,18 +3513,13 @@
   {
     "pattern": "Atom Feed Robot",
     "addition_date": "2020/03/16",
-    "instances": [
-      "RSSMicro.com RSS/Atom Feed Robot"
-    ],
+    "instances": ["RSSMicro.com RSS/Atom Feed Robot"],
     "url": "https://rssmicro.com"
   },
   {
     "pattern": "[Cc]urebot",
     "addition_date": "2020/03/16",
-    "instances": [
-      "Curebot/1.0",
-      "curebot-feed-fetcher"
-    ]
+    "instances": ["Curebot/1.0", "curebot-feed-fetcher"]
   },
   {
     "pattern": "PagePeeker\\/",
@@ -4016,25 +3532,19 @@
   {
     "pattern": "Vigil\\/",
     "addition_date": "2020/03/16",
-    "instances": [
-      "Mozilla/5.0 (compatible; Vigil/1.0; +http://vigil-app.com/bot.html)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; Vigil/1.0; +http://vigil-app.com/bot.html)"],
     "url": "http://vigil-app.com/bot.html"
   },
   {
     "pattern": "rssbot\\/",
     "addition_date": "2020/03/16",
-    "instances": [
-      "rssbot/1.4.3 (+https://t.me/RustRssBot)"
-    ],
+    "instances": ["rssbot/1.4.3 (+https://t.me/RustRssBot)"],
     "url": "https://github.com/iovxw/rssbot"
   },
   {
     "pattern": "startmebot\\/",
     "addition_date": "2020/03/16",
-    "instances": [
-      "Mozilla/5.0 (compatible; startmebot/1.0; +https://start.me/bot)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; startmebot/1.0; +https://start.me/bot)"],
     "url": "https://start.me/bot"
   },
   {
@@ -4048,40 +3558,30 @@
   {
     "pattern": "seewithkids",
     "addition_date": "2020/03/16",
-    "instances": [
-      "http://seewithkids.com/bot"
-    ],
+    "instances": ["http://seewithkids.com/bot"],
     "url": "http://seewithkids.com/bot"
   },
   {
     "pattern": "NINJA bot",
     "addition_date": "2020/03/16",
-    "instances": [
-      "NINJA bot"
-    ]
+    "instances": ["NINJA bot"]
   },
   {
     "pattern": "Cutbot",
     "addition_date": "2020/03/16",
-    "instances": [
-      "Cutbot; 1.5; http://cutbot.net/"
-    ],
+    "instances": ["Cutbot; 1.5; http://cutbot.net/"],
     "url": "http://cutbot.net/"
   },
   {
     "pattern": "BublupBot",
     "addition_date": "2020/03/16",
-    "instances": [
-      "BublupBot (+https://www.bublup.com/bublup-bot.html)"
-    ],
+    "instances": ["BublupBot (+https://www.bublup.com/bublup-bot.html)"],
     "url": "https://www.bublup.com/bublup-bot.html"
   },
   {
     "pattern": "BrandONbot",
     "addition_date": "2020/03/16",
-    "instances": [
-      "BrandONbot (http://brandonmedia.net)"
-    ],
+    "instances": ["BrandONbot (http://brandonmedia.net)"],
     "url": "http://brandonmedia.net"
   },
   {
@@ -4096,17 +3596,13 @@
   {
     "pattern": "Taboolabot",
     "addition_date": "2020/03/16",
-    "instances": [
-      "Mozilla/5.0 (compatible; Taboolabot/3.7; +http://www.taboola.com)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; Taboolabot/3.7; +http://www.taboola.com)"],
     "url": "http://www.taboola.com"
   },
   {
     "pattern": "Dubbotbot",
     "addition_date": "2020/03/16",
-    "instances": [
-      "Mozilla/5.0 (compatible; Dubbotbot/0.2; +http://dubbot.com)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; Dubbotbot/0.2; +http://dubbot.com)"],
     "url": "http://dubbot.com"
   },
   {
@@ -4120,9 +3616,7 @@
   {
     "pattern": "infoobot",
     "addition_date": "2020/03/16",
-    "instances": [
-      "infoobot/0.1 (https://www.infoo.nl/bot.html)"
-    ],
+    "instances": ["infoobot/0.1 (https://www.infoo.nl/bot.html)"],
     "url": "https://www.infoo.nl/bot.html"
   },
   {
@@ -4144,17 +3638,13 @@
   {
     "pattern": "SeobilityBot",
     "addition_date": "2020/03/16",
-    "instances": [
-      "SeobilityBot (SEO Tool; https://www.seobility.net/sites/bot.html)"
-    ],
+    "instances": ["SeobilityBot (SEO Tool; https://www.seobility.net/sites/bot.html)"],
     "url": "https://www.seobility.net/sites/bot.html"
   },
   {
     "pattern": "Cincraw",
     "addition_date": "2020/03/16",
-    "instances": [
-      "Mozilla/5.0 (compatible; Cincraw/1.0; +http://cincrawdata.net/bot/)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; Cincraw/1.0; +http://cincrawdata.net/bot/)"],
     "url": "http://cincrawdata.net/bot/"
   },
   {
@@ -4168,25 +3658,19 @@
   {
     "pattern": "VoluumDSP-content-bot",
     "addition_date": "2020/03/16",
-    "instances": [
-      "Mozilla/5.0 (compatible; VoluumDSP-content-bot/2.0; +dsp-dev@codewise.com)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; VoluumDSP-content-bot/2.0; +dsp-dev@codewise.com)"],
     "url": "https://codewise.com"
   },
   {
     "pattern": "FreshRSS",
     "addition_date": "2020/03/16",
-    "instances": [
-      "FreshRSS/1.11.2 (Linux; https://freshrss.org) like Googlebot"
-    ],
+    "instances": ["FreshRSS/1.11.2 (Linux; https://freshrss.org) like Googlebot"],
     "url": "https://freshrss.org"
   },
   {
     "pattern": "BitBot",
     "addition_date": "2020/03/16",
-    "instances": [
-      "Mozilla/5.0 (compatible; BitBot/v1.19.0; +https://bitbot.dev)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; BitBot/v1.19.0; +https://bitbot.dev)"],
     "url": "https://bitbot.dev"
   },
   {
@@ -4206,40 +3690,30 @@
   {
     "pattern": "Google-Certificates-Bridge",
     "addition_date": "2020/12/23",
-    "instances": [
-      "Google-Certificates-Bridge"
-    ]
+    "instances": ["Google-Certificates-Bridge"]
   },
   {
     "pattern": "centurybot",
     "addition_date": "2022/04/26",
-    "instances": [
-      "Mozilla/5.0 (compatible; Go-http-client/1.1; +centurybot9@gmail.com)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; Go-http-client/1.1; +centurybot9@gmail.com)"]
   },
   {
     "pattern": "Viber",
     "addition_date": "2021/04/27",
-    "instances": [
-      "Viber"
-    ],
+    "instances": ["Viber"],
     "url": "https://www.viber.com/"
   },
   {
     "pattern": "e\\.ventures Investment Crawler",
     "addition_date": "2021/06/05",
     "url": "https://www.eventures.vc/",
-    "instances": [
-      "e.ventures Investment Crawler (eventures.vc)"
-    ]
+    "instances": ["e.ventures Investment Crawler (eventures.vc)"]
   },
   {
     "pattern": "evc-batch",
     "addition_date": "2021/06/07",
     "url": "https://www.eventures.vc/",
-    "instances": [
-      "Mozilla/5.0 (compatible; evc-batch/2.0)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; evc-batch/2.0)"]
   },
   {
     "pattern": "PetalBot",
@@ -4288,33 +3762,25 @@
     "pattern": "trovitBot",
     "addition_date": "2022/06/08",
     "url": "http://www.trovit.com/bot.html",
-    "instances": [
-      "Mozilla/5.0 (compatible; trovitBot 1.0; +http://www.trovit.com/bot.html)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; trovitBot 1.0; +http://www.trovit.com/bot.html)"]
   },
   {
     "pattern": "seostar\\.co",
     "addition_date": "2022/08/04",
     "url": "https://seostar.co/robot/",
-    "instances": [
-      "Mozilla/5.0 (compatible; Adsbot/3.1; +https://seostar.co/robot/)"
-    ]
+    "instances": ["Mozilla/5.0 (compatible; Adsbot/3.1; +https://seostar.co/robot/)"]
   },
   {
     "pattern": "IonCrawl",
     "addition_date": "2022/08/04",
     "url": "https://www.ionos.de/terms-gtc/faq-crawler-en",
-    "instances": [
-      "IonCrawl (https://www.ionos.de/terms-gtc/faq-crawler-en/)"
-    ]
+    "instances": ["IonCrawl (https://www.ionos.de/terms-gtc/faq-crawler-en/)"]
   },
   {
     "pattern": "Uptime-Kuma",
     "addition_date": "2022/10/17",
     "url": "https://uptime.kuma.pet/",
-    "instances": [
-      "Uptime-Kuma/1.18.0"
-    ]
+    "instances": ["Uptime-Kuma/1.18.0"]
   },
   {
     "pattern": "Seekport",
@@ -4329,33 +3795,25 @@
     "pattern": "FreshpingBot",
     "addition_date": "2022/10/17",
     "url": "https://www.freshworks.com/website-monitoring/",
-    "instances": [
-      "FreshpingBot/1.0 (+https://freshping.io/)"
-    ]
+    "instances": ["FreshpingBot/1.0 (+https://freshping.io/)"]
   },
   {
     "pattern": "Feedbin",
     "addition_date": "2022/11/05",
     "url": "https://feedbin.com/",
-    "instances": [
-      "Feedbin feed-id:2005098 - 2 subscribers"
-    ]
+    "instances": ["Feedbin feed-id:2005098 - 2 subscribers"]
   },
   {
     "pattern": "CriteoBot",
     "addition_date": "2022/11/13",
     "url": "https://www.criteo.com/",
-    "instances": [
-      "CriteoBot/0.1 (+https://www.criteo.com/criteo-crawler/)"
-    ]
+    "instances": ["CriteoBot/0.1 (+https://www.criteo.com/criteo-crawler/)"]
   },
   {
     "pattern": "Snap URL Preview Service",
     "addition_date": "2022/11/13",
     "url": "https://snap.com/",
-    "instances": [
-      "Snap URL Preview Service; bot; snapchat; https://developers.snap.com/robots"
-    ]
+    "instances": ["Snap URL Preview Service; bot; snapchat; https://developers.snap.com/robots"]
   },
   {
     "pattern": "Better Uptime Bot",
@@ -4369,9 +3827,7 @@
     "pattern": "RuxitSynthetic",
     "addition_date": "2023/02/16",
     "url": "https://www.dynatrace.com/support/help/platform-modules/digital-experience/synthetic-monitoring/browser-monitors/configure-browser-monitors#expand--default-user-agent",
-    "instances": [
-      "RuxitSynthetic/1.0"
-    ]
+    "instances": ["RuxitSynthetic/1.0"]
   },
   {
     "pattern": "Google-Read-Aloud",
@@ -4385,9 +3841,7 @@
   {
     "pattern": "Valve\\/Steam",
     "addition_date": "2023/05/24",
-    "instances": [
-      "Valve/Steam HTTP Client 1.0 (SteamChatURLLookup)"
-    ]
+    "instances": ["Valve/Steam HTTP Client 1.0 (SteamChatURLLookup)"]
   },
   {
     "pattern": "OdklBot\\/",
@@ -4440,9 +3894,7 @@
   {
     "pattern": "BitSightBot\\/",
     "addition_date": "2023/08/16",
-    "instances": [
-      "Mozilla/5.0 (compatible; BitSightBot/1.0)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; BitSightBot/1.0)"],
     "url": "https://www.bitsight.com"
   },
   {
@@ -4467,9 +3919,7 @@
   {
     "pattern": "AwarioBot",
     "addition_date": "2023/08/23",
-    "instances": [
-      "Mozilla/5.0 (compatible; AwarioBot/1.0; +https://awario.com/bots.html)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; AwarioBot/1.0; +https://awario.com/bots.html)"],
     "url": "https://awario.com/bots.html"
   },
   {
@@ -4516,17 +3966,13 @@
   {
     "pattern": "search\\.marginalia\\.nu",
     "addition_date": "2023/09/08",
-    "instances": [
-      "search.marginalia.nu"
-    ],
+    "instances": ["search.marginalia.nu"],
     "url": "https://search.marginalia.nu"
   },
   {
     "pattern": "YouBot",
     "addition_date": "2023/09/08",
-    "instances": [
-      "YouBot (+http://www.you.com)"
-    ],
+    "instances": ["YouBot (+http://www.you.com)"],
     "url": "https://you.com/"
   },
   {
@@ -4540,25 +3986,19 @@
   {
     "pattern": "Neevabot",
     "addition_date": "2023/09/08",
-    "instances": [
-      "Mozilla/5.0 (compatible; Neevabot/1.0; +https://neeva.com/neevabot)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; Neevabot/1.0; +https://neeva.com/neevabot)"],
     "url": "https://neeva.com/neevabot"
   },
   {
     "pattern": "BrightEdge Crawler",
     "addition_date": "2023/09/08",
-    "instances": [
-      "BrightEdge Crawler/1.0 (crawler@brightedge.com)"
-    ],
+    "instances": ["BrightEdge Crawler/1.0 (crawler@brightedge.com)"],
     "url": "https://www.brightedge.com/"
   },
   {
     "pattern": "SiteCheckerBotCrawler",
     "addition_date": "2023/09/08",
-    "instances": [
-      "SiteCheckerBotCrawler/1.0 (+http://sitechecker.pro)"
-    ],
+    "instances": ["SiteCheckerBotCrawler/1.0 (+http://sitechecker.pro)"],
     "url": "http://sitechecker.pro"
   },
   {
@@ -4596,9 +4036,7 @@
   {
     "pattern": "CISPA Webcrawler",
     "addition_date": "2023/09/08",
-    "instances": [
-      "CISPA Webcrawler (https://vuln-notify-checker.cispa.saarland)"
-    ],
+    "instances": ["CISPA Webcrawler (https://vuln-notify-checker.cispa.saarland)"],
     "url": "https://vuln-notify-checker.cispa.saarland"
   },
   {
@@ -4628,9 +4066,7 @@
   {
     "pattern": "2ip bot",
     "addition_date": "2023/09/08",
-    "instances": [
-      "2ip bot/1.1 (+http://2ip.io)"
-    ],
+    "instances": ["2ip bot/1.1 (+http://2ip.io)"],
     "url": "http://2ip.io"
   },
   {
@@ -4652,25 +4088,19 @@
   {
     "pattern": "vuhuvBot",
     "addition_date": "2023/09/08",
-    "instances": [
-      "Mozilla/5.0 (compatible; vuhuvBot/1.0; +http://vuhuv.com/bot.html)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; vuhuvBot/1.0; +http://vuhuv.com/bot.html)"],
     "url": "http://vuhuv.com/bot.html"
   },
   {
     "pattern": "INETDEX-BOT",
     "addition_date": "2023/09/08",
-    "instances": [
-      "INETDEX-BOT/1.5 (Mozilla/5.0; https://inetdex.com/bot.html)"
-    ],
+    "instances": ["INETDEX-BOT/1.5 (Mozilla/5.0; https://inetdex.com/bot.html)"],
     "url": "https://inetdex.com/bot.html"
   },
   {
     "pattern": "Synapse",
     "addition_date": "2023/09/08",
-    "instances": [
-      "Synapse (bot; +https://github.com/matrix-org/synapse)"
-    ],
+    "instances": ["Synapse (bot; +https://github.com/matrix-org/synapse)"],
     "url": "https://github.com/matrix-org/synapse"
   },
   {
@@ -4684,25 +4114,19 @@
   {
     "pattern": "deepnoc",
     "addition_date": "2023/09/08",
-    "instances": [
-      "deepnoc - https://deepnoc.com/bot"
-    ],
+    "instances": ["deepnoc - https://deepnoc.com/bot"],
     "url": "https://deepnoc.com/bot"
   },
   {
     "pattern": "Cocolyzebot",
     "addition_date": "2023/09/08",
-    "instances": [
-      "Mozilla/5.0 (compatible; Cocolyzebot/1.0; https://cocolyze.com/bot)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; Cocolyzebot/1.0; https://cocolyze.com/bot)"],
     "url": "https://cocolyze.com/bot"
   },
   {
     "pattern": "hypestat",
     "addition_date": "2023/09/08",
-    "instances": [
-      "Mozilla/5.0 (compatible; hypestat/1.0; +https://hypestat.com/bot)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; hypestat/1.0; +https://hypestat.com/bot)"],
     "url": "https://hypestat.com/bot"
   },
   {
@@ -4716,33 +4140,25 @@
   {
     "pattern": "sempi\\.tech",
     "addition_date": "2023/09/08",
-    "instances": [
-      "Mozilla/5.0 (compatible; Semanticbot/1.0; +http://sempi.tech/bot.html)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; Semanticbot/1.0; +http://sempi.tech/bot.html)"],
     "url": "http://sempi.tech/bot.html"
   },
   {
     "pattern": "Iframely",
     "addition_date": "2023/09/08",
-    "instances": [
-      "Iframely/1.3.1 (+https://iframely.com/docs/about) Atlassian"
-    ],
+    "instances": ["Iframely/1.3.1 (+https://iframely.com/docs/about) Atlassian"],
     "url": "https://iframely.com/docs/about"
   },
   {
     "pattern": "MetaInspector",
     "addition_date": "2023/09/08",
-    "instances": [
-      "MetaInspector/5.6.0 (+https://github.com/jaimeiniesta/metainspector)"
-    ],
+    "instances": ["MetaInspector/5.6.0 (+https://github.com/jaimeiniesta/metainspector)"],
     "url": "https://github.com/jaimeiniesta/metainspector"
   },
   {
     "pattern": "node-fetch",
     "addition_date": "2023/09/08",
-    "instances": [
-      "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
-    ],
+    "instances": ["node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"],
     "url": "https://github.com/bitinn/node-fetch"
   },
   {
@@ -4764,9 +4180,7 @@
   {
     "pattern": "OpenGraphCheck",
     "addition_date": "2023/09/08",
-    "instances": [
-      "OpenGraphCheck/2.1 (+https://opengraphcheck.com)"
-    ],
+    "instances": ["OpenGraphCheck/2.1 (+https://opengraphcheck.com)"],
     "url": "https://opengraphcheck.com"
   },
   {
@@ -4781,9 +4195,7 @@
   {
     "pattern": "SenutoBot",
     "addition_date": "2023/09/08",
-    "instances": [
-      "SenutoBot/1.0 (compatible; SenutoBot/1.0; +https://www.senuto.com/)"
-    ],
+    "instances": ["SenutoBot/1.0 (compatible; SenutoBot/1.0; +https://www.senuto.com/)"],
     "url": "https://www.senuto.com"
   },
   {
@@ -4805,9 +4217,7 @@
   {
     "pattern": "inoreader",
     "addition_date": "2023/09/08",
-    "instances": [
-      "Mozilla/5.0 (compatible; inoreader.com; 1 subscribers)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; inoreader.com; 1 subscribers)"],
     "url": "http://inoreader.com"
   },
   {
@@ -4821,32 +4231,24 @@
   {
     "pattern": "PageThing",
     "addition_date": "2023/09/08",
-    "instances": [
-      "PageThing http://pagething.com curl www"
-    ],
+    "instances": ["PageThing http://pagething.com curl www"],
     "url": "http://pagething.com"
   },
   {
     "pattern": "WordPress\\/",
     "addition_date": "2023/10/24",
-    "instances": [
-      "WordPress/X.X.X; https://example.com"
-    ],
+    "instances": ["WordPress/X.X.X; https://example.com"],
     "url": "https://wordpress.org"
   },
   {
     "pattern": "PhxBot",
     "addition_date": "2024/01/06",
-    "instances": [
-      "PhxBot/0.1 (phxbot@protonmail.com)"
-    ]
+    "instances": ["PhxBot/0.1 (phxbot@protonmail.com)"]
   },
   {
     "pattern": "ImagesiftBot",
     "addition_date": "2024/01/06",
-    "instances": [
-      "Mozilla/5.0 (compatible; ImagesiftBot; +imagesift.com)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; ImagesiftBot; +imagesift.com)"],
     "url": "https://imagesift.com/about"
   },
   {
@@ -4868,18 +4270,13 @@
   {
     "pattern": "^BW\\/",
     "addition_date": "2024/02/08",
-    "instances": [
-      "BW/1.1; bit.ly/3eZNDnO",
-      "BW/1.1; rb.gy/oupwis"
-    ],
+    "instances": ["BW/1.1; bit.ly/3eZNDnO", "BW/1.1; rb.gy/oupwis"],
     "url": "https://builtwith.com/biup"
   },
   {
     "pattern": "GeedoBot",
     "addition_date": "2024/02/11",
-    "instances": [
-      "Mozilla/5.0 (compatible; GeedoBot; +http://www.geedo.com/bot.html)"
-    ],
+    "instances": ["Mozilla/5.0 (compatible; GeedoBot; +http://www.geedo.com/bot.html)"],
     "url": "http://www.geedo.com"
   },
   {
@@ -4921,17 +4318,13 @@
   {
     "pattern": "GroupMeBot",
     "addition_date": "2024/05/19",
-    "instances": [
-      "GroupMeBot/1.0"
-    ],
+    "instances": ["GroupMeBot/1.0"],
     "url": "https://groupme.com/"
   },
   {
     "pattern": "Vercelbot",
     "addition_date": "2024/08/30",
-    "instances": [
-      "Vercelbot (+https://vercel.com)"
-    ],
+    "instances": ["Vercelbot (+https://vercel.com)"],
     "url": "https://github.com/vercel/vercel/discussions/5095#discussioncomment-58705"
   },
   {
