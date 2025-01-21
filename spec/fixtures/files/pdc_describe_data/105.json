@@ -1,1 +1,1228 @@
-{"resource":{"titles":[{"title":"A reduced-turbulence regime in the Large Helical Device upon injection of low-Z materials powders","title_type":null}],"description":"Recently an improved confinement regime, characterized by reduced turbulent fluctuations has been observed in the Large Helical Device upon the injection of boron powder into the plasma (Nespoli et al 2022 Nat. Phys.18 350–56). In this article, we report in more detail the experimental observations of increased plasma temperature and the decrease of turbulent fluctuations across the plasma cross section, on an extended database. In particular, we compare powders of different materials (B, C, BN), finding similar temperature improvement and turbulence response for the three cases. Modeling of the powder penetration into the plasma and of neoclassical electric field and fluxes support the interpretation of the experimental results. Additionally, we report evidence of the temperature improvement increasing with powder injection rates and decreasing for both increasing density and heating power. Though, plasma turbulence response varies depending on the initial conditions of the plasma, making it difficult to draw an inclusive description of the phenomenon.","collection_tags":[],"creators":[{"value":"Nespoli, Federico","name_type":"Personal","given_name":"Federico","family_name":"Nespoli","identifier":{"value":"0000-0001-7644-751X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0},{"value":"Tanaka, Kenji","name_type":"Personal","given_name":"Kenji","family_name":"Tanaka","identifier":null,"affiliations":[],"sequence":1},{"value":"Masuzaki, Suguru","name_type":"Personal","given_name":"Suguru","family_name":"Masuzaki","identifier":{"value":"0000-0003-0161-0938","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":2},{"value":"Ashikawa, Naoko","name_type":"Personal","given_name":"Naoko","family_name":"Ashikawa","identifier":null,"affiliations":[],"sequence":3},{"value":"Shoji, Mamoru","name_type":"Personal","given_name":"Mamoru","family_name":"Shoji","identifier":{"value":"0000-0003-0655-7347","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":4},{"value":"Gilson, Erik","name_type":"Personal","given_name":"Erik","family_name":"Gilson","identifier":{"value":"0000-0001-6820-9132","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":5},{"value":"Lunsford, Robert","name_type":"Personal","given_name":"Robert","family_name":"Lunsford","identifier":{"value":"0000-0003-3588-6801","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":6},{"value":"Oishi, Tetsutarou","name_type":"Personal","given_name":"Tetsutarou","family_name":"Oishi","identifier":null,"affiliations":[],"sequence":7},{"value":"Ida, Katsumi","name_type":"Personal","given_name":"Katsumi","family_name":"Ida","identifier":{"value":"0000-0002-0585-4561","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":8},{"value":"Yoshinuma, Mikirou","name_type":"Personal","given_name":"Mikirou","family_name":"Yoshinuma","identifier":null,"affiliations":[],"sequence":9},{"value":"Takemura, Yuki","name_type":"Personal","given_name":"Yuki","family_name":"Takemura","identifier":{"value":"0000-0003-3754-897X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":10},{"value":"Kinoshita, Toshiki","name_type":"Personal","given_name":"Toshiki","family_name":"Kinoshita","identifier":{"value":"0000-0003-3930-4434","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":11},{"value":"Motojima, Gen","name_type":"Personal","given_name":"Gen","family_name":"Motojima","identifier":{"value":"0000-0001-5522-3082","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":12},{"value":"Osakabe, Masaki","name_type":"Personal","given_name":"Masaki","family_name":"Osakabe","identifier":{"value":"0000-0001-5220-947X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":13},{"value":"Kenmochi, Naoki","name_type":"Personal","given_name":"Naoki","family_name":"Kenmochi","identifier":{"value":"0000-0003-1088-8237","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":14},{"value":"Kawamura, Gakushi","name_type":"Personal","given_name":"Gakushi","family_name":"Kawamura","identifier":{"value":"0000-0002-9117-5898","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":15},{"value":"Suzuki, Chihiro","name_type":"Personal","given_name":"Chihiro","family_name":"Suzuki","identifier":{"value":"0000-0001-6536-9034","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":16},{"value":"Nagy, Alex","name_type":"Personal","given_name":"Alex","family_name":"Nagy","identifier":{"value":"0000-0002-8201-2528","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":17},{"value":"Bortolon, Alessandro","name_type":"Personal","given_name":"Alessandro","family_name":"Bortolon","identifier":{"value":"0000-0002-0094-0209","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":18},{"value":"Pablant, Novimir","name_type":"Personal","given_name":"Novimir","family_name":"Pablant","identifier":{"value":"0000-0001-6617-8459","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":19},{"value":"Mollén, Albert","name_type":"Personal","given_name":"Albert","family_name":"Mollén","identifier":{"value":"0000-0002-9257-7864","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":20},{"value":"Tamura, Naoki","name_type":"Personal","given_name":"Naoki","family_name":"Tamura","identifier":{"value":"0000-0003-1682-1519","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":21},{"value":"Gates, David","name_type":"Personal","given_name":"David","family_name":"Gates","identifier":{"value":"0000-0001-5679-3124","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":22},{"value":"Morisaki, Tomohiro","name_type":"Personal","given_name":"Tomohiro","family_name":"Morisaki","identifier":null,"affiliations":[],"sequence":23}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2023","ark":"ark:/88435/dsp01bc386n47h","doi":"10.34770/g0cf-b557","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1088/1741-4326/acd465","related_identifier_type":"DOI","relation_type":"IsReferencedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":[],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["Advanced Projects","Stellarators"],"migrated":true},"files":[{"filename":"10.34770/g0cf-b557/105/178485t7090_v1_ambipolarSolutions.h5","size":173040,"display_size":"169 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/178485t7090_v1_ambipolarSolutions.h5"},{"filename":"10.34770/g0cf-b557/105/178486t7090_v1_ambipolarSolutions.h5","size":205064,"display_size":"200 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/178486t7090_v1_ambipolarSolutions.h5"},{"filename":"10.34770/g0cf-b557/105/178486t7090_v2_ambipolarSolutions.h5","size":205064,"display_size":"200 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/178486t7090_v2_ambipolarSolutions.h5"},{"filename":"10.34770/g0cf-b557/105/178490t7090_v2_ambipolarSolutions.h5","size":239984,"display_size":"234 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/178490t7090_v2_ambipolarSolutions.h5"},{"filename":"10.34770/g0cf-b557/105/B_source.txt","size":1716,"display_size":"1.68 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/B_source.txt"},{"filename":"10.34770/g0cf-b557/105/CXSdata_167233_t5.25.txt","size":2482,"display_size":"2.42 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/CXSdata_167233_t5.25.txt"},{"filename":"10.34770/g0cf-b557/105/CXSdata_167234_t5.25.txt","size":2482,"display_size":"2.42 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/CXSdata_167234_t5.25.txt"},{"filename":"10.34770/g0cf-b557/105/CXSdata_178504_t7.txt","size":14553,"display_size":"14.2 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/CXSdata_178504_t7.txt"},{"filename":"10.34770/g0cf-b557/105/CXSdata_178505_t7.txt","size":9702,"display_size":"9.47 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/CXSdata_178505_t7.txt"},{"filename":"10.34770/g0cf-b557/105/CXSproffit_167233_t5.25.txt","size":3301,"display_size":"3.22 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/CXSproffit_167233_t5.25.txt"},{"filename":"10.34770/g0cf-b557/105/CXSproffit_167234_t5.25.txt","size":3300,"display_size":"3.22 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/CXSproffit_167234_t5.25.txt"},{"filename":"10.34770/g0cf-b557/105/CXSproffit_178504_t7.txt","size":3300,"display_size":"3.22 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/CXSproffit_178504_t7.txt"},{"filename":"10.34770/g0cf-b557/105/CXSproffit_178505_t7.txt","size":3300,"display_size":"3.22 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/CXSproffit_178505_t7.txt"},{"filename":"10.34770/g0cf-b557/105/DYTRANS_178485.txt","size":18236,"display_size":"17.8 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/DYTRANS_178485.txt"},{"filename":"10.34770/g0cf-b557/105/DYTRANS_178486.txt","size":18236,"display_size":"17.8 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/DYTRANS_178486.txt"},{"filename":"10.34770/g0cf-b557/105/DYTRANS_178487.txt","size":18236,"display_size":"17.8 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/DYTRANS_178487.txt"},{"filename":"10.34770/g0cf-b557/105/DYTRANS_178490.txt","size":18236,"display_size":"17.8 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/DYTRANS_178490.txt"},{"filename":"10.34770/g0cf-b557/105/EMC3_profiles.txt","size":24438,"display_size":"23.9 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/EMC3_profiles.txt"},{"filename":"10.34770/g0cf-b557/105/Ha_gas_178485.txt","size":64239,"display_size":"62.7 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Ha_gas_178485.txt"},{"filename":"10.34770/g0cf-b557/105/Ha_gas_178486.txt","size":64239,"display_size":"62.7 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Ha_gas_178486.txt"},{"filename":"10.34770/g0cf-b557/105/Ha_gas_178487.txt","size":64239,"display_size":"62.7 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Ha_gas_178487.txt"},{"filename":"10.34770/g0cf-b557/105/Ha_gas_178490.txt","size":64239,"display_size":"62.7 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Ha_gas_178490.txt"},{"filename":"10.34770/g0cf-b557/105/PCI_PSD_166254_t5.txt","size":200704,"display_size":"196 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_166254_t5.txt"},{"filename":"10.34770/g0cf-b557/105/PCI_PSD_167233_t5.2.txt","size":200724,"display_size":"196 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_167233_t5.2.txt"},{"filename":"10.34770/g0cf-b557/105/PCI_PSD_167234_t5.2.txt","size":200724,"display_size":"196 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_167234_t5.2.txt"},{"filename":"10.34770/g0cf-b557/105/PCI_PSD_178476_t7.txt","size":200704,"display_size":"196 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178476_t7.txt"},{"filename":"10.34770/g0cf-b557/105/PCI_PSD_178485_t7.txt","size":200704,"display_size":"196 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178485_t7.txt"},{"filename":"10.34770/g0cf-b557/105/PCI_PSD_178486_t7.txt","size":200704,"display_size":"196 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178486_t7.txt"},{"filename":"10.34770/g0cf-b557/105/PCI_PSD_178487_t7.txt","size":200704,"display_size":"196 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178487_t7.txt"},{"filename":"10.34770/g0cf-b557/105/PCI_PSD_178490_t7.txt","size":200704,"display_size":"196 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178490_t7.txt"},{"filename":"10.34770/g0cf-b557/105/PCI_PSD_178494_t5.txt","size":200704,"display_size":"196 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178494_t5.txt"},{"filename":"10.34770/g0cf-b557/105/PCI_PSD_178494_t7.txt","size":200704,"display_size":"196 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178494_t7.txt"},{"filename":"10.34770/g0cf-b557/105/PCI_PSD_178496_t7.txt","size":200704,"display_size":"196 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178496_t7.txt"},{"filename":"10.34770/g0cf-b557/105/PCI_PSD_178504_t7.txt","size":200704,"display_size":"196 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178504_t7.txt"},{"filename":"10.34770/g0cf-b557/105/PCI_PSD_178505_Freq.txt","size":69632,"display_size":"68 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178505_Freq.txt"},{"filename":"10.34770/g0cf-b557/105/PCI_PSD_178505_PSD.txt","size":79958016,"display_size":"76.3 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178505_PSD.txt"},{"filename":"10.34770/g0cf-b557/105/PCI_PSD_178505_t.txt","size":19521,"display_size":"19.1 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178505_t.txt"},{"filename":"10.34770/g0cf-b557/105/PCI_PSD_178505_t7.txt","size":200704,"display_size":"196 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178505_t7.txt"},{"filename":"10.34770/g0cf-b557/105/PCI_PSD_178510_t4.txt","size":200704,"display_size":"196 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178510_t4.txt"},{"filename":"10.34770/g0cf-b557/105/PCI_PSD_178510_t7.txt","size":200704,"display_size":"196 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178510_t7.txt"},{"filename":"10.34770/g0cf-b557/105/PCIdn_166254_t5.txt","size":3283,"display_size":"3.21 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_166254_t5.txt"},{"filename":"10.34770/g0cf-b557/105/PCIdn_167233_t5.2.txt","size":3310,"display_size":"3.23 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_167233_t5.2.txt"},{"filename":"10.34770/g0cf-b557/105/PCIdn_167234_t5.2.txt","size":3310,"display_size":"3.23 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_167234_t5.2.txt"},{"filename":"10.34770/g0cf-b557/105/PCIdn_178476_t7.txt","size":3283,"display_size":"3.21 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_178476_t7.txt"},{"filename":"10.34770/g0cf-b557/105/PCIdn_178485_t7.txt","size":3283,"display_size":"3.21 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_178485_t7.txt"},{"filename":"10.34770/g0cf-b557/105/PCIdn_178494_t5.txt","size":3283,"display_size":"3.21 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_178494_t5.txt"},{"filename":"10.34770/g0cf-b557/105/PCIdn_178494_t7.txt","size":3283,"display_size":"3.21 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_178494_t7.txt"},{"filename":"10.34770/g0cf-b557/105/PCIdn_178496_t7.txt","size":3283,"display_size":"3.21 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_178496_t7.txt"},{"filename":"10.34770/g0cf-b557/105/PCIdn_178504_t7.txt","size":3283,"display_size":"3.21 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_178504_t7.txt"},{"filename":"10.34770/g0cf-b557/105/PCIdn_178505_t7.txt","size":3283,"display_size":"3.21 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_178505_t7.txt"},{"filename":"10.34770/g0cf-b557/105/PCIdn_178510_t4.txt","size":3283,"display_size":"3.21 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_178510_t4.txt"},{"filename":"10.34770/g0cf-b557/105/PCIdn_178510_t7.txt","size":3283,"display_size":"3.21 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_178510_t7.txt"},{"filename":"10.34770/g0cf-b557/105/PMC_0166256_2p5U-AH02-02-NF.mp4","size":10329012,"display_size":"9.85 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PMC_0166256_2p5U-AH02-02-NF.mp4"},{"filename":"10.34770/g0cf-b557/105/README.txt","size":4946,"display_size":"4.83 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/README.txt"},{"filename":"10.34770/g0cf-b557/105/Spec_178485_tst_7.0000_len_200_fmin_20_fmax_500.dat","size":11749,"display_size":"11.5 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Spec_178485_tst_7.0000_len_200_fmin_20_fmax_500.dat"},{"filename":"10.34770/g0cf-b557/105/Spec_178486_tst_7.0000_len_200_fmin_20_fmax_500.dat","size":11750,"display_size":"11.5 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Spec_178486_tst_7.0000_len_200_fmin_20_fmax_500.dat"},{"filename":"10.34770/g0cf-b557/105/Spec_178487_tst_7.0000_len_200_fmin_20_fmax_500.dat","size":11750,"display_size":"11.5 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Spec_178487_tst_7.0000_len_200_fmin_20_fmax_500.dat"},{"filename":"10.34770/g0cf-b557/105/Spec_178490_tst_7.0000_len_200_fmin_20_fmax_500.dat","size":11740,"display_size":"11.5 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Spec_178490_tst_7.0000_len_200_fmin_20_fmax_500.dat"},{"filename":"10.34770/g0cf-b557/105/TSdata_167233_t5.25.txt","size":11340,"display_size":"11.1 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/TSdata_167233_t5.25.txt"},{"filename":"10.34770/g0cf-b557/105/TSdata_167234_t5.25.txt","size":11340,"display_size":"11.1 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/TSdata_167234_t5.25.txt"},{"filename":"10.34770/g0cf-b557/105/TSdata_178504_t7.txt","size":11259,"display_size":"11 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/TSdata_178504_t7.txt"},{"filename":"10.34770/g0cf-b557/105/TSdata_178505_t7.txt","size":11259,"display_size":"11 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/TSdata_178505_t7.txt"},{"filename":"10.34770/g0cf-b557/105/TSproffit_167233_t5.25.txt","size":4930,"display_size":"4.81 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/TSproffit_167233_t5.25.txt"},{"filename":"10.34770/g0cf-b557/105/TSproffit_167234_t5.25.txt","size":4930,"display_size":"4.81 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/TSproffit_167234_t5.25.txt"},{"filename":"10.34770/g0cf-b557/105/TSproffit_178504_t7.txt","size":4900,"display_size":"4.79 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/TSproffit_178504_t7.txt"},{"filename":"10.34770/g0cf-b557/105/TSproffit_178505_t7.txt","size":4900,"display_size":"4.79 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/TSproffit_178505_t7.txt"},{"filename":"10.34770/g0cf-b557/105/Te0_178485","size":10535,"display_size":"10.3 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Te0_178485"},{"filename":"10.34770/g0cf-b557/105/Te0_178486","size":10829,"display_size":"10.6 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Te0_178486"},{"filename":"10.34770/g0cf-b557/105/Te0_178487","size":9947,"display_size":"9.71 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Te0_178487"},{"filename":"10.34770/g0cf-b557/105/Te0_178490","size":11123,"display_size":"10.9 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Te0_178490"},{"filename":"10.34770/g0cf-b557/105/Te0_178504","size":9800,"display_size":"9.57 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Te0_178504"},{"filename":"10.34770/g0cf-b557/105/Te0_178505","size":9898,"display_size":"9.67 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Te0_178505"},{"filename":"10.34770/g0cf-b557/105/Ti0_178485","size":19600,"display_size":"19.1 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Ti0_178485"},{"filename":"10.34770/g0cf-b557/105/Ti0_178486","size":19600,"display_size":"19.1 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Ti0_178486"},{"filename":"10.34770/g0cf-b557/105/Ti0_178487","size":19600,"display_size":"19.1 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Ti0_178487"},{"filename":"10.34770/g0cf-b557/105/Ti0_178490","size":19600,"display_size":"19.1 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Ti0_178490"},{"filename":"10.34770/g0cf-b557/105/Ti0_178504","size":19600,"display_size":"19.1 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Ti0_178504"},{"filename":"10.34770/g0cf-b557/105/Ti0_178505","size":19600,"display_size":"19.1 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Ti0_178505"},{"filename":"10.34770/g0cf-b557/105/bolo@178485.dat","size":563799,"display_size":"551 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/bolo%40178485.dat"},{"filename":"10.34770/g0cf-b557/105/bolo@178486.dat","size":563799,"display_size":"551 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/bolo%40178486.dat"},{"filename":"10.34770/g0cf-b557/105/bolo@178487.dat","size":563799,"display_size":"551 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/bolo%40178487.dat"},{"filename":"10.34770/g0cf-b557/105/bolo@178490.dat","size":563799,"display_size":"551 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/bolo%40178490.dat"},{"filename":"10.34770/g0cf-b557/105/firc@178485.dat","size":56624,"display_size":"55.3 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/firc%40178485.dat"},{"filename":"10.34770/g0cf-b557/105/firc@178486.dat","size":56624,"display_size":"55.3 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/firc%40178486.dat"},{"filename":"10.34770/g0cf-b557/105/firc@178487.dat","size":56624,"display_size":"55.3 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/firc%40178487.dat"},{"filename":"10.34770/g0cf-b557/105/firc@178490.dat","size":56624,"display_size":"55.3 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/firc%40178490.dat"},{"filename":"10.34770/g0cf-b557/105/firc@178504.dat","size":56624,"display_size":"55.3 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/firc%40178504.dat"},{"filename":"10.34770/g0cf-b557/105/firc@178505.dat","size":56624,"display_size":"55.3 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/firc%40178505.dat"},{"filename":"10.34770/g0cf-b557/105/flux_surf.txt","size":1057959,"display_size":"1.01 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/flux_surf.txt"},{"filename":"10.34770/g0cf-b557/105/imp02@178485.dat","size":111811,"display_size":"109 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/imp02%40178485.dat"},{"filename":"10.34770/g0cf-b557/105/imp02@178486.dat","size":111811,"display_size":"109 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/imp02%40178486.dat"},{"filename":"10.34770/g0cf-b557/105/imp02@178487.dat","size":111811,"display_size":"109 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/imp02%40178487.dat"},{"filename":"10.34770/g0cf-b557/105/imp02@178490.dat","size":111811,"display_size":"109 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/imp02%40178490.dat"},{"filename":"10.34770/g0cf-b557/105/input_power_178504.txt","size":1061667,"display_size":"1.01 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/input_power_178504.txt"},{"filename":"10.34770/g0cf-b557/105/input_power_178505.txt","size":1061667,"display_size":"1.01 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/input_power_178505.txt"},{"filename":"10.34770/g0cf-b557/105/ipd_spec@178485.dat","size":142455,"display_size":"139 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/ipd_spec%40178485.dat"},{"filename":"10.34770/g0cf-b557/105/ipd_spec@178486.dat","size":142455,"display_size":"139 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/ipd_spec%40178486.dat"},{"filename":"10.34770/g0cf-b557/105/ipd_spec@178487.dat","size":142455,"display_size":"139 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/ipd_spec%40178487.dat"},{"filename":"10.34770/g0cf-b557/105/ipd_spec@178490.dat","size":142455,"display_size":"139 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/ipd_spec%40178490.dat"},{"filename":"10.34770/g0cf-b557/105/ipd_spec@178504.dat","size":142469,"display_size":"139 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/ipd_spec%40178504.dat"},{"filename":"10.34770/g0cf-b557/105/ipd_spec@178505.dat","size":142455,"display_size":"139 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/ipd_spec%40178505.dat"},{"filename":"10.34770/g0cf-b557/105/nB_toroidal_prof.txt","size":13968,"display_size":"13.6 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/nB_toroidal_prof.txt"},{"filename":"10.34770/g0cf-b557/105/ne0_178485","size":17415,"display_size":"17 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/ne0_178485"},{"filename":"10.34770/g0cf-b557/105/ne0_178486","size":17901,"display_size":"17.5 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/ne0_178486"},{"filename":"10.34770/g0cf-b557/105/ne0_178487","size":16443,"display_size":"16.1 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/ne0_178487"},{"filename":"10.34770/g0cf-b557/105/ne0_178490","size":18387,"display_size":"18 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/ne0_178490"},{"filename":"10.34770/g0cf-b557/105/neutral_source_B.txt","size":1716,"display_size":"1.68 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/neutral_source_B.txt"},{"filename":"10.34770/g0cf-b557/105/neutral_source_C.txt","size":1716,"display_size":"1.68 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/neutral_source_C.txt"},{"filename":"10.34770/g0cf-b557/105/plotEMC3_1.txt","size":52249164,"display_size":"49.8 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/plotEMC3_1.txt"},{"filename":"10.34770/g0cf-b557/105/plotEMC3_2.txt","size":52249164,"display_size":"49.8 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/plotEMC3_2.txt"},{"filename":"10.34770/g0cf-b557/105/plotEMC3_3.txt","size":52249164,"display_size":"49.8 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/plotEMC3_3.txt"},{"filename":"10.34770/g0cf-b557/105/plotEMC3_4.txt","size":8407098,"display_size":"8.02 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/plotEMC3_4.txt"},{"filename":"10.34770/g0cf-b557/105/plotEMC3_5.txt","size":8428511,"display_size":"8.04 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/plotEMC3_5.txt"},{"filename":"10.34770/g0cf-b557/105/plotEMC3_6.txt","size":8376991,"display_size":"7.99 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/plotEMC3_6.txt"},{"filename":"10.34770/g0cf-b557/105/plotEMC3_7.txt","size":8407098,"display_size":"8.02 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/plotEMC3_7.txt"},{"filename":"10.34770/g0cf-b557/105/plotEMC3_8.txt","size":8407098,"display_size":"8.02 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/plotEMC3_8.txt"},{"filename":"10.34770/g0cf-b557/105/relative_variations_Bscan.txt","size":2557,"display_size":"2.5 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/relative_variations_Bscan.txt"},{"filename":"10.34770/g0cf-b557/105/relative_variations_Pscan.txt","size":2549,"display_size":"2.49 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/relative_variations_Pscan.txt"},{"filename":"10.34770/g0cf-b557/105/relative_variations_diffpow.txt","size":564,"display_size":"564 Bytes","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/relative_variations_diffpow.txt"},{"filename":"10.34770/g0cf-b557/105/relative_variations_nescan.txt","size":1843,"display_size":"1.8 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/relative_variations_nescan.txt"},{"filename":"10.34770/g0cf-b557/105/trajectory_X.txt","size":6672417,"display_size":"6.36 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/trajectory_X.txt"},{"filename":"10.34770/g0cf-b557/105/trajectory_Y.txt","size":6672417,"display_size":"6.36 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/trajectory_Y.txt"},{"filename":"10.34770/g0cf-b557/105/trajectory_Z.txt","size":6672417,"display_size":"6.36 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/trajectory_Z.txt"},{"filename":"10.34770/g0cf-b557/105/wp@178485.dat","size":17206908,"display_size":"16.4 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/wp%40178485.dat"},{"filename":"10.34770/g0cf-b557/105/wp@178486.dat","size":17203187,"display_size":"16.4 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/wp%40178486.dat"},{"filename":"10.34770/g0cf-b557/105/wp@178487.dat","size":17205627,"display_size":"16.4 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/wp%40178487.dat"},{"filename":"10.34770/g0cf-b557/105/wp@178490.dat","size":17206908,"display_size":"16.4 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/wp%40178490.dat"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "A reduced-turbulence regime in the Large Helical Device upon injection of low-Z materials powders",
+        "title_type": null
+      }
+    ],
+    "description": "Recently an improved confinement regime, characterized by reduced turbulent fluctuations has been observed in the Large Helical Device upon the injection of boron powder into the plasma (Nespoli et al 2022 Nat. Phys.18 350–56). In this article, we report in more detail the experimental observations of increased plasma temperature and the decrease of turbulent fluctuations across the plasma cross section, on an extended database. In particular, we compare powders of different materials (B, C, BN), finding similar temperature improvement and turbulence response for the three cases. Modeling of the powder penetration into the plasma and of neoclassical electric field and fluxes support the interpretation of the experimental results. Additionally, we report evidence of the temperature improvement increasing with powder injection rates and decreasing for both increasing density and heating power. Though, plasma turbulence response varies depending on the initial conditions of the plasma, making it difficult to draw an inclusive description of the phenomenon.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Nespoli, Federico",
+        "name_type": "Personal",
+        "given_name": "Federico",
+        "family_name": "Nespoli",
+        "identifier": {
+          "value": "0000-0001-7644-751X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      },
+      {
+        "value": "Tanaka, Kenji",
+        "name_type": "Personal",
+        "given_name": "Kenji",
+        "family_name": "Tanaka",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 1
+      },
+      {
+        "value": "Masuzaki, Suguru",
+        "name_type": "Personal",
+        "given_name": "Suguru",
+        "family_name": "Masuzaki",
+        "identifier": {
+          "value": "0000-0003-0161-0938",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 2
+      },
+      {
+        "value": "Ashikawa, Naoko",
+        "name_type": "Personal",
+        "given_name": "Naoko",
+        "family_name": "Ashikawa",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 3
+      },
+      {
+        "value": "Shoji, Mamoru",
+        "name_type": "Personal",
+        "given_name": "Mamoru",
+        "family_name": "Shoji",
+        "identifier": {
+          "value": "0000-0003-0655-7347",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 4
+      },
+      {
+        "value": "Gilson, Erik",
+        "name_type": "Personal",
+        "given_name": "Erik",
+        "family_name": "Gilson",
+        "identifier": {
+          "value": "0000-0001-6820-9132",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 5
+      },
+      {
+        "value": "Lunsford, Robert",
+        "name_type": "Personal",
+        "given_name": "Robert",
+        "family_name": "Lunsford",
+        "identifier": {
+          "value": "0000-0003-3588-6801",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 6
+      },
+      {
+        "value": "Oishi, Tetsutarou",
+        "name_type": "Personal",
+        "given_name": "Tetsutarou",
+        "family_name": "Oishi",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 7
+      },
+      {
+        "value": "Ida, Katsumi",
+        "name_type": "Personal",
+        "given_name": "Katsumi",
+        "family_name": "Ida",
+        "identifier": {
+          "value": "0000-0002-0585-4561",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 8
+      },
+      {
+        "value": "Yoshinuma, Mikirou",
+        "name_type": "Personal",
+        "given_name": "Mikirou",
+        "family_name": "Yoshinuma",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 9
+      },
+      {
+        "value": "Takemura, Yuki",
+        "name_type": "Personal",
+        "given_name": "Yuki",
+        "family_name": "Takemura",
+        "identifier": {
+          "value": "0000-0003-3754-897X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 10
+      },
+      {
+        "value": "Kinoshita, Toshiki",
+        "name_type": "Personal",
+        "given_name": "Toshiki",
+        "family_name": "Kinoshita",
+        "identifier": {
+          "value": "0000-0003-3930-4434",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 11
+      },
+      {
+        "value": "Motojima, Gen",
+        "name_type": "Personal",
+        "given_name": "Gen",
+        "family_name": "Motojima",
+        "identifier": {
+          "value": "0000-0001-5522-3082",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 12
+      },
+      {
+        "value": "Osakabe, Masaki",
+        "name_type": "Personal",
+        "given_name": "Masaki",
+        "family_name": "Osakabe",
+        "identifier": {
+          "value": "0000-0001-5220-947X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 13
+      },
+      {
+        "value": "Kenmochi, Naoki",
+        "name_type": "Personal",
+        "given_name": "Naoki",
+        "family_name": "Kenmochi",
+        "identifier": {
+          "value": "0000-0003-1088-8237",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 14
+      },
+      {
+        "value": "Kawamura, Gakushi",
+        "name_type": "Personal",
+        "given_name": "Gakushi",
+        "family_name": "Kawamura",
+        "identifier": {
+          "value": "0000-0002-9117-5898",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 15
+      },
+      {
+        "value": "Suzuki, Chihiro",
+        "name_type": "Personal",
+        "given_name": "Chihiro",
+        "family_name": "Suzuki",
+        "identifier": {
+          "value": "0000-0001-6536-9034",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 16
+      },
+      {
+        "value": "Nagy, Alex",
+        "name_type": "Personal",
+        "given_name": "Alex",
+        "family_name": "Nagy",
+        "identifier": {
+          "value": "0000-0002-8201-2528",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 17
+      },
+      {
+        "value": "Bortolon, Alessandro",
+        "name_type": "Personal",
+        "given_name": "Alessandro",
+        "family_name": "Bortolon",
+        "identifier": {
+          "value": "0000-0002-0094-0209",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 18
+      },
+      {
+        "value": "Pablant, Novimir",
+        "name_type": "Personal",
+        "given_name": "Novimir",
+        "family_name": "Pablant",
+        "identifier": {
+          "value": "0000-0001-6617-8459",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 19
+      },
+      {
+        "value": "Mollén, Albert",
+        "name_type": "Personal",
+        "given_name": "Albert",
+        "family_name": "Mollén",
+        "identifier": {
+          "value": "0000-0002-9257-7864",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 20
+      },
+      {
+        "value": "Tamura, Naoki",
+        "name_type": "Personal",
+        "given_name": "Naoki",
+        "family_name": "Tamura",
+        "identifier": {
+          "value": "0000-0003-1682-1519",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 21
+      },
+      {
+        "value": "Gates, David",
+        "name_type": "Personal",
+        "given_name": "David",
+        "family_name": "Gates",
+        "identifier": {
+          "value": "0000-0001-5679-3124",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 22
+      },
+      {
+        "value": "Morisaki, Tomohiro",
+        "name_type": "Personal",
+        "given_name": "Tomohiro",
+        "family_name": "Morisaki",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 23
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2023",
+    "ark": "ark:/88435/dsp01bc386n47h",
+    "doi": "10.34770/g0cf-b557",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.1088/1741-4326/acd465",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsReferencedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": [],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["Advanced Projects", "Stellarators"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.34770/g0cf-b557/105/178485t7090_v1_ambipolarSolutions.h5",
+      "size": 173040,
+      "display_size": "169 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/178485t7090_v1_ambipolarSolutions.h5"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/178486t7090_v1_ambipolarSolutions.h5",
+      "size": 205064,
+      "display_size": "200 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/178486t7090_v1_ambipolarSolutions.h5"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/178486t7090_v2_ambipolarSolutions.h5",
+      "size": 205064,
+      "display_size": "200 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/178486t7090_v2_ambipolarSolutions.h5"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/178490t7090_v2_ambipolarSolutions.h5",
+      "size": 239984,
+      "display_size": "234 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/178490t7090_v2_ambipolarSolutions.h5"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/B_source.txt",
+      "size": 1716,
+      "display_size": "1.68 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/B_source.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/CXSdata_167233_t5.25.txt",
+      "size": 2482,
+      "display_size": "2.42 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/CXSdata_167233_t5.25.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/CXSdata_167234_t5.25.txt",
+      "size": 2482,
+      "display_size": "2.42 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/CXSdata_167234_t5.25.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/CXSdata_178504_t7.txt",
+      "size": 14553,
+      "display_size": "14.2 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/CXSdata_178504_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/CXSdata_178505_t7.txt",
+      "size": 9702,
+      "display_size": "9.47 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/CXSdata_178505_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/CXSproffit_167233_t5.25.txt",
+      "size": 3301,
+      "display_size": "3.22 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/CXSproffit_167233_t5.25.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/CXSproffit_167234_t5.25.txt",
+      "size": 3300,
+      "display_size": "3.22 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/CXSproffit_167234_t5.25.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/CXSproffit_178504_t7.txt",
+      "size": 3300,
+      "display_size": "3.22 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/CXSproffit_178504_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/CXSproffit_178505_t7.txt",
+      "size": 3300,
+      "display_size": "3.22 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/CXSproffit_178505_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/DYTRANS_178485.txt",
+      "size": 18236,
+      "display_size": "17.8 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/DYTRANS_178485.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/DYTRANS_178486.txt",
+      "size": 18236,
+      "display_size": "17.8 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/DYTRANS_178486.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/DYTRANS_178487.txt",
+      "size": 18236,
+      "display_size": "17.8 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/DYTRANS_178487.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/DYTRANS_178490.txt",
+      "size": 18236,
+      "display_size": "17.8 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/DYTRANS_178490.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/EMC3_profiles.txt",
+      "size": 24438,
+      "display_size": "23.9 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/EMC3_profiles.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/Ha_gas_178485.txt",
+      "size": 64239,
+      "display_size": "62.7 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Ha_gas_178485.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/Ha_gas_178486.txt",
+      "size": 64239,
+      "display_size": "62.7 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Ha_gas_178486.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/Ha_gas_178487.txt",
+      "size": 64239,
+      "display_size": "62.7 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Ha_gas_178487.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/Ha_gas_178490.txt",
+      "size": 64239,
+      "display_size": "62.7 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Ha_gas_178490.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCI_PSD_166254_t5.txt",
+      "size": 200704,
+      "display_size": "196 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_166254_t5.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCI_PSD_167233_t5.2.txt",
+      "size": 200724,
+      "display_size": "196 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_167233_t5.2.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCI_PSD_167234_t5.2.txt",
+      "size": 200724,
+      "display_size": "196 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_167234_t5.2.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCI_PSD_178476_t7.txt",
+      "size": 200704,
+      "display_size": "196 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178476_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCI_PSD_178485_t7.txt",
+      "size": 200704,
+      "display_size": "196 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178485_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCI_PSD_178486_t7.txt",
+      "size": 200704,
+      "display_size": "196 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178486_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCI_PSD_178487_t7.txt",
+      "size": 200704,
+      "display_size": "196 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178487_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCI_PSD_178490_t7.txt",
+      "size": 200704,
+      "display_size": "196 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178490_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCI_PSD_178494_t5.txt",
+      "size": 200704,
+      "display_size": "196 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178494_t5.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCI_PSD_178494_t7.txt",
+      "size": 200704,
+      "display_size": "196 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178494_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCI_PSD_178496_t7.txt",
+      "size": 200704,
+      "display_size": "196 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178496_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCI_PSD_178504_t7.txt",
+      "size": 200704,
+      "display_size": "196 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178504_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCI_PSD_178505_Freq.txt",
+      "size": 69632,
+      "display_size": "68 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178505_Freq.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCI_PSD_178505_PSD.txt",
+      "size": 79958016,
+      "display_size": "76.3 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178505_PSD.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCI_PSD_178505_t.txt",
+      "size": 19521,
+      "display_size": "19.1 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178505_t.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCI_PSD_178505_t7.txt",
+      "size": 200704,
+      "display_size": "196 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178505_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCI_PSD_178510_t4.txt",
+      "size": 200704,
+      "display_size": "196 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178510_t4.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCI_PSD_178510_t7.txt",
+      "size": 200704,
+      "display_size": "196 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCI_PSD_178510_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCIdn_166254_t5.txt",
+      "size": 3283,
+      "display_size": "3.21 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_166254_t5.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCIdn_167233_t5.2.txt",
+      "size": 3310,
+      "display_size": "3.23 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_167233_t5.2.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCIdn_167234_t5.2.txt",
+      "size": 3310,
+      "display_size": "3.23 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_167234_t5.2.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCIdn_178476_t7.txt",
+      "size": 3283,
+      "display_size": "3.21 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_178476_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCIdn_178485_t7.txt",
+      "size": 3283,
+      "display_size": "3.21 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_178485_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCIdn_178494_t5.txt",
+      "size": 3283,
+      "display_size": "3.21 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_178494_t5.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCIdn_178494_t7.txt",
+      "size": 3283,
+      "display_size": "3.21 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_178494_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCIdn_178496_t7.txt",
+      "size": 3283,
+      "display_size": "3.21 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_178496_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCIdn_178504_t7.txt",
+      "size": 3283,
+      "display_size": "3.21 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_178504_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCIdn_178505_t7.txt",
+      "size": 3283,
+      "display_size": "3.21 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_178505_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCIdn_178510_t4.txt",
+      "size": 3283,
+      "display_size": "3.21 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_178510_t4.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PCIdn_178510_t7.txt",
+      "size": 3283,
+      "display_size": "3.21 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PCIdn_178510_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/PMC_0166256_2p5U-AH02-02-NF.mp4",
+      "size": 10329012,
+      "display_size": "9.85 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/PMC_0166256_2p5U-AH02-02-NF.mp4"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/README.txt",
+      "size": 4946,
+      "display_size": "4.83 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/README.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/Spec_178485_tst_7.0000_len_200_fmin_20_fmax_500.dat",
+      "size": 11749,
+      "display_size": "11.5 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Spec_178485_tst_7.0000_len_200_fmin_20_fmax_500.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/Spec_178486_tst_7.0000_len_200_fmin_20_fmax_500.dat",
+      "size": 11750,
+      "display_size": "11.5 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Spec_178486_tst_7.0000_len_200_fmin_20_fmax_500.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/Spec_178487_tst_7.0000_len_200_fmin_20_fmax_500.dat",
+      "size": 11750,
+      "display_size": "11.5 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Spec_178487_tst_7.0000_len_200_fmin_20_fmax_500.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/Spec_178490_tst_7.0000_len_200_fmin_20_fmax_500.dat",
+      "size": 11740,
+      "display_size": "11.5 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Spec_178490_tst_7.0000_len_200_fmin_20_fmax_500.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/TSdata_167233_t5.25.txt",
+      "size": 11340,
+      "display_size": "11.1 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/TSdata_167233_t5.25.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/TSdata_167234_t5.25.txt",
+      "size": 11340,
+      "display_size": "11.1 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/TSdata_167234_t5.25.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/TSdata_178504_t7.txt",
+      "size": 11259,
+      "display_size": "11 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/TSdata_178504_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/TSdata_178505_t7.txt",
+      "size": 11259,
+      "display_size": "11 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/TSdata_178505_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/TSproffit_167233_t5.25.txt",
+      "size": 4930,
+      "display_size": "4.81 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/TSproffit_167233_t5.25.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/TSproffit_167234_t5.25.txt",
+      "size": 4930,
+      "display_size": "4.81 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/TSproffit_167234_t5.25.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/TSproffit_178504_t7.txt",
+      "size": 4900,
+      "display_size": "4.79 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/TSproffit_178504_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/TSproffit_178505_t7.txt",
+      "size": 4900,
+      "display_size": "4.79 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/TSproffit_178505_t7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/Te0_178485",
+      "size": 10535,
+      "display_size": "10.3 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Te0_178485"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/Te0_178486",
+      "size": 10829,
+      "display_size": "10.6 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Te0_178486"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/Te0_178487",
+      "size": 9947,
+      "display_size": "9.71 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Te0_178487"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/Te0_178490",
+      "size": 11123,
+      "display_size": "10.9 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Te0_178490"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/Te0_178504",
+      "size": 9800,
+      "display_size": "9.57 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Te0_178504"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/Te0_178505",
+      "size": 9898,
+      "display_size": "9.67 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Te0_178505"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/Ti0_178485",
+      "size": 19600,
+      "display_size": "19.1 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Ti0_178485"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/Ti0_178486",
+      "size": 19600,
+      "display_size": "19.1 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Ti0_178486"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/Ti0_178487",
+      "size": 19600,
+      "display_size": "19.1 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Ti0_178487"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/Ti0_178490",
+      "size": 19600,
+      "display_size": "19.1 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Ti0_178490"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/Ti0_178504",
+      "size": 19600,
+      "display_size": "19.1 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Ti0_178504"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/Ti0_178505",
+      "size": 19600,
+      "display_size": "19.1 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/Ti0_178505"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/bolo@178485.dat",
+      "size": 563799,
+      "display_size": "551 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/bolo%40178485.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/bolo@178486.dat",
+      "size": 563799,
+      "display_size": "551 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/bolo%40178486.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/bolo@178487.dat",
+      "size": 563799,
+      "display_size": "551 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/bolo%40178487.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/bolo@178490.dat",
+      "size": 563799,
+      "display_size": "551 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/bolo%40178490.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/firc@178485.dat",
+      "size": 56624,
+      "display_size": "55.3 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/firc%40178485.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/firc@178486.dat",
+      "size": 56624,
+      "display_size": "55.3 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/firc%40178486.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/firc@178487.dat",
+      "size": 56624,
+      "display_size": "55.3 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/firc%40178487.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/firc@178490.dat",
+      "size": 56624,
+      "display_size": "55.3 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/firc%40178490.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/firc@178504.dat",
+      "size": 56624,
+      "display_size": "55.3 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/firc%40178504.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/firc@178505.dat",
+      "size": 56624,
+      "display_size": "55.3 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/firc%40178505.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/flux_surf.txt",
+      "size": 1057959,
+      "display_size": "1.01 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/flux_surf.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/imp02@178485.dat",
+      "size": 111811,
+      "display_size": "109 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/imp02%40178485.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/imp02@178486.dat",
+      "size": 111811,
+      "display_size": "109 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/imp02%40178486.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/imp02@178487.dat",
+      "size": 111811,
+      "display_size": "109 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/imp02%40178487.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/imp02@178490.dat",
+      "size": 111811,
+      "display_size": "109 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/imp02%40178490.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/input_power_178504.txt",
+      "size": 1061667,
+      "display_size": "1.01 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/input_power_178504.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/input_power_178505.txt",
+      "size": 1061667,
+      "display_size": "1.01 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/input_power_178505.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/ipd_spec@178485.dat",
+      "size": 142455,
+      "display_size": "139 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/ipd_spec%40178485.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/ipd_spec@178486.dat",
+      "size": 142455,
+      "display_size": "139 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/ipd_spec%40178486.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/ipd_spec@178487.dat",
+      "size": 142455,
+      "display_size": "139 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/ipd_spec%40178487.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/ipd_spec@178490.dat",
+      "size": 142455,
+      "display_size": "139 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/ipd_spec%40178490.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/ipd_spec@178504.dat",
+      "size": 142469,
+      "display_size": "139 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/ipd_spec%40178504.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/ipd_spec@178505.dat",
+      "size": 142455,
+      "display_size": "139 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/ipd_spec%40178505.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/nB_toroidal_prof.txt",
+      "size": 13968,
+      "display_size": "13.6 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/nB_toroidal_prof.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/ne0_178485",
+      "size": 17415,
+      "display_size": "17 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/ne0_178485"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/ne0_178486",
+      "size": 17901,
+      "display_size": "17.5 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/ne0_178486"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/ne0_178487",
+      "size": 16443,
+      "display_size": "16.1 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/ne0_178487"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/ne0_178490",
+      "size": 18387,
+      "display_size": "18 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/ne0_178490"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/neutral_source_B.txt",
+      "size": 1716,
+      "display_size": "1.68 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/neutral_source_B.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/neutral_source_C.txt",
+      "size": 1716,
+      "display_size": "1.68 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/neutral_source_C.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/plotEMC3_1.txt",
+      "size": 52249164,
+      "display_size": "49.8 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/plotEMC3_1.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/plotEMC3_2.txt",
+      "size": 52249164,
+      "display_size": "49.8 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/plotEMC3_2.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/plotEMC3_3.txt",
+      "size": 52249164,
+      "display_size": "49.8 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/plotEMC3_3.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/plotEMC3_4.txt",
+      "size": 8407098,
+      "display_size": "8.02 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/plotEMC3_4.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/plotEMC3_5.txt",
+      "size": 8428511,
+      "display_size": "8.04 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/plotEMC3_5.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/plotEMC3_6.txt",
+      "size": 8376991,
+      "display_size": "7.99 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/plotEMC3_6.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/plotEMC3_7.txt",
+      "size": 8407098,
+      "display_size": "8.02 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/plotEMC3_7.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/plotEMC3_8.txt",
+      "size": 8407098,
+      "display_size": "8.02 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/plotEMC3_8.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/relative_variations_Bscan.txt",
+      "size": 2557,
+      "display_size": "2.5 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/relative_variations_Bscan.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/relative_variations_Pscan.txt",
+      "size": 2549,
+      "display_size": "2.49 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/relative_variations_Pscan.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/relative_variations_diffpow.txt",
+      "size": 564,
+      "display_size": "564 Bytes",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/relative_variations_diffpow.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/relative_variations_nescan.txt",
+      "size": 1843,
+      "display_size": "1.8 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/relative_variations_nescan.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/trajectory_X.txt",
+      "size": 6672417,
+      "display_size": "6.36 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/trajectory_X.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/trajectory_Y.txt",
+      "size": 6672417,
+      "display_size": "6.36 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/trajectory_Y.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/trajectory_Z.txt",
+      "size": 6672417,
+      "display_size": "6.36 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/trajectory_Z.txt"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/wp@178485.dat",
+      "size": 17206908,
+      "display_size": "16.4 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/wp%40178485.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/wp@178486.dat",
+      "size": 17203187,
+      "display_size": "16.4 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/wp%40178486.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/wp@178487.dat",
+      "size": 17205627,
+      "display_size": "16.4 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/wp%40178487.dat"
+    },
+    {
+      "filename": "10.34770/g0cf-b557/105/wp@178490.dat",
+      "size": 17206908,
+      "display_size": "16.4 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/g0cf-b557/105/wp%40178490.dat"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

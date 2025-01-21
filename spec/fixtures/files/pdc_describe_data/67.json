@@ -1,1 +1,132 @@
-{"resource":{"titles":[{"title":"Hyperdiffusion of dust particles in a turbulent tokamak plasma","title_type":null}],"description":"The effect of plasma turbulence on the trajectories of dust particles is investigated for the first time. The dynamics of dust particles is computed using the ad-hoc developed Dust Injection Simulator code, using a 3D turbulent plasma background computed with the TOKAM3X code. As a result, the evolution of the particle trajectories is governed by the ion drag force, and the shape of the trajectory is set by the Stokes number $St\\propto a_d/n_0$, with $a_d$ the dust radius and $n_0$ the density at the separatrix. The plasma turbulence is observed to scatter the dust particles, exhibiting a hyperdiffusive regime in all cases. The amplitude of the turbulent spread of the trajectories $\\Delta r^2$ is shown to depend on the ratio $Ku/St$, with $Ku\\propto u_{rms}$ the Kubo number and $u_{rms}$ the fluctuation level of the plasma flow. These results are compared with a simple analytical model, predicting $\\Delta r^2\\propto (Ku/St)^2t^3$, or $\\Delta r^2\\propto (u_{rms}n_0/a_d)^2t^3$. As the dust is heated by the plasma fluxes, thermionic emission sets the dust charge, originally negative, to slightly positive values. This results in a substantial reduction of the ion drag force through the suppression of its Coulomb scattering component. The dust grain inertia is then no longer negligible, and drives the transition from a hyperdiffusive regime towards a ballistic one.\r\n\r\nThis work is supported by the U.S. Department Of Energy under Contract No. DE-AC02-09CH11466 with Princeton University, and was granted access to the HPC resources of CINES, under the allocations A00505066912 and A00705066912 made by GENCI.","collection_tags":[],"creators":[{"value":"Nespoli, Federico","name_type":"Personal","given_name":"Federico","family_name":"Nespoli","identifier":{"value":"0000-0001-7644-751X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0},{"value":"Kaganovich, Igor","name_type":"Personal","given_name":"Igor","family_name":"Kaganovich","identifier":{"value":"0000-0003-0653-5682","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":1},{"value":"Autricque, Adrien","name_type":"Personal","given_name":"Adrien","family_name":"Autricque","identifier":null,"affiliations":[],"sequence":2},{"value":"Marandet, Yannick","name_type":"Personal","given_name":"Yannick","family_name":"Marandet","identifier":null,"affiliations":[],"sequence":3},{"value":"Tamain, Patrick","name_type":"Personal","given_name":"Patrick","family_name":"Tamain","identifier":null,"affiliations":[],"sequence":4}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2021","ark":"ark:/88435/dsp01db78tg111","doi":"10.11578/1814957","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[],"keywords":["plasma turbulence","dust","simulations","transport"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["Advanced Projects","Other Projects"],"migrated":true},"files":[{"filename":"10.11578/1814957/67/README.txt","size":1967,"display_size":"1.92 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814957/67/README.txt"},{"filename":"10.11578/1814957/67/data_for_fig_PoP2021.zip","size":1904316243,"display_size":"1.77 GB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814957/67/data_for_fig_PoP2021.zip"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Hyperdiffusion of dust particles in a turbulent tokamak plasma",
+        "title_type": null
+      }
+    ],
+    "description": "The effect of plasma turbulence on the trajectories of dust particles is investigated for the first time. The dynamics of dust particles is computed using the ad-hoc developed Dust Injection Simulator code, using a 3D turbulent plasma background computed with the TOKAM3X code. As a result, the evolution of the particle trajectories is governed by the ion drag force, and the shape of the trajectory is set by the Stokes number $St\\propto a_d/n_0$, with $a_d$ the dust radius and $n_0$ the density at the separatrix. The plasma turbulence is observed to scatter the dust particles, exhibiting a hyperdiffusive regime in all cases. The amplitude of the turbulent spread of the trajectories $\\Delta r^2$ is shown to depend on the ratio $Ku/St$, with $Ku\\propto u_{rms}$ the Kubo number and $u_{rms}$ the fluctuation level of the plasma flow. These results are compared with a simple analytical model, predicting $\\Delta r^2\\propto (Ku/St)^2t^3$, or $\\Delta r^2\\propto (u_{rms}n_0/a_d)^2t^3$. As the dust is heated by the plasma fluxes, thermionic emission sets the dust charge, originally negative, to slightly positive values. This results in a substantial reduction of the ion drag force through the suppression of its Coulomb scattering component. The dust grain inertia is then no longer negligible, and drives the transition from a hyperdiffusive regime towards a ballistic one.\r\n\r\nThis work is supported by the U.S. Department Of Energy under Contract No. DE-AC02-09CH11466 with Princeton University, and was granted access to the HPC resources of CINES, under the allocations A00505066912 and A00705066912 made by GENCI.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Nespoli, Federico",
+        "name_type": "Personal",
+        "given_name": "Federico",
+        "family_name": "Nespoli",
+        "identifier": {
+          "value": "0000-0001-7644-751X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      },
+      {
+        "value": "Kaganovich, Igor",
+        "name_type": "Personal",
+        "given_name": "Igor",
+        "family_name": "Kaganovich",
+        "identifier": {
+          "value": "0000-0003-0653-5682",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 1
+      },
+      {
+        "value": "Autricque, Adrien",
+        "name_type": "Personal",
+        "given_name": "Adrien",
+        "family_name": "Autricque",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 2
+      },
+      {
+        "value": "Marandet, Yannick",
+        "name_type": "Personal",
+        "given_name": "Yannick",
+        "family_name": "Marandet",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 3
+      },
+      {
+        "value": "Tamain, Patrick",
+        "name_type": "Personal",
+        "given_name": "Patrick",
+        "family_name": "Tamain",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 4
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2021",
+    "ark": "ark:/88435/dsp01db78tg111",
+    "doi": "10.11578/1814957",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [],
+    "keywords": ["plasma turbulence", "dust", "simulations", "transport"],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["Advanced Projects", "Other Projects"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.11578/1814957/67/README.txt",
+      "size": 1967,
+      "display_size": "1.92 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814957/67/README.txt"
+    },
+    {
+      "filename": "10.11578/1814957/67/data_for_fig_PoP2021.zip",
+      "size": 1904316243,
+      "display_size": "1.77 GB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814957/67/data_for_fig_PoP2021.zip"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

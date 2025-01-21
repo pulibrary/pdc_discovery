@@ -1,1 +1,225 @@
-{"resource":{"titles":[{"title":"Topological Langmuir-cyclotron wave","title_type":null}],"description":"The data set consists of the figures in a manuscript tilted Topological Langmuir-cyclotron wave. There are 10 figures with captions.","collection_tags":[],"creators":[{"value":"Fu, Yichen","name_type":"Personal","given_name":"Yichen","family_name":"Fu","identifier":{"value":"0000-0002-5205-9827","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0},{"value":"Qin, Hong","name_type":"Personal","given_name":"Hong","family_name":"Qin","identifier":{"value":"0000-0003-0304-3762","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":1}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2022","ark":"ark:/88435/dsp0179408140p","doi":"10.34770/75nk-0337","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1126/sciadv.add8041","related_identifier_type":"DOI","relation_type":"IsReferencedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":["Topological Langmuir-Cyclotron Wave","Topological Wave in Continuous Medium","Index Theorem","Bulk-Edge Correspondence","Chern Number in Phase Space"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["Theory"],"migrated":true},"files":[{"filename":"10.34770/75nk-0337/82/Fig_1.pdf","size":289256,"display_size":"282 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Fig_1.pdf"},{"filename":"10.34770/75nk-0337/82/Fig_10.pdf","size":69772,"display_size":"68.1 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Fig_10.pdf"},{"filename":"10.34770/75nk-0337/82/Fig_2.pdf","size":733140,"display_size":"716 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Fig_2.pdf"},{"filename":"10.34770/75nk-0337/82/Fig_3.pdf","size":207389,"display_size":"203 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Fig_3.pdf"},{"filename":"10.34770/75nk-0337/82/Fig_4.pdf","size":221212,"display_size":"216 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Fig_4.pdf"},{"filename":"10.34770/75nk-0337/82/Fig_5.pdf","size":124431,"display_size":"122 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Fig_5.pdf"},{"filename":"10.34770/75nk-0337/82/Fig_6.pdf","size":135754,"display_size":"133 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Fig_6.pdf"},{"filename":"10.34770/75nk-0337/82/Fig_7.pdf","size":112065,"display_size":"109 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Fig_7.pdf"},{"filename":"10.34770/75nk-0337/82/Fig_8.pdf","size":22674,"display_size":"22.1 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Fig_8.pdf"},{"filename":"10.34770/75nk-0337/82/Fig_9.pdf","size":441625,"display_size":"431 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Fig_9.pdf"},{"filename":"10.34770/75nk-0337/82/Readme.txt","size":3097,"display_size":"3.02 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Readme.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [{ "title": "Topological Langmuir-cyclotron wave", "title_type": null }],
+    "description": "The data set consists of the figures in a manuscript tilted Topological Langmuir-cyclotron wave. There are 10 figures with captions.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Fu, Yichen",
+        "name_type": "Personal",
+        "given_name": "Yichen",
+        "family_name": "Fu",
+        "identifier": {
+          "value": "0000-0002-5205-9827",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      },
+      {
+        "value": "Qin, Hong",
+        "name_type": "Personal",
+        "given_name": "Hong",
+        "family_name": "Qin",
+        "identifier": {
+          "value": "0000-0003-0304-3762",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 1
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2022",
+    "ark": "ark:/88435/dsp0179408140p",
+    "doi": "10.34770/75nk-0337",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.1126/sciadv.add8041",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsReferencedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": [
+      "Topological Langmuir-Cyclotron Wave",
+      "Topological Wave in Continuous Medium",
+      "Index Theorem",
+      "Bulk-Edge Correspondence",
+      "Chern Number in Phase Space"
+    ],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["Theory"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.34770/75nk-0337/82/Fig_1.pdf",
+      "size": 289256,
+      "display_size": "282 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Fig_1.pdf"
+    },
+    {
+      "filename": "10.34770/75nk-0337/82/Fig_10.pdf",
+      "size": 69772,
+      "display_size": "68.1 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Fig_10.pdf"
+    },
+    {
+      "filename": "10.34770/75nk-0337/82/Fig_2.pdf",
+      "size": 733140,
+      "display_size": "716 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Fig_2.pdf"
+    },
+    {
+      "filename": "10.34770/75nk-0337/82/Fig_3.pdf",
+      "size": 207389,
+      "display_size": "203 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Fig_3.pdf"
+    },
+    {
+      "filename": "10.34770/75nk-0337/82/Fig_4.pdf",
+      "size": 221212,
+      "display_size": "216 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Fig_4.pdf"
+    },
+    {
+      "filename": "10.34770/75nk-0337/82/Fig_5.pdf",
+      "size": 124431,
+      "display_size": "122 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Fig_5.pdf"
+    },
+    {
+      "filename": "10.34770/75nk-0337/82/Fig_6.pdf",
+      "size": 135754,
+      "display_size": "133 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Fig_6.pdf"
+    },
+    {
+      "filename": "10.34770/75nk-0337/82/Fig_7.pdf",
+      "size": 112065,
+      "display_size": "109 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Fig_7.pdf"
+    },
+    {
+      "filename": "10.34770/75nk-0337/82/Fig_8.pdf",
+      "size": 22674,
+      "display_size": "22.1 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Fig_8.pdf"
+    },
+    {
+      "filename": "10.34770/75nk-0337/82/Fig_9.pdf",
+      "size": 441625,
+      "display_size": "431 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Fig_9.pdf"
+    },
+    {
+      "filename": "10.34770/75nk-0337/82/Readme.txt",
+      "size": 3097,
+      "display_size": "3.02 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/75nk-0337/82/Readme.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

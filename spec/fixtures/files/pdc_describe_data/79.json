@@ -1,1 +1,388 @@
-{"resource":{"titles":[{"title":"Novel angular velocity estimation technique for plasma filaments","title_type":null}],"description":"Data for the figures in text format. Please read the README file for detailed description.\r\n\r\nThe data are a result of the calculations presented in the Review of Scientific Instruments publication titled \"Novel angular velocity estimation technique for plasma filaments\".","collection_tags":["NSTX"],"creators":[{"value":"Lampert, Mate","name_type":"Personal","given_name":"Mate","family_name":"Lampert","identifier":{"value":"0000-0002-8462-8799","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0},{"value":"Diallo, Ahmed","name_type":"Personal","given_name":"Ahmed","family_name":"Diallo","identifier":{"value":"0000-0002-0706-060X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":1},{"value":"Zweben, Stewart","name_type":"Personal","given_name":"Stewart","family_name":"Zweben","identifier":{"value":"0000-0002-1738-0586","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":2}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2022","ark":"ark:/88435/dsp011g05ff83b","doi":"10.34770/styn-k539","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1063/5.0128818","related_identifier_type":"DOI","relation_type":"IsReferencedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":[],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["NSTX","Spherical Torus"],"migrated":true},"files":[{"filename":"10.34770/styn-k539/79/README.txt","size":5230,"display_size":"5.11 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/README.txt"},{"filename":"10.34770/styn-k539/79/fig10.txt","size":30983,"display_size":"30.3 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig10.txt"},{"filename":"10.34770/styn-k539/79/fig11_484.177ms.txt","size":90086,"display_size":"88 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig11_484.177ms.txt"},{"filename":"10.34770/styn-k539/79/fig11_484.180ms.txt","size":89327,"display_size":"87.2 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig11_484.180ms.txt"},{"filename":"10.34770/styn-k539/79/fig11_484.182ms.txt","size":90397,"display_size":"88.3 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig11_484.182ms.txt"},{"filename":"10.34770/styn-k539/79/fig11_484.185ms.txt","size":90141,"display_size":"88 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig11_484.185ms.txt"},{"filename":"10.34770/styn-k539/79/fig11_484.187ms.txt","size":89785,"display_size":"87.7 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig11_484.187ms.txt"},{"filename":"10.34770/styn-k539/79/fig11_484.190ms.txt","size":89910,"display_size":"87.8 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig11_484.190ms.txt"},{"filename":"10.34770/styn-k539/79/fig11_484.193ms.txt","size":89682,"display_size":"87.6 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig11_484.193ms.txt"},{"filename":"10.34770/styn-k539/79/fig11_484.195ms.txt","size":89837,"display_size":"87.7 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig11_484.195ms.txt"},{"filename":"10.34770/styn-k539/79/fig11_484.198ms.txt","size":89930,"display_size":"87.8 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig11_484.198ms.txt"},{"filename":"10.34770/styn-k539/79/fig12.txt","size":15133,"display_size":"14.8 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig12.txt"},{"filename":"10.34770/styn-k539/79/fig13_-10us.txt","size":91481,"display_size":"89.3 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig13_-10us.txt"},{"filename":"10.34770/styn-k539/79/fig13_-2.5us.txt","size":91329,"display_size":"89.2 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig13_-2.5us.txt"},{"filename":"10.34770/styn-k539/79/fig13_-5us.txt","size":90826,"display_size":"88.7 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig13_-5us.txt"},{"filename":"10.34770/styn-k539/79/fig13_-7.5us.txt","size":91208,"display_size":"89.1 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig13_-7.5us.txt"},{"filename":"10.34770/styn-k539/79/fig13_10us.txt","size":91043,"display_size":"88.9 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig13_10us.txt"},{"filename":"10.34770/styn-k539/79/fig13_2.5us.txt","size":91003,"display_size":"88.9 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig13_2.5us.txt"},{"filename":"10.34770/styn-k539/79/fig13_5us.txt","size":91330,"display_size":"89.2 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig13_5us.txt"},{"filename":"10.34770/styn-k539/79/fig13_7.5us.txt","size":91574,"display_size":"89.4 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig13_7.5us.txt"},{"filename":"10.34770/styn-k539/79/fig13_t_ELM.txt","size":91235,"display_size":"89.1 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig13_t_ELM.txt"},{"filename":"10.34770/styn-k539/79/fig14.txt","size":9936,"display_size":"9.7 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig14.txt"},{"filename":"10.34770/styn-k539/79/fig15a.txt","size":43763,"display_size":"42.7 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig15a.txt"},{"filename":"10.34770/styn-k539/79/fig15b.txt","size":37091,"display_size":"36.2 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig15b.txt"},{"filename":"10.34770/styn-k539/79/fig1ab.txt","size":38419,"display_size":"37.5 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig1ab.txt"},{"filename":"10.34770/styn-k539/79/fig3abcd.txt","size":329088,"display_size":"321 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig3abcd.txt"},{"filename":"10.34770/styn-k539/79/fig4a.txt","size":886813,"display_size":"866 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig4a.txt"},{"filename":"10.34770/styn-k539/79/fig4b.txt","size":885845,"display_size":"865 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig4b.txt"},{"filename":"10.34770/styn-k539/79/fig4c.txt","size":2614497,"display_size":"2.49 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig4c.txt"},{"filename":"10.34770/styn-k539/79/fig4d.txt","size":2616851,"display_size":"2.5 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig4d.txt"},{"filename":"10.34770/styn-k539/79/fig5.txt","size":897592,"display_size":"877 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig5.txt"},{"filename":"10.34770/styn-k539/79/fig6.txt","size":45108,"display_size":"44.1 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig6.txt"},{"filename":"10.34770/styn-k539/79/fig7.txt","size":215804,"display_size":"211 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig7.txt"},{"filename":"10.34770/styn-k539/79/fig8.txt","size":9109,"display_size":"8.9 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig8.txt"},{"filename":"10.34770/styn-k539/79/fig9.txt","size":16883,"display_size":"16.5 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig9.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Novel angular velocity estimation technique for plasma filaments",
+        "title_type": null
+      }
+    ],
+    "description": "Data for the figures in text format. Please read the README file for detailed description.\r\n\r\nThe data are a result of the calculations presented in the Review of Scientific Instruments publication titled \"Novel angular velocity estimation technique for plasma filaments\".",
+    "collection_tags": ["NSTX"],
+    "creators": [
+      {
+        "value": "Lampert, Mate",
+        "name_type": "Personal",
+        "given_name": "Mate",
+        "family_name": "Lampert",
+        "identifier": {
+          "value": "0000-0002-8462-8799",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      },
+      {
+        "value": "Diallo, Ahmed",
+        "name_type": "Personal",
+        "given_name": "Ahmed",
+        "family_name": "Diallo",
+        "identifier": {
+          "value": "0000-0002-0706-060X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 1
+      },
+      {
+        "value": "Zweben, Stewart",
+        "name_type": "Personal",
+        "given_name": "Stewart",
+        "family_name": "Zweben",
+        "identifier": {
+          "value": "0000-0002-1738-0586",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 2
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2022",
+    "ark": "ark:/88435/dsp011g05ff83b",
+    "doi": "10.34770/styn-k539",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.1063/5.0128818",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsReferencedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": [],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["NSTX", "Spherical Torus"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.34770/styn-k539/79/README.txt",
+      "size": 5230,
+      "display_size": "5.11 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/README.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig10.txt",
+      "size": 30983,
+      "display_size": "30.3 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig10.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig11_484.177ms.txt",
+      "size": 90086,
+      "display_size": "88 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig11_484.177ms.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig11_484.180ms.txt",
+      "size": 89327,
+      "display_size": "87.2 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig11_484.180ms.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig11_484.182ms.txt",
+      "size": 90397,
+      "display_size": "88.3 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig11_484.182ms.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig11_484.185ms.txt",
+      "size": 90141,
+      "display_size": "88 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig11_484.185ms.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig11_484.187ms.txt",
+      "size": 89785,
+      "display_size": "87.7 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig11_484.187ms.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig11_484.190ms.txt",
+      "size": 89910,
+      "display_size": "87.8 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig11_484.190ms.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig11_484.193ms.txt",
+      "size": 89682,
+      "display_size": "87.6 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig11_484.193ms.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig11_484.195ms.txt",
+      "size": 89837,
+      "display_size": "87.7 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig11_484.195ms.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig11_484.198ms.txt",
+      "size": 89930,
+      "display_size": "87.8 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig11_484.198ms.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig12.txt",
+      "size": 15133,
+      "display_size": "14.8 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig12.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig13_-10us.txt",
+      "size": 91481,
+      "display_size": "89.3 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig13_-10us.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig13_-2.5us.txt",
+      "size": 91329,
+      "display_size": "89.2 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig13_-2.5us.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig13_-5us.txt",
+      "size": 90826,
+      "display_size": "88.7 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig13_-5us.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig13_-7.5us.txt",
+      "size": 91208,
+      "display_size": "89.1 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig13_-7.5us.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig13_10us.txt",
+      "size": 91043,
+      "display_size": "88.9 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig13_10us.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig13_2.5us.txt",
+      "size": 91003,
+      "display_size": "88.9 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig13_2.5us.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig13_5us.txt",
+      "size": 91330,
+      "display_size": "89.2 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig13_5us.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig13_7.5us.txt",
+      "size": 91574,
+      "display_size": "89.4 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig13_7.5us.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig13_t_ELM.txt",
+      "size": 91235,
+      "display_size": "89.1 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig13_t_ELM.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig14.txt",
+      "size": 9936,
+      "display_size": "9.7 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig14.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig15a.txt",
+      "size": 43763,
+      "display_size": "42.7 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig15a.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig15b.txt",
+      "size": 37091,
+      "display_size": "36.2 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig15b.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig1ab.txt",
+      "size": 38419,
+      "display_size": "37.5 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig1ab.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig3abcd.txt",
+      "size": 329088,
+      "display_size": "321 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig3abcd.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig4a.txt",
+      "size": 886813,
+      "display_size": "866 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig4a.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig4b.txt",
+      "size": 885845,
+      "display_size": "865 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig4b.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig4c.txt",
+      "size": 2614497,
+      "display_size": "2.49 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig4c.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig4d.txt",
+      "size": 2616851,
+      "display_size": "2.5 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig4d.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig5.txt",
+      "size": 897592,
+      "display_size": "877 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig5.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig6.txt",
+      "size": 45108,
+      "display_size": "44.1 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig6.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig7.txt",
+      "size": 215804,
+      "display_size": "211 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig7.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig8.txt",
+      "size": 9109,
+      "display_size": "8.9 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig8.txt"
+    },
+    {
+      "filename": "10.34770/styn-k539/79/fig9.txt",
+      "size": 16883,
+      "display_size": "16.5 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/styn-k539/79/fig9.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

@@ -1,149 +1,149 @@
 {
-    "resource": {
-        "titles": [
-            {
-                "title": "A dynamic magnetic tension force as the cause of failed solar eruptions",
-                "title_type": null
-            }
-        ],
-        "description": "Coronal mass ejections are solar eruptions driven by a sudden release of magnetic energy stored in the Sun's corona. In many cases, this magnetic energy is stored in long-lived, arched structures called magnetic flux ropes. When a flux rope destabilizes, it can either erupt and produce a coronal mass ejection or fail and collapse back towards the Sun. The prevailing belief is that the outcome of a given event is determined by a magnetohydrodynamic force imbalance called the torus instability. This belief is challenged, however, by observations indicating that torus-unstable flux ropes sometimes fail to erupt. This contradiction has not yet been resolved because of a lack of coronal magnetic field measurements and the limitations of idealized numerical modelling. Here we report the results of a laboratory experiment that reveal a previously unknown eruption criterion below which torus-unstable flux ropes fail to erupt. We find that such 'failed torus' events occur when the guide magnetic field (that is, the ambient field that runs toroidally along the flux rope) is strong enough to prevent the flux rope from kinking. Under these conditions, the guide field interacts with electric currents in the flux rope to produce a dynamic toroidal field tension force that halts the eruption. This magnetic tension force is missing from existing eruption models, which is why such models cannot explain or predict failed torus events.",
-        "collection_tags": [],
-        "creators": [
-            {
-                "value": "Myers, Clayton",
-                "name_type": "Personal",
-                "given_name": "Clayton",
-                "family_name": "Myers",
-                "identifier": {
-                    "value": "0000-0003-4539-8406",
-                    "scheme": "ORCID",
-                    "scheme_uri": "https://orcid.org"
-                },
-                "affiliations": [],
-                "sequence": 1
-            },
-            {
-                "value": "Yamada, Maasaki",
-                "name_type": "Personal",
-                "given_name": "Maasaki",
-                "family_name": "Yamada",
-                "identifier": {
-                    "value": "0000-0003-4996-1649",
-                    "scheme": "ORCID",
-                    "scheme_uri": "https://orcid.org"
-                },
-                "affiliations": [],
-                "sequence": 2
-            },
-            {
-                "value": "Ji, Hantao",
-                "name_type": "Personal",
-                "given_name": "Hantao",
-                "family_name": "Ji",
-                "identifier": {
-                    "value": "0000-0001-9600-9963",
-                    "scheme": "ORCID",
-                    "scheme_uri": "https://orcid.org"
-                },
-                "affiliations": [],
-                "sequence": 3
-            },
-            {
-                "value": "Yoo, Jongsoo",
-                "name_type": "Personal",
-                "given_name": "Jongsoo",
-                "family_name": "Yoo",
-                "identifier": {
-                    "value": "0000-0003-3881-1995",
-                    "scheme": "ORCID",
-                    "scheme_uri": "https://orcid.org"
-                },
-                "affiliations": [],
-                "sequence": 4
-            },
-            {
-                "value": "Fox, William",
-                "name_type": "Personal",
-                "given_name": "William",
-                "family_name": "Fox",
-                "identifier": {
-                    "value": "0000-0001-6289-858X",
-                    "scheme": "ORCID",
-                    "scheme_uri": "https://orcid.org"
-                },
-                "affiliations": [],
-                "sequence": 5
-            },
-            {
-                "value": "Jara-Almonte, Jonathan",
-                "name_type": "Personal",
-                "given_name": "Jonathan",
-                "family_name": "Jara-Almonte",
-                "identifier": {
-                    "value": "0000-0003-0760-6198",
-                    "scheme": "ORCID",
-                    "scheme_uri": "https://orcid.org"
-                },
-                "affiliations": [],
-                "sequence": 6
-            },
-            {
-                "value": "Savcheva, Antonia",
-                "name_type": "Personal",
-                "given_name": "Antonia",
-                "family_name": "Savcheva",
-                "identifier": null,
-                "affiliations": [],
-                "sequence": 7
-            },
-            {
-                "value": "DeLuca, DeLuca",
-                "name_type": "Personal",
-                "given_name": "DeLuca",
-                "family_name": "DeLuca",
-                "identifier": null,
-                "affiliations": [],
-                "sequence": 8
-            }
-        ],
-        "resource_type": "Dataset",
-        "resource_type_general": "Dataset",
-        "publisher": "Princeton University",
-        "publication_year": "2015",
-        "ark": "ark:/88435/dsp01j3860933c",
-        "doi": "10.11578/1366453",
-        "rights": {
-            "identifier": "CC BY",
-            "uri": "https://creativecommons.org/licenses/by/4.0/",
-            "name": "Creative Commons Attribution 4.0 International"
+  "resource": {
+    "titles": [
+      {
+        "title": "A dynamic magnetic tension force as the cause of failed solar eruptions",
+        "title_type": null
+      }
+    ],
+    "description": "Coronal mass ejections are solar eruptions driven by a sudden release of magnetic energy stored in the Sun's corona. In many cases, this magnetic energy is stored in long-lived, arched structures called magnetic flux ropes. When a flux rope destabilizes, it can either erupt and produce a coronal mass ejection or fail and collapse back towards the Sun. The prevailing belief is that the outcome of a given event is determined by a magnetohydrodynamic force imbalance called the torus instability. This belief is challenged, however, by observations indicating that torus-unstable flux ropes sometimes fail to erupt. This contradiction has not yet been resolved because of a lack of coronal magnetic field measurements and the limitations of idealized numerical modelling. Here we report the results of a laboratory experiment that reveal a previously unknown eruption criterion below which torus-unstable flux ropes fail to erupt. We find that such 'failed torus' events occur when the guide magnetic field (that is, the ambient field that runs toroidally along the flux rope) is strong enough to prevent the flux rope from kinking. Under these conditions, the guide field interacts with electric currents in the flux rope to produce a dynamic toroidal field tension force that halts the eruption. This magnetic tension force is missing from existing eruption models, which is why such models cannot explain or predict failed torus events.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Myers, Clayton",
+        "name_type": "Personal",
+        "given_name": "Clayton",
+        "family_name": "Myers",
+        "identifier": {
+          "value": "0000-0003-4539-8406",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
         },
-        "version_number": "1",
-        "related_objects": [],
-        "keywords": [
-            "laboratory plasma astrophysics",
-            "solar eruptions",
-            "coronal mass ejections",
-            "magnetohydrodynamic instabilities"
-        ],
-        "contributors": [],
-        "organizational_contributors": [],
-        "funders": [
-            {
-                "ror": "https://ror.org/01bj3aw27",
-                "funder_name": "United States Department of Energy",
-                "award_number": "DE-AC02-09CH11466",
-                "award_uri": ""
-            }
-        ],
-        "domains": [],
-        "migrated": true
+        "affiliations": [],
+        "sequence": 1
+      },
+      {
+        "value": "Yamada, Maasaki",
+        "name_type": "Personal",
+        "given_name": "Maasaki",
+        "family_name": "Yamada",
+        "identifier": {
+          "value": "0000-0003-4996-1649",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 2
+      },
+      {
+        "value": "Ji, Hantao",
+        "name_type": "Personal",
+        "given_name": "Hantao",
+        "family_name": "Ji",
+        "identifier": {
+          "value": "0000-0001-9600-9963",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 3
+      },
+      {
+        "value": "Yoo, Jongsoo",
+        "name_type": "Personal",
+        "given_name": "Jongsoo",
+        "family_name": "Yoo",
+        "identifier": {
+          "value": "0000-0003-3881-1995",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 4
+      },
+      {
+        "value": "Fox, William",
+        "name_type": "Personal",
+        "given_name": "William",
+        "family_name": "Fox",
+        "identifier": {
+          "value": "0000-0001-6289-858X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 5
+      },
+      {
+        "value": "Jara-Almonte, Jonathan",
+        "name_type": "Personal",
+        "given_name": "Jonathan",
+        "family_name": "Jara-Almonte",
+        "identifier": {
+          "value": "0000-0003-0760-6198",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 6
+      },
+      {
+        "value": "Savcheva, Antonia",
+        "name_type": "Personal",
+        "given_name": "Antonia",
+        "family_name": "Savcheva",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 7
+      },
+      {
+        "value": "DeLuca, DeLuca",
+        "name_type": "Personal",
+        "given_name": "DeLuca",
+        "family_name": "DeLuca",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 8
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton University",
+    "publication_year": "2015",
+    "ark": "ark:/88435/dsp01j3860933c",
+    "doi": "10.11578/1366453",
+    "rights": {
+      "identifier": "CC BY",
+      "uri": "https://creativecommons.org/licenses/by/4.0/",
+      "name": "Creative Commons Attribution 4.0 International"
     },
-    "files": [],
-    "group": {
-        "title": "Princeton Plasma Physics Lab (PPPL)",
-        "description": "",
-        "code": "PPPL",
-        "created_at": "2022-04-18T11:27:37.363-04:00",
-        "updated_at": "2023-05-18T14:34:30.737-04:00"
-    }
+    "version_number": "1",
+    "related_objects": [],
+    "keywords": [
+      "laboratory plasma astrophysics",
+      "solar eruptions",
+      "coronal mass ejections",
+      "magnetohydrodynamic instabilities"
+    ],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      }
+    ],
+    "domains": [],
+    "migrated": true
+  },
+  "files": [],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": "",
+    "code": "PPPL",
+    "created_at": "2022-04-18T11:27:37.363-04:00",
+    "updated_at": "2023-05-18T14:34:30.737-04:00"
+  }
 }

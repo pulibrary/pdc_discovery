@@ -1,1 +1,279 @@
-{"resource":{"titles":[{"title":"Blob Structure and Motion in the Edge and SOL of NSTX","title_type":null}],"description":"Blob analysis dataset","collection_tags":[],"creators":[{"value":"Zweben, S. J.","name_type":"Personal","given_name":"S. J.","family_name":"Zweben","identifier":{"value":"0000-0002-1738-0586","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0},{"value":"Myra, J. R.","name_type":"Personal","given_name":"J. R.","family_name":"Myra","identifier":null,"affiliations":[],"sequence":1},{"value":"Davis, W. M.","name_type":"Personal","given_name":"W. M.","family_name":"Davis","identifier":{"value":"0000-0003-0666-7247","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":2},{"value":"D'Ippolito, D. A.","name_type":"Personal","given_name":"D. A.","family_name":"D'Ippolito","identifier":null,"affiliations":[],"sequence":3},{"value":"Gray, T. K.","name_type":"Personal","given_name":"T. K.","family_name":"Gray","identifier":null,"affiliations":[],"sequence":4},{"value":"Kaye, S. M.","name_type":"Personal","given_name":"S. M.","family_name":"Kaye","identifier":{"value":"0000-0002-2514-1163","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":5},{"value":"LeBlanc, B. P.","name_type":"Personal","given_name":"B. P.","family_name":"LeBlanc","identifier":{"value":"0000-0003-1455-0129","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":6},{"value":"Maqueda, R. J.","name_type":"Personal","given_name":"R. J.","family_name":"Maqueda","identifier":null,"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":7},{"value":"Russell, D. A.","name_type":"Personal","given_name":"D. A.","family_name":"Russell","identifier":null,"affiliations":[],"sequence":8},{"value":"Stotler, D. P.","name_type":"Personal","given_name":"D. P.","family_name":"Stotler","identifier":{"value":"0000-0001-5521-8718","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":9}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2016","ark":"ark:/88435/dsp01vx021h49j","doi":"10.11578/1562020","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1088/0741-3335/58/4/044007","related_identifier_type":"DOI","relation_type":"IsReferencedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":["Edge Plasma","Tokamak","Blob","Turbulence"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["NSTX","Spherical Torus"],"migrated":true},"files":[{"filename":"10.11578/1562020/115/Zweben_Blobs.zip","size":22215687,"display_size":"21.2 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1562020/115/Zweben_Blobs.zip"},{"filename":"10.11578/1562020/115/readme.txt","size":7368,"display_size":"7.2 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1562020/115/readme.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      { "title": "Blob Structure and Motion in the Edge and SOL of NSTX", "title_type": null }
+    ],
+    "description": "Blob analysis dataset",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Zweben, S. J.",
+        "name_type": "Personal",
+        "given_name": "S. J.",
+        "family_name": "Zweben",
+        "identifier": {
+          "value": "0000-0002-1738-0586",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      },
+      {
+        "value": "Myra, J. R.",
+        "name_type": "Personal",
+        "given_name": "J. R.",
+        "family_name": "Myra",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 1
+      },
+      {
+        "value": "Davis, W. M.",
+        "name_type": "Personal",
+        "given_name": "W. M.",
+        "family_name": "Davis",
+        "identifier": {
+          "value": "0000-0003-0666-7247",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 2
+      },
+      {
+        "value": "D'Ippolito, D. A.",
+        "name_type": "Personal",
+        "given_name": "D. A.",
+        "family_name": "D'Ippolito",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 3
+      },
+      {
+        "value": "Gray, T. K.",
+        "name_type": "Personal",
+        "given_name": "T. K.",
+        "family_name": "Gray",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 4
+      },
+      {
+        "value": "Kaye, S. M.",
+        "name_type": "Personal",
+        "given_name": "S. M.",
+        "family_name": "Kaye",
+        "identifier": {
+          "value": "0000-0002-2514-1163",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 5
+      },
+      {
+        "value": "LeBlanc, B. P.",
+        "name_type": "Personal",
+        "given_name": "B. P.",
+        "family_name": "LeBlanc",
+        "identifier": {
+          "value": "0000-0003-1455-0129",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 6
+      },
+      {
+        "value": "Maqueda, R. J.",
+        "name_type": "Personal",
+        "given_name": "R. J.",
+        "family_name": "Maqueda",
+        "identifier": null,
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 7
+      },
+      {
+        "value": "Russell, D. A.",
+        "name_type": "Personal",
+        "given_name": "D. A.",
+        "family_name": "Russell",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 8
+      },
+      {
+        "value": "Stotler, D. P.",
+        "name_type": "Personal",
+        "given_name": "D. P.",
+        "family_name": "Stotler",
+        "identifier": {
+          "value": "0000-0001-5521-8718",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 9
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2016",
+    "ark": "ark:/88435/dsp01vx021h49j",
+    "doi": "10.11578/1562020",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.1088/0741-3335/58/4/044007",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsReferencedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": ["Edge Plasma", "Tokamak", "Blob", "Turbulence"],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["NSTX", "Spherical Torus"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.11578/1562020/115/Zweben_Blobs.zip",
+      "size": 22215687,
+      "display_size": "21.2 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1562020/115/Zweben_Blobs.zip"
+    },
+    {
+      "filename": "10.11578/1562020/115/readme.txt",
+      "size": 7368,
+      "display_size": "7.2 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1562020/115/readme.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

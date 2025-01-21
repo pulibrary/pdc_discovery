@@ -1,1 +1,216 @@
-{"resource":{"titles":[{"title":"Computation of Alfvèn eigenmode stability and saturation through a reduced fast ion transport model in the TRANSP tokamak transport code","title_type":null}],"description":"Alfvénic instabilities (AEs) are well known as a potential cause of enhanced fast ion transport in fusion devices. Given a specific plasma scenario, quantitative predictions of (i) expected unstable AE spectrum and (ii) resulting fast ion transport are required to prevent or mitigate the AE- induced degradation in fusion performance. Reduced models are becoming an attractive tool to analyze existing scenarios as well as for scenario prediction in time-dependent simulations. In this work, a neutral beam heated NSTX discharge is used as reference to illustrate the potential of a reduced fast ion transport model, known as kick model, that has been recently implemented for interpretive and predictive analysis within the framework of the time-dependent tokamak transport code TRANSP. Predictive capabilities for AE stability and saturation amplitude are first assessed, based on given thermal plasma profiles only. Predictions are then compared to experimental results, and the interpretive capabilities of the model further discussed. Overall, the reduced model captures the main properties of the instabilities and associated effects on the fast ion population. Additional information from the actual experiment enables further tuning of the model’s parameters to achieve a close match with measurements.","collection_tags":[],"creators":[{"value":"Podesta, M.","name_type":"Personal","given_name":"M.","family_name":"Podesta","identifier":{"value":"0000-0003-4975-0585","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0},{"value":"Gorelenkova, M.","name_type":"Personal","given_name":"M.","family_name":"Gorelenkova","identifier":{"value":"0000-0001-8487-1396","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":1},{"value":"Gorelenkov, N. N.","name_type":"Personal","given_name":"N. N.","family_name":"Gorelenkov","identifier":{"value":"0000-0002-7345-8149","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":2},{"value":"White, R. B.","name_type":"Personal","given_name":"R. B.","family_name":"White","identifier":{"value":"0000-0002-4239-2685","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":3}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2017","ark":"ark:/88435/dsp0100000264v","doi":"10.11578/1562027","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1088/1361-6587/aa7977","related_identifier_type":"DOI","relation_type":"IsCitedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":["Neutral beam injection","Energetic particle transport","Reduced transport models","NSTX spherical torus","Alfven instabilities"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["NSTX","Spherical Torus"],"migrated":true},"files":[{"filename":"10.11578/1562027/108/ARK_DATA.zip","size":4238296,"display_size":"4.04 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1562027/108/ARK_DATA.zip"},{"filename":"10.11578/1562027/108/readme.txt","size":6211,"display_size":"6.07 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1562027/108/readme.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Computation of Alfvèn eigenmode stability and saturation through a reduced fast ion transport model in the TRANSP tokamak transport code",
+        "title_type": null
+      }
+    ],
+    "description": "Alfvénic instabilities (AEs) are well known as a potential cause of enhanced fast ion transport in fusion devices. Given a specific plasma scenario, quantitative predictions of (i) expected unstable AE spectrum and (ii) resulting fast ion transport are required to prevent or mitigate the AE- induced degradation in fusion performance. Reduced models are becoming an attractive tool to analyze existing scenarios as well as for scenario prediction in time-dependent simulations. In this work, a neutral beam heated NSTX discharge is used as reference to illustrate the potential of a reduced fast ion transport model, known as kick model, that has been recently implemented for interpretive and predictive analysis within the framework of the time-dependent tokamak transport code TRANSP. Predictive capabilities for AE stability and saturation amplitude are first assessed, based on given thermal plasma profiles only. Predictions are then compared to experimental results, and the interpretive capabilities of the model further discussed. Overall, the reduced model captures the main properties of the instabilities and associated effects on the fast ion population. Additional information from the actual experiment enables further tuning of the model’s parameters to achieve a close match with measurements.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Podesta, M.",
+        "name_type": "Personal",
+        "given_name": "M.",
+        "family_name": "Podesta",
+        "identifier": {
+          "value": "0000-0003-4975-0585",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      },
+      {
+        "value": "Gorelenkova, M.",
+        "name_type": "Personal",
+        "given_name": "M.",
+        "family_name": "Gorelenkova",
+        "identifier": {
+          "value": "0000-0001-8487-1396",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 1
+      },
+      {
+        "value": "Gorelenkov, N. N.",
+        "name_type": "Personal",
+        "given_name": "N. N.",
+        "family_name": "Gorelenkov",
+        "identifier": {
+          "value": "0000-0002-7345-8149",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 2
+      },
+      {
+        "value": "White, R. B.",
+        "name_type": "Personal",
+        "given_name": "R. B.",
+        "family_name": "White",
+        "identifier": {
+          "value": "0000-0002-4239-2685",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 3
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2017",
+    "ark": "ark:/88435/dsp0100000264v",
+    "doi": "10.11578/1562027",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.1088/1361-6587/aa7977",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsCitedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": [
+      "Neutral beam injection",
+      "Energetic particle transport",
+      "Reduced transport models",
+      "NSTX spherical torus",
+      "Alfven instabilities"
+    ],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["NSTX", "Spherical Torus"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.11578/1562027/108/ARK_DATA.zip",
+      "size": 4238296,
+      "display_size": "4.04 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1562027/108/ARK_DATA.zip"
+    },
+    {
+      "filename": "10.11578/1562027/108/readme.txt",
+      "size": 6211,
+      "display_size": "6.07 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1562027/108/readme.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

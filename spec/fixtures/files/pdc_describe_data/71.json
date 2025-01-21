@@ -1,1 +1,230 @@
-{"resource":{"titles":[{"title":"Supplemental material for: Verification, validation, and results of an approximate model for the stress of a Tokamak toroidal field coil at the inboard midplane","title_type":null}],"description":"This is the supplemental material for the manuscript \"Verification, validation, and results of an approximate model for the stress of a Tokamak toroidal field coil at the inboard midplane\" submitted to Fusion Engineering and Design. This material includes PDF writeups of the derivations of the axisymmetric extended plane strain model, the elastic properties smearing model, and 20+ MATLAB scripts and functions which implement the model and generate the figures in the paper.","collection_tags":[],"creators":[{"value":"Swanson, CPS","name_type":"Personal","given_name":"CPS","family_name":"Swanson","identifier":{"value":"0000-0003-0231-8525","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0},{"value":"Kahn, S","name_type":"Personal","given_name":"S","family_name":"Kahn","identifier":null,"affiliations":[],"sequence":1},{"value":"Rana, C","name_type":"Personal","given_name":"C","family_name":"Rana","identifier":{"value":"0000-0002-8460-4543","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":2},{"value":"Titus, PH","name_type":"Personal","given_name":"PH","family_name":"Titus","identifier":{"value":"0000-0003-3643-4866","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":3},{"value":"Brooks, AW","name_type":"Personal","given_name":"AW","family_name":"Brooks","identifier":null,"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":4},{"value":"Guttenfelder, W","name_type":"Personal","given_name":"W","family_name":"Guttenfelder","identifier":{"value":"0000-0001-8181-058X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":5},{"value":"Zhai, Y","name_type":"Personal","given_name":"Y","family_name":"Zhai","identifier":{"value":"0000-0003-2777-2871","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":6},{"value":"Brown, TE","name_type":"Personal","given_name":"TE","family_name":"Brown","identifier":{"value":"0000-0002-6262-5220","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":7},{"value":"Menard, JE","name_type":"Personal","given_name":"JE","family_name":"Menard","identifier":{"value":"0000-0003-1292-3286","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":8}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2022","ark":"88435/dsp01rb68xg060","doi":"10.11578/1888261","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[],"keywords":[],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["ITER and Tokamaks"],"migrated":true},"files":[{"filename":"10.11578/1888261/71/Supplemental Material.zip","size":818982,"display_size":"800 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1888261/71/Supplemental%20Material.zip"},{"filename":"10.11578/1888261/71/license.txt","size":3223,"display_size":"3.15 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1888261/71/license.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Supplemental material for: Verification, validation, and results of an approximate model for the stress of a Tokamak toroidal field coil at the inboard midplane",
+        "title_type": null
+      }
+    ],
+    "description": "This is the supplemental material for the manuscript \"Verification, validation, and results of an approximate model for the stress of a Tokamak toroidal field coil at the inboard midplane\" submitted to Fusion Engineering and Design. This material includes PDF writeups of the derivations of the axisymmetric extended plane strain model, the elastic properties smearing model, and 20+ MATLAB scripts and functions which implement the model and generate the figures in the paper.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Swanson, CPS",
+        "name_type": "Personal",
+        "given_name": "CPS",
+        "family_name": "Swanson",
+        "identifier": {
+          "value": "0000-0003-0231-8525",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      },
+      {
+        "value": "Kahn, S",
+        "name_type": "Personal",
+        "given_name": "S",
+        "family_name": "Kahn",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 1
+      },
+      {
+        "value": "Rana, C",
+        "name_type": "Personal",
+        "given_name": "C",
+        "family_name": "Rana",
+        "identifier": {
+          "value": "0000-0002-8460-4543",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 2
+      },
+      {
+        "value": "Titus, PH",
+        "name_type": "Personal",
+        "given_name": "PH",
+        "family_name": "Titus",
+        "identifier": {
+          "value": "0000-0003-3643-4866",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 3
+      },
+      {
+        "value": "Brooks, AW",
+        "name_type": "Personal",
+        "given_name": "AW",
+        "family_name": "Brooks",
+        "identifier": null,
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 4
+      },
+      {
+        "value": "Guttenfelder, W",
+        "name_type": "Personal",
+        "given_name": "W",
+        "family_name": "Guttenfelder",
+        "identifier": {
+          "value": "0000-0001-8181-058X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 5
+      },
+      {
+        "value": "Zhai, Y",
+        "name_type": "Personal",
+        "given_name": "Y",
+        "family_name": "Zhai",
+        "identifier": {
+          "value": "0000-0003-2777-2871",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 6
+      },
+      {
+        "value": "Brown, TE",
+        "name_type": "Personal",
+        "given_name": "TE",
+        "family_name": "Brown",
+        "identifier": {
+          "value": "0000-0002-6262-5220",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 7
+      },
+      {
+        "value": "Menard, JE",
+        "name_type": "Personal",
+        "given_name": "JE",
+        "family_name": "Menard",
+        "identifier": {
+          "value": "0000-0003-1292-3286",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 8
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2022",
+    "ark": "88435/dsp01rb68xg060",
+    "doi": "10.11578/1888261",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [],
+    "keywords": [],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["ITER and Tokamaks"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.11578/1888261/71/Supplemental Material.zip",
+      "size": 818982,
+      "display_size": "800 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1888261/71/Supplemental%20Material.zip"
+    },
+    {
+      "filename": "10.11578/1888261/71/license.txt",
+      "size": 3223,
+      "display_size": "3.15 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1888261/71/license.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

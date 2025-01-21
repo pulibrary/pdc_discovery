@@ -1,1 +1,302 @@
-{"resource":{"titles":[{"title":"Observation of synergy between lower hybrid waves at two frequencies in EAST","title_type":null}],"description":"Synergistic effects between two frequencies of lower hybrid (LH) waves—operating at 2.45 and 4.6 GHz—were observed in experiment on EAST for the first time. At low density (n_e,lin ≈ 2.0 × 10^19m^−3), simultaneous injection of a 65/35 mix of 2.45 GHz/4.6 GHz power achieved an LHCD efficiency that was 25% higher than what should be expected from the linear combination of the two sources. The experiment was interpreted with time-dependent simulations, using the equilibrium and transport solver TRANSP, coupled with the ray-tracing code GENRAY and the Fokker-Planck solver CQL3D. For each discharge, profiles of current and hard x-ray from simulation and measurement agree within uncertainties. An examination of the electron distribution function indicates that the LH synergy is supported by the increased width of the LH resonance plateau in the simultaneous injection case compared to independent injection.","collection_tags":[],"creators":[{"value":"Choi, W.","name_type":"Personal","given_name":"W.","family_name":"Choi","identifier":{"value":"0000-0002-6891-2300","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0},{"value":"Poli, F. M.","name_type":"Personal","given_name":"F. M.","family_name":"Poli","identifier":{"value":"0000-0003-3959-4371","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":1},{"value":"Li, M. H.","name_type":"Personal","given_name":"M. H.","family_name":"Li","identifier":{"value":"0000-0002-3658-8243","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":2},{"value":"Baek, S. G.","name_type":"Personal","given_name":"S. G.","family_name":"Baek","identifier":{"value":"0000-0001-8029-3525","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":3},{"value":"Gorelenkova, M.","name_type":"Personal","given_name":"M.","family_name":"Gorelenkova","identifier":{"value":"0000-0001-8487-1396","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":4},{"value":"Ding, B. J.","name_type":"Personal","given_name":"B. J.","family_name":"Ding","identifier":{"value":"0000-0002-8445-4979","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":5},{"value":"Gong, X. Z.","name_type":"Personal","given_name":"X. Z.","family_name":"Gong","identifier":null,"affiliations":[],"sequence":6},{"value":"Chan, A.","name_type":"Personal","given_name":"A.","family_name":"Chan","identifier":null,"affiliations":[],"sequence":7},{"value":"Duan, Y. M.","name_type":"Personal","given_name":"Y. M.","family_name":"Duan","identifier":null,"affiliations":[],"sequence":8},{"value":"Hu, J. H.","name_type":"Personal","given_name":"J. H.","family_name":"Hu","identifier":null,"affiliations":[],"sequence":9},{"value":"Lian, H.","name_type":"Personal","given_name":"H.","family_name":"Lian","identifier":null,"affiliations":[],"sequence":10},{"value":"Lin, S. Y.","name_type":"Personal","given_name":"S. Y.","family_name":"Lin","identifier":null,"affiliations":[],"sequence":11},{"value":"Liu, H. Q.","name_type":"Personal","given_name":"H. Q.","family_name":"Liu","identifier":{"value":"0000-0001-6892-358X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":12},{"value":"Qian, J. P.","name_type":"Personal","given_name":"J. P.","family_name":"Qian","identifier":{"value":"0000-0002-2646-6509","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":13},{"value":"Wallace, G.","name_type":"Personal","given_name":"G.","family_name":"Wallace","identifier":{"value":"0000-0001-6303-3684","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":14},{"value":"Wang, Y. M.","name_type":"Personal","given_name":"Y. M.","family_name":"Wang","identifier":{"value":"0000-0001-5398-884X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":15},{"value":"Zang, Q.","name_type":"Personal","given_name":"Q.","family_name":"Zang","identifier":{"value":"0000-0001-9876-1948","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":16},{"value":"Zhao, H. L.","name_type":"Personal","given_name":"H. L.","family_name":"Zhao","identifier":{"value":"0000-0002-6298-1217","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":17}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2021","ark":"ark:/88435/dsp0137720g81z","doi":"10.11578/1814956","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[],"keywords":["Lower hybrid synergy","TRANSP simulation"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["ITER and Tokamaks"],"migrated":true},"files":[{"filename":"10.11578/1814956/69/LHsynergyDMP.h5","size":3576778,"display_size":"3.41 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814956/69/LHsynergyDMP.h5"},{"filename":"10.11578/1814956/69/LHsynergyDMP.txt","size":1971,"display_size":"1.92 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814956/69/LHsynergyDMP.txt"},{"filename":"10.11578/1814956/69/license.txt","size":3223,"display_size":"3.15 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814956/69/license.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Observation of synergy between lower hybrid waves at two frequencies in EAST",
+        "title_type": null
+      }
+    ],
+    "description": "Synergistic effects between two frequencies of lower hybrid (LH) waves—operating at 2.45 and 4.6 GHz—were observed in experiment on EAST for the first time. At low density (n_e,lin ≈ 2.0 × 10^19m^−3), simultaneous injection of a 65/35 mix of 2.45 GHz/4.6 GHz power achieved an LHCD efficiency that was 25% higher than what should be expected from the linear combination of the two sources. The experiment was interpreted with time-dependent simulations, using the equilibrium and transport solver TRANSP, coupled with the ray-tracing code GENRAY and the Fokker-Planck solver CQL3D. For each discharge, profiles of current and hard x-ray from simulation and measurement agree within uncertainties. An examination of the electron distribution function indicates that the LH synergy is supported by the increased width of the LH resonance plateau in the simultaneous injection case compared to independent injection.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Choi, W.",
+        "name_type": "Personal",
+        "given_name": "W.",
+        "family_name": "Choi",
+        "identifier": {
+          "value": "0000-0002-6891-2300",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      },
+      {
+        "value": "Poli, F. M.",
+        "name_type": "Personal",
+        "given_name": "F. M.",
+        "family_name": "Poli",
+        "identifier": {
+          "value": "0000-0003-3959-4371",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 1
+      },
+      {
+        "value": "Li, M. H.",
+        "name_type": "Personal",
+        "given_name": "M. H.",
+        "family_name": "Li",
+        "identifier": {
+          "value": "0000-0002-3658-8243",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 2
+      },
+      {
+        "value": "Baek, S. G.",
+        "name_type": "Personal",
+        "given_name": "S. G.",
+        "family_name": "Baek",
+        "identifier": {
+          "value": "0000-0001-8029-3525",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 3
+      },
+      {
+        "value": "Gorelenkova, M.",
+        "name_type": "Personal",
+        "given_name": "M.",
+        "family_name": "Gorelenkova",
+        "identifier": {
+          "value": "0000-0001-8487-1396",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 4
+      },
+      {
+        "value": "Ding, B. J.",
+        "name_type": "Personal",
+        "given_name": "B. J.",
+        "family_name": "Ding",
+        "identifier": {
+          "value": "0000-0002-8445-4979",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 5
+      },
+      {
+        "value": "Gong, X. Z.",
+        "name_type": "Personal",
+        "given_name": "X. Z.",
+        "family_name": "Gong",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 6
+      },
+      {
+        "value": "Chan, A.",
+        "name_type": "Personal",
+        "given_name": "A.",
+        "family_name": "Chan",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 7
+      },
+      {
+        "value": "Duan, Y. M.",
+        "name_type": "Personal",
+        "given_name": "Y. M.",
+        "family_name": "Duan",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 8
+      },
+      {
+        "value": "Hu, J. H.",
+        "name_type": "Personal",
+        "given_name": "J. H.",
+        "family_name": "Hu",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 9
+      },
+      {
+        "value": "Lian, H.",
+        "name_type": "Personal",
+        "given_name": "H.",
+        "family_name": "Lian",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 10
+      },
+      {
+        "value": "Lin, S. Y.",
+        "name_type": "Personal",
+        "given_name": "S. Y.",
+        "family_name": "Lin",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 11
+      },
+      {
+        "value": "Liu, H. Q.",
+        "name_type": "Personal",
+        "given_name": "H. Q.",
+        "family_name": "Liu",
+        "identifier": {
+          "value": "0000-0001-6892-358X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 12
+      },
+      {
+        "value": "Qian, J. P.",
+        "name_type": "Personal",
+        "given_name": "J. P.",
+        "family_name": "Qian",
+        "identifier": {
+          "value": "0000-0002-2646-6509",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 13
+      },
+      {
+        "value": "Wallace, G.",
+        "name_type": "Personal",
+        "given_name": "G.",
+        "family_name": "Wallace",
+        "identifier": {
+          "value": "0000-0001-6303-3684",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 14
+      },
+      {
+        "value": "Wang, Y. M.",
+        "name_type": "Personal",
+        "given_name": "Y. M.",
+        "family_name": "Wang",
+        "identifier": {
+          "value": "0000-0001-5398-884X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 15
+      },
+      {
+        "value": "Zang, Q.",
+        "name_type": "Personal",
+        "given_name": "Q.",
+        "family_name": "Zang",
+        "identifier": {
+          "value": "0000-0001-9876-1948",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 16
+      },
+      {
+        "value": "Zhao, H. L.",
+        "name_type": "Personal",
+        "given_name": "H. L.",
+        "family_name": "Zhao",
+        "identifier": {
+          "value": "0000-0002-6298-1217",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 17
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2021",
+    "ark": "ark:/88435/dsp0137720g81z",
+    "doi": "10.11578/1814956",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [],
+    "keywords": ["Lower hybrid synergy", "TRANSP simulation"],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["ITER and Tokamaks"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.11578/1814956/69/LHsynergyDMP.h5",
+      "size": 3576778,
+      "display_size": "3.41 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814956/69/LHsynergyDMP.h5"
+    },
+    {
+      "filename": "10.11578/1814956/69/LHsynergyDMP.txt",
+      "size": 1971,
+      "display_size": "1.92 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814956/69/LHsynergyDMP.txt"
+    },
+    {
+      "filename": "10.11578/1814956/69/license.txt",
+      "size": 3223,
+      "display_size": "3.15 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814956/69/license.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

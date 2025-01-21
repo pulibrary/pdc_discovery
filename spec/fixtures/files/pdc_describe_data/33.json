@@ -1,1 +1,357 @@
-{"resource":{"titles":[{"title":"Attention and awareness in the dorsal attention network","title_type":null}],"description":"The attention schema theory (AST) posits a specific relationship between subjective awareness and attention, in which awareness is the control model that the brain uses to aid in the endogenous control of attention. We proposed that the right temporoparietal junction (TPJ) is involved in that interaction between awareness and attention. In previous experiments, we developed a behavioral paradigm in human subjects to manipulate awareness and attention. The paradigm involved a visual cue that could be used to guide a shift of attention to a target stimulus. In task 1, subjects were aware of the visual cue, and their endogenous control mechanism was able to use the cue to help control attention. In task 2, subjects were unaware of the visual cue, and their endogenous control mechanism was no longer able to use it to control attention, even though the cue still had a measurable effect on other aspects of behavior. Here we tested the two tasks while scanning brain activity in human volunteers. We predicted that the right TPJ would be active in relation to the cue in task 1, but not in task 2. This prediction was confirmed. The right TPJ was active in relation to the cue in task 1; it was not measurably active in task 2; the difference was significant. In our interpretation, the right TPJ is involved in a complex interaction in which awareness aids in the control of attention. This dataset contains structural and functional MRI images from human subjects learning to use subliminal and superliminal stimuli to perform a Posner-like reaction time task. Download the README.txt file for a detailed description of this dataset's content","collection_tags":[],"creators":[{"value":"Wilterson, Andrew","name_type":"Personal","given_name":"Andrew","family_name":"Wilterson","identifier":{"value":"0000-0002-4080-5386","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":0},{"value":"Nastase, Samuel","name_type":"Personal","given_name":"Samuel","family_name":"Nastase","identifier":{"value":"0000-0001-7013-5275","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":1},{"value":"Bio, Branden","name_type":"Personal","given_name":"Branden","family_name":"Bio","identifier":{"value":"0000-0002-6243-3165","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":2},{"value":"Guterstam, Arvid","name_type":"Personal","given_name":"Arvid","family_name":"Guterstam","identifier":{"value":"0000-0002-3694-1318","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":3},{"value":"Graziano, Michael","name_type":"Personal","given_name":"Michael","family_name":"Graziano","identifier":null,"affiliations":[],"sequence":4}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton University","publication_year":"2020","ark":"ark:/88435/dsp01xp68kk27p","doi":"10.34770/9425-b553","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[],"keywords":[],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"","funder_name":"Princeton Neuroscience Institute Innovation Fund","award_number":"PRINU-24400-G0002-10005089-101","award_uri":""}],"domains":[],"communities":[],"subcommunities":[],"migrated":true},"files":[{"filename":"10.34770/9425-b553/33/Behavioral.zip","size":12030658,"display_size":"11.5 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/Behavioral.zip"},{"filename":"10.34770/9425-b553/33/Experiment_Log.csv","size":844,"display_size":"844 Bytes","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/Experiment_Log.csv"},{"filename":"10.34770/9425-b553/33/Experiment_Log.xlsx","size":11082,"display_size":"10.8 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/Experiment_Log.xlsx"},{"filename":"10.34770/9425-b553/33/data_space_Attention_Awareness_Dorsal_Attention_README.txt","size":7166,"display_size":"7 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/data_space_Attention_Awareness_Dorsal_Attention_README.txt"},{"filename":"10.34770/9425-b553/33/globus_Attention_Awareness_Dorsal_Attention_README.txt","size":7166,"display_size":"7 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/globus_Attention_Awareness_Dorsal_Attention_README.txt"},{"filename":"10.34770/9425-b553/33/license.txt","size":3223,"display_size":"3.15 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/license.txt"},{"filename":"10.34770/9425-b553/33/sub-105.zip","size":454823618,"display_size":"434 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-105.zip"},{"filename":"10.34770/9425-b553/33/sub-112.zip","size":454680015,"display_size":"434 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-112.zip"},{"filename":"10.34770/9425-b553/33/sub-113.zip","size":442835898,"display_size":"422 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-113.zip"},{"filename":"10.34770/9425-b553/33/sub-115.zip","size":426954278,"display_size":"407 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-115.zip"},{"filename":"10.34770/9425-b553/33/sub-117.zip","size":455659563,"display_size":"435 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-117.zip"},{"filename":"10.34770/9425-b553/33/sub-119.zip","size":454799578,"display_size":"434 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-119.zip"},{"filename":"10.34770/9425-b553/33/sub-121.zip","size":433811001,"display_size":"414 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-121.zip"},{"filename":"10.34770/9425-b553/33/sub-122.zip","size":436100084,"display_size":"416 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-122.zip"},{"filename":"10.34770/9425-b553/33/sub-123.zip","size":440432309,"display_size":"420 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-123.zip"},{"filename":"10.34770/9425-b553/33/sub-124.zip","size":468606312,"display_size":"447 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-124.zip"},{"filename":"10.34770/9425-b553/33/sub-125.zip","size":437176242,"display_size":"417 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-125.zip"},{"filename":"10.34770/9425-b553/33/sub-126.zip","size":432862708,"display_size":"413 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-126.zip"},{"filename":"10.34770/9425-b553/33/sub-127.zip","size":476500752,"display_size":"454 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-127.zip"},{"filename":"10.34770/9425-b553/33/sub-128.zip","size":453488760,"display_size":"432 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-128.zip"},{"filename":"10.34770/9425-b553/33/sub-130.zip","size":446069593,"display_size":"425 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-130.zip"},{"filename":"10.34770/9425-b553/33/sub-131.zip","size":419525725,"display_size":"400 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-131.zip"},{"filename":"10.34770/9425-b553/33/sub-132.zip","size":451356838,"display_size":"430 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-132.zip"},{"filename":"10.34770/9425-b553/33/sub-133.zip","size":438182575,"display_size":"418 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-133.zip"},{"filename":"10.34770/9425-b553/33/sub-136.zip","size":482375256,"display_size":"460 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-136.zip"},{"filename":"10.34770/9425-b553/33/sub-138.zip","size":431514665,"display_size":"412 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-138.zip"},{"filename":"10.34770/9425-b553/33/sub-139.zip","size":382961152,"display_size":"365 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-139.zip"},{"filename":"10.34770/9425-b553/33/sub-142.zip","size":447668580,"display_size":"427 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-142.zip"},{"filename":"10.34770/9425-b553/33/sub-143.zip","size":441940734,"display_size":"421 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-143.zip"},{"filename":"10.34770/9425-b553/33/sub-144.zip","size":430356460,"display_size":"410 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-144.zip"},{"filename":"10.34770/9425-b553/33/sub-145.zip","size":441779295,"display_size":"421 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-145.zip"},{"filename":"10.34770/9425-b553/33/sub-147.zip","size":440829811,"display_size":"420 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-147.zip"},{"filename":"10.34770/9425-b553/33/sub-149.zip","size":457122636,"display_size":"436 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-149.zip"},{"filename":"10.34770/9425-b553/33/sub-150.zip","size":476386171,"display_size":"454 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-150.zip"},{"filename":"10.34770/9425-b553/33/sub-153.zip","size":491325335,"display_size":"469 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-153.zip"},{"filename":"10.34770/9425-b553/33/sub-154.zip","size":440433877,"display_size":"420 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-154.zip"},{"filename":"10.34770/9425-b553/33/sub-155.zip","size":420677100,"display_size":"401 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-155.zip"},{"filename":"10.34770/9425-b553/33/sub-156.zip","size":468898251,"display_size":"447 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-156.zip"},{"filename":"10.34770/9425-b553/33/sub-157.zip","size":432596074,"display_size":"413 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-157.zip"},{"filename":"10.34770/9425-b553/33/sub-158.zip","size":409685271,"display_size":"391 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-158.zip"},{"filename":"10.34770/9425-b553/33/sub-159.zip","size":442221483,"display_size":"422 MB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-159.zip"}],"group":{"title":"Princeton Research Data Service (PRDS)","description":null,"code":"RD","created_at":"2022-04-28T16:30:00.190-04:00","updated_at":"2023-05-18T14:20:45.251-04:00"}}
+{
+  "resource": {
+    "titles": [
+      { "title": "Attention and awareness in the dorsal attention network", "title_type": null }
+    ],
+    "description": "The attention schema theory (AST) posits a specific relationship between subjective awareness and attention, in which awareness is the control model that the brain uses to aid in the endogenous control of attention. We proposed that the right temporoparietal junction (TPJ) is involved in that interaction between awareness and attention. In previous experiments, we developed a behavioral paradigm in human subjects to manipulate awareness and attention. The paradigm involved a visual cue that could be used to guide a shift of attention to a target stimulus. In task 1, subjects were aware of the visual cue, and their endogenous control mechanism was able to use the cue to help control attention. In task 2, subjects were unaware of the visual cue, and their endogenous control mechanism was no longer able to use it to control attention, even though the cue still had a measurable effect on other aspects of behavior. Here we tested the two tasks while scanning brain activity in human volunteers. We predicted that the right TPJ would be active in relation to the cue in task 1, but not in task 2. This prediction was confirmed. The right TPJ was active in relation to the cue in task 1; it was not measurably active in task 2; the difference was significant. In our interpretation, the right TPJ is involved in a complex interaction in which awareness aids in the control of attention. This dataset contains structural and functional MRI images from human subjects learning to use subliminal and superliminal stimuli to perform a Posner-like reaction time task. Download the README.txt file for a detailed description of this dataset's content",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Wilterson, Andrew",
+        "name_type": "Personal",
+        "given_name": "Andrew",
+        "family_name": "Wilterson",
+        "identifier": {
+          "value": "0000-0002-4080-5386",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 0
+      },
+      {
+        "value": "Nastase, Samuel",
+        "name_type": "Personal",
+        "given_name": "Samuel",
+        "family_name": "Nastase",
+        "identifier": {
+          "value": "0000-0001-7013-5275",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 1
+      },
+      {
+        "value": "Bio, Branden",
+        "name_type": "Personal",
+        "given_name": "Branden",
+        "family_name": "Bio",
+        "identifier": {
+          "value": "0000-0002-6243-3165",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 2
+      },
+      {
+        "value": "Guterstam, Arvid",
+        "name_type": "Personal",
+        "given_name": "Arvid",
+        "family_name": "Guterstam",
+        "identifier": {
+          "value": "0000-0002-3694-1318",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 3
+      },
+      {
+        "value": "Graziano, Michael",
+        "name_type": "Personal",
+        "given_name": "Michael",
+        "family_name": "Graziano",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 4
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton University",
+    "publication_year": "2020",
+    "ark": "ark:/88435/dsp01xp68kk27p",
+    "doi": "10.34770/9425-b553",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [],
+    "keywords": [],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "",
+        "funder_name": "Princeton Neuroscience Institute Innovation Fund",
+        "award_number": "PRINU-24400-G0002-10005089-101",
+        "award_uri": ""
+      }
+    ],
+    "domains": [],
+    "communities": [],
+    "subcommunities": [],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.34770/9425-b553/33/Behavioral.zip",
+      "size": 12030658,
+      "display_size": "11.5 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/Behavioral.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/Experiment_Log.csv",
+      "size": 844,
+      "display_size": "844 Bytes",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/Experiment_Log.csv"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/Experiment_Log.xlsx",
+      "size": 11082,
+      "display_size": "10.8 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/Experiment_Log.xlsx"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/data_space_Attention_Awareness_Dorsal_Attention_README.txt",
+      "size": 7166,
+      "display_size": "7 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/data_space_Attention_Awareness_Dorsal_Attention_README.txt"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/globus_Attention_Awareness_Dorsal_Attention_README.txt",
+      "size": 7166,
+      "display_size": "7 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/globus_Attention_Awareness_Dorsal_Attention_README.txt"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/license.txt",
+      "size": 3223,
+      "display_size": "3.15 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/license.txt"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-105.zip",
+      "size": 454823618,
+      "display_size": "434 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-105.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-112.zip",
+      "size": 454680015,
+      "display_size": "434 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-112.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-113.zip",
+      "size": 442835898,
+      "display_size": "422 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-113.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-115.zip",
+      "size": 426954278,
+      "display_size": "407 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-115.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-117.zip",
+      "size": 455659563,
+      "display_size": "435 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-117.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-119.zip",
+      "size": 454799578,
+      "display_size": "434 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-119.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-121.zip",
+      "size": 433811001,
+      "display_size": "414 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-121.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-122.zip",
+      "size": 436100084,
+      "display_size": "416 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-122.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-123.zip",
+      "size": 440432309,
+      "display_size": "420 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-123.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-124.zip",
+      "size": 468606312,
+      "display_size": "447 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-124.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-125.zip",
+      "size": 437176242,
+      "display_size": "417 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-125.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-126.zip",
+      "size": 432862708,
+      "display_size": "413 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-126.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-127.zip",
+      "size": 476500752,
+      "display_size": "454 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-127.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-128.zip",
+      "size": 453488760,
+      "display_size": "432 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-128.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-130.zip",
+      "size": 446069593,
+      "display_size": "425 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-130.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-131.zip",
+      "size": 419525725,
+      "display_size": "400 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-131.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-132.zip",
+      "size": 451356838,
+      "display_size": "430 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-132.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-133.zip",
+      "size": 438182575,
+      "display_size": "418 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-133.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-136.zip",
+      "size": 482375256,
+      "display_size": "460 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-136.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-138.zip",
+      "size": 431514665,
+      "display_size": "412 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-138.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-139.zip",
+      "size": 382961152,
+      "display_size": "365 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-139.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-142.zip",
+      "size": 447668580,
+      "display_size": "427 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-142.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-143.zip",
+      "size": 441940734,
+      "display_size": "421 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-143.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-144.zip",
+      "size": 430356460,
+      "display_size": "410 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-144.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-145.zip",
+      "size": 441779295,
+      "display_size": "421 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-145.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-147.zip",
+      "size": 440829811,
+      "display_size": "420 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-147.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-149.zip",
+      "size": 457122636,
+      "display_size": "436 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-149.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-150.zip",
+      "size": 476386171,
+      "display_size": "454 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-150.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-153.zip",
+      "size": 491325335,
+      "display_size": "469 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-153.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-154.zip",
+      "size": 440433877,
+      "display_size": "420 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-154.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-155.zip",
+      "size": 420677100,
+      "display_size": "401 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-155.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-156.zip",
+      "size": 468898251,
+      "display_size": "447 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-156.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-157.zip",
+      "size": 432596074,
+      "display_size": "413 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-157.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-158.zip",
+      "size": 409685271,
+      "display_size": "391 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-158.zip"
+    },
+    {
+      "filename": "10.34770/9425-b553/33/sub-159.zip",
+      "size": 442221483,
+      "display_size": "422 MB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/9425-b553/33/sub-159.zip"
+    }
+  ],
+  "group": {
+    "title": "Princeton Research Data Service (PRDS)",
+    "description": null,
+    "code": "RD",
+    "created_at": "2022-04-28T16:30:00.190-04:00",
+    "updated_at": "2023-05-18T14:20:45.251-04:00"
+  }
+}

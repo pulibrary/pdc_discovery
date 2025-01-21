@@ -1,1 +1,388 @@
-{"resource":{"titles":[{"title":"Initial operation and data processing on a system for real-time evaluation of Thomson scattering signals on the Large Helical Device","title_type":null}],"description":"A scalable system for real-time analysis of electron temperature and density based on signals from the Thomson scattering diagnostic, initially developed for and installed on the NSTX-U experiment, was recently adapted for the Large Helical Device (LHD) and operated for the first time during plasma discharges. During its initial operation run, it routinely recorded and processed signals for four spatial points at the laser repetition rate of 30 Hz, well within the system's rated capability for 60 Hz. We present examples of data collected from this initial run and describe subsequent adaptations to the analysis code to improve the fidelity of the temperature calculations.\r\n\r\nPlease consult the file README.txt for a description of the archive contents.","collection_tags":[],"creators":[{"value":"Hammond, K.C.","name_type":"Personal","given_name":"K.C.","family_name":"Hammond","identifier":{"value":"0000-0002-1104-4434","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0},{"value":"Laggner, F.M.","name_type":"Personal","given_name":"F.M.","family_name":"Laggner","identifier":{"value":"0000-0003-1601-2973","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":1},{"value":"Diallo, A.","name_type":"Personal","given_name":"A.","family_name":"Diallo","identifier":{"value":"0000-0002-0706-060X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":2},{"value":"Doskoczynski, S.","name_type":"Personal","given_name":"S.","family_name":"Doskoczynski","identifier":null,"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":3},{"value":"Freeman, C.","name_type":"Personal","given_name":"C.","family_name":"Freeman","identifier":null,"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":4},{"value":"Funaba, H.","name_type":"Personal","given_name":"H.","family_name":"Funaba","identifier":null,"affiliations":[],"sequence":5},{"value":"Gates, D.A.","name_type":"Personal","given_name":"D.A.","family_name":"Gates","identifier":{"value":"0000-0001-5679-3124","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":6},{"value":"Rozenblat, Roman","name_type":"Personal","given_name":"Roman","family_name":"Rozenblat","identifier":{"value":"0000-0002-4338-090X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":7},{"value":"Tchilinguirian, G.","name_type":"Personal","given_name":"G.","family_name":"Tchilinguirian","identifier":{"value":"0000-0002-8014-5212","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":8},{"value":"Xing, Zichuan","name_type":"Personal","given_name":"Zichuan","family_name":"Xing","identifier":{"value":"0000-0003-3887-0792","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":9},{"value":"Yamada, Ichihiro","name_type":"Personal","given_name":"Ichihiro","family_name":"Yamada","identifier":{"value":"0000-0002-7023-1539","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":10},{"value":"Yasuhara, Ryo","name_type":"Personal","given_name":"Ryo","family_name":"Yasuhara","identifier":{"value":"0000-0001-5377-637X","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[],"sequence":11},{"value":"Zimmer, G","name_type":"Personal","given_name":"G","family_name":"Zimmer","identifier":{"value":"0000-0002-1992-5121","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":12},{"value":"Kolemen, E.","name_type":"Personal","given_name":"E.","family_name":"Kolemen","identifier":{"value":"0000-0003-4212-3247","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":13}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2021","ark":"ark:/88435/dsp014t64gr25v","doi":"10.11578/1814942","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1063/5.0041507","related_identifier_type":"DOI","relation_type":"IsCitedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":["Thomson scattering","real-time","LHD","plasma diagnostic"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""},{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-SC0015480","award_uri":""},{"ror":"https://ror.org/01t3wyv61","funder_name":"National Institute for Fusion Science","award_number":"ULHH040","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["Advanced Projects","Stellarators"],"migrated":true},"files":[{"filename":"10.11578/1814942/51/README.txt","size":12228,"display_size":"11.9 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814942/51/README.txt"},{"filename":"10.11578/1814942/51/archive_data.zip","size":391621,"display_size":"382 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814942/51/archive_data.zip"},{"filename":"10.11578/1814942/51/license.txt","size":3223,"display_size":"3.15 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814942/51/license.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Initial operation and data processing on a system for real-time evaluation of Thomson scattering signals on the Large Helical Device",
+        "title_type": null
+      }
+    ],
+    "description": "A scalable system for real-time analysis of electron temperature and density based on signals from the Thomson scattering diagnostic, initially developed for and installed on the NSTX-U experiment, was recently adapted for the Large Helical Device (LHD) and operated for the first time during plasma discharges. During its initial operation run, it routinely recorded and processed signals for four spatial points at the laser repetition rate of 30 Hz, well within the system's rated capability for 60 Hz. We present examples of data collected from this initial run and describe subsequent adaptations to the analysis code to improve the fidelity of the temperature calculations.\r\n\r\nPlease consult the file README.txt for a description of the archive contents.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Hammond, K.C.",
+        "name_type": "Personal",
+        "given_name": "K.C.",
+        "family_name": "Hammond",
+        "identifier": {
+          "value": "0000-0002-1104-4434",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      },
+      {
+        "value": "Laggner, F.M.",
+        "name_type": "Personal",
+        "given_name": "F.M.",
+        "family_name": "Laggner",
+        "identifier": {
+          "value": "0000-0003-1601-2973",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 1
+      },
+      {
+        "value": "Diallo, A.",
+        "name_type": "Personal",
+        "given_name": "A.",
+        "family_name": "Diallo",
+        "identifier": {
+          "value": "0000-0002-0706-060X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 2
+      },
+      {
+        "value": "Doskoczynski, S.",
+        "name_type": "Personal",
+        "given_name": "S.",
+        "family_name": "Doskoczynski",
+        "identifier": null,
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 3
+      },
+      {
+        "value": "Freeman, C.",
+        "name_type": "Personal",
+        "given_name": "C.",
+        "family_name": "Freeman",
+        "identifier": null,
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 4
+      },
+      {
+        "value": "Funaba, H.",
+        "name_type": "Personal",
+        "given_name": "H.",
+        "family_name": "Funaba",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 5
+      },
+      {
+        "value": "Gates, D.A.",
+        "name_type": "Personal",
+        "given_name": "D.A.",
+        "family_name": "Gates",
+        "identifier": {
+          "value": "0000-0001-5679-3124",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 6
+      },
+      {
+        "value": "Rozenblat, Roman",
+        "name_type": "Personal",
+        "given_name": "Roman",
+        "family_name": "Rozenblat",
+        "identifier": {
+          "value": "0000-0002-4338-090X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 7
+      },
+      {
+        "value": "Tchilinguirian, G.",
+        "name_type": "Personal",
+        "given_name": "G.",
+        "family_name": "Tchilinguirian",
+        "identifier": {
+          "value": "0000-0002-8014-5212",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 8
+      },
+      {
+        "value": "Xing, Zichuan",
+        "name_type": "Personal",
+        "given_name": "Zichuan",
+        "family_name": "Xing",
+        "identifier": {
+          "value": "0000-0003-3887-0792",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 9
+      },
+      {
+        "value": "Yamada, Ichihiro",
+        "name_type": "Personal",
+        "given_name": "Ichihiro",
+        "family_name": "Yamada",
+        "identifier": {
+          "value": "0000-0002-7023-1539",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 10
+      },
+      {
+        "value": "Yasuhara, Ryo",
+        "name_type": "Personal",
+        "given_name": "Ryo",
+        "family_name": "Yasuhara",
+        "identifier": {
+          "value": "0000-0001-5377-637X",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [],
+        "sequence": 11
+      },
+      {
+        "value": "Zimmer, G",
+        "name_type": "Personal",
+        "given_name": "G",
+        "family_name": "Zimmer",
+        "identifier": {
+          "value": "0000-0002-1992-5121",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 12
+      },
+      {
+        "value": "Kolemen, E.",
+        "name_type": "Personal",
+        "given_name": "E.",
+        "family_name": "Kolemen",
+        "identifier": {
+          "value": "0000-0003-4212-3247",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 13
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2021",
+    "ark": "ark:/88435/dsp014t64gr25v",
+    "doi": "10.11578/1814942",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.1063/5.0041507",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsCitedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": ["Thomson scattering", "real-time", "LHD", "plasma diagnostic"],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      },
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-SC0015480",
+        "award_uri": ""
+      },
+      {
+        "ror": "https://ror.org/01t3wyv61",
+        "funder_name": "National Institute for Fusion Science",
+        "award_number": "ULHH040",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["Advanced Projects", "Stellarators"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.11578/1814942/51/README.txt",
+      "size": 12228,
+      "display_size": "11.9 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814942/51/README.txt"
+    },
+    {
+      "filename": "10.11578/1814942/51/archive_data.zip",
+      "size": 391621,
+      "display_size": "382 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814942/51/archive_data.zip"
+    },
+    {
+      "filename": "10.11578/1814942/51/license.txt",
+      "size": 3223,
+      "display_size": "3.15 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1814942/51/license.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

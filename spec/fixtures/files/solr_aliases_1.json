@@ -1,17 +1,20 @@
 {
-  "responseHeader":{
-    "status":0,
-    "QTime":1},
-  "aliases":{
-    "catalog-alma-staging":"catalog-alma-staging2",
-    "catalog-alma-staging-rebuild":"catalog-alma-staging1",
-    "catalog-qa":"catalog-qa1",
-    "catalog-qa-rebuild":"catalog-qa2",
-    "catalog-staging":"catalog-staging2",
-    "dss-staging":"dss-staging1",
-    "library-staging":"library-staging1",
-    "special-collections-staging":"special-collections-staging1",
-    "catalog-staging-rebuild":"catalog-staging1",
-    "lae-staging":"lae-staging1",
-    "pdc-discovery-staging":"pdc-discovery-staging-1"},
-  "properties":{}}
+  "responseHeader": {
+    "status": 0,
+    "QTime": 1
+  },
+  "aliases": {
+    "catalog-alma-staging": "catalog-alma-staging2",
+    "catalog-alma-staging-rebuild": "catalog-alma-staging1",
+    "catalog-qa": "catalog-qa1",
+    "catalog-qa-rebuild": "catalog-qa2",
+    "catalog-staging": "catalog-staging2",
+    "dss-staging": "dss-staging1",
+    "library-staging": "library-staging1",
+    "special-collections-staging": "special-collections-staging1",
+    "catalog-staging-rebuild": "catalog-staging1",
+    "lae-staging": "lae-staging1",
+    "pdc-discovery-staging": "pdc-discovery-staging-1"
+  },
+  "properties": {}
+}

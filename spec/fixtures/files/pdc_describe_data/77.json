@@ -1,1 +1,291 @@
-{"resource":{"titles":[{"title":"Validation and benchmarking of two particle-in-cell codes for a glow discharge","title_type":null}],"description":"The two particle-in-cell codes EDIPIC and LSP are benchmarked and validated for a parallel-plate glow discharge in helium, in which the axial electric field had been carefully measured, primarily to investigate and improve the fidelity of their collision models. The scattering anisotropy of electron-impact ionization, as well as the value of the secondary-electron emission yield, are not well known in this case. The experimental  uncertainty for the emission yield corresponds to a factor of two variation in the cathode current. If the emission yield is tuned to make the cathode current computed by each code match the experiment, the computed electric fields are in excellent agreement with each other, and within about 10% of the experimental value. The non-monotonic variation of the width of the cathode fa ll with the applied voltage seen in the experiment is reproduced by both codes. The electron temperature in the negative glow is within experimental error bars for both codes, but the density of slow trapped electrons is underestimated. A more detailed code comparison don e for several synthetic cases of electron-beam injection into helium gas shows that the codes are in excellent agreement for ionization rate, as well as for elastic and excitation collisions with isotropic scattering pattern. The remaining significant discrepancies between the two codes are due to differences in their electron binary-collision models, and for anisotropic scattering due to elastic and excitation collisions.","collection_tags":[],"creators":[{"value":"Carlsson, J.","name_type":"Personal","given_name":"J.","family_name":"Carlsson","identifier":null,"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":0},{"value":"Khrabrov, A.","name_type":"Personal","given_name":"A.","family_name":"Khrabrov","identifier":null,"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":1},{"value":"Kaganovich, I.","name_type":"Personal","given_name":"I.","family_name":"Kaganovich","identifier":{"value":"0000-0003-0653-5682","scheme":"ORCID","scheme_uri":"https://orcid.org"},"affiliations":[{"value":"Princeton Plasma Physics Laboratory","identifier":"https://ror.org/03vn1ts68","scheme":"ROR","scheme_uri":null}],"sequence":2},{"value":"Sommerer, T.","name_type":"Personal","given_name":"T.","family_name":"Sommerer","identifier":null,"affiliations":[],"sequence":3},{"value":"Keating, D.","name_type":"Personal","given_name":"D.","family_name":"Keating","identifier":null,"affiliations":[],"sequence":4}],"resource_type":"Dataset","resource_type_general":"Dataset","publisher":"Princeton Plasma Physics Laboratory, Princeton University","publication_year":"2017","ark":"ark:/88435/dsp01zs25xb94r","doi":"10.11578/1367554","rights_many":[{"identifier":"CC BY","uri":"https://creativecommons.org/licenses/by/4.0/","name":"Creative Commons Attribution 4.0 International"}],"version_number":"1","related_objects":[{"related_identifier":"10.1088/0963-0252/26/1/014003","related_identifier_type":"DOI","relation_type":"IsCitedBy","valid_type_values":["ARK","arXiv","bibcode","DOI","EAN13","EISSN","Handle","ISBN","ISSN","ISTC","LISSN","LSID","PMID","PURL","UPC","URL","URN","IGSN","w3id"],"valid_related_identifier_type":true,"valid_relationship_types":["IsCitedBy","Cites","IsSupplementTo","IsSupplementedBy","IsContinuedBy","Continues","HasMetadata","IsMetadataFor","IsNewVersionOf","IsPreviousVersionOf","HasVersion","IsVersionOf","IsPartOf","HasPart","IsReferencedBy","References","IsDocumentedBy","Documents","IsCompiledBy","Compiles","IsVariantFormOf","IsOriginalFormOf","IsIdenticalTo","IsReviewedBy","Reviews","IsDerivedFrom","IsSourceOf","IsObsoletedBy","Obsoletes","IsDescribedBy","Describes","IsRequiredBy","Requires"],"valid_relation_type":true,"errors":[]}],"keywords":["validation","benchmarking","uncertainty quantification","particle-in-cell","Monte Carlo collisions","glow discharge"],"contributors":[],"organizational_contributors":[],"funders":[{"ror":"https://ror.org/01bj3aw27","funder_name":"United States Department of Energy","award_number":"DE-AC02-09CH11466","award_uri":""}],"domains":["Natural Sciences"],"communities":["Princeton Plasma Physics Laboratory"],"subcommunities":["Discovery Plasma Science"],"migrated":true},"files":[{"filename":"10.11578/1367554/77/DenHartogGlowDischargeElectricField.txt","size":464,"display_size":"464 Bytes","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/DenHartogGlowDischargeElectricField.txt"},{"filename":"10.11578/1367554/77/fig05data.txt","size":20468,"display_size":"20 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig05data.txt"},{"filename":"10.11578/1367554/77/fig05plot.py","size":1257,"display_size":"1.23 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig05plot.py"},{"filename":"10.11578/1367554/77/fig06data.txt","size":20620,"display_size":"20.1 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig06data.txt"},{"filename":"10.11578/1367554/77/fig06plot.py","size":1256,"display_size":"1.23 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig06plot.py"},{"filename":"10.11578/1367554/77/fig07data.txt","size":19766,"display_size":"19.3 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig07data.txt"},{"filename":"10.11578/1367554/77/fig07plot.py","size":1235,"display_size":"1.21 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig07plot.py"},{"filename":"10.11578/1367554/77/fig09data.txt","size":28245,"display_size":"27.6 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig09data.txt"},{"filename":"10.11578/1367554/77/fig09plot.py","size":906,"display_size":"906 Bytes","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig09plot.py"},{"filename":"10.11578/1367554/77/fig10data.txt","size":29671,"display_size":"29 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig10data.txt"},{"filename":"10.11578/1367554/77/fig10plot.py","size":906,"display_size":"906 Bytes","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig10plot.py"},{"filename":"10.11578/1367554/77/fig11data.txt","size":29663,"display_size":"29 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig11data.txt"},{"filename":"10.11578/1367554/77/fig11plot.py","size":906,"display_size":"906 Bytes","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig11plot.py"},{"filename":"10.11578/1367554/77/intereHe4-consolidated.tab","size":26232,"display_size":"25.6 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/intereHe4-consolidated.tab"},{"filename":"10.11578/1367554/77/intereHe4.tab","size":68400,"display_size":"66.8 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/intereHe4.tab"},{"filename":"10.11578/1367554/77/readme.txt","size":2381,"display_size":"2.33 KB","url":"https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/readme.txt"}],"group":{"title":"Princeton Plasma Physics Lab (PPPL)","description":null,"code":"PPPL","created_at":"2022-04-28T16:30:00.195-04:00","updated_at":"2023-05-18T14:20:45.272-04:00"}}
+{
+  "resource": {
+    "titles": [
+      {
+        "title": "Validation and benchmarking of two particle-in-cell codes for a glow discharge",
+        "title_type": null
+      }
+    ],
+    "description": "The two particle-in-cell codes EDIPIC and LSP are benchmarked and validated for a parallel-plate glow discharge in helium, in which the axial electric field had been carefully measured, primarily to investigate and improve the fidelity of their collision models. The scattering anisotropy of electron-impact ionization, as well as the value of the secondary-electron emission yield, are not well known in this case. The experimental  uncertainty for the emission yield corresponds to a factor of two variation in the cathode current. If the emission yield is tuned to make the cathode current computed by each code match the experiment, the computed electric fields are in excellent agreement with each other, and within about 10% of the experimental value. The non-monotonic variation of the width of the cathode fa ll with the applied voltage seen in the experiment is reproduced by both codes. The electron temperature in the negative glow is within experimental error bars for both codes, but the density of slow trapped electrons is underestimated. A more detailed code comparison don e for several synthetic cases of electron-beam injection into helium gas shows that the codes are in excellent agreement for ionization rate, as well as for elastic and excitation collisions with isotropic scattering pattern. The remaining significant discrepancies between the two codes are due to differences in their electron binary-collision models, and for anisotropic scattering due to elastic and excitation collisions.",
+    "collection_tags": [],
+    "creators": [
+      {
+        "value": "Carlsson, J.",
+        "name_type": "Personal",
+        "given_name": "J.",
+        "family_name": "Carlsson",
+        "identifier": null,
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 0
+      },
+      {
+        "value": "Khrabrov, A.",
+        "name_type": "Personal",
+        "given_name": "A.",
+        "family_name": "Khrabrov",
+        "identifier": null,
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 1
+      },
+      {
+        "value": "Kaganovich, I.",
+        "name_type": "Personal",
+        "given_name": "I.",
+        "family_name": "Kaganovich",
+        "identifier": {
+          "value": "0000-0003-0653-5682",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
+        },
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
+        ],
+        "sequence": 2
+      },
+      {
+        "value": "Sommerer, T.",
+        "name_type": "Personal",
+        "given_name": "T.",
+        "family_name": "Sommerer",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 3
+      },
+      {
+        "value": "Keating, D.",
+        "name_type": "Personal",
+        "given_name": "D.",
+        "family_name": "Keating",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 4
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton Plasma Physics Laboratory, Princeton University",
+    "publication_year": "2017",
+    "ark": "ark:/88435/dsp01zs25xb94r",
+    "doi": "10.11578/1367554",
+    "rights_many": [
+      {
+        "identifier": "CC BY",
+        "uri": "https://creativecommons.org/licenses/by/4.0/",
+        "name": "Creative Commons Attribution 4.0 International"
+      }
+    ],
+    "version_number": "1",
+    "related_objects": [
+      {
+        "related_identifier": "10.1088/0963-0252/26/1/014003",
+        "related_identifier_type": "DOI",
+        "relation_type": "IsCitedBy",
+        "valid_type_values": [
+          "ARK",
+          "arXiv",
+          "bibcode",
+          "DOI",
+          "EAN13",
+          "EISSN",
+          "Handle",
+          "ISBN",
+          "ISSN",
+          "ISTC",
+          "LISSN",
+          "LSID",
+          "PMID",
+          "PURL",
+          "UPC",
+          "URL",
+          "URN",
+          "IGSN",
+          "w3id"
+        ],
+        "valid_related_identifier_type": true,
+        "valid_relationship_types": [
+          "IsCitedBy",
+          "Cites",
+          "IsSupplementTo",
+          "IsSupplementedBy",
+          "IsContinuedBy",
+          "Continues",
+          "HasMetadata",
+          "IsMetadataFor",
+          "IsNewVersionOf",
+          "IsPreviousVersionOf",
+          "HasVersion",
+          "IsVersionOf",
+          "IsPartOf",
+          "HasPart",
+          "IsReferencedBy",
+          "References",
+          "IsDocumentedBy",
+          "Documents",
+          "IsCompiledBy",
+          "Compiles",
+          "IsVariantFormOf",
+          "IsOriginalFormOf",
+          "IsIdenticalTo",
+          "IsReviewedBy",
+          "Reviews",
+          "IsDerivedFrom",
+          "IsSourceOf",
+          "IsObsoletedBy",
+          "Obsoletes",
+          "IsDescribedBy",
+          "Describes",
+          "IsRequiredBy",
+          "Requires"
+        ],
+        "valid_relation_type": true,
+        "errors": []
+      }
+    ],
+    "keywords": [
+      "validation",
+      "benchmarking",
+      "uncertainty quantification",
+      "particle-in-cell",
+      "Monte Carlo collisions",
+      "glow discharge"
+    ],
+    "contributors": [],
+    "organizational_contributors": [],
+    "funders": [
+      {
+        "ror": "https://ror.org/01bj3aw27",
+        "funder_name": "United States Department of Energy",
+        "award_number": "DE-AC02-09CH11466",
+        "award_uri": ""
+      }
+    ],
+    "domains": ["Natural Sciences"],
+    "communities": ["Princeton Plasma Physics Laboratory"],
+    "subcommunities": ["Discovery Plasma Science"],
+    "migrated": true
+  },
+  "files": [
+    {
+      "filename": "10.11578/1367554/77/DenHartogGlowDischargeElectricField.txt",
+      "size": 464,
+      "display_size": "464 Bytes",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/DenHartogGlowDischargeElectricField.txt"
+    },
+    {
+      "filename": "10.11578/1367554/77/fig05data.txt",
+      "size": 20468,
+      "display_size": "20 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig05data.txt"
+    },
+    {
+      "filename": "10.11578/1367554/77/fig05plot.py",
+      "size": 1257,
+      "display_size": "1.23 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig05plot.py"
+    },
+    {
+      "filename": "10.11578/1367554/77/fig06data.txt",
+      "size": 20620,
+      "display_size": "20.1 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig06data.txt"
+    },
+    {
+      "filename": "10.11578/1367554/77/fig06plot.py",
+      "size": 1256,
+      "display_size": "1.23 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig06plot.py"
+    },
+    {
+      "filename": "10.11578/1367554/77/fig07data.txt",
+      "size": 19766,
+      "display_size": "19.3 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig07data.txt"
+    },
+    {
+      "filename": "10.11578/1367554/77/fig07plot.py",
+      "size": 1235,
+      "display_size": "1.21 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig07plot.py"
+    },
+    {
+      "filename": "10.11578/1367554/77/fig09data.txt",
+      "size": 28245,
+      "display_size": "27.6 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig09data.txt"
+    },
+    {
+      "filename": "10.11578/1367554/77/fig09plot.py",
+      "size": 906,
+      "display_size": "906 Bytes",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig09plot.py"
+    },
+    {
+      "filename": "10.11578/1367554/77/fig10data.txt",
+      "size": 29671,
+      "display_size": "29 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig10data.txt"
+    },
+    {
+      "filename": "10.11578/1367554/77/fig10plot.py",
+      "size": 906,
+      "display_size": "906 Bytes",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig10plot.py"
+    },
+    {
+      "filename": "10.11578/1367554/77/fig11data.txt",
+      "size": 29663,
+      "display_size": "29 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig11data.txt"
+    },
+    {
+      "filename": "10.11578/1367554/77/fig11plot.py",
+      "size": 906,
+      "display_size": "906 Bytes",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/fig11plot.py"
+    },
+    {
+      "filename": "10.11578/1367554/77/intereHe4-consolidated.tab",
+      "size": 26232,
+      "display_size": "25.6 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/intereHe4-consolidated.tab"
+    },
+    {
+      "filename": "10.11578/1367554/77/intereHe4.tab",
+      "size": 68400,
+      "display_size": "66.8 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/intereHe4.tab"
+    },
+    {
+      "filename": "10.11578/1367554/77/readme.txt",
+      "size": 2381,
+      "display_size": "2.33 KB",
+      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.11578/1367554/77/readme.txt"
+    }
+  ],
+  "group": {
+    "title": "Princeton Plasma Physics Lab (PPPL)",
+    "description": null,
+    "code": "PPPL",
+    "created_at": "2022-04-28T16:30:00.195-04:00",
+    "updated_at": "2023-05-18T14:20:45.272-04:00"
+  }
+}

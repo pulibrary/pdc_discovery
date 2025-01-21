@@ -1,111 +1,104 @@
 {
-    "resource": {
-        "titles": [
-            {
-                "title": "bitKlavier Grand Sample Library—Binaural Mic Image",
-                "title_type": null
-            },
-            {
-                "title": "alter title for bitKlavier (Active Embargo)",
-                "title_type": "AlternativeTitle"
-            }
-        ],
-        "description": "The bitKlavier Grand consists of sample collections of a new Steinway D grand piano from nine different stereo mic images, with: 16 velocity layers, at every minor 3rd (starting at A0); Hammer release samples; Release resonance samples; Pedal samples. Release packages at 96k/24bit, 88.2k/24bit, 48k/24bit, 44.1k/16bit are available for various applications.\r\n  Piano Bar: Earthworks—omni-directionals. This microphone system suspends omnidirectional microphones within the piano. The bar is placed across the harp near the hammers and provides a low string / high string player’s perspective. It also produces a close sound without room or lid interactions. It can be panned across an artificial stereophonic perspective effectively in post-production. File Naming Convention: C4 = middle C. Main note names: [note name][octave]v[velocity].wav -- e.g., “D#5v13.wav”. Release resonance notes: harm[note name][octave]v[velocity].wav -- e.g., “harmC2v2.wav”. Hammer samples: rel[1-88].wav (one per key) -- e.g., “rel23.wav”. Pedal samples: pedal[D/U][velocity].wav -- e.g., “pedalU2.wav” =\u003e pedal release (U = up), velocity = 2 (quicker release than velocity = 1).\r\n  This dataset is too large to download directly from this item page. You can access and download the data via Globus (See https://www.youtube.com/watch?v=uf2c7Y1fiFs for instructions on how to use Globus).",
-        "collection_tags": [
-            "Humanities",
-            "Something else"
-        ],
-        "creators": [
-            {
-                "value": "Trueman, Daniel",
-                "name_type": "Personal",
-                "given_name": "Daniel",
-                "family_name": "Trueman",
-                "identifier": {
-                    "value": "1234-1234-1234-1234",
-                    "scheme": "ORCID",
-                    "scheme_uri": "https://orcid.org"
-                },
-                "affiliations": [
-                    {
-                        "value": "Princeton Plasma Physics Laboratory",
-                        "identifier": "https://ror.org/03vn1ts68",
-                        "scheme": "ROR",
-                        "scheme_uri": null
-                    }
-                ],
-                "sequence": 1
-            }
-        ],
-        "resource_type": "Dataset",
-        "resource_type_general": "Dataset",
-        "publisher": "Princeton University",
-        "publication_year": "2021",
-        "ark": "ark:/88435/dsp015999n653h",
-        "doi": "10.34770/r75s-9j74-active-embargo",
-        "rights": {
-            "identifier": "GPLv3",
-            "uri": "https://www.gnu.org/licenses/gpl-3.0.en.html",
-            "name": "GNU General Public License"
+  "resource": {
+    "titles": [
+      {
+        "title": "bitKlavier Grand Sample Library—Binaural Mic Image",
+        "title_type": null
+      },
+      {
+        "title": "alter title for bitKlavier (Active Embargo)",
+        "title_type": "AlternativeTitle"
+      }
+    ],
+    "description": "The bitKlavier Grand consists of sample collections of a new Steinway D grand piano from nine different stereo mic images, with: 16 velocity layers, at every minor 3rd (starting at A0); Hammer release samples; Release resonance samples; Pedal samples. Release packages at 96k/24bit, 88.2k/24bit, 48k/24bit, 44.1k/16bit are available for various applications.\r\n  Piano Bar: Earthworks—omni-directionals. This microphone system suspends omnidirectional microphones within the piano. The bar is placed across the harp near the hammers and provides a low string / high string player’s perspective. It also produces a close sound without room or lid interactions. It can be panned across an artificial stereophonic perspective effectively in post-production. File Naming Convention: C4 = middle C. Main note names: [note name][octave]v[velocity].wav -- e.g., “D#5v13.wav”. Release resonance notes: harm[note name][octave]v[velocity].wav -- e.g., “harmC2v2.wav”. Hammer samples: rel[1-88].wav (one per key) -- e.g., “rel23.wav”. Pedal samples: pedal[D/U][velocity].wav -- e.g., “pedalU2.wav” =\u003e pedal release (U = up), velocity = 2 (quicker release than velocity = 1).\r\n  This dataset is too large to download directly from this item page. You can access and download the data via Globus (See https://www.youtube.com/watch?v=uf2c7Y1fiFs for instructions on how to use Globus).",
+    "collection_tags": ["Humanities", "Something else"],
+    "creators": [
+      {
+        "value": "Trueman, Daniel",
+        "name_type": "Personal",
+        "given_name": "Daniel",
+        "family_name": "Trueman",
+        "identifier": {
+          "value": "1234-1234-1234-1234",
+          "scheme": "ORCID",
+          "scheme_uri": "https://orcid.org"
         },
-        "version_number": "1",
-        "related_objects": [],
-        "keywords": [
-            "keyword1",
-            "keyword2",
-            "keyword3"
+        "affiliations": [
+          {
+            "value": "Princeton Plasma Physics Laboratory",
+            "identifier": "https://ror.org/03vn1ts68",
+            "scheme": "ROR",
+            "scheme_uri": null
+          }
         ],
-        "contributors": [
-            {
-                "value": "Villalta, Andrés",
-                "name_type": "Personal",
-                "given_name": "Andrés",
-                "family_name": "Villalta",
-                "identifier": null,
-                "affiliations": [],
-                "sequence": 0,
-                "type": "CONTACT_PERSON"
-            },
-            {
-                "value": "Chou, Katie",
-                "name_type": "Personal",
-                "given_name": "Katie",
-                "family_name": "Chou",
-                "identifier": null,
-                "affiliations": [],
-                "sequence": 0,
-                "type": "CONTACT_PERSON"
-            },
-            {
-                "value": "Ayres, Christien",
-                "name_type": "Personal",
-                "given_name": "Christien",
-                "family_name": "Ayres",
-                "identifier": null,
-                "affiliations": [],
-                "sequence": 0,
-                "type": "CONTACT_PERSON"
-            },
-            {
-                "value": "Wang, Matthew",
-                "name_type": "Personal",
-                "given_name": "Matthew",
-                "family_name": "Wang",
-                "identifier": null,
-                "affiliations": [],
-                "sequence": 1,
-                "type": "CONTACT_PERSON"
-            }
-        ],
-        "funders": []
+        "sequence": 1
+      }
+    ],
+    "resource_type": "Dataset",
+    "resource_type_general": "Dataset",
+    "publisher": "Princeton University",
+    "publication_year": "2021",
+    "ark": "ark:/88435/dsp015999n653h",
+    "doi": "10.34770/r75s-9j74-active-embargo",
+    "rights": {
+      "identifier": "GPLv3",
+      "uri": "https://www.gnu.org/licenses/gpl-3.0.en.html",
+      "name": "GNU General Public License"
     },
-    "embargo_date": null,
-    "files": [],
-    "group": {
-        "title": "Research Data",
-        "description": null,
-        "code": "RD",
-        "created_at": "2023-01-05T11:26:07.005-05:00",
-        "updated_at": "2023-01-05T11:26:07.005-05:00"
-    }
+    "version_number": "1",
+    "related_objects": [],
+    "keywords": ["keyword1", "keyword2", "keyword3"],
+    "contributors": [
+      {
+        "value": "Villalta, Andrés",
+        "name_type": "Personal",
+        "given_name": "Andrés",
+        "family_name": "Villalta",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 0,
+        "type": "CONTACT_PERSON"
+      },
+      {
+        "value": "Chou, Katie",
+        "name_type": "Personal",
+        "given_name": "Katie",
+        "family_name": "Chou",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 0,
+        "type": "CONTACT_PERSON"
+      },
+      {
+        "value": "Ayres, Christien",
+        "name_type": "Personal",
+        "given_name": "Christien",
+        "family_name": "Ayres",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 0,
+        "type": "CONTACT_PERSON"
+      },
+      {
+        "value": "Wang, Matthew",
+        "name_type": "Personal",
+        "given_name": "Matthew",
+        "family_name": "Wang",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 1,
+        "type": "CONTACT_PERSON"
+      }
+    ],
+    "funders": []
+  },
+  "embargo_date": null,
+  "files": [],
+  "group": {
+    "title": "Research Data",
+    "description": null,
+    "code": "RD",
+    "created_at": "2023-01-05T11:26:07.005-05:00",
+    "updated_at": "2023-01-05T11:26:07.005-05:00"
+  }
 }
