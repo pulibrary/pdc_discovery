@@ -3,13 +3,6 @@ name: Deploy API docs to GitHub Pages
 on:
   push:
     branches: ["main"]
-    # paths:
-    #   - '.github/workflows/pages.yml'
-    #   - '.yardopts'
-    #   - 'lib/**'
-    #   - 'Gemfile'
-    #   - '**.txt'
-    # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 permissions:
@@ -23,17 +16,15 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy_yard:
-    # the deploy environment (not to be confused with env)
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
-    name: Build and deploy YARD
     steps:
-      - uses: kachick/deploy-yard-to-pages@v1.3.0
-        id: deployment
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
         with:
-          # default `doc` as default of `.yardopts`
-          # output-dir: 'doc'
-          ruby-version: "3.3.2"
+          bundler-cache: true
+      - run: bundle exec yard doc
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: doc/
+      - uses: actions/deploy-pages@v4
