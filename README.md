@@ -61,7 +61,7 @@ To create a tagged release use the [steps in the RDSS handbook](https://github.c
 
 ## Indexing research data from PDC Describe
 
-PDC Discovery indexes data from both PDC Describe via the following rake task:
+PDC Discovery indexes data from PDC Describe via the following rake task:
 
 ```ruby
 rake index:research_data
