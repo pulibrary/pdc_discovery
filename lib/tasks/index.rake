@@ -9,20 +9,10 @@ namespace :index do
 
     Rails.logger.info "Indexing: Fetching PDC Describe records"
     Rake::Task['index:pdc_describe_research_data'].invoke
-    Rails.logger.info "Indexing: Fetching DataSpace records"
-    Rake::Task['index:dspace_research_data'].invoke
     Rails.logger.info "Indexing: Fetching completed"
 
     Indexing::SolrCloudHelper.update_solr_alias!
     Rails.logger.info "Indexing: Updated Solr to read from the new collection: #{Indexing::SolrCloudHelper.alias_url} -> #{Indexing::SolrCloudHelper.collection_reader_url}"
-  end
-
-  desc 'Index all DSpace research data collections'
-  task dspace_research_data: :environment do
-    Rails.logger.info "Indexing: Harvesting and indexing DataSpace research data collections started"
-    DspaceResearchDataHarvester.harvest(false)
-    Indexing::SolrCloudHelper.collection_writer_commit!
-    Rails.logger.info "Indexing: Harvesting and indexing DataSpace research data collections completed"
   end
 
   desc 'Index all PDC Describe data'
@@ -38,13 +28,6 @@ namespace :index do
     Rails.logger.info "Deleting all Solr documents"
     Blacklight.default_index.connection.delete_by_query('*:*')
     Blacklight.default_index.connection.commit
-  end
-
-  desc 'Fetches the most recent community information from DataSpace and saves it to a file.'
-  task cache_dataspace_communities: :environment do
-    cache_file = ENV['COMMUNITIES_FILE'] || './spec/fixtures/files/dataspace_communities.json'
-    communities = DataspaceCommunities.new
-    File.write(cache_file, JSON.pretty_generate(communities.tree))
   end
 
   desc 'Prints to console the current Solr URLs and how they are configured'
