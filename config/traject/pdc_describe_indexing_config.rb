@@ -12,7 +12,6 @@ settings do
   provide 'solr.url', Indexing::SolrCloudHelper.collection_writer_url
   provide 'reader_class_name', 'Traject::NokogiriReader'
   provide 'solr_writer.commit_on_close', 'true'
-  provide 'solr_writer.thread_pool', '5'
 
   # There are some parameters in Traject that allows us to configure values related
   # to the Solr connection, in particular `batch_size` and the `thread_pool`. However,
