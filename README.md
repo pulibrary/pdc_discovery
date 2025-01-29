@@ -1,7 +1,7 @@
 # pdc_discovery
 
 
-A discovery portal for Princeton research data. Initially it will provide a better browsing experience for the research data contained in [DataSpace](https://dataspace.princeton.edu).
+A discovery portal for Princeton research data.
 
 Please note: While this is open-source software, we would disourage anyone from trying to just check it out and run it. Princeton specifics, from styling to authentication and authorization, are hard coded, and we have not invested any time in the kind of configurabily that would be needed for use at another institution. Instead it should be taken as an example of breaking a monolithic project into separate components, and developing iteratively in response to local user feedback.
 
@@ -59,9 +59,9 @@ We utilize Rubocop for our Ryby code and Prettier for our JavaScript
 
 To create a tagged release use the [steps in the RDSS handbook](https://github.com/pulibrary/rdss-handbook/blob/main/release_process.md)
 
-## Indexing research data from DataSpace and PDC Describe
+## Indexing research data from PDC Describe
 
-PDC Discovery indexes data from both DataSpace and from PDC Describe via the following rake task:
+PDC Discovery indexes data from PDC Describe via the following rake task:
 
 ```ruby
 rake index:research_data
