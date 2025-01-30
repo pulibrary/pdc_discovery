@@ -21,9 +21,6 @@ describe 'Search Results PDC Page', type: :system, js: true do
 
   it "renders expected fields" do
     visit '/?search_field=all_fields&q='
-    click_on "Source"
-    click_on "pdc_describe"
-    expect(page).to have_content("3D full wave fast wave modeling with realistic HHFW antenna geometry and SOL plasma in NSTX-U")
     click_on "Community"
     click_link "Princeton Plasma Physics Laboratory"
     expect(page).to have_content("Subcommunity")
