@@ -2,7 +2,7 @@
 version: 2.1
 
 orbs:
-  browser-tools: circleci/browser-tools@1.5.0
+  browser-tools: circleci/browser-tools@1.5.1
   coveralls: coveralls/coveralls@2.2.1
 
 executors:
@@ -140,8 +140,7 @@ jobs:
             curl -H 'Content-type: application/json' http://solr:SolrRocks@127.0.0.1:8983/api/collections/ -d '{create: {name: pdc_discovery-core-test, config: pdc_discovery, numShards: 1}}'
       - bundle_install
       - yarn_install
-      - browser-tools/install-browser-tools:
-        firefox-version: "126.0.2" # https://github.com/CircleCI-Public/browser-tools-orb/issues/14
+      - browser-tools/install-firefox
       - run: |
           ruby --version
           node --version
