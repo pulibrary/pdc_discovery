@@ -141,6 +141,7 @@ jobs:
       - bundle_install
       - yarn_install
       - browser-tools/install-firefox
+        firefox-version: "135.0" # https://github.com/CircleCI-Public/browser-tools-orb/issues/14
       - run: |
           ruby --version
           node --version
