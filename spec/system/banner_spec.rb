@@ -42,4 +42,11 @@ describe 'Website banner', type: :system, js: true do
     expect(page.find("div#banner p b").text).to eq "test"
     expect(page).to have_link "message", href: "mailto:fake@princeton.edu"
   end
+
+  it "does not render a banner when there are no values in the configuration for the environment" do
+    Rails.env = "not-an-environment"
+    visit '/'
+    expect(page).not_to have_css '#banner'
+    Rails.env = "test"
+  end
 end
