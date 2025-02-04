@@ -1,4 +1,10 @@
 ---
-# development:
-#   title: Welcome to the development site
-#   body: Have a look around our new website for the discovery and sharing of research data and <a href="mailto:prds@princeton.edu"> let us know what you think</a>. See <a href="https://datacommons.princeton.edu/describe/" target="_blank">How to Submit</a> for instructions on how to publish your research data and code.
+development:
+  title: Welcome to the development site
+  body: Have a look around our new website for the discovery and sharing of research data and <a href="mailto:prds@princeton.edu"> let us know what you think</a>. See <a href="https://datacommons.princeton.edu/describe/" target="_blank">How to Submit</a> for instructions on how to publish your research data and code.
+test:
+  title: Welcome to the <i>test</i> site
+  body: This is a <b>test</b> <a href="mailto:fake@princeton.edu">message.</a>
+staging:
+  title: Welcome to Princeton Data Commons Discovery! (Staging)
+  body: Have a look around our new website for the discovery and sharing of research data and <a href="mailto:prds@princeton.edu"> let us know what you think</a>. See our <a href="https://researchdata.princeton.edu/research-lifecycle-guide/getting-started-princeton-data-commons-describe-contributor" target="_blank"> Getting Started as a Princeton Data Commons Contributor</a> guide for instructions on how to publish your research data and code.
