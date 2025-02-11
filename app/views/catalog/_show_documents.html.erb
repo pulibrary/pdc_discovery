@@ -35,7 +35,7 @@ $(function() {
   $('#files-table').DataTable({
     ajax: "<%= catalog_file_list_path(@document) %>",
     columns: [
-        { data: 'full_path' },
+        { data: 'name' },
         { data: 'size' }
     ],
     columnDefs: [
@@ -68,7 +68,7 @@ $(function() {
         // file size
         render: function (data, type, row) {
           if (type == "display") {
-            if(row.full_path.endsWith("/")){
+            if(row.name.endsWith("/")){
               return "";
             }
             else{

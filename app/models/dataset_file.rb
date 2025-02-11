@@ -36,12 +36,12 @@ class DatasetFile
     hash = data.with_indifferent_access
     file = DatasetFile.new
     file.source = "pdc_describe"
-    file.full_path = hash[:full_name]
-    file.name = hash[:name]
+    file.full_path = hash[:filename]
+    file.name = File.basename(file.full_path)
     file.extension = File.extname(file.name)
     file.extension = file.extension[1..] if file.extension != "." # drop the leading period
     file.size = hash[:size]
-    file.display_size = ActiveSupport::NumberHelper.number_to_human_size(file.size)
+    file.display_size = hash[:display_size]
     file.download_url = hash[:url]
     file
   end
