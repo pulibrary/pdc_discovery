@@ -38,7 +38,7 @@ describe 'DataSpace research data indexing', type: :system do
 
   it 'files' do
     # The fixture has three files but we expect two of them to be ignored
-    files = JSON.parse(result['pdc_describe_json_ss']['files'].first)
+    files = JSON.parse(result["files_ss"].first)
     expect(files.count).to eq 1
     expect(files.first["name"]).to eq 'Lee_princeton_0181D_10086.pdf'
   end
