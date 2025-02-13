@@ -32,8 +32,6 @@ class DatasetFile
     file
   end
 
-  # hash[:filename]     "10.123/4567/40/folder1/filename1.txt"
-  # full_path           "folder1/filename1.txt"
   def self.from_hash_describe(data)
     hash = data.with_indifferent_access
     file = DatasetFile.new
@@ -54,13 +52,16 @@ class DatasetFile
   # This method strips the DOI and the database ID from the path so that we display a friendly
   # path to the user, e.g. "folder1/filename1.txt".
   #
-  # full_path          "10.123/4567/40/folder1/filename1.txt"
-  # filename_no_doi  = "/40/folder1/filename1.txt"
-  # db_id            = "40"
-  # display_filename = "/folder1/filename1.txt"
+  # full_path = "10.123/4567/40/folder1/filename1.txt"
+  # returns "folder1/filename1.txt"
   def self.filename_without_doi(full_path)
-    prefix = full_path.split("/").take(3).join("/") # DOI + db id
-    full_path[prefix.length+1..-1]
+    if full_path.split("/").length > 2
+      prefix = full_path.split("/").take(3).join("/") # DOI + db id
+      full_path[prefix.length+1..-1]
+    else
+      full_path
+    end
+    
   end
 
   def self.download_root
