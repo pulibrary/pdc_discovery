@@ -182,13 +182,12 @@ class SolrDocument
 
   def files
     @files ||= begin
-      data = nil
-      if pdc_describe_record?
-        data = JSON.parse(fetch("pdc_describe_json_ss", "{}"))["files"] || []
-      else
-        data = JSON.parse(fetch("files_ss", "[]"))
-      end
-      data.map { |file| DatasetFile.from_hash(file, data_source)}.sort_by(&:sequence)
+      data = if pdc_describe_record?
+               JSON.parse(fetch("pdc_describe_json_ss", "{}"))["files"] || []
+             else
+               JSON.parse(fetch("files_ss", "[]"))
+             end
+      data.map { |file| DatasetFile.from_hash(file, data_source) }.sort_by(&:sequence)
     end
   end
 

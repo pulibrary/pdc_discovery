@@ -5,7 +5,7 @@ require 'rails_helper'
 # rubocop:disable Layout/LineLength
 RSpec.describe DocumentExport do
   let(:files_pdc_describe) do
-    {files:[{filename: "/folder1/file1.zip", size: 27, url: "https://pdc_describe", display_size: "11 KB" }, { filename: "data.csv", size: 100 }, { filename: "file2.zip", size: 200 }]}
+    { files: [{ filename: "/folder1/file1.zip", size: 27, url: "https://pdc_describe", display_size: "11 KB" }, { filename: "data.csv", size: 100 }, { filename: "file2.zip", size: 200 }] }
   end
 
   let(:files_dataspace) do

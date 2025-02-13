@@ -58,7 +58,7 @@ class DatasetFile
     tokens = full_path.split("/").compact_blank
     if tokens.length > 2
       prefix = tokens.take(3).join("/") # DOI + db id
-      full_path[prefix.length+1..-1]
+      full_path[prefix.length + 1..-1]
     else
       full_path
     end

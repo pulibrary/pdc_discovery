@@ -126,9 +126,9 @@ RSpec.describe DescribeIndexer do
         file1 = files.find { |file| file["filename"] == "10.80021/3m1k-6036/122/file1.jpg" }
         file2 = files.find { |file| file["filename"] == "10.80021/3m1k-6036/122/file2.txt" }
         file3 = files.find { |file| file["filename"] == "10.80021/3m1k-6036/122/folder-a/file3.txt" }
-        expect(file1["size"]).to eq 316781
+        expect(file1["size"]).to eq 316_781
         expect(file1["url"]).to eq "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.80021/3m1k-6036/122/file1.jpg"
-        expect(file2["size"]).to eq 396003
+        expect(file2["size"]).to eq 396_003
         expect(file3["url"]).to eq "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.80021/3m1k-6036/122/folder-a/file3.txt"
       end
 
