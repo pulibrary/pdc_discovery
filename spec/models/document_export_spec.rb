@@ -9,7 +9,7 @@ RSpec.describe DocumentExport do
   end
 
   let(:files_dataspace) do
-    {files:[{ name: "file1.zip", size: 27, handle: "xyz" }, { name: "data.csv", size: 29, handle: "yzx" }, { name: "file2.zip", size: 28, handle: "zxy" }]}
+    [{ name: "file1.zip", size: 27, handle: "xyz" }, { name: "data.csv", size: 29, handle: "yzx" }, { name: "file2.zip", size: 28, handle: "zxy" }]
   end
 
   let(:solr_doc_pdc_describe) do
@@ -26,7 +26,7 @@ RSpec.describe DocumentExport do
   end
 
   let(:solr_doc_dataspace) do
-    SolrDocument.new({ id: "1", title_tesim: ["Hello World"], pdc_describe_json_ss: files_dataspace.to_json, data_source_ssi: "dataspace", description_tsim: ["Something"], abstract_tsim: ["Abstract"] })
+    SolrDocument.new({ id: "1", title_tesim: ["Hello World"], files_ss: files_dataspace.to_json, data_source_ssi: "dataspace", description_tsim: ["Something"], abstract_tsim: ["Abstract"] })
   end
 
   it "returns DocumentExport object's information from pdc_describe" do
