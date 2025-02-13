@@ -41,7 +41,7 @@ class DatasetFile
     file.extension = File.extname(file.name)
     file.extension = file.extension[1..] if file.extension != "." # drop the leading period
     file.size = hash[:size]
-    file.display_size = hash[:display_size]
+    file.display_size = ActiveSupport::NumberHelper.number_to_human_size(file.size)
     file.download_url = hash[:url]
     file
   end
@@ -55,13 +55,13 @@ class DatasetFile
   # full_path = "10.123/4567/40/folder1/filename1.txt"
   # returns "folder1/filename1.txt"
   def self.filename_without_doi(full_path)
-    if full_path.split("/").length > 2
-      prefix = full_path.split("/").take(3).join("/") # DOI + db id
+    tokens = full_path.split("/").compact_blank
+    if tokens.length > 2
+      prefix = tokens.take(3).join("/") # DOI + db id
       full_path[prefix.length+1..-1]
     else
       full_path
     end
-    
   end
 
   def self.download_root
