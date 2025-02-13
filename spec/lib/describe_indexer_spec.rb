@@ -121,7 +121,7 @@ RSpec.describe DescribeIndexer do
 
     context "files" do
       it "stores file detailed information" do
-        files = JSON.parse(indexed_record['files_ss'])
+        files = JSON.parse(indexed_record['pdc_describe_json_ss']['files'])
         file1 = files.find { |file| file["name"] == "file1.jpg" }
         file2 = files.find { |file| file["name"] == "file2.txt" }
         file3 = files.find { |file| file["name"] == "file3.txt" }
@@ -132,7 +132,7 @@ RSpec.describe DescribeIndexer do
         expect(file3["full_name"]).to eq "10.80021/3m1k-6036/122/folder-a/file3.txt"
       end
       it "excludes PDC preservation files" do
-        files = JSON.parse(indexed_record['files_ss'])
+        files = JSON.parse(indexed_record['pdc_describe_json_ss']['files'])
         datacite_xml = files.find { |file| file["full_name"].include? "/princeton_data_commons/datacite.xml" }
         expect(datacite_xml).to be nil
       end
@@ -140,7 +140,7 @@ RSpec.describe DescribeIndexer do
 
     context "all text catch all field" do
       it "indexes the file name in the all text catch all field" do
-        files = JSON.parse(indexed_record['files_ss'])
+        files = JSON.parse(indexed_record['pdc_describe_json_ss']['files'])
         file_name = File.basename(files.first["name"])
         response = Blacklight.default_index.connection.get 'select', params: { q: file_name }
         expect(response["response"]["numFound"]).to eq 1
@@ -243,7 +243,7 @@ RSpec.describe DescribeIndexer do
         let(:docs) { response["docs"] }
         let(:doc) { docs.first }
         let(:files) do
-          values = doc["files_ss"]
+          values = doc['pdc_describe_json_ss']['files']
           JSON.parse(values)
         end
 
@@ -272,7 +272,7 @@ RSpec.describe DescribeIndexer do
           expect(response).to include("numFound")
           expect(num_found).to eq 1
           expect(docs).not_to be_empty
-          expect(doc).to include("files_ss")
+          expect(doc).to include("pdc_describe_json_ss")
           expect(files).to be_empty
         end
       end
@@ -293,7 +293,7 @@ RSpec.describe DescribeIndexer do
         let(:num_found) { response["numFound"] }
         let(:docs) { response["docs"] }
         let(:doc) { docs.first }
-        let(:files) { doc["files_ss"] }
+        let(:files) { doc['pdc_describe_json_ss']['files'] }
 
         before do
           stub_request(:get, rss_url)
@@ -312,7 +312,7 @@ RSpec.describe DescribeIndexer do
           expect(response).to include("numFound")
           expect(num_found).to eq 1
           expect(docs).not_to be_empty
-          expect(doc).to include("files_ss")
+          expect(doc).to include("pdc_describe_json_ss")
           expect(files).not_to be_empty
         end
       end
@@ -334,7 +334,7 @@ RSpec.describe DescribeIndexer do
         let(:docs) { response["docs"] }
         let(:doc) { docs.first }
         let(:files) do
-          values = doc["files_ss"]
+          values = doc['pdc_describe_json_ss']['files']
           JSON.parse(values)
         end
 
@@ -363,7 +363,7 @@ RSpec.describe DescribeIndexer do
           expect(response).to include("numFound")
           expect(num_found).to eq 1
           expect(docs).not_to be_empty
-          expect(doc).to include("files_ss")
+          expect(doc).to include("pdc_describe_json_ss")
           expect(files).to be_empty
         end
       end

@@ -37,7 +37,27 @@ class DatasetFile
     file = DatasetFile.new
     file.source = "pdc_describe"
     file.full_path = hash[:filename]
-    file.name = File.basename(file.full_path)
+    byebug
+    # to_field 'pdc_describe_json_ss' do |record, accumulator, _context|
+    #   raw_doi = record.xpath("/hash/resource/doi/text()").to_s
+    #   file.name = Indexing::ImportHelper.display_filename(file.xpath("filename").text, raw_doi)
+    # end
+
+    # # files = record.xpath("/hash/files/file").map do |file|
+    # #   file_name = file.xpath("filename").text
+    # #     if file_name.include?("/princeton_data_commons/")
+    # #       # Exclude the preservation files
+    # #       nil
+    # #     else
+    # #       {
+    # #         name: File.basename(file.xpath("filename").text),
+    # #         size: file.xpath("size").text,
+    # #         url: file.xpath('url').text
+    # #       }
+    # #     end
+    # #   end.compact
+    # #   accumulator.concat [files.to_json.to_s]
+    file.name = File.basename(file.full_path) 
     file.extension = File.extname(file.name)
     file.extension = file.extension[1..] if file.extension != "." # drop the leading period
     file.size = hash[:size]

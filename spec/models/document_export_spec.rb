@@ -5,16 +5,16 @@ require 'rails_helper'
 # rubocop:disable Layout/LineLength
 RSpec.describe DocumentExport do
   let(:files_pdc_describe) do
-    [{ name: "file1.zip", full_name: "/folder1/file1.zip", size: 27, url: "https://pdc_describe" }, { name: "data.csv", size: 100 }, { name: "file2.zip", size: 200 }]
+    {files:[{filename: "/folder1/file1.zip", size: 27, url: "https://pdc_describe", display_size: "11 KB" }, { filename: "data.csv", size: 100 }, { filename: "file2.zip", size: 200 }]}
   end
 
   let(:files_dataspace) do
-    [{ name: "file1.zip", size: 27, handle: "xyz" }, { name: "data.csv", size: 29, handle: "yzx" }, { name: "file2.zip", size: 28, handle: "zxy" }]
+    {files:[{ name: "file1.zip", size: 27, handle: "xyz" }, { name: "data.csv", size: 29, handle: "yzx" }, { name: "file2.zip", size: 28, handle: "zxy" }]}
   end
 
   let(:solr_doc_pdc_describe) do
     SolrDocument.new({
-                       id: "1", title_tesim: ["Hello World"], files_ss: files_pdc_describe.to_json,
+                       id: "1", title_tesim: ["Hello World"], pdc_describe_json_ss: files_pdc_describe.to_json,
                        data_source_ssi: "pdc_describe",
                        description_tsim: ["Something"],
                        abstract_tsim: ["Abstract"],
@@ -26,7 +26,7 @@ RSpec.describe DocumentExport do
   end
 
   let(:solr_doc_dataspace) do
-    SolrDocument.new({ id: "1", title_tesim: ["Hello World"], files_ss: files_dataspace.to_json, data_source_ssi: "dataspace", description_tsim: ["Something"], abstract_tsim: ["Abstract"] })
+    SolrDocument.new({ id: "1", title_tesim: ["Hello World"], pdc_describe_json_ss: files_dataspace.to_json, data_source_ssi: "dataspace", description_tsim: ["Something"], abstract_tsim: ["Abstract"] })
   end
 
   it "returns DocumentExport object's information from pdc_describe" do
