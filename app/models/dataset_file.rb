@@ -32,38 +32,35 @@ class DatasetFile
     file
   end
 
+  # hash[:filename]     "10.123/4567/40/folder1/filename1.txt"
+  # full_path           "folder1/filename1.txt"
   def self.from_hash_describe(data)
     hash = data.with_indifferent_access
     file = DatasetFile.new
     file.source = "pdc_describe"
-    file.full_path = hash[:filename]
-    byebug
-    # to_field 'pdc_describe_json_ss' do |record, accumulator, _context|
-    #   raw_doi = record.xpath("/hash/resource/doi/text()").to_s
-    #   file.name = Indexing::ImportHelper.display_filename(file.xpath("filename").text, raw_doi)
-    # end
-
-    # # files = record.xpath("/hash/files/file").map do |file|
-    # #   file_name = file.xpath("filename").text
-    # #     if file_name.include?("/princeton_data_commons/")
-    # #       # Exclude the preservation files
-    # #       nil
-    # #     else
-    # #       {
-    # #         name: File.basename(file.xpath("filename").text),
-    # #         size: file.xpath("size").text,
-    # #         url: file.xpath('url').text
-    # #       }
-    # #     end
-    # #   end.compact
-    # #   accumulator.concat [files.to_json.to_s]
-    file.name = File.basename(file.full_path) 
+    file.full_path = filename_without_doi(hash[:filename])        # folder1/hello.txt
+    file.name = File.basename(file.full_path)                     # hello.txt
     file.extension = File.extname(file.name)
     file.extension = file.extension[1..] if file.extension != "." # drop the leading period
     file.size = hash[:size]
     file.display_size = hash[:display_size]
     file.download_url = hash[:url]
     file
+  end
+
+  # Calculates the display filename for a PDC Describe file.
+  # PDC Describe files are prefixed with DOI + database_id, for example "10.123/4567/40/folder1/filename1.txt"
+  # (where 40 is the database id).
+  # This method strips the DOI and the database ID from the path so that we display a friendly
+  # path to the user, e.g. "folder1/filename1.txt".
+  #
+  # full_path          "10.123/4567/40/folder1/filename1.txt"
+  # filename_no_doi  = "/40/folder1/filename1.txt"
+  # db_id            = "40"
+  # display_filename = "/folder1/filename1.txt"
+  def self.filename_without_doi(full_path)
+    prefix = full_path.split("/").take(3).join("/") # DOI + db id
+    full_path[prefix.length+1..-1]
   end
 
   def self.download_root
