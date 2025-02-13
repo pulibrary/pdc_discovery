@@ -103,9 +103,8 @@ describe 'PPPL research data indexing', type: :system do
     end
 
     it 'indexes the file metadata' do
-      debugger
-      expect(last_document).to include('pdc_describe_json_ss')
-      files_values = last_document['pdc_describe_json_ss']['files']
+      expect(last_document).to include('files_ss')
+      files_values = last_document['files_ss']
       files = JSON.parse(files_values)
 
       expect(files.count).to eq(1)
