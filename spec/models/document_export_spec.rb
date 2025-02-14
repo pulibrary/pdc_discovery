@@ -5,7 +5,7 @@ require 'rails_helper'
 # rubocop:disable Layout/LineLength
 RSpec.describe DocumentExport do
   let(:files_pdc_describe) do
-    [{ name: "file1.zip", full_name: "/folder1/file1.zip", size: 27, url: "https://pdc_describe" }, { name: "data.csv", size: 100 }, { name: "file2.zip", size: 200 }]
+    { files: [{ filename: "/folder1/file1.zip", size: 27, url: "https://pdc_describe", display_size: "11 KB" }, { filename: "data.csv", size: 100 }, { filename: "file2.zip", size: 200 }] }
   end
 
   let(:files_dataspace) do
@@ -14,7 +14,7 @@ RSpec.describe DocumentExport do
 
   let(:solr_doc_pdc_describe) do
     SolrDocument.new({
-                       id: "1", title_tesim: ["Hello World"], files_ss: files_pdc_describe.to_json,
+                       id: "1", title_tesim: ["Hello World"], pdc_describe_json_ss: files_pdc_describe.to_json,
                        data_source_ssi: "pdc_describe",
                        description_tsim: ["Something"],
                        abstract_tsim: ["Abstract"],

@@ -3,6 +3,13 @@
 require 'rails_helper'
 
 RSpec.describe Indexing::ImportHelper do
+  # TODO: We should move these tests to happen as part of DatasetFile
+  # rather than as part of this ImportHelper since the import helper
+  # is not used anymore.
+  #
+  # Heads up: the new code does not receive the DOI as parameter,
+  # we instead calculate the tokens in the path and therefore the
+  # new validation will look a bit different.
   describe "#display_filename" do
     it "handles normal cases correctly" do
       doi = "10.123/4567"
