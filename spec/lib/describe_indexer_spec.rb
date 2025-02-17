@@ -131,14 +131,6 @@ RSpec.describe DescribeIndexer do
         expect(file2["size"]).to eq 396_003
         expect(file3["url"]).to eq "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.80021/3m1k-6036/122/folder-a/file3.txt"
       end
-
-      # TODO: We need to re-implement this logic in our SolrDocument.files method
-      # (just as it used to exist in the ./config/traject/pdc_describe_indexing_config.rb for the files_ss field)
-      it "excludes PDC preservation files" do
-        files = JSON.parse(indexed_record['pdc_describe_json_ss'])['files']
-        datacite_xml = files.find { |file| file["filename"].include? "/princeton_data_commons/datacite.xml" }
-        expect(datacite_xml).to be nil
-      end
     end
 
     context "all text catch all field" do

@@ -235,31 +235,6 @@ to_field 'embargo_date_dtsi' do |record, accumulator, _context|
   end
 end
 
-# ==================
-# Store files metadata as a single JSON string so that we can display detailed information for each of them.
-#
-# TODO: Note that this information is duplicated with what we save in `pdc_describe_json_ss`. For large
-# datasets (e.g. those with 60K files) this is less than ideal. We should look into optimizing
-# this when we take care of https://github.com/pulibrary/pdc_discovery/issues/738
-# to_field 'files_ss' do |record, accumulator, _context|
-#   raw_doi = record.xpath("/hash/resource/doi/text()").to_s
-#   files = record.xpath("/hash/files/file").map do |file|
-#     file_name = file.xpath("filename").text
-#     if file_name.include?("/princeton_data_commons/")
-#       # Exclude the preservation files
-#       nil
-#     else
-#       {
-#         name: File.basename(file.xpath("filename").text),
-#         full_name: Indexing::ImportHelper.display_filename(file.xpath("filename").text, raw_doi),
-#         size: file.xpath("size").text,
-#         url: file.xpath('url').text
-#       }
-#     end
-#   end.compact
-#   accumulator.concat [files.to_json.to_s]
-# end
-
 # Calculate the URI to the globus folder for this dataset
 to_field 'globus_uri_ssi' do |record, accumulator, _context|
   filename = record.xpath("/hash/files/file/filename/text()").first&.text
