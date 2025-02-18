@@ -55,13 +55,13 @@ class DatasetFile
   # full_path = "10.123/4567/40/folder1/filename1.txt"
   # returns "folder1/filename1.txt"
   def self.filename_without_doi(full_path)
-    return "" if full_path.nil? 
+    return "" if full_path.nil?
     tokens = full_path.split("/").compact_blank
     if tokens.length > 2
       prefix = tokens.take(3).join("/") # DOI + db id
       database_id = tokens[2]
       if database_id.to_i != 0
-        full_path[prefix.length + 1..-1]    
+        full_path[prefix.length + 1..-1]
       else
         full_path
       end
