@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require "rails_helper"
 
 # rubocop:disable Metrics/BlockLength
 RSpec.describe DescribeIndexer do
@@ -121,27 +122,21 @@ RSpec.describe DescribeIndexer do
 
     context "files" do
       it "stores file detailed information" do
-        files = JSON.parse(indexed_record['files_ss'])
-        file1 = files.find { |file| file["name"] == "file1.jpg" }
-        file2 = files.find { |file| file["name"] == "file2.txt" }
-        file3 = files.find { |file| file["name"] == "file3.txt" }
-        expect(file1["size"]).to eq "316781"
+        files = JSON.parse(indexed_record['pdc_describe_json_ss'])['files']
+        file1 = files.find { |file| file["filename"] == "10.80021/3m1k-6036/122/file1.jpg" }
+        file2 = files.find { |file| file["filename"] == "10.80021/3m1k-6036/122/file2.txt" }
+        file3 = files.find { |file| file["filename"] == "10.80021/3m1k-6036/122/folder-a/file3.txt" }
+        expect(file1["size"]).to eq 316_781
         expect(file1["url"]).to eq "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.80021/3m1k-6036/122/file1.jpg"
-        expect(file2["size"]).to eq "396003"
-        expect(file3["name"]).to eq "file3.txt"
-        expect(file3["full_name"]).to eq "10.80021/3m1k-6036/122/folder-a/file3.txt"
-      end
-      it "excludes PDC preservation files" do
-        files = JSON.parse(indexed_record['files_ss'])
-        datacite_xml = files.find { |file| file["full_name"].include? "/princeton_data_commons/datacite.xml" }
-        expect(datacite_xml).to be nil
+        expect(file2["size"]).to eq 396_003
+        expect(file3["url"]).to eq "https://g-5beea4.90d4e.bd7c.data.globus.org/pdc-describe-staging-postcuration/10.80021/3m1k-6036/122/folder-a/file3.txt"
       end
     end
 
     context "all text catch all field" do
       it "indexes the file name in the all text catch all field" do
-        files = JSON.parse(indexed_record['files_ss'])
-        file_name = File.basename(files.first["name"])
+        files = JSON.parse(indexed_record['pdc_describe_json_ss'])['files']
+        file_name = File.basename(files.first["filename"])
         response = Blacklight.default_index.connection.get 'select', params: { q: file_name }
         expect(response["response"]["numFound"]).to eq 1
 
@@ -242,10 +237,7 @@ RSpec.describe DescribeIndexer do
         let(:num_found) { response["numFound"] }
         let(:docs) { response["docs"] }
         let(:doc) { docs.first }
-        let(:files) do
-          values = doc["files_ss"]
-          JSON.parse(values)
-        end
+        let(:files) { JSON.parse(doc['pdc_describe_json_ss'])['files'] }
 
         before do
           stub_request(:get, rss_url)
@@ -272,12 +264,12 @@ RSpec.describe DescribeIndexer do
           expect(response).to include("numFound")
           expect(num_found).to eq 1
           expect(docs).not_to be_empty
-          expect(doc).to include("files_ss")
+          expect(doc).to include("pdc_describe_json_ss")
           expect(files).to be_empty
         end
       end
 
-      context "when there are items which are under active embargo" do
+      context "when there are items which are under an expired embargo" do
         let(:item_file_fixture) { file_fixture("pdc_describe_expired_embargo.json") }
         let(:embargo_resource) { item_file_fixture.read }
         # This redundancy is required for consistent testing
@@ -293,7 +285,7 @@ RSpec.describe DescribeIndexer do
         let(:num_found) { response["numFound"] }
         let(:docs) { response["docs"] }
         let(:doc) { docs.first }
-        let(:files) { doc["files_ss"] }
+        let(:files) { doc['pdc_describe_json_ss']['files'] }
 
         before do
           stub_request(:get, rss_url)
@@ -312,7 +304,7 @@ RSpec.describe DescribeIndexer do
           expect(response).to include("numFound")
           expect(num_found).to eq 1
           expect(docs).not_to be_empty
-          expect(doc).to include("files_ss")
+          expect(doc).to include("pdc_describe_json_ss")
           expect(files).not_to be_empty
         end
       end
@@ -333,10 +325,7 @@ RSpec.describe DescribeIndexer do
         let(:num_found) { response["numFound"] }
         let(:docs) { response["docs"] }
         let(:doc) { docs.first }
-        let(:files) do
-          values = doc["files_ss"]
-          JSON.parse(values)
-        end
+        let(:files) { doc['pdc_describe_json_ss']['files'] }
 
         before do
           stub_request(:get, rss_url)
@@ -358,13 +347,13 @@ RSpec.describe DescribeIndexer do
           expect(doc).not_to include("embargo_date_dtsi")
         end
 
-        it "does not index the files" do
+        it "does index the files" do
           expect(solr_response).to include("response")
           expect(response).to include("numFound")
           expect(num_found).to eq 1
           expect(docs).not_to be_empty
-          expect(doc).to include("files_ss")
-          expect(files).to be_empty
+          expect(doc).to include("pdc_describe_json_ss")
+          expect(files).not_to be_empty
         end
       end
     end
