@@ -99,4 +99,13 @@ describe 'Show PDC Page', type: :system, js: true do
       expect(page).to_not have_link(href: 'https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/Fig11b_readme.hdf')
     end
   end
+
+  context "clicks on Find other works by this author" do
+    it "uses link with lowercase orcid" do
+      visit '/catalog/doi-10-34770-bm4s-t361'
+      find('a', text: 'Bertelli, Nicola').click
+      expect(page).to have_content("Find other works by this author in PDC Discovery.")
+      expect(page).to have_link(href: '/?&q=0000-0002-9326-7585&search_field=orcid')
+    end
+  end
 end
