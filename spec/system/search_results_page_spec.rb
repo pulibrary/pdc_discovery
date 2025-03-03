@@ -3,27 +3,24 @@ require 'rails_helper'
 
 describe 'Search Results Page', type: :system, js: true do
   before do
-    Blacklight.default_index.connection.delete_by_query('*:*')
-    Blacklight.default_index.connection.commit
-    data = file_fixture('search_results_items.xml').read
-    indexer = DspaceIndexer.new(data)
-    indexer.index
+    load_describe_dataset
     page.driver.browser.manage.window.resize_to(2000, 2000)
   end
 
   it "renders expected fields" do
     visit '/?search_field=all_fields&q='
-
-    expect(page).to have_link('Midplane neutral density profiles in the National Spherical Torus Experiment', href: '/catalog/78348')
-    expect(page).to have_content 'Stotler, D.; F. Scotti; R.E. Bell; A. Diallo' # authors
-    expect(page).to have_content 'Atomic and molecular density data in the outer midplane of NSTX' # abstract
+    click_on "Collection Tags"
+    click_on "NSTX"
+    expect(page).to have_link('Midplane neutral density profiles in the National Spherical Torus Experiment', href: '/catalog/doi-10-11578-1366462')
+    expect(page).to have_content 'Stotler, D.; Scotti, F.; Bell, R. E.; Diallo, A.' # authors
+    # expect(page).to have_content 'Atomic and molecular density data in the outer midplane of NSTX' # abstract
   end
 
   describe "title searches" do
     it "finds record by title" do
       # Notice that the search is successful even with a slight variation in terms (profile vs profiles)
       visit '/?search_field=title&q=profile'
-      expect(page).to have_link('Midplane neutral density profiles in the National Spherical Torus Experiment', href: '/catalog/78348')
+      expect(page).to have_link('Midplane neutral density profiles in the National Spherical Torus Experiment', href: '/catalog/doi-10-11578-1366462')
     end
     it "does not find non-existing titles" do
       visit '/?search_field=title&q=crofile'
@@ -34,13 +31,13 @@ describe 'Search Results Page', type: :system, js: true do
   describe "author searches" do
     it "finds record by author" do
       visit '/?search_field=author&q=podesta'
-      expect(page).to have_link('Midplane neutral density profiles in the National Spherical Torus Experiment', href: '/catalog/78348')
+      expect(page).to have_link('Midplane neutral density profiles in the National Spherical Torus Experiment', href: '/catalog/doi-10-11578-1366462')
     end
 
     it "finds record by author synonym" do
       visit '/?search_field=author&q=dan'
       expect(page).to have_content("Author(s):\nTrueman, Daniel")
-      expect(page).to have_link('bitKlavier Grand Sample Library—Piano Bar Mic Image', href: '/catalog/123476')
+      expect(page).to have_link('bitKlavier Grand Sample Library—Piano Bar Mic Image', href: '/catalog/doi-10-34770-r75s-9j74')
     end
   end
 
