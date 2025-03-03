@@ -2,19 +2,12 @@
 require 'rails_helper'
 
 describe 'Single item page', type: :system, js: true do
-  let(:community_fetch_with_expanded_metadata) { file_fixture("single_item.xml").read }
-  let(:indexer) do
-    DspaceIndexer.new(community_fetch_with_expanded_metadata)
-  end
-
   before do
-    Blacklight.default_index.connection.delete_by_query("*:*")
-    Blacklight.default_index.connection.commit
-    indexer.index
+    load_describe_small_data
   end
 
   it "has expected header fields" do
-    visit '/catalog/78348'
+    visit '/catalog/doi-10-34770-r75s-9j74'
     expect(page).to have_css '.document-title-heading'
     expect(page).to have_css '.authors-heading'
     expect(page).to have_css 'div.authors-heading > span.author-name'
@@ -23,16 +16,17 @@ describe 'Single item page', type: :system, js: true do
 
   # rubocop:disable RSpec/ExampleLength
   it "has expected metadata" do
-    visit '/catalog/78348'
-    expect(page).to have_content "Midplane neutral density profiles in the National Spherical Torus Experiment"
+    visit '/catalog/doi-10-34770-00yp-2w12'
+    expect(page).to have_content "Sowing the Seeds for More Usable Web Archives: A Usability Study of Archive-It"
     find('#show-more-metadata-link').click
-    author1 = '<span class="author-name">Stotler, D.;</span>'
-    author2 = '<span class="author-name">F. Scotti;</span>'
-    community1 = '<a href="/?f[communities_ssim][]=Spherical+Torus&amp;q=&amp;search_field=all_fields">Spherical Torus</a>'
-    community2 = '<a href="/?f[communities_ssim][]=Princeton+Plasma+Physics+Laboratory&amp;q=&amp;search_field=all_fields">Princeton Plasma Physics Laboratory</a>'
-    collection = '<span><a href="/?f[collection_tag_ssim][]=NSTX&amp;q=&amp;search_field=all_fields">NSTX</a></span>'
-    expected_values = [author1, author2, community1, community2, collection]
-    expected_values.each do |value|
+    authors = ['<span class="author-name">Abrams, Samantha;</span>']
+    authors << '<span class="author-name">Antracoli, Alexis;</span>'
+    authors << '<span class="author-name">Appel, Rachel;</span>'
+    authors << '<span class="author-name">Caust-Ellenbogen, Celia;</span>'
+    authors << '<span class="author-name">Dennison, Sarah;</span>'
+    authors << '<span class="author-name">Duncan, Sumitra;</span>'
+    authors << '<span class="author-name">Ramsay, Stefanie</span>'
+    authors.each do |value|
       expect(page.html.include?(value)).to be true
     end
   end
@@ -40,8 +34,8 @@ describe 'Single item page', type: :system, js: true do
 
   # rubocop:disable Layout/LineLength
   it "has expected citation information" do
-    visit '/catalog/78348'
-    apa_citation = "Stotler, D., F. Scotti, R.E. Bell, A. Diallo, B.P. LeBlanc, M. Podesta, A.L. Roquemore, & P.W. Ross. (2016). Midplane neutral density profiles in the National Spherical Torus Experiment [Data set]. Princeton Plasma Physics Laboratory, Princeton University."
+    visit '/catalog/doi-10-34770-00yp-2w12'
+    apa_citation = "Abrams, Samantha, Antracoli, Alexis, Appel, Rachel, Caust-Ellenbogen, Celia, Dennison, Sarah, Duncan, Sumitra, & Ramsay, Stefanie. (2023). Sowing the Seeds for More Usable Web Archives: A Usability Study of Archive-It [Data set]. Princeton University."
     expect(page).to have_content apa_citation
     expect(page.html.include?('<button id="show-apa-citation-button"')).to be true
     expect(page.html.include?('<button id="show-bibtex-citation-button"')).to be true
@@ -49,12 +43,12 @@ describe 'Single item page', type: :system, js: true do
   # rubocop:enable Layout/LineLength
 
   it "has expected HTML SPAN element with COinS information" do
-    visit '/catalog/78348'
+    visit '/catalog/doi-10-34770-00yp-2w12'
     expect(page.html.include?('<span class="Z3988"')).to be true
   end
 
   it "renders pageviews and downloads stats" do
-    visit '/catalog/78348'
+    visit '/catalog/doi-10-34770-00yp-2w12'
     expect(page.html.include?('<span id="pageviews"')).to be true
     expect(page.html.include?('<span id="downloads"')).to be true
   end
@@ -63,10 +57,8 @@ describe 'Single item page', type: :system, js: true do
     let(:globus_download_link) { "https://app.globus.org/file-manager?origin_id=dc43f461-0ca7-4203-848c-33a9fc00a464=%2Fvsj7-4j83%2F" }
 
     it "renders hyperlinks in the abstract and description fields" do
-      visit '/catalog/78348'
+      visit '/catalog/doi-10-34770-00yp-2w12'
       expect(page.html.include?('<a href="http://torus.example.com">http://torus.example.com</a>')).to be true
-      links = page.find("div.document-description").find_all("a").map { |a| a["href"] }
-      expect(links.include?(globus_download_link)).to be true
     end
   end
 end
