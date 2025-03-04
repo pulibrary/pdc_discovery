@@ -146,7 +146,7 @@ RSpec.configure do |config|
   # rubocop:ensable Style/ClassVars
 end
 
-# Toggle the WebMock settings below to test data retrieval against a live DSpace instance
+# Toggle the WebMock settings below to test data retrieval against a live PDC Describe instance
 # WebMock.enable_net_connect!
 WebMock.disable_net_connect!(allow_localhost: true,
                              allow: ["github.com", "objects.githubusercontent.com"])
