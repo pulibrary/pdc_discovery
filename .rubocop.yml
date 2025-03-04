@@ -19,11 +19,6 @@ Metrics/BlockLength:
   Exclude:
     - spec/lib/metadata_mapping_spec.rb
     - app/controllers/catalog_controller.rb
-    - spec/lib/dspace_research_data_harvester_spec.rb
-
-Metrics/ParameterLists:
-  Exclude:
-    - app/lib/dspace_research_data_harvester.rb
 
 Rails/Output:
   Exclude:
