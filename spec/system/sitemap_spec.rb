@@ -2,15 +2,8 @@
 require 'rails_helper'
 
 RSpec.describe 'Dynamic Sitemap', type: :system, js: false do
-  let(:globus_fixtures) { File.read(File.join(fixture_paths.first, 'globus_items.xml')) }
-  let(:indexer) do
-    DspaceIndexer.new(globus_fixtures)
-  end
-
   before do
-    Blacklight.default_index.connection.delete_by_query("*:*")
-    Blacklight.default_index.connection.commit
-    indexer.index
+    load_describe_small_data
   end
 
   context 'index' do
@@ -30,7 +23,7 @@ RSpec.describe 'Dynamic Sitemap', type: :system, js: false do
       expect(page).to have_xpath('//urlset')
     end
     it 'renders <url> elements' do
-      visit blacklight_dynamic_sitemap.sitemap_path('1')
+      visit blacklight_dynamic_sitemap.sitemap_path('c')
       expect(page).to have_xpath('//url', count: 1)
     end
   end
