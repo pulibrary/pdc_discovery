@@ -1,4 +1,4 @@
-@import "./variables/typography";
+@use "variables/typography";
 
 .document-metadata-table {
   &-section {
@@ -12,8 +12,8 @@
 
   background-color: #dee2e6;
   header {
-    font-size: $font-size-xx-large-min;
-    font-weight: $font-weight-semi-bold;
+    font-size: typography.$font-size-xx-large-min;
+    font-weight: typography.$font-weight-semi-bold;
 
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
@@ -38,6 +38,6 @@
   }
 
   &__expand {
-    font-weight: $font-weight-regular;
+    font-weight: typography.$font-weight-regular;
   }
 }

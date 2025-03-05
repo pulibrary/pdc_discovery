@@ -1,14 +1,14 @@
-@import "./variables/typography";
-@import "./variables/constants";
+@use "variables/typography";
+@use "variables/constants";
 
 .deployment-version {
   text-align: right;
 
-  margin-top: $space-base;
-  margin-bottom: $space-base;
+  margin-top: constants.$space-base;
+  margin-bottom: constants.$space-base;
 
-  margin-left: $space-base;
-  margin-right: $space-base;
+  margin-left: constants.$space-base;
+  margin-right: constants.$space-base;
 
   color: #000000; /* gray */
 

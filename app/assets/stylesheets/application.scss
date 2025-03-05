@@ -21,16 +21,16 @@
 
 // Show Page
 // Metadata
-@import "./modules/abstract.scss";
-@import "./modules/author.scss";
-@import "./modules/description.scss";
-@import "./modules/issed_date.scss";
-@import "./modules/methods.scss";
-@import "./modules/downloads";
-@import "./modules/metadata_table";
+@use "modules/abstract.scss";
+@use "modules/author.scss";
+@use "modules/description.scss";
+@use "modules/issed_date.scss";
+@use "modules/methods.scss";
+@use "modules/downloads";
+@use "modules/metadata_table";
 
 // Footer
-@import "./modules/deployment_version.scss";
+@use "modules/deployment_version.scss";
 
 .contact-us-label {
   margin-bottom: 0px;
