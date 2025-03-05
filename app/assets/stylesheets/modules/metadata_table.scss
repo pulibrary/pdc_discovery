@@ -1,16 +1,20 @@
 @use "variables/typography";
 
 .document-metadata-table {
-  &-section {
-    margin-top: 2rem;
-  }
-
   padding-top: 0.2rem;
   padding-bottom: 0rem;
   padding-left: 0;
   padding-right: 0;
-
   background-color: #dee2e6;
+
+  &-section {
+    margin-top: 2rem;
+  }
+
+  &__expand {
+    font-weight: typography.$font-weight-regular;
+  }
+  
   header {
     font-size: typography.$font-size-xx-large-min;
     font-weight: typography.$font-weight-semi-bold;
@@ -35,9 +39,5 @@
       padding-left: 1.2rem;
       padding-right: 1.2rem;
     }
-  }
-
-  &__expand {
-    font-weight: typography.$font-weight-regular;
   }
 }
