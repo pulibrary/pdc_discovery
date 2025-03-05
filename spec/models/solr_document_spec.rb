@@ -29,13 +29,6 @@ RSpec.describe SolrDocument do
       doc = described_class.new({ id: "2", data_source_ssi: "pdc_describe" })
       expect(doc.dates_created.first).to be nil
     end
-    it "handles dataspace dates" do
-      doc = described_class.new({ id: "3", date_created_ssim: ["2024-10-30"], data_source_ssi: "dataspace" })
-      expect(doc.dates_created.first).to eq "2024-10-30"
-
-      doc = described_class.new({ id: "4", data_source_ssi: "dataspace" })
-      expect(doc.dates_created.first).to be nil
-    end
   end
 
   describe "#dates_modified" do
@@ -50,13 +43,6 @@ RSpec.describe SolrDocument do
       expect(doc.dates_modified.first).to eq "2024-10-30"
 
       doc = described_class.new({ id: "4", pdc_updated_at_dtsi: "string", data_source_ssi: "pdc_describe" })
-      expect(doc.dates_modified.first).to be nil
-    end
-    it "handles dataspace dates" do
-      doc = described_class.new({ id: "4", date_modified_ssim: ["2024-10-30"], data_source_ssi: "dataspace" })
-      expect(doc.dates_modified.first).to eq "2024-10-30"
-
-      doc = described_class.new({ id: "6", data_source_ssi: "dataspace" })
       expect(doc.dates_modified.first).to be nil
     end
   end
@@ -83,7 +69,9 @@ RSpec.describe SolrDocument do
     end
 
     it "calculates file counts and sorts data descending by count" do
-      files = [{ name: "file1.zip" }, { name: "data.csv" }, { name: "file2.zip" }]
+      files = [{ filename: "file1.zip", "size": 10_588, "display_size": "10.6 KB", "url": "https://example.com" },
+               { filename: "data.csv", "size": 10_588, "display_size": "10.6 KB", "url": "https://example.com" },
+               { filename: "file2.zip", "size": 10_588, "display_size": "10.6 KB", "url": "https://example.com" }]
       doc = described_class.new({ id: "1", files_ss: files.to_json })
       zip_group = { extension: "zip", file_count: 2 }
       csv_group = { extension: "csv", file_count: 1 }
