@@ -1,6 +1,7 @@
 #homepage {
   background: white;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 0) 100%),
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 0) 100%),
     asset_url("nodes-bg.svg") no-repeat center right;
   background-size: cover;
   min-height: 325px;
