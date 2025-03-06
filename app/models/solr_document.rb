@@ -531,24 +531,15 @@ class SolrDocument
     dates_copyrighted.first
   end
 
-  def dates_modified
-    if pdc_describe_record?
-      # pdc describe - pdc_updated_at_dtsi comes as a string
-      # here we force it to be an array, so function returns always an an array
-      pdc_date = fetch("pdc_updated_at_dtsi", nil)
-      begin
-        [DateTime.parse(pdc_date).strftime('%Y-%m-%d')]
-      rescue
-        []
-      end
-    else
-      # dataspace - date_modified_ssim comes as an array
-      fetch("date_modified_ssim", [])
-    end
-  end
-
   def date_modified
-    dates_modified.first
+    # pdc describe - pdc_updated_at_dtsi comes as a string
+    # we want to make sure the formatting is consistent
+    pdc_date = fetch("pdc_updated_at_dtsi", nil)
+    begin
+      DateTime.parse(pdc_date).strftime('%Y-%m-%d')
+    rescue
+      nil
+    end
   end
 
   def dates_valid
