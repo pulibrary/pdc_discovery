@@ -7,27 +7,27 @@ require 'rails_helper'
 RSpec.describe SolrDocument do
   describe "#authors_et_al" do
     it "handles multiple authors" do
-      doc = described_class.new({ id: "1", author_tesim: [] })
+      doc = described_class.new({ id: "1", authors_json_ss: "[]" })
       expect(doc.authors_et_al).to eq ""
 
-      doc = described_class.new({ id: "1", author_tesim: ["Eve Tuck"] })
+      doc = described_class.new({ id: "1", authors_json_ss: "[{\"value\":\"Eve Tuck\",\"sequence\":1}]" })
       expect(doc.authors_et_al).to eq "Eve Tuck"
 
-      doc = described_class.new({ id: "1", author_tesim: ["Eve Tuck", "K. Wayne Yang"] })
+      doc = described_class.new({ id: "1", authors_json_ss: "[{\"value\":\"Eve Tuck\",\"sequence\":1},{\"value\":\"K. Wayne Yang\",\"sequence\":2}]" })
       expect(doc.authors_et_al).to eq "Eve Tuck & K. Wayne Yang"
 
-      doc = described_class.new({ id: "1", author_tesim: ["Eve Tuck", "K. Wayne Yang", "Jane Smith"] })
+      doc = described_class.new({ id: "1", authors_json_ss: "[{\"value\":\"Eve Tuck\",\"sequence\":1},{\"value\":\"K. Wayne Yang\",\"sequence\":2},{\"value\":\"Jane Smith\",\"sequence\":3}]" })
       expect(doc.authors_et_al).to eq "Eve Tuck et al."
     end
   end
 
-  describe "#dates_created" do
+  describe "#date_created" do
     it "handles pdc dates" do
       doc = described_class.new({ id: "1", issue_date_strict_ssi: "2024-10-30", data_source_ssi: "pdc_describe" })
-      expect(doc.dates_created.first).to eq "2024-10-30"
+      expect(doc.date_created).to eq "2024-10-30"
 
       doc = described_class.new({ id: "2", data_source_ssi: "pdc_describe" })
-      expect(doc.dates_created.first).to be nil
+      expect(doc.date_created).to be nil
     end
   end
 
@@ -72,7 +72,7 @@ RSpec.describe SolrDocument do
       files = [{ filename: "file1.zip", "size": 10_588, "display_size": "10.6 KB", "url": "https://example.com" },
                { filename: "data.csv", "size": 10_588, "display_size": "10.6 KB", "url": "https://example.com" },
                { filename: "file2.zip", "size": 10_588, "display_size": "10.6 KB", "url": "https://example.com" }]
-      doc = described_class.new({ id: "1", files_ss: files.to_json })
+      doc = described_class.new({ id: "1", pdc_describe_json_ss: { files: files }.to_json })
       zip_group = { extension: "zip", file_count: 2 }
       csv_group = { extension: "csv", file_count: 1 }
       expect(doc.file_counts[0]).to eq zip_group
@@ -92,8 +92,8 @@ RSpec.describe SolrDocument do
       expect(doc.authors_ordered.count).to eq 5
     end
 
-    it "returns the authors unordered for DataSpace records" do
-      doc = described_class.new({ id: "1", author_tesim: ["Eve Tuck", "K. Wayne Yang"] })
+    it "returns the authors unordered if a sequence is not present" do
+      doc = described_class.new({ id: "1", authors_json_ss: "[{\"value\":\"Eve Tuck\"},{\"value\":\"K. Wayne Yang\"}]" })
       expect(doc.authors_ordered.first.sequence).to eq 0
       expect(doc.authors_ordered.last.sequence).to eq 0
       expect(doc.authors_ordered.any? { |author| author.value == "Eve Tuck" }).to eq true
@@ -133,11 +133,6 @@ RSpec.describe SolrDocument do
   describe "#subjects" do
     it "returns the values for PDC Describe records" do
       doc = described_class.new({ id: "1", data_source_ssi: "pdc_describe", subject_all_ssim: ["subject1", "subject2"] })
-      expect(doc.subject.sort).to eq ["subject1", "subject2"]
-    end
-
-    it "returns the values for DataSpace records" do
-      doc = described_class.new({ id: "1", subject_tesim: ["subject1", "subject2"] })
       expect(doc.subject.sort).to eq ["subject1", "subject2"]
     end
   end
@@ -194,13 +189,6 @@ RSpec.describe SolrDocument do
       it "indicates that the Document is active for the PDC Describe work" do
         expect(solr_document.embargoed?).to be true
       end
-    end
-  end
-
-  describe "#author_from_name" do
-    subject(:solr_document) { described_class.new({ id: "1" }) }
-    it "returns author object from name" do
-      expect(solr_document.author_from_name("John")).to be_a(Hash)
     end
   end
 

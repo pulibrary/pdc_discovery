@@ -75,10 +75,7 @@ class SolrDocument
         authors = JSON.parse(authors_json).map { |hash| Author.new(hash) }
         authors.sort_by(&:sequence)
       else
-        # DataSpace record don't contain this field;
-        # do the best we can with author_tesim value.
-        names = fetch('author_tesim', [])
-        names.map { |name| Author.new({ "value" => name }) }
+        []
       end
     end
   end
@@ -92,20 +89,6 @@ class SolrDocument
     else
       authors_all.first + " et al."
     end
-  end
-
-  # Create an author hash when we only have an author name (e.g. for records coming from DataSpace)
-  # In this case order/sequence cannot be determined.
-  def author_from_name(name)
-    {
-      "value" => name,
-      "name_type" => "Personal",
-      "given_name" => nil,
-      "family_name" => nil,
-      "identifier" => nil,
-      "affiliations" => [],
-      "sequence" => 0
-    }
   end
 
   def creators
@@ -173,7 +156,7 @@ class SolrDocument
   end
 
   def data_source
-    fetch("data_source_ssi", "dataspace")
+    fetch("data_source_ssi", "pdc_describe")
   end
 
   def pdc_describe_record?
@@ -182,12 +165,8 @@ class SolrDocument
 
   def files
     @files ||= begin
-      data = if pdc_describe_record?
-               JSON.parse(fetch("pdc_describe_json_ss", "{}"))["files"] || []
-             else
-               JSON.parse(fetch("files_ss", "[]"))
-             end
-      data.map { |file| DatasetFile.from_hash(file, data_source) }.sort_by(&:sequence)
+      data = JSON.parse(fetch("pdc_describe_json_ss", "{}"))["files"] || []
+      data.map { |file| DatasetFile.from_hash(file) }.sort_by(&:sequence)
     end
   end
 
@@ -379,11 +358,7 @@ class SolrDocument
   end
 
   def subject
-    if pdc_describe_record?
-      fetch("subject_all_ssim", [])
-    else
-      fetch("subject_tesim", [])
-    end
+    fetch("subject_all_ssim", [])
   end
 
   def subject_classification
@@ -492,19 +467,8 @@ class SolrDocument
     fetch("temporal_coverage_tesim", [])
   end
 
-  def dates_created
-    if pdc_describe_record?
-      # pdc describe - issue_date_strict_ssi comes as a string
-      # here we force it to be an array, so function returns always an an array
-      [fetch("issue_date_strict_ssi", nil)].compact
-    else
-      # dataspace - date_created_ssim comes as an array
-      fetch("date_created_ssim", [])
-    end
-  end
-
   def date_created
-    dates_created.first
+    fetch("issue_date_strict_ssi", nil)
   end
 
   def dates_submitted

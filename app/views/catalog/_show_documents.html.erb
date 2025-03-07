@@ -3,7 +3,7 @@
     <div class="card">
       <div class="document-downloads card-body">
 
-        <!-- Only render file download table if there are files in DataSpace -->
+        <!-- Only render file download table if there are files -->
 
         <% if @document.embargoed? %>
           <%= render_embargo_files(@document.embargo_date) %>
