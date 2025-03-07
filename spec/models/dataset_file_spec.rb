@@ -11,7 +11,7 @@ RSpec.describe DatasetFile do
         size: 455_511,
         url: "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/qyrs-vg25/50/file_name.txt"
       }
-      file = described_class.from_hash(hash, "pdc_describe")
+      file = described_class.from_hash(hash)
       expect(file.download_url).to eq hash[:url]
     end
   end
@@ -44,7 +44,7 @@ RSpec.describe DatasetFile do
                               filename: "10.34770/bm4s-t361/89/b.txt",
                               size: "455511",
                               download_url: "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/b.txt"
-                            }, "pdc_describe")
+                            })
     end
     let(:file2) do
       DatasetFile.from_hash({
@@ -52,7 +52,7 @@ RSpec.describe DatasetFile do
                               filename: "10.34770/bm4s-t361/89/a.txt",
                               size: "19271048",
                               download_url: "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/a.txt"
-                            }, "pdc_describe")
+                            })
     end
     let(:file3) do
       DatasetFile.from_hash({
@@ -60,7 +60,7 @@ RSpec.describe DatasetFile do
                               filename: "10.34770/bm4s-t361/89/README.txt",
                               size: "5173",
                               download_url: "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/bm4s-t361/89/README.txt"
-                            }, "pdc_describe")
+                            })
     end
 
     let(:file_array) { [file1, file2, file3] }

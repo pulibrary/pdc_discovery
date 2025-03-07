@@ -4,7 +4,7 @@ class DatasetFile
   attr_accessor :name, :description, :format, :size, :display_size, :mime_type, :sequence, :handle, :extension,
     :source, :download_url, :full_path
 
-  def self.from_hash(data, _data_source)
+  def self.from_hash(data)
     from_hash_describe(data)
   end
 
