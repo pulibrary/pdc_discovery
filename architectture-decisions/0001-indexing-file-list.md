@@ -27,4 +27,4 @@ When we store data for a dataset in Solr we store the dataset metadata and also 
 ## Notes
 In addition to the storage issue describe here, at some point we will also need to consider how to *fetch and display* the entire file list to the user. We currently fetch the entire list at once via AJAX but this approach will not scale if the file list where to have millions of files. 
 
-Other approaches are available to handle the display of large lists (e.g. pagination) and this is something that would need to be addressed when we decide to support extremelly large file lists.
+Other approaches are available to handle the display of large lists (e.g. pagination) and this is something that would need to be addressed when we decide to support extremely large file lists.
