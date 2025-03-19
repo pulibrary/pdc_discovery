@@ -25,6 +25,7 @@
   <%end%>
   <br>
   <%= render_sidebar_doi_row @document.doi_url, @document.doi_value %>
+  <%= render_sidebar_value "Version", @document.version_number %>
   <%= render_sidebar_related_identifiers "Related Identifiers", @document.related_identifiers %>
   <% if @document.pdc_describe_record? %>
     <%= render_sidebar_value("Total Size", number_to_human_size(@document.total_file_size))%>
