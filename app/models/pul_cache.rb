@@ -2,7 +2,7 @@
 
 require "health_monitor/providers/cache"
 
-class PULCache < HealthMonitor::Providers::Cache
+class PulCache < HealthMonitor::Providers::Cache
   private
 
   def key
