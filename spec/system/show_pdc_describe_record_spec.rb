@@ -74,6 +74,15 @@ describe 'Show PDC Page', type: :system, js: true do
     expect(page).to have_selector('#document-file-type-list-extra', visible: false)
   end
 
+  it 'shows version on sidebar when there is a version' do
+    visit '/catalog/doi-10-34770-bm4s-t361'
+    expect(page).to have_content("Version")
+  end
+
+  # it 'does not show version on sidebar when there is not a version' do
+
+  # end
+
   it 'correctly sorts by file size' do
     visit '/catalog/doi-10-34770-bm4s-t361'
     sleep(0.1) # wait for the files to load via AJAX

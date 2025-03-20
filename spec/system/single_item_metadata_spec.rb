@@ -35,7 +35,7 @@ describe 'Single item page', type: :system, js: true do
   # rubocop:disable Layout/LineLength
   it "has expected citation information" do
     visit '/catalog/doi-10-34770-00yp-2w12'
-    apa_citation = "Abrams, Samantha, Antracoli, Alexis, Appel, Rachel, Caust-Ellenbogen, Celia, Dennison, Sarah, Duncan, Sumitra, & Ramsay, Stefanie. (2023). Sowing the Seeds for More Usable Web Archives: A Usability Study of Archive-It [Data set]. Princeton University."
+    apa_citation = "Abrams, Samantha, Antracoli, Alexis, Appel, Rachel, Caust-Ellenbogen, Celia, Dennison, Sarah, Duncan, Sumitra, & Ramsay, Stefanie. (2023). Sowing the Seeds for More Usable Web Archives: A Usability Study of Archive-It [Data set]. Version 1. Princeton University."
     expect(page).to have_content apa_citation
     expect(page.html.include?('<button id="show-apa-citation-button"')).to be true
     expect(page.html.include?('<button id="show-bibtex-citation-button"')).to be true
