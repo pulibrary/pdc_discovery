@@ -14,13 +14,14 @@ class DatasetCitation
   # @param type [String] Type of the dataset (e.g. "Data set" or "Unpublished raw data")
   # @publisher [String] Publisher of the dataset
   # @doi [String] DOI URL
-  def initialize(authors, years, title, type, publisher, doi)
+  def initialize(authors, years, title, type, publisher, doi, version)
     @authors = authors || []
     @years = years || []
     @title = title
     @type = type
     @publisher = publisher
     @doi = doi
+    @version = version
   end
 
   def to_s(style)
@@ -60,10 +61,15 @@ class DatasetCitation
     apa_title += " [#{@type}]" if @type.present?
     apa_title = append_dot(apa_title)
 
+    if @version.blank? 
+      apa_version = ""
+    else
+      apa_version = "Version #{@version}."
+    end
     apa_publisher = append_dot(@publisher)
     apa_doi = @doi
-
-    tokens = [append_dot(apa_author), append_dot(apa_year), apa_title, apa_publisher, apa_doi].reject(&:blank?)
+    
+    tokens = [append_dot(apa_author), append_dot(apa_year), apa_title, apa_version, apa_publisher, apa_doi].reject(&:blank?)
     tokens.join(' ')
   rescue => ex
     Rails.logger.error "Error generating APA citation for (#{@title}): #{ex.message}"
@@ -86,6 +92,10 @@ class DatasetCitation
 
     if @title.present?
       tokens << bibtex_field('title', @title, '{{', '}}')
+    end
+
+    if @version.present?
+      tokens << bibtex_field('version', @version)
     end
 
     if @publisher.present?

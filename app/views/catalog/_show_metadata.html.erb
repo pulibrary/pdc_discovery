@@ -29,6 +29,7 @@
             <%= render_field_row "Date Submitted", @document.date_submitted %>
             <%= render_field_row "Date Accepted", @document.date_accepted %>
             <%= render_field_row "Date Copyrighted", @document.date_copyrighted %>
+            <%= render_field_row "Version", @document.version_number, true %> <!-- displayed by default -->
             <% @document.uri.each do |uri| %>
               <%= render_field_row_link "URI", uri, true %> <!-- displayed by default -->
             <% end %>
