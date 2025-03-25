@@ -11,11 +11,11 @@ RSpec.describe SidebarHelper, type: :helper do
     let(:identifiers) { [text_id, link_id, bad_id1, bad_id2, doi_id] }
     let(:html) { helper.render_sidebar_related_identifiers("Related Identifiers", identifiers) }
     let(:licenses_html) { helper.render_sidebar_licenses(["https://creativecommons.org/licenses/by/4.0/", nil]) }
-    
+
     it "titleize relation type" do
       expect(html.include?("Is Cited By")).to be true
     end
-    
+
     it "URLs are rendered as links" do
       expect(html.include?("<a href=http://abc.org/999")).to be true
     end

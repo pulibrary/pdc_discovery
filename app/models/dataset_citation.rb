@@ -60,20 +60,23 @@ class DatasetCitation
     apa_title = DatasetCitation.custom_strip(@title)
     apa_title += " [#{@type}]" if @type.present?
     apa_title = append_dot(apa_title)
-
-    if @version.blank? 
-      apa_version = ""
-    else
-      apa_version = "Version #{@version}."
-    end
+    apa_version = apa_version_text(@version)
     apa_publisher = append_dot(@publisher)
     apa_doi = @doi
-    
+
     tokens = [append_dot(apa_author), append_dot(apa_year), apa_title, apa_version, apa_publisher, apa_doi].reject(&:blank?)
     tokens.join(' ')
   rescue => ex
     Rails.logger.error "Error generating APA citation for (#{@title}): #{ex.message}"
     nil
+  end
+
+  def apa_version_text(version)
+    if version.blank?
+      ""
+    else
+      "Version #{version}."
+    end
   end
 
   # Returns a string with BibTeX citation for the dataset.
@@ -84,6 +87,7 @@ class DatasetCitation
   #
   # Notice that we use the @electronic{...} identifier instead of @dataset{...} since
   # Zotero does not recognize the later.
+  # rubocop:disable Metrics/PerceivedComplexity
   def bibtex
     tokens = []
     if @authors.count > 0
@@ -118,6 +122,7 @@ class DatasetCitation
     Rails.logger.error "Error generating BibTex citation for (#{@title}): #{ex.message}"
     nil
   end
+  # rubocop:enable Metrics/PerceivedComplexity
 
   # Return a string with the ContextObjects in Spans (COinS) information
   # https://en.wikipedia.org/wiki/COinS
