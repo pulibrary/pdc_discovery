@@ -6,14 +6,14 @@ require 'rails_helper'
 # rubocop:disable RSpec/ExampleLength
 RSpec.describe DatasetCitation do
   let(:single_author_dataset) { described_class.new(["Menard, J.E."], [2018], "Compact steady-state tokamak", "Data set", "Princeton University", "http://doi.org/princeton/test123", 1) }
-  let(:two_authors_dataset) { described_class.new(["Menard, J.E.", "Lopez, R."], [2018], "Compact steady-state tokamak", "Data set", "Princeton University", "http://doi.org/princeton/test123", 2)}
-  let(:three_authors_dataset) { described_class.new(["Menard, J.E.", "Lopez, R.", "Liu, D."], [2018], "Compact steady-state tokamak", "Data set", "Princeton University", "http://doi.org/princeton/test123", 3) }
+  let(:two_authors_dataset) { described_class.new(["Menard, J.E.", "Lopez, R."], [2018], "Compact steady-state tokamak", "Data set", "Princeton University", "http://doi.org/princeton/test123", "")}
+  let(:three_authors_dataset) { described_class.new(["Menard, J.E.", "Lopez, R.", "Liu, D."], [2018], "Compact steady-state tokamak", "Data set", "Princeton University", "http://doi.org/princeton/test123", nil) }
 
   describe "#apa" do
     it "handles authors correctly" do
       expect(single_author_dataset.apa).to eq "Menard, J.E. (2018). Compact steady-state tokamak [Data set]. Version 1. Princeton University. http://doi.org/princeton/test123"
-      expect(two_authors_dataset.apa).to eq "Menard, J.E. & Lopez, R. (2018). Compact steady-state tokamak [Data set]. Version 2. Princeton University. http://doi.org/princeton/test123"
-      expect(three_authors_dataset.apa).to eq "Menard, J.E., Lopez, R., & Liu, D. (2018). Compact steady-state tokamak [Data set]. Version 3. Princeton University. http://doi.org/princeton/test123"
+      expect(two_authors_dataset.apa).to eq "Menard, J.E. & Lopez, R. (2018). Compact steady-state tokamak [Data set]. Princeton University. http://doi.org/princeton/test123"
+      expect(three_authors_dataset.apa).to eq "Menard, J.E., Lopez, R., & Liu, D. (2018). Compact steady-state tokamak [Data set]. Princeton University. http://doi.org/princeton/test123"
     end
   end
 
