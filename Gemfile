@@ -11,7 +11,7 @@ gem 'blacklight_dynamic_sitemap'
 gem 'blacklight-marc', '>= 7.0.0.rc1', '< 8'
 gem "blacklight_range_limit", '~> 8.2'
 gem 'bootsnap', '>= 1.4.4', require: false
-gem 'bootstrap', '~> 4.0'
+gem 'bootstrap'
 gem 'dartsass-rails', '~> 0.5.0'
 gem 'dartsass-sprockets'
 gem 'devise'
