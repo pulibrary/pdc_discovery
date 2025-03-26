@@ -18,6 +18,11 @@ describe 'Single item page', type: :system, js: true do
   it "has expected metadata" do
     visit '/catalog/doi-10-34770-00yp-2w12'
     expect(page).to have_content "Sowing the Seeds for More Usable Web Archives: A Usability Study of Archive-It"
+    # check that version appears before clicking "Show More"
+    version_header = '<span>Version</span>'
+    expect(page.html.include?(version_header)).to be true
+    version_number = '<span>1</span>'
+    expect(page.html.include?(version_number)).to be true
     find('#show-more-metadata-link').click
     authors = ['<span class="author-name">Abrams, Samantha;</span>']
     authors << '<span class="author-name">Antracoli, Alexis;</span>'
@@ -29,13 +34,24 @@ describe 'Single item page', type: :system, js: true do
     authors.each do |value|
       expect(page.html.include?(value)).to be true
     end
+    # check that version appears after clicking "Show More"
+    version_header = '<span>Version</span>'
+    expect(page.html.include?(version_header)).to be true
+    version_number = '<span>1</span>'
+    expect(page.html.include?(version_number)).to be true
+    # check that version appears after clicking "Show Less"
+    find('#show-more-metadata-link').click
+    version_header = '<span>Version</span>'
+    expect(page.html.include?(version_header)).to be true
+    version_number = '<span>1</span>'
+    expect(page.html.include?(version_number)).to be true
   end
   # rubocop:enable RSpec/ExampleLength
 
   # rubocop:disable Layout/LineLength
   it "has expected citation information" do
     visit '/catalog/doi-10-34770-00yp-2w12'
-    apa_citation = "Abrams, Samantha, Antracoli, Alexis, Appel, Rachel, Caust-Ellenbogen, Celia, Dennison, Sarah, Duncan, Sumitra, & Ramsay, Stefanie. (2023). Sowing the Seeds for More Usable Web Archives: A Usability Study of Archive-It [Data set]. Princeton University."
+    apa_citation = "Abrams, Samantha, Antracoli, Alexis, Appel, Rachel, Caust-Ellenbogen, Celia, Dennison, Sarah, Duncan, Sumitra, & Ramsay, Stefanie. (2023). Sowing the Seeds for More Usable Web Archives: A Usability Study of Archive-It [Data set]. Version 1. Princeton University."
     expect(page).to have_content apa_citation
     expect(page.html.include?('<button id="show-apa-citation-button"')).to be true
     expect(page.html.include?('<button id="show-bibtex-citation-button"')).to be true

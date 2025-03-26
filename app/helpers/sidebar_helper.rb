@@ -57,7 +57,7 @@ module SidebarHelper
   end
 
   def render_sidebar_value(header, value)
-    return if value.nil?
+    return if value.blank?
     html = <<-HTML
       <div class="sidebar-row">
         <span class="sidebar-header">#{header}</span><br/>

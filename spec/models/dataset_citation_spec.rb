@@ -5,13 +5,13 @@ require 'rails_helper'
 # rubocop:disable Layout/LineLength
 # rubocop:disable RSpec/ExampleLength
 RSpec.describe DatasetCitation do
-  let(:single_author_dataset) { described_class.new(["Menard, J.E."], [2018], "Compact steady-state tokamak", "Data set", "Princeton University", "http://doi.org/princeton/test123") }
-  let(:two_authors_dataset) { described_class.new(["Menard, J.E.", "Lopez, R."], [2018], "Compact steady-state tokamak", "Data set", "Princeton University", "http://doi.org/princeton/test123") }
-  let(:three_authors_dataset) { described_class.new(["Menard, J.E.", "Lopez, R.", "Liu, D."], [2018], "Compact steady-state tokamak", "Data set", "Princeton University", "http://doi.org/princeton/test123") }
+  let(:single_author_dataset) { described_class.new(["Menard, J.E."], [2018], "Compact steady-state tokamak", "Data set", "Princeton University", "http://doi.org/princeton/test123", 1) }
+  let(:two_authors_dataset) { described_class.new(["Menard, J.E.", "Lopez, R."], [2018], "Compact steady-state tokamak", "Data set", "Princeton University", "http://doi.org/princeton/test123", "") }
+  let(:three_authors_dataset) { described_class.new(["Menard, J.E.", "Lopez, R.", "Liu, D."], [2018], "Compact steady-state tokamak", "Data set", "Princeton University", "http://doi.org/princeton/test123", nil) }
 
   describe "#apa" do
     it "handles authors correctly" do
-      expect(single_author_dataset.apa).to eq "Menard, J.E. (2018). Compact steady-state tokamak [Data set]. Princeton University. http://doi.org/princeton/test123"
+      expect(single_author_dataset.apa).to eq "Menard, J.E. (2018). Compact steady-state tokamak [Data set]. Version 1. Princeton University. http://doi.org/princeton/test123"
       expect(two_authors_dataset.apa).to eq "Menard, J.E. & Lopez, R. (2018). Compact steady-state tokamak [Data set]. Princeton University. http://doi.org/princeton/test123"
       expect(three_authors_dataset.apa).to eq "Menard, J.E., Lopez, R., & Liu, D. (2018). Compact steady-state tokamak [Data set]. Princeton University. http://doi.org/princeton/test123"
     end
@@ -22,6 +22,7 @@ RSpec.describe DatasetCitation do
       bibtex = "@electronic{menard_je_2018,\r\n" \
       "\tauthor      = {Menard, J.E.},\r\n" \
       "\ttitle       = {{Compact steady-state tokamak}},\r\n" \
+      "\tversion     = 1,\r\n" \
       "\tpublisher   = {{Princeton University}},\r\n" \
       "\tyear        = 2018,\r\n" \
       "\turl         = {http://doi.org/princeton/test123}\r\n" \
@@ -41,15 +42,15 @@ RSpec.describe DatasetCitation do
 
   describe "title" do
     it "does not add extra periods to title and publisher if they come in the source data" do
-      citation = described_class.new(["Menard, J.E."], [2018], "Compact steady-state tokamak.", "Data set", "Princeton University.", "http://doi.org/princeton/test123")
-      expect(citation.apa).to eq "Menard, J.E. (2018). Compact steady-state tokamak [Data set]. Princeton University. http://doi.org/princeton/test123"
+      citation = described_class.new(["Menard, J.E."], [2018], "Compact steady-state tokamak.", "Data set", "Princeton University.", "http://doi.org/princeton/test123", 1)
+      expect(citation.apa).to eq "Menard, J.E. (2018). Compact steady-state tokamak [Data set]. Version 1. Princeton University. http://doi.org/princeton/test123"
     end
   end
 
   describe "year" do
     it "handles year ranges" do
-      citation = described_class.new(["Menard, J.E."], [2018, 2020], "Compact steady-state tokamak.", "Data set", "Princeton University.", "http://doi.org/princeton/test123")
-      expect(citation.apa).to eq "Menard, J.E. (2018-2020). Compact steady-state tokamak [Data set]. Princeton University. http://doi.org/princeton/test123"
+      citation = described_class.new(["Menard, J.E."], [2018, 2020], "Compact steady-state tokamak.", "Data set", "Princeton University.", "http://doi.org/princeton/test123", 1)
+      expect(citation.apa).to eq "Menard, J.E. (2018-2020). Compact steady-state tokamak [Data set]. Version 1. Princeton University. http://doi.org/princeton/test123"
     end
   end
 
@@ -68,7 +69,7 @@ RSpec.describe DatasetCitation do
 
   describe "#bibtex_lines" do
     it "breaks lines as expected" do
-      citation = described_class.new("", [], "", "", "", "")
+      citation = described_class.new("", [], "", "", "", "", nil)
       expect(citation.bibtex_lines("hello world", 20)).to eq ["hello world"]
       expect(citation.bibtex_lines("this is a very long text", 20)).to eq ["this is a very long ", "text"]
       expect(citation.bibtex_lines(0)).to eq ["0"]

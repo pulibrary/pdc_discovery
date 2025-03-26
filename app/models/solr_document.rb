@@ -543,7 +543,7 @@ class SolrDocument
     @citation ||= begin
       year_available = fetch('year_available_itsi', nil)
       years = year_available ? [year_available.to_s] : []
-      DatasetCitation.new(authors, years, title, 'Data set', publisher.first, doi_url)
+      DatasetCitation.new(authors, years, title, 'Data set', publisher.first, doi_url, version_number)
     end
   end
 
