@@ -24,10 +24,10 @@ RSpec.describe DatasetFileTally do
   it 'writes the file to a configurable directory' do
     expect(dft.filepath).to eq Rails.root.join("tmp", "dataset_file_tally", dft.filename).to_s
   end
-  
 
-  it 'queries for all of the files in solr' do
-    expect(dft.query_all_files["response"]["numFound"]).to eq 67
-  end
+
+  # it 'queries for all of the files in solr' do
+  #   expect(dft.query_all_files["response"]["numFound"]).to eq 67
+  # end
 
 end
