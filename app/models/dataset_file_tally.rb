@@ -1,16 +1,17 @@
 # frozen_string_literal: true
+require "csv"
 
 # A tally of all of the files in the system at a given time.
 # This should allow us to generate a report on current storage,
 # as well as track growth over time.
 class DatasetFileTally
-
   DEFAULT_FILE_PATH = Rails.root.join("tmp", "dataset_file_tally")
 
-  attr_reader :timestamp, :filename, :filepath
+  attr_reader :timestamp
 
   def initialize(timestamp = Time.zone.now)
     @timestamp = timestamp
+    @batch_size = 10
   end
 
   # Write a file named with the current timestamp
@@ -24,29 +25,54 @@ class DatasetFileTally
     Pathname.new(directory).join(filename).to_s
   end
 
-  def export
-    puts "id, title, file_name, file_size, url"
-    solr_docs.each do |solr_doc|
-      dataset_tokens = []
-      dataset_tokens << solr_doc.id
-      dataset_tokens << solr_doc.title
-      solr_doc.files.each do |file|
-        file_tokens = []
-        file_tokens << file.full_path
-        file_tokens << file.size
-        file_tokens << file.download_url
-        tokens = dataset_tokens + file_tokens
-        puts tokens.join(", ")
+  # Exports the dataset top level information
+  def summary
+    init_solr_batch
+    CSV.open(filepath, "w") do |csv|
+      csv << ["id", "title", "issue_date", "file_count", "total_file_size"]
+      loop do
+        datasets = fetch_solr_batch
+        break if datasets.count == 0
+
+        datasets.each do |dataset|
+          csv << [dataset.id, dataset.title, dataset.issued_date, dataset.files.count, dataset.total_file_size]
+        end
+      end
+    end
+  end
+
+  # Exports the dataset top level information and the file list for each dataset
+  def details
+    init_solr_batch
+    CSV.open(filepath, "w") do |csv|
+      csv << ["id", "title", "issue_date", "file_count", "total_file_size", "file_name", "file_size", "url"]
+      loop do
+        datasets = fetch_solr_batch
+        break if datasets.count == 0
+
+        datasets.each do |dataset|
+          dataset_tokens = [dataset.id, dataset.title, dataset.issued_date, dataset.files.count, dataset.total_file_size]
+          dataset.files.each do |file|
+            file_tokens = [file.full_path, file.size, file.download_url]
+            tokens = dataset_tokens + file_tokens
+            csv << tokens
+          end
+        end
       end
     end
   end
 
   private
-    def solr_docs
-      @solr_docs ||= begin
-        # TODO: implement pagination
-        response = Blacklight.default_index.connection.get 'select', params: { q: '*:*', fl: '*' }
-        response["response"]["docs"].map { |doc| SolrDocument.new(doc) }
-      end
-    end
+
+  def fetch_solr_batch
+    @batch += 1
+    start = @batch * @batch_size
+    solr_params = { q: '*:*', fl: '*', start: start, rows: @batch_size, order: 'id asc' }
+    response = Blacklight.default_index.connection.get 'select', params: solr_params
+    response["response"]["docs"].map { |doc| SolrDocument.new(doc) }
+  end
+
+  def init_solr_batch
+    @batch = -1
+  end
 end
