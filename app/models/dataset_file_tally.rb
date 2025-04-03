@@ -14,21 +14,28 @@ class DatasetFileTally
     @batch_size = 10
   end
 
-  # Write a file named with the current timestamp
-  def filename
-    @filename ||= "#{@timestamp.strftime('%Y_%m_%d_%H_%M')}.csv"
+  def filename_summary
+    @filename_summary ||= "#{@timestamp.strftime('%Y_%m_%d_%H_%M')}_summary.csv"
   end
 
-  # Write a file named with the current timestamp
-  def filepath
+  def filename_details
+    @filename_details ||= "#{@timestamp.strftime('%Y_%m_%d_%H_%M')}_details.csv"
+  end
+
+  def filepath_summary
     directory = ENV.fetch('DATASET_FILE_TALLY_DIR', DEFAULT_FILE_PATH)
-    Pathname.new(directory).join(filename).to_s
+    Pathname.new(directory).join(filename_summary).to_s
+  end
+
+  def filepath_details
+    directory = ENV.fetch('DATASET_FILE_TALLY_DIR', DEFAULT_FILE_PATH)
+    Pathname.new(directory).join(filename_details).to_s
   end
 
   # Exports the dataset top level information
   def summary
     init_solr_batch
-    CSV.open(filepath, "w") do |csv|
+    CSV.open(filepath_summary, "w") do |csv|
       csv << ["id", "title", "issue_date", "file_count", "total_file_size"]
       loop do
         datasets = fetch_solr_batch
@@ -44,7 +51,7 @@ class DatasetFileTally
   # Exports the dataset top level information and the file list for each dataset
   def details
     init_solr_batch
-    CSV.open(filepath, "w") do |csv|
+    CSV.open(filepath_details, "w") do |csv|
       csv << ["id", "title", "issue_date", "file_count", "total_file_size", "file_name", "file_size", "url"]
       loop do
         datasets = fetch_solr_batch
