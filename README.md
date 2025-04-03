@@ -105,15 +105,6 @@ You can view the [Honeybadger Uptime check](https://app.honeybadger.io/projects/
 
 To be notified of downtime enable notifications in Honeybadger under: Settings + Alerts & Integrtions + email (Edit). Enable notifications for "Uptime Events" for "PDC Discovery Production". Notice that email notifications settings are *per project*.
 
-## PPPL / OSTI data feed
-There is a data feed at `/pppl_reporting_feed.json`.
-It provides a feed of the full JSON blob from PDC Describe for every object tagged as belonging to the Princeton Plasma Physics Laboratory group, sorted by most recently updated first. This is so PPPL can harvest data sets to report to OSTI.
-This feed can be paged through using the parameters `per_page` and `page`, like this:
-
-```
-https://pdc-discovery-staging.princeton.edu/discovery/pppl_reporting_feed.json?per_page=2&page=3
-```
-
 ## Mail
 
 ### Mail on Development
@@ -130,3 +121,21 @@ Look in your default browser for the consoles
 
 ### Mail on Production
 Emails on production are sent via [Pony Express](https://github.com/pulibrary/pul-it-handbook/blob/f54dfdc7ada1ff993a721f6edb4aa1707bb3a3a5/services/smtp-mail-server.md).
+
+
+## PPPL / OSTI data feed
+There is a data feed at `/pppl_reporting_feed.json`.
+It provides a feed of the full JSON blob from PDC Describe for every object tagged as belonging to the Princeton Plasma Physics Laboratory group, sorted by most recently updated first. This is so PPPL can harvest data sets to report to OSTI.
+This feed can be paged through using the parameters `per_page` and `page`, like this:
+
+```
+https://pdc-discovery-staging.princeton.edu/discovery/pppl_reporting_feed.json?per_page=2&page=3
+```
+
+## Export of dataset information
+There are two rake tasks that produce CSV files with information about the datasets.
+
+* `bundle exec rake export:summary` generates a file that includes the list of datasets and their size (one line per dataset).
+* `bundle exec rake export:details` generates a file that includes the list of datasets and their files (one line per file).
+
+The generated file will be outputed to the `ENV["DATASET_FILE_TALLY_DIR"]` folder and will be named with todays' timestamp.
