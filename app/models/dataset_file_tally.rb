@@ -24,11 +24,13 @@ class DatasetFileTally
 
   def filepath_summary
     directory = ENV.fetch('DATASET_FILE_TALLY_DIR', DEFAULT_FILE_PATH)
+    FileUtils.mkdir_p directory
     Pathname.new(directory).join(filename_summary).to_s
   end
 
   def filepath_details
     directory = ENV.fetch('DATASET_FILE_TALLY_DIR', DEFAULT_FILE_PATH)
+    FileUtils.mkdir_p directory
     Pathname.new(directory).join(filename_details).to_s
   end
 
