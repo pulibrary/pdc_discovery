@@ -6,7 +6,7 @@
         "title_type": null
       }
     ],
-    "description": "In 2017, seven members of the Archive-It Mid-Atlantic Users Group (AITMA) conducted a study of 14 subjects representative of their stakeholder populations to assess the usability of Archive-It, a web archiving subscription service of the Internet Archive. While Archive-It is the most widely-used tool for web archiving, little is known about how users interact with the service. This study intended to teach us what users expect from web archives, which exist as another form of archival material. End-user subjects executed four search tasks using the public Archive-It interface and the Wayback Machine to access archived information on websites from the facilitators' own harvested collections and provide feedback about their experiences. The tasks were designed to have straightforward pass or fail outcomes,\r\nand the facilitators took notes on the subjects' behavior and commentary during the sessions. Overall, participants reported mildly positive impressions of Archive-It public user interface based on their session. The study identified several key areas of improvement for the Archive-It service pertaining to metadata options, terminology display, indexing of dates, and the site's search box.\r\n\r\nDownload the README.txt for a detailed description of this dataset's content.",
+    "description": "This is a fake url for testing: http://torus.example.com.\n In 2017, seven members of the Archive-It Mid-Atlantic Users Group (AITMA) conducted a study of 14 subjects representative of their stakeholder populations to assess the usability of Archive-It, a web archiving subscription service of the Internet Archive. While Archive-It is the most widely-used tool for web archiving, little is known about how users interact with the service. This study intended to teach us what users expect from web archives, which exist as another form of archival material. End-user subjects executed four search tasks using the public Archive-It interface and the Wayback Machine to access archived information on websites from the facilitators' own harvested collections and provide feedback about their experiences. The tasks were designed to have straightforward pass or fail outcomes,\r\nand the facilitators took notes on the subjects' behavior and commentary during the sessions. Overall, participants reported mildly positive impressions of Archive-It public user interface based on their session. The study identified several key areas of improvement for the Archive-It service pertaining to metadata options, terminology display, indexing of dates, and the site's search box.\r\n\r\nDownload the README.txt for a detailed description of this dataset's content.",
     "collection_tags": [],
     "creators": [
       {
@@ -76,7 +76,7 @@
     "resource_type": "Dataset",
     "resource_type_general": "Dataset",
     "publisher": "Princeton University",
-    "publication_year": "2019",
+    "publication_year": "2023",
     "ark": "ark:/88435/dsp01d791sj97j",
     "doi": "10.34770/00yp-2w12",
     "rights_many": [
@@ -87,97 +87,17 @@
       }
     ],
     "version_number": "1",
-    "related_objects": [
-      {
-        "related_identifier": "https://doi.org/10.17723/aarc-82-02-19",
-        "related_identifier_type": "DOI",
-        "relation_type": "IsReferencedBy",
-        "valid_type_values": [
-          "ARK",
-          "arXiv",
-          "bibcode",
-          "DOI",
-          "EAN13",
-          "EISSN",
-          "Handle",
-          "ISBN",
-          "ISSN",
-          "ISTC",
-          "LISSN",
-          "LSID",
-          "PMID",
-          "PURL",
-          "UPC",
-          "URL",
-          "URN",
-          "IGSN",
-          "w3id"
-        ],
-        "valid_related_identifier_type": true,
-        "valid_relationship_types": [
-          "IsCitedBy",
-          "Cites",
-          "IsSupplementTo",
-          "IsSupplementedBy",
-          "IsContinuedBy",
-          "Continues",
-          "HasMetadata",
-          "IsMetadataFor",
-          "IsNewVersionOf",
-          "IsPreviousVersionOf",
-          "HasVersion",
-          "IsVersionOf",
-          "IsPartOf",
-          "HasPart",
-          "IsReferencedBy",
-          "References",
-          "IsDocumentedBy",
-          "Documents",
-          "IsCompiledBy",
-          "Compiles",
-          "IsVariantFormOf",
-          "IsOriginalFormOf",
-          "IsIdenticalTo",
-          "IsReviewedBy",
-          "Reviews",
-          "IsDerivedFrom",
-          "IsSourceOf",
-          "IsObsoletedBy",
-          "Obsoletes",
-          "IsDescribedBy",
-          "Describes",
-          "IsRequiredBy",
-          "Requires"
-        ],
-        "valid_relation_type": true,
-        "errors": []
-      }
-    ],
+    "related_objects": [],
     "keywords": [],
     "contributors": [],
     "organizational_contributors": [],
     "funders": [],
-    "domains": [
-      "Humanities"
-    ],
+    "domains": [],
     "communities": [],
     "subcommunities": [],
     "migrated": true
   },
-  "files": [
-    {
-      "filename": "10.34770/00yp-2w12/54/Archive-It-UsabilityTestDataAnalysis-2017.xlsx",
-      "size": 94578,
-      "display_size": "94.6 KB",
-      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/00yp-2w12/54/Archive-It-UsabilityTestDataAnalysis-2017.xlsx"
-    },
-    {
-      "filename": "10.34770/00yp-2w12/54/readmearchiveitusability.rtf",
-      "size": 5125,
-      "display_size": "5.13 KB",
-      "url": "https://g-ef94ef.f0ad1.36fe.data.globus.org/10.34770/00yp-2w12/54/readmearchiveitusability.rtf"
-    }
-  ],
+  "files": [],
   "group": {
     "title": "Princeton Research Data Service (PRDS)",
     "description": "",
@@ -187,5 +107,5 @@
   },
   "embargo_date": null,
   "created_at": "2023-07-11T11:06:10Z",
-  "updated_at": "2024-07-30T14:21:10Z"
+  "updated_at": "2023-09-13T08:23:50Z"
 }
