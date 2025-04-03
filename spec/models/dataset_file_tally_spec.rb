@@ -11,7 +11,7 @@ RSpec.describe DatasetFileTally do
   end
 
   let(:dft) { described_class.new(timestamp) }
-  let(:timestamp) { Time.parse.in_time_zone("2025-03-25 18:01") }
+  let(:timestamp) { Time.zone.parse("2025-03-25 18:01") }
 
   it 'has a timestamp' do
     expect(dft.timestamp.year).to eq Time.now.in_time_zone.year
@@ -26,7 +26,7 @@ RSpec.describe DatasetFileTally do
   end
 
   context "#summary" do
-    let(:timestamp) { Time.parse.in_time_zone("2025-03-25 18:02") }
+    let(:timestamp) { Time.zone.parse("2025-03-25 18:02") }
 
     it 'produces an export with the sumamry data only' do
       dft.summary
@@ -40,7 +40,7 @@ RSpec.describe DatasetFileTally do
 
   # rubocop:disable Layout/LineLength
   context "#details" do
-    let(:timestamp) { Time.parse.in_time_zone("2025-03-25 18:03") }
+    let(:timestamp) { Time.zone.parse("2025-03-25 18:03") }
 
     it 'produces an export with the file list included' do
       dft.details
