@@ -14,13 +14,14 @@ class DatasetCitation
   # @param type [String] Type of the dataset (e.g. "Data set" or "Unpublished raw data")
   # @publisher [String] Publisher of the dataset
   # @doi [String] DOI URL
-  def initialize(authors, years, title, type, publisher, doi)
+  def initialize(authors, years, title, type, publisher, doi, version)
     @authors = authors || []
     @years = years || []
     @title = title
     @type = type
     @publisher = publisher
     @doi = doi
+    @version = version
   end
 
   def to_s(style)
@@ -59,15 +60,23 @@ class DatasetCitation
     apa_title = DatasetCitation.custom_strip(@title)
     apa_title += " [#{@type}]" if @type.present?
     apa_title = append_dot(apa_title)
-
+    apa_version = apa_version_text(@version)
     apa_publisher = append_dot(@publisher)
     apa_doi = @doi
 
-    tokens = [append_dot(apa_author), append_dot(apa_year), apa_title, apa_publisher, apa_doi].reject(&:blank?)
+    tokens = [append_dot(apa_author), append_dot(apa_year), apa_title, apa_version, apa_publisher, apa_doi].reject(&:blank?)
     tokens.join(' ')
   rescue => ex
     Rails.logger.error "Error generating APA citation for (#{@title}): #{ex.message}"
     nil
+  end
+
+  def apa_version_text(version)
+    if version.blank?
+      ""
+    else
+      "Version #{version}."
+    end
   end
 
   # Returns a string with BibTeX citation for the dataset.
@@ -78,6 +87,7 @@ class DatasetCitation
   #
   # Notice that we use the @electronic{...} identifier instead of @dataset{...} since
   # Zotero does not recognize the later.
+  # rubocop:disable Metrics/PerceivedComplexity
   def bibtex
     tokens = []
     if @authors.count > 0
@@ -86,6 +96,10 @@ class DatasetCitation
 
     if @title.present?
       tokens << bibtex_field('title', @title, '{{', '}}')
+    end
+
+    if @version.present?
+      tokens << bibtex_field('version', @version)
     end
 
     if @publisher.present?
@@ -108,6 +122,7 @@ class DatasetCitation
     Rails.logger.error "Error generating BibTex citation for (#{@title}): #{ex.message}"
     nil
   end
+  # rubocop:enable Metrics/PerceivedComplexity
 
   # Return a string with the ContextObjects in Spans (COinS) information
   # https://en.wikipedia.org/wiki/COinS
