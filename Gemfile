@@ -62,7 +62,7 @@ end
 
 group :development do
   gem "bcrypt_pbkdf"
-  gem "capistrano", "3.16", "< 3.17", require: false
+  gem "capistrano"
   gem "capistrano-passenger", require: false
   gem "capistrano-rails", "~> 1.4", require: false
   gem "ed25519"
