@@ -28,6 +28,7 @@ describe 'PDC Describe Bitklavier Single item page', type: :system, js: true do
     expect(page).to have_css '.issue-date-heading'
   end
 
+  # rubocop:disable Layout/LineLength
   it "has expected metadata" do
     visit '/catalog/doi-10-34770-r75s-9j74'
     expect(page).to have_content "bitKlavier Grand Sample Library—Binaural Mic Image"
@@ -44,6 +45,7 @@ describe 'PDC Describe Bitklavier Single item page', type: :system, js: true do
     expect(page.html.include?(author_popover_affiliation)).to be true
     expect(page.html.include?(author_meta)).to be true
   end
+  # rubocop:enable Layout/LineLength
 
   it "renders collection tags as links" do
     visit '/catalog/doi-10-34770-r75s-9j74'
