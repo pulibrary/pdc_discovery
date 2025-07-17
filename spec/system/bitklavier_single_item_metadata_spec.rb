@@ -28,13 +28,14 @@ describe 'PDC Describe Bitklavier Single item page', type: :system, js: true do
     expect(page).to have_css '.issue-date-heading'
   end
 
+  # rubocop:disable Layout/LineLength
   it "has expected metadata" do
     visit '/catalog/doi-10-34770-r75s-9j74'
     expect(page).to have_content "bitKlavier Grand Sample Library—Binaural Mic Image"
     author_top_of_page = '<span class="author-name">'
     author_popover_title = 'data-original-title="Trueman, Daniel"'
     author_popover_orcid = 'https://orcid.org/1234-1234-1234-1234'
-    author_popover_affiliation = "<a href='/?f[authors_affiliation_ssim][]=Princeton+Plasma+Physics+Laboratory&amp;q=&amp;search_field=all_fields'>Princeton Plasma Physics Laboratory</a><br/>"
+    author_popover_affiliation = "&lt;a href='/?f[authors_affiliation_ssim][]=Princeton+Plasma+Physics+Laboratory&amp;q=&amp;search_field=all_fields'&gt;Princeton Plasma Physics Laboratory&lt;/a&gt;"
     author_popover_search_orcid = '/?&amp;q=1234-1234-1234-1234&amp;search_field=orcid'
     author_meta = 'Trueman, Daniel (Princeton Plasma Physics Laboratory)'
     expect(page.html.include?(author_top_of_page)).to be true
@@ -44,6 +45,7 @@ describe 'PDC Describe Bitklavier Single item page', type: :system, js: true do
     expect(page.html.include?(author_popover_affiliation)).to be true
     expect(page.html.include?(author_meta)).to be true
   end
+  # rubocop:enable Layout/LineLength
 
   it "renders collection tags as links" do
     visit '/catalog/doi-10-34770-r75s-9j74'
