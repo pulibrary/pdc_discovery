@@ -113,8 +113,11 @@ module Indexing
         query: "action=CREATE&name=#{collection_name}&collection.configName=#{config_set}&numShards=1&replicationFactor=3"
       )
       response = HTTParty.get(create_query.to_s)
-      return unless response.code == 200 && response.parsed_response.key?("success")
-      collection_name
+      if response.code == 200 && response.parsed_response.key?("success")
+        collection_name
+      else
+        raise "Error creating collection #{collection_name}: #{response.parsed_response}"
+      end
     end
 
     def self.delete_collection!(solr_alias_uri, collection_name)
