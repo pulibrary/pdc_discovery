@@ -13,6 +13,9 @@ namespace :index do
 
     Indexing::SolrCloudHelper.update_solr_alias!
     Rails.logger.info "Indexing: Updated Solr to read from the new collection: #{Indexing::SolrCloudHelper.alias_url} -> #{Indexing::SolrCloudHelper.collection_reader_url}"
+  rescue => ex
+    Rails.logger.error("Indexing: Error indexing research data. #{ex.message}")
+    Honeybadger.notify("Indexing: Error indexing research data. #{ex.message}")
   end
 
   desc 'Index all PDC Describe data'
@@ -21,6 +24,9 @@ namespace :index do
     DescribeIndexer.new.index
     Indexing::SolrCloudHelper.collection_writer_commit!
     Rails.logger.info "Indexing: Harvesting and indexing PDC Describe data completed"
+  rescue => ex
+    Rails.logger.error("Indexing: Error indexing research data. #{ex.message}")
+    Honeybadger.notify("Indexing: Error indexing research data. #{ex.message}")
   end
 
   desc 'Remove all indexed Documents from Solr'
