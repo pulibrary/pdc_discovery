@@ -22,6 +22,9 @@
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <%= content_for(:head) %>
+    <% if Rails.env.production? %>
+      <%= render partial: 'shared/analytics' %>
+    <% end %>
     <%= render 'shared/plausible' %>
 
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"/>
@@ -36,6 +39,9 @@
     <%= render partial: 'shared/schema_org'%>
   </head>
   <body class="<%= render_body_class %>">
+    <% if Rails.env.production? %>
+      <%= render partial: 'shared/analytics_noscript' %>
+    <% end %>
     <nav id="skip-link" role="navigation" aria-label="<%= t('blacklight.skip_links.label') %>">
       <%= link_to t('blacklight.skip_links.search_field'), '#search_field', class: 'element-invisible element-focusable rounded-bottom py-2 px-3', data: { turbolinks: 'false' } %>
       <%= link_to t('blacklight.skip_links.main_content'), '#main-container', class: 'element-invisible element-focusable rounded-bottom py-2 px-3', data: { turbolinks: 'false' } %>
