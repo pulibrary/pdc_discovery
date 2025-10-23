@@ -92,9 +92,9 @@ To make changes to the Solr schema in production/staging you need to update the 
 1. Connect to the VPN.
 1. Optional. You can tunnel to machine running Solr `ssh -L 8983:localhost:8983 pulsys@lib-solr-staging4` if you want to see your current configuration (e.g. `solrconfig.xml` or `schema.xml`).
 1. Make sure you are on the `pul-solr` repo.
-1. Deploy the changes, e.g. `BRANCH=<branch-name> bundle exec cap solr8-staging deploy`.
+1. Deploy the changes, e.g. `BRANCH=<branch-name> bundle exec cap staging deploy`.
 1. verify your changes have worked and mark your PR ready for review
-1. Once the PR has been merged cordiante a time to deploy the changes to production `bundle exec cap solr8-production deploy`
+1. Once the PR has been merged cordiante a time to deploy the changes to production `bundle exec cap production deploy`
 
 You can see the list of Capistrano environments [here](https://github.com/pulibrary/pul_solr/tree/main/config/deploy)
 
