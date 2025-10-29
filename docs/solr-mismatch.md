@@ -12,7 +12,7 @@ We have a Solr instance with a leader and a follower. Sometimes, they can get ou
    2. Click on Add Collection
       1. Give it a recognizeable, but different name. If the current one is `pdc-discovery-staging-a`, use `pdc-discovery-staging-b`, for example.
       2. Choose the pdc-discovery config set
-      3. Choose replication factor of 2
+      3. Choose replication factor of 3
 
    <img src="images/new_collection.png"
      alt="create solr collection"
