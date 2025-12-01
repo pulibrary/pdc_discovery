@@ -49,7 +49,6 @@ module Indexing
     # If the alias was configured to point to collection "http://server/solr/pdc-discovery-staging-2"
     # then the returned writer URL will be "http://server/solr/pdc-discovery-staging-1".
     def self.collection_writer_for_alias(solr_alias_uri, recreate)
-      byebug
       if config_set.nil?
         # We are not running in a Solr cloud environment - nothing to do.
         return solr_alias_uri.to_s
