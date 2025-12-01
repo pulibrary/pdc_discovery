@@ -49,6 +49,7 @@ module Indexing
     # If the alias was configured to point to collection "http://server/solr/pdc-discovery-staging-2"
     # then the returned writer URL will be "http://server/solr/pdc-discovery-staging-1".
     def self.collection_writer_for_alias(solr_alias_uri, recreate)
+      byebug
       if config_set.nil?
         # We are not running in a Solr cloud environment - nothing to do.
         return solr_alias_uri.to_s
@@ -84,12 +85,18 @@ module Indexing
       collection_name || alias_name
     end
 
+    # Toggles between two different collections names: pdc-discovery-production-1 and pdc-discovery-production-3.
+    #
+    # For some unknown reason our pdc-discovery-production-2 is busted in production and we cannot get it working
+    # again so we are toggling between -1 and -3 from now on.
+    #
+    # See https://github.com/pulibrary/pdc_discovery/issues/841 for details.
     def self.alternate_collection_for_alias(solr_alias_uri)
       solr_collection = current_collection_for_alias(solr_alias_uri)
       if solr_collection.end_with?("-1")
-        solr_collection.gsub("-1", "-2")
-      elsif solr_collection.end_with?("-2")
-        solr_collection.gsub("-2", "-1")
+        solr_collection.gsub("-1", "-3")
+      elsif solr_collection.end_with?("-3")
+        solr_collection.gsub("-3", "-1")
       else
         solr_collection
       end

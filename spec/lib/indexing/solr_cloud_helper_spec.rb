@@ -41,12 +41,12 @@ RSpec.describe Indexing::SolrCloudHelper do
 
   describe "#alternate_collection_for_alias" do
     it "returns alternate collection for the alias" do
-      # when alias points to pdc-discovery-staging-1, alternate is pdc-discovery-staging-2
+      # when alias points to pdc-discovery-staging-1, alternate is pdc-discovery-staging-3
       stub_request(:get, "http://fake-solr/solr/admin/collections?action=LISTALIASES")
         .to_return(status: 200, body: solr_aliases_1, headers: json_response)
-      expect(described_class.alternate_collection_for_alias(alias_uri)).to eq "pdc-discovery-staging-2"
+      expect(described_class.alternate_collection_for_alias(alias_uri)).to eq "pdc-discovery-staging-3"
 
-      # when alias points to pdc-discovery-staging-2, alternate is pdc-discovery-staging-1
+      # when alias points to pdc-discovery-staging-3, alternate is pdc-discovery-staging-1
       stub_request(:get, "http://fake-solr/solr/admin/collections?action=LISTALIASES")
         .to_return(status: 200, body: solr_aliases_2, headers: json_response)
       expect(described_class.alternate_collection_for_alias(alias_uri)).to eq "pdc-discovery-staging-1"
@@ -60,17 +60,17 @@ RSpec.describe Indexing::SolrCloudHelper do
     it "returns the alternate collection as the collection_writer" do
       stub_request(:get, "http://fake-solr/solr/admin/collections?action=LISTALIASES")
         .to_return(status: 200, body: solr_aliases_1, headers: json_response)
-      expect(described_class.collection_writer_for_alias(alias_uri, false)).to eq "http://fake-solr/solr/pdc-discovery-staging-2"
+      expect(described_class.collection_writer_for_alias(alias_uri, false)).to eq "http://fake-solr/solr/pdc-discovery-staging-3"
     end
 
     it "re-creates the alternate collection that will be used as the collection_writer" do
       stub_request(:get, "http://fake-solr/solr/admin/collections?action=LISTALIASES")
         .to_return(status: 200, body: solr_aliases_1, headers: json_response)
-      stub_request(:get, "http://fake-solr/solr/admin/collections?action=DELETE&name=pdc-discovery-staging-2")
+      stub_request(:get, "http://fake-solr/solr/admin/collections?action=DELETE&name=pdc-discovery-staging-3")
         .to_return(status: 200, body: "", headers: {})
-      stub_request(:get, "http://fake-solr/solr/admin/collections?action=CREATE&collection.configName=pdc-discovery-test&name=pdc-discovery-staging-2&numShards=1&replicationFactor=3")
+      stub_request(:get, "http://fake-solr/solr/admin/collections?action=CREATE&collection.configName=pdc-discovery-test&name=pdc-discovery-staging-3&numShards=1&replicationFactor=3")
         .to_return(status: 200, body: '{"success":"true"}', headers: json_response)
-      expect(described_class.collection_writer_for_alias(alias_uri, true)).to eq "http://fake-solr/solr/pdc-discovery-staging-2"
+      expect(described_class.collection_writer_for_alias(alias_uri, true)).to eq "http://fake-solr/solr/pdc-discovery-staging-3"
     end
   end
 
@@ -87,7 +87,7 @@ RSpec.describe Indexing::SolrCloudHelper do
       allow(described_class).to receive(:alias_uri).and_return(URI.parse("http://fake-solr/solr/pdc-discovery-staging"))
       stub_request(:get, "http://fake-solr/solr/admin/collections?action=LISTALIASES")
         .to_return(status: 200, body: solr_aliases_1, headers: json_response)
-      stub_request(:get, "http://fake-solr/solr/admin/collections?action=CREATEALIAS&collections=pdc-discovery-staging-2&name=pdc-discovery-staging")
+      stub_request(:get, "http://fake-solr/solr/admin/collections?action=CREATEALIAS&collections=pdc-discovery-staging-3&name=pdc-discovery-staging")
         .to_return(status: 200, body: "", headers: json_response)
       expect(described_class.update_solr_alias!).to eq true
     end
