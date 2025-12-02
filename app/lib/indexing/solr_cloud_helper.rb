@@ -171,6 +171,11 @@ module Indexing
       end
     end
 
+    # Deletes Solr docuemnts older than the given timestamp.
+    #
+    # We use this to delete documents that are not longer in the source (i.e. PDC Describe)
+    # with the assumption that records not longer in PDC Describe will have not been touched
+    # during the last index into Solr (i.e. their timestamp will be old).
     def self.delete_older_documents(old_timestamp)
       alias_name = alias_uri.path.split("/").last
       old_timestamp_solr_format = old_timestamp.utc.iso8601(3)
