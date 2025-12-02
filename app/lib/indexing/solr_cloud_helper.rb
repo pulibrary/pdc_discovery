@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 module Indexing
+  # rubocop:disable Metrics/ClassLength
   class SolrCloudHelper
     def self.alias_uri
       Blacklight.default_index.connection.uri
@@ -155,7 +156,7 @@ module Indexing
       response.code == 200
     end
 
-    def self.get_solr_count
+    def self.solr_document_count
       alias_name = alias_uri.path.split("/").last
       count_query = build_uri(
         base_uri: alias_uri,
@@ -175,17 +176,17 @@ module Indexing
       old_timestamp_solr_format = old_timestamp.utc.iso8601(3)
 
       Rails.logger.info "Indexing: Deleting Solr documents older than #{old_timestamp_solr_format}"
-      count_before = get_solr_count
+      count_before = solr_document_count
 
       delete_query = build_uri(
-          base_uri: alias_uri,
-          path: "/solr/#{alias_name}/update",
-          query: "commit=true"
+        base_uri: alias_uri,
+        path: "/solr/#{alias_name}/update",
+        query: "commit=true"
       )
       delete_body = "<delete><query>timestamp:[* TO \"#{old_timestamp_solr_format}\"]</query></delete>"
       delete_headers = { 'Content-Type' => 'application/xml' }
       response = HTTParty.post(delete_query.to_s, body: delete_body, headers: delete_headers)
-      Rails.logger.info "Indexing: Deleted Solr documents older than #{old_timestamp_solr_format} (#{get_solr_count - count_before})"
+      Rails.logger.info "Indexing: Deleted Solr documents older than #{old_timestamp_solr_format} (#{solr_document_count - count_before})"
       response.code == 200
     end
 
@@ -201,4 +202,5 @@ module Indexing
       )
     end
   end
+  # rubocop:enable Metrics/ClassLength
 end
