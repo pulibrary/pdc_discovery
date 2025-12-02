@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 module Indexing
+  # rubocop:disable Metrics/ClassLength
   class SolrCloudHelper
     def self.alias_uri
       Blacklight.default_index.connection.uri
@@ -15,6 +16,11 @@ module Indexing
 
     def self.collection_writer_commit!
       commit_url = "#{collection_writer_url}/update?commit=true"
+      HTTParty.get(commit_url)
+    end
+
+    def self.collection_alias_commit!
+      commit_url = "#{alias_uri}/update?commit=true"
       HTTParty.get(commit_url)
     end
 
@@ -150,6 +156,45 @@ module Indexing
       response.code == 200
     end
 
+    def self.solr_document_count
+      alias_name = alias_uri.path.split("/").last
+      count_query = build_uri(
+        base_uri: alias_uri,
+        path: "/solr/#{alias_name}/select",
+        query: "q=*:*&rows=0"
+      )
+      response = HTTParty.get(count_query.to_s)
+      if response.code == 200
+        JSON.parse(response.body)["response"]["numFound"].to_i
+      else
+        raise "Error getting count of Solr documents: #{response.body}"
+      end
+    end
+
+    # Deletes Solr docuemnts older than the given timestamp.
+    #
+    # We use this to delete documents that are not longer in the source (i.e. PDC Describe)
+    # with the assumption that records not longer in PDC Describe will have not been touched
+    # during the last index into Solr (i.e. their timestamp will be old).
+    def self.delete_older_documents(old_timestamp)
+      alias_name = alias_uri.path.split("/").last
+      old_timestamp_solr_format = old_timestamp.utc.iso8601(3)
+
+      Rails.logger.info "Indexing: Deleting Solr documents older than #{old_timestamp_solr_format}"
+      count_before = solr_document_count
+
+      delete_query = build_uri(
+        base_uri: alias_uri,
+        path: "/solr/#{alias_name}/update",
+        query: "commit=true"
+      )
+      delete_body = "<delete><query>timestamp:[* TO \"#{old_timestamp_solr_format}\"]</query></delete>"
+      delete_headers = { 'Content-Type' => 'application/xml' }
+      response = HTTParty.post(delete_query.to_s, body: delete_body, headers: delete_headers)
+      Rails.logger.info "Indexing: Deleted Solr documents older than #{old_timestamp_solr_format} (#{solr_document_count - count_before})"
+      response.code == 200
+    end
+
     # Build a URI using another URI as the base.
     def self.build_uri(base_uri:, path:, query: nil)
       URI::HTTP.build(
@@ -162,4 +207,5 @@ module Indexing
       )
     end
   end
+  # rubocop:enable Metrics/ClassLength
 end
