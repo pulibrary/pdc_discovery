@@ -67,16 +67,16 @@ PDC Discovery indexes data from PDC Describe via the following rake task:
 rake index:research_data
 ```
 
-This rake task is scheduled to run every 30 minutes on the production and staging servers.
+This rake task is scheduled to run every 60 minutes on the production and staging servers.
+
 
 ### Solr configuration in production/staging
-In production and staging we use Solr cloud to manage our Solr index. Our configuration uses a Solr *alias* to point to the current Solr *collection* that we are using. For example, in staging the alias `pdc-discovery-staging` points to the `pdc-discovery-staging-1` collection.
+In production and staging we use Solr cloud to manage our Solr index. Our configuration uses a Solr *alias* to point to the current Solr *collection* that we are using. For example, in staging the alias `pdc-discovery-staging` points to the `pdc-discovery-staging-new` collection. Our code points to the alias.
 
-When we index new content we create a new Solr collection (e.g. `pdc-discovery-staging-2`) and index our data to this new collection. Once the indexing has completed we update our Solr alias to point to this new collection.
+At the end of the indexing process we delete any Solr documents that were not touched during the indexing. The delete operation is to make sure we don't keep in PDC Discovery records that are not longer in the source (PDC Describe).
 
-Our indexing process automatically toggles between `pdc-discovery-staging-1` and `pdc-discovery-staging-2`.
+NOTE: We used to use two Solr collections (e.g. `pdc-discovery-staging-1` and `pdc-discovery-staging-2`) and toggle between them. We do not use this approach anymore.
 
-This dual collection approach allows us to index to a separate area in Solr and prevents users from seeing partial results while we are running the index process.
 
 ### Updating the Solr schema in production/staging
 To make changes to the Solr schema in production/staging you need to update the files in the [pul_solr](https://github.com/pulibrary/pul_solr) repository and deploy them. The basic steps are:
