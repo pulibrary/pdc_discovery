@@ -75,8 +75,14 @@ In production and staging we use Solr cloud to manage our Solr index. Our config
 
 At the end of the indexing process we delete any Solr documents that were not touched during the indexing. The delete operation is to make sure we don't keep in PDC Discovery records that are not longer in the source (PDC Describe).
 
-NOTE: We used to use two Solr collections (e.g. `pdc-discovery-staging-1` and `pdc-discovery-staging-2`) and toggle between them. We do not use this approach anymore.
+NOTE: We used to use two Solr collections (e.g. `pdc-discovery-staging-1` and `pdc-discovery-staging-2`) and toggle between them. **We do not use this approach anymore**.
 
+#### Creating a new collection 
+1. open the admin console in pul_solr
+1. create a new collection via the collections tab (do not make it end in -1 or -2)
+1. on the correct server run `SOLR_URL=http://<solr_url>:8983/solr/<new collection name> bundle exec rake index:research_data
+   1. for example `SOLR_URL=http://lib-solr8d-staging.princeton.edu:8983/solr/pdc-discovery-new bundle exec rake index:research_data`
+1. delete the alias for `pdc-discovery-staging` or `pdc-discovery-production` and create a new alias with the same name pointing at the new collection  
 
 ### Updating the Solr schema in production/staging
 To make changes to the Solr schema in production/staging you need to update the files in the [pul_solr](https://github.com/pulibrary/pul_solr) repository and deploy them. The basic steps are:
