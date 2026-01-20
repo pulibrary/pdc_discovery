@@ -51,3 +51,5 @@ node_modules
 .yardoc/
 
 spec/fixtures/migration/dspace_migration.csv
+
+.devbox/
