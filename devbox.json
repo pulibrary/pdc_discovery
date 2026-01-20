@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.16.0/.schema/devbox.schema.json",
+  "packages": [
+    "ruby@3.3.2",
+    "nodejs@18.17.0",
+    "yarn@1.22.19",
+    "postgresql@15.7",
+    "libyaml@latest",
+    "solr_8@latest",
+    "zookeeper@latest",
+    "jdk@latest",
+    "git@latest",
+    "chromedriver@latest"
+  ],
+  "shell": {
+    "init_hook": ["mkdir -p $TMPDIR"],
+    "scripts": {
+      "setup": ["bundle install", "yarn install"]
+    }
+  }
+}

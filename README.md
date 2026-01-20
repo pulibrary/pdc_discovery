@@ -22,7 +22,13 @@ Update the file `config/banner.yml`. Note that each environment can have its own
 
 ## Local development
 
-### Setup
+### Setup (Devbox)
+
+1. Install devbox (./bin/first-time-setup.sh)
+1. `devbox shell`
+1. `devbox run setup`
+
+### Setup (Manual)
 1. Check out code
 2. `bundle install`
 3. `yarn install`
