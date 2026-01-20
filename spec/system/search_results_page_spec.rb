@@ -82,4 +82,15 @@ describe 'Search Results Page', type: :system, js: true do
       expect(page.html.include?("Monte-Carlo simulation")).to be true
     end
   end
+
+  describe "bot searches" do
+    it "handles searches with invalid date ranges" do
+      # Notice that the search includes year_available_itsi {"begin"=>"2020", "end"=>"'" }
+      bot_search = "per_page=100&range%5Byear_available_itsi%5D%5Bbegin%5D=2020&range%5Byear_available_itsi%5D%5Bend%5D=2020&" \
+                   "range%5Byear_available_itsi%5D%5Bend%5D=%27&" \
+                   "range_end=2025&range_field=year_available_itsi&range_start=2013"
+      visit "/?#{bot_search}"
+      expect(page.html.include?("Invalid Search")).to be true
+    end
+  end
 end

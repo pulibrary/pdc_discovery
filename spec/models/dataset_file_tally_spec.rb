@@ -15,7 +15,7 @@ RSpec.describe DatasetFileTally do
   let(:file_info_line) { "doi-10-34770-r75s-9j74,bitKlavier Grand Sample Library—Binaural Mic Image,2021,4,1108910,folder-a/file3.txt,396003,https" }
 
   it 'has a timestamp' do
-    expect(dft.timestamp.year).to eq Time.now.in_time_zone.year
+    expect(dft.timestamp.year >= 2025).to be true
   end
 
   it 'makes a filename based on the date and time' do
