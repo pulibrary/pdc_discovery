@@ -15,6 +15,12 @@ class CatalogController < ApplicationController
 
   def retry_on_exception
     yield
+  rescue BlacklightRangeLimit::InvalidRange => ex
+    # This error is usually the result of a bot request and therefore we don't send it to Honeybadger,
+    # but we log it just in case.
+    Rails.logger.warn("Invalid Range Limit, params: #{params.to_s}")
+    error_page = Rails.env.production? || Rails.env.staging? ? '/discovery/errors/range_limit_error' : '/errors/range_limit_error'
+    redirect_to error_page
   rescue Blacklight::Exceptions::ECONNREFUSED, RSolr::Error::ConnectionRefused
     # If the Solr service is available, retry the HTTP request
     if search_service.repository.ping

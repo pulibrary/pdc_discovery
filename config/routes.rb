@@ -46,6 +46,7 @@ Rails.application.routes.draw do
   # Route all errors to the error controller
   get 'errors/not_found'
   get 'errors/internal_server_error'
+  get 'errors/range_limit_error'
   match "/404", to: "errors#not_found", via: :all
   match "/500", to: "errors#internal_server_error", via: :all
 
