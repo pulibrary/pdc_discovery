@@ -11,7 +11,7 @@ RSpec.describe DatasetFileTally do
   end
 
   let(:dft) { described_class.new(timestamp) }
-  let(:timestamp) { Time.zone.parse("2025-03-25 18:01") }
+  let(:timestamp) { Time.zone.parse("2026-03-25 18:01") }
   let(:file_info_line) { "doi-10-34770-r75s-9j74,bitKlavier Grand Sample Library—Binaural Mic Image,2021,4,1108910,folder-a/file3.txt,396003,https" }
 
   it 'has a timestamp' do
