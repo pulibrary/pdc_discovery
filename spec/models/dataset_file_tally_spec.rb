@@ -19,8 +19,8 @@ RSpec.describe DatasetFileTally do
   end
 
   it 'makes a filename based on the date and time' do
-    expect(dft.filename_summary).to eq "2025_03_25_18_01_summary.csv"
-    expect(dft.filename_details).to eq "2025_03_25_18_01_details.csv"
+    expect(dft.filename_summary).to eq "2026_03_25_18_01_summary.csv"
+    expect(dft.filename_details).to eq "2026_03_25_18_01_details.csv"
   end
 
   it 'writes the file to a configurable directory' do
