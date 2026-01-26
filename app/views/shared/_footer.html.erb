@@ -1,35 +1,37 @@
-<div>
-  <div class="deployment-version">
-    Version:
-    <% @version = VersionFooter.info %>
-    <% if @version[:stale] %>
-      (stale)
-    <% end %>
-    <span title="<%= @version[:sha] %>">
-      <% if @version[:tagged_release] %>
-        <a href="https://github.com/pulibrary/pdc_discovery/releases/tag/<%= @version[:branch] %>" target="_blank"><%= @version[:branch] %></a>
-      <% else %>
-        <%= @version[:branch] %>,
-      <% end %>
-      last updated: <%= @version[:version] %>
-    </span>
-  </div>
-  <div id="footer">
-    <div class="content">
-      <div class= "footer-links">
-      <ul>
-        <li><%= link_to("Policy and Guidelines", home_policies_path) %></li>
-        <li><%= link_to("Contributors", home_contributors_path) %></li>
-        <li><%= link_to("Accessibility", "https://accessibility.princeton.edu/help", target:"blank", class:"pul-accessible") %></li>
-      </ul>
+<footer>
+   <div>
+      <div class="deployment-version">
+         Version:
+         <% @version = VersionFooter.info %>
+         <% if @version[:stale] %>
+         (stale)
+         <% end %>
+         <span title="<%= @version[:sha] %>">
+         <% if @version[:tagged_release] %>
+         <a href="https://github.com/pulibrary/pdc_discovery/releases/tag/<%= @version[:branch] %>" target="_blank"><%= @version[:branch] %></a>
+         <% else %>
+         <%= @version[:branch] %>,
+         <% end %>
+         last updated: <%= @version[:version] %>
+         </span>
       </div>
-      <%= link_to(image_tag("pul_logo_0.png", alt: "Princeton University Library"), "https://library.princeton.edu", target: "blank") %>
-      <%= link_to(image_tag("footer_logo.png", alt: "Princeton Research Data Service"), "https://researchdata.princeton.edu", target: "blank") %>
-      <%= link_to(image_tag("princeton_research_logo_2.png", alt: "Office for the Dean of Research"), "https://research.princeton.edu", target: "blank") %>
-      <%= link_to(image_tag("princeton_logo.png", alt: "Princeton University"), "https://www.princeton.edu", target: "blank") %>
-    </div>
-  </div>
-  <div id="copyright">
-    &copy; <%= Date.current.year %> The Trustees of Princeton University
-  </div>
-</div>
+      <div id="footer">
+         <div class="content">
+            <div class= "footer-links">
+               <ul>
+                  <li><%= link_to("Policy and Guidelines", home_policies_path) %></li>
+                  <li><%= link_to("Contributors", home_contributors_path) %></li>
+                  <li><%= link_to("Accessibility", "https://accessibility.princeton.edu/help", target:"blank", class:"pul-accessible") %></li>
+               </ul>
+            </div>
+            <%= link_to(image_tag("pul_logo_0.png", alt: "Princeton University Library"), "https://library.princeton.edu", target: "blank") %>
+            <%= link_to(image_tag("footer_logo.png", alt: "Princeton Research Data Service"), "https://researchdata.princeton.edu", target: "blank") %>
+            <%= link_to(image_tag("princeton_research_logo_2.png", alt: "Office for the Dean of Research"), "https://research.princeton.edu", target: "blank") %>
+            <%= link_to(image_tag("princeton_logo.png", alt: "Princeton University"), "https://www.princeton.edu", target: "blank") %>
+         </div>
+      </div>
+      <div id="copyright">
+         &copy; <%= Date.current.year %> The Trustees of Princeton University
+      </div>
+   </div>
+</footer>
