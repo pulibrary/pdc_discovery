@@ -6,14 +6,26 @@
     "yarn@1.22.19",
     "postgresql@15.7",
     "libyaml@latest",
+    "libyaml.dev",
+    "pkg-config@latest",
+    "gcc@latest",
+    "gnumake@latest",
     "solr_8@latest",
     "zookeeper@latest",
     "jdk@latest",
     "git@latest",
     "chromedriver@latest"
   ],
+  "env": {
+    "TMPDIR": "/tmp/pdc_discovery",
+    "PKG_CONFIG_PATH": "$PWD/.devbox/nix/profile/default/lib/pkgconfig:$PWD/.devbox/nix/profile/default/share/pkgconfig",
+    "BUNDLE_BUILD__PSYCH": "--with-libyaml-dir=$PWD/.devbox/nix/profile/default --with-pkg-config=$PWD/.devbox/nix/profile/default/bin/pkg-config"
+  },
   "shell": {
-    "init_hook": ["mkdir -p $TMPDIR"],
+    "init_hook": [
+      "mkdir -p $TMPDIR",
+      "bundle config set --local build.psych \"--with-libyaml-dir=$PWD/.devbox/nix/profile/default --with-yaml-0.1-include=$PWD/.devbox/nix/profile/default/include --with-yaml-0.1-lib=$PWD/.devbox/nix/profile/default/lib\""
+    ],
     "scripts": {
       "setup": ["bundle install", "yarn install"]
     }
