@@ -52,4 +52,9 @@ node_modules
 
 spec/fixtures/migration/dspace_migration.csv
 
+# devbox
 .devbox/
+.postgres
+.solr
+.tmp
+
