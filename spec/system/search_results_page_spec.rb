@@ -41,6 +41,18 @@ describe 'Search Results Page', type: :system, js: true do
     end
   end
 
+  describe "doi searches" do
+    it "finds record by doi" do
+      visit '/?search_field=all_fields&q=10-11578-1366462'
+      expect(page).to have_link('Midplane neutral density profiles in the National Spherical Torus Experiment', href: '/catalog/doi-10-11578-1366462')
+    end
+
+    it "finds record by doi including the doi" do
+      visit '/?search_field=all_fields&q=doi:10-11578-1366462'
+      expect(page).to have_link('Midplane neutral density profiles in the National Spherical Torus Experiment', href: '/catalog/doi-10-11578-1366462')
+    end
+  end
+
   describe "bookmarks" do
     it "does not render bookmark checkboxes" do
       visit '/?search_field=author&q=podesta'
