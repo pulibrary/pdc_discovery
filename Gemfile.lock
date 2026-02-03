@@ -282,7 +282,7 @@ GEM
     http-cookie (1.0.7)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
-    httparty (0.24.0)
+    httparty (0.22.0)
       csv
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
@@ -700,7 +700,7 @@ DEPENDENCIES
   foreman
   health-monitor-rails (= 12.4.0)
   honeybadger
-  httparty
+  httparty (= 0.22.0)
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.3)
