@@ -8,7 +8,7 @@
     "color-string": "^1.9.1",
     "esbuild": "^0.25.1",
     "glob-parent": "^6.0.2",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "postcss": "^8.4.5",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^16.1.0",
