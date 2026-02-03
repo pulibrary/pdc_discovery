@@ -96,7 +96,7 @@ GEM
     bcrypt_pbkdf (1.1.1-arm64-darwin)
     bcrypt_pbkdf (1.1.1-x86_64-darwin)
     benchmark (0.4.1)
-    bigdecimal (3.3.1)
+    bigdecimal (3.2.2)
     bindex (0.8.1)
     bixby (5.0.0)
       rubocop (>= 1, < 2)
@@ -172,7 +172,7 @@ GEM
       bigdecimal
       rexml
     crass (1.0.6)
-    csv (3.3.5)
+    csv (3.3.0)
     dartsass-rails (0.5.1)
       railties (>= 6.0.0)
       sass-embedded (~> 1.63)
@@ -282,7 +282,7 @@ GEM
     http-cookie (1.0.7)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
-    httparty (0.24.0)
+    httparty (0.22.0)
       csv
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
@@ -700,7 +700,7 @@ DEPENDENCIES
   foreman
   health-monitor-rails (= 12.4.0)
   honeybadger
-  httparty
+  httparty (= 0.22.0)
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.3)
