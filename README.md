@@ -43,9 +43,10 @@ Both approaches are supported.
 4. Start Solr and Postgres (Devbox-managed):
 
   ```sh
-    devbox run solr-start
-    devbox run solr-create-core
     devbox run postgres-start
+    devbox run solr-start
+    devbox run solr-create-collection
+    devbox run solr-assert-cloud
   ```
 
 5. Create and migrate the database:
