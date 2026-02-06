@@ -856,17 +856,7 @@
       "last_modified": "2022-05-03T02:40:48Z",
       "resolved": "github:NixOS/nixpkgs/24c33ab7952544ad355d0677c9eea931b23f371c#solr_8",
       "source": "devbox-search",
-      "version": "8.6.3",
-      "systems": {
-        "aarch64-darwin": {
-          "outputs": [
-            {
-              "path": "/nix/store/1v4l3xc0w0xxjxmmpjr01ik5kwy0ac6s-solr-8.6.3",
-              "default": true
-            }
-          ]
-        }
-      }
+      "version": "8.6.3"
     },
     "yarn@1.22.19": {
       "last_modified": "2024-03-08T13:51:52Z",
