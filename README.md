@@ -26,6 +26,11 @@ Both approaches are supported.
 
 ### Setup (Devbox)
 
+> **Notes**
+* Lando users: nothing in this repo requires switching off Lando; the Devbox path is optional
+* Solr runs in **SolrCloud mode** locally (required by traject/indexing).
+* Solr endpoints require basic auth locally to match CI (see `SOLR_TEST_URL` in `devbox.json`).
+
 1. Install Devbox (see `./bin/first-time-setup.sh`).
 
 2. Start a devbox shell:
@@ -36,30 +41,44 @@ Both approaches are supported.
 
 3. Install Ruby gems and JS dependencies:
 
-  ```sh
-   devbox run setup
+   ```sh
+   devbox run deps
    ```
 
-4. Start Solr and Postgres (Devbox-managed):
+4. Start Postgres (Devbox-managed):
 
-  ```sh
+    ```sh
     devbox run postgres-start
-    devbox run solr-start
-    devbox run solr-create-collection
-    devbox run solr-assert-cloud
-  ```
-
-5. Create and migrate the database:
-
-  ```sh
     devbox run db-create
     devbox run db-migrate
-  ```
+    ```
+  * 4a. Start SolrCloud + Load config and create test collection:
 
-6. Start the Rails server:
+    ```sh
+    devbox run solr-test-ready
+    ```
+
+  * 4b. Start Solr (individually):
+
+    ```sh
+    devbox run solr-start
+    devbox run solr-assert-cloud
+    devbox run solr-upload-security-config
+    devbox run solr-upload-config
+    devbox run solr-create-test-collection
+    ```
+
+5. Start the Rails server:
 
   ```sh
     bin/rails s -p 3000
+  ```
+
+6. Run tests:
+
+  ```sh
+    bin/rails db:environment:set RAILS_ENV=test
+    bundle exec rspec spec
   ```
 
 7. Access PDC Discovery at [http://localhost:3000/](http://localhost:3000)

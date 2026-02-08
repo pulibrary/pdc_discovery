@@ -84,7 +84,7 @@
       "solr-create-test-collection": "bash -c 'set -euo pipefail; curl -fsS --retry 10 --retry-delay 1 -u \"solr:SolrRocks\" -H \"Content-type: application/json\" \"http://$SOLR_HOST:$SOLR_PORT/api/collections/\" -d \"{\\\"create\\\": {\\\"name\\\": \\\"pdc_discovery-core-test\\\", \\\"config\\\": \\\"pdc_discovery\\\", \\\"numShards\\\": 1}}\"'",
       "solr-upload-config": "bash -c 'set -euo pipefail; ROOT=\"$PWD\"; mkdir -p \"$ROOT/.tmp\"; ZIP=\"$ROOT/.tmp/solr_config.zip\"; rm -f \"$ZIP\"; (cd \"$ROOT/solr/conf\" && zip -q -1 -r \"$ZIP\" ./*); curl -fsS -u solr:SolrRocks \"http://$SOLR_HOST:$SOLR_PORT/solr/admin/configs?action=DELETE&name=pdc_discovery&wt=json\" || true; curl -fsS -u solr:SolrRocks -H \"Content-type:application/octet-stream\" --data-binary @\"$ZIP\" \"http://$SOLR_HOST:$SOLR_PORT/solr/admin/configs?action=UPLOAD&name=pdc_discovery\"'",
       "solr-upload-security-config": "bash -c 'set -e; mkdir -p .tmp; curl -fsSL -o .tmp/security.json \"https://gist.githubusercontent.com/eliotjordan/a27be341dc2e7a532bad99203e0f55b7/raw/5866efab9242f953764c1b03d17763309e22948f/security.json\"; solr zk cp .tmp/security.json zk:security.json -z $SOLR_HOST:9983'",
-      "solr-test-ready": "bash -c 'set -euo pipefail; devbox run solr-stop >/dev/null 2>&1 || true; devbox run solr-start; devbox run solr-assert-cloud; devbox run solr-upload-config; devbox run solr-create-test-collection'",
+      "solr-test-ready": "bash -c 'set -euo pipefail; devbox run solr-stop >/dev/null 2>&1 || true; devbox run solr-start; devbox run solr-assert-cloud; devbox run solr-upload-security-config; devbox run solr-upload-config; devbox run solr-create-test-collection'",
       "zsh": "zsh -l"
     }
   }
