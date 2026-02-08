@@ -968,12 +968,6 @@
         }
       }
     },
-    "solr_8@latest": {
-      "last_modified": "2022-05-03T02:40:48Z",
-      "resolved": "github:NixOS/nixpkgs/24c33ab7952544ad355d0677c9eea931b23f371c#solr_8",
-      "source": "devbox-search",
-      "version": "8.6.3"
-    },
     "yarn@1.22.19": {
       "last_modified": "2024-03-08T13:51:52Z",
       "resolved": "github:NixOS/nixpkgs/a343533bccc62400e8a9560423486a3b6c11a23b#yarn",
