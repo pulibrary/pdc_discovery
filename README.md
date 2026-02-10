@@ -24,8 +24,9 @@ Update the file `config/banner.yml`. Note that each environment can have its own
 You can run this project using either **Lando** (existing/default) or **Devbox** (Nix-based, reproducible local environment).
 Both approaches are supported.
 
-### Setup (Devbox)
+### Setup (Devbox & Lando)
 
+> **Notes**
 1. Install Devbox (see `./bin/first-time-setup.sh`).
 
 2. Start a devbox shell:
@@ -36,58 +37,29 @@ Both approaches are supported.
 
 3. Install Ruby gems and JS dependencies:
 
-  ```sh
-   devbox run setup
+   ```sh
+   devbox run deps
    ```
 
-4. Start Solr and Postgres (Devbox-managed):
+4. Start the services
 
-  ```sh
-    devbox run solr-start
-    devbox run solr-create-core
-    devbox run postgres-start
-  ```
+    Start and initialize solr and database services with:
+    ```
+    bundle exec rake servers:start
+    ```
 
-5. Create and migrate the database:
-
-  ```sh
-    devbox run db-create
-    devbox run db-migrate
-  ```
-
-6. Start the Rails server:
+5. Start the Rails server:
 
   ```sh
     bin/rails s -p 3000
   ```
 
+6. Run tests:
+
+  Faster: `bundle exec rspec spec`
+  Run in browser: `RUN_IN_BROWSER=true bundle exec rspec spec`
+
 7. Access PDC Discovery at [http://localhost:3000/](http://localhost:3000)
-
-#### Stopping services (Devbox)
-
-```sh
-devbox run solr-stop
-devbox run postgres-stop
-```
-
-#### Logs / status (Devbox)
-
-```sh
-devbox run solr-status
-devbox run solr-log
-devbox run postgres-status
-devbox run postgres-log
-```
-
-> Notes:
-* Devbox config sets APP_DB_* env vars so Rails uses the devbox-local Postgres socket without changing the existing Lando defaults in config/database.yml.
-* On macOS, the Devbox scripts avoid JVM flags that are unsupported by the bundled JDK.
-
-### Setup (Manual)
-
-1. Check out code
-2. `bundle install`
-3. `yarn install`
 
 ### Starting / stopping services
 
