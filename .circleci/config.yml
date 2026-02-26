@@ -165,7 +165,9 @@ jobs:
           command: bundle exec rspec
       - store_artifacts:
           path: ~/pdc_discovery/coverage
-      - coveralls/upload
+      - coveralls/upload:
+          fail_on_error: false
+
 
 workflows:
   version: 2
