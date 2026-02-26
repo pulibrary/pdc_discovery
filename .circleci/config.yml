@@ -99,7 +99,7 @@ jobs:
           command: curl -fsSL https://dl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /etc/apt/keyrings/google-chrome.gpg
       - run: 
           name: Update the sources list to reference Google gpg key directly
-          command: echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
+          command: sudo echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
       - run:
           name: Install packages
           command: sudo apt update && apt-get install -y google-chrome-stable && sudo apt install postgresql-client
