@@ -93,7 +93,7 @@ jobs:
           command: echo 'America/New_York' = /etc/timezone
       - run: 
           name: Make a new path for keys
-          command: mkdir -p /etc/apt/keyrings
+          command: mkdir -p -m 0755 /etc/apt/keyrings
       - run:
           name: Download and save the Google GPG key
           command: curl -fsSL https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /etc/apt/keyrings/google-chrome.gpg
