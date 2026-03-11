@@ -1,13 +1,13 @@
 name: pdc_discovery
 services:
   pdc_test_solr:
-    type: solr:8.4
+    type: solr:9
     portforward: true
     core: pdc-core-test
     config:
       dir: "solr/conf"
   pdc_development_solr:
-    type: solr:8.4
+    type: solr:9
     portforward: true
     core: pdc-core-dev
     config:
