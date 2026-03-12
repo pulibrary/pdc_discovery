@@ -16,20 +16,20 @@
     "git@latest",
     "chromedriver@latest",
     "libxml2@latest",
-    "xmlsec@latest"
+    "xmlsec@latest",
+    "libyaml.dev"
   ],
   "env": {
-    "DEVBOX":             "1",
-    "BUNDLER_VERSION":    "2.5.9",
-    "PGDATA":             "$PWD/.postgres/data",
-    "PGHOST":             "$PWD/.postgres",
-    "PGPORT":             "5432",
-    "PGUSER":             "$USER",
-    "PGDATABASE":         "pdc_discovery_dev",
-    "APP_DB_HOST":        "$PWD/.postgres",
-    "APP_DB_USERNAME":    "$USER",
-    "APP_DB":             "pdc_discovery_dev",
-    "BUNDLE_BUILD_PSYCH": "--with-libyaml-dir=$(devbox path libyaml) --with-pkg-config=$(devbox path pkg-config)/bin/pkg-config"
+    "DEVBOX":              "1",
+    "BUNDLER_VERSION":     "2.5.9",
+    "PGDATA":              "$PWD/.postgres/data",
+    "PGHOST":              "$PWD/.postgres",
+    "PGPORT":              "5432",
+    "PGUSER":              "$USER",
+    "PGDATABASE":          "pdc_discovery_dev",
+    "APP_DB_HOST":         "$PWD/.postgres",
+    "APP_DB_USERNAME":     "$USER",
+    "APP_DB":              "pdc_discovery_dev"
   },
   "shell": {
     "init_hook": [
