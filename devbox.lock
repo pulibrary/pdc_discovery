@@ -988,6 +988,54 @@
         }
       }
     },
+    "selenium-manager@latest": {
+      "last_modified": "2026-02-23T15:40:43Z",
+      "resolved": "github:NixOS/nixpkgs/80d901ec0377e19ac3f7bb8c035201e2e098cc97#selenium-manager",
+      "source": "devbox-search",
+      "version": "4.40.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/xq4w3ynbyc2ypyi2mscdf9g65q67p133-selenium-manager-4.40.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/xq4w3ynbyc2ypyi2mscdf9g65q67p133-selenium-manager-4.40.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/1f2j5xpxvlm973s0m7ff7ffb97ml8k2a-selenium-manager-4.40.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/1f2j5xpxvlm973s0m7ff7ffb97ml8k2a-selenium-manager-4.40.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/7pl0hxpcfma3mkqncxpdzyq237iw2szp-selenium-manager-4.40.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/7pl0hxpcfma3mkqncxpdzyq237iw2szp-selenium-manager-4.40.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/8ljzz874g2nqhj080hxypfbvfgvikrsk-selenium-manager-4.40.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/8ljzz874g2nqhj080hxypfbvfgvikrsk-selenium-manager-4.40.0"
+        }
+      }
+    },
     "stdenv": {
       "resolved": "github:NixOS/nixpkgs/ed142ab1b3a092c4d149245d0c4126a5d7ea00b0#stdenv",
       "source": "nixpkg"

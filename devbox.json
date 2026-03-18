@@ -17,20 +17,21 @@
     "chromedriver@latest",
     "libxml2@latest",
     "xmlsec@latest",
-    "libyaml.dev"
+    "libyaml.dev",
+    "selenium-manager@latest"
   ],
   "env": {
-    "DEVBOX":              "1",
-    "BUNDLER_VERSION":     "2.5.9"
+    "DEVBOX":          "1",
+    "BUNDLER_VERSION": "2.5.9"
   },
   "shell": {
     "init_hook": [
       "echo 'Environment Ready'"
     ],
     "scripts": {
-      "setup":          ["devbox run deps"],
-      "deps":           "gem install -N bundler -v $BUNDLER_VERSION && bundle install && yarn install",
-      "server":         "bundle exec rails s"
+      "setup":  ["devbox run deps"],
+      "deps":   "gem install -N bundler -v $BUNDLER_VERSION && bundle install && yarn install",
+      "server": "bundle exec rails s"
     }
   }
 }

@@ -4,7 +4,7 @@ require 'rails_helper'
 describe 'Search Results PDC Page', type: :system, js: true do
   before do
     load_describe_dataset
-    page.driver.browser.manage.window.resize_to(4000, 4000)
+    # page.driver.browser.manage.window.resize_to(4000, 4000)
   end
 
   it "renders expected fields" do
