@@ -4,7 +4,7 @@ require 'rails_helper'
 describe 'Search Results Page', type: :system, js: true do
   before do
     load_describe_dataset
-    page.driver.browser.manage.window.resize_to(2000, 2000)
+    # page.driver.browser.manage.window.resize_to(2000, 2000)
   end
 
   it "renders expected fields" do
