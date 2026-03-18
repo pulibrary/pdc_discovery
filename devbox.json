@@ -21,28 +21,16 @@
   ],
   "env": {
     "DEVBOX":              "1",
-    "BUNDLER_VERSION":     "2.5.9",
-    "PGDATA":              "$PWD/.postgres/data",
-    "PGHOST":              "$PWD/.postgres",
-    "PGPORT":              "5432",
-    "PGUSER":              "$USER",
-    "PGDATABASE":          "pdc_discovery_dev",
-    "APP_DB_HOST":         "$PWD/.postgres",
-    "APP_DB_USERNAME":     "$USER",
-    "APP_DB":              "pdc_discovery_dev"
+    "BUNDLER_VERSION":     "2.5.9"
   },
   "shell": {
     "init_hook": [
-      "echo 'Environment Ready'",
-      "mkdir -p \"$PGHOST\" \"$PGDATA\"",
-      "test -d \"$PGDATA/base\" || initdb -D \"$PGDATA\" -A trust"
+      "echo 'Environment Ready'"
     ],
     "scripts": {
       "setup":          ["devbox run deps"],
       "deps":           "gem install -N bundler -v $BUNDLER_VERSION && bundle install && yarn install",
-      "server":         "bundle exec rails s",
-      "postgres-start": "pg_ctl -D \"$PGDATA\" -l \"$PGHOST/postgres.log\" -o \"-k $PGHOST\" start",
-      "postgres-stop":  "pg_ctl -D \"$PGDATA\" stop"
+      "server":         "bundle exec rails s"
     }
   }
 }
