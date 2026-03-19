@@ -2,13 +2,13 @@
 version: 2.1
 
 orbs:
-  browser-tools: circleci/browser-tools@1.5.1
-  coveralls: coveralls/coveralls@2.2.1
+  browser-tools: circleci/browser-tools@2.4.0
+  coveralls: coveralls/coveralls@2.2.5
 
 executors:
   pdc_discovery_executor_build:
     docker:
-      - image: cimg/ruby:3.3.2-browsers
+      - image: cimg/ruby:4.0.0-browsers
         environment: &docker_env_default
           BUNDLER_VERSION: 2.3.11
           BUNDLE_JOBS: 3
@@ -19,7 +19,7 @@ executors:
 
   pdc_discovery_executor:
     docker:
-      - image: cimg/ruby:3.3.2-browsers
+      - image: cimg/ruby:4.0.0-browsers
         environment:
           <<: *docker_env_default
           DB_HOST: localhost
@@ -152,7 +152,7 @@ jobs:
             curl -H 'Content-type: application/json' http://solr:SolrRocks@127.0.0.1:8983/api/collections/ -d '{create: {name: pdc_discovery-core-test, config: pdc_discovery, numShards: 1}}'
       - bundle_install
       - yarn_install
-      - browser-tools/install-firefox
+      - browser-tools/install_firefox
       - run: |
           ruby --version
           node --version
