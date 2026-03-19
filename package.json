@@ -34,5 +34,6 @@
   "scripts": {
     "lint": "yarn run prettier --check app/javascript/**/*{js,css,scss} app/assets/javascripts/**/*js app/assets/stylesheets/**/*{css,scss}",
     "lint:fix": "yarn run prettier --write app/javascript/**/*{js,css,scss} app/assets/javascripts/**/*js app/assets/stylesheets/**/*{css,scss}"
-  }
+  },
+  "packageManager": "yarn@4.13.0"
 }
