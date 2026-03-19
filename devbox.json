@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.16.0/.schema/devbox.schema.json",
   "packages": [
     "ruby@3.3.2",
-    "nodejs@18.17.0",
+    "nodejs@24",
     "yarn@1.22.19",
     "postgresql@15.7",
     "stdenv",
