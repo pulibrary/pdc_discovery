@@ -1120,51 +1120,51 @@
         }
       }
     },
-    "yarn@1.22.19": {
-      "last_modified": "2024-03-08T13:51:52Z",
-      "resolved": "github:NixOS/nixpkgs/a343533bccc62400e8a9560423486a3b6c11a23b#yarn",
+    "yarn-berry_4@4.13.0": {
+      "last_modified": "2026-03-06T04:25:18Z",
+      "resolved": "github:NixOS/nixpkgs/e38213b91d3786389a446dfce4ff5a8aaf6012f2#yarn-berry_4",
       "source": "devbox-search",
-      "version": "1.22.19",
+      "version": "4.13.0",
       "systems": {
         "aarch64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/7r6llb2c10y2vhg7jccynzif8g9zdvbi-yarn-1.22.19",
+              "path": "/nix/store/gqvyid689x302gywnv7wy84vd1jyiccr-yarn-berry-4.13.0",
               "default": true
             }
           ],
-          "store_path": "/nix/store/7r6llb2c10y2vhg7jccynzif8g9zdvbi-yarn-1.22.19"
+          "store_path": "/nix/store/gqvyid689x302gywnv7wy84vd1jyiccr-yarn-berry-4.13.0"
         },
         "aarch64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/6xvv5b8wpxqfl56mssavl7yg29p962ss-yarn-1.22.19",
+              "path": "/nix/store/5cc3hqz254fmi49q5yw775xk5bivafil-yarn-berry-4.13.0",
               "default": true
             }
           ],
-          "store_path": "/nix/store/6xvv5b8wpxqfl56mssavl7yg29p962ss-yarn-1.22.19"
+          "store_path": "/nix/store/5cc3hqz254fmi49q5yw775xk5bivafil-yarn-berry-4.13.0"
         },
         "x86_64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/467zg6l9icqbjgpqar4i2xzyzzz87a63-yarn-1.22.19",
+              "path": "/nix/store/02lmar5nd88ndq8xhifvcx5qz3yvabcr-yarn-berry-4.13.0",
               "default": true
             }
           ],
-          "store_path": "/nix/store/467zg6l9icqbjgpqar4i2xzyzzz87a63-yarn-1.22.19"
+          "store_path": "/nix/store/02lmar5nd88ndq8xhifvcx5qz3yvabcr-yarn-berry-4.13.0"
         },
         "x86_64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/iscnp03q7lm8fsyq0ahajl6dlb8msdb9-yarn-1.22.19",
+              "path": "/nix/store/spvxqy7zbcyv5cgy6ka017ikm34nlvqr-yarn-berry-4.13.0",
               "default": true
             }
           ],
-          "store_path": "/nix/store/iscnp03q7lm8fsyq0ahajl6dlb8msdb9-yarn-1.22.19"
+          "store_path": "/nix/store/spvxqy7zbcyv5cgy6ka017ikm34nlvqr-yarn-berry-4.13.0"
         }
       }
     }

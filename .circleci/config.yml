@@ -65,13 +65,16 @@ commands:
   yarn_install:
     description: "Install the supported release of Yarn and install the package dependencies"
     steps:
+      - run:
+          name: Enable corepack and set the supported release of Yarn as the default
+          command: sudo corepack enable && yarn set version berry
       - restore_cache:
           name: Restore the Yarn package dependencies from the cache
           keys:
             - pdc_discovery-yarn-{{ checksum "yarn.lock" }}
       - run:
           name: Install NPM Dependencies via Yarn
-          command: yarn install --frozen-lockfile
+          command: yarn install --immutable
       - save_cache:
           name: Save Yarn Package Cache
           key: pdc_discovery-yarn-{{ checksum "yarn.lock" }}
