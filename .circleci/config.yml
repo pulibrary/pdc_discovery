@@ -71,7 +71,7 @@ commands:
             - pdc_discovery-yarn-{{ checksum "yarn.lock" }}
       - run:
           name: Install NPM Dependencies via Yarn
-          command: yarn install --frozen-lockfile
+          command: yarn install --immutable
       - save_cache:
           name: Save Yarn Package Cache
           key: pdc_discovery-yarn-{{ checksum "yarn.lock" }}
