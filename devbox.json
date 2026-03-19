@@ -1,12 +1,13 @@
 {
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.16.0/.schema/devbox.schema.json",
   "packages": [
-    "ruby@3.3.2",
+    "ruby@3.4.8",
     "nodejs@24",
     "yarn@1.22.19",
     "postgresql@15.7",
     "stdenv",
     "libyaml@0.2.5",
+    "libsignal-ffi@latest",
     "pkg-config@latest",
     "gcc@latest",
     "gnumake@latest",
