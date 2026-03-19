@@ -8,7 +8,7 @@ orbs:
 executors:
   pdc_discovery_executor_build:
     docker:
-      - image: cimg/ruby:3.4-browsers
+      - image: cimg/ruby:3.4.8-browsers
         environment: &docker_env_default
           BUNDLER_VERSION: 2.3.11
           BUNDLE_JOBS: 3
@@ -19,7 +19,7 @@ executors:
 
   pdc_discovery_executor:
     docker:
-      - image: cimg/ruby:3.4-browsers
+      - image: cimg/ruby:3.4.8-browsers
         environment:
           <<: *docker_env_default
           DB_HOST: localhost
@@ -57,7 +57,7 @@ commands:
             gem install bundler -v 2.3.11
       - run:
           name: Install dependencies
-          command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs 4 --retry 3
+          command: bundle config set --local path 'vendor/bundle' && bundle check || bundle install --jobs 4 --retry 3
       - save_cache:
           key: pdc_discovery-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
           paths:
