@@ -7,24 +7,15 @@ Please note: While this is open-source software, we would disourage anyone from 
 [![CircleCI](https://circleci.com/gh/pulibrary/pdc_discovery.svg?style=svg)](https://circleci.com/gh/pulibrary/pdc_discovery)
 [![Coverage Status](https://coveralls.io/repos/github/pulibrary/pdc_discovery/badge.svg?branch=main)](https://coveralls.io/github/pulibrary/pdc_discovery?branch=main)
 
-## Dependencies
-
-* Ruby: 3.1.0
-* nodejs: 12.18.3
-* yarn: 1.22.10
-* postgres: `brew install postgresql@14; brew services start postgresql@14`
-* [Lando](https://github.com/lando/lando/releases): 3.0.0
-
 ## Updating the banner
 
 Update the file `config/banner.yml`. Note that each environment can have its own banner text.
 
 ## Local development
 
-You can run this project using either **Lando** (existing/default) or **Devbox** (Nix-based, reproducible local environment).
-Both approaches are supported.
+This project uses [devbox](https://www.jetify.com/devbox) to manage system dependencies, and [lando](https://lando.dev/)/docker to run services (postgres and solr). 
 
-### Setup (Devbox & Lando)
+### Setup
 
 > **Notes**
 1. Install Devbox (see `./bin/first-time-setup.sh`).
