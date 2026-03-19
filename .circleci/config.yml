@@ -65,6 +65,9 @@ commands:
   yarn_install:
     description: "Install the supported release of Yarn and install the package dependencies"
     steps:
+      - run:
+          name: Enable corepack and set the supported release of Yarn as the default
+          command: sudo corepack enable && yarn set version berry
       - restore_cache:
           name: Restore the Yarn package dependencies from the cache
           keys:
