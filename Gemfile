@@ -3,12 +3,11 @@
 source 'https://gem.coop'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.3.2'
+ruby '3.4.8'
 
-gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1'
 gem 'blacklight', '>= 7.0'
 gem 'blacklight_dynamic_sitemap'
-gem 'blacklight-marc', '>= 7.0.0.rc1', '< 8'
 gem "blacklight_range_limit", '~> 8.2'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bootstrap', '~> 4.0'
