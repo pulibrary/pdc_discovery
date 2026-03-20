@@ -9,10 +9,10 @@
     "esbuild": "^0.27.4",
     "glob-parent": "^6.0.2",
     "lodash": "^4.17.23",
-    "postcss": "^8.4.5",
+    "postcss": "^8.5.8",
     "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-import": "^16.1.0",
-    "postcss-preset-env": "^7.8.2",
+    "postcss-import": "^16.1.1",
+    "postcss-preset-env": "^7.8.3",
     "sass": "^1.54.9",
     "turbolinks": "^5.2.0"
   },
