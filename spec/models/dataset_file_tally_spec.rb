@@ -30,10 +30,10 @@ RSpec.describe DatasetFileTally do
   context "#summary" do
     let(:timestamp) { Time.zone.parse("2025-03-25 18:02") }
 
-    it 'produces an export with the sumamry data only' do
+    it 'produces an export with the summary data only' do
       dft.summary
       lines = File.readlines(dft.filepath_summary)
-      expect(lines.count).to be 3
+      expect(lines.count).to eq 3
       expect(lines[0]).to eq "id,title,issue_date,file_count,total_file_size\n"
       expect(lines[1]).to eq "doi-10-34770-00yp-2w12,Sowing the Seeds for More Usable Web Archives: A Usability Study of Archive-It,2023,0,0\n"
       expect(lines[2]).to eq "doi-10-34770-r75s-9j74,bitKlavier Grand Sample Library—Binaural Mic Image,2021,4,1108910\n"
