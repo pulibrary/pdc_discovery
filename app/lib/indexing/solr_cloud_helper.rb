@@ -59,7 +59,6 @@ module Indexing
         # We are not running in a Solr cloud environment - nothing to do.
         return solr_alias_uri.to_s
       end
-
       alternate_collection = alternate_collection_for_alias(solr_alias_uri)
       if collection_exist?(solr_alias_uri, alternate_collection)
         if recreate
