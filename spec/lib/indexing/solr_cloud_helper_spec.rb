@@ -65,6 +65,7 @@ RSpec.describe Indexing::SolrCloudHelper do
     # which will cause it to return the provided alias URI as the collection writer 
     # URL since we are not running in a Solr cloud environment in the local test environment.
     # However, this passes on the CI server.  
+    it "returns the alternate collection as the collection_writer" do
       stub_request(:get, "http://fake-solr/solr/admin/collections?action=LISTALIASES")
         .to_return(status: 200, body: solr_aliases_1, headers: json_response)
       expect(described_class.collection_writer_for_alias(alias_uri, false)).to eq "http://fake-solr/solr/pdc-discovery-staging-2"
