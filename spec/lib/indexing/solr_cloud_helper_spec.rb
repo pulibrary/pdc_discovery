@@ -57,7 +57,8 @@ RSpec.describe Indexing::SolrCloudHelper do
   end
 
   describe "#collection_writer_for_alias" do
-    # In the *local* test environment (as opposed to circleci.com), this will encounter a check like this:
+    # This test is expected to fail on the local test environment.
+    #   In the *local* test environment (as opposed to circleci.com), this will encounter a check like this:
     #       if config_set.nil?
     #               return solr_alias_uri.to_s
     #       end
