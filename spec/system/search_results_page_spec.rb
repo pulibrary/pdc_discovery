@@ -8,12 +8,16 @@ describe 'Search Results Page', type: :system, js: true do
   end
 
   it "renders expected fields" do
-    visit '/?search_field=all_fields&q='
-    click_on "Collection Tags"
-    click_on "NSTX"
+    visit '/?search_field=all_fields&q=Midplane+neutral+density+profiles'
     expect(page).to have_link('Midplane neutral density profiles in the National Spherical Torus Experiment', href: '/catalog/doi-10-11578-1366462')
     expect(page).to have_content 'Stotler, D.; Scotti, F.; Bell, R. E.; Diallo, A.' # authors
     # expect(page).to have_content 'Atomic and molecular density data in the outer midplane of NSTX' # abstract
+  end
+
+  it "links to the expected facet values" do
+    visit '/?search_field=all_fields&q=Midplane+neutral+density+profiles'
+    click_on "Collection Tags"
+    expect(find_link('NSTX')[:href]).to match(/collection_tag_ssim/)
   end
 
   describe "title searches" do
