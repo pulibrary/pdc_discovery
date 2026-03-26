@@ -14,6 +14,12 @@ describe 'Search Results Page', type: :system, js: true do
     # expect(page).to have_content 'Atomic and molecular density data in the outer midplane of NSTX' # abstract
   end
 
+  it "links to the expected facet values" do
+    visit '/?search_field=all_fields&q=Midplane+neutral+density+profiles'
+    click_on "Collection Tags"
+    expect(find_link('NSTX')[:href]).to match(/collection_tag_ssim/)
+  end
+
   describe "title searches" do
     it "finds record by title" do
       # Notice that the search is successful even with a slight variation in terms (profile vs profiles)
