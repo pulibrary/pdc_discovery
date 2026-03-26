@@ -58,7 +58,7 @@ RSpec.describe Indexing::SolrCloudHelper do
 
   describe "#collection_writer_for_alias" do
 
-    # In the *local* test environment, this will encounter a check like this:
+    # In the *local* test environment (as opposed to circleci.com), this will encounter a check like this:
     #       if config_set.nil?
     #               return solr_alias_uri.to_s
     #       end
@@ -77,7 +77,7 @@ RSpec.describe Indexing::SolrCloudHelper do
         .to_return(status: 200, body: "", headers: {})
       stub_request(:get, "http://fake-solr/solr/admin/collections?action=CREATE&collection.configName=pdc-discovery-test&name=pdc-discovery-staging-2&numShards=1&replicationFactor=3")
         .to_return(status: 200, body: '{"success":"true"}', headers: json_response)
-      expect(described_class.collection_writer_for_alias(alias_uri, true)).to eq "http://fake-solr/solr/pdc-discovery-staging"
+      expect(described_class.collection_writer_for_alias(alias_uri, true)).to eq "http://fake-solr/solr/pdc-discovery-staging-2"
     end
   end
 
