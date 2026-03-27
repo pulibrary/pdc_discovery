@@ -57,4 +57,5 @@ spec/fixtures/migration/dspace_migration.csv
 .postgres
 .solr
 .tmp
+.yarn/**/*gz
 
