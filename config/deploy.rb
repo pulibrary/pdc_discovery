@@ -23,8 +23,19 @@ namespace :pdc_discovery do
       end
     end
   end
+
+  desc "Set Yarn 4 (berry) as the default package manager for this project"
+  task :set_yarn_berry do
+    on roles(:app) do
+      within release_path do
+        execute("cd #{release_path} && yarn set version berry")
+      end
+    end
+  end
+
 end
 
+before "deploy:assets:precompile", "pdc_discovery:set_yarn_berry"
 before "deploy:reverted", "deploy:assets:precompile"
 
 # Uncomment to re-index on every deploy. Only needed when we're actively
