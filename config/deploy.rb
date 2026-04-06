@@ -28,7 +28,7 @@ namespace :pdc_discovery do
   task :set_yarn_berry do
     on roles(:app) do
       within release_path do
-        execute("cd #{release_path} && yarn set version berry")
+        execute("yarn set version berry")
       end
     end
   end
