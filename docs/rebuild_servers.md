@@ -28,5 +28,8 @@ bundle exec cap --hosts=pdc-discovery-prod2.princeton.edu production application
     bundle exec cap staging deploy
     ```
 
-### Return to load balancer 
+### 3. Return to load balancer 
 bundle exec cap --hosts=pdc-discovery-prod2.princeton.edu production application:serve_from_nginx
+
+### 4. Go check everything looks right
+Visit the site (make sure you reload several times) and if everything looks good, move on to the next one!
