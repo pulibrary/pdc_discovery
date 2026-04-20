@@ -30,7 +30,7 @@
     ],
     "scripts": {
       "setup":  ["devbox run deps"],
-      "deps":   "gem install -N bundler -v $BUNDLER_VERSION && bundle install && yarn install",
+      "deps":   "gem install -N bundler -v $BUNDLER_VERSION && bundle install && yarn set version berry && yarn install",
       "server": "bundle exec rails s"
     }
   }
