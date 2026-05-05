@@ -6,7 +6,7 @@ describe 'PDC Describe Bitklavier Single item page', type: :system, js: true do
   let(:resource1) { file_fixture("sowing_the_seeds.json").read }
   let(:bitklavier_binaural_json) { file_fixture("bitklavier_binaural.json").read }
   let(:rss_url_string) { "https://pdc-describe-prod.princeton.edu/describe/works.rss" }
-  let(:indexer) { DescribeIndexer.new(rss_url: rss_url_string) }
+  let(:indexer) { ApprovedWorksIndexer.new(rss_url: rss_url_string) }
 
   before do
     Blacklight.default_index.connection.delete_by_query("*:*")

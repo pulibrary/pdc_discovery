@@ -14,7 +14,7 @@ describe 'Show PDC Page', type: :system, js: true do
     end
     stub_request(:get, "http://pdc_test_data/works.rss")
       .to_return(status: 200, body: File.open(Rails.root.join("spec", "fixtures", "files", "pdc_describe_data", "works.rss")).read, headers: {})
-    indexer = DescribeIndexer.new(rss_url: "http://pdc_test_data/works.rss")
+    indexer = ApprovedWorksIndexer.new(rss_url: "http://pdc_test_data/works.rss")
     indexer.index
   end
 

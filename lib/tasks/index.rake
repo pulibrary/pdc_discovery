@@ -6,7 +6,7 @@ namespace :index do
     older_timestamp = DateTime.now.utc - 1.second
 
     Rails.logger.info "Indexing: Research Data indexing started"
-    DescribeIndexer.new.index
+    ApprovedWorksIndexer.new.index
     Indexing::SolrCloudHelper.collection_alias_commit!
     Rails.logger.info "Indexing: Harvesting and indexing PDC Describe data completed"
     Indexing::SolrCloudHelper.delete_older_documents(older_timestamp)
@@ -24,7 +24,7 @@ namespace :index do
 
   desc 'Index fixture data'
   task fixtures: :environment do
-    indexer = DescribeIndexer.new
+    indexer = ApprovedWorksIndexer.new
 
     fixture_names = ['pdc_describe_active_embargo.json', 'pdc_describe_expired_embargo.json']
     fixture_names.each do |fixture_name|

@@ -6,7 +6,7 @@ require 'open-uri'
 
 ##
 # Fetch an RSS feed of approved works from PDC Describe. For each work, index a PDC Describe JSON resource to solr.
-class DescribeIndexer
+class ApprovedWorksIndexer
   ##
   # See config/pdc_discovery.yml for configuration of the RSS feed that
   # this indexer uses to harvest data from PDC Describe.

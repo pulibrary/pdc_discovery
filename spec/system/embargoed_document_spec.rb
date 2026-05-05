@@ -7,7 +7,7 @@ describe 'Embargoed Document page', type: :system, js: true do
     let(:embargo_resource) { item_file_fixture.read }
     let(:rss_feed) { file_fixture("works.rss").read }
     let(:rss_url) { "https://pdc-describe-prod.princeton.edu/describe/works.rss" }
-    let(:indexer) { DescribeIndexer.new(rss_url: rss_url) }
+    let(:indexer) { ApprovedWorksIndexer.new(rss_url: rss_url) }
     let(:solr_response) do
       Blacklight.default_index.connection.get 'select', params: { q: '*:*' }
     end
