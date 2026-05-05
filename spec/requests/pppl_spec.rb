@@ -8,7 +8,7 @@ RSpec.describe "PPPL has a harvest endpoint", type: :request do
   let(:pppl4) { File.read(File.join(fixture_paths.first, 'files', 'pppl4.json')) }
 
   let(:other_data) { File.read(File.join(fixture_paths.first, 'files', 'bitklavier_binaural.json')) }
-  let(:indexer) { DescribeIndexer.new }
+  let(:indexer) { ApprovedWorksIndexer.new }
 
   before do
     Blacklight.default_index.connection.delete_by_query('*:*')

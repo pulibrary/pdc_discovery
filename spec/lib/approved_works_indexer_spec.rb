@@ -2,7 +2,7 @@
 require "rails_helper"
 
 # rubocop:disable Metrics/BlockLength
-RSpec.describe DescribeIndexer do
+RSpec.describe ApprovedWorksIndexer do
   describe 'indexing a single record' do
     let(:single_item) { file_fixture("bitklavier_binaural.json").read }
     let(:indexer) do

@@ -20,7 +20,7 @@ RSpec.describe "Catalog", type: :request do
       let(:document_id) { "doi-10-34770-r75s-9j74" }
       let(:rss_feed) { file_fixture("works.rss").read }
       let(:rss_url_string) { "https://pdc-describe-prod.princeton.edu/describe/works.rss" }
-      let(:indexer) { DescribeIndexer.new(rss_url: rss_url_string) }
+      let(:indexer) { ApprovedWorksIndexer.new(rss_url: rss_url_string) }
 
       before do
         indexer.delete!(query: "*:*")
