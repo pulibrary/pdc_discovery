@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Princeton Data Commons RSS Feed</title>
+    <description>Princeton Data Commons RSS Feed of draft DOIs</description>
+    <link>https://datacommons.princeton.edu/describe/</link>
+    <item>
+      <title>One dimensional gyrokinetic study of a low-recycling scrape-off layer.</title>
+      <url>https://datacommons.princeton.edu/describe/works/686.json</url>
+      <date_changed>2026-05-10 11:46:58 -0400</date_changed>
+    </item>
+    <item>
+      <title>Data for "Resilience of renewable power systems under climate risks"</title>
+      <url>https://datacommons.princeton.edu/describe/works/285.json</url>
+      <date_changed>2024-04-15 10:52:09 -0400</date_changed>
+    </item>
+    <item>
+      <title>Data for: "Transfer Learning Meets Embedded Correlated Wavefunction Theory for Chemically Accurate Molecular Simulations: Application to Calcium Carbonate Ion-Pairing"</title>
+      <url>https://datacommons.princeton.edu/describe/works/666.json</url>
+      <date_changed>2026-04-22 16:34:01 -0400</date_changed>
+    </item>
+    <item>
+      <title>Data for "Iron-Catalyzed Cross-[2 + 2] Cycloaddition of Butadiene and α,ω-Dienes for Ductile and Chemically Recyclable Poly(oligocyclobutanes)"</title>
+      <url>https://datacommons.princeton.edu/describe/works/680.json</url>
+      <date_changed>2026-05-11 11:35:38 -0400</date_changed>
+    </item>
+    <item>
+      <title>Data for "A MINi Powder INjector (MINPIN) for the SMART tokamak"</title>
+      <url>https://datacommons.princeton.edu/describe/works/660.json</url>
+      <date_changed>2026-03-10 11:06:04 -0400</date_changed>
+    </item>
+    <item>
+      <title>Data for "Machine Learning Methods to Fit Interatomic Potentials for Plasma-Surface Interactions"</title>
+      <url>https://datacommons.princeton.edu/describe/works/658.json</url>
+      <date_changed>2026-04-28 11:04:00 -0400</date_changed>
+    </item>
+    <item>
+      <title>Methane, nitrous oxide, and ammonia emissions from wastewater treatment plants (Moore et al., Nature Water, 2025)</title>
+      <url>https://datacommons.princeton.edu/describe/works/605.json</url>
+      <date_changed>2025-09-17 12:26:25 -0400</date_changed>
+    </item>
+    <item>
+      <title>Date for "Dynamics of Argon Metastables in Ar-CH4 Radio Frequency Capacitively-Coupled Plasma: Real-Time Monitoring with Neural Network-Augmented Broadband Optical Emission Spectroscopy" </title>
+      <url>https://datacommons.princeton.edu/describe/works/621.json</url>
+      <date_changed>2026-03-09 15:37:29 -0400</date_changed>
+    </item>
+    <item>
+      <title>Data from "Development of a Deep Potential Model for F and CF2 Etching of Si and SiO2"</title>
+      <url>https://datacommons.princeton.edu/describe/works/669.json</url>
+      <date_changed>2026-04-03 09:18:44 -0400</date_changed>
+    </item>
+  </channel>
+</rss>
