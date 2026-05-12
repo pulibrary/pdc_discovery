@@ -18,7 +18,7 @@ RSpec.describe "Catalog", type: :request do
       let(:doi) { "10.34770/r75s-9j74" }
       let(:ark) { "ark:/88435/dsp015999n653h" }
       let(:document_id) { "doi-10-34770-r75s-9j74" }
-      let(:rss_feed) { file_fixture("works.rss").read }
+      let(:rss_feed) { file_fixture("pdc_describe_feeds/works.rss").read }
       let(:rss_url_string) { "https://pdc-describe-prod.princeton.edu/describe/works.rss" }
       let(:indexer) { ApprovedWorksIndexer.new(rss_url: rss_url_string) }
 
