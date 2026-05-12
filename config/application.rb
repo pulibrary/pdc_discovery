@@ -3,17 +3,23 @@
 require_relative 'boot'
 
 require 'rails/all'
+
 require_relative 'lando_env'
 
 # Require the gems listed in Gemfile, but only the default ones
 # and those for the environment rails is running in
-Bundler.require(:default, Rails.env)
+Bundler.require(*Rails.groups)
 
 module PdcDiscovery
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
     config.exceptions_app = routes
+
+    # Please, add to the `ignore` list any other `lib` subdirectories that do
+    # not contain `.rb` files, or that should not be reloaded or eager loaded.
+    # Common ones are `templates`, `generators`, or `middleware`, for example.
+    config.autoload_lib(ignore: %w[assets tasks])
 
     # Configuration for the application, engines, and railties goes here.
     #
