@@ -147,7 +147,7 @@ RSpec.describe ApprovedWorksIndexer do
   end
 
   describe 'indexing an RSS feed from PDC Describe' do
-    let(:rss_feed) { file_fixture("works.rss").read }
+    let(:rss_feed) { file_fixture("pdc_describe_feeds/works.rss").read }
     let(:resource1) { file_fixture("bitklavier_binaural.json").read }
     let(:resource2) { file_fixture("sowing_the_seeds.json").read }
     let(:rss_url_string) { "https://pdc-describe-prod.princeton.edu/describe/works.rss" }
@@ -225,7 +225,7 @@ RSpec.describe ApprovedWorksIndexer do
         let(:item_file_fixture) { file_fixture("pdc_describe_active_embargo.json") }
         let(:embargo_resource) { item_file_fixture.read }
         # This redundancy is required for consistent testing
-        let(:rss_feed) { file_fixture("works.rss").read }
+        let(:rss_feed) { file_fixture("pdc_describe_feeds/works.rss").read }
         let(:rss_url) { "https://pdc-describe-prod.princeton.edu/describe/works.rss" }
         let(:indexer) do
           described_class.new(rss_url: rss_url)
@@ -273,7 +273,7 @@ RSpec.describe ApprovedWorksIndexer do
         let(:item_file_fixture) { file_fixture("pdc_describe_expired_embargo.json") }
         let(:embargo_resource) { item_file_fixture.read }
         # This redundancy is required for consistent testing
-        let(:rss_feed) { file_fixture("works.rss").read }
+        let(:rss_feed) { file_fixture("pdc_describe_feeds/works.rss").read }
         let(:rss_url) { "https://pdc-describe-prod.princeton.edu/describe/works.rss" }
         let(:indexer) do
           described_class.new(rss_url: rss_url)
@@ -313,7 +313,7 @@ RSpec.describe ApprovedWorksIndexer do
         let(:item_file_fixture) { file_fixture("pdc_describe_no_embargo.json") }
         let(:embargo_resource) { item_file_fixture.read }
         # This redundancy is required for consistent testing
-        let(:rss_feed) { file_fixture("works.rss").read }
+        let(:rss_feed) { file_fixture("pdc_describe_feeds/works.rss").read }
         let(:rss_url) { "https://pdc-describe-prod.princeton.edu/describe/works.rss" }
         let(:indexer) do
           described_class.new(rss_url: rss_url)

@@ -1,7 +1,7 @@
 def load_describe_small_data
     resource1 = file_fixture("sowing_the_seeds.json").read
     bitklavier_binaural_json =  file_fixture("bitklavier_binaural.json").read
-    rss_feed =  file_fixture("works.rss").read
+    rss_feed =  file_fixture("pdc_describe_feeds/works.rss").read
     rss_url_string = "https://pdc-describe-prod.princeton.edu/describe/works.rss"
     indexer = ApprovedWorksIndexer.new(rss_url: rss_url_string)
     indexer.delete!(query: "*:*")

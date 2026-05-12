@@ -5,7 +5,7 @@ describe 'Embargoed Document page', type: :system, js: true do
   context "when the Solr Document has an embargo date" do
     # This redundancy is required for consistent testing
     let(:embargo_resource) { item_file_fixture.read }
-    let(:rss_feed) { file_fixture("works.rss").read }
+    let(:rss_feed) { file_fixture("pdc_describe_feeds/works.rss").read }
     let(:rss_url) { "https://pdc-describe-prod.princeton.edu/describe/works.rss" }
     let(:indexer) { ApprovedWorksIndexer.new(rss_url: rss_url) }
     let(:solr_response) do

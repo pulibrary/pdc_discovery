@@ -2,7 +2,7 @@
 require 'rails_helper'
 
 describe 'PDC Describe Bitklavier Single item page', type: :system, js: true do
-  let(:rss_feed) { file_fixture("works.rss").read }
+  let(:rss_feed) { file_fixture("pdc_describe_feeds/works.rss").read }
   let(:resource1) { file_fixture("sowing_the_seeds.json").read }
   let(:bitklavier_binaural_json) { file_fixture("bitklavier_binaural.json").read }
   let(:rss_url_string) { "https://pdc-describe-prod.princeton.edu/describe/works.rss" }
