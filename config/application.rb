@@ -3,6 +3,7 @@
 require_relative 'boot'
 
 require 'rails/all'
+
 require_relative 'lando_env'
 
 # Require the gems listed in Gemfile, but only the default ones

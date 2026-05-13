@@ -77,3 +77,5 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webmock'
 end
+
+eval_gemfile 'Gemfile.local' if File.exist?('Gemfile.local')
