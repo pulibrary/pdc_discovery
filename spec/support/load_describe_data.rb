@@ -19,6 +19,24 @@ def load_describe_small_data
     indexer
 end
 
+# There is a fixutre in spec/fixtures/files/pdc_describe_feeds/awaiting-approval.rss, which should match the format
+# of https://datacommons.princeton.edu/describe/works/awaiting-approval.rss
+def load_describe_draft_dois
+    rss_feed = file_fixture("pdc_describe_feeds/awaiting-approval.rss").read
+    rss_url_string = "https://datacommons.princeton.edu/describe/works/awaiting-approval.rss"
+    indexer = DraftWorksIndexer.new(rss_url: rss_url_string)
+    indexer.delete!(query: "*:*")
+
+    stub_request(:get, rss_url_string)
+        .to_return(status: 200, body: rss_feed)
+    stub_request(:get, "rss_url_string")
+        .to_return(status: 200, body: rss_feed, headers: {})
+
+    indexer.index
+
+    indexer
+end
+
 def load_describe_dataset
     pdc_files = Dir.entries(Rails.root.join("spec", "fixtures", "files", "pdc_describe_data", ""))
                    .reject { |name| [".", "..", "works.rss"].include?(name) }
