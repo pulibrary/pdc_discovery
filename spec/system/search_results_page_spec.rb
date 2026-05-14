@@ -11,6 +11,7 @@ describe 'Search Results Page', type: :system, js: true do
     visit '/?search_field=all_fields&q=Midplane+neutral+density+profiles'
     expect(page).to have_link('Midplane neutral density profiles in the National Spherical Torus Experiment', href: '/catalog/doi-10-11578-1366462')
     expect(page).to have_content 'Stotler, D.; Scotti, F.; Bell, R. E.; Diallo, A.' # authors
+    expect(page).to have_content "Version: " # displays version number
     # expect(page).to have_content 'Atomic and molecular density data in the outer midplane of NSTX' # abstract
   end
 
