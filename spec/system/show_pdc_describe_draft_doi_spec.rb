@@ -6,10 +6,8 @@ require 'rails_helper'
 # my readers and reviewers can see that the link is not broken--just pending publication.
 describe 'When a PDC Work has not yet been published', type: :system, js: true do
   before do
-    Blacklight.default_index.connection.delete_by_query('*:*')
-    Blacklight.default_index.connection.commit
-    Rails.configuration.pdc_discovery.index_pdc_describe = true
-    # Run the indexer to add the test document to Solr
+    # Run the indexer to add the draft doi test documents to Solr
+    load_describe_draft_dois
   end
 
   it "renders a page with the DOI and some placeholder information" do
