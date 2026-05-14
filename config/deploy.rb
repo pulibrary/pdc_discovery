@@ -39,6 +39,11 @@ before "deploy:assets:precompile", "pdc_discovery:set_yarn_berry"
 before "deploy:reverted", "deploy:assets:precompile"
 
 # Uncomment to re-index on every deploy. Only needed when we're actively
+set :ssh_options, {
+  keys: %w[~/.ssh/id_ed25519_pul_desktop_2025-08-26],
+  auth_methods: %w[publickey]
+}
+
 # updating how indexing happens.
 # after "deploy:published", "pdc_discovery:reindex"
 namespace :application do
