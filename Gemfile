@@ -25,7 +25,6 @@ gem 'jquery-rails'
 gem 'listen', '~> 3.3'
 gem 'multi_xml'
 gem 'mutex_m'
-gem 'net-ssh'
 gem "nokogiri", ">= 1.13.4"
 gem 'oai'
 gem 'opentelemetry-exporter-otlp'
@@ -67,7 +66,9 @@ group :development do
   gem "bcrypt_pbkdf"
   gem "capistrano"
   gem "capistrano-passenger", require: false
-  gem "capistrano-rails", "~> 1.4", require: false
+  gem "capistrano-rails", require: false
+  gem 'net-ssh'
+  gem 'sshkit'
   gem "ed25519"
   gem "foreman"
   gem 'rack-mini-profiler', '~> 2.0'
