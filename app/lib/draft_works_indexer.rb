@@ -22,12 +22,12 @@ class DraftWorksIndexer
   # Load the traject indexing config for PDC Describe JSON resources
   def traject_indexer
     Traject::Indexer::NokogiriIndexer.new.tap do |i|
-      i.load_config_file(datacite_indexing_config_path)
+      i.load_config_file(draft_doi_indexing_config_path)
     end
   end
 
-  def datacite_indexing_config_path
-    pathname = ::Rails.root.join('config', 'traject', "pdc_describe_indexing_config.rb")
+  def draft_doi_indexing_config_path
+    pathname = ::Rails.root.join('config', 'traject', "draft_doi_indexing_config.rb")
     pathname.to_s
   end
 

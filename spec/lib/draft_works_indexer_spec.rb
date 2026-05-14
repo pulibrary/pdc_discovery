@@ -20,7 +20,7 @@ RSpec.describe DraftWorksIndexer do
           .to_return(status: 200, body: rss_feed, headers: {})
       end
 
-      xit "sends items to solr" do
+      it "sends a DOI and a status to solr" do
         response = Blacklight.default_index.connection.get 'select', params: { q: '*:*' }
         expect(response["response"]["numFound"]).to eq 0
 
