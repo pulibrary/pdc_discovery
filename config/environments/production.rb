@@ -15,6 +15,7 @@ Rails.application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
+  config.enable_reloading = false
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
@@ -23,6 +24,9 @@ Rails.application.configure do
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
   # config.require_master_key = true
+
+  # Cache assets for far-future expiry since they are all digest stamped.
+  config.public_file_server.headers = { "cache-control" => "public, max-age=#{1.year.to_i}" }
 
   # Serve files in the public folder (so that we can serve robots.txt)
   config.public_file_server.enabled = true
@@ -48,15 +52,27 @@ Rails.application.configure do
   # config.action_cable.url = 'wss://example.com/cable'
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
+  # Assume all access to the app is happening through a SSL-terminating reverse proxy.
+  # config.assume_ssl = true
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
 
+  # Log to STDOUT with the current request id as a default log tag.
+  config.logger = ActiveSupport::TaggedLogging.logger(STDOUT)
   # Include generic and useful information about system operation, but avoid logging too much
   # information to avoid inadvertent exposure of personally identifiable information (PII).
-  config.log_level = :info
+
+  # rubocop: disable Layout/LineLength
+  # Change to "debug" to log everything (including potentially personally-identifiable information!)                                                                                                              -   # config.cache_store = :mem_cache_store
+  config.log_level = ENV.fetch("RAILS_LOG_LEVEL", "info")
+  # rubocop: enable Layout/LineLength
 
   # Prepend all log lines with the following tags.
   config.log_tags = [:request_id]
+
+  # Skip http-to-https redirect for the default health check endpoint.
+  # information to avoid inadvertent exposure of personally identifiable information (PII).
+  # config.ssl_options = { redirect: { exclude: ->(request) { request.path == "/up" } } }
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
@@ -64,6 +80,13 @@ Rails.application.configure do
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "pdc_discovery_production"
+
+  # Prevent health checks from clogging up the logs.
+  config.silence_healthcheck_path = "/up"
+
+  config.action_mailer.perform_caching = false
+  # Don't log any deprecations.
+  config.active_support.report_deprecations = false
 
   config.action_mailer.perform_caching = false
 
@@ -130,4 +153,15 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+
+  # Only use :id for inspections in production.
+  config.active_record.attributes_for_inspect = [:id]
+
+  # Enable DNS rebinding protection and other `Host` header attacks.
+  # config.hosts = [
+  #   "example.com",     # Allow requests from example.com
+  #   /.*\.example\.com/ # Allow requests from subdomains like `www.example.com`
+  # ]
+  # Skip DNS rebinding protection for the default health check endpoint.
+  # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 end

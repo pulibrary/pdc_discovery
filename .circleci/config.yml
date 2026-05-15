@@ -94,13 +94,13 @@ jobs:
       - run:
           name: Set Timezone to EST/EDT
           command: echo 'America/New_York' = /etc/timezone
-      - run: 
+      - run:
           name: Make a new path for keys
           command: mkdir -p -m 0755 /etc/apt/keyrings
       - run:
           name: Download and save the Google GPG key
           command: curl -fsSL https://dl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /etc/apt/keyrings/google-chrome.gpg
-      - run: 
+      - run:
           name: Update the sources list to reference Google gpg key directly
           command: sudo chown circleci /etc/apt/sources.list.d/google-chrome.list && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list && sudo chown root /etc/apt/sources.list.d/google-chrome.list
       - run:
@@ -136,6 +136,9 @@ jobs:
 
   test:
     executor: pdc_discovery_executor
+    environment:
+      RAILS_ENV: test
+      SPEC_OPTS: "--tag ~type:system --format progress"
     steps:
       - attach_workspace:
           at: "~/pdc_discovery"
@@ -171,6 +174,45 @@ jobs:
       - coveralls/upload:
           fail_on_error: false
 
+  test_browser:
+    executor: pdc_discovery_executor
+    environment:
+      RAILS_ENV: test
+      SPEC_OPTS: "--tag type:system --format progress"
+    steps:
+      - attach_workspace:
+          at: "~/pdc_discovery"
+      # project database settings
+      - run:
+          name: Wait for PostgreSQL
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+      - run:
+          name: Wait for Solr
+          command: dockerize -wait tcp://localhost:8983 -timeout 1m
+      - run:
+          name: Load config into solr
+          command: |
+            cd solr/conf
+            zip -1 -r solr_config.zip ./*
+            curl -H "Content-type:application/octet-stream" --data-binary @solr_config.zip "http://solr:SolrRocks@127.0.0.1:8983/solr/admin/configs?action=UPLOAD&name=pdc_discovery"
+            curl -H 'Content-type: application/json' http://solr:SolrRocks@127.0.0.1:8983/api/collections/ -d '{create: {name: pdc_discovery-core-test, config: pdc_discovery, numShards: 1}}'
+      - bundle_install
+      - yarn_install
+      - browser-tools/install_firefox
+      - run: |
+          ruby --version
+          node --version
+          java --version
+      - run: bundle exec rake db:create RAILS_ENV=test
+      - run: bundle exec rake db:migrate RAILS_ENV=test
+      # Test
+      - run:
+          name: Run Rspec
+          command: bundle exec rspec
+      - store_artifacts:
+          path: ~/pdc_discovery/coverage
+      - coveralls/upload:
+          fail_on_error: false
 
 workflows:
   version: 2
@@ -180,6 +222,10 @@ workflows:
       - test:
           requires:
             - build
+      - test_browser:
+          requires:
+            - build
+
       - rubocop:
           requires:
             - build
