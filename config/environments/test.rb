@@ -18,6 +18,11 @@ Rails.application.configure do
   config.cache_classes = false
   config.action_view.cache_template_loading = true
 
+  # this is usually not necessary, and can slow down your test suite. However, it's
+  # recommended that you enable it in continuous integration systems to ensure eager
+  # loading is working properly before deploying your code.
+  config.eager_load = ENV["CI"].present?
+
   # Do not eager load code on boot. This avoids loading your whole application
   # just for the purpose of running a single test. If you are using a tool that
   # preloads Rails for running tests, you may have to set it to true.
@@ -35,6 +40,7 @@ Rails.application.configure do
   config.cache_store = :null_store
 
   # Raise exceptions instead of rendering exception templates.
+  # config.action_dispatch.show_exceptions = :rescuable
   config.action_dispatch.show_exceptions = false
 
   # Disable request forgery protection in test environment.
@@ -50,6 +56,8 @@ Rails.application.configure do
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
 
+  config.action_mailer.default_url_options = { host: "example.com" }
+
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
@@ -64,4 +72,5 @@ Rails.application.configure do
 
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
+  config.action_controller.raise_on_missing_callback_actions = true
 end

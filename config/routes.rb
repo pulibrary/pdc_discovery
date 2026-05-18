@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get 'catalog/:id/bibtex' => 'catalog#bibtex', as: :catalog_bibtex
   get 'catalog/:id/file-list' => 'catalog#file_list', as: :catalog_file_list
 
-  resource :catalog, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
+  resource :catalog, only: [], as: 'catalog', path: '/catalog', controller: 'catalog' do
     concerns :searchable
     concerns :range_searchable
   end
