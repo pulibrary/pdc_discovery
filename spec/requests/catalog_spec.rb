@@ -123,7 +123,7 @@ RSpec.describe "Catalog", type: :request do
 
       before do
         allow(search_service).to receive(:fetch).and_raise(Blacklight::Exceptions::ECONNREFUSED)
-        allow(search_service).to receive(:fetch).and_return([nil, document])
+        allow(search_service).to receive(:fetch).and_return(document)
         get "/catalog/#{document_id}"
       end
 
