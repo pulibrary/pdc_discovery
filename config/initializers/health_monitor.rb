@@ -1,9 +1,23 @@
 # frozen_string_literal: true
 require "pul_cache"
 
+class CustomDatabaseCheck < HealthMonitor::Providers::Base
+  def check!
+    # A simple, lightning-fast SQL ping.
+    # If the database is unreachable, this will raise a StandardError.
+    ActiveRecord::Base.connection.execute("SELECT 1")
+  rescue StandardError => e
+    raise "Database connection failed: #{e.message}"
+  end
+end
+
 Rails.application.config.after_initialize do
   HealthMonitor.configure do |config|
     config.no_database
+
+    config.add_custom_provider(CustomDatabaseCheck).configure do |c|
+      c.name = "Database"
+    end
 
     # Use our custom Cache checker instead of the default one
     config.add_custom_provider(PulCache).configure
