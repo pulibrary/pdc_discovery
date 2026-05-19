@@ -3,7 +3,7 @@ require "pul_cache"
 
 Rails.application.config.after_initialize do
   HealthMonitor.configure do |config|
-    config.no_default_providers
+    config.no_database
 
     # Use our custom Cache checker instead of the default one
     config.add_custom_provider(PulCache).configure
