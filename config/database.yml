@@ -1,15 +1,14 @@
+###
 default: &default
   adapter: postgresql
   encoding: utf8
   min_messages: warning
-  pool: <%= Integer(ENV.fetch("DB_POOL", 40)) %>
-  reaping_frequency: <%= Integer(ENV.fetch("DB_REAPING_FREQUENCY", 10)) %>
+  pool: <%= Integer(ENV.fetch("RAILS_MAX_THREADS", 5)) %>
   timeout: 5000
   host: <%= ENV["lando_pdc_database_conn_host"] || ENV["APP_DB_HOST"] || "localhost" %>
   port: <%= ENV["lando_pdc_database_conn_port"] || 5432 %>
   username: <%= ENV["lando_pdc_database_creds_user"] || ENV["APP_DB_USERNAME"] %>
   password: <%= ENV["lando_pdc_database_creds_password"] || ENV["APP_DB_PASSWORD"] %>
-  database: <%= ENV['APP_DB'] %>
 
 development:
   <<: *default
@@ -21,6 +20,8 @@ test:
 
 production:
   <<: *default
+  database: <%= ENV['APP_DB'] %>
 
 staging:
   <<: *default
+  database: <%= ENV['APP_DB'] %>
