@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
-  Created by saving the url.  The associates json files were created by running: 
+<!--
+  Created by saving the url.  The associates json files were created by running:
   @url = "https://datacommons.princeton.edu/describe/works.rss"
   doc = Nokogiri::XML(URI.open(@rss_url))
   url_list = doc.xpath("//item/url/text()").map(&:to_s)
@@ -350,6 +350,11 @@
       <title>Why is El Nino warm?</title>
       <url>https://datacommons.princeton.edu/describe/works/117.json</url>
       <date_changed>2023-09-05 14:16:09 -0400</date_changed>
+    </item>
+    <item>
+      <title>A Draft Work</title>
+      <url>https://datacommons.princeton.edu/describe/works/draft_doi.json</url>
+      <date_changed>2024-09-05 14:16:09 -0400</date_changed>
     </item>
   </channel>
 </rss>
