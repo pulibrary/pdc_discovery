@@ -32,6 +32,6 @@ dd.blacklight-abstract_tsim {
   }
 }
 
-#blacklight-modal.modal {
+#blacklight-modal.modal:not([open]) {
   display: none;
 }

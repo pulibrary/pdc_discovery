@@ -1,8 +1,18 @@
 # frozen_string_literal: true
 require "pul_cache"
+require "database_health_check"
 
 Rails.application.config.after_initialize do
   HealthMonitor.configure do |config|
+    config.no_database
+
+    # Use the custom DatabaseHealthCheck
+    # The default database check can fail dependending on the database adapter and configuration
+    # This custom check also ensures that database commands can be executed, not just that a connection can be established
+    config.add_custom_provider(DatabaseHealthCheck).configure do |c|
+      c.name = "Database"
+    end
+
     # Use our custom Cache checker instead of the default one
     config.add_custom_provider(PulCache).configure
 
