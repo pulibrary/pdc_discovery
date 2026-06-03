@@ -36,7 +36,7 @@ describe 'Application landing page', type: :system do
     let(:item2) { file_fixture("pppl2.json").read }
     let(:item3) { file_fixture("pppl3.json").read }
     let(:indexer) do
-      ApprovedWorksIndexer.new(rss_url: "file://whatever.rss")
+      WorksIndexer.new(rss_url: "file://whatever.rss")
     end
     let(:indexed_record) do
       response = Blacklight.default_index.connection.get 'select', params: { q: '*:*' }
