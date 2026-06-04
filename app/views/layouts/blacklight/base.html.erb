@@ -42,11 +42,6 @@
     <% if Rails.env.production? %>
       <%= render partial: 'shared/analytics_noscript' %>
     <% end %>
-    <nav id="skip-link" role="navigation" aria-label="<%= t('blacklight.skip_links.label') %>">
-      <%= link_to t('blacklight.skip_links.search_field'), '#search_field', class: 'element-invisible element-focusable rounded-bottom py-2 px-3', data: { turbolinks: 'false' } %>
-      <%= link_to t('blacklight.skip_links.main_content'), '#main-container', class: 'element-invisible element-focusable rounded-bottom py-2 px-3', data: { turbolinks: 'false' } %>
-      <%= content_for(:skip_links) %>
-    </nav>
 
     <%= render partial: 'shared/banner' %>
 
