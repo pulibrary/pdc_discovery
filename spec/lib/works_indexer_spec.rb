@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 require "rails_helper"
 
+# rubocop:disable Metrics/BlockLength
 RSpec.describe WorksIndexer do
   describe 'indexing a single record' do
     let(:single_item) { file_fixture("bitklavier_binaural.json").read }
@@ -358,3 +359,4 @@ RSpec.describe WorksIndexer do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
