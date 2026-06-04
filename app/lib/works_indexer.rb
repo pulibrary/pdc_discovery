@@ -5,7 +5,7 @@ require 'traject'
 require 'open-uri'
 
 ##
-# Fetch an RSS feed of approved works from PDC Describe. For each work, index a PDC Describe JSON resource to solr.
+# Fetch an RSS feed of all works (Approved, Draft, and Withdrawn) from PDC Describe. For each work, index a PDC Describe JSON resource to solr.
 class WorksIndexer
   ##
   # See config/pdc_discovery.yml for configuration of the RSS feed that
