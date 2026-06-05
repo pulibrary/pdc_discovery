@@ -11,7 +11,6 @@ describe 'Landing page for draft works', type: :system, js: true do
   it "renders draft works landing page" do
     # This DOI (10.80021/t4ef-kr07) is of a Work that is in the draft state
     visit '/catalog/doi-10-80021-t4ef-kr07'
-    byebug
     expect(page).to have_content "Publication Pending"
   end
 end

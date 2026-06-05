@@ -50,6 +50,11 @@ to_field 'data_source_ssi' do |_record, accumulator, _c|
   accumulator.concat ["pdc_describe"]
 end
 
+# Work state
+# to_field 'state_ssi' do |_record, accumulator, _c|
+#   accumulator.concat ["pdc_describe"]
+# end
+
 # Was this record migrated?
 to_field 'migrated_bsi', extract_xpath("/hash/resource/migrated")
 
