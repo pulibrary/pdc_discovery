@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require "rails_helper"
 
-RSpec.describe WorksIndexer do
+RSpec.describe ApprovedWorksIndexer do
   describe 'indexing a single record' do
     let(:single_item) { file_fixture("bitklavier_binaural.json").read }
     let(:indexer) do
