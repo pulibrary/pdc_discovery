@@ -14,5 +14,14 @@ RSpec.describe DraftWorksIndexer do
       response = Blacklight.default_index.connection.get 'select', params: { q: '*:*' }
       response["response"]["docs"].first
     end
+
+    context "basic fields" do
+      ##
+      # The id is based on the draft DOI
+      # A doi of 10.80021/t4ef-kr07 will become doi-10-80021-t4ef-kr07
+      it "id" do
+        expect(indexed_record["id"]).to eq "doi-10-80021-t4ef-kr07"
+      end
+    end
   end
 end
