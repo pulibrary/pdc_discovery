@@ -267,19 +267,16 @@ class CatalogController < ApplicationController
 
   def show
     @render_links = !agent_is_crawler?
-    if @document.nil?
-      @document = solr_find(params["id"])
+    super
+    if @document.title.nil?
       case @document["state_ssi"]
       when "draft"
         render :show_draft
       else
         render :show_blank
       end
-    else
-      super
-      if params["format"] == "json"
-        render json: DocumentExport.new(@document)
-      end
+    elsif params["format"] == "json"
+      render json: DocumentExport.new(@document)
     end
   end
 
