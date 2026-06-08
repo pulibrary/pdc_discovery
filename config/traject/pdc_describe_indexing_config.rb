@@ -51,15 +51,10 @@ to_field 'data_source_ssi' do |_record, accumulator, _c|
 end
 
 # Work state
-# to_field 'state_ssi' do |_record, accumulator, _c|
-#   accumulator.concat ["pdc_describe"]
-# end
+to_field 'state_ssi', extract_xpath("/hash/resource/state")
 
 # Was this record migrated?
 to_field 'migrated_bsi', extract_xpath("/hash/resource/migrated")
-
-# Was this record migrated?
-to_field 'state_ssi', extract_xpath("/hash/resource/state")
 
 # to_field 'abstract_tsim', extract_xpath("/item/metadata/key[text()='dcterms.abstract']/../value")
 # to_field 'creator_tesim', extract_xpath("/item/metadata/key[text()='dcterms.creator']/../value")
