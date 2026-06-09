@@ -268,7 +268,14 @@ class CatalogController < ApplicationController
   def show
     @render_links = !agent_is_crawler?
     super
-    if params["format"] == "json"
+    if @document.title.nil?
+      case @document["state_ssi"]
+      when "draft"
+        render :show_draft
+      else
+        render :show_blank
+      end
+    elsif params["format"] == "json"
       render json: DocumentExport.new(@document)
     end
   end
