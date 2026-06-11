@@ -272,6 +272,8 @@ class CatalogController < ApplicationController
       case @document["state_ssi"]
       when "draft"
         render :show_draft
+      when "withdrawn"
+        render :show_withdrawn
       else
         render :show_blank
       end

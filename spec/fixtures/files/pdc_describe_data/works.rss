@@ -354,12 +354,17 @@
     <item>
       <title>Why is El Nino warm?</title>
       <url>https://datacommons.princeton.edu/describe/works/pdc_describe_draft.json</url>
-      <date_changed>2023-09-05 14:16:09 -0400</date_changed>
+      <date_changed>2023-09-05 14:16:10 -0400</date_changed>
     </item>
     <item>
       <title>Why is El Nino warm?</title>
       <url>https://datacommons.princeton.edu/describe/works/pdc_describe_blank.json</url>
-      <date_changed>2023-09-05 14:16:09 -0400</date_changed>
+      <date_changed>2023-09-05 14:16:11 -0400</date_changed>
+    </item>
+    <item>
+      <title>Why is El Nino warm?</title>
+      <url>https://datacommons.princeton.edu/describe/works/pdc_describe_withdrawn.json</url>
+      <date_changed>2023-09-05 14:16:12 -0400</date_changed>
     </item>
   </channel>
 </rss>
