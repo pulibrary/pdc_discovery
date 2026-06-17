@@ -2,9 +2,9 @@
 <head>
 <style>
 
-h1 {text-align: center;}
-h4 {text-align: center;}
-p {text-align: center;}
+h1 {text-align: left;}
+h4 {text-align: left;}
+p {text-align: left;}
 
 </style>
 </head>
@@ -14,6 +14,11 @@ p {text-align: center;}
 <h4>DOI: <%= @document.doi_value %></h4>
 
 <p> This dataset has been withdrawn by its creator and is not currently available. </p>
+
+      <div class="document-citation">
+        <%= JSON.parse(@document["pdc_describe_json_ss"])["resource"] %>
+      </div>
+
 
 <p>If you have questions, please contact the Princeton Data Commons team at <mark><a href= "mailto:prds@princeton.edu">prds@princeton.edu</a></mark>.</p>
 </body>
