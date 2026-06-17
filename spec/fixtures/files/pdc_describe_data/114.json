@@ -278,6 +278,7 @@
     "subcommunities": ["NSTX", "Spherical Torus"],
     "migrated": true
   },
+  "state": "approved",
   "files": [
     {
       "filename": "10.11578/1562024/114/ARK_DATA.zip",

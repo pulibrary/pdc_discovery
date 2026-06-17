@@ -117,6 +117,7 @@
     "subcommunities": [],
     "migrated": true
   },
+  "state": "approved",
   "files": [
     {
       "filename": "10.34770/xajd-5n64/34/data/compoundheatwaves/GFDL-CM2.5-FLOR/FLOR/DAILYCLIM/2XCO2/atmos_daily.04010101-04951231.t_ref_max.NOBNDS_daily.nc",

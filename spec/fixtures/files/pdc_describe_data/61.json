@@ -195,6 +195,7 @@
     "subcommunities": ["Advanced Projects", "Stellarators"],
     "migrated": true
   },
+  "state": "approved",
   "files": [
     {
       "filename": "10.34770/7ev8-8b25/61/Data.zip",

@@ -1,5 +1,3 @@
-<html>
-<head>
 <style>
 
 h1 {text-align: left;}
@@ -7,8 +5,7 @@ h4 {text-align: left;}
 p {text-align: left;}
 
 </style>
-</head>
-<body>
+<div>
 <h1>Publication Withdrawn</h1>
 
 <h4>DOI: <%= @document.doi_value %></h4>
@@ -16,10 +13,177 @@ p {text-align: left;}
 <p> This dataset has been withdrawn by its creator and is not currently available. </p>
 
       <div class="document-citation">
-        <%= JSON.parse(@document["pdc_describe_json_ss"])["resource"] %>
+        <%= render_cite_as(@document) %>
       </div>
 
 
 <p>If you have questions, please contact the Princeton Data Commons team at <mark><a href= "mailto:prds@princeton.edu">prds@princeton.edu</a></mark>.</p>
-</body>
+</div>
+<script>
+  $(function() {
+
+    // Sets the elements to the proper CSS classes once a value has been copied to the clipboard.
+    var setCopiedToClipboard = function(iconEl, labelEl, normalClass, copiedClass) {
+      $(iconEl).removeClass("bi-clipboard");
+      $(iconEl).addClass("bi-clipboard-check");
+      $(labelEl).text("COPIED");
+      $(labelEl).removeClass(normalClass);
+      $(labelEl).addClass(copiedClass);
+    }
+
+    // Resets the elements to the proper CSS classes (e.g. displays as if the copy has not happened)
+    var resetCopyToClipboard = function(iconEl, labelEl, normalClass, copiedClass) {
+      $(labelEl).text("COPY");
+      $(labelEl).removeClass(copiedClass);
+      $(labelEl).addClass(normalClass);
+      $(iconEl).addClass("bi-clipboard");
+      $(iconEl).removeClass("bi-clipboard-check");
+    }
+
+    // Sets icon and label to indicate that an error happened when copying a value to the clipboard
+    var errorCopyToClipboard = function(iconEl, errorMsg) {
+      $(iconEl).removeClass("bi-clipboard");
+      $(iconEl).addClass("bi-clipboard-minus")
+      console.log(errorMsg);
+    }
+
+    // Copies a value to the clipboard and notifies the user
+    // value - value to copy to the clipboard
+    // iconEl - selector for the HTML element with the clipboard icon
+    // labelEl - selector for the HTML element with the COPY label next to the icon
+    // normalClass - CSS to style the label with initially
+    // copiedClass - CSS to style the label with after a value has been copied to the clipboard
+    // iconEl and labelEl could be any jQuery valid selector (e.g. ".some-id" or a reference to an element)
+    var copyToClipboard = function(value, iconEl, labelEl, normalClass, copiedClass) {
+        // Copy value to the clipboard....
+        navigator.clipboard.writeText(value).then(function() {
+          // ...and notify the user
+          setCopiedToClipboard(iconEl, labelEl, normalClass, copiedClass);
+          setTimeout(function() {
+            resetCopyToClipboard(iconEl, labelEl, normalClass, copiedClass);
+          }, 20000);
+        }, function() {
+          errorCopyToClipboard(iconEl, "Copy to clipboard failed");
+        });
+        // Clear focus from the button.
+        document.activeElement.blur();
+    }
+
+    var setupCopyDoiToClipboard = function() {
+      $("#copy-doi").click(function(_x) {
+        var doi = this.dataset["url"];
+        copyToClipboard(doi, "#copy-doi-icon", "#copy-doi-label", "copy-doi-label-normal", "copy-doi-label-copied");
+        return false;
+      });
+    }
+
+    var setupDownloadCitation = function() {
+      $("#download-bibtex").click(function (e) {
+        e.preventDefault();
+        window.location.href= this.dataset["url"];
+
+        // Track in Plausible that the citation was downloaded
+        log_plausible_citation("download-bibtex");
+      });
+    }
+
+    var setupMoreLessToggle = function(linkId, textId) {
+
+      // Wire the link to toggle between show more/show less
+      $(linkId).click(function() {
+        if ($(linkId).text() == "Show Less") {
+          $(textId).addClass("truncate-line-clamp");
+          $(linkId + " i").toggleClass("bi-caret-up bi-caret-down");
+          $(linkId + " span").text("Show More");
+        } else {
+          $(textId).removeClass("truncate-line-clamp");
+          $(linkId + " i").toggleClass("bi-caret-up bi-caret-down");
+          $(linkId + " span").text("Show Less");
+        }
+        return false;
+      });
+
+      // Only show the link it text was indeed truncated
+      // https://rubyyagi.com/how-to-truncate-long-text-and-show-read-more-less-button/
+      var el = $(textId)[0];
+      if (el !== undefined) {
+        var textTruncated = (el.offsetHeight < el.scrollHeight || el.offsetWidth < el.scrollWidth)
+        if (!textTruncated) {
+          $(linkId).addClass("invisible");
+        }
+      }
+    }
+
+    // Toggles citation display between APA and BibTeX
+    var setupCitationToggle = function() {
+      $("#show-bibtex-citation-button").click(function(_x) {
+        // Show the BibTex citation
+        $(".citation-bibtex-container").removeClass("hidden-element");
+        $(".citation-apa-container").addClass("hidden-element");
+        // Toogle the button
+        $("#show-bibtex-citation-button").addClass("btn-primary");
+        $("#show-bibtex-citation-button").removeClass("btn-secondary");
+        $("#show-apa-citation-button").addClass("btn-secondary");
+        $("#show-apa-citation-button").removeClass("btn-primary");
+        // Clear focus from the button.
+        document.activeElement.blur();
+        return false;
+      });
+
+      $("#show-apa-citation-button").click(function(_x) {
+        // Show the APA citation
+        $(".citation-apa-container").removeClass("hidden-element");
+        $(".citation-bibtex-container").addClass("hidden-element");
+        // Toogle the checkbox
+        $("#show-apa-citation-button").addClass("btn-primary");
+        $("#show-apa-citation-button").removeClass("btn-secondary");
+        $("#show-bibtex-citation-button").addClass("btn-secondary");
+        $("#show-bibtex-citation-button").removeClass("btn-primary");
+        // Clear focus from the button.
+        document.activeElement.blur();
+        return false;
+      });
+    }
+
+    var setupCopyCitationToClipboard = function() {
+      $(".copy-citation-button").click(function(_x) {
+        var icon = $(this).children("i");
+        var label = $(this).children("span");
+        var citation = this.dataset["text"];
+        copyToClipboard(citation, icon, label, "copy-doi-label-normal", "copy-doi-label-copied");
+
+        // Track in Plausible that the citation was copied
+        var action = (this.id === "copy-apa-citation-button") ? "copy-apa" : "copy-bibtex";
+        log_plausible_citation(action);
+        return false;
+      });
+    }
+
+    // Buttons to show more/less
+    setupMoreLessToggle("#document-abstract-text-toggle", "#document-abstract-text");
+    setupMoreLessToggle("#document-description-text-toggle", "#document-description-text");
+
+    // Buttons related to citation information
+    setupCitationToggle();
+    setupCopyCitationToClipboard();
+    setupDownloadCitation();
+
+    // Copy button for DOI
+    setupCopyDoiToClipboard();
+
+    // Enable the popover functionality for authors
+    // https://getbootstrap.com/docs/4.6/components/popovers/
+    // https://getbootstrap.com/docs/4.6/components/popovers/#dismiss-on-next-click
+    //
+    // Delay is used to allow the popover to recognize and process the click event on links
+    // inside of it (e.g. the link to the author's ORCID). Without the delay sometimes the
+    // popover will close _before_ it opens the link clicked. For more information see
+    // https://stackoverflow.com/questions/27012667/link-in-bootstrap-popover-doesnt-work
+    $('[data-toggle="popover"]').popover({
+      trigger: 'focus',
+      delay: { hide: 200 }
+    });
+  });
+
+</script>
 </html>

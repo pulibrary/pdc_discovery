@@ -135,6 +135,7 @@
     "subcommunities": ["Advanced Projects", "Stellarators"],
     "migrated": true
   },
+  "state": "approved",
   "files": [
     {
       "filename": "10.11578/1888271/59/license.txt",

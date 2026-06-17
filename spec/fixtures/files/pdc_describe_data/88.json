@@ -184,6 +184,7 @@
     "subcommunities": ["NSTX-U", "Spherical Torus"],
     "migrated": true
   },
+  "state": "approved",
   "files": [
     {
       "filename": "10.34770/vesb-kq11/88/README.txt",

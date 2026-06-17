@@ -246,6 +246,7 @@
     "subcommunities": ["Discovery Plasma Science"],
     "migrated": true
   },
+  "state": "approved",
   "files": [
     {
       "filename": "10.34770/f8em-3c49/64/Step1_powergenome/Eastern.zip",

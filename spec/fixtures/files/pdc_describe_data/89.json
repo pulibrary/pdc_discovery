@@ -166,6 +166,7 @@
     "subcommunities": ["NSTX-U", "Spherical Torus", "Tokamak Experimental Sciences"],
     "migrated": true
   },
+  "state": "approved",
   "files": [
     {
       "filename": "10.34770/bm4s-t361/89/Fig10a.hdf",

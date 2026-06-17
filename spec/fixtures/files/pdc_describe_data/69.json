@@ -272,6 +272,7 @@
     "subcommunities": ["ITER and Tokamaks"],
     "migrated": true
   },
+  "state": "approved",
   "files": [
     {
       "filename": "10.11578/1814956/69/LHsynergyDMP.h5",

@@ -216,6 +216,7 @@
     "subcommunities": ["Theory and Computation"],
     "migrated": true
   },
+  "state": "approved",
   "files": [
     {
       "filename": "10.34770/stwa-qh32/102/cae-re-diffusion.zip",

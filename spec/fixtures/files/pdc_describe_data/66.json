@@ -250,6 +250,7 @@
     "subcommunities": ["Discovery Plasma Science"],
     "migrated": true
   },
+  "state": "approved",
   "files": [
     {
       "filename": "10.11578/1888269/66/SourceData.xlsx",
