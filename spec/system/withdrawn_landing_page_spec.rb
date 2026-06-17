@@ -25,7 +25,6 @@ describe 'Landing page for withdrawn works', type: :system, js: true do
   it "renders withdrawn works landing page" do
     # This DOI (10.80021/bsdz-he25) is of a Work that has been withdrawn
     visit '/catalog/doi-10-80021-bsdz-he25'
-    byebug
     expect(page).to have_content "Publication Withdrawn"
   end
 end
