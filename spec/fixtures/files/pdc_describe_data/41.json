@@ -233,6 +233,7 @@
     "subcommunities": ["Theory"],
     "migrated": true
   },
+  "state": "approved",
   "files": [
     {
       "filename": "10.34770/t2y6-af55/41/Hager_et_al_PhysPlasmas_29_112308_2022_data_set_v20221123.tar",

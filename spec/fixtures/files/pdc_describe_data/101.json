@@ -126,6 +126,7 @@
     "subcommunities": ["MAST-U", "Spherical Torus"],
     "migrated": true
   },
+  "state": "approved",
   "files": [
     {
       "filename": "10.34770/67tb-0988/101/Fig1.dat",

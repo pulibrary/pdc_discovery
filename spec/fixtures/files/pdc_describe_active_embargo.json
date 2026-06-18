@@ -93,6 +93,7 @@
     "funders": []
   },
   "embargo_date": "2033-09-13T00:00:00Z",
+  "state": "approved",
   "files": [],
   "group": {
     "title": "Research Data",

@@ -381,6 +381,7 @@
     "subcommunities": ["Advanced Projects", "Stellarators"],
     "migrated": true
   },
+  "state": "approved",
   "files": [
     {
       "filename": "10.34770/3f28-m424/104/166256t5434_Zeff_ambipolarSolutions.h5",

@@ -255,6 +255,7 @@
     "subcommunities": ["Discovery Plasma Science"],
     "migrated": true
   },
+  "state": "approved",
   "files": [
     {
       "filename": "10.34770/gkye-wc69/84/Err_high_Teplot",

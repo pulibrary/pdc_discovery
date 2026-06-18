@@ -51,7 +51,7 @@ to_field 'data_source_ssi' do |_record, accumulator, _c|
 end
 
 # Work state
-to_field 'state_ssi', extract_xpath("/hash/resource/state")
+to_field 'state_ssi', extract_xpath("/hash/state")
 
 # Was this record migrated?
 to_field 'migrated_bsi', extract_xpath("/hash/resource/migrated")

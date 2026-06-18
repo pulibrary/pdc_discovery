@@ -226,6 +226,7 @@
     "subcommunities": ["NSTX-U", "Spherical Torus"],
     "migrated": true
   },
+  "state": "approved",
   "files": [
     {
       "filename": "10.34770/nezp-hz43/90/pro.zip",
