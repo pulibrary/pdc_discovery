@@ -442,6 +442,7 @@
     "subcommunities": ["ITER and Tokamaks"],
     "migrated": true
   },
+  "state": "approved",
   "files": [
     {
       "filename": "10.11578/1814960/70/ARK_DATA _figures.zip",

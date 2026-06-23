@@ -358,6 +358,7 @@
     "subcommunities": ["Advanced Projects", "Stellarators"],
     "migrated": true
   },
+  "state": "approved",
   "files": [
     {
       "filename": "10.11578/1814942/51/README.txt",

@@ -454,6 +454,7 @@
     "subcommunities": ["Advanced Projects", "Stellarators"],
     "migrated": true
   },
+  "state": "approved",
   "files": [
     {
       "filename": "10.34770/g0cf-b557/105/178485t7090_v1_ambipolarSolutions.h5",

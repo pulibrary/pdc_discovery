@@ -108,6 +108,7 @@
     "subcommunities": ["Advanced Projects", "Other Projects"],
     "migrated": true
   },
+  "state": "approved",
   "files": [
     {
       "filename": "10.11578/1814957/67/README.txt",

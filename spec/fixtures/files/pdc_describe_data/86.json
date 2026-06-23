@@ -191,6 +191,7 @@
     "subcommunities": ["NSTX-U", "Spherical Torus"],
     "migrated": true
   },
+  "state": "approved",
   "files": [
     {
       "filename": "10.34770/nh4z-kh27/86/139396cx.sav",

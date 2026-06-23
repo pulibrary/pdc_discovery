@@ -247,6 +247,7 @@
     "subcommunities": ["NSTX", "Spherical Torus"],
     "migrated": true
   },
+  "state": "approved",
   "files": [
     {
       "filename": "10.11578/1366462/72/Stotler_PoP.zip",
