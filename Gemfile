@@ -26,7 +26,7 @@ gem 'listen', '~> 3.3'
 gem 'multi_xml'
 gem 'mutex_m'
 gem 'net-ssh'
-gem "nokogiri", ">= 1.13.4"
+gem "nokogiri", ">= 1.19.4"
 gem 'oai'
 gem 'opentelemetry-exporter-otlp'
 gem 'opentelemetry-instrumentation-all'
