@@ -1,1 +1,21 @@
-{"resource":{"doi":"10.80021/bsdz-he25","creators":[{"value":"Mohr, Claudine","name_type":"Personal","given_name":"Claudine","family_name":"Mohr","identifier":null,"affiliations":[],"sequence":0}],"titles":[{"title":"Case of the Missing Tokyo Diaries","title_type":null}],"publication_year":"2020","version_number":"1","resource_type":"Dataset"},"state":"withdrawn"}
+{
+  "resource": {
+    "doi": "10.80021/bsdz-he25",
+    "creators": [
+      {
+        "value": "Mohr, Claudine",
+        "name_type": "Personal",
+        "given_name": "Claudine",
+        "family_name": "Mohr",
+        "identifier": null,
+        "affiliations": [],
+        "sequence": 0
+      }
+    ],
+    "titles": [{ "title": "Case of the Missing Tokyo Diaries", "title_type": null }],
+    "publication_year": "2020",
+    "version_number": "1",
+    "resource_type": "Dataset"
+  },
+  "state": "withdrawn"
+}
