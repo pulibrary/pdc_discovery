@@ -47,9 +47,27 @@ RSpec.describe "Catalog", type: :request do
       end
 
       describe "#show" do
-        it "shows the catalog" do
+        it "shows the catalog as JSON" do
           document = SolrDocument.new(id: "doi-10-34770-r75s-9j74")
           get "/catalog/#{document.id}", params: { format: "json" }
+          expect(response.status).to eq(200)
+        end
+
+        it "shows the catalog as JSON via HTTP ACCEPT header" do
+          document = SolrDocument.new(id: "doi-10-34770-r75s-9j74")
+          get "/catalog/#{document.id}", headers: { "ACCEPT" => "application/json" }
+          expect(response.status).to eq(200)
+        end
+
+        it "shows the catalog as XML without raising a DoubleRenderError" do
+          document = SolrDocument.new(id: "doi-10-34770-r75s-9j74")
+          get "/catalog/#{document.id}", params: { format: "xml" }
+          expect(response.status).to eq(200)
+        end
+
+        it "shows the catalog as HTML" do
+          document = SolrDocument.new(id: "doi-10-34770-r75s-9j74")
+          get "/catalog/#{document.id}"
           expect(response.status).to eq(200)
         end
       end
@@ -130,6 +148,32 @@ RSpec.describe "Catalog", type: :request do
       it "retrieves Solr Documents using a given DOI" do
         expect(response.status).to eq(200)
       end
+    end
+  end
+
+  context "with datasets in different states" do
+    before do
+      load_describe_dataset
+    end
+
+    it "renders approved works normally as HTML" do
+      get "/catalog/doi-10-34770-r75s-9j74" # sowing the seeds (approved)
+      expect(response.status).to eq(200)
+    end
+
+    it "renders draft works as HTML without double render" do
+      get "/catalog/doi-10-80021-t4ef-kr07" # draft work
+      expect(response.status).to eq(200)
+    end
+
+    it "renders withdrawn works as HTML without double render" do
+      get "/catalog/doi-10-80021-bsdz-he25" # withdrawn work
+      expect(response.status).to eq(200)
+    end
+
+    it "renders blank/unknown state works as HTML without double render" do
+      get "/catalog/doi-10-80021-t4ef-k000" # blank work
+      expect(response.status).to eq(200)
     end
   end
 end
