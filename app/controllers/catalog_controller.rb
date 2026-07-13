@@ -267,20 +267,26 @@ class CatalogController < ApplicationController
 
   def show
     @render_links = !agent_is_crawler?
-    super
-    if params["format"] == "json"
-      render json: DocumentExport.new(@document)
-    else
-      case @document["state_ssi"]
-      when "approved"
-        render :show
-      when "draft"
-        render :show_draft
-      when "withdrawn"
-        render :show_withdrawn
-      else
-        render :show_blank
+    @document = search_service.fetch(params[:id])
+
+    respond_to do |format|
+      format.html do
+        @search_context = setup_next_and_previous_documents
+        case @document["state_ssi"]
+        when "approved"
+          render :show
+        when "draft"
+          render :show_draft
+        when "withdrawn"
+          render :show_withdrawn
+        else
+          render :show_blank
+        end
       end
+      format.json do
+        render json: DocumentExport.new(@document)
+      end
+      additional_export_formats(@document, format)
     end
   end
 
