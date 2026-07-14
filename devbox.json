@@ -21,16 +21,14 @@
     "selenium-manager@latest"
   ],
   "env": {
-    "DEVBOX":          "1",
+    "DEVBOX": "1",
     "BUNDLER_VERSION": "2.5.9"
   },
   "shell": {
-    "init_hook": [
-      "echo 'Environment Ready'"
-    ],
+    "init_hook": ["echo 'Environment Ready'"],
     "scripts": {
-      "setup":  ["devbox run deps"],
-      "deps":   "gem install -N bundler -v $BUNDLER_VERSION && bundle install && yarn set version berry && yarn install",
+      "setup": ["devbox run deps"],
+      "deps": "gem install -N bundler -v $BUNDLER_VERSION && bundle install && yarn set version berry && yarn install",
       "server": "bundle exec rails s"
     }
   }
