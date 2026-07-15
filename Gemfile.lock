@@ -118,10 +118,9 @@ GEM
     blacklight_dynamic_sitemap (1.0.0)
       blacklight (> 7.0)
       rails
-    blacklight_range_limit (8.5.0)
-      blacklight (>= 7.25.2, < 9)
-      deprecation
-      view_component (>= 2.54, < 4)
+    blacklight_range_limit (9.2.0)
+      blacklight (>= 7.25.2, < 10)
+      view_component (>= 2.54, < 5)
     bootsnap (1.24.6)
       msgpack (~> 1.2)
     bootstrap (4.6.2.1)
@@ -175,8 +174,6 @@ GEM
       sprockets-rails
       tilt
     date (3.5.1)
-    deprecation (1.1.0)
-      activesupport
     devise (5.0.4)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -884,7 +881,7 @@ DEPENDENCIES
   blacklight (>= 7.41)
   blacklight-marc (~> 8.1.0)
   blacklight_dynamic_sitemap
-  blacklight_range_limit (~> 8.2)
+  blacklight_range_limit (~> 9.2.0)
   bootsnap (>= 1.4.4)
   bootstrap (~> 4.0)
   byebug

@@ -9,7 +9,7 @@ gem 'bcrypt', '~> 3.1.22'
 gem 'blacklight', '>= 7.41'
 gem 'blacklight_dynamic_sitemap'
 gem 'blacklight-marc', '~> 8.1.0'
-gem "blacklight_range_limit", '~> 8.2'
+gem "blacklight_range_limit", '~> 9.2.0'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bootstrap', '~> 4.0'
 gem 'concurrent-ruby', '~>1.3.7'
