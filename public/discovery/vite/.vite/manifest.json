@@ -1,0 +1,28 @@
+{
+  "../assets/images/logo.png": {
+    "file": "assets/logo-B9eY8kvy.png",
+    "src": "../assets/images/logo.png"
+  },
+  "../assets/images/mobile_logo.png": {
+    "file": "assets/mobile_logo-B2-4aOJ1.png",
+    "src": "../assets/images/mobile_logo.png"
+  },
+  "../assets/images/nodes-bg.svg": {
+    "file": "assets/nodes-bg-CUYPW8kv.svg",
+    "src": "../assets/images/nodes-bg.svg"
+  },
+  "entrypoints/application.js": {
+    "file": "assets/application-Bpc3-mqY.js",
+    "name": "entrypoints/application.js",
+    "src": "entrypoints/application.js",
+    "isEntry": true,
+    "css": [
+      "assets/application-DczIhfHI.css"
+    ],
+    "assets": [
+      "assets/logo-B9eY8kvy.png",
+      "assets/mobile_logo-B2-4aOJ1.png",
+      "assets/nodes-bg-CUYPW8kv.svg"
+    ]
+  }
+}
