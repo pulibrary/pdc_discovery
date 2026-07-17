@@ -19,3 +19,8 @@ function log_plausible_citation(action) {
   console.log('log_plausible_citation_copy: ' + action);
   plausible('Citation', { props: { citation_action: action } });
 }
+
+window.log_plausible_file_download = log_plausible_file_download;
+window.log_plausible_globus_download = log_plausible_globus_download;
+window.log_plausible_citation = log_plausible_citation;
+

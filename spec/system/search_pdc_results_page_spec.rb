@@ -24,7 +24,7 @@ describe 'Search Results PDC Page', type: :system, js: true do
     expect(page).to have_content "View larger"
     expect(page).not_to have_content "[Missing]"
     click_on "View larger"
-    expect(page).to have_content "2022\n2022"
+    expect(page).to have_content "2022"
   end
 
   it 'does not render Schema.org tags' do

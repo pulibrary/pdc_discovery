@@ -1,8 +1,40 @@
-/*
- * One may leverage Webpack CSS modules for more efficiently serving stylesheet assets
- * Please reference:
- *   https://edgeguides.rubyonrails.org/webpacker.html#using-webpacker-for-css
- *   https://webpack.js.org/loaders/sass-loader/
- *   https://webpack.js.org/loaders/css-loader/
- *   https://webpack.js.org/loaders/style-loader/
- */
+// Main application stylesheet compiled by Vite
+
+// Import base Blacklight & Bootstrap styles
+@import "./blacklight.scss";
+
+// Import vendored blacklight_range_limit styles
+@import "../vendor/blacklight_range_limit/blacklight_range_limit.css";
+
+// Import datatables styles
+@import "datatables.net-dt/css/dataTables.dataTables.css";
+
+// Components
+@import "components/banner";
+@import "components/contributors";
+@import "components/features";
+@import "components/footer";
+@import "components/globus";
+@import "components/header";
+@import "components/homepage";
+@import "components/recently_added";
+@import "components/search";
+@import "components/show";
+@import "components/sidebar";
+
+// Modules
+@import "modules/abstract";
+@import "modules/author";
+@import "modules/description";
+@import "modules/issed_date";
+@import "modules/methods";
+@import "modules/downloads";
+@import "modules/metadata_table";
+@import "modules/deployment_version";
+
+.contact-us-label {
+  margin-bottom: 0px;
+}
+.contact-us-input {
+  margin-bottom: 10px;
+}

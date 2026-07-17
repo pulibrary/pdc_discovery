@@ -1098,6 +1098,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"blacklight-frontend@npm:^8.0.0":
+  version: 8.12.3
+  resolution: "blacklight-frontend@npm:8.12.3"
+  dependencies:
+    bootstrap: "npm:>=4.3.1 <6.0.0"
+  checksum: 10c0/32b3bf5f034200a3e82ee6eb8f637a62f2aa3a8007c2382292e44a84da8f3e9d4653e6e4710dc8f82e88a85f153514a24d999bce4976a6d31f16bc7e1978226f
+  languageName: node
+  linkType: hard
+
+"bootstrap@npm:4.6":
+  version: 4.6.2
+  resolution: "bootstrap@npm:4.6.2"
+  peerDependencies:
+    jquery: 1.9.1 - 3
+    popper.js: ^1.16.1
+  checksum: 10c0/aae7178a306cd9376d10302bf557e00ba7e3bffffb4c0533687c1e0de90f9d30d8883a9b0ac629a2e64131954eca4e03ee06ee665e52b8c44ca66b3599024e8a
+  languageName: node
+  linkType: hard
+
+"bootstrap@npm:>=4.3.1 <6.0.0":
+  version: 5.3.8
+  resolution: "bootstrap@npm:5.3.8"
+  peerDependencies:
+    "@popperjs/core": ^2.11.8
+  checksum: 10c0/0039a9df2c3e7bfa04f1abca199c299ff3b75869d578c0cb1721c6f1f203c91531788a5631ecbee01513481979314d0e4ba0d90c2011e6ce18fc2e0bc93e18d9
+  languageName: node
+  linkType: hard
+
 "brace-expansion@npm:^1.1.7":
   version: 1.1.15
   resolution: "brace-expansion@npm:1.1.15"
@@ -1374,6 +1402,25 @@ __metadata:
   bin:
     cssesc: bin/cssesc
   checksum: 10c0/6bcfd898662671be15ae7827120472c5667afb3d7429f1f917737f3bf84c4176003228131b643ae74543f17a394446247df090c597bb9a728cce298606ed0aa7
+  languageName: node
+  linkType: hard
+
+"datatables.net-dt@npm:^2.3.8":
+  version: 2.3.8
+  resolution: "datatables.net-dt@npm:2.3.8"
+  dependencies:
+    datatables.net: "npm:2.3.8"
+    jquery: "npm:>=1.7"
+  checksum: 10c0/acd4e3d53b0404381eba82f3ba1db039d68d437c90a2554611d5569dbaf350748036a0c8e03f22ca1d1ea88035cb3d8b63ed2520d9e49df59767f3ba115e821a
+  languageName: node
+  linkType: hard
+
+"datatables.net@npm:2.3.8, datatables.net@npm:^2.3.8":
+  version: 2.3.8
+  resolution: "datatables.net@npm:2.3.8"
+  dependencies:
+    jquery: "npm:>=1.7"
+  checksum: 10c0/3b82b4a47cbe053c8a8ad9eca41db4facb1e5c576e54b589102dacd0b7ab7b727c760534dcc5e4be7f34ec1b47424fed2cfd32a0bec82b728cca7732689eb748
   languageName: node
   linkType: hard
 
@@ -2259,6 +2306,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jquery@npm:^3.7.1":
+  version: 3.7.1
+  resolution: "jquery@npm:3.7.1"
+  checksum: 10c0/808cfbfb758438560224bf26e17fcd5afc7419170230c810dd11f5c1792e2263e2970cca8d659eb84fcd9acc301edb6d310096e450277d54be4f57071b0c82d9
+  languageName: node
+  linkType: hard
+
 "js-tokens@npm:^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
@@ -2869,13 +2923,19 @@ __metadata:
     "@rails/actioncable": "npm:^7.2.301"
     "@rails/activestorage": "npm:^7.2.301"
     "@rails/ujs": "npm:^7.1.600"
+    blacklight-frontend: "npm:^8.0.0"
+    bootstrap: "npm:4.6"
     color-string: "npm:^1.9.1"
+    datatables.net: "npm:^2.3.8"
+    datatables.net-dt: "npm:^2.3.8"
     esbuild: "npm:^0.28.1"
     eslint: "npm:^7.32.0"
     eslint-config-prettier: "npm:^10.1.8"
     glob-parent: "npm:^6.0.2"
+    jquery: "npm:^3.6.0"
     lodash: "npm:^4.18.1"
     picomatch: "npm:^4.0.5"
+    popper.js: "npm:^1.16.1"
     postcss: "npm:^8.5.19"
     postcss-flexbugs-fixes: "npm:^5.0.2"
     postcss-import: "npm:^16.1.1"
@@ -2926,6 +2986,13 @@ __metadata:
   version: 2.3.0
   resolution: "pify@npm:2.3.0"
   checksum: 10c0/551ff8ab830b1052633f59cb8adc9ae8407a436e06b4a9718bcb27dc5844b83d535c3a8512b388b6062af65a98c49bdc0dd523d8b2617b188f7c8fee457158dc
+  languageName: node
+  linkType: hard
+
+"popper.js@npm:^1.16.1":
+  version: 1.16.1
+  resolution: "popper.js@npm:1.16.1"
+  checksum: 10c0/1c1a826f757edb5b8c2049dfd7a9febf6ae1e9d0e51342fc715b49a0c1020fced250d26484619883651e097c5764bbcacd2f31496e3646027f079dd83e072681
   languageName: node
   linkType: hard
 

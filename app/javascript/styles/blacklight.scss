@@ -1,6 +1,6 @@
 @import "bootstrap";
-@import "blacklight/blacklight";
-@import "blacklight_marc";
+@import "blacklight-frontend/app/assets/stylesheets/blacklight/blacklight";
+@import "../vendor/blacklight_marc/blacklight_marc";
 
 // Abtract display in search page (display up to 4 lines of text)
 dd.blacklight-abstract_tsim {

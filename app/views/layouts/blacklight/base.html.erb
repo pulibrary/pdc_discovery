@@ -5,6 +5,59 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <script type="text/javascript">
+      window.errors = [];
+      window.logs = [];
+      var oldLog = console.log;
+      console.log = function() {
+        window.logs.push(Array.from(arguments).join(" "));
+        oldLog.apply(console, arguments);
+      };
+
+      window.onerror = function(message, source, lineno, colno, error) {
+        window.errors.push(message + " at " + source + ":" + lineno + ":" + colno + (error ? " -> " + error.stack : ""));
+        return false;
+      };
+
+      // Stub jQuery to queue up both ready handlers and event listeners before Vite loads the real jQuery.
+      window._jqQueue = window._jqQueue || [];
+      window.jQuery = window.$ = function(selector) {
+        if (typeof selector === 'function') {
+          window._jqQueue.push({ type: 'ready', handler: selector });
+          return window.$;
+        }
+        
+        var dummy = {
+          click: function(handler) {
+            if (typeof handler === 'function') {
+              window._jqQueue.push({ type: 'on', selector: selector, event: 'click', handler: handler });
+            }
+            return dummy;
+          },
+          on: function(event, handler) {
+            if (typeof handler === 'function') {
+              window._jqQueue.push({ type: 'on', selector: selector, event: event, handler: handler });
+            }
+            return dummy;
+          },
+          ready: function(handler) {
+            if (typeof handler === 'function') {
+              window._jqQueue.push({ type: 'ready', handler: handler });
+            }
+            return dummy;
+          },
+          focus: function() { return dummy; },
+          addClass: function() { return dummy; },
+          removeClass: function() { return dummy; },
+          text: function() { return ''; },
+          toggleClass: function() { return dummy; },
+          DataTable: function() { return dummy; }
+        };
+        return dummy;
+      };
+      window.$.ready = window.$;
+    </script>
+
     <!-- Internet Explorer use the highest version available -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -18,8 +71,8 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-    <%= stylesheet_link_tag "application", media: "all" %>
-    <%= javascript_include_tag "application" %>
+    <%= vite_client_tag %>
+    <%= vite_javascript_tag 'application' %>
     <%= csrf_meta_tags %>
     <%= content_for(:head) %>
     <% if Rails.env.development? || Rails.env.staging? %>
@@ -29,8 +82,7 @@
     <% end %>
     <%= render 'shared/plausible' %>
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"/>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
 
     <!--
       popper.js is required for the popover functionality in Bootstrap and its

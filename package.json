@@ -5,11 +5,17 @@
     "@rails/actioncable": "^7.2.301",
     "@rails/activestorage": "^7.2.301",
     "@rails/ujs": "^7.1.600",
+    "blacklight-frontend": "^8.0.0",
+    "bootstrap": "4.6",
     "color-string": "^1.9.1",
+    "datatables.net": "^2.3.8",
+    "datatables.net-dt": "^2.3.8",
     "esbuild": "^0.28.1",
     "glob-parent": "^6.0.2",
+    "jquery": "^3.6.0",
     "lodash": "^4.18.1",
     "picomatch": "^4.0.5",
+    "popper.js": "^1.16.1",
     "postcss": "^8.5.19",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^16.1.1",
@@ -36,5 +42,8 @@
     "lint": "yarn run prettier --check app/javascript/**/*{js,css,scss} app/assets/javascripts/**/*js app/assets/stylesheets/**/*{css,scss}",
     "lint:fix": "yarn run prettier --write app/javascript/**/*{js,css,scss} app/assets/javascripts/**/*js app/assets/stylesheets/**/*{css,scss}"
   },
-  "packageManager": "yarn@4.17.1"
+  "packageManager": "yarn@4.17.1",
+  "resolutions": {
+    "jquery": "^3.7.1"
+  }
 }
