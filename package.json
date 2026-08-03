@@ -5,7 +5,7 @@
     "@rails/actioncable": "^7.2.301",
     "@rails/activestorage": "^7.2.301",
     "@rails/ujs": "^7.1.600",
-    "brace-expansion": "^5.0.8",
+    "brace-expansion": "^5.0.9",
     "color-string": "^2.1.4",
     "esbuild": "^0.28.1",
     "glob-parent": "^6.0.2",
