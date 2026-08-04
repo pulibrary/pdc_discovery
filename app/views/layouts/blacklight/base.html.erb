@@ -23,11 +23,12 @@
     <%= csrf_meta_tags %>
     <%= content_for(:head) %>
     <% if Rails.env.development? || Rails.env.staging? %>
-      <%= render 'shared/plausible_dev_staging' %>
+      <%= render partial: 'shared/analytics_dev_staging' %>
+      <%= render partial: 'shared/plausible_dev_staging' %>
     <% elsif Rails.env.production? %>
       <%= render partial: 'shared/analytics' %>
+      <%= render partial: 'shared/plausible' %>
     <% end %>
-    <%= render 'shared/plausible' %>
 
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"/>
     <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
@@ -41,7 +42,9 @@
     <%= render partial: 'shared/schema_org'%>
   </head>
   <body class="<%= render_body_class %>">
-    <% if Rails.env.production? %>
+    <% if Rails.env.development? || Rails.env.staging? %>
+      <%= render partial: 'shared/analytics_noscript_dev_staging' %>
+    <% elsif Rails.env.production? %>
       <%= render partial: 'shared/analytics_noscript' %>
     <% end %>
 
