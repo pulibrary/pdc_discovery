@@ -10,12 +10,15 @@
   <schemaFactory class="ClassicIndexSchemaFactory"/>
 
   <updateHandler class="solr.DirectUpdateHandler2">
+    <updateLog>
+      <str name="dir">${solr.core0.data.dir:}</str>
+    </updateLog>
     <commitWithin>
       <softCommit>${solr.commitwithin.softcommit:true}</softCommit>
     </commitWithin>
 
   </updateHandler>
-  
+
   <updateProcessor class="solr.processor.SignatureUpdateProcessorFactory" name="add_hash_id">
     <bool name="enabled">true</bool>
     <str name="signatureField">hashed_id_ssi</str>
@@ -29,12 +32,12 @@
     <processor class="solr.DistributedUpdateProcessorFactory"/>
     <processor class="solr.RunUpdateProcessorFactory"/>
   </updateRequestProcessorChain>
-  
+
   <!-- solr lib dirs -->
   <!-- Needed to enable ICUTokenizerFactory -->
   <lib dir="${solr.install.dir:../../../..}/contrib/analysis-extras/lib" />
   <lib dir="${solr.install.dir:../../../..}/contrib/analysis-extras/lucene-libs" />
-    
+
   <requestHandler name="search" class="solr.SearchHandler" default="true">
     <!-- default values for query parameters can be specified, these
          will be overridden by parameters in the request
@@ -148,7 +151,7 @@
     </lst>
   </searchComponent>
 
-  
+
   <requestHandler name="/replication" class="solr.ReplicationHandler" startup="lazy" />
 
   <requestDispatcher handleSelect="true" >
