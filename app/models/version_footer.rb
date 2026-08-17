@@ -135,4 +135,3 @@ class VersionFooter
     @@revisions_logfile = x
   end
 end
-Cop::Style::ClassVars
