@@ -10,6 +10,7 @@ class License
 
   def self.normalize_type(license_type)
     return nil if license_type.nil?
+
     license_type.downcase.strip
   end
 end

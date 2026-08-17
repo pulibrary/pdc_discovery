@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-require "pul_cache"
-require "database_health_check"
+
+require 'pul_cache'
+require 'database_health_check'
 
 Rails.application.config.after_initialize do
   HealthMonitor.configure do |config|
@@ -10,18 +11,18 @@ Rails.application.config.after_initialize do
     # The default database check can fail dependending on the database adapter and configuration
     # This custom check also ensures that database commands can be executed, not just that a connection can be established
     config.add_custom_provider(DatabaseHealthCheck).configure do |c|
-      c.name = "Database"
+      c.name = 'Database'
     end
 
     # Use our custom Cache checker instead of the default one
     config.add_custom_provider(PulCache).configure
 
     config.file_absence.configure do |file_config|
-      file_config.filename = "public/remove-from-nginx"
+      file_config.filename = 'public/remove-from-nginx'
     end
     config.solr.configure do |c|
       c.url = Blacklight.default_index.connection.uri.to_s
-      c.collection = Blacklight.default_index.connection.uri.path.split("/").last
+      c.collection = Blacklight.default_index.connection.uri.path.split('/').last
     end
 
     # Make this health check available at /health

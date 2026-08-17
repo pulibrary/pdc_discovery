@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class ContactUsMailer < ApplicationMailer
   def build_message(contact_info)
     @email_to = Rails.configuration.pdc_discovery.contact_email

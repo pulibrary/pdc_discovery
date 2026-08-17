@@ -15,7 +15,7 @@
 class VersionFooter
   DEPLOYMENT_LOGFILE_COL_NUMBER = 7
   REVISIONS_LOG_COL = 3
-  DEFAULT_SHA = "Unknown SHA"
+  DEFAULT_SHA = 'Unknown SHA'
 
   @@stale = true
   @@git_sha = nil
@@ -58,7 +58,7 @@ class VersionFooter
     return unless File.exist?(revisions_logfile)
 
     content = `tail -1 #{revisions_logfile}`.chomp
-    elements = content.split(" ")
+    elements = content.split
     return if elements.length < REVISIONS_LOG_COL
 
     element = elements[REVISIONS_LOG_COL]
@@ -66,7 +66,7 @@ class VersionFooter
   end
 
   def self.revisions_head
-    return unless Rails.env.development? || Rails.env.test?
+    return unless Rails.env.local?
 
     @@revisions_head ||= `git rev-parse HEAD`.chomp
   end
@@ -83,32 +83,31 @@ class VersionFooter
 
   def self.tagged_release?
     # e.g. v0.8.0
-    branch.match(/^v[\d+\.+]+/) != nil
+    branch.match(/^v[\d+.]+/) != nil
   end
 
   def self.branch
     @@branch ||= if File.exist?(revisions_logfile)
-                   `tail -1 #{revisions_logfile}`.chomp.split(" ")[1]
-                 elsif Rails.env.development? || Rails.env.test?
+                   `tail -1 #{revisions_logfile}`.chomp.split[1]
+                 elsif Rails.env.local?
                    `git rev-parse --abbrev-ref HEAD`.chomp
                  else
-                   "Unknown branch"
+                   'Unknown branch'
                  end
   end
 
   def self.find_version
-    return "Not in deployed environment" unless File.exist?(revisions_logfile)
+    return 'Not in deployed environment' unless File.exist?(revisions_logfile)
 
     output = `tail -1 #{revisions_logfile}`
-    entries = output.chomp.split(" ")
+    entries = output.chomp.split
     return "(Deployment date could not be parsed from: #{output}.)" if entries.length <= DEPLOYMENT_LOGFILE_COL_NUMBER
 
     deployment_entry = entries[DEPLOYMENT_LOGFILE_COL_NUMBER]
     deployment_date = Date.parse(deployment_entry)
     return "(Deployment date could not be parsed from: #{deployment_entry}.)" if deployment_date.nil?
 
-    formatted = deployment_date.strftime("%d %B %Y")
-    formatted
+    deployment_date.strftime('%d %B %Y')
   end
 
   def self.version
@@ -118,13 +117,13 @@ class VersionFooter
   # This file is local to the application.
   # This file only has the git SHA of the version deployed (i.e. no date or branch)
   def self.revision_file
-    @@revision_file ||= Rails.root.join("REVISION")
+    @@revision_file ||= Rails.root.join('REVISION')
   end
 
   # Capistrano keeps this file a couple of levels up _outside_ the application.
   # This file includes all the information that we need (git SHA, branch name, date)
   def self.revisions_logfile
-    @@revisions_logfile ||= Rails.root.join("..", "..", "revisions.log")
+    @@revisions_logfile ||= Rails.root.join('../../revisions.log')
   end
 
   # These assignment methods are needed to facilitate testing
@@ -136,4 +135,4 @@ class VersionFooter
     @@revisions_logfile = x
   end
 end
-# rubocop:enable RuboCop::Cop::Style::ClassVars
+Cop::Style::ClassVars

@@ -1,11 +1,12 @@
 # frozen_string_literal: true
-require "csv"
+
+require 'csv'
 
 # A tally of all of the files in the system at a given time.
 # This should allow us to generate a report on current storage,
 # as well as track growth over time.
 class DatasetFileTally
-  DEFAULT_FILE_PATH = Rails.root.join("tmp", "dataset_file_tally")
+  DEFAULT_FILE_PATH = Rails.root.join('tmp/dataset_file_tally')
 
   attr_reader :timestamp
 
@@ -37,11 +38,11 @@ class DatasetFileTally
   # Exports the dataset top level information
   def summary
     init_solr_batch
-    CSV.open(filepath_summary, "w") do |csv|
-      csv << ["id", "title", "issue_date", "file_count", "total_file_size"]
+    CSV.open(filepath_summary, 'w') do |csv|
+      csv << %w[id title issue_date file_count total_file_size]
       loop do
         datasets = fetch_solr_batch
-        break if datasets.count == 0
+        break if datasets.none?
 
         datasets.each do |dataset|
           csv << [dataset.id, dataset.title, dataset.issued_date, dataset.files.count, dataset.total_file_size]
@@ -53,11 +54,11 @@ class DatasetFileTally
   # Exports the dataset top level information and the file list for each dataset
   def details
     init_solr_batch
-    CSV.open(filepath_details, "w") do |csv|
-      csv << ["id", "title", "issue_date", "file_count", "total_file_size", "file_name", "file_size", "url"]
+    CSV.open(filepath_details, 'w') do |csv|
+      csv << %w[id title issue_date file_count total_file_size file_name file_size url]
       loop do
         datasets = fetch_solr_batch
-        break if datasets.count == 0
+        break if datasets.none?
 
         datasets.each do |dataset|
           dataset_tokens = [dataset.id, dataset.title, dataset.issued_date, dataset.files.count, dataset.total_file_size]
@@ -78,7 +79,7 @@ class DatasetFileTally
     start = @batch * @batch_size
     solr_params = { q: '*:*', fl: '*', start: start, rows: @batch_size, order: 'id asc' }
     response = Blacklight.default_index.connection.get 'select', params: solr_params
-    response["response"]["docs"].map { |doc| SolrDocument.new(doc) }
+    response['response']['docs'].map { |doc| SolrDocument.new(doc) }
   end
 
   def init_solr_batch

@@ -3,6 +3,7 @@
 class ApplicationController < ActionController::Base
   # Adds a few additional behaviors into the application controller
   include Blacklight::Controller
+
   layout :determine_layout if respond_to? :layout
   rescue_from ActionView::MissingTemplate, with: :render_not_found
 
@@ -19,7 +20,7 @@ class ApplicationController < ActionController::Base
       format.xml { head :not_found }
       format.rss { head :not_found }
       format.any do
-        render "not_found", status: :not_found, formats: [:html]
+        render 'not_found', status: :not_found, formats: [:html]
       end
     end
   end

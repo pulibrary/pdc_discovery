@@ -28,12 +28,14 @@ class DateNormalizer
   # to day 01, month 01.
   def self.strict_date(date_string)
     return nil if date_string.nil?
-    if date_string.match?(/\d{4}-\d{1,2}-\d{1,2}/)
+
+    case date_string
+    when /\d{4}-\d{1,2}-\d{1,2}/
       Date.strptime(date_string).strftime('%Y-%m-%d')
-    elsif date_string.match?(/\d{4}-\d{1,2}/)
+    when /\d{4}-\d{1,2}/
       Date.strptime(date_string, '%Y-%m').strftime('%Y-%m-%d')
-    elsif date_string.match?(/\d{4}/)
-      date_string + "-01-01"
+    when /\d{4}/
+      "#{date_string}-01-01"
     end
   rescue ArgumentError
     # bad formatted date

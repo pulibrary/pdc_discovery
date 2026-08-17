@@ -1,34 +1,35 @@
 # frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "Catalog", type: :request do
-  context "when indexing from PDC Describe" do
-    context "when two DOI values are present" do
-      let(:resource1) { file_fixture("sowing_the_seeds.json").read }
-      let(:bitklavier_binaural_json) { file_fixture("bitklavier_binaural.json").read }
+RSpec.describe 'Catalog' do
+  context 'when indexing from PDC Describe' do
+    context 'when two DOI values are present' do
+      let(:resource1) { file_fixture('sowing_the_seeds.json').read }
+      let(:bitklavier_binaural_json) { file_fixture('bitklavier_binaural.json').read }
       let(:bitklavier_binaural) do
         response_body = bitklavier_binaural_json
         json_response = JSON.parse(response_body)
-        json_resource = json_response["resource"]
-        json_titles = json_resource["titles"]
+        json_resource = json_response['resource']
+        json_titles = json_resource['titles']
         json_title = json_titles.first
-        json_title["title"] = "test title"
+        json_title['title'] = 'test title'
         json_response.to_json
       end
-      let(:doi) { "10.34770/r75s-9j74" }
-      let(:ark) { "ark:/88435/dsp015999n653h" }
-      let(:document_id) { "doi-10-34770-r75s-9j74" }
-      let(:rss_feed) { file_fixture("pdc_describe_feeds/works.rss").read }
-      let(:rss_url_string) { "https://pdc-describe-prod.princeton.edu/describe/works.rss" }
+      let(:doi) { '10.34770/r75s-9j74' }
+      let(:ark) { 'ark:/88435/dsp015999n653h' }
+      let(:document_id) { 'doi-10-34770-r75s-9j74' }
+      let(:rss_feed) { file_fixture('pdc_describe_feeds/works.rss').read }
+      let(:rss_url_string) { 'https://pdc-describe-prod.princeton.edu/describe/works.rss' }
       let(:indexer) { WorksIndexer.new(rss_url: rss_url_string) }
 
       before do
-        indexer.delete!(query: "*:*")
-        stub_request(:get, "https://pdc-describe-prod.princeton.edu/describe/works.rss")
+        indexer.delete!(query: '*:*')
+        stub_request(:get, 'https://pdc-describe-prod.princeton.edu/describe/works.rss')
           .to_return(status: 200, body: rss_feed)
-        stub_request(:get, "https://pdc-describe-prod.princeton.edu/describe/works/6.json")
+        stub_request(:get, 'https://pdc-describe-prod.princeton.edu/describe/works/6.json')
           .to_return(status: 200, body: resource1, headers: {})
-        stub_request(:get, "https://pdc-describe-prod.princeton.edu/describe/works/20.json")
+        stub_request(:get, 'https://pdc-describe-prod.princeton.edu/describe/works/20.json')
           .to_return(status: 200, body: bitklavier_binaural, headers: {})
 
         indexer.index
@@ -38,52 +39,52 @@ RSpec.describe "Catalog", type: :request do
         get "/doi/#{doi}"
         expect(response).to redirect_to(solr_document_path(id: document_id))
         follow_redirect!
-        expect(response.body).to include("test title")
+        expect(response.body).to include('test title')
       end
 
-      it "retrieves Solr Documents using a given ARK" do
+      it 'retrieves Solr Documents using a given ARK' do
         get "/ark/#{ark}"
         expect(response).to redirect_to(solr_document_path(id: document_id))
       end
 
-      describe "#show" do
-        it "shows the catalog as JSON" do
-          document = SolrDocument.new(id: "doi-10-34770-r75s-9j74")
-          get "/catalog/#{document.id}", params: { format: "json" }
-          expect(response.status).to eq(200)
+      describe '#show' do
+        it 'shows the catalog as JSON' do
+          document = SolrDocument.new(id: 'doi-10-34770-r75s-9j74')
+          get "/catalog/#{document.id}", params: { format: 'json' }
+          expect(response).to have_http_status(:ok)
         end
 
-        it "shows the catalog as JSON via HTTP ACCEPT header" do
-          document = SolrDocument.new(id: "doi-10-34770-r75s-9j74")
-          get "/catalog/#{document.id}", headers: { "ACCEPT" => "application/json" }
-          expect(response.status).to eq(200)
+        it 'shows the catalog as JSON via HTTP ACCEPT header' do
+          document = SolrDocument.new(id: 'doi-10-34770-r75s-9j74')
+          get "/catalog/#{document.id}", headers: { 'ACCEPT' => 'application/json' }
+          expect(response).to have_http_status(:ok)
         end
 
-        it "shows the catalog as XML without raising a DoubleRenderError" do
-          document = SolrDocument.new(id: "doi-10-34770-r75s-9j74")
-          get "/catalog/#{document.id}", params: { format: "xml" }
-          expect(response.status).to eq(200)
+        it 'shows the catalog as XML without raising a DoubleRenderError' do
+          document = SolrDocument.new(id: 'doi-10-34770-r75s-9j74')
+          get "/catalog/#{document.id}", params: { format: 'xml' }
+          expect(response).to have_http_status(:ok)
         end
 
-        it "shows the catalog as HTML" do
-          document = SolrDocument.new(id: "doi-10-34770-r75s-9j74")
+        it 'shows the catalog as HTML' do
+          document = SolrDocument.new(id: 'doi-10-34770-r75s-9j74')
           get "/catalog/#{document.id}"
-          expect(response.status).to eq(200)
+          expect(response).to have_http_status(:ok)
         end
       end
 
-      describe "#bibtex" do
-        it "returns citations" do
-          document = SolrDocument.new(id: "doi-10-34770-r75s-9j74")
+      describe '#bibtex' do
+        it 'returns citations' do
+          document = SolrDocument.new(id: 'doi-10-34770-r75s-9j74')
           get "/catalog/#{document.id}/bibtex", params: { id: document.id }
-          expect(response.status).to eq(200)
+          expect(response).to have_http_status(:ok)
         end
       end
     end
   end
 
-  context "when a connection error is encountered while trying to access the Solr endpoint" do
-    let(:document_id) { "84912" }
+  context 'when a connection error is encountered while trying to access the Solr endpoint' do
+    let(:document_id) { '84912' }
     let(:repository) { instance_double(Blacklight::Solr::Repository) }
     let(:repository2) { instance_double(Blacklight::Solr::Repository) }
     let(:search_service) { instance_double(Blacklight::SearchService) }
@@ -91,10 +92,8 @@ RSpec.describe "Catalog", type: :request do
     let(:ping) { true }
 
     before do
-      allow(search_service2).to receive(:fetch).and_return(nil)
-      allow(repository2).to receive(:ping).and_return(ping)
-      allow(repository2).to receive(:search).and_return(nil)
-      allow(search_service2).to receive(:repository).and_return(repository2)
+      allow(repository2).to receive_messages(ping: ping, search: nil)
+      allow(search_service2).to receive_messages(fetch: nil, repository: repository2)
 
       allow(repository).to receive(:ping).and_return(ping)
       allow(search_service).to receive(:repository).and_return(repository)
@@ -102,7 +101,7 @@ RSpec.describe "Catalog", type: :request do
       allow(Blacklight::SearchService).to receive(:new).and_return(search_service, search_service2)
     end
 
-    context "when Solr is not at all accessible for the Blacklight client" do
+    context 'when Solr is not at all accessible for the Blacklight client' do
       let(:ping) { false }
 
       before do
@@ -110,12 +109,12 @@ RSpec.describe "Catalog", type: :request do
         get "/catalog/#{document_id}"
       end
 
-      it "responds with an error view" do
-        expect(response).to redirect_to("/errors/network_error")
+      it 'responds with an error view' do
+        expect(response).to redirect_to('/errors/network_error')
       end
     end
 
-    context "when Solr is not at all accessible for the RSolr client" do
+    context 'when Solr is not at all accessible for the RSolr client' do
       let(:ping) { false }
       let(:uri) { instance_double(URI::HTTP) }
       let(:request) { double(Net::HTTPRequest) }
@@ -131,12 +130,12 @@ RSpec.describe "Catalog", type: :request do
         get "/catalog/#{document_id}"
       end
 
-      it "responds with an error view" do
-        expect(response).to redirect_to("/errors/network_error")
+      it 'responds with an error view' do
+        expect(response).to redirect_to('/errors/network_error')
       end
     end
 
-    context "when Solr is accessible" do
+    context 'when Solr is accessible' do
       let(:document) { SolrDocument.new(id: document_id) }
 
       before do
@@ -145,35 +144,35 @@ RSpec.describe "Catalog", type: :request do
         get "/catalog/#{document_id}"
       end
 
-      it "retrieves Solr Documents using a given DOI" do
-        expect(response.status).to eq(200)
+      it 'retrieves Solr Documents using a given DOI' do
+        expect(response).to have_http_status(:ok)
       end
     end
   end
 
-  context "with datasets in different states" do
+  context 'with datasets in different states' do
     before do
       load_describe_dataset
     end
 
-    it "renders approved works normally as HTML" do
-      get "/catalog/doi-10-34770-r75s-9j74" # sowing the seeds (approved)
-      expect(response.status).to eq(200)
+    it 'renders approved works normally as HTML' do
+      get '/catalog/doi-10-34770-r75s-9j74' # sowing the seeds (approved)
+      expect(response).to have_http_status(:ok)
     end
 
-    it "renders draft works as HTML without double render" do
-      get "/catalog/doi-10-80021-t4ef-kr07" # draft work
-      expect(response.status).to eq(200)
+    it 'renders draft works as HTML without double render' do
+      get '/catalog/doi-10-80021-t4ef-kr07' # draft work
+      expect(response).to have_http_status(:ok)
     end
 
-    it "renders withdrawn works as HTML without double render" do
-      get "/catalog/doi-10-80021-bsdz-he25" # withdrawn work
-      expect(response.status).to eq(200)
+    it 'renders withdrawn works as HTML without double render' do
+      get '/catalog/doi-10-80021-bsdz-he25' # withdrawn work
+      expect(response).to have_http_status(:ok)
     end
 
-    it "renders blank/unknown state works as HTML without double render" do
-      get "/catalog/doi-10-80021-t4ef-k000" # blank work
-      expect(response.status).to eq(200)
+    it 'renders blank/unknown state works as HTML without double render' do
+      get '/catalog/doi-10-80021-t4ef-k000' # blank work
+      expect(response).to have_http_status(:ok)
     end
   end
 end

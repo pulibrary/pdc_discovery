@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # Use this file to easily define all of your cron jobs.
 #
 # It's helpful, but not entirely necessary to understand cron before proceeding.
@@ -33,5 +34,5 @@ set :job_template, "bash -l -c 'export PATH=\"/usr/local/bin/:$PATH\" && :job'"
 # Bumped the schedule to 60 minutes since it's taking close to 30 minutes now that we are
 # indexing datasets with very large number of files.
 every 60.minutes, roles: [:reindex] do
-  rake "index:research_data"
+  rake 'index:research_data'
 end

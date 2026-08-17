@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# rubocop:disable Rails/OutputSafety
 # rubocop:disable Metrics/ModuleLength
 module ApplicationHelper
   # This application is deployed in a subdirectory ("/discovery")
@@ -10,14 +9,15 @@ module ApplicationHelper
   # application links to work as expected.
   # @return [String]
   def subdirectory_for_links
-    (Rails.application.config.assets.prefix.split("/") - ["assets"]).join("/")
+    (Rails.application.config.assets.prefix.split('/') - ['assets']).join('/')
   end
 
   # Outputs the HTML to render a single value as an HTML table row
   # to be displayed on the metadata section of the show page.
   def render_field_row(title, value, show_always = false)
     return if value.nil?
-    css_class = show_always ? "" : "toggable-row hidden-row"
+
+    css_class = show_always ? '' : 'toggable-row hidden-row'
     html = <<-HTML
     <tr class="#{css_class}">
       <th scope="row"><span>#{title}</span></th>
@@ -30,8 +30,9 @@ module ApplicationHelper
   # Outputs the HTML to render multiple values as an HTML table row
   def render_field_row_many(title, values, show_always = false, separator = ', ')
     return if values.blank?
+
     values_encoded = values.map { |v| html_escape(v) }
-    css_class = show_always ? "" : "toggable-row hidden-row"
+    css_class = show_always ? '' : 'toggable-row hidden-row'
     html = <<-HTML
     <tr class="#{css_class}">
       <th scope="row"><span>#{title.pluralize(values.count)}</span></th>
@@ -44,6 +45,7 @@ module ApplicationHelper
   # Outputs the HTML to render multiple authors and their affiliations as an HTML table row
   def render_authors_many(title, authors)
     return if authors.empty?
+
     authors_encoded = authors.map do |author|
       text = author.value
       text += " (#{author.affiliation_name})" if author.affiliation_name
@@ -61,7 +63,8 @@ module ApplicationHelper
   # Outputs the HTML to render a single value as an HTML table row with a link
   def render_field_row_link(title, url, show_always = false)
     return if url.blank?
-    css_class = show_always ? "" : "toggable-row hidden-row"
+
+    css_class = show_always ? '' : 'toggable-row hidden-row'
     html = <<-HTML
     <tr class="#{css_class}">
       <th scope="row"><span>#{title}</span></th>
@@ -77,14 +80,15 @@ module ApplicationHelper
   end
 
   # Returns a search link to search by a specific field
-  def search_link_by_field(value, field = "")
+  def search_link_by_field(value, field = '')
     "#{subdirectory_for_links}/?&q=#{CGI.escape(value)}&search_field=#{field}"
   end
 
   # Outputs the HTML to render a single value as an HTML table row with a search link
   def render_field_row_search_link(title, value, field, show_always = false)
     return if value.blank?
-    css_class = show_always ? "" : "toggable-row hidden-row"
+
+    css_class = show_always ? '' : 'toggable-row hidden-row'
     html = <<-HTML
     <tr class="#{css_class}">
       <th scope="row"><span>#{title}</span></th>
@@ -97,9 +101,10 @@ module ApplicationHelper
   # Outputs the HTML to render a single value as an HTML table row with a search link
   def render_field_row_search_links(title, values, field, show_always = false)
     return if values.blank?
-    css_class = show_always ? "" : "toggable-row hidden-row"
+
+    css_class = show_always ? '' : 'toggable-row hidden-row'
     links = values.map do |value|
-      "<span>" + link_to(value, search_link(value, field)) + "</span>"
+      "<span>#{link_to(value, search_link(value, field))}</span>"
     end
     html = <<-HTML
     <tr class="#{css_class}">
@@ -113,12 +118,12 @@ module ApplicationHelper
   # Renders citation information APA-ish and BibTeX.
   # Notice that the only the APA style is visible, the BibTeX citataion is enabled via JavaScript.
   def render_cite_as(document)
-    return if document.cite("APA").nil?
+    return if document.cite('APA').nil?
 
-    apa = document.cite("APA")
-    bibtex = document.cite("BibTeX")
-    bibtex_html = html_escape(bibtex).gsub("\r\n", "<br/>").gsub("\t", "  ").gsub("  ", "&nbsp;&nbsp;")
-    bibtex_text = html_escape(bibtex).gsub("\t", "  ")
+    apa = document.cite('APA')
+    bibtex = document.cite('BibTeX')
+    bibtex_html = html_escape(bibtex).gsub("\r\n", '<br/>').gsub("\t", '  ').gsub('  ', '&nbsp;&nbsp;')
+    bibtex_text = html_escape(bibtex).gsub("\t", '  ')
 
     html = <<-HTML
       <div class="citation-apa-container">
@@ -145,6 +150,7 @@ module ApplicationHelper
 
   def render_globus_download(uri, item_id)
     return if uri.nil?
+
     # The `globus-download-link` CSS class is used to track download clicks in Plausible
     html = <<-HTML
     <div id="globus">
@@ -175,7 +181,7 @@ module ApplicationHelper
   end
 
   def authors_search_results_helper(field)
-    field[:document].authors_ordered.map(&:value).join("; ")
+    field[:document].authors_ordered.map(&:value).join('; ')
   end
 
   # Produces the HTML to render a single author and accounts for ORCID and Affiliation information
@@ -183,9 +189,9 @@ module ApplicationHelper
     name = author.value
     return if name.blank?
 
-    separator = add_separator ? ";" : ""
+    separator = add_separator ? ';' : ''
     tooltip_html = author_tooltip_html(author)
-    author_html = if tooltip_html.strip == ""
+    author_html = if tooltip_html.strip == ''
                     "#{name}#{separator}"
                   else
                     # For popover options
@@ -210,9 +216,9 @@ module ApplicationHelper
   # Returns the HTML for the author tooltip combining whatever information
   # we have available for the author (e.g. ORCID, Affiliation).
   def author_tooltip_html(author)
-    orcid = author.identifier&.dig("value") if author.identifier&.dig("scheme")&.upcase == "ORCID"
+    orcid = author.identifier&.dig('value') if author.identifier&.dig('scheme')&.upcase == 'ORCID'
 
-    orcid_html = ""
+    orcid_html = ''
     if orcid
       orcid_html = <<-HTML
         <img alt='ORCID logo' src='https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png' width='16' height='16' />
@@ -221,9 +227,9 @@ module ApplicationHelper
       HTML
     end
 
-    affiliation_html = ""
+    affiliation_html = ''
     if author.affiliation_name
-      affiliation_link = search_link(author.affiliation_name, "authors_affiliation_ssim")
+      affiliation_link = search_link(author.affiliation_name, 'authors_affiliation_ssim')
       affiliation_html = <<-HTML
         <a href='#{affiliation_link}'>#{author.affiliation_name}</a><br/>
       HTML
@@ -249,7 +255,7 @@ module ApplicationHelper
   end
 
   def render_funders(funders)
-    return if funders.nil? || funders.count == 0
+    return if funders.nil? || funders.none?
 
     funders_html = funders.map { |funder| render_funder(funder) }
 
@@ -278,9 +284,8 @@ module ApplicationHelper
     if funder_award.blank?
       funder_name
     else
-      funder_name + ", " + funder_award
+      "#{funder_name}, #{funder_award}"
     end
   end
 end
-# rubocop:enable Rails/OutputSafety
 # rubocop:enable Metrics/ModuleLength

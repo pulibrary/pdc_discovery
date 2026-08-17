@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'plausible_api'
 
 class Plausible
@@ -12,11 +13,11 @@ class Plausible
   def self.pageviews(document_id)
     return 'X' if ENV['PLAUSIBLE_KEY'].nil?
 
-    c = PlausibleApi::Client.new(Rails.configuration.pdc_discovery.plausible_site_id, ENV['PLAUSIBLE_KEY'])
+    c = PlausibleApi::Client.new(Rails.configuration.pdc_discovery.plausible_site_id, ENV.fetch('PLAUSIBLE_KEY', nil))
     page = "/discovery/catalog/#{document_id}"
     response = c.aggregate({ date: date_period, metrics: 'visitors,pageviews', filters: "event:page==#{page}" })
-    response["pageviews"]["value"]
-  rescue => e
+    response['pageviews']['value']
+  rescue StandardError => e
     Rails.logger.error "PLAUSIBLE ERROR: (Pageviews for document: #{document_id}) #{e.message}"
     Honeybadger.notify(e.message)
     0
@@ -39,13 +40,13 @@ class Plausible
     # Notice that the Plausible API uses "==" to filter: https://plausible.io/docs/stats-api#filtering
     # Time periods: https://plausible.io/docs/stats-api#time-periods
     site_id = Rails.configuration.pdc_discovery.plausible_site_id
-    property = "event:props:filename"
+    property = 'event:props:filename'
     page = "/discovery/catalog/#{document_id}"
     filters = "event:page==#{page}"
-    metrics = "visitors,pageviews"
-    period = "custom"
+    metrics = 'visitors,pageviews'
+    period = 'custom'
     url = "#{PLAUSIBLE_API_URL}/stats/breakdown?site_id=#{site_id}&property=#{property}&filters=#{filters}&metrics=#{metrics}&period=#{period}&date=#{date_period}"
-    authorization = "Bearer #{ENV['PLAUSIBLE_KEY']}"
+    authorization = "Bearer #{ENV.fetch('PLAUSIBLE_KEY', nil)}"
     response = HTTParty.get(url, headers: { 'Authorization' => authorization })
 
     # retry if the response is an error
@@ -58,17 +59,18 @@ class Plausible
     total_downloads = 0
 
     # retry if the response is an error
-    if response.code != 200
-      Rails.logger.error "PLAUSIBLE ERROR after retry: #{response}"
-    else
-      response["results"].each do |result|
-        next if result["filename"] == "(none)" # Skip old test data
-        total_downloads += result["visitors"]
+    if response.code == 200
+      response['results'].each do |result|
+        next if result['filename'] == '(none)' # Skip old test data
+
+        total_downloads += result['visitors']
       end
+    else
+      Rails.logger.error "PLAUSIBLE ERROR after retry: #{response}"
     end
 
     total_downloads
-  rescue => e
+  rescue StandardError => e
     Rails.logger.error "PLAUSIBLE ERROR: (Downloads for document: #{document_id}) #{e.message}"
     Honeybadger.notify(e.message)
     0

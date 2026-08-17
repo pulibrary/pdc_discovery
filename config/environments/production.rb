@@ -5,7 +5,7 @@ require 'active_support/core_ext/integer/time'
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  config.assets.prefix = "/discovery/assets/"
+  config.assets.prefix = '/discovery/assets/'
 
   # Code is not reloaded between requests.
   config.cache_classes = true
@@ -26,7 +26,7 @@ Rails.application.configure do
   # config.require_master_key = true
 
   # Cache assets for far-future expiry since they are all digest stamped.
-  config.public_file_server.headers = { "cache-control" => "public, max-age=#{1.year.to_i}" }
+  config.public_file_server.headers = { 'cache-control' => "public, max-age=#{1.year.to_i}" }
 
   # Serve files in the public folder (so that we can serve robots.txt)
   config.public_file_server.enabled = true
@@ -58,13 +58,13 @@ Rails.application.configure do
   # config.force_ssl = true
 
   # Log to STDOUT with the current request id as a default log tag.
-  config.logger = ActiveSupport::TaggedLogging.logger(STDOUT)
+  config.logger = ActiveSupport::TaggedLogging.logger($stdout)
   # Include generic and useful information about system operation, but avoid logging too much
   # information to avoid inadvertent exposure of personally identifiable information (PII).
 
   # rubocop: disable Layout/LineLength
   # Change to "debug" to log everything (including potentially personally-identifiable information!)                                                                                                              -   # config.cache_store = :mem_cache_store
-  config.log_level = ENV.fetch("RAILS_LOG_LEVEL", "info")
+  config.log_level = ENV.fetch('RAILS_LOG_LEVEL', 'info')
   # rubocop: enable Layout/LineLength
 
   # Prepend all log lines with the following tags.
@@ -81,7 +81,7 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "pdc_discovery_production"
 
   # Prevent health checks from clogging up the logs.
-  config.silence_healthcheck_path = "/up"
+  config.silence_healthcheck_path = '/up'
 
   config.action_mailer.perform_caching = false
   # Don't log any deprecations.
@@ -89,12 +89,12 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: "lib-ponyexpr-prod.princeton.edu",
+    address: 'lib-ponyexpr-prod.princeton.edu',
     enable_starttls: false
   }
 
   config.action_mailer.default_options = {
-    from: "noreply@princeton.edu"
+    from: 'noreply@princeton.edu'
   }
 
   # Ignore bad email addresses and do not raise email delivery errors.
@@ -115,14 +115,14 @@ Rails.application.configure do
   config.active_support.disallowed_deprecation_warnings = []
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
-  config.log_formatter = ::Logger::Formatter.new
+  config.log_formatter = Logger::Formatter.new
 
   # Use a different logger for distributed setups.
   # require "syslog/logger"
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
   if ENV['RAILS_LOG_TO_STDOUT'].present?
-    logger           = ActiveSupport::Logger.new(STDOUT)
+    logger           = ActiveSupport::Logger.new($stdout)
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end

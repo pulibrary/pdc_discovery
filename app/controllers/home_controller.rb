@@ -20,8 +20,8 @@ class HomeController < ApplicationController
       mail.deliver_later(wait: 10.seconds)
 
       # ...reload the page, and tell the user we've sent their message
-      flash.alert = "We have sent your message to our team."
-      redirect_to request.env["HTTP_REFERER"] || "/"
+      flash.alert = 'We have sent your message to our team.'
+      redirect_to request.env['HTTP_REFERER'] || '/'
     end
   end
 

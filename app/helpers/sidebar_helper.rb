@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-# rubocop:disable Rails/OutputSafety
 module SidebarHelper
   # Outputs the HTML to render the DOI with a copy to clipboard button next to it.
   def render_sidebar_doi_row(url, value)
     return if url.nil?
-    tooltip = "Copy DOI URL to the clipboard"
+
+    tooltip = 'Copy DOI URL to the clipboard'
     html = <<-HTML
       <span class="sidebar-header">DOI</span><br/>
       <span class="sidebar-value">#{link_to(value, url, target: '_blank', rel: 'noopener noreferrer')}
@@ -19,14 +19,14 @@ module SidebarHelper
   end
 
   def render_sidebar_licenses(licenses)
-    return if licenses.count.zero?
+    return if licenses.none?
 
     licenses_html = licenses.map do |license|
       url = License.url(license)
       if url.nil?
         "<span>#{html_escape(license)}</span>"
       else
-        "<span>" + link_to(license, url, target: '_blank', rel: 'noopener noreferrer') + "</span>"
+        "<span>#{link_to(license, url, target: '_blank', rel: 'noopener noreferrer')}</span>"
       end
     end
 
@@ -41,11 +41,11 @@ module SidebarHelper
 
   # Outputs the HTML to render a list of subjects
   def render_sidebar_subject_search_links(header, values, field)
-    return if values.count.zero?
+    return if values.none?
 
     links_html = values.map do |value|
       link_to(value, search_link(value, field), class: 'badge badge-dark sidebar-value-badge', title: value)
-    end.join(" ")
+    end.join(' ')
 
     html = <<-HTML
       <div class="sidebar-row">
@@ -58,6 +58,7 @@ module SidebarHelper
 
   def render_sidebar_value(header, value)
     return if value.blank?
+
     html = <<-HTML
       <div class="sidebar-row">
         <span class="sidebar-header">#{header}</span><br/>
@@ -67,8 +68,9 @@ module SidebarHelper
     html.html_safe
   end
 
-  def render_sidebar_values(header, values, separator = "<br/>")
-    return if values.count == 0
+  def render_sidebar_values(header, values, separator = '<br/>')
+    return if values.none?
+
     html = <<-HTML
       <div class="sidebar-row">
         <span class="sidebar-header">#{header}</span><br/>
@@ -79,11 +81,11 @@ module SidebarHelper
   end
 
   def render_sidebar_related_identifiers(header, identifiers)
-    return if identifiers.count == 0
+    return if identifiers.none?
 
     identifiers_html = identifiers.map do |identifier|
       related_identifier_value(identifier)
-    end.compact.join("<br/>")
+    end.compact.join('<br/>')
 
     html = <<-HTML
       <div class="sidebar-row">
@@ -97,18 +99,17 @@ module SidebarHelper
   private
 
   def related_identifier_value(identifier)
-    id = identifier["related_identifier"]
-    id_type = identifier["related_identifier_type"]
-    type = identifier["relation_type"]&.titleize
+    id = identifier['related_identifier']
+    id_type = identifier['related_identifier_type']
+    type = identifier['relation_type']&.titleize
     if id.nil? || type.nil?
       nil
-    elsif id.start_with?("https://", "http://")
+    elsif id.start_with?('https://', 'http://')
       "#{type} <a href=#{id} target=_blank>#{id}</a>"
-    elsif id_type == "DOI"
+    elsif id_type == 'DOI'
       "#{type} <a href=https://doi.org/#{id} target=_blank>#{id}</a>"
     else
       "#{type} #{id}"
     end
   end
 end
-# rubocop:enable Rails/OutputSafety

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  mount HealthMonitor::Engine, at: "/"
+  mount HealthMonitor::Engine, at: '/'
 
   concern :range_searchable, BlacklightRangeLimit::Routes::RangeSearchable.new
   mount Blacklight::Engine => '/'
@@ -26,10 +26,10 @@ Rails.application.routes.draw do
   resources :solr_documents, only: [:show], path: '/catalog', controller: 'catalog' do
     concerns %i[exportable marc_viewable]
   end
-  match "/doi/*doi", via: :get, to: "catalog#resolve_doi", as: :resolve_doi, format: false
-  match "/ark/*ark", via: :get, to: "catalog#resolve_ark", as: :resolve_ark, format: false
+  get '/doi/*doi', to: 'catalog#resolve_doi', as: :resolve_doi, format: false
+  get '/ark/*ark', to: 'catalog#resolve_ark', as: :resolve_ark, format: false
 
-  resources :bookmarks, only: [:index, :update, :create, :destroy] do
+  resources :bookmarks, only: %i[index update create destroy] do
     concerns :exportable
 
     collection do
@@ -47,11 +47,11 @@ Rails.application.routes.draw do
   get 'errors/not_found'
   get 'errors/internal_server_error'
   get 'errors/range_limit_error'
-  match "/404", to: "errors#not_found", via: :all
-  match "/500", to: "errors#internal_server_error", via: :all
+  match '/404', to: 'errors#not_found', via: :all
+  match '/500', to: 'errors#internal_server_error', via: :all
 
   # Anything still unmatched by the end of the routes file should go to the not_found page
-  match '*a', to: 'errors#not_found', via: :get
+  get '*a', to: 'errors#not_found'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

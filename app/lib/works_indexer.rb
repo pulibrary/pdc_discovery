@@ -24,7 +24,7 @@ class WorksIndexer
   end
 
   def datacite_indexing_config_path
-    pathname = ::Rails.root.join('config', 'traject', "pdc_describe_indexing_config.rb")
+    pathname = ::Rails.root.join('config/traject/pdc_describe_indexing_config.rb')
     pathname.to_s
   end
 
@@ -35,7 +35,7 @@ class WorksIndexer
     if Rails.configuration.pdc_discovery.index_pdc_describe == true
       perform_indexing
     else
-      Rails.logger.warn "PDC Describe indexing is not turned on for this environment. See config/pdc_discovery.yml"
+      Rails.logger.warn 'PDC Describe indexing is not turned on for this environment. See config/pdc_discovery.yml'
     end
   end
 
@@ -64,7 +64,7 @@ class WorksIndexer
     client
   end
 
-private
+  private
 
   def rss_http_response
     URI.open(@rss_url)
@@ -75,7 +75,7 @@ private
   end
 
   def rss_url_nodes
-    rss_xml_doc.xpath("//item/url/text()")
+    rss_xml_doc.xpath('//item/url/text()')
   end
 
   def rss_url_list
@@ -88,8 +88,8 @@ private
     urls_to_retry = []
     rss_url_list.each do |url|
       process_url(url)
-    rescue => ex
-      Rails.logger.warn "Indexing: Error importing record from #{url}. Will retry. Exception: #{ex.message}"
+    rescue StandardError => e
+      Rails.logger.warn "Indexing: Error importing record from #{url}. Will retry. Exception: #{e.message}"
       urls_to_retry << url
     end
 
@@ -97,9 +97,9 @@ private
     urls_to_retry.each do |url|
       Rails.logger.info "Indexing: Retrying record #{url}."
       process_url(url)
-    rescue => ex
-      Rails.logger.error "Indexing: Error importing record from #{url}. Retry failed. Exception: #{ex.message}"
-      Honeybadger.notify "Error importing record from #{url}. Exception: #{ex.message}"
+    rescue StandardError => e
+      Rails.logger.error "Indexing: Error importing record from #{url}. Retry failed. Exception: #{e.message}"
+      Honeybadger.notify "Error importing record from #{url}. Exception: #{e.message}"
     end
   end
 

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # Source: https://github.com/rails/rails/issues/40054#issuecomment-674449143
 # Additional information: https://massive.io/file-transfer/gb-vs-gib-whats-the-difference/
 module ActiveSupport

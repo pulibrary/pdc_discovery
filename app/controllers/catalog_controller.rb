@@ -214,7 +214,7 @@ class CatalogController < ApplicationController
     end
 
     config.add_search_field('orcid') do |field|
-      field.label = "ORCID"
+      field.label = 'ORCID'
       field.solr_parameters = {
         qf: 'authors_orcid_ssim',
         pf: 'authors_orcid_ssim'
@@ -261,6 +261,7 @@ class CatalogController < ApplicationController
     # Sets up Blacklight crawler detection
     config.crawler_detector = lambda { |request|
       return true if request.env['HTTP_USER_AGENT'].blank?
+
       request.bot?
     }
   end
@@ -272,12 +273,12 @@ class CatalogController < ApplicationController
     respond_to do |format|
       format.html do
         @search_context = setup_next_and_previous_documents
-        case @document["state_ssi"]
-        when "approved"
+        case @document['state_ssi']
+        when 'approved'
           render :show
-        when "draft"
+        when 'draft'
           render :show_draft
-        when "withdrawn"
+        when 'withdrawn'
           render :show_withdrawn
         else
           render :show_blank
@@ -293,7 +294,7 @@ class CatalogController < ApplicationController
   # This endpoint is used to feed the AJAX call on the Show page for the file list and
   # therefore the return JSON must be something that DataTables can use.
   def file_list
-    document = solr_find(params["id"])
+    document = solr_find(params['id'])
     file_list = { data: document.files }
 
     render json: file_list.to_json
@@ -302,7 +303,7 @@ class CatalogController < ApplicationController
   # Returns the raw BibTex citation information
   def bibtex
     @document = search_service.fetch(params[:id])
-    citation = @document.cite("BibTeX")
+    citation = @document.cite('BibTeX')
     send_data citation, filename: "#{@document.bibtex_id}.bibtex", type: 'text/plain', disposition: 'attachment'
   end
 
@@ -316,6 +317,7 @@ class CatalogController < ApplicationController
     documents = solr_response.documents
 
     raise Blacklight::Exceptions::RecordNotFound if documents.empty?
+
     preferred = documents.select { |d| d.data_source == 'pdc_discovery' }
     document = if preferred.empty?
                  documents.first
@@ -337,6 +339,7 @@ class CatalogController < ApplicationController
     documents = solr_response.documents
 
     raise Blacklight::Exceptions::RecordNotFound if documents.empty?
+
     document = documents.first
 
     redirect_to(solr_document_path(id: document.id))
@@ -346,9 +349,9 @@ class CatalogController < ApplicationController
   def pppl_reporting_feed
     # Limit to items from PPPL
     lucene_queries = ['data_source_ssi:pdc_describe', 'group_code_ssi:"PPPL"']
-    lucene_expr = lucene_queries.join(" ")
-    page = params["page"] || "1"
-    per_page = params["per_page"] || "10"
+    lucene_expr = lucene_queries.join(' ')
+    page = params['page'] || '1'
+    per_page = params['per_page'] || '10'
     start = per_page.to_i * (page.to_i - 1)
 
     query_sort = 'internal_id_lsi desc'
@@ -378,7 +381,7 @@ class CatalogController < ApplicationController
     solr = RSolr.connect(url: solr_url)
     solr_params = { q: "id:#{id}", fl: '*' }
     response = solr.get('select', params: solr_params)
-    solr_doc = response["response"]["docs"][0]
+    solr_doc = response['response']['docs'][0]
     SolrDocument.new(solr_doc)
   end
 end

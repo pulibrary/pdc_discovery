@@ -1,7 +1,7 @@
 # frozen_string_literal: true
+
 module RecentlyAddedHelper
   # Outputs the HTML to render recent entries as list items
-  # rubocop:disable Rails/OutputSafety
   def render_recent_entry(entry)
     html = <<-HTML
     <li id="recently-added-#{entry.id}">
@@ -12,5 +12,4 @@ module RecentlyAddedHelper
     HTML
     html.html_safe
   end
-  # rubocop:enable Rails/OutputSafety
 end

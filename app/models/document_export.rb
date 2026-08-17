@@ -2,7 +2,7 @@
 
 class DocumentExport
   attr_reader :id, :title, :files, :description, :abstract, :rights, :authors, :doi_value, :doi_url,
-    :total_file_size, :embargo_date, :globus_url
+              :total_file_size, :embargo_date, :globus_url
 
   def initialize(solr_document)
     @id = solr_document.id

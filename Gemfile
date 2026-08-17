@@ -9,7 +9,7 @@ gem 'bcrypt', '~> 3.1.22'
 gem 'blacklight', '>= 7.41'
 gem 'blacklight_dynamic_sitemap'
 gem 'blacklight-marc', '~> 8.1.0'
-gem "blacklight_range_limit", '~> 8.2'
+gem 'blacklight_range_limit', '~> 8.2'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bootstrap', '~> 4.0'
 gem 'concurrent-ruby', '~>1.3.7'
@@ -28,7 +28,7 @@ gem 'listen', '~> 3.3'
 gem 'multi_xml'
 gem 'mutex_m'
 gem 'net-ssh'
-gem "nokogiri", ">= 1.19.4"
+gem 'nokogiri', '>= 1.19.4'
 gem 'oai'
 gem 'opentelemetry-exporter-otlp'
 gem 'opentelemetry-instrumentation-all'
@@ -51,27 +51,30 @@ gem 'voight_kampff', require: 'voight_kampff/rails'
 gem 'whenever'
 
 group :development, :test do
-  gem 'bixby'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'coveralls_reborn', '~> 0.28', require: false
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec'
   gem 'rspec-rails'
-  gem "rspec-retry"
+  gem 'rspec-retry'
   gem 'rspec-solr'
+  gem 'rubocop'
+  gem 'rubocop-capybara'
+  gem 'rubocop-rails'
   gem 'rubocop-rspec'
-  gem 'simplecov', '~> 0.22'
+  gem 'rubocop-rspec_rails'
+  gem 'simplecov'
   gem 'yard'
 end
 
 group :development do
-  gem "bcrypt_pbkdf"
-  gem "capistrano"
-  gem "capistrano-passenger", require: false
-  gem "capistrano-rails", "~> 1.4", require: false
-  gem "ed25519"
-  gem "foreman"
+  gem 'bcrypt_pbkdf'
+  gem 'capistrano'
+  gem 'capistrano-passenger', require: false
+  gem 'capistrano-rails', '~> 1.4', require: false
+  gem 'ed25519'
+  gem 'foreman'
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'web-console', '>= 4.1.0'
 end

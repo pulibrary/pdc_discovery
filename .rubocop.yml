@@ -1,11 +1,15 @@
-require: rubocop-rspec
-inherit_gem:
-  bixby: bixby_default.yml
+plugins: 
+  - rubocop-rspec
+  - rubocop-capybara
+  - rubocop-rails
+  - rubocop-rspec_rails
+
 inherit_from: .rubocop_todo.yml
 
 AllCops:
   DisplayCopNames: true
-  TargetRubyVersion: 2.6
+  TargetRubyVersion: 4.0
+  NewCops: enable
   Exclude:
     - "bin/*"
     - "config/deploy.rb"
@@ -15,25 +19,24 @@ AllCops:
     - "spec/support/**/*"
     - "tmp/**/*"
 
+Naming/PredicateMethod:
+  Exclude:
+    - app/lib/indexing/solr_cloud_helper.rb
+
 Metrics/BlockLength:
   Exclude:
     - spec/lib/metadata_mapping_spec.rb
     - app/controllers/catalog_controller.rb
 
-Rails/Output:
-  Exclude:
-    - app/lib/cli.rb
-
 RSpec/AnyInstance:
   Exclude:
     - spec/lib/research_data_harvester_spec.rb
+    - spec/system/show_pdc_describe_record_spec.rb
 
 RSpec/ExampleLength:
-  Exclude:
-    - spec/lib/research_data_collection_spec.rb
-    - spec/system/banner_spec.rb
+  Enabled: false
 
-Rails/UnknownEnv:
+RSpec/MultipleExpectations:
   Enabled: false
 
 Style/NumericPredicate:

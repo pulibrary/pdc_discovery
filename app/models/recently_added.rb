@@ -11,10 +11,9 @@ class RecentlyAdded
       sort: 'pdc_updated_at_dtsi desc'
     }
     response = solr.get('select', params: solr_params)
-    entries = response["response"]["docs"].map { |doc| SolrDocument.new(doc) }
-    entries
-  rescue StandardError => ex
-    Rails.logger.warn "Error fetching recently added feed: #{ex.message}."
+    response['response']['docs'].map { |doc| SolrDocument.new(doc) }
+  rescue StandardError => e
+    Rails.logger.warn "Error fetching recently added feed: #{e.message}."
     []
   end
 end

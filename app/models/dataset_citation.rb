@@ -2,9 +2,6 @@
 
 # Handles citations for datasets
 # rubocop:disable Metrics/ParameterLists
-# rubocop:disable Metrics/ClassLength
-# rubocop:disable Style/NumericPredicate
-# rubocop:disable Style/IfUnlessModifier
 class DatasetCitation
   NEWLINE_INDENTED = "\r\n\t\t\t\t\t\t\t\t"
 
@@ -25,7 +22,7 @@ class DatasetCitation
   end
 
   def to_s(style)
-    if style == "BibTeX"
+    if style == 'BibTeX'
       bibtex
     else
       apa
@@ -44,7 +41,7 @@ class DatasetCitation
     when 2
       apa_author += @authors.join(' & ')
     else
-      apa_author += @authors[0..-2].join(', ') + ', & ' + @authors[-1]
+      apa_author += "#{@authors[0..-2].join(', ')}, & #{@authors[-1]}"
     end
 
     apa_year = ''
@@ -64,16 +61,16 @@ class DatasetCitation
     apa_publisher = append_dot(@publisher)
     apa_doi = @doi
 
-    tokens = [append_dot(apa_author), append_dot(apa_year), apa_title, apa_version, apa_publisher, apa_doi].reject(&:blank?)
+    tokens = [append_dot(apa_author), append_dot(apa_year), apa_title, apa_version, apa_publisher, apa_doi].compact_blank
     tokens.join(' ')
-  rescue => ex
-    Rails.logger.error "Error generating APA citation for (#{@title}): #{ex.message}"
+  rescue StandardError => e
+    Rails.logger.error "Error generating APA citation for (#{@title}): #{e.message}"
     nil
   end
 
   def apa_version_text(version)
     if version.blank?
-      ""
+      ''
     else
       "Version #{version}."
     end
@@ -90,7 +87,7 @@ class DatasetCitation
   # rubocop:disable Metrics/PerceivedComplexity
   def bibtex
     tokens = []
-    if @authors.count > 0
+    if @authors.any?
       tokens << bibtex_field_author('author', @authors)
     end
 
@@ -106,7 +103,7 @@ class DatasetCitation
       tokens << bibtex_field('publisher', @publisher, '{{', '}}')
     end
 
-    if @years.count > 0
+    if @years.any?
       tokens << bibtex_field('year', @years.first)
     end
 
@@ -116,10 +113,10 @@ class DatasetCitation
 
     text = "@electronic{#{bibtex_id},\r\n"
     text += tokens.map { |token| "\t#{token}" }.join(",\r\n") + "\r\n"
-    text += "}"
+    text += '}'
     text
-  rescue => ex
-    Rails.logger.error "Error generating BibTex citation for (#{@title}): #{ex.message}"
+  rescue StandardError => e
+    Rails.logger.error "Error generating BibTex citation for (#{@title}): #{e.message}"
     nil
   end
   # rubocop:enable Metrics/PerceivedComplexity
@@ -128,9 +125,9 @@ class DatasetCitation
   # https://en.wikipedia.org/wiki/COinS
   def coins
     tokens = []
-    tokens << "url_ver=Z39.88-2004"
-    tokens << "ctx_ver=Z39.88-2004"
-    tokens << "rft.type=webpage"
+    tokens << 'url_ver=Z39.88-2004'
+    tokens << 'ctx_ver=Z39.88-2004'
+    tokens << 'rft.type=webpage'
     tokens << "rft_val_fmt=#{CGI.escape('info:ofi/fmt:kev:mtx:dc')}"
 
     if @title.present?
@@ -141,7 +138,7 @@ class DatasetCitation
       tokens << "rft.au=#{CGI.escape(author)}"
     end
 
-    if @years.count > 0
+    if @years.any?
       tokens << "rft.date=#{CGI.escape(@years.first.to_s)}"
     end
 
@@ -154,15 +151,15 @@ class DatasetCitation
     end
 
     "<span class=\"Z3988\" title=\"#{tokens.join('&amp;')}\"></span>"
-  rescue => ex
-    Rails.logger.error "Error generating COinS citation for (#{@title}): #{ex.message}"
+  rescue StandardError => e
+    Rails.logger.error "Error generating COinS citation for (#{@title}): #{e.message}"
     nil
   end
 
   # Returns an ID value for a BibTex citation
   def bibtex_id
     author_id = 'unknown'
-    if @authors.count > 0
+    if @authors.any?
       author_id = @authors.first.downcase.tr(' ', '_').gsub(/[^a-z0-9_]/, '')
     end
     year_id = @years.first&.to_s || 'unknown'
@@ -176,8 +173,8 @@ class DatasetCitation
     lines = []
     until string.nil?
       # TODO: it would be nice it we break on spaces rather than in the middle of a word.
-      lines << string[0..max_length - 1]
-      string = string[max_length..-1]
+      lines << string[0..(max_length - 1)]
+      string = string[max_length..]
     end
     lines
   end
@@ -193,7 +190,7 @@ class DatasetCitation
   #
   def bibtex_field(name, value, open_tag = '', close_tag = '')
     value_trim = bibtex_lines(value).join(NEWLINE_INDENTED)
-    name.ljust(12) + '= ' + open_tag + value_trim + close_tag
+    "#{name.ljust(12)}= #{open_tag}#{value_trim}#{close_tag}"
   end
 
   # Creates a line to represent multiple authors in a BibTex field
@@ -207,29 +204,31 @@ class DatasetCitation
   #
   def bibtex_field_author(name, authors, open_tag = '{', close_tag = '}')
     value_trim = authors.join(" and #{NEWLINE_INDENTED}")
-    name.ljust(12) + '= ' + open_tag + value_trim + close_tag
+    "#{name.ljust(12)}= #{open_tag}#{value_trim}#{close_tag}"
   end
 
   # Appends a dot to a string if it does not end with one.
   def append_dot(value)
     return nil if value.nil?
     return '' if value.empty?
-    DatasetCitation.custom_strip(value) + '.'
+
+    "#{DatasetCitation.custom_strip(value)}."
   end
 
   # Strip a few specific characters that tend to mess up citations (e.g. trailing periods, commas, et cetera)
   def self.custom_strip(value)
     return nil if value.nil?
     return '' if value.empty?
+
     while true
       last_char = value[-1]
       break if last_char.nil? || !last_char.in?('. ,')
+
       value = value.chomp(last_char)
     end
     value
   end
 end
 # rubocop:enable Metrics/ParameterLists
-# rubocop:enable Metrics/ClassLength
 # rubocop:enable Style/NumericPredicate
 # rubocop:enable Style/IfUnlessModifier

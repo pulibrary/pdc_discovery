@@ -93,12 +93,6 @@ GEM
     bcrypt_pbkdf (1.1.2-x86_64-darwin)
     bigdecimal (4.1.2)
     bindex (0.8.1)
-    bixby (5.0.0)
-      rubocop (>= 1, < 2)
-      rubocop-ast
-      rubocop-performance
-      rubocop-rails
-      rubocop-rspec
     blacklight (8.12.3)
       globalid
       i18n (>= 1.7.0)
@@ -716,10 +710,9 @@ GEM
     rubocop-ast (1.50.0)
       parser (>= 3.3.7.2)
       prism (~> 1.7)
-    rubocop-performance (1.26.1)
+    rubocop-capybara (3.0.0)
       lint_roller (~> 1.1)
-      rubocop (>= 1.75.0, < 2.0)
-      rubocop-ast (>= 1.47.1, < 2.0)
+      rubocop (~> 1.81)
     rubocop-rails (2.36.0)
       activesupport (>= 4.2.0)
       lint_roller (~> 1.1)
@@ -730,6 +723,10 @@ GEM
       lint_roller (~> 1.1)
       regexp_parser (>= 2.0)
       rubocop (~> 1.86, >= 1.86.2)
+    rubocop-rspec_rails (2.32.0)
+      lint_roller (~> 1.1)
+      rubocop (~> 1.72, >= 1.72.1)
+      rubocop-rspec (~> 3.5)
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
     rubyzip (3.4.1)
@@ -881,7 +878,6 @@ DEPENDENCIES
   axe-core-rspec
   bcrypt (~> 3.1.22)
   bcrypt_pbkdf
-  bixby
   blacklight (>= 7.41)
   blacklight-marc (~> 8.1.0)
   blacklight_dynamic_sitemap
@@ -931,9 +927,13 @@ DEPENDENCIES
   rspec-rails
   rspec-retry
   rspec-solr
+  rubocop
+  rubocop-capybara
+  rubocop-rails
   rubocop-rspec
+  rubocop-rspec_rails
   selenium-webdriver
-  simplecov (~> 0.22)
+  simplecov
   strscan (>= 3.1.0)
   thor
   traject

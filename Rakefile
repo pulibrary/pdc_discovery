@@ -6,23 +6,23 @@
 require_relative 'config/application'
 Rails.application.load_tasks
 
-if Rails.env.development? || Rails.env.test?
+if Rails.env.local?
 
   require 'rubocop'
   require 'rubocop/rake_task'
 
   if defined? RuboCop
-    desc "Run style checker"
+    desc 'Run style checker'
     RuboCop::RakeTask.new(:rubocop) do |task|
-      task.requires << "rubocop-rspec"
+      task.requires << 'rubocop-rspec'
       task.fail_on_error = true
     end
 
-    desc "Run test suite and style checker"
+    desc 'Run test suite and style checker'
     task spec: :rubocop
   end
-  Rake::Task["solr:marc:index"].clear
-  Rake::Task["solr:marc:index:info"].clear
-  Rake::Task["solr:marc:index_test_data"].clear
-  Rake::Task["blacklight:index:seed"].clear
+  Rake::Task['solr:marc:index'].clear
+  Rake::Task['solr:marc:index:info'].clear
+  Rake::Task['solr:marc:index_test_data'].clear
+  Rake::Task['blacklight:index:seed'].clear
 end

@@ -10,8 +10,8 @@ RSpec.describe License do
     end
 
     it 'handles unknown licenses' do
-      expect(described_class.url('blah blah')).to be nil
-      expect(described_class.url(nil)).to be nil
+      expect(described_class.url('blah blah')).to be_nil
+      expect(described_class.url(nil)).to be_nil
     end
   end
 end
