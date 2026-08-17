@@ -66,7 +66,7 @@ class VersionFooter
   end
 
   def self.revisions_head
-    return unless Rails.env.development? || Rails.env.test?
+    return unless Rails.env.local?
 
     @@revisions_head ||= `git rev-parse HEAD`.chomp
   end
@@ -89,7 +89,7 @@ class VersionFooter
   def self.branch
     @@branch ||= if File.exist?(revisions_logfile)
                    `tail -1 #{revisions_logfile}`.chomp.split(" ")[1]
-                 elsif Rails.env.development? || Rails.env.test?
+                 elsif Rails.env.local?
                    `git rev-parse --abbrev-ref HEAD`.chomp
                  else
                    "Unknown branch"

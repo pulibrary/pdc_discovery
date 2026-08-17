@@ -2,7 +2,6 @@
 
 require 'rails_helper'
 
-# rubocop:disable RSpec/ExampleLength
 RSpec.describe VersionFooter do
   before do
     described_class.reset!
