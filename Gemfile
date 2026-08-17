@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-source 'https://gem.coop'
+source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.3.2'
@@ -36,11 +36,10 @@ gem 'opentelemetry-sdk'
 gem 'pg'
 gem 'plausible_api'
 gem 'puma'
-gem 'rails', '~> 8.1.3'
+gem 'rails', '~> 8.0'
 gem 'rails-html-sanitizer', '~>1.7.1'
 gem 'rinku'
 gem 'rsolr', '>= 1.0', '< 3'
-# gem 'sass-rails', '>= 6'
 gem 'strscan', '>= 3.1.0'
 gem 'thor'
 gem 'traject'
