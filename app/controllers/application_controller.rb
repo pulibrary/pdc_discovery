@@ -9,9 +9,9 @@ class ApplicationController < ActionController::Base
 
   def render_not_found
     error_view = if Rails.env.production? || Rails.env.staging?
-                   '/discovery/errors/not_found'
+                   "/discovery/errors/not_found"
                  else
-                   '/errors/not_found'
+                   "/errors/not_found"
                  end
 
     respond_to do |format|
@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
       format.xml { head :not_found }
       format.rss { head :not_found }
       format.any do
-        render 'not_found', status: :not_found, formats: [:html]
+        render "not_found", status: :not_found, formats: [:html]
       end
     end
   end

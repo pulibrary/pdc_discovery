@@ -22,7 +22,7 @@ class DatasetCitation
   end
 
   def to_s(style)
-    if style == 'BibTeX'
+    if style == "BibTeX"
       bibtex
     else
       apa
@@ -32,19 +32,19 @@ class DatasetCitation
   # Returns a string with APA-ish citation for the dataset
   # Reference: https://libguides.usc.edu/APA7th/datasets#s-lg-box-22855503
   def apa
-    apa_author = ''
+    apa_author = ""
     case @authors.count
     when 0
       # do nothing
     when 1
       apa_author += @authors.first
     when 2
-      apa_author += @authors.join(' & ')
+      apa_author += @authors.join(" & ")
     else
       apa_author += "#{@authors[0..-2].join(', ')}, & #{@authors[-1]}"
     end
 
-    apa_year = ''
+    apa_year = ""
     case @years.count
     when 0
       # do nothing
@@ -62,7 +62,7 @@ class DatasetCitation
     apa_doi = @doi
 
     tokens = [append_dot(apa_author), append_dot(apa_year), apa_title, apa_version, apa_publisher, apa_doi].compact_blank
-    tokens.join(' ')
+    tokens.join(" ")
   rescue StandardError => e
     Rails.logger.error "Error generating APA citation for (#{@title}): #{e.message}"
     nil
@@ -70,7 +70,7 @@ class DatasetCitation
 
   def apa_version_text(version)
     if version.blank?
-      ''
+      ""
     else
       "Version #{version}."
     end
@@ -88,32 +88,32 @@ class DatasetCitation
   def bibtex
     tokens = []
     if @authors.any?
-      tokens << bibtex_field_author('author', @authors)
+      tokens << bibtex_field_author("author", @authors)
     end
 
     if @title.present?
-      tokens << bibtex_field('title', @title, '{{', '}}')
+      tokens << bibtex_field("title", @title, "{{", "}}")
     end
 
     if @version.present?
-      tokens << bibtex_field('version', @version)
+      tokens << bibtex_field("version", @version)
     end
 
     if @publisher.present?
-      tokens << bibtex_field('publisher', @publisher, '{{', '}}')
+      tokens << bibtex_field("publisher", @publisher, "{{", "}}")
     end
 
     if @years.any?
-      tokens << bibtex_field('year', @years.first)
+      tokens << bibtex_field("year", @years.first)
     end
 
     if @doi.present?
-      tokens << bibtex_field('url', @doi, '{', '}')
+      tokens << bibtex_field("url", @doi, "{", "}")
     end
 
     text = "@electronic{#{bibtex_id},\r\n"
     text += tokens.map { |token| "\t#{token}" }.join(",\r\n") + "\r\n"
-    text += '}'
+    text += "}"
     text
   rescue StandardError => e
     Rails.logger.error "Error generating BibTex citation for (#{@title}): #{e.message}"
@@ -125,9 +125,9 @@ class DatasetCitation
   # https://en.wikipedia.org/wiki/COinS
   def coins
     tokens = []
-    tokens << 'url_ver=Z39.88-2004'
-    tokens << 'ctx_ver=Z39.88-2004'
-    tokens << 'rft.type=webpage'
+    tokens << "url_ver=Z39.88-2004"
+    tokens << "ctx_ver=Z39.88-2004"
+    tokens << "rft.type=webpage"
     tokens << "rft_val_fmt=#{CGI.escape('info:ofi/fmt:kev:mtx:dc')}"
 
     if @title.present?
@@ -158,11 +158,11 @@ class DatasetCitation
 
   # Returns an ID value for a BibTex citation
   def bibtex_id
-    author_id = 'unknown'
+    author_id = "unknown"
     if @authors.any?
-      author_id = @authors.first.downcase.tr(' ', '_').gsub(/[^a-z0-9_]/, '')
+      author_id = @authors.first.downcase.tr(" ", "_").gsub(/[^a-z0-9_]/, "")
     end
-    year_id = @years.first&.to_s || 'unknown'
+    year_id = @years.first&.to_s || "unknown"
     "#{author_id}_#{year_id}"
   end
 
@@ -188,7 +188,7 @@ class DatasetCitation
   #                 very very very very
   #                 long value }}
   #
-  def bibtex_field(name, value, open_tag = '', close_tag = '')
+  def bibtex_field(name, value, open_tag = "", close_tag = "")
     value_trim = bibtex_lines(value).join(NEWLINE_INDENTED)
     "#{name.ljust(12)}= #{open_tag}#{value_trim}#{close_tag}"
   end
@@ -202,7 +202,7 @@ class DatasetCitation
   #              author2 and
   #              author3 }
   #
-  def bibtex_field_author(name, authors, open_tag = '{', close_tag = '}')
+  def bibtex_field_author(name, authors, open_tag = "{", close_tag = "}")
     value_trim = authors.join(" and #{NEWLINE_INDENTED}")
     "#{name.ljust(12)}= #{open_tag}#{value_trim}#{close_tag}"
   end
@@ -210,7 +210,7 @@ class DatasetCitation
   # Appends a dot to a string if it does not end with one.
   def append_dot(value)
     return nil if value.nil?
-    return '' if value.empty?
+    return "" if value.empty?
 
     "#{DatasetCitation.custom_strip(value)}."
   end
@@ -218,11 +218,11 @@ class DatasetCitation
   # Strip a few specific characters that tend to mess up citations (e.g. trailing periods, commas, et cetera)
   def self.custom_strip(value)
     return nil if value.nil?
-    return '' if value.empty?
+    return "" if value.empty?
 
     while true
       last_char = value[-1]
-      break if last_char.nil? || !last_char.in?('. ,')
+      break if last_char.nil? || !last_char.in?(". ,")
 
       value = value.chomp(last_char)
     end

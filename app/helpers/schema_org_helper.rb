@@ -28,12 +28,12 @@ module SchemaOrgHelper
 
   def license_helper(licenses)
     if licenses.none?
-      ''
+      ""
     else
       html = '"license": {'
       html += "\n\t\t\t" + '"@type": ' + '"Dataset"' + ",\n" \
-                                                       "\t\t\t" + '"text": ' + '"' + licenses[0]['identifier'] + '"' + ",\n" \
-                                                                                                                       "\t\t\t" + '"url": ' + '"' + licenses[0]['uri'] + '"'
+                                                       "\t\t\t" + '"text": ' + '"' + licenses[0]["identifier"] + '"' + ",\n" \
+                                                                                                                       "\t\t\t" + '"url": ' + '"' + licenses[0]["uri"] + '"'
       html += "\n\t\t\t},"
       html.html_safe
     end

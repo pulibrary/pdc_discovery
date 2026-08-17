@@ -11,7 +11,7 @@ class CatalogController < ApplicationController
   around_action :retry_on_exception
 
   rescue_from Blacklight::Exceptions::RecordNotFound do
-    error_page = Rails.env.production? || Rails.env.staging? ? '/discovery/errors/not_found' : '/errors/not_found'
+    error_page = Rails.env.production? || Rails.env.staging? ? "/discovery/errors/not_found" : "/errors/not_found"
     redirect_to error_page
   end
 
@@ -21,14 +21,14 @@ class CatalogController < ApplicationController
     # This error is usually the result of a bot request and therefore we don't send it to Honeybadger,
     # but we log it just in case.
     Rails.logger.warn("Invalid Range Limit, params: #{params}")
-    error_page = Rails.env.production? || Rails.env.staging? ? '/discovery/errors/range_limit_error' : '/errors/range_limit_error'
+    error_page = Rails.env.production? || Rails.env.staging? ? "/discovery/errors/range_limit_error" : "/errors/range_limit_error"
     redirect_to error_page
   rescue Blacklight::Exceptions::ECONNREFUSED, RSolr::Error::ConnectionRefused
     # If the Solr service is available, retry the HTTP request
     if search_service.repository.ping
       retry
     else
-      error_page = Rails.env.production? || Rails.env.staging? ? '/discovery/errors/network_error' : '/errors/network_error'
+      error_page = Rails.env.production? || Rails.env.staging? ? "/discovery/errors/network_error" : "/errors/network_error"
       redirect_to error_page
     end
   end
@@ -59,23 +59,23 @@ class CatalogController < ApplicationController
     # config.per_page = [10,20,50,100]
 
     # solr field configuration for search results/index views
-    config.index.title_field = 'title_tesim'
+    config.index.title_field = "title_tesim"
     # config.index.display_type_field = 'format'
     # config.index.thumbnail_field = 'thumbnail_path_ss'
 
-    config.add_results_document_tool(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
+    config.add_results_document_tool(:bookmark, partial: "bookmark_control", if: :render_bookmarks_control?)
 
     config.add_results_collection_tool(:sort_widget)
     config.add_results_collection_tool(:per_page_widget)
     config.add_results_collection_tool(:view_type_group)
 
-    config.add_show_tools_partial(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
+    config.add_show_tools_partial(:bookmark, partial: "bookmark_control", if: :render_bookmarks_control?)
     config.add_show_tools_partial(:email, callback: :email_action, validator: :validate_email_params)
     config.add_show_tools_partial(:sms, if: :render_sms_action?, callback: :sms_action, validator: :validate_sms_params)
     config.add_show_tools_partial(:citation)
 
-    config.add_nav_action(:bookmark, partial: 'blacklight/nav/bookmark', if: :render_bookmarks_control?)
-    config.add_nav_action(:search_history, partial: 'blacklight/nav/search_history')
+    config.add_nav_action(:bookmark, partial: "blacklight/nav/bookmark", if: :render_bookmarks_control?)
+    config.add_nav_action(:search_history, partial: "blacklight/nav/search_history")
 
     # solr field configuration for document/show views
     # config.show.display_type_field = 'format'
@@ -117,19 +117,19 @@ class CatalogController < ApplicationController
     #  We can remove the `component: Blacklight::FacetFieldListComponent` from the `add_facet_field` lines
     #  It is only present to remove a deprecation warning in Blacklight 7 that ironically is not needed for Blacklight 8
     #
-    config.add_facet_field 'domain_ssim', label: 'Domain', limit: 5, component: Blacklight::FacetFieldListComponent
-    config.add_facet_field 'communities_ssim', label: 'Community', limit: 5, component: Blacklight::FacetFieldListComponent
-    config.add_facet_field 'subcommunities_ssim', label: 'Subcommunity', limit: 5, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "domain_ssim", label: "Domain", limit: 5, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "communities_ssim", label: "Community", limit: 5, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "subcommunities_ssim", label: "Subcommunity", limit: 5, component: Blacklight::FacetFieldListComponent
 
-    config.add_facet_field 'collection_tag_ssim', label: 'Collection Tags', limit: 5, component: Blacklight::FacetFieldListComponent
-    config.add_facet_field 'authors_affiliation_ssim', label: 'Affiliation', limit: 5, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "collection_tag_ssim", label: "Collection Tags", limit: 5, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "authors_affiliation_ssim", label: "Affiliation", limit: 5, component: Blacklight::FacetFieldListComponent
 
-    config.add_facet_field 'genre_ssim', label: 'Type', limit: 5, component: Blacklight::FacetFieldListComponent
-    config.add_facet_field 'year_available_itsi', label: 'Year Published', range: true
+    config.add_facet_field "genre_ssim", label: "Type", limit: 5, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "year_available_itsi", label: "Year Published", range: true
 
     # Notice that is facet is not shown. Yet facet searches by this field do work
     # and we use them when users click on the "Keywords" links in the Show page.
-    config.add_facet_field 'subject_all_ssim', label: 'Keywords', show: false
+    config.add_facet_field "subject_all_ssim", label: "Keywords", show: false
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
@@ -143,34 +143,34 @@ class CatalogController < ApplicationController
     # we render a different value (see the helper). We use `author_tesim` in here because
     # that is a common field between all our records, the ones coming from DataSpace
     # and the ones coming from PDC Describe.
-    config.add_index_field 'author_tesim', label: 'Author(s)', helper_method: :authors_search_results_helper
+    config.add_index_field "author_tesim", label: "Author(s)", helper_method: :authors_search_results_helper
 
-    config.add_index_field 'format', label: 'Format'
-    config.add_index_field 'abstract_tsim', label: 'Abstract'
-    config.add_index_field 'published_ssim', label: 'Published'
-    config.add_index_field 'published_vern_ssim', label: 'Published'
-    config.add_index_field 'genre_ssim', label: 'Type'
-    config.add_index_field 'issue_date_ssim', label: 'Issue Date'
-    config.add_index_field 'version_number_ssi', label: 'Version'
+    config.add_index_field "format", label: "Format"
+    config.add_index_field "abstract_tsim", label: "Abstract"
+    config.add_index_field "published_ssim", label: "Published"
+    config.add_index_field "published_vern_ssim", label: "Published"
+    config.add_index_field "genre_ssim", label: "Type"
+    config.add_index_field "issue_date_ssim", label: "Issue Date"
+    config.add_index_field "version_number_ssi", label: "Version"
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
-    config.add_show_field 'author_tesim', label: 'Author'
-    config.add_show_field 'format', label: 'Format'
-    config.add_show_field 'url_fulltext_ssim', label: 'URL'
-    config.add_show_field 'url_suppl_ssim', label: 'More Information'
-    config.add_show_field 'language_ssim', label: 'Language'
-    config.add_show_field 'published_ssim', label: 'Published'
-    config.add_show_field 'published_vern_ssim', label: 'Published'
-    config.add_show_field 'lc_callnum_ssim', label: 'Call number'
-    config.add_show_field 'isbn_ssim', label: 'ISBN'
-    config.add_show_field 'handle_ssim', label: 'Handle'
+    config.add_show_field "author_tesim", label: "Author"
+    config.add_show_field "format", label: "Format"
+    config.add_show_field "url_fulltext_ssim", label: "URL"
+    config.add_show_field "url_suppl_ssim", label: "More Information"
+    config.add_show_field "language_ssim", label: "Language"
+    config.add_show_field "published_ssim", label: "Published"
+    config.add_show_field "published_vern_ssim", label: "Published"
+    config.add_show_field "lc_callnum_ssim", label: "Call number"
+    config.add_show_field "isbn_ssim", label: "ISBN"
+    config.add_show_field "handle_ssim", label: "Handle"
 
-    config.add_show_field 'abstract_tsim', label: 'Abstract'
-    config.add_show_field 'contributor_tsim', label: 'Author'
-    config.add_show_field 'description_tsim', label: 'Description'
-    config.add_show_field 'issue_date_ssim', label: 'Issued Date'
-    config.add_show_field 'methods_tsim', label: 'Methods'
+    config.add_show_field "abstract_tsim", label: "Abstract"
+    config.add_show_field "contributor_tsim", label: "Author"
+    config.add_show_field "description_tsim", label: "Description"
+    config.add_show_field "issue_date_ssim", label: "Issued Date"
+    config.add_show_field "methods_tsim", label: "Methods"
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
@@ -190,46 +190,46 @@ class CatalogController < ApplicationController
     # solr request handler? The one set in config[:default_solr_parameters][:qt],
     # since we aren't specifying it otherwise.
 
-    config.add_search_field 'all_fields', label: 'All Fields'
+    config.add_search_field "all_fields", label: "All Fields"
 
     # Now we see how to over-ride Solr request handler defaults, in this
     # case for a BL "search field", which is really a dismax aggregate
     # of Solr search fields.
 
-    config.add_search_field('title') do |field|
+    config.add_search_field("title") do |field|
       # solr_parameters hash are sent to Solr as ordinary url query params.
       field.solr_parameters = {
-        'spellcheck.dictionary': 'title',
-        qf: '${title_qf}',
-        pf: '${title_pf}'
+        "spellcheck.dictionary": "title",
+        qf: "${title_qf}",
+        pf: "${title_pf}"
       }
     end
 
-    config.add_search_field('author') do |field|
+    config.add_search_field("author") do |field|
       field.solr_parameters = {
-        'spellcheck.dictionary': 'author',
-        qf: '${author_qf}',
-        pf: '${author_pf}'
+        "spellcheck.dictionary": "author",
+        qf: "${author_qf}",
+        pf: "${author_pf}"
       }
     end
 
-    config.add_search_field('orcid') do |field|
-      field.label = 'ORCID'
+    config.add_search_field("orcid") do |field|
+      field.label = "ORCID"
       field.solr_parameters = {
-        qf: 'authors_orcid_ssim',
-        pf: 'authors_orcid_ssim'
+        qf: "authors_orcid_ssim",
+        pf: "authors_orcid_ssim"
       }
     end
 
     # Specifying a :qt only to show it's possible, and so our internal automated
     # tests can test it. In this case it's the same as
     # config[:default_solr_parameters][:qt], so isn't actually neccesary.
-    config.add_search_field('subject') do |field|
-      field.qt = 'search'
+    config.add_search_field("subject") do |field|
+      field.qt = "search"
       field.solr_parameters = {
-        'spellcheck.dictionary': 'subject',
-        qf: '${subject_qf}',
-        pf: '${subject_pf}'
+        "spellcheck.dictionary": "subject",
+        qf: "${subject_qf}",
+        pf: "${subject_pf}"
       }
     end
 
@@ -238,10 +238,10 @@ class CatalogController < ApplicationController
     # whether the sort is ascending or descending (it must be asc or desc
     # except in the relevancy case). Add the sort: option to configure a
     # custom Blacklight url parameter value separate from the Solr sort fields.
-    config.add_sort_field 'relevance', sort: 'score desc, issue_date_strict_ssi desc, title_si asc', label: 'relevance'
-    config.add_sort_field 'year', sort: 'issue_date_strict_ssi desc, title_si asc', label: 'year'
-    config.add_sort_field 'author', sort: 'author_si asc, title_si asc', label: 'author'
-    config.add_sort_field 'title', sort: 'title_si asc, issue_date_strict_ssi desc', label: 'title'
+    config.add_sort_field "relevance", sort: "score desc, issue_date_strict_ssi desc, title_si asc", label: "relevance"
+    config.add_sort_field "year", sort: "issue_date_strict_ssi desc, title_si asc", label: "year"
+    config.add_sort_field "author", sort: "author_si asc, title_si asc", label: "author"
+    config.add_sort_field "title", sort: "title_si asc, issue_date_strict_ssi desc", label: "title"
 
     # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.
@@ -260,7 +260,7 @@ class CatalogController < ApplicationController
 
     # Sets up Blacklight crawler detection
     config.crawler_detector = lambda { |request|
-      return true if request.env['HTTP_USER_AGENT'].blank?
+      return true if request.env["HTTP_USER_AGENT"].blank?
 
       request.bot?
     }
@@ -273,12 +273,12 @@ class CatalogController < ApplicationController
     respond_to do |format|
       format.html do
         @search_context = setup_next_and_previous_documents
-        case @document['state_ssi']
-        when 'approved'
+        case @document["state_ssi"]
+        when "approved"
           render :show
-        when 'draft'
+        when "draft"
           render :show_draft
-        when 'withdrawn'
+        when "withdrawn"
           render :show_withdrawn
         else
           render :show_blank
@@ -294,7 +294,7 @@ class CatalogController < ApplicationController
   # This endpoint is used to feed the AJAX call on the Show page for the file list and
   # therefore the return JSON must be something that DataTables can use.
   def file_list
-    document = solr_find(params['id'])
+    document = solr_find(params["id"])
     file_list = { data: document.files }
 
     render json: file_list.to_json
@@ -303,8 +303,8 @@ class CatalogController < ApplicationController
   # Returns the raw BibTex citation information
   def bibtex
     @document = search_service.fetch(params[:id])
-    citation = @document.cite('BibTeX')
-    send_data citation, filename: "#{@document.bibtex_id}.bibtex", type: 'text/plain', disposition: 'attachment'
+    citation = @document.cite("BibTeX")
+    send_data citation, filename: "#{@document.bibtex_id}.bibtex", type: "text/plain", disposition: "attachment"
   end
 
   def resolve_doi
@@ -318,7 +318,7 @@ class CatalogController < ApplicationController
 
     raise Blacklight::Exceptions::RecordNotFound if documents.empty?
 
-    preferred = documents.select { |d| d.data_source == 'pdc_discovery' }
+    preferred = documents.select { |d| d.data_source == "pdc_discovery" }
     document = if preferred.empty?
                  documents.first
                else
@@ -348,15 +348,15 @@ class CatalogController < ApplicationController
   # Create an endpoint for PPPL / OSTI harvesting that provides full datacite records
   def pppl_reporting_feed
     # Limit to items from PPPL
-    lucene_queries = ['data_source_ssi:pdc_describe', 'group_code_ssi:"PPPL"']
-    lucene_expr = lucene_queries.join(' ')
-    page = params['page'] || '1'
-    per_page = params['per_page'] || '10'
+    lucene_queries = ["data_source_ssi:pdc_describe", 'group_code_ssi:"PPPL"']
+    lucene_expr = lucene_queries.join(" ")
+    page = params["page"] || "1"
+    per_page = params["per_page"] || "10"
     start = per_page.to_i * (page.to_i - 1)
 
-    query_sort = 'internal_id_lsi desc'
-    query_fl = 'pdc_describe_json_ss'
-    query_format = 'json'
+    query_sort = "internal_id_lsi desc"
+    query_fl = "pdc_describe_json_ss"
+    query_format = "json"
     query = {
       q: lucene_expr,
       fl: query_fl,
@@ -379,9 +379,9 @@ class CatalogController < ApplicationController
   def solr_find(id)
     solr_url = Blacklight.default_configuration.connection_config[:url]
     solr = RSolr.connect(url: solr_url)
-    solr_params = { q: "id:#{id}", fl: '*' }
-    response = solr.get('select', params: solr_params)
-    solr_doc = response['response']['docs'][0]
+    solr_params = { q: "id:#{id}", fl: "*" }
+    response = solr.get("select", params: solr_params)
+    solr_doc = response["response"]["docs"][0]
     SolrDocument.new(solr_doc)
   end
 end

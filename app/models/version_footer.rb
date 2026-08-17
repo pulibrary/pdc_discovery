@@ -15,7 +15,7 @@
 class VersionFooter
   DEPLOYMENT_LOGFILE_COL_NUMBER = 7
   REVISIONS_LOG_COL = 3
-  DEFAULT_SHA = 'Unknown SHA'
+  DEFAULT_SHA = "Unknown SHA"
 
   @@stale = true
   @@git_sha = nil
@@ -51,7 +51,7 @@ class VersionFooter
   def self.local_sha
     return unless revisions
 
-    @@local_sha ||= revisions.gsub(/\)$/, '')
+    @@local_sha ||= revisions.gsub(/\)$/, "")
   end
 
   def self.revisions_log
@@ -62,7 +62,7 @@ class VersionFooter
     return if elements.length < REVISIONS_LOG_COL
 
     element = elements[REVISIONS_LOG_COL]
-    @@revisions_log ||= element.gsub(/\)$/, '')
+    @@revisions_log ||= element.gsub(/\)$/, "")
   end
 
   def self.revisions_head
@@ -92,12 +92,12 @@ class VersionFooter
                  elsif Rails.env.local?
                    `git rev-parse --abbrev-ref HEAD`.chomp
                  else
-                   'Unknown branch'
+                   "Unknown branch"
                  end
   end
 
   def self.find_version
-    return 'Not in deployed environment' unless File.exist?(revisions_logfile)
+    return "Not in deployed environment" unless File.exist?(revisions_logfile)
 
     output = `tail -1 #{revisions_logfile}`
     entries = output.chomp.split
@@ -107,7 +107,7 @@ class VersionFooter
     deployment_date = Date.parse(deployment_entry)
     return "(Deployment date could not be parsed from: #{deployment_entry}.)" if deployment_date.nil?
 
-    deployment_date.strftime('%d %B %Y')
+    deployment_date.strftime("%d %B %Y")
   end
 
   def self.version
@@ -117,13 +117,13 @@ class VersionFooter
   # This file is local to the application.
   # This file only has the git SHA of the version deployed (i.e. no date or branch)
   def self.revision_file
-    @@revision_file ||= Rails.root.join('REVISION')
+    @@revision_file ||= Rails.root.join("REVISION")
   end
 
   # Capistrano keeps this file a couple of levels up _outside_ the application.
   # This file includes all the information that we need (git SHA, branch name, date)
   def self.revisions_logfile
-    @@revisions_logfile ||= Rails.root.join('../../revisions.log')
+    @@revisions_logfile ||= Rails.root.join("../../revisions.log")
   end
 
   # These assignment methods are needed to facilitate testing

@@ -11,11 +11,11 @@ class DatasetFile
   def self.from_hash_describe(data)
     hash = data.with_indifferent_access
     file = DatasetFile.new
-    file.source = 'pdc_describe'
+    file.source = "pdc_describe"
     file.full_path = filename_without_doi(hash[:filename])        # folder1/hello.txt
     file.name = File.basename(file.full_path)                     # hello.txt
     file.extension = File.extname(file.name)
-    file.extension = file.extension[1..] if file.extension != '.' # drop the leading period
+    file.extension = file.extension[1..] if file.extension != "." # drop the leading period
     file.size = hash[:size]
     file.display_size = ActiveSupport::NumberHelper.number_to_human_size(file.size)
     file.download_url = hash[:url]
@@ -31,11 +31,11 @@ class DatasetFile
   # full_path = "10.123/4567/40/folder1/filename1.txt"
   # returns "folder1/filename1.txt"
   def self.filename_without_doi(full_path)
-    return '' if full_path.nil?
+    return "" if full_path.nil?
 
-    tokens = full_path.split('/').compact_blank
+    tokens = full_path.split("/").compact_blank
     if tokens.length > 2
-      prefix = tokens.take(3).join('/') # DOI + db id
+      prefix = tokens.take(3).join("/") # DOI + db id
       database_id = tokens[2]
       if database_id.to_i == 0
         full_path
@@ -50,7 +50,7 @@ class DatasetFile
   def self.sort_file_array(file_array)
     sorted_by_name = file_array.sort_by(&:name)
     sorted_file_array = []
-    sorted_file_array.concat(sorted_by_name.select { |a| a.name.downcase.include? 'readme' })
+    sorted_file_array.concat(sorted_by_name.select { |a| a.name.downcase.include? "readme" })
     sorted_file_array.concat(sorted_by_name.difference(sorted_file_array))
     sorted_file_array
   end

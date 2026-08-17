@@ -3,8 +3,8 @@
 class License
   def self.url(license_type)
     case normalize_type(license_type)
-    when 'cc0 license'
-      'https://creativecommons.org/publicdomain/zero/1.0/'
+    when "cc0 license"
+      "https://creativecommons.org/publicdomain/zero/1.0/"
     end
   end
 

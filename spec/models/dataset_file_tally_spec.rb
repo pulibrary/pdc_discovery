@@ -1,36 +1,36 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
-require 'csv'
+require "rails_helper"
+require "csv"
 
 RSpec.describe DatasetFileTally do
   before(:all) do
-    Blacklight.default_index.connection.delete_by_query('*:*')
+    Blacklight.default_index.connection.delete_by_query("*:*")
     Blacklight.default_index.connection.commit
     load_describe_small_data
   end
 
   let(:dft) { described_class.new(timestamp) }
-  let(:timestamp) { Time.zone.parse('2026-03-25 18:01') }
-  let(:file_info_line) { 'doi-10-34770-r75s-9j74,bitKlavier Grand Sample Library—Binaural Mic Image,2021,4,1108910,folder-a/file3.txt,396003,https' }
+  let(:timestamp) { Time.zone.parse("2026-03-25 18:01") }
+  let(:file_info_line) { "doi-10-34770-r75s-9j74,bitKlavier Grand Sample Library—Binaural Mic Image,2021,4,1108910,folder-a/file3.txt,396003,https" }
 
-  it 'has a timestamp' do
+  it "has a timestamp" do
     expect(dft.timestamp.year >= 2025).to be true
   end
 
-  it 'makes a filename based on the date and time' do
-    expect(dft.filename_summary).to eq '2026_03_25_18_01_summary.csv'
-    expect(dft.filename_details).to eq '2026_03_25_18_01_details.csv'
+  it "makes a filename based on the date and time" do
+    expect(dft.filename_summary).to eq "2026_03_25_18_01_summary.csv"
+    expect(dft.filename_details).to eq "2026_03_25_18_01_details.csv"
   end
 
-  it 'writes the file to a configurable directory' do
-    expect(dft.filepath_summary).to eq Rails.root.join('tmp', 'dataset_file_tally', dft.filepath_summary).to_s
+  it "writes the file to a configurable directory" do
+    expect(dft.filepath_summary).to eq Rails.root.join("tmp", "dataset_file_tally", dft.filepath_summary).to_s
   end
 
-  describe '#summary' do
-    let(:timestamp) { Time.zone.parse('2025-03-25 18:02') }
+  describe "#summary" do
+    let(:timestamp) { Time.zone.parse("2025-03-25 18:02") }
 
-    it 'produces an export with the summary data only' do
+    it "produces an export with the summary data only" do
       dft.summary
       lines = File.readlines(dft.filepath_summary)
       expect(lines.count).to eq 3
@@ -40,10 +40,10 @@ RSpec.describe DatasetFileTally do
     end
   end
 
-  describe '#details' do
-    let(:timestamp) { Time.zone.parse('2025-03-25 18:03') }
+  describe "#details" do
+    let(:timestamp) { Time.zone.parse("2025-03-25 18:03") }
 
-    it 'produces an export with the file list included' do
+    it "produces an export with the file list included" do
       dft.details
       lines = File.readlines(dft.filepath_details)
       expect(lines.count).to eq 5

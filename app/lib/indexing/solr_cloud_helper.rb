@@ -82,30 +82,30 @@ module Indexing
     end
 
     def self.current_collection_for_alias(solr_alias_uri)
-      alias_name = solr_alias_uri.path.split('/').last
-      alias_list_query = build_uri(base_uri: solr_alias_uri, path: '/solr/admin/collections', query: 'action=LISTALIASES')
+      alias_name = solr_alias_uri.path.split("/").last
+      alias_list_query = build_uri(base_uri: solr_alias_uri, path: "/solr/admin/collections", query: "action=LISTALIASES")
       response = HTTParty.get(alias_list_query.to_s)
       # The response will indicate the actual collection the alias points to.
-      collection_name = response.parsed_response.dig('aliases', alias_name) if response.code == 200
+      collection_name = response.parsed_response.dig("aliases", alias_name) if response.code == 200
       collection_name || alias_name
     end
 
     def self.alternate_collection_for_alias(solr_alias_uri)
       solr_collection = current_collection_for_alias(solr_alias_uri)
-      if solr_collection.end_with?('-1')
-        solr_collection.gsub('-1', '-2')
-      elsif solr_collection.end_with?('-2')
-        solr_collection.gsub('-2', '-1')
+      if solr_collection.end_with?("-1")
+        solr_collection.gsub("-1", "-2")
+      elsif solr_collection.end_with?("-2")
+        solr_collection.gsub("-2", "-1")
       else
         solr_collection
       end
     end
 
     def self.collection_exist?(solr_alias_uri, collection_name)
-      collection_list_query = build_uri(base_uri: solr_alias_uri, path: '/solr/admin/collections', query: 'action=LIST')
+      collection_list_query = build_uri(base_uri: solr_alias_uri, path: "/solr/admin/collections", query: "action=LIST")
       response = HTTParty.get(collection_list_query.to_s)
       collections = if response.code == 200
-                      response.parsed_response['collections'] || []
+                      response.parsed_response["collections"] || []
                     else
                       []
                     end
@@ -115,11 +115,11 @@ module Indexing
     def self.create_collection(solr_alias_uri, collection_name)
       create_query = build_uri(
         base_uri: solr_alias_uri,
-        path: '/solr/admin/collections',
+        path: "/solr/admin/collections",
         query: "action=CREATE&name=#{collection_name}&collection.configName=#{config_set}&numShards=1&replicationFactor=3"
       )
       response = HTTParty.get(create_query.to_s)
-      if response.code == 200 && response.parsed_response.key?('success')
+      if response.code == 200 && response.parsed_response.key?("success")
         collection_name
       else
         raise "Error creating collection #{collection_name}: #{response.parsed_response}"
@@ -129,7 +129,7 @@ module Indexing
     def self.delete_collection!(solr_alias_uri, collection_name)
       create_query = build_uri(
         base_uri: solr_alias_uri,
-        path: '/solr/admin/collections',
+        path: "/solr/admin/collections",
         query: "action=DELETE&name=#{collection_name}"
       )
       response = HTTParty.get(create_query.to_s)
@@ -138,9 +138,9 @@ module Indexing
 
     # Set the solr_alias to point to the current writer collection
     def self.update_solr_alias!
-      writer_collection = collection_writer_url.split('/').last
+      writer_collection = collection_writer_url.split("/").last
 
-      alias_name = alias_uri.path.split('/').last
+      alias_name = alias_uri.path.split("/").last
       if alias_name == writer_collection
         # Nothing to do
         # (we are probably using standalone Solr in development)
@@ -149,7 +149,7 @@ module Indexing
 
       create_query = build_uri(
         base_uri: alias_uri,
-        path: '/solr/admin/collections',
+        path: "/solr/admin/collections",
         query: "action=CREATEALIAS&name=#{alias_name}&collections=#{writer_collection}"
       )
       response = HTTParty.get(create_query.to_s)
@@ -157,15 +157,15 @@ module Indexing
     end
 
     def self.solr_document_count
-      alias_name = alias_uri.path.split('/').last
+      alias_name = alias_uri.path.split("/").last
       count_query = build_uri(
         base_uri: alias_uri,
         path: "/solr/#{alias_name}/select",
-        query: 'q=*:*&rows=0'
+        query: "q=*:*&rows=0"
       )
       response = HTTParty.get(count_query.to_s)
       if response.code == 200
-        JSON.parse(response.body)['response']['numFound'].to_i
+        JSON.parse(response.body)["response"]["numFound"].to_i
       else
         raise "Error getting count of Solr documents: #{response.body}"
       end
@@ -177,7 +177,7 @@ module Indexing
     # with the assumption that records not longer in PDC Describe will have not been touched
     # during the last index into Solr (i.e. their timestamp will be old).
     def self.delete_older_documents(old_timestamp)
-      alias_name = alias_uri.path.split('/').last
+      alias_name = alias_uri.path.split("/").last
       old_timestamp_solr_format = old_timestamp.utc.iso8601(3)
 
       Rails.logger.info "Indexing: Deleting Solr documents older than #{old_timestamp_solr_format}"
@@ -186,10 +186,10 @@ module Indexing
       delete_query = build_uri(
         base_uri: alias_uri,
         path: "/solr/#{alias_name}/update",
-        query: 'commit=true'
+        query: "commit=true"
       )
       delete_body = "<delete><query>timestamp:[* TO \"#{old_timestamp_solr_format}\"]</query></delete>"
-      delete_headers = { 'Content-Type' => 'application/xml' }
+      delete_headers = { "Content-Type" => "application/xml" }
       response = HTTParty.post(delete_query.to_s, body: delete_body, headers: delete_headers)
       Rails.logger.info "Indexing: Deleted Solr documents older than #{old_timestamp_solr_format} (#{solr_document_count - count_before})"
       response.code == 200

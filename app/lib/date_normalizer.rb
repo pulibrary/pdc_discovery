@@ -12,9 +12,9 @@ class DateNormalizer
 
   def self.format_string_for_display(date_string)
     if date_string.match?(/\d{4}-\d{2}-\d{2}/)
-      Date.strptime(date_string).strftime('%e %B %Y').strip
+      Date.strptime(date_string).strftime("%e %B %Y").strip
     elsif date_string.match?(/\d{4}-\d{2}/)
-      Date.strptime(date_string, '%Y-%m').strftime('%B %Y')
+      Date.strptime(date_string, "%Y-%m").strftime("%B %Y")
     else
       date_string
     end
@@ -31,9 +31,9 @@ class DateNormalizer
 
     case date_string
     when /\d{4}-\d{1,2}-\d{1,2}/
-      Date.strptime(date_string).strftime('%Y-%m-%d')
+      Date.strptime(date_string).strftime("%Y-%m-%d")
     when /\d{4}-\d{1,2}/
-      Date.strptime(date_string, '%Y-%m').strftime('%Y-%m-%d')
+      Date.strptime(date_string, "%Y-%m").strftime("%Y-%m-%d")
     when /\d{4}/
       "#{date_string}-01-01"
     end
@@ -48,9 +48,9 @@ class DateNormalizer
 
   def self.year_from_date(date_string)
     if date_string.match?(/\d{4}-\d{2}-\d{2}/)
-      Date.strptime(date_string).strftime('%Y').to_i
+      Date.strptime(date_string).strftime("%Y").to_i
     elsif date_string.match?(/\d{4}-\d{2}/)
-      Date.strptime(date_string, '%Y-%m').strftime('%Y').to_i
+      Date.strptime(date_string, "%Y-%m").strftime("%Y").to_i
     elsif date_string.match?(/^\d{4}/) && date_string.size == 4
       date_string.to_i
     else

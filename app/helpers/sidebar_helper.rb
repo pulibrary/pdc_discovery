@@ -5,7 +5,7 @@ module SidebarHelper
   def render_sidebar_doi_row(url, value)
     return if url.nil?
 
-    tooltip = 'Copy DOI URL to the clipboard'
+    tooltip = "Copy DOI URL to the clipboard"
     html = <<-HTML
       <span class="sidebar-header">DOI</span><br/>
       <span class="sidebar-value">#{link_to(value, url, target: '_blank', rel: 'noopener noreferrer')}
@@ -44,8 +44,8 @@ module SidebarHelper
     return if values.none?
 
     links_html = values.map do |value|
-      link_to(value, search_link(value, field), class: 'badge badge-dark sidebar-value-badge', title: value)
-    end.join(' ')
+      link_to(value, search_link(value, field), class: "badge badge-dark sidebar-value-badge", title: value)
+    end.join(" ")
 
     html = <<-HTML
       <div class="sidebar-row">
@@ -68,7 +68,7 @@ module SidebarHelper
     html.html_safe
   end
 
-  def render_sidebar_values(header, values, separator = '<br/>')
+  def render_sidebar_values(header, values, separator = "<br/>")
     return if values.none?
 
     html = <<-HTML
@@ -85,7 +85,7 @@ module SidebarHelper
 
     identifiers_html = identifiers.map do |identifier|
       related_identifier_value(identifier)
-    end.compact.join('<br/>')
+    end.compact.join("<br/>")
 
     html = <<-HTML
       <div class="sidebar-row">
@@ -99,14 +99,14 @@ module SidebarHelper
   private
 
   def related_identifier_value(identifier)
-    id = identifier['related_identifier']
-    id_type = identifier['related_identifier_type']
-    type = identifier['relation_type']&.titleize
+    id = identifier["related_identifier"]
+    id_type = identifier["related_identifier_type"]
+    type = identifier["relation_type"]&.titleize
     if id.nil? || type.nil?
       nil
-    elsif id.start_with?('https://', 'http://')
+    elsif id.start_with?("https://", "http://")
       "#{type} <a href=#{id} target=_blank>#{id}</a>"
-    elsif id_type == 'DOI'
+    elsif id_type == "DOI"
       "#{type} <a href=https://doi.org/#{id} target=_blank>#{id}</a>"
     else
       "#{type} #{id}"

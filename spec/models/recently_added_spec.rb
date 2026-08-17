@@ -1,36 +1,36 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe RecentlyAdded do
-  let(:item1) { file_fixture('pppl1.json').read }
-  let(:item2) { file_fixture('pppl2.json').read }
-  let(:item3) { file_fixture('pppl3.json').read }
+  let(:item1) { file_fixture("pppl1.json").read }
+  let(:item2) { file_fixture("pppl2.json").read }
+  let(:item3) { file_fixture("pppl3.json").read }
   let(:indexer) do
-    WorksIndexer.new(rss_url: 'file://whatever.rss')
+    WorksIndexer.new(rss_url: "file://whatever.rss")
   end
   let(:indexed_record) do
-    response = Blacklight.default_index.connection.get 'select', params: { q: '*:*' }
-    response['response']['docs'].first
+    response = Blacklight.default_index.connection.get "select", params: { q: "*:*" }
+    response["response"]["docs"].first
   end
   let(:feed) { described_class.feed }
 
   before do
-    Blacklight.default_index.connection.delete_by_query('*:*')
+    Blacklight.default_index.connection.delete_by_query("*:*")
     Blacklight.default_index.connection.commit
     indexer.index_one(item1)
     indexer.index_one(item2)
     indexer.index_one(item3)
   end
 
-  it 'returns a payload of the most recent items with required fields' do
-    expect(feed.first.title).to eq 'Lower Hybrid Drift Waves During Guide Field Reconnection'
-    expect(feed.first.authors_et_al).to eq 'Yoo, Jongsoo et al.'
-    expect(feed.first.genre).to eq 'Dataset'
-    expect(feed.first.issued_date).to eq '2020'
+  it "returns a payload of the most recent items with required fields" do
+    expect(feed.first.title).to eq "Lower Hybrid Drift Waves During Guide Field Reconnection"
+    expect(feed.first.authors_et_al).to eq "Yoo, Jongsoo et al."
+    expect(feed.first.genre).to eq "Dataset"
+    expect(feed.first.issued_date).to eq "2020"
   end
 
-  it 'excludes migrated works' do
+  it "excludes migrated works" do
     # there are 3 items in the index, but only 2 are not migrated
     expect(feed.count).to eq 2
   end

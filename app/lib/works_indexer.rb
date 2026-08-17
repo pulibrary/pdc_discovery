@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'faraday_middleware'
-require 'traject'
-require 'open-uri'
+require "faraday_middleware"
+require "traject"
+require "open-uri"
 
 ##
 # Fetch an RSS feed of all works (Approved, Draft, and Withdrawn) from PDC Describe. For each work, index a PDC Describe JSON resource to solr.
@@ -24,7 +24,7 @@ class WorksIndexer
   end
 
   def datacite_indexing_config_path
-    pathname = ::Rails.root.join('config/traject/pdc_describe_indexing_config.rb')
+    pathname = ::Rails.root.join("config/traject/pdc_describe_indexing_config.rb")
     pathname.to_s
   end
 
@@ -35,7 +35,7 @@ class WorksIndexer
     if Rails.configuration.pdc_discovery.index_pdc_describe == true
       perform_indexing
     else
-      Rails.logger.warn 'PDC Describe indexing is not turned on for this environment. See config/pdc_discovery.yml'
+      Rails.logger.warn "PDC Describe indexing is not turned on for this environment. See config/pdc_discovery.yml"
     end
   end
 
@@ -75,7 +75,7 @@ class WorksIndexer
   end
 
   def rss_url_nodes
-    rss_xml_doc.xpath('//item/url/text()')
+    rss_xml_doc.xpath("//item/url/text()")
   end
 
   def rss_url_list

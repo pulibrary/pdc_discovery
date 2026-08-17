@@ -1,30 +1,30 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Indexing::Domain do
-  describe '#from_community' do
-    it 'handles unknown communities' do
-      expect(described_class.from_community('nope')).to be_nil
+  describe "#from_community" do
+    it "handles unknown communities" do
+      expect(described_class.from_community("nope")).to be_nil
       expect(described_class.from_community(nil)).to be_nil
     end
 
-    it 'handles known communities' do
-      expect(described_class.from_community('Economics')).to eq 'Social Sciences'
+    it "handles known communities" do
+      expect(described_class.from_community("Economics")).to eq "Social Sciences"
     end
   end
 
-  describe '#from_communities' do
-    it 'handles multiple domains' do
-      expect(described_class.from_communities(%w[Economics Physics])).to eq ['Social Sciences', 'Natural Sciences']
+  describe "#from_communities" do
+    it "handles multiple domains" do
+      expect(described_class.from_communities(%w[Economics Physics])).to eq ["Social Sciences", "Natural Sciences"]
     end
 
-    it 'handles duplicate domains' do
-      expect(described_class.from_communities(['Economics', 'Computational Social Science'])).to eq ['Social Sciences']
+    it "handles duplicate domains" do
+      expect(described_class.from_communities(["Economics", "Computational Social Science"])).to eq ["Social Sciences"]
     end
 
-    it 'handles nils' do
-      expect(described_class.from_communities(['Economics', nil, 'Physics'])).to eq ['Social Sciences', 'Natural Sciences']
+    it "handles nils" do
+      expect(described_class.from_communities(["Economics", nil, "Physics"])).to eq ["Social Sciences", "Natural Sciences"]
     end
   end
 end

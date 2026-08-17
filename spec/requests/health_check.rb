@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require "rails_helper"
 
-RSpec.describe 'Health Check' do
-  describe 'GET /health' do
-    it 'has a health check' do
-      get '/health'
+RSpec.describe "Health Check" do
+  describe "GET /health" do
+    it "has a health check" do
+      get "/health"
       expect(response).to be_successful
     end
   end
