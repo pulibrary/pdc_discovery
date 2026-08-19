@@ -7,7 +7,7 @@ describe 'Landing page for withdrawn works', type: :system, js: true do
     Blacklight.default_index.connection.commit
     Rails.configuration.pdc_discovery.index_pdc_describe = true
     pdc_files = Rails.root.join("spec", "fixtures", "files", "pdc_describe_data", "").entries
-                     .reject { |name| [".", "..", "works.rss"].include?(name) }
+                     .reject { |name| [".", "..", "works.rss"].include?(name.to_s) }
     pdc_files.each do |name|
       stub_request(:get, "https://datacommons.princeton.edu/describe/works/#{name}")
         .to_return(status: 200, body: File.open(Rails.root.join("spec/fixtures/files/pdc_describe_data/#{name}")).read, headers: {})
