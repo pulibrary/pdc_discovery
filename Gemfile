@@ -51,7 +51,6 @@ gem 'voight_kampff', require: 'voight_kampff/rails'
 gem 'whenever'
 
 group :development, :test do
-  gem 'bixby'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'coveralls_reborn', '~> 0.28', require: false
   gem 'pry-byebug'
@@ -60,6 +59,9 @@ group :development, :test do
   gem 'rspec-rails'
   gem "rspec-retry"
   gem 'rspec-solr'
+  gem 'rubocop'
+  gem 'rubocop-performance'
+  gem 'rubocop-rails'
   gem 'rubocop-rspec'
   gem 'simplecov', '~> 0.22'
   gem 'yard'

@@ -64,7 +64,7 @@ class DatasetCitation
     apa_publisher = append_dot(@publisher)
     apa_doi = @doi
 
-    tokens = [append_dot(apa_author), append_dot(apa_year), apa_title, apa_version, apa_publisher, apa_doi].reject(&:blank?)
+    tokens = [append_dot(apa_author), append_dot(apa_year), apa_title, apa_version, apa_publisher, apa_doi].compact_blank
     tokens.join(' ')
   rescue => ex
     Rails.logger.error "Error generating APA citation for (#{@title}): #{ex.message}"

@@ -1,11 +1,15 @@
-require: rubocop-rspec
-inherit_gem:
-  bixby: bixby_default.yml
+---
+plugins:
+  - rubocop-rspec
+  - rubocop-rails
+  - rubocop-performance
+
 inherit_from: .rubocop_todo.yml
 
 AllCops:
   DisplayCopNames: true
   TargetRubyVersion: 2.6
+  NewCops: enable
   Exclude:
     - "bin/*"
     - "config/deploy.rb"
@@ -27,6 +31,7 @@ Rails/Output:
 RSpec/AnyInstance:
   Exclude:
     - spec/lib/research_data_harvester_spec.rb
+    - spec/system/show_pdc_describe_record_spec.rb
 
 RSpec/ExampleLength:
   Exclude:

@@ -82,7 +82,7 @@ describe 'PDC Describe Bitklavier Single item page', type: :system, js: true do
     xit "renders hyperlinks in the abstract and description fields" do
       visit '/catalog/78348'
       expect(page.html.include?('<a href="http://torus.example.com">http://torus.example.com</a>')).to be true
-      links = page.find("div.document-description").find_all("a").map { |a| a["href"] }
+      links = page.find("div.document-description").find_all("a").pluck("href")
       expect(links.include?(globus_download_link)).to be true
     end
   end

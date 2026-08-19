@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 module Indexing
-  # rubocop:disable Metrics/ClassLength
   class SolrCloudHelper
     def self.alias_uri
       Blacklight.default_index.connection.uri
@@ -206,5 +205,4 @@ module Indexing
       )
     end
   end
-  # rubocop:enable Metrics/ClassLength
 end

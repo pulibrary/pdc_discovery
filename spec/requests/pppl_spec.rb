@@ -26,7 +26,7 @@ RSpec.describe "PPPL has a harvest endpoint", type: :request do
   it "provides PDC Describe JSON records for OSTI reporting" do
     get "/pppl_reporting_feed.json"
     expect(response).to have_http_status(:success)
-    results = JSON.parse(response.body)
+    results = response.parsed_body
 
     # There should be 5 records in the index, but only 4 of them are from PPPL
     expect(results.count).to eq 4
@@ -49,7 +49,7 @@ RSpec.describe "PPPL has a harvest endpoint", type: :request do
     end
 
     it "can paginate through multiple pages of responses" do
-      results = JSON.parse(response.body)
+      results = response.parsed_body
       result = results.first
 
       # Because we set the per_page parameter to 2, we should see two results on the first page
@@ -79,7 +79,7 @@ RSpec.describe "PPPL has a harvest endpoint", type: :request do
       end
 
       it "can paginate through multiple pages of responses" do
-        results = JSON.parse(response.body)
+        results = response.parsed_body
         result = results.first
 
         json_result = JSON.parse(result["pdc_describe_json_ss"])
