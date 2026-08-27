@@ -5,6 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.3.2'
 
+gem 'amazing_print'
 gem 'bcrypt', '~> 3.1.22'
 gem 'blacklight', '>= 7.41'
 gem 'blacklight_dynamic_sitemap'
@@ -38,6 +39,7 @@ gem 'plausible_api'
 gem 'puma'
 gem 'rails', '~> 8.0'
 gem 'rails-html-sanitizer', '~>1.7.1'
+gem 'rails_semantic_logger'
 gem 'rinku'
 gem 'rsolr', '>= 1.0', '< 3'
 gem 'strscan', '>= 3.1.0'
