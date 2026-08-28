@@ -4,7 +4,7 @@ require "database_health_check"
 
 # Configure the HealthMonitor gem to use SemanticLogger and to
 # mark its checks as debug level.
-class HealthMonitor
+class HealthMonitor::HealthController < ActionController::Base
   include SemanticLogger::Loggable
 
   def initialize
