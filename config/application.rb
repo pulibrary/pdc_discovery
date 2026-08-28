@@ -31,7 +31,7 @@ module PdcDiscovery
 
     # Use semantic logger for Rails logging
     # See https://logger.reidmorrison.com/rails.html for more
-    # We want a .log file, because that's fast, and a .json file, 
+    # We want a .log file, because that's fast, and a .json file,
     # because that's structured and can be parsed by signoz.
     config.rails_semantic_logger.appenders do |appenders|
       appenders.add(file_name: "log/#{Rails.env}.log", formatter: :color)
