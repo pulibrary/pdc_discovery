@@ -2,6 +2,17 @@
 require "pul_cache"
 require "database_health_check"
 
+# Configure the HealthMonitor gem to use SemanticLogger and to
+# mark its checks as debug level.
+class HealthMonitor
+  include SemanticLogger::Loggable
+
+  def initialize
+    logger.level = :debug
+    super
+  end
+end
+
 Rails.application.config.after_initialize do
   HealthMonitor.configure do |config|
     config.no_database
