@@ -58,14 +58,7 @@ Rails.application.configure do
   # config.force_ssl = true
 
   # Log to STDOUT with the current request id as a default log tag.
-  config.logger = ActiveSupport::TaggedLogging.logger(STDOUT)
-  # Include generic and useful information about system operation, but avoid logging too much
-  # information to avoid inadvertent exposure of personally identifiable information (PII).
-
-  # rubocop: disable Layout/LineLength
-  # Change to "debug" to log everything (including potentially personally-identifiable information!)                                                                                                              -   # config.cache_store = :mem_cache_store
-  config.log_level = ENV.fetch("RAILS_LOG_LEVEL", "info")
-  # rubocop: enable Layout/LineLength
+  # config.logger = ActiveSupport::TaggedLogging.logger(STDOUT)
 
   # Prepend all log lines with the following tags.
   config.log_tags = [:request_id]

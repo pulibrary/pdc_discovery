@@ -33,6 +33,7 @@ module PdcDiscovery
     # See https://logger.reidmorrison.com/rails.html for more
     # We want a .log file, because that's fast, and a .json file,
     # because that's structured and can be parsed by signoz.
+    config.rails_semantic_logger.log_level = ENV.fetch("RAILS_LOG_LEVEL", "info").to_sym
     environments_needing_signoz = %w[production staging]
     config.rails_semantic_logger.appenders do |appenders|
       appenders.add(file_name: "log/#{Rails.env}.log", formatter: :color)
