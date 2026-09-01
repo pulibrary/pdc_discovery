@@ -41,8 +41,8 @@ namespace :index do
     uri = args[:uri]
 
     indexer = WorksIndexer.new
-    uri = URI.open("https://pdc-describe-staging.princeton.edu/describe/works/730.json", open_timeout: 60, read_timeout: 60)
-    resource_json = uri.read
+    full_uri = URI.open(uri, open_timeout: 60, read_timeout: 60)
+    resource_json = full_uri.read
     indexer.index_one(resource_json)
   end
 end
