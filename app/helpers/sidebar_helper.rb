@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# rubocop:disable Rails/OutputSafety
+# rubocop:disable-next Rails/OutputSafety
 module SidebarHelper
   # Outputs the HTML to render the DOI with a copy to clipboard button next to it.
   def render_sidebar_doi_row(url, value)
@@ -111,4 +111,3 @@ module SidebarHelper
     end
   end
 end
-# rubocop:enable Rails/OutputSafety

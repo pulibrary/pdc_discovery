@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require 'rails_helper'
 
-# rubocop:disable RSpec/ExampleLength
+# rubocop:disable-next RSpec/ExampleLength
 RSpec.describe RecentlyAdded do
   let(:item1) { file_fixture("pppl1.json").read }
   let(:item2) { file_fixture("pppl2.json").read }
@@ -34,4 +34,3 @@ RSpec.describe RecentlyAdded do
     expect(feed.count).to eq 2
   end
 end
-# rubocop:enable RSpec/ExampleLength

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# rubocop:disable Rails/OutputSafety
+# rubocop:disable-next Rails/OutputSafety
 module SchemaOrgHelper
   def keywords_helper(subjects)
     keywords_json = subjects.map do |subject|
@@ -40,4 +40,3 @@ module SchemaOrgHelper
     end
   end
 end
-# rubocop:enable Rails/OutputSafety

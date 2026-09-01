@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# rubocop:disable Metrics/ClassLength
+# rubocop:disable-next Metrics/ClassLength
 class SolrDocument
   include Blacklight::Solr::Document
 
@@ -553,11 +553,10 @@ class SolrDocument
   end
 
   # Returns the ID for a BibTeX citation for this document.
-  # rubocop:disable Rails/Delegate
+  # rubocop:disable-next Rails/Delegate
   def bibtex_id
     citation.bibtex_id
   end
-  # rubocop:enable Rails/Delegate
 
   # Access and parse the embargo date timestamp
   # @return [Date]
@@ -590,4 +589,3 @@ class SolrDocument
     embargo_date >= current_date
   end
 end
-# rubocop:enable Metrics/ClassLength

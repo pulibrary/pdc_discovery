@@ -87,7 +87,7 @@ class DatasetCitation
   #
   # Notice that we use the @electronic{...} identifier instead of @dataset{...} since
   # Zotero does not recognize the later.
-  # rubocop:disable Metrics/PerceivedComplexity
+  # rubocop:disable-next Metrics/PerceivedComplexity
   def bibtex
     tokens = []
     if @authors.count > 0
@@ -122,7 +122,6 @@ class DatasetCitation
     Rails.logger.error "Error generating BibTex citation for (#{@title}): #{ex.message}"
     nil
   end
-  # rubocop:enable Metrics/PerceivedComplexity
 
   # Return a string with the ContextObjects in Spans (COinS) information
   # https://en.wikipedia.org/wiki/COinS

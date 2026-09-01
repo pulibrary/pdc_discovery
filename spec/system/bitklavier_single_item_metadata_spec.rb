@@ -28,7 +28,7 @@ describe 'PDC Describe Bitklavier Single item page', type: :system, js: true do
     expect(page).to have_css '.issue-date-heading'
   end
 
-  # rubocop:disable Layout/LineLength
+  # rubocop:disable-next Layout/LineLength
   it "has expected metadata" do
     visit '/catalog/doi-10-34770-r75s-9j74'
     expect(page).to have_content "bitKlavier Grand Sample Library—Binaural Mic Image"
@@ -45,7 +45,6 @@ describe 'PDC Describe Bitklavier Single item page', type: :system, js: true do
     expect(page.html.include?(author_popover_affiliation)).to be true
     expect(page.html.include?(author_meta)).to be true
   end
-  # rubocop:enable Layout/LineLength
 
   it "renders collection tags as links" do
     visit '/catalog/doi-10-34770-r75s-9j74'
@@ -55,7 +54,7 @@ describe 'PDC Describe Bitklavier Single item page', type: :system, js: true do
     expect(page.html.include?(tag2)).to be true
   end
 
-  # rubocop:disable Layout/LineLength
+  # rubocop:disable-next Layout/LineLength
   xit "has expected citation information" do
     visit '/catalog/78348'
     apa_citation = "Stotler, D., F. Scotti, R.E. Bell, A. Diallo, B.P. LeBlanc, M. Podesta, A.L. Roquemore, & P.W. Ross. (2016). Midplane neutral density profiles in the National Spherical Torus Experiment [Data set]. Princeton Plasma Physics Laboratory, Princeton University."
@@ -63,7 +62,6 @@ describe 'PDC Describe Bitklavier Single item page', type: :system, js: true do
     expect(page.html.include?('<button id="show-apa-citation-button"')).to be true
     expect(page.html.include?('<button id="show-bibtex-citation-button"')).to be true
   end
-  # rubocop:enable Layout/LineLength
 
   xit "has expected HTML SPAN element with COinS information" do
     visit '/catalog/78348'

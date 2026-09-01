@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 # rubocop:disable Layout/LineLength
-# rubocop:disable RSpec/ExampleLength
+# rubocop:disable-next RSpec/ExampleLength
 RSpec.describe DatasetCitation do
   let(:single_author_dataset) { described_class.new(["Menard, J.E."], [2018], "Compact steady-state tokamak", "Data set", "Princeton University", "http://doi.org/princeton/test123", 1) }
   let(:two_authors_dataset) { described_class.new(["Menard, J.E.", "Lopez, R."], [2018], "Compact steady-state tokamak", "Data set", "Princeton University", "http://doi.org/princeton/test123", "") }
@@ -77,5 +77,4 @@ RSpec.describe DatasetCitation do
     end
   end
 end
-# rubocop:enable RSpec/ExampleLength
 # rubocop:enable Layout/LineLength
