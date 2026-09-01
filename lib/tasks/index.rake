@@ -34,4 +34,17 @@ namespace :index do
     end
     Indexing::SolrCloudHelper.collection_writer_commit!
   end
+
+  desc 'Index a single work from pdc_describe'
+  task :single_index, [:uri] => [:environment] do |_, args|
+    Rails.logger.info "Indexing: Research Data indexing started"
+    uri = args[:uri]
+
+    # rubocop:disable Security/Open
+    indexer = WorksIndexer.new
+    full_uri = URI.open(uri, open_timeout: 60, read_timeout: 60)
+    resource_json = full_uri.read
+    indexer.index_one(resource_json)
+    # rubocop:enable Security/Open
+  end
 end
