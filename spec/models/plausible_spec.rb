@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-# rubocop:disable Layout/LineLength
+# rubocop:disable-next Layout/LineLength
 RSpec.describe Plausible do
   let(:url) do
     plausible = "https://plausible.io/api/v1"
@@ -94,4 +94,3 @@ RSpec.describe Plausible do
     end
   end
 end
-# rubocop:enable Layout/LineLength
