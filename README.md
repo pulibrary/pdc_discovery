@@ -13,7 +13,7 @@ Update the file `config/banner.yml`. Note that each environment can have its own
 
 ## Local development
 
-This project uses [devbox](https://www.jetify.com/devbox) to manage system dependencies, and [lando](https://lando.dev/)/docker to run services (postgres and solr). 
+This project uses [devbox](https://www.jetify.com/devbox) to manage system dependencies, and [lando](https://lando.dev/)/docker to run services (postgres and solr).
 
 ### Setup
 
@@ -112,7 +112,7 @@ NOTE: We used to use two Solr collections (e.g. `pdc-discovery-staging-1` and `p
 2. create a new collection via the collections tab (do not make it end in -1 or -2)
 3. on the correct server run `SOLR_URL=http://<solr_url>:8983/solr/<new collection name> bundle exec rake index:research_data
    1. for example `SOLR_URL=http://lib-solr8d-staging.princeton.edu:8983/solr/pdc-discovery-new bundle exec rake index:research_data`
-4. delete the alias for `pdc-discovery-staging` or `pdc-discovery-production` and create a new alias with the same name pointing at the new collection  
+4. delete the alias for `pdc-discovery-staging` or `pdc-discovery-production` and create a new alias with the same name pointing at the new collection
 
 ### Updating the Solr schema in production/staging
 
@@ -185,3 +185,7 @@ There are two rake tasks that produce CSV files with information about the datas
 * `bundle exec rake export:details` generates a file that includes the list of datasets and their files (one line per file).
 
 The generated file will be outputed to the `ENV["DATASET_FILE_TALLY_DIR"]` folder and will be named with todays' timestamp.
+
+## Generating an RSS feed
+
+To generate rss feeds for works that have been approved, or are awaiting approval and have draft doi's, visit: https://datacommons.princeton.edu/describe/works.rss
