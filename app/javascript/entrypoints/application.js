@@ -21,14 +21,16 @@ import 'popper.js';
 import 'bootstrap';
 
 // 6. Import Blacklight and typeahead autocomplete
-import 'blacklight-frontend';
+import Blacklight from 'blacklight-frontend';
+window.Blacklight = Blacklight;
 import '../vendor/twitter/typeahead/typeahead.bundle.js';
 import DataTable from 'datatables.net';
 import 'datatables.net-dt';
 DataTable.use($);
 
-// 7. Import vendored blacklight_range_limit ESM
-import '../vendor/blacklight_range_limit/blacklight_range_limit.esm.js';
+// 7. Import blacklight-range-limit (Chart.js histogram + range form)
+import BlacklightRangeLimit from 'blacklight-range-limit';
+BlacklightRangeLimit.init({ onLoadHandler: Blacklight.onLoad });
 
 // Custom inline scripting from original application.js
 $(function () {
@@ -50,7 +52,7 @@ $(function () {
 
 // 8. Flush any queued inline jQuery ready handlers and event listeners
 if (window._jqQueue) {
-  window._jqQueue.forEach(item => {
+  window._jqQueue.forEach((item) => {
     try {
       if (item.type === 'ready') {
         $(item.handler);
@@ -63,4 +65,3 @@ if (window._jqQueue) {
   });
   delete window._jqQueue;
 }
-

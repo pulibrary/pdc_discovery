@@ -566,6 +566,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@kurkle/color@npm:^0.3.0":
+  version: 0.3.4
+  resolution: "@kurkle/color@npm:0.3.4"
+  checksum: 10c0/0e9fd55c614b005c5f0c4c755bca19ec0293bc7513b4ea3ec1725234f9c2fa81afbc78156baf555c8b9cb0d305619253c3f5bca016067daeebb3d00ebb4ea683
+  languageName: node
+  linkType: hard
+
 "@napi-rs/wasm-runtime@npm:^1.1.6":
   version: 1.1.6
   resolution: "@napi-rs/wasm-runtime@npm:1.1.6"
@@ -1107,6 +1114,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"blacklight-range-limit@npm:^9.2.0":
+  version: 9.2.0
+  resolution: "blacklight-range-limit@npm:9.2.0"
+  dependencies:
+    chart.js: "npm:^ 4.4.1"
+  checksum: 10c0/3f45ba32f54aadbca08989f57486c05443334193408b86fdef84da92000ca2fac9226101fae3f3abcd75158f5709b3ba8bcd67da5f2bf40f5ce0e7087578fa52
+  languageName: node
+  linkType: hard
+
 "bootstrap@npm:4.6":
   version: 4.6.2
   resolution: "bootstrap@npm:4.6.2"
@@ -1232,6 +1248,15 @@ __metadata:
     ansi-styles: "npm:^4.1.0"
     supports-color: "npm:^7.1.0"
   checksum: 10c0/4a3fef5cc34975c898ffe77141450f679721df9dde00f6c304353fa9c8b571929123b26a0e4617bde5018977eb655b31970c297b91b63ee83bb82aeb04666880
+  languageName: node
+  linkType: hard
+
+"chart.js@npm:^ 4.4.1, chart.js@npm:^4.5.1":
+  version: 4.5.1
+  resolution: "chart.js@npm:4.5.1"
+  dependencies:
+    "@kurkle/color": "npm:^0.3.0"
+  checksum: 10c0/3f2a11dcaae9079e8e6b8ad077e2ae311f04996f9da14815730891e66215ee8b5f2c0eb70b5a156e5bde0f89a41bae13506dc6153e50fd22dcb282b21eec706f
   languageName: node
   linkType: hard
 
@@ -2924,7 +2949,9 @@ __metadata:
     "@rails/activestorage": "npm:^7.2.301"
     "@rails/ujs": "npm:^7.1.600"
     blacklight-frontend: "npm:^8.0.0"
+    blacklight-range-limit: "npm:^9.2.0"
     bootstrap: "npm:4.6"
+    chart.js: "npm:^4.5.1"
     color-string: "npm:^1.9.1"
     datatables.net: "npm:^2.3.8"
     datatables.net-dt: "npm:^2.3.8"
