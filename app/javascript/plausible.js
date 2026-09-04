@@ -23,4 +23,3 @@ function log_plausible_citation(action) {
 window.log_plausible_file_download = log_plausible_file_download;
 window.log_plausible_globus_download = log_plausible_globus_download;
 window.log_plausible_citation = log_plausible_citation;
-

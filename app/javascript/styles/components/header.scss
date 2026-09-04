@@ -1,5 +1,5 @@
 .navbar-logo {
-  background-image: asset_url("logo.png");
+  background-image: url('@images/logo.png');
   background-size: contain;
   display: inline-block;
   flex: 0 0 420px;
@@ -45,7 +45,7 @@
 
 @media all and (max-width: 550px) {
   .navbar-logo {
-    background-image: asset_url("mobile_logo.png");
+    background-image: url('@images/mobile_logo.png');
     background-size: 80%;
   }
 }

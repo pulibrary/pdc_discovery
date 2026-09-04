@@ -845,7 +845,7 @@ DEPENDENCIES
   blacklight (>= 7.41)
   blacklight-marc (~> 8.1.0)
   blacklight_dynamic_sitemap
-  blacklight_range_limit (~> 9.2)
+  blacklight_range_limit (>= 9.2)
   bootsnap (>= 1.4.4)
   byebug
   capistrano
