@@ -15,7 +15,7 @@
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^17.0.0",
     "postcss-preset-env": "^11.5.1",
-    "sass": "^1.102.0",
+    "sass": "^1.104.0",
     "stylelint": "^17.15.0",
     "stylelint-config-prettier": "^9.0.5",
     "turbolinks": "^5.2.0"
