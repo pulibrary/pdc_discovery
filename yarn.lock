@@ -3171,8 +3171,8 @@ __metadata:
     stylelint-prettier: "npm:^5.0.3"
     stylelint-scss: "npm:^7.2.0"
     turbolinks: "npm:^5.2.0"
-    vite: "npm:^8.0.0"
-    vite-plugin-ruby: "npm:^5.2.0"
+    vite: "npm:^8.2.2"
+    vite-plugin-ruby: "npm:^5.2.3"
   peerDependencies:
     postcss: ">=8.4.31"
   languageName: unknown
@@ -4269,7 +4269,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-ruby@npm:^5.2.0":
+"vite-plugin-ruby@npm:^5.2.3":
   version: 5.2.3
   resolution: "vite-plugin-ruby@npm:5.2.3"
   dependencies:
@@ -4281,7 +4281,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^8.0.0":
+"vite@npm:^8.2.2":
   version: 8.2.2
   resolution: "vite@npm:8.2.2"
   dependencies:
