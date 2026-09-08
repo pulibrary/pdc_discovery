@@ -141,6 +141,8 @@ jobs:
     environment:
       RAILS_ENV: test
       SPEC_OPTS: "--tag ~type:system --format progress"
+      COVERALLS_PARALLEL: true
+      COVERALLS_FLAG_NAME: rspec
     steps:
       - attach_workspace:
           at: "~/pdc_discovery"
@@ -166,6 +168,9 @@ jobs:
           java --version
       - run: bundle exec rake db:create RAILS_ENV=test
       - run: bundle exec rake db:migrate RAILS_ENV=test
+      - run:
+          name: Build Vite assets
+          command: bundle exec vite build
       # Test
       - run:
           name: Run Rspec
@@ -173,6 +178,8 @@ jobs:
       - store_artifacts:
           path: ~/pdc_discovery/coverage
       - coveralls/upload:
+          parallel: true
+          flag_name: rspec
           fail_on_error: false
 
   test_browser:
@@ -180,6 +187,8 @@ jobs:
     environment:
       RAILS_ENV: test
       SPEC_OPTS: "--tag type:system --format progress"
+      COVERALLS_PARALLEL: true
+      COVERALLS_FLAG_NAME: rspec-system
     steps:
       - attach_workspace:
           at: "~/pdc_discovery"
@@ -205,6 +214,9 @@ jobs:
           java --version
       - run: bundle exec rake db:create RAILS_ENV=test
       - run: bundle exec rake db:migrate RAILS_ENV=test
+      - run:
+          name: Build Vite assets
+          command: bundle exec vite build
       # Test
       - run:
           name: Run Rspec
@@ -212,6 +224,15 @@ jobs:
       - store_artifacts:
           path: ~/pdc_discovery/coverage
       - coveralls/upload:
+          parallel: true
+          flag_name: rspec-system
+          fail_on_error: false
+
+  coveralls_finish:
+    executor: pdc_discovery_executor_build
+    steps:
+      - coveralls/upload:
+          parallel_finished: true
           fail_on_error: false
 
 workflows:
@@ -225,6 +246,10 @@ workflows:
       - test_browser:
           requires:
             - build
+      - coveralls_finish:
+          requires:
+            - test
+            - test_browser
 
       - rubocop:
           requires:
