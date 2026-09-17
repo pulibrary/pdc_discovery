@@ -1,0 +1,24 @@
+@use 'variables/typography';
+
+.document-downloads {
+  .table {
+    border: 0.2rem solid #dee2e6;
+
+    tr {
+      th {
+        border-right-width: 0;
+      }
+
+      td {
+        border-left: 0.075rem solid #dee2e6;
+      }
+    }
+  }
+}
+
+.globus_button {
+  margin-top: 15px;
+  background-color: #335a95; /* Globus blue */
+  width: max-content;
+  float: right;
+}

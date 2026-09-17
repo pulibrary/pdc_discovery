@@ -30,7 +30,7 @@ describe 'Show PDC Page', type: :system, js: true do
   end
   it 'has the README files first' do
     visit '/catalog/doi-10-34770-bm4s-t361'
-    sleep(0.1) # wait for the files to load via AJAX
+    sleep(1.0) # wait for the files to load via AJAX
     first_filename_spot = find(:css, '#files-table>tbody>tr:first-child>td', match: :first).text
     expect(first_filename_spot).to eq("Fig11b_readme.hdf")
   end

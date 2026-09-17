@@ -175,5 +175,13 @@ RSpec.describe "Catalog", type: :request do
       get "/catalog/doi-10-80021-t4ef-k000" # blank work
       expect(response.status).to eq(200)
     end
+
+    it "filters catalog results by year published range" do
+      get "/catalog", params: { range: { year_available_itsi: { begin: "2022", end: "2022" } } }
+      expect(response).to have_http_status(:ok)
+      body = response.body.to_s
+      expect(body).to include("Year Published")
+      expect(body).to include('data-blrl-single="2022"')
+    end
   end
 end

@@ -2,4 +2,5 @@ README.md
 docs/
 .prettierrc
 vendor/
+app/javascript/vendor/
 .yarn/

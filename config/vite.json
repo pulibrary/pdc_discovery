@@ -12,5 +12,13 @@
     "autoBuild": true,
     "publicOutputDir": "vite-test",
     "port": 3037
+  },
+  "staging": {
+    "publicOutputDir": "discovery/vite",
+    "base": "/discovery/vite/"
+  },
+  "production": {
+    "publicOutputDir": "discovery/vite",
+    "base": "/discovery/vite/"
   }
 }

@@ -81,8 +81,6 @@ GEM
       sshkit (>= 1.6.1, != 1.7.0)
     amazing_print (2.0.0)
     ast (2.4.3)
-    autoprefixer-rails (10.4.21.0)
-      execjs (~> 2)
     axe-core-api (4.13.0)
       dumb_delegator
     axe-core-rspec (4.13.0)
@@ -113,15 +111,11 @@ GEM
     blacklight_dynamic_sitemap (1.0.0)
       blacklight (> 7.0)
       rails
-    blacklight_range_limit (8.5.0)
-      blacklight (>= 7.25.2, < 9)
-      deprecation
-      view_component (>= 2.54, < 4)
+    blacklight_range_limit (9.2.0)
+      blacklight (>= 7.25.2, < 10)
+      view_component (>= 2.54, < 5)
     bootsnap (1.26.0)
       msgpack (~> 1.5)
-    bootstrap (4.6.2.1)
-      autoprefixer-rails (>= 9.1.0)
-      popper_js (>= 1.16.1, < 2)
     builder (3.3.0)
     byebug (13.0.0)
       reline (>= 0.6.0)
@@ -160,15 +154,6 @@ GEM
       rexml
     crass (1.0.7)
     csv (3.3.6)
-    dartsass-rails (0.5.1)
-      railties (>= 6.0.0)
-      sass-embedded (~> 1.63)
-    dartsass-sprockets (3.2.1)
-      railties (>= 4.0.0)
-      sassc-embedded (~> 1.80.1)
-      sprockets (> 3.0)
-      sprockets-rails
-      tilt
     date (3.5.1)
     deprecation (1.1.0)
       activesupport
@@ -191,8 +176,6 @@ GEM
     ed25519 (1.4.0)
     erb (6.0.7)
     erubi (1.13.1)
-    execjs (2.10.2)
-      json (>= 2)
     faraday (1.10.6)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
@@ -578,7 +561,6 @@ GEM
     pg (1.6.3-x86_64-linux)
     pg (1.6.3-x86_64-linux-musl)
     plausible_api (0.4.2)
-    popper_js (1.16.1)
     pp (0.6.4)
       prettyprint
     prettyprint (0.2.0)
@@ -728,27 +710,6 @@ GEM
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
     rubyzip (3.6.0)
-    sass-embedded (1.104.0)
-      google-protobuf (~> 4.31)
-      rake (>= 13)
-    sass-embedded (1.104.0-aarch64-linux-gnu)
-      google-protobuf (~> 4.31)
-    sass-embedded (1.104.0-aarch64-linux-musl)
-      google-protobuf (~> 4.31)
-    sass-embedded (1.104.0-arm-linux-gnueabihf)
-      google-protobuf (~> 4.31)
-    sass-embedded (1.104.0-arm-linux-musleabihf)
-      google-protobuf (~> 4.31)
-    sass-embedded (1.104.0-arm64-darwin)
-      google-protobuf (~> 4.31)
-    sass-embedded (1.104.0-x86_64-darwin)
-      google-protobuf (~> 4.31)
-    sass-embedded (1.104.0-x86_64-linux-gnu)
-      google-protobuf (~> 4.31)
-    sass-embedded (1.104.0-x86_64-linux-musl)
-      google-protobuf (~> 4.31)
-    sassc-embedded (1.80.9)
-      sass-embedded (~> 1.80)
     securerandom (0.4.1)
     selenium-webdriver (4.48.0)
       base64 (~> 0.2)
@@ -785,7 +746,6 @@ GEM
     term-ansicolor (1.11.3)
       tins (~> 1)
     thor (1.5.0)
-    tilt (2.9.0)
     timeout (0.6.1)
     tins (1.56.0)
       bigdecimal
@@ -885,9 +845,8 @@ DEPENDENCIES
   blacklight (>= 7.41)
   blacklight-marc (~> 8.1.0)
   blacklight_dynamic_sitemap
-  blacklight_range_limit (~> 8.2)
+  blacklight_range_limit (>= 9.2)
   bootsnap (>= 1.4.4)
-  bootstrap (~> 4.0)
   byebug
   capistrano
   capistrano-passenger
@@ -895,8 +854,7 @@ DEPENDENCIES
   capybara
   concurrent-ruby (~> 1.3.7)
   coveralls_reborn (~> 0.28)
-  dartsass-rails (~> 0.5.0)
-  dartsass-sprockets
+  deprecation
   devise
   devise-guests (~> 0.6)
   ed25519
@@ -907,7 +865,6 @@ DEPENDENCIES
   honeybadger
   httparty
   jbuilder (~> 2.7)
-  jquery-rails
   listen (~> 3.3)
   multi_xml
   mutex_m
@@ -923,7 +880,7 @@ DEPENDENCIES
   pry-rails
   puma
   rack-mini-profiler (~> 2.0)
-  rails (~> 8.0)
+  rails (~> 8.1.3)
   rails-html-sanitizer (~> 1.7.1)
   rails_semantic_logger
   rinku
@@ -938,6 +895,7 @@ DEPENDENCIES
   rubocop-rspec
   selenium-webdriver
   simplecov (~> 0.22)
+  sprockets-rails
   strscan (>= 3.1.0)
   thor
   traject

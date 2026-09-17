@@ -5,6 +5,10 @@ ENV['RACK_ENV'] ||= 'test'
 
 require 'spec_helper'
 require File.expand_path('../config/environment', __dir__)
+# Build Vite assets once for request/system specs that render the layout.
+# CircleCI sets CI=true, which skips the Vite dev proxy; without a prior
+# `vite build`, `vite_javascript_tag` raises MissingEntrypointError.
+ViteRuby.commands.build
 # Prevent database truncation if the environment is production
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 # Add additional requires below this line. Rails is not loaded until this point!
