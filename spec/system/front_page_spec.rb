@@ -2,6 +2,14 @@
 require 'rails_helper'
 
 describe 'Application landing page', type: :system do
+  context "the logo", js: true do
+    it "is rendered correctly" do
+      visit '/'
+      byebug
+    end
+  end
+
+
   context "checking the page structure" do
     let(:feed_docs) do
       docs = []
