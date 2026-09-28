@@ -15,6 +15,26 @@ services:
   pdc_database:
     type: postgres:15
     portforward: true
+  chrome:
+    type: compose
+    app_mount: false
+    services:
+      image: selenium/standalone-chromium:149.0
+      environment:
+        START_XVFB: "true"
+        SE_NODE_MAX_SESSIONS: 20
+        SE_NODE_OVERRIDE_MAX_SESSIONS: "true"
+      logging:
+        driver: none
+      shm_size: 2G
+      ports:
+        - "4445:4444"
+        - "5900:5900"
+        - "7900:7900"
+      volumes:
+        - /dev/shm:/dev/shm
+      command: /opt/bin/entry_point.sh
+    portforward: true
 proxy:
   pdc_test_solr:
     - pdc.test.solr.lndo.site:8983
