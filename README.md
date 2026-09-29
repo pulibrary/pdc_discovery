@@ -50,6 +50,11 @@ This project uses [devbox](https://www.jetify.com/devbox) to manage system depen
   Faster: `bundle exec rspec spec`
   Run in browser: `RUN_IN_BROWSER=true bundle exec rspec spec`
 
+  If you want to watch feature tests run for debugging purposes, you can go to
+  <http://localhost:7900>, use the password `secret`, and run tests like this:
+
+  `RUN_IN_BROWSER=true bundle exec rspec spec`
+
 7. Access PDC Discovery at [http://localhost:3000/](http://localhost:3000)
 
 ### Starting / stopping services
