@@ -75,6 +75,10 @@ RSpec.configure do |config|
 
   config.before(:each, type: :system) do
     ActiveJob::Base.queue_adapter = :test
-    driven_by(:chrome)
+     if ENV["RUN_IN_BROWSER"]
+      driven_by(:chrome)
+    else
+      driven_by(:selenium)
+    end
   end
 end
