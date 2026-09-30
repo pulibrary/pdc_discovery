@@ -9,7 +9,6 @@ describe 'Application landing page', type: :system do
     end
   end
 
-
   context "checking the page structure" do
     let(:feed_docs) do
       docs = []
