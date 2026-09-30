@@ -5,7 +5,7 @@ describe 'Application landing page', type: :system do
   context "the logo", js: true do
     it "is rendered correctly" do
       visit '/'
-      byebug
+      expect(page).to have_css '.navbar-logo'
     end
   end
 
