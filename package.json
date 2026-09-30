@@ -8,7 +8,7 @@
     "blacklight-frontend": "^8.0.0",
     "blacklight-range-limit": "^9.2.0",
     "bootstrap": "4.6",
-    "brace-expansion": "^5.0.9",
+    "brace-expansion": "^5.0.12",
     "chart.js": "^4.5.1",
     "color-string": "^2.1.4",
     "datatables.net": "^2.3.8",
