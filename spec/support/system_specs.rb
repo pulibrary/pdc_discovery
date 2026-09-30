@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 Capybara.configure do |config|
-  # config.default_driver = :chrome
 
   # Makes sure fields are blanked out before being repopulated when using `fill_in`
   # https://github.com/teamcapybara/capybara/issues/2419#issuecomment-738798878
