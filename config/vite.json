@@ -15,7 +15,7 @@
   },
   "staging": {
     "publicOutputDir": "discovery/vite",
-    "base": "/discovery/vite/"
+    "base": ''
   },
   "production": {
     "publicOutputDir": "discovery/vite",
