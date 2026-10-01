@@ -1,11 +1,13 @@
 .navbar-logo {
   background-image: url('@images/logo.png');
+  background-repeat: no-repeat;
   background-size: contain;
   display: inline-block;
   flex: 0 0 420px;
   height: 100px;
   width: 420px;
   margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .navbar.bg-light {
