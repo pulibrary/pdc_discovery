@@ -2,6 +2,13 @@
 require 'rails_helper'
 
 describe 'Application landing page', type: :system do
+  context "the logo", js: true do
+      it "is rendered correctly" do
+        visit '/'
+        expect(page).to have_css '.navbar-logo'
+      end
+    end
+
   context "checking the page structure" do
     let(:feed_docs) do
       docs = []
