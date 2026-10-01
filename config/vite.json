@@ -17,7 +17,6 @@
     "publicOutputDir": "discovery/vite"
   },
   "production": {
-    "publicOutputDir": "discovery/vite",
-    "base": "/discovery/vite/"
+    "publicOutputDir": "discovery/vite"
   }
 }
