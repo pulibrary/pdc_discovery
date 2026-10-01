@@ -14,8 +14,7 @@
     "port": 3037
   },
   "staging": {
-    "publicOutputDir": "discovery/vite",
-    "base": ''
+    "publicOutputDir": "discovery/vite"
   },
   "production": {
     "publicOutputDir": "discovery/vite",
