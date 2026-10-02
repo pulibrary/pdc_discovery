@@ -45,14 +45,13 @@ gem 'thor'
 gem 'traject'
 gem 'turbolinks', '~> 5'
 gem 'twitter-typeahead-rails', '0.11.1.pre.corejavascript'
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'vite_rails'
 gem 'voight_kampff', require: 'voight_kampff/rails'
 gem 'whenever'
 
 group :development, :test do
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'coveralls_reborn', '~> 0.28', require: false
+  gem 'byebug'
+  gem 'coveralls_reborn', require: false
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec'
@@ -63,7 +62,7 @@ group :development, :test do
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
-  gem 'simplecov', '~> 0.22'
+  gem 'simplecov'
   gem 'yard'
 end
 
