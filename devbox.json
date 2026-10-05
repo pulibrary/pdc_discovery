@@ -22,7 +22,7 @@
   ],
   "env": {
     "DEVBOX": "1",
-    "BUNDLER_VERSION": "2.5.9"
+    "BUNDLER_VERSION": "4.0.22"
   },
   "shell": {
     "init_hook": ["echo 'Environment Ready'"],
