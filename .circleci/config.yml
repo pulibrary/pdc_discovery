@@ -119,7 +119,7 @@ jobs:
           name: Run rubocop
           command: bundle exec rubocop
 
-  # Lint the JavaScript, CSS, Sass, and Vue source code files
+  # Prettier checks the whole tree. Paths in .prettierignore are skipped.
   eslint:
     executor: pdc_discovery_executor_build
     steps:
@@ -127,8 +127,8 @@ jobs:
           at: "~/pdc_discovery"
       - yarn_install
       - run:
-          name: Run ESLint with Prettier for linting
-          command: yarn run lint
+          name: Run Prettier
+          command: yarn prettier --check .
 
   test:
     executor: pdc_discovery_executor

@@ -18,6 +18,7 @@ This project uses [devbox](https://www.jetify.com/devbox) to manage system depen
 ### Setup
 
 > **Notes**
+
 1. Install Devbox (see `./bin/first-time-setup.sh`).
 
 2. Start a devbox shell:
@@ -34,26 +35,27 @@ This project uses [devbox](https://www.jetify.com/devbox) to manage system depen
 
 4. Start the services
 
-    Start and initialize solr and database services with:
-    ```
-    bundle exec rake servers:start
-    ```
+   Start and initialize solr and database services with:
+
+   ```
+   bundle exec rake servers:start
+   ```
 
 5. Start the Rails server:
 
-  ```sh
-    bin/rails s -p 3000
-  ```
+```sh
+  bin/rails s -p 3000
+```
 
 6. Run tests:
 
-  Faster: `bundle exec rspec spec`
-  Run in browser: `RUN_IN_BROWSER=true bundle exec rspec spec`
+Faster: `bundle exec rspec spec`
+Run in browser: `RUN_IN_BROWSER=true bundle exec rspec spec`
 
-  If you want to watch feature tests run for debugging purposes, you can go to
-  <http://localhost:7900>, use the password `secret`, and run tests like this:
+If you want to watch feature tests run for debugging purposes, you can go to
+<http://localhost:7900>, use the password `secret`, and run tests like this:
 
-  `RUN_IN_BROWSER=true bundle exec rspec spec`
+`RUN_IN_BROWSER=true bundle exec rspec spec`
 
 7. Access PDC Discovery at [http://localhost:3000/](http://localhost:3000)
 
@@ -105,7 +107,7 @@ This rake task is scheduled to run every 60 minutes on the production and stagin
 
 ### Solr configuration in production/staging
 
-In production and staging we use Solr cloud to manage our Solr index. Our configuration uses a Solr *alias* to point to the current Solr *collection* that we are using. For example, in staging the alias `pdc-discovery-staging` points to the `pdc-discovery-staging-new` collection. Our code points to the alias.
+In production and staging we use Solr cloud to manage our Solr index. Our configuration uses a Solr _alias_ to point to the current Solr _collection_ that we are using. For example, in staging the alias `pdc-discovery-staging` points to the `pdc-discovery-staging-new` collection. Our code points to the alias.
 
 At the end of the indexing process we delete any Solr documents that were not touched during the indexing. The delete operation is to make sure we don't keep in PDC Discovery records that are not longer in the source (PDC Describe).
 
@@ -150,7 +152,7 @@ The deploy will update the configuration for all Solr collections in the given e
 
 You can view the [Honeybadger Uptime check](https://app.honeybadger.io/projects/95072/sites/d932489f-8a8c-4058-964b-df268f589f5a). Currently it checks every minute and will report downtime when two checks fail in a row (i.e. we should know within 2 minutes).
 
-To be notified of downtime enable notifications in Honeybadger under: Settings + Alerts & Integrtions + email (Edit). Enable notifications for "Uptime Events" for "PDC Discovery Production". Notice that email notifications settings are *per project*.
+To be notified of downtime enable notifications in Honeybadger under: Settings + Alerts & Integrtions + email (Edit). Enable notifications for "Uptime Events" for "PDC Discovery Production". Notice that email notifications settings are _per project_.
 
 ## Mail
 
@@ -186,8 +188,8 @@ https://pdc-discovery-staging.princeton.edu/discovery/pppl_reporting_feed.json?p
 
 There are two rake tasks that produce CSV files with information about the datasets.
 
-* `bundle exec rake export:summary` generates a file that includes the list of datasets and their size (one line per dataset).
-* `bundle exec rake export:details` generates a file that includes the list of datasets and their files (one line per file).
+- `bundle exec rake export:summary` generates a file that includes the list of datasets and their size (one line per dataset).
+- `bundle exec rake export:details` generates a file that includes the list of datasets and their files (one line per file).
 
 The generated file will be outputed to the `ENV["DATASET_FILE_TALLY_DIR"]` folder and will be named with todays' timestamp.
 
