@@ -21,7 +21,7 @@ executors:
 
   pdc_discovery_executor:
     docker:
-      - image: cimg/ruby:3.3.2-browsers
+      - image: cimg/ruby:4.0.7-browsers
         environment:
           <<: *docker_env_default
           DB_HOST: localhost
