@@ -8,7 +8,7 @@ orbs:
 executors:
   pdc_discovery_executor_build:
     docker:
-      - image: cimg/ruby:3.3.2-browsers
+      - image: cimg/ruby:4.0.7-browsers
         environment: &docker_env_default
           BUNDLER_VERSION: 4.0.22
           BUNDLE_JOBS: 3
@@ -55,8 +55,8 @@ commands:
       - run:
           name: Update bundler
           command: |
-            echo 'export BUNDLER_VERSION=2.3.11' >> $BASH_ENV
-            gem install bundler -v 2.3.11
+            echo 'export BUNDLER_VERSION=4.0.22' >> $BASH_ENV
+            gem install bundler -v 4.0.22
       - run:
           name: Install dependencies
           command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs 4 --retry 3
