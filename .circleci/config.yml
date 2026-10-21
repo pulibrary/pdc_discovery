@@ -58,8 +58,11 @@ commands:
             echo 'export BUNDLER_VERSION=4.0.22' >> $BASH_ENV
             gem install bundler -v 4.0.22
       - run:
+          name: Set bundler install path
+          command: bundle config set path './vendor/bundle'
+      - run:
           name: Install dependencies
-          command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs 4 --retry 3
+          command: bundle check || bundle install --jobs 4 --retry 3
       - save_cache:
           key: pdc_discovery-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
           paths:
