@@ -97,15 +97,6 @@ jobs:
           name: Set Timezone to EST/EDT
           command: echo 'America/New_York' = /etc/timezone
       - run:
-          name: Make a new path for keys
-          command: mkdir -p -m 0755 /etc/apt/keyrings
-      - run:
-          name: Download and save the Google GPG key
-          command: curl -fsSL https://dl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /etc/apt/keyrings/google-chrome.gpg
-      - run:
-          name: Update the sources list to reference Google gpg key directly
-          command: sudo chown circleci /etc/apt/sources.list.d/google-chrome.list && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list && sudo chown root /etc/apt/sources.list.d/google-chrome.list
-      - run:
           name: Install packages
           command: sudo apt update && sudo apt install postgresql-client
       - bundle_install
