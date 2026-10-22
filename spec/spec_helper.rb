@@ -6,9 +6,9 @@ Coveralls.wear!
 require "simplecov"
 require "simplecov_json_formatter"
 SimpleCov.start do
-  add_filter "app/channels"
-  add_filter "app/jobs"
-  add_filter "app/mailers"
+  skip "app/channels"
+  skip "app/jobs"
+  skip "app/mailers"
 
   multi = SimpleCov::Formatter::MultiFormatter.new([
                                                      SimpleCov::Formatter::HTMLFormatter,

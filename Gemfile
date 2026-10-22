@@ -3,10 +3,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.3.2'
+ruby '4.0.7'
 
 gem 'amazing_print'
-gem 'bcrypt', '~> 3.1.22'
+gem 'bcrypt'
 gem 'blacklight', '>= 7.41'
 gem 'blacklight_dynamic_sitemap'
 gem 'blacklight-marc', '~> 8.1.0'
@@ -67,7 +67,7 @@ group :development, :test do
 end
 
 group :development do
-  gem "bcrypt_pbkdf"
+  gem "bcrypt_pbkdf", "1.2.0.beta1"
   gem "capistrano"
   gem "capistrano-passenger", require: false
   gem "capistrano-rails", "~> 1.4", require: false

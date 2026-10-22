@@ -8,7 +8,7 @@ orbs:
 executors:
   pdc_discovery_executor_build:
     docker:
-      - image: cimg/ruby:3.3.2-browsers
+      - image: cimg/ruby:4.0.7-browsers
         environment: &docker_env_default
           BUNDLER_VERSION: 4.0.22
           BUNDLE_JOBS: 3
@@ -21,7 +21,7 @@ executors:
 
   pdc_discovery_executor:
     docker:
-      - image: cimg/ruby:3.3.2-browsers
+      - image: cimg/ruby:4.0.7-browsers
         environment:
           <<: *docker_env_default
           DB_HOST: localhost
@@ -55,11 +55,14 @@ commands:
       - run:
           name: Update bundler
           command: |
-            echo 'export BUNDLER_VERSION=2.3.11' >> $BASH_ENV
-            gem install bundler -v 2.3.11
+            echo 'export BUNDLER_VERSION=4.0.22' >> $BASH_ENV
+            gem install bundler -v 4.0.22
+      - run:
+          name: Set bundler install path
+          command: bundle config set path './vendor/bundle'
       - run:
           name: Install dependencies
-          command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs 4 --retry 3
+          command: bundle check || bundle install --jobs 4 --retry 3
       - save_cache:
           key: pdc_discovery-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
           paths:
@@ -96,15 +99,6 @@ jobs:
       - run:
           name: Set Timezone to EST/EDT
           command: echo 'America/New_York' = /etc/timezone
-      - run:
-          name: Make a new path for keys
-          command: mkdir -p -m 0755 /etc/apt/keyrings
-      - run:
-          name: Download and save the Google GPG key
-          command: curl -fsSL https://dl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /etc/apt/keyrings/google-chrome.gpg
-      - run:
-          name: Update the sources list to reference Google gpg key directly
-          command: sudo chown circleci /etc/apt/sources.list.d/google-chrome.list && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list && sudo chown root /etc/apt/sources.list.d/google-chrome.list
       - run:
           name: Install packages
           command: sudo apt update && sudo apt install postgresql-client
