@@ -8,7 +8,7 @@ orbs:
 executors:
   pdc_discovery_executor_build:
     docker:
-      - image: cimg/ruby:4.0.7-browsers
+      - image: cimg/ruby:4.0.9-browsers
         environment: &docker_env_default
           BUNDLER_VERSION: 4.0.22
           BUNDLE_JOBS: 3
@@ -21,7 +21,7 @@ executors:
 
   pdc_discovery_executor:
     docker:
-      - image: cimg/ruby:4.0.7-browsers
+      - image: cimg/ruby:4.0.9-browsers
         environment:
           <<: *docker_env_default
           DB_HOST: localhost
