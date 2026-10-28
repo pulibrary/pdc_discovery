@@ -35,9 +35,7 @@
 /public/packs
 /public/packs-test
 /node_modules
-/yarn-error.log
-yarn-debug.log*
-.yarn-integrity
+.pnpm-debug.log*
 coverage
 
 .DS_Store
@@ -58,5 +56,4 @@ spec/fixtures/migration/dspace_migration.csv
 .postgres
 .solr
 .tmp
-.yarn/**/*gz
 

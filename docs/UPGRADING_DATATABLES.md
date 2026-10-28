@@ -22,7 +22,7 @@ This setup presented two major issues under Vite:
 ### Step 1: Install DataTables packages via Yarn
 Install the core DataTables package and its default styling package:
 ```bash
-yarn add datatables.net datatables.net-dt
+pnpm add datatables.net datatables.net-dt
 ```
 
 ### Step 2: Unify jQuery Versions (Preventing Duplication)
@@ -38,7 +38,7 @@ To enforce a single, unified copy of jQuery across the entire dependency tree, a
   }
 }
 ```
-Run `yarn install` and verify with `yarn why jquery` that both `datatables.net` and your workspace point to the exact same version.
+Run `pnpm install` and verify with `pnpm why jquery` that both `datatables.net` and your workspace point to the exact same version.
 
 ### Step 3: Register DataTables on jQuery in Vite Entrypoint
 In `app/javascript/entrypoints/application.js`, import the core DataTables package, styling package, and explicitly register it on the imported jQuery instance using the DataTables 2 `.use()` method:

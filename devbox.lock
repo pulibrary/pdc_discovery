@@ -686,7 +686,7 @@
     },
     "nodejs@24": {
       "last_modified": "2025-12-27T12:56:01Z",
-      "plugin_version": "0.0.5",
+      "plugin_version": "0.0.4",
       "resolved": "github:NixOS/nixpkgs/3edc4a30ed3903fdf6f90c837f961fa6b49582d1#nodejs_24",
       "source": "devbox-search",
       "version": "24.12.0",
@@ -947,6 +947,54 @@
             }
           ],
           "store_path": "/nix/store/8vdiwpbh0g4avsd6x5v4s0di32vcl3dp-pkg-config-wrapper-0.29.2"
+        }
+      }
+    },
+    "pnpm@10.20.0": {
+      "last_modified": "2025-10-30T18:40:41Z",
+      "resolved": "github:NixOS/nixpkgs/45ebaee5d90bab997812235564af4cf5107bde89#pnpm",
+      "source": "devbox-search",
+      "version": "10.20.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/zxr2z04s11vsmdx5ybdnyld2kllvlq61-pnpm-10.20.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/zxr2z04s11vsmdx5ybdnyld2kllvlq61-pnpm-10.20.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/n16klspqw8n1zlgfmjy8nh861d3mfqn4-pnpm-10.20.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/n16klspqw8n1zlgfmjy8nh861d3mfqn4-pnpm-10.20.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/hcapz1vmdymmxk35z564jsmskvdphpp1-pnpm-10.20.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/hcapz1vmdymmxk35z564jsmskvdphpp1-pnpm-10.20.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/1bwlymbmhvc5qhvc4jnry443jizqrm20-pnpm-10.20.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/1bwlymbmhvc5qhvc4jnry443jizqrm20-pnpm-10.20.0"
         }
       }
     },
@@ -1233,54 +1281,6 @@
             }
           ],
           "store_path": "/nix/store/r6k0g9agqm2w3vjlhcr76nlrc92nlxb4-xmlsec-1.3.7"
-        }
-      }
-    },
-    "yarn-berry_4@4.13.0": {
-      "last_modified": "2026-03-06T04:25:18Z",
-      "resolved": "github:NixOS/nixpkgs/e38213b91d3786389a446dfce4ff5a8aaf6012f2#yarn-berry_4",
-      "source": "devbox-search",
-      "version": "4.13.0",
-      "systems": {
-        "aarch64-darwin": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/gqvyid689x302gywnv7wy84vd1jyiccr-yarn-berry-4.13.0",
-              "default": true
-            }
-          ],
-          "store_path": "/nix/store/gqvyid689x302gywnv7wy84vd1jyiccr-yarn-berry-4.13.0"
-        },
-        "aarch64-linux": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/5cc3hqz254fmi49q5yw775xk5bivafil-yarn-berry-4.13.0",
-              "default": true
-            }
-          ],
-          "store_path": "/nix/store/5cc3hqz254fmi49q5yw775xk5bivafil-yarn-berry-4.13.0"
-        },
-        "x86_64-darwin": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/02lmar5nd88ndq8xhifvcx5qz3yvabcr-yarn-berry-4.13.0",
-              "default": true
-            }
-          ],
-          "store_path": "/nix/store/02lmar5nd88ndq8xhifvcx5qz3yvabcr-yarn-berry-4.13.0"
-        },
-        "x86_64-linux": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/spvxqy7zbcyv5cgy6ka017ikm34nlvqr-yarn-berry-4.13.0",
-              "default": true
-            }
-          ],
-          "store_path": "/nix/store/spvxqy7zbcyv5cgy6ka017ikm34nlvqr-yarn-berry-4.13.0"
         }
       }
     }

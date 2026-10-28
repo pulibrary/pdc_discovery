@@ -2,8 +2,8 @@
 version: 2.1
 
 orbs:
-  browser-tools: circleci/browser-tools@2.4.0
-  coveralls: coveralls/coveralls@2.2.5
+  browser-tools: circleci/browser-tools@2.4
+  coveralls: coveralls/coveralls@2.2
 
 executors:
   pdc_discovery_executor_build:
@@ -51,7 +51,7 @@ commands:
       # Restore bundle cache
       - restore_cache:
           keys:
-            - pdc_discovery-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
+            - pdc_discovery-{{ checksum "Gemfile.lock" }}-{{ checksum "pnpm-lock.yaml" }}
       - run:
           name: Update bundler
           command: |
@@ -64,27 +64,27 @@ commands:
           name: Install dependencies
           command: bundle check || bundle install --jobs 4 --retry 3
       - save_cache:
-          key: pdc_discovery-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
+          key: pdc_discovery-{{ checksum "Gemfile.lock" }}-{{ checksum "pnpm-lock.yaml" }}
           paths:
             - ./vendor/bundle
-  yarn_install:
-    description: "Install the supported release of Yarn and install the package dependencies"
+  pnpm_install:
+    description: "Install the pnpm release and the package dependencies"
     steps:
       - run:
-          name: Enable corepack and set the supported release of Yarn as the default
-          command: sudo corepack enable && yarn set version berry
+          name: Enable corepack and activate the pnpm version from package.json
+          command: sudo corepack enable && corepack prepare --activate
       - restore_cache:
-          name: Restore the Yarn package dependencies from the cache
+          name: Restore the pnpm package store from the cache
           keys:
-            - pdc_discovery-yarn-{{ checksum "yarn.lock" }}
+            - pdc_discovery-pnpm-{{ checksum "pnpm-lock.yaml" }}
       - run:
-          name: Install NPM Dependencies via Yarn
-          command: yarn install --immutable
+          name: Install NPM dependencies via pnpm
+          command: pnpm install --frozen-lockfile
       - save_cache:
-          name: Save Yarn Package Cache
-          key: pdc_discovery-yarn-{{ checksum "yarn.lock" }}
+          name: Save the pnpm package store
+          key: pdc_discovery-pnpm-{{ checksum "pnpm-lock.yaml" }}
           paths:
-            - ~/.cache/yarn
+            - ~/.local/share/pnpm/store
 
 jobs:
   build:
@@ -103,7 +103,7 @@ jobs:
           name: Install packages
           command: sudo apt update && sudo apt install postgresql-client
       - bundle_install
-      - yarn_install
+      - pnpm_install
       - persist_to_workspace:
           root: "~/pdc_discovery"
           paths: "*"
@@ -125,10 +125,10 @@ jobs:
     steps:
       - attach_workspace:
           at: "~/pdc_discovery"
-      - yarn_install
+      - pnpm_install
       - run:
           name: Run ESLint with Prettier for linting
-          command: yarn run lint
+          command: pnpm run lint
 
   test:
     executor: pdc_discovery_executor
@@ -155,7 +155,7 @@ jobs:
             curl -H "Content-type:application/octet-stream" --data-binary @solr_config.zip "http://solr:SolrRocks@127.0.0.1:8983/solr/admin/configs?action=UPLOAD&name=pdc_discovery"
             curl -H 'Content-type: application/json' http://solr:SolrRocks@127.0.0.1:8983/api/collections/ -d '{create: {name: pdc_discovery-core-test, config: pdc_discovery, numShards: 1}}'
       - bundle_install
-      - yarn_install
+      - pnpm_install
       - run: |
           ruby --version
           node --version
@@ -201,7 +201,7 @@ jobs:
             curl -H "Content-type:application/octet-stream" --data-binary @solr_config.zip "http://solr:SolrRocks@127.0.0.1:8983/solr/admin/configs?action=UPLOAD&name=pdc_discovery"
             curl -H 'Content-type: application/json' http://solr:SolrRocks@127.0.0.1:8983/api/collections/ -d '{create: {name: pdc_discovery-core-test, config: pdc_discovery, numShards: 1}}'
       - bundle_install
-      - yarn_install
+      - pnpm_install
       - run: |
           ruby --version
           node --version

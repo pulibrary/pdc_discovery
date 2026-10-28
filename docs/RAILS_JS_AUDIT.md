@@ -38,7 +38,7 @@ Key findings include:
 ### 🔍 Issue 2: Broken ESLint Parser Configuration
 
 * **Context**: `.eslintrc.js`
-* **Details**: Running `yarn eslint .` produces immediate parsing crashes:
+* **Details**: Running `pnpm exec eslint .` produces immediate parsing crashes:
 
   ```
   app/javascript/channels/consumer.js:  Parsing error: The keyword 'import' is reserved
@@ -114,8 +114,8 @@ Align stylelint packages to resolve the runtime `TypeError` crash:
 1. Update package declarations:
 
    ```bash
-   yarn remove stylelint-config-prettier
-   yarn add -D stylelint-prettier@^5.0.0
+   pnpm remove stylelint-config-prettier
+   pnpm add -D stylelint-prettier@^5.0.0
    ```
 
 2. Simplify `.stylelintrc.json` to eliminate deprecated configuration files:
@@ -142,7 +142,7 @@ Provide clear, comprehensive linting scripts in `package.json` that include ESLi
   "lint:format": "prettier --check \"app/{javascript,assets}/**/*.{js,css,scss}\"",
   "lint:js": "eslint \"app/{javascript,assets/javascripts}/**/*.js\"",
   "lint:css": "stylelint \"app/{javascript,assets/stylesheets}/**/*.{css,scss}\"",
-  "lint": "yarn run lint:format && yarn run lint:js && yarn run lint:css",
+  "lint": "pnpm run lint:format && pnpm run lint:js && pnpm run lint:css",
   "lint:fix": "prettier --write \"app/{javascript,assets}/**/*.{js,css,scss}\" && eslint --fix \"app/{javascript,assets/javascripts}/**/*.js\""
 }
 ```

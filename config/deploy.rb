@@ -24,18 +24,21 @@ namespace :pdc_discovery do
     end
   end
 
-  desc "Set Yarn 4 (berry) as the default package manager for this project"
-  task :set_yarn_berry do
+  desc "Install JavaScript dependencies with the pnpm version pinned in package.json"
+  task :pnpm_install do
     on roles(:app) do
       within release_path do
-        execute("yarn set version berry")
+        execute("corepack enable && corepack prepare --activate && pnpm install --frozen-lockfile")
       end
     end
   end
 
 end
 
-before "deploy:assets:precompile", "pdc_discovery:set_yarn_berry"
+# capistrano-rails always runs yarn:install. This app uses pnpm.
+Rake::Task["yarn:install"].clear if Rake::Task.task_defined?("yarn:install")
+
+before "deploy:assets:precompile", "pdc_discovery:pnpm_install"
 before "deploy:reverted", "deploy:assets:precompile"
 
 # If your deploy fails, uncomment the following and add your key-path to the list of ssh options:

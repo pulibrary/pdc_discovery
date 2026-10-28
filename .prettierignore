@@ -3,4 +3,3 @@ docs/
 .prettierrc
 vendor/
 app/javascript/vendor/
-.yarn/

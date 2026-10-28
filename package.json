@@ -43,11 +43,17 @@
     "postcss": ">=8.4.31"
   },
   "scripts": {
-    "lint": "yarn run prettier --check app/javascript",
-    "lint:fix": "yarn run prettier --write app/javascript"
+    "lint": "prettier --check app/javascript",
+    "lint:fix": "prettier --write app/javascript"
   },
-  "packageManager": "yarn@4.18.1",
-  "resolutions": {
-    "jquery": "^3.7.1"
+  "packageManager": "pnpm@10.20.0",
+  "pnpm": {
+    "overrides": {
+      "jquery": "^3.7.1"
+    },
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild"
+    ]
   }
 }
