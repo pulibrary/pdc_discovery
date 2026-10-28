@@ -2,7 +2,7 @@
 
 A discovery portal for Princeton research data.
 
-Please note: While this is open-source software, we would disourage anyone from trying to just check it out and run it. Princeton specifics, from styling to authentication and authorization, are hard coded, and we have not invested any time in the kind of configurabily that would be needed for use at another institution. Instead it should be taken as an example of breaking a monolithic project into separate components, and developing iteratively in response to local user feedback.
+Please note: While this is open-source software, we would discourage anyone from trying to just check it out and run it. Princeton specifics, from styling to authentication and authorization, are hard coded, and we have not invested any time in the kind of configurability that would be needed for use at another institution. Instead it should be taken as an example of breaking a monolithic project into separate components, and developing iteratively in response to local user feedback.
 
 [![CircleCI](https://circleci.com/gh/pulibrary/pdc_discovery.svg?style=svg)](https://circleci.com/gh/pulibrary/pdc_discovery)
 [![Coverage Status](https://coveralls.io/repos/github/pulibrary/pdc_discovery/badge.svg?branch=main)](https://coveralls.io/github/pulibrary/pdc_discovery?branch=main)
@@ -18,6 +18,7 @@ This project uses [devbox](https://www.jetify.com/devbox) to manage system depen
 ### Setup
 
 > **Notes**
+
 1. Install Devbox (see `./bin/first-time-setup.sh`).
 
 2. Start a devbox shell:
@@ -35,6 +36,7 @@ This project uses [devbox](https://www.jetify.com/devbox) to manage system depen
 4. Start the services
 
     Start and initialize solr and database services with:
+
     ```
     bundle exec rake servers:start
     ```
@@ -45,7 +47,7 @@ This project uses [devbox](https://www.jetify.com/devbox) to manage system depen
     bin/rails s -p 3000
   ```
 
-6. Run tests:
+1. Run tests:
 
   Faster: `bundle exec rspec spec`
   Run in browser: `RUN_IN_BROWSER=true bundle exec rspec spec`
@@ -55,7 +57,7 @@ This project uses [devbox](https://www.jetify.com/devbox) to manage system depen
 
   `RUN_IN_BROWSER=true bundle exec rspec spec`
 
-7. Access PDC Discovery at [http://localhost:3000/](http://localhost:3000)
+1. Access PDC Discovery at [http://localhost:3000/](http://localhost:3000)
 
 ### Starting / stopping services
 
@@ -80,9 +82,9 @@ We utilize Rubocop for our Ryby code and Prettier for our JavaScript
 
 1. To run rubocop run `bundle exec rubocop`
    1. To allow for autocorrecting of errors run `bundle exec rubocop -a`
-2. To run prettier via yar lint run `yarn lint`
-   1. To run prettier by itself to see more details on errors run `yarn prettier app/javascript`
-   2. To run prettier to autocorrect errors run `yarn prettier --write app/javascript`
+2. To run prettier via pnpm lint run `pnpm lint`
+   1. To run prettier by itself to see more details on errors run `pnpm exec prettier app/javascript`
+   2. To run prettier to autocorrect errors run `pnpm exec prettier --write app/javascript`
 
 ### Starting the development server
 
@@ -139,8 +141,8 @@ To make changes to the Solr schema in production/staging you need to update the 
 2. Optional. You can tunnel to machine running Solr `ssh -L 8983:localhost:8983 pulsys@lib-solr-staging4` if you want to see your current configuration (e.g. `solrconfig.xml` or `schema.xml`).
 3. Make sure you are on the `pul-solr` repo.
 4. Deploy the changes, e.g. `BRANCH=<branch-name> bundle exec cap staging deploy`.
-5. verify your changes have worked and mark your PR ready for review
-6. Once the PR has been merged cordiante a time to deploy the changes to production `bundle exec cap production deploy`
+5. Verify your changes have worked and mark your PR ready for review
+6. Once the PR has been merged coordinate a time to deploy the changes to production `bundle exec cap production deploy`
 
 You can see the list of Capistrano environments [here](https://github.com/pulibrary/pul_solr/tree/main/config/deploy)
 
@@ -193,4 +195,5 @@ The generated file will be outputed to the `ENV["DATASET_FILE_TALLY_DIR"]` folde
 
 ## Generating an RSS feed
 
-To generate rss feeds for works that have been approved, or are awaiting approval and have draft doi's, visit: https://datacommons.princeton.edu/describe/works.rss
+To generate rss feeds for works that have been approved, or are awaiting approval and have draft doi's, visit: <https://datacommons.princeton.edu/describe/works.rss>
+
