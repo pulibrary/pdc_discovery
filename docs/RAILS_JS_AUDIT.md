@@ -14,7 +14,6 @@ Key findings include:
 
 - **Dead-Weight Tooling**: A complete Vite configuration (`vite_rails`, `vite.config.mts`, `app/javascript/entrypoints/`) is installed but **entirely bypassed** in layout templates, which still load legacy Sprockets assets.
 - **Broken Linting/Formatting Suite**: Standard linting commands fail due to parser misconfigurations, and Stylelint crashes completely on execution due to mismatched major versions.
-- **Orphaned Configuration Files**: Configuration files like `babel.config.js` remain from retired bundlers (Webpacker) but cannot run because their underlying dependencies do not exist.
 - **Deprecated Libraries**: The application relies on outdated libraries such as Turbolinks (deprecated in favor of Hotwire Turbo) and Bootstrap 4 (EOL).
 
 ---
@@ -47,63 +46,6 @@ Key findings include:
 
   This happens because `.eslintrc.js` is configured to only extend `prettier` without specifying an ECMAScript version or module source type. Modern ES6+ keywords and module structures are not recognized.
 
----
-
-### 🔍 Issue 3: Stylelint Configuration Crash (Major Dependency Mismatch)
-
-- **Context**: `package.json` vs `.stylelintrc.json`
-- **Details**: Attempting to run Stylelint crashes with:
-
-  ```
-  TypeError: text2.charAt is not a function at diff_commonPrefix ... in stylelint-prettier
-  ```
-
-  This is a critical mismatch. `package.json` specifies `"stylelint": "^16.26.1"` (Stylelint v16) but pairs it with `"stylelint-prettier": "^1.2.0"`. Stylelint v16 requires `stylelint-prettier` **v5.0.0+**. Additionally, `"stylelint-config-prettier"` is obsolete since Stylelint v15 and should be removed.
-
----
-
-### 🔍 Issue 4: Orphaned Webpacker/Babel Configuration
-
-- **Context**: `babel.config.js`
-- **Details**: This file remains as a leftover from Webpacker. It contains extensive instructions for loading `@babel/preset-env`, `babel-plugin-macros`, etc. However, **none of these Babel packages are installed** in `package.json`. If any tool invokes Babel, it will fail immediately.
-
----
-
-### 🔍 Issue 5: Bloated Package Dependencies
-
-- **Context**: `package.json`
-- **Details**:
-  - `"esbuild": "^0.28.1"` is declared directly under `dependencies`. Since Vite manages its own esbuild execution, this explicit dependency is redundant.
-  - `"lodash": "^4.18.1"`, `"color-string"`, `"glob-parent"`, and `"picomatch"` are listed in `dependencies` but are **never imported or used** anywhere in `app/`. It appears these were added to resolve security alerts instead of utilizing Yarn's resolution mechanism.
-  - `"turbolinks": "^5.2.0"` is loaded but has been deprecated for several years.
-
----
-
-## 3. Suggested Short-Term Fixes
-
-### 🛠️ Fix 1: Fix ESLint Configuration
-
-Update `.eslintrc.js` to support ES6+ syntax, modern modules, and the browser environment:
-
-```javascript
-// .eslintrc.js
-module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    node: true,
-  },
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-  },
-  extends: ["eslint:recommended", "prettier"],
-  rules: {
-    "no-unused-vars": "warn",
-    "no-console": "off",
-  },
-};
-```
 
 ---
 
@@ -117,20 +59,6 @@ Align stylelint packages to resolve the runtime `TypeError` crash:
    yarn remove stylelint-config-prettier
    yarn add -D stylelint-prettier@^5.0.0
    ```
-
-2. Simplify `.stylelintrc.json` to eliminate deprecated configuration files:
-
-   ```json
-   {
-     "extends": ["stylelint-prettier/recommended"],
-     "plugins": ["stylelint-scss"],
-     "rules": {
-       "at-rule-no-unknown": null,
-       "scss/at-rule-no-unknown": true
-     }
-   }
-   ```
-
 ---
 
 ### 🛠️ Fix 3: Standardize Package Scripts
