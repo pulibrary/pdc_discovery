@@ -12,10 +12,10 @@ While the application successfully runs and passes its Ruby-based system/browser
 
 Key findings include:
 
-* **Dead-Weight Tooling**: A complete Vite configuration (`vite_rails`, `vite.config.mts`, `app/javascript/entrypoints/`) is installed but **entirely bypassed** in layout templates, which still load legacy Sprockets assets.
-* **Broken Linting/Formatting Suite**: Standard linting commands fail due to parser misconfigurations, and Stylelint crashes completely on execution due to mismatched major versions.
-* **Orphaned Configuration Files**: Configuration files like `babel.config.js` remain from retired bundlers (Webpacker) but cannot run because their underlying dependencies do not exist.
-* **Deprecated Libraries**: The application relies on outdated libraries such as Turbolinks (deprecated in favor of Hotwire Turbo) and Bootstrap 4 (EOL).
+- **Dead-Weight Tooling**: A complete Vite configuration (`vite_rails`, `vite.config.mts`, `app/javascript/entrypoints/`) is installed but **entirely bypassed** in layout templates, which still load legacy Sprockets assets.
+- **Broken Linting/Formatting Suite**: Standard linting commands fail due to parser misconfigurations, and Stylelint crashes completely on execution due to mismatched major versions.
+- **Orphaned Configuration Files**: Configuration files like `babel.config.js` remain from retired bundlers (Webpacker) but cannot run because their underlying dependencies do not exist.
+- **Deprecated Libraries**: The application relies on outdated libraries such as Turbolinks (deprecated in favor of Hotwire Turbo) and Bootstrap 4 (EOL).
 
 ---
 
@@ -23,8 +23,8 @@ Key findings include:
 
 ### 🔍 Issue 1: Unused Vite Integration (Hybrid / Transitional State)
 
-* **Context**: `app/views/layouts/blacklight/base.html.erb` vs `app/javascript/entrypoints/application.js` and `Gemfile`
-* **Details**: The codebase includes the `vite_rails` gem, NPM `vite`, `vite-plugin-ruby`, and a Vite directory structure under `app/javascript/`. However, the main layout (`base.html.erb`) still references legacy Sprockets pipelines:
+- **Context**: `app/views/layouts/blacklight/base.html.erb` vs `app/javascript/entrypoints/application.js` and `Gemfile`
+- **Details**: The codebase includes the `vite_rails` gem, NPM `vite`, `vite-plugin-ruby`, and a Vite directory structure under `app/javascript/`. However, the main layout (`base.html.erb`) still references legacy Sprockets pipelines:
 
   ```erb
   <%= stylesheet_link_tag "application", media: "all" %>
@@ -37,8 +37,8 @@ Key findings include:
 
 ### 🔍 Issue 2: Broken ESLint Parser Configuration
 
-* **Context**: `.eslintrc.js`
-* **Details**: Running `yarn eslint .` produces immediate parsing crashes:
+- **Context**: `.eslintrc.js`
+- **Details**: Running `yarn eslint .` produces immediate parsing crashes:
 
   ```
   app/javascript/channels/consumer.js:  Parsing error: The keyword 'import' is reserved
@@ -51,8 +51,8 @@ Key findings include:
 
 ### 🔍 Issue 3: Stylelint Configuration Crash (Major Dependency Mismatch)
 
-* **Context**: `package.json` vs `.stylelintrc.json`
-* **Details**: Attempting to run Stylelint crashes with:
+- **Context**: `package.json` vs `.stylelintrc.json`
+- **Details**: Attempting to run Stylelint crashes with:
 
   ```
   TypeError: text2.charAt is not a function at diff_commonPrefix ... in stylelint-prettier
@@ -64,18 +64,18 @@ Key findings include:
 
 ### 🔍 Issue 4: Orphaned Webpacker/Babel Configuration
 
-* **Context**: `babel.config.js`
-* **Details**: This file remains as a leftover from Webpacker. It contains extensive instructions for loading `@babel/preset-env`, `babel-plugin-macros`, etc. However, **none of these Babel packages are installed** in `package.json`. If any tool invokes Babel, it will fail immediately.
+- **Context**: `babel.config.js`
+- **Details**: This file remains as a leftover from Webpacker. It contains extensive instructions for loading `@babel/preset-env`, `babel-plugin-macros`, etc. However, **none of these Babel packages are installed** in `package.json`. If any tool invokes Babel, it will fail immediately.
 
 ---
 
 ### 🔍 Issue 5: Bloated Package Dependencies
 
-* **Context**: `package.json`
-* **Details**:
-  * `"esbuild": "^0.28.1"` is declared directly under `dependencies`. Since Vite manages its own esbuild execution, this explicit dependency is redundant.
-  * `"lodash": "^4.18.1"`, `"color-string"`, `"glob-parent"`, and `"picomatch"` are listed in `dependencies` but are **never imported or used** anywhere in `app/`. It appears these were added to resolve security alerts instead of utilizing Yarn's resolution mechanism.
-  * `"turbolinks": "^5.2.0"` is loaded but has been deprecated for several years.
+- **Context**: `package.json`
+- **Details**:
+  - `"esbuild": "^0.28.1"` is declared directly under `dependencies`. Since Vite manages its own esbuild execution, this explicit dependency is redundant.
+  - `"lodash": "^4.18.1"`, `"color-string"`, `"glob-parent"`, and `"picomatch"` are listed in `dependencies` but are **never imported or used** anywhere in `app/`. It appears these were added to resolve security alerts instead of utilizing Yarn's resolution mechanism.
+  - `"turbolinks": "^5.2.0"` is loaded but has been deprecated for several years.
 
 ---
 
@@ -91,17 +91,17 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true
+    node: true,
   },
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module'
+    ecmaVersion: "latest",
+    sourceType: "module",
   },
-  extends: ['eslint:recommended', 'prettier'],
+  extends: ["eslint:recommended", "prettier"],
   rules: {
-    'no-unused-vars': 'warn',
-    'no-console': 'off'
-  }
+    "no-unused-vars": "warn",
+    "no-console": "off",
+  },
 };
 ```
 
@@ -156,21 +156,21 @@ Provide clear, comprehensive linting scripts in `package.json` that include ESLi
 To align with modern Rails best practices, the project should choose one of two paths:
 
 1. **Complete the Vite Migration (Recommended)**:
-   * Move the CSS/JS files from `app/assets/` to `app/javascript/`.
-   * Update `app/views/layouts/blacklight/base.html.erb` to load Vite entrypoints:
+   - Move the CSS/JS files from `app/assets/` to `app/javascript/`.
+   - Update `app/views/layouts/blacklight/base.html.erb` to load Vite entrypoints:
 
      ```erb
      <%= vite_client_tag %>
      <%= vite_javascript_tag 'application' %>
      ```
 
-   * Remove the `dartsass-sprockets`, `jquery-rails`, and other asset pipeline gems that are no longer needed.
+   - Remove the `dartsass-sprockets`, `jquery-rails`, and other asset pipeline gems that are no longer needed.
 
 ### Recommendation B: Clean Up Redundant Configs & Unused Packages
 
-* Remove the orphaned `babel.config.js` file since Vite handles ES compilation out-of-the-box using Esbuild/Rollup.
-* Remove unused packages like `lodash`, `color-string`, `glob-parent`, and `picomatch` from the top-level dependencies. If transitive dependencies have security vulnerabilities, use Yarn's `resolutions` block in `package.json` rather than adding them as direct production dependencies.
+- Remove the orphaned `babel.config.js` file since Vite handles ES compilation out-of-the-box using Esbuild/Rollup.
+- Remove unused packages like `lodash`, `color-string`, `glob-parent`, and `picomatch` from the top-level dependencies. If transitive dependencies have security vulnerabilities, use Yarn's `resolutions` block in `package.json` rather than adding them as direct production dependencies.
 
 ### Recommendation C: Migrate from Turbolinks to Turbo
 
-* Since the project uses Rails 8.1, replace the outdated and deprecated `turbolinks` with `@hotwired/turbo-rails` (Turbo). This modernizes the page-loading system, resolves compatibility edge-cases with modern JS libraries, and aligns the stack with modern Rails standards.
+- Since the project uses Rails 8.1, replace the outdated and deprecated `turbolinks` with `@hotwired/turbo-rails` (Turbo). This modernizes the page-loading system, resolves compatibility edge-cases with modern JS libraries, and aligns the stack with modern Rails standards.

@@ -1,4 +1,5 @@
 # Fix a solr mismatch
+
 We have a Solr instance with a leader and a follower. Sometimes, they can get out of sync. When this happens, you will see very different search results from one search to the next. Here is how to resolve the issue.
 
 1. Open a Solr console in [pul_solr](https://github.com/pulibrary/pul_solr)
@@ -26,4 +27,4 @@ We have a Solr instance with a leader and a follower. Sometimes, they can get ou
      alt="create solr alias"
      style="margin-right: 10px; width:300px" />
 
- 2. reindex in pdc-discovery
+1. reindex in pdc-discovery

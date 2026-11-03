@@ -1,6 +1,10 @@
-README.md
-docs/
 .prettierrc
+docs/images/
 vendor/
 app/javascript/vendor/
 .yarn/
+node_modules/
+coverage/
+tmp/
+log/
+yarn.lock
