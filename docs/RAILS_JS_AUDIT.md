@@ -46,7 +46,6 @@ Key findings include:
 
   This happens because `.eslintrc.js` is configured to only extend `prettier` without specifying an ECMAScript version or module source type. Modern ES6+ keywords and module structures are not recognized.
 
-
 ---
 
 ### 🛠️ Fix 2: Upgrade Stylelint Packages & Configuration
@@ -59,6 +58,7 @@ Align stylelint packages to resolve the runtime `TypeError` crash:
    yarn remove stylelint-config-prettier
    yarn add -D stylelint-prettier@^5.0.0
    ```
+
 ---
 
 ### 🛠️ Fix 3: Standardize Package Scripts
