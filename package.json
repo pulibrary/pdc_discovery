@@ -30,7 +30,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "eslint": "^10.14.0",
+    "eslint": "^10.15.0",
     "eslint-config-prettier": "^10.1.8",
     "js-yaml": "^5.5.0",
     "prettier": "^3.9.10",
