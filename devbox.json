@@ -23,7 +23,8 @@
     "openssl": {
       "version": "latest",
       "outputs": ["out", "dev"]
-    }
+    },
+    "corepack": "latest"
   },
   "env": {
     "DEVBOX": "1",

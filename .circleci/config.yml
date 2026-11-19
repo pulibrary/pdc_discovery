@@ -4,11 +4,12 @@ version: 2.1
 orbs:
   browser-tools: circleci/browser-tools@2.4.0
   coveralls: coveralls/coveralls@2.2.5
+  node: circleci/node@7.2
 
 executors:
   pdc_discovery_executor_build:
     docker:
-      - image: cimg/ruby:4.0.9-browsers
+      - image: cimg/ruby:4.0.10-browsers
         environment: &docker_env_default
           BUNDLER_VERSION: 4.0.22
           BUNDLE_JOBS: 3
@@ -21,7 +22,7 @@ executors:
 
   pdc_discovery_executor:
     docker:
-      - image: cimg/ruby:4.0.9-browsers
+      - image: cimg/ruby:4.0.10-browsers
         environment:
           <<: *docker_env_default
           DB_HOST: localhost
@@ -70,13 +71,19 @@ commands:
   yarn_install:
     description: "Install the supported release of Yarn and install the package dependencies"
     steps:
-      - run:
-          name: Enable corepack and set the supported release of Yarn as the default
-          command: sudo corepack enable && yarn set version berry
+      - node/install:
+          install-yarn: false
+          node-version: ""
       - restore_cache:
           name: Restore the Yarn package dependencies from the cache
           keys:
             - pdc_discovery-yarn-{{ checksum "yarn.lock" }}
+      - run:
+          name: "Install yarn using corepack"
+          command: |
+            npm install -g corepack
+            corepack enable
+            corepack prepare yarn@stable --activate
       - run:
           name: Install NPM Dependencies via Yarn
           command: yarn install --immutable
