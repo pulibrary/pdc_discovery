@@ -4,6 +4,7 @@ version: 2.1
 orbs:
   browser-tools: circleci/browser-tools@2.4.0
   coveralls: coveralls/coveralls@2.2.5
+  node: circleci/node@7.2
 
 executors:
   pdc_discovery_executor_build:
